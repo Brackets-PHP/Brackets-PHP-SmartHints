@@ -1,0 +1,12 @@
+{
+    "name": "bigeyex.brackets-wordhint",
+    "title": "WordHint",
+    "description": "Hint with words in current document. Add autocomplete for PHP, Python, Perl etc.",
+    "homepage": "https://github.com/bigeyex/brackets-wordhint",
+    "version": "1.0.2",
+    "author": "Wang Yu <bigeyex@gmail.com> (http://www.mit.edu/~wangyu/)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.24.0"
+    }
+}
