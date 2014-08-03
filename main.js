@@ -214,6 +214,6 @@ define(function (require, exports, module) {
                 wordHints.cachedWordList.push(phpVariable);
             }
         }
-        CodeHintManager.registerHintProvider(wordHints, ["php"], 0);
+        CodeHintManager.registerHintProvider(wordHints, ["php"], 10);
     });
 });
