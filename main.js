@@ -34,17 +34,9 @@ define(function (require, exports, module) {
     "use strict";
 
     var AppInit             = brackets.getModule("utils/AppInit"),
-        CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
-        LanguageManager     = brackets.getModule("language/LanguageManager");
+        CodeHintManager     = brackets.getModule("editor/CodeHintManager");
     
-    var lastLine,
-        lastFileName,
-        cachedMatches,
-        cachedWordList,
-        tokenDefinition,
-        currentTokenDefinition,
-        i,
-        phpBuiltins         = require("php-predefined-functions");
+    var phpBuiltins         = require("php-predefined-functions");
 
     
     /**
@@ -52,11 +44,13 @@ define(function (require, exports, module) {
      */
     function WordHints() {
         this.lastLine = 0;
-        this.lastFileName = "";
-        this.cachedMatches = [];
-        this.cachedWordList = [];
-        this.tokenDefinition = /[\$a-zA-Z_][\-a-zA-Z0-9_]*[a-zA-Z0-9_]+/g;
-        this.currentTokenDefinition = /[\$a-zA-Z_][\-a-zA-Z0-9_]+$/g;
+        this.cachedPhpVariables =       [];
+        this.cachedPhpConstants =       [];
+        this.cachedPhpKeywords  =       [];
+        this.cachedPhpFunctions =       [];
+        this.cachedLocalVariables =     [];
+        this.tokenVariable =            /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
+        this.currentTokenDefinition =   /[\$a-zA-Z_][\-a-zA-Z0-9_]+$/g;
     }
     
     
@@ -76,22 +70,21 @@ define(function (require, exports, module) {
      * whether it is appropriate to do so.
      */
     WordHints.prototype.hasHints = function (editor, implicitChar) {
-        var i = 0;
-        this.editor = editor;
-        var cursor = this.editor.getCursorPos();
+        var i;
+        var cursor = editor.getCursorPos();
         
         if (cursor.line !== this.lastLine) {
-            var rawWordList = editor.document.getText().match(this.tokenDefinition);
-            for (i = 0; i < rawWordList.length; i++) {
-                var word = rawWordList[i];
-                if (this.cachedWordList.indexOf(word) === -1) {
-                    this.cachedWordList.push(word);
+            this.cachedLocalVariables = [];
+            var localVariablesList = editor.document.getText().match(this.tokenDefinition);
+            for (i = 0; i < localVariablesList.length; i++) {
+                var localVariable = localVariablesList[i];
+                if (this.cachedWordList.indexOf(localVariable) === -1) {
+                    this.cachedWordList.push(localVariable);
                 }
             }
         }
         this.lastLine = cursor.line;
-        
-        // if has entered more than 2 characters - start completion
+
         var lineBeginning = {line: cursor.line, ch: 0};
         var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
         var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
@@ -133,6 +126,7 @@ define(function (require, exports, module) {
      *    to allow result string to stretch width of display.
      */
     WordHints.prototype.getHints = function (implicitChar) {
+        var i;
         var cursor = this.editor.getCursorPos();
         var lineBeginning = {line: cursor.line, ch: 0};
         var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
@@ -141,7 +135,7 @@ define(function (require, exports, module) {
         if (symbolBeforeCursorArray === null) {
             return null;
         }
-        if (cachedWordList === null) {
+        if (this.cachedWordList === null) {
             return null;
         }
         for (i = 0; i < this.cachedWordList.length; i++) {
@@ -184,6 +178,7 @@ define(function (require, exports, module) {
     };
     
     AppInit.appReady(function () {
+        var i;
         var wordHints = new WordHints();
         var functions = phpBuiltins.predefinedFunctions;
         for (i = 0; i < functions.length; i++) {
