@@ -78,8 +78,8 @@ define(function (require, exports, module) {
             var localVariablesList = editor.document.getText().match(this.tokenDefinition);
             for (i = 0; i < localVariablesList.length; i++) {
                 var localVariable = localVariablesList[i];
-                if (this.cachedWordList.indexOf(localVariable) === -1) {
-                    this.cachedWordList.push(localVariable);
+                if (this.cachedLocalVariables.indexOf(localVariable) === -1) {
+                    this.cachedLocalVariables.push(localVariable);
                 }
             }
         }
