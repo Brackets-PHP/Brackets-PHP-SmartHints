@@ -43,6 +43,7 @@ define(function (require, exports, module) {
      * @constructor
      */
     function WordHints() {
+        this.editor             =
         this.lastLine = 0;
         this.cachedPhpVariables =       [];
         this.cachedPhpConstants =       [];
@@ -70,12 +71,17 @@ define(function (require, exports, module) {
      * whether it is appropriate to do so.
      */
     WordHints.prototype.hasHints = function (editor, implicitChar) {
+
+        // if implicitChar is $, we *always* have hints so return immediately
+/*        if (implicitChar === "$") {
+            return true;
+        }*/
         var i;
         var cursor = editor.getCursorPos();
         
         if (cursor.line !== this.lastLine) {
             this.cachedLocalVariables = [];
-            var localVariablesList = editor.document.getText().match(this.tokenDefinition);
+            var localVariablesList = this.editor.document.getText().match(this.tokenVariable);
             for (i = 0; i < localVariablesList.length; i++) {
                 var localVariable = localVariablesList[i];
                 if (this.cachedLocalVariables.indexOf(localVariable) === -1) {
@@ -86,12 +92,12 @@ define(function (require, exports, module) {
         this.lastLine = cursor.line;
 
         var lineBeginning = {line: cursor.line, ch: 0};
-        var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
+        var textBeforeCursor = editor.document.getRange(lineBeginning, cursor);
         var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
         if (symbolBeforeCursorArray) {
             // find if the half-word inputed is in the list
-            for (i = 0; i < this.cachedWordList.length; i++) {
-                if (this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
+            for (i = 0; i < this.cachedLocalVariables.length; i++) {
+                if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
                     return true;
                 }
             }
@@ -135,12 +141,12 @@ define(function (require, exports, module) {
         if (symbolBeforeCursorArray === null) {
             return null;
         }
-        if (this.cachedWordList === null) {
+        if (this.cachedLocalVariables === null) {
             return null;
         }
-        for (i = 0; i < this.cachedWordList.length; i++) {
-            if (this.cachedWordList[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
-                hintList.push(this.cachedWordList[i]);
+        for (i = 0; i < this.cachedLocalVariables.length; i++) {
+            if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
+                hintList.push(this.cachedLocalVariables[i]);
             }
         }
 
@@ -181,34 +187,34 @@ define(function (require, exports, module) {
         var i;
         var wordHints = new WordHints();
         var functions = phpBuiltins.predefinedFunctions;
-        for (i = 0; i < functions.length; i++) {
+        /*for (i = 0; i < functions.length; i++) {
             var phpFunction = functions[i];
-            if (wordHints.cachedWordList.indexOf(phpFunction) === -1) {
-                wordHints.cachedWordList.push(phpFunction);
+            if (wordHints.cachedPhpFunctions.indexOf(phpFunction) === -1) {
+                wordHints.cachedPhpFunctions.push(phpFunction);
             }
         }
         var keywords = phpBuiltins.keywords;
         for (i = 0; i < keywords.length; i++) {
             var phpKeyword = keywords[i];
-            if (wordHints.cachedWordList.indexOf(phpKeyword) === -1) {
-                wordHints.cachedWordList.push(phpKeyword);
+            if (wordHints.cachedPhpKeywords.indexOf(phpKeyword) === -1) {
+                wordHints.cachedPhpKeywords.push(phpKeyword);
             }
         }
         var constants = phpBuiltins.predefinedConstants;
         console.log(constants.length);
         for (i = 0; i < constants.length; i++) {
             var phpConstant = constants[i];
-            if (wordHints.cachedWordList.indexOf(phpConstant) === -1) {
-                wordHints.cachedWordList.push(phpConstant);
+            if (wordHints.cachedPhpConstants.indexOf(phpConstant) === -1) {
+                wordHints.cachedPhpConstants.push(phpConstant);
             }
         }
         var variables = phpBuiltins.predefinedVariables;
         for (i = 0; i < variables.length; i++) {
             var phpVariable = variables[i];
-            if (wordHints.cachedWordList.indexOf(phpVariable) === -1) {
-                wordHints.cachedWordList.push(phpVariable);
+            if (wordHints.cachedPhpVariables.indexOf(phpVariable) === -1) {
+                wordHints.cachedPhpVariables.push(phpVariable);
             }
-        }
+        }*/
         CodeHintManager.registerHintProvider(wordHints, ["php"], 10);
     });
 });
