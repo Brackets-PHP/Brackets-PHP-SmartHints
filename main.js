@@ -70,12 +70,13 @@ define(function (require, exports, module) {
      * whether it is appropriate to do so.
      */
     WordHints.prototype.hasHints = function (editor, implicitChar) {
+        this.editor = editor;
 
         // if implicitChar is $, we *always* have hints so return immediately
         if (implicitChar === "$") {
             return true;
         }
-        this.editor = editor;
+
         var i;
         var cursor = editor.getCursorPos();
         
