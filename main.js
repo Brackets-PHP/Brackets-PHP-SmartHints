@@ -43,7 +43,6 @@ define(function (require, exports, module) {
      * @constructor
      */
     function WordHints() {
-        this.editor             =
         this.lastLine = 0;
         this.cachedPhpVariables =       [];
         this.cachedPhpConstants =       [];
@@ -73,9 +72,10 @@ define(function (require, exports, module) {
     WordHints.prototype.hasHints = function (editor, implicitChar) {
 
         // if implicitChar is $, we *always* have hints so return immediately
-/*        if (implicitChar === "$") {
+        if (implicitChar === "$") {
             return true;
-        }*/
+        }
+        this.editor = editor;
         var i;
         var cursor = editor.getCursorPos();
         
@@ -98,6 +98,7 @@ define(function (require, exports, module) {
             // find if the half-word inputed is in the list
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
                 if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
+                    console.log(symbolBeforeCursorArray[0].toString());
                     return true;
                 }
             }
