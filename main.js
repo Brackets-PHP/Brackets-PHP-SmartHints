@@ -50,7 +50,7 @@ define(function (require, exports, module) {
         this.cachedPhpFunctions =       [];
         this.cachedLocalVariables =     [];
         this.tokenVariable =            /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
-        this.currentTokenDefinition =   /[\$a-zA-Z_][\-a-zA-Z0-9_]+$/g;
+        this.currentToken =             "";
     }
     
     
@@ -92,14 +92,23 @@ define(function (require, exports, module) {
         }
         this.lastLine = cursor.line;
 
-        var lineBeginning = {line: cursor.line, ch: 0};
-        var textBeforeCursor = editor.document.getRange(lineBeginning, cursor);
-        var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
-        if (symbolBeforeCursorArray) {
-            // find if the half-word inputed is in the list
-            for (i = 0; i < this.cachedLocalVariables.length; i++) {
-                if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
-                    console.log(symbolBeforeCursorArray[0].toString());
+        this.currentToken = this.editor._codeMirror.getTokenAt(cursor);
+
+        if (this.currentToken.string.length > 1) {
+            for (i = 0; i < this.cachedPhpKeywords.length; i++) {
+                if (this.cachedPhpKeywords[i].indexOf(this.currentToken.string) === 0) {
+                    return true;
+                }
+            }
+
+            for (i = 0; i < this.cachedPhpConstants.length; i++) {
+                if (this.cachedPhpConstants[i].indexOf(this.currentToken.string) === 0) {
+                    return true;
+                }
+            }
+
+            for (i = 0; i < this.cachedPhpFunctions.length; i++) {
+                if (this.cachedPhpFunctions[i].indexOf(this.currentToken.string) === 0) {
                     return true;
                 }
             }
@@ -189,7 +198,7 @@ define(function (require, exports, module) {
         var i;
         var wordHints = new WordHints();
         var functions = phpBuiltins.predefinedFunctions;
-        /*for (i = 0; i < functions.length; i++) {
+        for (i = 0; i < functions.length; i++) {
             var phpFunction = functions[i];
             if (wordHints.cachedPhpFunctions.indexOf(phpFunction) === -1) {
                 wordHints.cachedPhpFunctions.push(phpFunction);
@@ -216,7 +225,7 @@ define(function (require, exports, module) {
             if (wordHints.cachedPhpVariables.indexOf(phpVariable) === -1) {
                 wordHints.cachedPhpVariables.push(phpVariable);
             }
-        }*/
+        }
         CodeHintManager.registerHintProvider(wordHints, ["php"], 10);
     });
 });
