@@ -50,65 +50,36 @@ define(function (require, exports, module) {
         this.cachedPhpFunctions =       [];
         this.cachedLocalVariables =     [];
         this.tokenVariable =            /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
-        this.currentToken =             "";
     }
-    
-    
-    /**
-     * 
-     * @param {Editor} editor 
-     * A non-null editor object for the active window.
-     *
-     * @param {String} implicitChar 
-     * Either null, if the hinting request was explicit, or a single character
-     * that represents the last insertion and that indicates an implicit
-     * hinting request.
-     *
-     * @return {Boolean} 
-     * Determines whether the current provider is able to provide hints for
-     * the given editor context and, in case implicitChar is non- null,
-     * whether it is appropriate to do so.
-     */
+
     WordHints.prototype.hasHints = function (editor, implicitChar) {
         this.editor = editor;
-
-        // if implicitChar is $, we *always* have hints so return immediately
-        if (implicitChar === "$") {
+        var currentToken = "",
+            i,
+            cursor = editor.getCursorPos();
+        
+        currentToken = this.editor._codeMirror.getTokenAt(cursor);
+        // if implicitChar or 1 letter token is $, we *always* have hints so return immediately
+        if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
+            console.log("$");
             return true;
         }
 
-        var i;
-        var cursor = editor.getCursorPos();
-        
-        if (cursor.line !== this.lastLine) {
-            this.cachedLocalVariables = [];
-            var localVariablesList = this.editor.document.getText().match(this.tokenVariable);
-            for (i = 0; i < localVariablesList.length; i++) {
-                var localVariable = localVariablesList[i];
-                if (this.cachedLocalVariables.indexOf(localVariable) === -1) {
-                    this.cachedLocalVariables.push(localVariable);
-                }
-            }
-        }
-        this.lastLine = cursor.line;
-
-        this.currentToken = this.editor._codeMirror.getTokenAt(cursor);
-
-        if (this.currentToken.string.length > 1) {
+        if (currentToken.string.length > 1) {
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(this.currentToken.string) === 0) {
+                if (this.cachedPhpKeywords[i].indexOf(currentToken.string) === 0) {
                     return true;
                 }
             }
 
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(this.currentToken.string) === 0) {
+                if (this.cachedPhpConstants[i].indexOf(currentToken.string) === 0) {
                     return true;
                 }
             }
 
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(this.currentToken.string) === 0) {
+                if (this.cachedPhpFunctions[i].indexOf(currentToken.string) === 0) {
                     return true;
                 }
             }
@@ -117,39 +88,15 @@ define(function (require, exports, module) {
         
         return false;
     };
-       
-    /**
-     * Returns a list of availble CSS propertyname or -value hints if possible for the current
-     * editor context. 
-     * 
-     * @param {Editor} implicitChar 
-     * Either null, if the hinting request was explicit, or a single character
-     * that represents the last insertion and that indicates an implicit
-     * hinting request.
-     *
-     * @return {jQuery.Deferred|{
-     *              hints: Array.<string|jQueryObject>,
-     *              match: string,
-     *              selectInitial: boolean,
-     *              handleWideResults: boolean}}
-     * Null if the provider wishes to end the hinting session. Otherwise, a
-     * response object that provides:
-     * 1. a sorted array hints that consists of strings
-     * 2. a string match that is used by the manager to emphasize matching
-     *    substrings when rendering the hint list
-     * 3. a boolean that indicates whether the first result, if one exists,
-     *    should be selected by default in the hint list window.
-     * 4. handleWideResults, a boolean (or undefined) that indicates whether
-     *    to allow result string to stretch width of display.
-     */
+
     WordHints.prototype.getHints = function (implicitChar) {
-        var i;
-        var cursor = this.editor.getCursorPos();
-        var lineBeginning = {line: cursor.line, ch: 0};
-        var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
-        var symbolBeforeCursorArray = textBeforeCursor.match(this.currentTokenDefinition);
+        var currentToken = "",
+            i,
+            cursor = this.editor.getCursorPos();
+
+        currentToken = this.editor._codeMirror.getTokenAt(cursor);
         var hintList = [];
-        if (symbolBeforeCursorArray === null) {
+        if (currentToken === null) {
             return null;
         }
         if (this.cachedLocalVariables === null) {
