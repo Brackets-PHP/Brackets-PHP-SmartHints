@@ -90,30 +90,43 @@ define(function (require, exports, module) {
     };
 
     WordHints.prototype.getHints = function (implicitChar) {
-        var currentToken = "",
-            i,
-            cursor = this.editor.getCursorPos();
+        var currentToken =  "",
+            i =             0,
+            hintList =      [],
+            cursor =        this.editor.getCursorPos();
 
         currentToken = this.editor._codeMirror.getTokenAt(cursor);
-        var hintList = [];
         if (currentToken === null) {
             return null;
         }
-        if (this.cachedLocalVariables === null) {
-            return null;
-        }
-        for (i = 0; i < this.cachedLocalVariables.length; i++) {
-            if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
-                hintList.push(this.cachedLocalVariables[i]);
+        if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
+            if (cursor.line !== this.lastLine) {
+                var varList = this.editor.document.getText().match(this.tokenDefinition);
+                for (i = 0; i < varList.length; i++) {
+                    var word = varList[i];
+                    if (this.cachedWordList.indexOf(word) === -1) {
+                        this.cachedWordList.push(word);
+                    }
+                }
             }
-        }
+            this.lastLine = cursor.line;
 
-        return {
-            hints: hintList,
-            match: symbolBeforeCursorArray[0],
-            selectInitial: true,
-            handleWideResults: false
-        };
+            if (this.cachedLocalVariables === null) {
+                return null;
+            }
+            for (i = 0; i < this.cachedLocalVariables.length; i++) {
+                if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
+                    hintList.push(this.cachedLocalVariables[i]);
+                }
+            }
+
+            return {
+                hints: hintList,
+                match: symbolBeforeCursorArray[0],
+                selectInitial: true,
+                handleWideResults: false
+            };
+        } // handle $
     };
     
     /**
