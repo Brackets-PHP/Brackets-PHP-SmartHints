@@ -89,12 +89,15 @@ define(function (require, exports, module) {
     };
 
     WordHints.prototype.getHints = function (implicitChar) {
-        var currentToken =  "",
-            i =             0,
-            hintList =      [],
-            localVarList =  [],
-            phpVarList =    [],
-            cursor =        this.editor.getCursorPos();
+        var currentToken =      "",
+            i =                 0,
+            hintList =          [],
+            localVarList =      [],
+            phpVarList =        [],
+            phpFuncList =       [],
+            phpConstList =      [],
+            phpKeywordList =    [],
+            cursor =            this.editor.getCursorPos();
 
         currentToken = this.editor._codeMirror.getTokenAt(cursor);
         if (currentToken === null) {
@@ -126,17 +129,31 @@ define(function (require, exports, module) {
                 }
             }
             hintList = localVarList.concat(phpVarList);
-            console.log(hintList.length);
         } else {
-            return null;
+            for (i = 0; i < this.cachedPhpKeywords.length; i++) {
+                if (this.cachedPhpKeywords[i].indexOf(currentToken.string) === 0) {
+                    phpKeywordList.push(this.cachedPhpKeywords[i]);
+                }
+            }
+            for (i = 0; i < this.cachedPhpConstants.length; i++) {
+                if (this.cachedPhpConstants[i].indexOf(currentToken.string) === 0) {
+                    phpConstList.push(this.cachedPhpConstants[i]);
+                }
+            }
+            for (i = 0; i < this.cachedPhpFunctions.length; i++) {
+                if (this.cachedPhpFunctions[i].indexOf(currentToken.string) === 0) {
+                    phpFuncList.push(this.cachedPhpFunctions[i]);
+                }
+            }
+            hintList = phpKeywordList.concat(phpConstList, phpFuncList).sort();
         }
 
-    return {
-                hints: hintList,
-                match: currentToken.string,
-                selectInitial: true,
-                handleWideResults: false
-    };
+        return {
+            hints: hintList,
+            match: currentToken.string,
+            selectInitial: true,
+            handleWideResults: false
+        };
     };
 
     WordHints.prototype.insertHint = function (hint) {
@@ -144,9 +161,9 @@ define(function (require, exports, module) {
             currentToken        = this.editor._codeMirror.getTokenAt(cursor),
             lineBeginning       = {line: cursor.line, ch: 0},
             textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
-            indexOfTheSymbol    = textBeforeCursor.search(currentToken.string),
+            indexOfTheSymbol    = textBeforeCursor.indexOf(currentToken.string),
             replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
-
+        console.log(indexOfTheSymbol + "|" + currentToken.string);
         if (indexOfTheSymbol === -1) {
             return false;
         }
