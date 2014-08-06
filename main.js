@@ -61,7 +61,6 @@ define(function (require, exports, module) {
         currentToken = this.editor._codeMirror.getTokenAt(cursor);
         // if implicitChar or 1 letter token is $, we *always* have hints so return immediately
         if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
-            console.log("$");
             return true;
         }
 
@@ -93,6 +92,8 @@ define(function (require, exports, module) {
         var currentToken =  "",
             i =             0,
             hintList =      [],
+            localVarList =  [],
+            phpVarList =    [],
             cursor =        this.editor.getCursorPos();
 
         currentToken = this.editor._codeMirror.getTokenAt(cursor);
@@ -101,11 +102,11 @@ define(function (require, exports, module) {
         }
         if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
             if (cursor.line !== this.lastLine) {
-                var varList = this.editor.document.getText().match(this.tokenDefinition);
+                var varList = this.editor.document.getText().match(this.tokenVariable);
                 for (i = 0; i < varList.length; i++) {
                     var word = varList[i];
-                    if (this.cachedWordList.indexOf(word) === -1) {
-                        this.cachedWordList.push(word);
+                    if (this.cachedLocalVariables.indexOf(word) === -1) {
+                        this.cachedLocalVariables.push(word);
                     }
                 }
             }
@@ -115,36 +116,37 @@ define(function (require, exports, module) {
                 return null;
             }
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
-                if (this.cachedLocalVariables[i].indexOf(symbolBeforeCursorArray[0]) === 0) {
-                    hintList.push(this.cachedLocalVariables[i]);
+                if (this.cachedLocalVariables[i].indexOf(currentToken.string) === 0) {
+                    localVarList.push(this.cachedLocalVariables[i]);
                 }
             }
+            for (i = 0; i < this.cachedPhpVariables.length; i++) {
+                if (this.cachedPhpVariables[i].indexOf(currentToken.string) === 0) {
+                    phpVarList.push(this.cachedPhpVariables[i]);
+                }
+            }
+            hintList = localVarList.concat(phpVarList);
+            console.log(hintList.length);
+        } else {
+            return null;
+        }
 
-            return {
+    return {
                 hints: hintList,
-                match: symbolBeforeCursorArray[0],
+                match: currentToken.string,
                 selectInitial: true,
                 handleWideResults: false
-            };
-        } // handle $
     };
-    
-    /**
-     * Complete the word
-     * 
-     * @param {String} hint 
-     * The hint to be inserted into the editor context.
-     * 
-     * @return {Boolean} 
-     * Indicates whether the manager should follow hint insertion with an
-     * additional explicit hint request.
-     */
+    };
+
     WordHints.prototype.insertHint = function (hint) {
-        var cursor = this.editor.getCursorPos();
-        var lineBeginning = {line: cursor.line, ch: 0};
-        var textBeforeCursor = this.editor.document.getRange(lineBeginning, cursor);
-        var indexOfTheSymbol = textBeforeCursor.search(this.currentTokenDefinition);
-        var replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
+        var cursor              = this.editor.getCursorPos(),
+            currentToken        = this.editor._codeMirror.getTokenAt(cursor),
+            lineBeginning       = {line: cursor.line, ch: 0},
+            textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
+            indexOfTheSymbol    = textBeforeCursor.search(currentToken.string),
+            replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
+
         if (indexOfTheSymbol === -1) {
             return false;
         }
@@ -157,21 +159,21 @@ define(function (require, exports, module) {
     AppInit.appReady(function () {
         var i;
         var wordHints = new WordHints();
-        var functions = phpBuiltins.predefinedFunctions;
+        var functions = phpBuiltins.predefinedFunctions.sort();
         for (i = 0; i < functions.length; i++) {
             var phpFunction = functions[i];
             if (wordHints.cachedPhpFunctions.indexOf(phpFunction) === -1) {
                 wordHints.cachedPhpFunctions.push(phpFunction);
             }
         }
-        var keywords = phpBuiltins.keywords;
+        var keywords = phpBuiltins.keywords.sort();
         for (i = 0; i < keywords.length; i++) {
             var phpKeyword = keywords[i];
             if (wordHints.cachedPhpKeywords.indexOf(phpKeyword) === -1) {
                 wordHints.cachedPhpKeywords.push(phpKeyword);
             }
         }
-        var constants = phpBuiltins.predefinedConstants;
+        var constants = phpBuiltins.predefinedConstants.sort();
         console.log(constants.length);
         for (i = 0; i < constants.length; i++) {
             var phpConstant = constants[i];
@@ -179,7 +181,7 @@ define(function (require, exports, module) {
                 wordHints.cachedPhpConstants.push(phpConstant);
             }
         }
-        var variables = phpBuiltins.predefinedVariables;
+        var variables = phpBuiltins.predefinedVariables.sort();
         for (i = 0; i < variables.length; i++) {
             var phpVariable = variables[i];
             if (wordHints.cachedPhpVariables.indexOf(phpVariable) === -1) {
