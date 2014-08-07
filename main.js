@@ -27,9 +27,10 @@ define(function (require, exports, module) {
     "use strict";
 
     var AppInit             = brackets.getModule("utils/AppInit"),
-        CodeHintManager     = brackets.getModule("editor/CodeHintManager");
+        CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
+        ExtensionUtils      = brackets.getModule("utils/ExtensionUtils");
     
-    var phpBuiltins         = require("php-predefined-functions");
+    var phpBuiltins         = require("phpdata/php-predefined");
 
     
     /**
@@ -90,6 +91,7 @@ define(function (require, exports, module) {
             phpFuncList =       [],
             phpConstList =      [],
             phpKeywordList =    [],
+            $fHint,
             cursor =            this.editor.getCursorPos();
 
         currentToken = this.editor._codeMirror.getTokenAt(cursor);
@@ -116,13 +118,21 @@ define(function (require, exports, module) {
             // add unique local $variables
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
                 if (this.cachedLocalVariables[i].indexOf(currentToken.string) === 0) {
-                    localVarList.push(this.cachedLocalVariables[i]);
+                    $fHint = $("<span>")
+                        .addClass("PHPHint-completion")
+                        .addClass("PHPHint-completion-localvar")
+                        .text(this.cachedLocalVariables[i]);
+                    localVarList.push($fHint);
                 }
             }
             // load the predefined $variables next
             for (i = 0; i < this.cachedPhpVariables.length; i++) {
                 if (this.cachedPhpVariables[i].indexOf(currentToken.string) === 0) {
-                    phpVarList.push(this.cachedPhpVariables[i]);
+                    $fHint = $("<span>")
+                        .addClass("PHPHint-completion")
+                        .addClass("PHPHint-completion-phpvar")
+                        .text(this.cachedPhpVariables[i]);
+                    phpVarList.push($fHint);
                 }
             }
             // list is presented with local first then predefined
@@ -132,19 +142,31 @@ define(function (require, exports, module) {
             // load keywords that match
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
                 if (this.cachedPhpKeywords[i].indexOf(currentToken.string) === 0) {
-                    phpKeywordList.push(this.cachedPhpKeywords[i]);
+                    $fHint = $("<span>")
+                        .addClass("PHPHint-completion")
+                        .addClass("PHPHint-completion-phpkeyword")
+                        .text(this.cachedPhpKeywords[i]);
+                    phpKeywordList.push($fHint);
                 }
             }
             // load constants that match
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
                 if (this.cachedPhpConstants[i].indexOf(currentToken.string) === 0) {
-                    phpConstList.push(this.cachedPhpConstants[i]);
+                    $fHint = $("<span>")
+                        .addClass("PHPHint-completion")
+                        .addClass("PHPHint-completion-phpconstant")
+                        .text(this.cachedPhpConstants[i]);
+                    phpConstList.push($fHint);
                 }
             }
             // load functions that match
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
                 if (this.cachedPhpFunctions[i].indexOf(currentToken.string) === 0) {
-                    phpFuncList.push(this.cachedPhpFunctions[i]);
+                    $fHint = $("<span>")
+                        .addClass("PHPHint-completion")
+                        .addClass("PHPHint-completion-phpfunction")
+                        .text(this.cachedPhpFunctions[i]);
+                    phpFuncList.push($fHint);
                 }
             }
             // munge all the lists together and sort
@@ -153,13 +175,13 @@ define(function (require, exports, module) {
 
         return {
             hints: hintList,
-            match: currentToken.string,
+            match: false,
             selectInitial: true,
             handleWideResults: false
         };
     };
 
-    PHPHints.prototype.insertHint = function (hint) {
+    PHPHints.prototype.insertHint = function ($hint) {
         var cursor              = this.editor.getCursorPos(),
             currentToken        = this.editor._codeMirror.getTokenAt(cursor),
             lineBeginning       = {line: cursor.line, ch: 0},
@@ -170,7 +192,7 @@ define(function (require, exports, module) {
         if (indexOfTheSymbol === -1) {
             return false;
         }
-        this.editor.document.replaceRange(hint, replaceStart, cursor);
+        this.editor.document.replaceRange($hint.text(), replaceStart, cursor);
         return false;
     };
     
@@ -211,6 +233,7 @@ define(function (require, exports, module) {
                 phpHints.cachedPhpVariables.push(phpVariable);
             }
         }
+        ExtensionUtils.loadStyleSheet(module, "css/main.css");
         // register the provider.  Priority = 10 to be the provider of choice for php
         CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
     });

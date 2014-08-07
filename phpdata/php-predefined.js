@@ -25,7 +25,7 @@ SOFTWARE.*/
 
 define(function (require, exports, module) {
     "use strict";
-    
+
     var strPredefinedFunctions =
         'abs|acos|acosh|addcslashes|addslashes|aggregate|aggregate_info|aggregate_methods|aggregate_methods_by_list|aggregate_methods_by_regexp|' +
         'aggregate_properties|aggregate_properties_by_list|aggregate_properties_by_regexp|aggregation_info|amqpconnection|amqpexchange|amqpqueue|' +
@@ -817,27 +817,27 @@ define(function (require, exports, module) {
         'ziparchive_locatename|ziparchive_open|ziparchive_renameindex|ziparchive_renamename|ziparchive_setCommentName|ziparchive_setarchivecomment|' +
         'ziparchive_setcommentindex|ziparchive_statindex|ziparchive_statname|ziparchive_unchangeall|ziparchive_unchangearchive|' +
         'ziparchive_unchangeindex|ziparchive_unchangename|zlib_get_coding_type';
-    
+
     var predefinedFunctions = strPredefinedFunctions.split("|");
-    
+
     var strKeywords =
         'abstract|and|array|as|break|case|catch|class|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|' +
         'endswitch|endwhile|eval|exit|extends|final|for|foreach|function|global|goto|if|implements|include|include_once|interface|instanceof|isset|list|namespace|new|or|print|private|protected|' +
         'public|require|require_once|return|static|switch|throw|try|unset|use|var|while|xor';
-    
+
     var keywords = strKeywords.split('|');
-    
+
     var strPredefinedConstants =
         'true|false|null|__CLASS__|__DIR__|__FILE__|__LINE__|__METHOD__|__FUNCTION__|__NAMESPACE__';
-    
+
     var predefinedConstants = strPredefinedConstants.split('|');
-    
+
     var strPredefinedVariables =
         '$GLOBALS|$_SERVER|$_GET|$_POST|$_FILES|$_REQUEST|$_SESSION|$_ENV|$_COOKIE|$php_errormsg|$HTTP_RAW_POST_DATA|' +
         '$http_response_header|$argc|$argv';
-    
+
     var predefinedVariables = strPredefinedVariables.split('|');
-    
+
     exports.predefinedFunctions = predefinedFunctions;
     exports.predefinedConstants = predefinedConstants;
     exports.predefinedVariables = predefinedVariables;
