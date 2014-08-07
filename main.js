@@ -126,7 +126,7 @@ define(function (require, exports, module) {
                 }
             }
             // list is presented with local first then predefined
-            hintList = localVarList.concat(phpVarList);
+            hintList = localVarList.sort().concat(phpVarList);
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
