@@ -115,6 +115,7 @@ define(function (require, exports, module) {
             if (this.cachedLocalVariables === null) {
                 return null;
             }
+            this.cachedLocalVariables.sort();
             // add unique local $variables
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
                 if (this.cachedLocalVariables[i].indexOf(currentToken.string) === 0) {
@@ -136,7 +137,7 @@ define(function (require, exports, module) {
                 }
             }
             // list is presented with local first then predefined
-            hintList = localVarList.sort().concat(phpVarList);
+            hintList = localVarList.concat(phpVarList);
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
