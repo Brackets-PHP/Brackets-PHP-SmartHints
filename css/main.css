@@ -1,0 +1,38 @@
+.PHPHint-completion {
+  padding-left: 22px;
+  position: relative;
+}
+.PHPHint-completion:before {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+.PHPHint-completion-localvar:before {
+  content: "V";
+  background: #218434;
+}
+.PHPHint-completion-phpvar:before {
+  content: "V";
+  background: #217184;
+}
+.PHPHint-completion-phpkeyword:before {
+  content: "K";
+  background: #302184;
+}
+.PHPHint-completion-phpconstant:before {
+  content: "C";
+  background: #692184;
+}
+.PHPHint-completion-phpfunction:before {
+  content: "F";
+  background: #842156;
+}

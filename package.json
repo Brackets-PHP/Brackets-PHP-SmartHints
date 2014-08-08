@@ -3,7 +3,7 @@
     "title": "[PHP-SIG] PHP SmartHints",
     "description": "Provides code hints for PHP files including PHP keywords, built-in functions, constants and variables.  Also provides hinting for variables in the current open PHP document.",
     "homepage": "https://github.com/Brackets-PHP-SIG/Brackets-PHP-SmartHints",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "author": "Brackets PHP SIG <a.mackenzie@gmail.com> (https://github.com/Brackets-PHP-SIG)",
     "license": "MIT",
     "engines": {
