@@ -187,9 +187,9 @@ define(function (require, exports, module) {
             currentToken        = this.editor._codeMirror.getTokenAt(cursor),
             lineBeginning       = {line: cursor.line, ch: 0},
             textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
-            indexOfTheSymbol    = textBeforeCursor.indexOf(currentToken.string),
-            replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
-        console.log(indexOfTheSymbol + "|" + currentToken.string);
+            indexOfTheSymbol    = textBeforeCursor.lastIndexOf(currentToken.string),
+            replaceStart        = {line: cursor.line, ch: indexOfTheSymbol};
+
         if (indexOfTheSymbol === -1) {
             return false;
         }
