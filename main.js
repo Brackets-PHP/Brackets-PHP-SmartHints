@@ -185,15 +185,10 @@ define(function (require, exports, module) {
     PHPHints.prototype.insertHint = function ($hint) {
         var cursor              = this.editor.getCursorPos(),
             currentToken        = this.editor._codeMirror.getTokenAt(cursor),
-            lineBeginning       = {line: cursor.line, ch: 0},
-            textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
-            indexOfTheSymbol    = textBeforeCursor.indexOf(currentToken.string),
-            replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
-        console.log(indexOfTheSymbol + "|" + currentToken.string);
-        if (indexOfTheSymbol === -1) {
-            return false;
-        }
-        this.editor.document.replaceRange($hint.text(), replaceStart, cursor);
+            replaceStart        = {line: cursor.line, ch: currentToken.start},
+            replaceEnd          = {line: cursor.line, ch: currentToken.end};
+
+        this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
         return false;
     };
     
