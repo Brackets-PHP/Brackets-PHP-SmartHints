@@ -197,43 +197,29 @@ define(function (require, exports, module) {
         return false;
     };
     
+    function createHintArray(rawList) {
+        var sortedRawList   = rawList.sort(),
+            i               = 0,
+            currentWord     = "",
+            finalList       = [];
+
+        for (i = 0; i < sortedRawList.length; i++) {
+            currentWord = sortedRawList[i];
+            if (finalList.indexOf(currentWord) === -1) {
+                finalList.push(currentWord);
+            }
+        }
+        return finalList;
+    }
+
     AppInit.appReady(function () {
-        var i;
         var phpHints = new PHPHints();
-        var functions = phpBuiltins.predefinedFunctions.sort();
-        // load and sort functions
-        // @todo - do I really need to sort?  cant I just make sure source is sorted?
-        for (i = 0; i < functions.length; i++) {
-            var phpFunction = functions[i];
-            if (phpHints.cachedPhpFunctions.indexOf(phpFunction) === -1) {
-                phpHints.cachedPhpFunctions.push(phpFunction);
-            }
-        }
-        // load and sort keywords
-        var keywords = phpBuiltins.keywords.sort();
-        for (i = 0; i < keywords.length; i++) {
-            var phpKeyword = keywords[i];
-            if (phpHints.cachedPhpKeywords.indexOf(phpKeyword) === -1) {
-                phpHints.cachedPhpKeywords.push(phpKeyword);
-            }
-        }
-        // load and sort constants
-        var constants = phpBuiltins.predefinedConstants.sort();
-        console.log(constants.length);
-        for (i = 0; i < constants.length; i++) {
-            var phpConstant = constants[i];
-            if (phpHints.cachedPhpConstants.indexOf(phpConstant) === -1) {
-                phpHints.cachedPhpConstants.push(phpConstant);
-            }
-        }
-        // load and sort variables
-        var variables = phpBuiltins.predefinedVariables.sort();
-        for (i = 0; i < variables.length; i++) {
-            var phpVariable = variables[i];
-            if (phpHints.cachedPhpVariables.indexOf(phpVariable) === -1) {
-                phpHints.cachedPhpVariables.push(phpVariable);
-            }
-        }
+
+        phpHints.cachedPhpFunctions = createHintArray(phpBuiltins.predefinedFunctions);
+        phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
+        phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
+        phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
+
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
         // register the provider.  Priority = 10 to be the provider of choice for php
         CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
