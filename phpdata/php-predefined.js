@@ -157,7 +157,12 @@ define(function (require, exports, module) {
         'lzf_compress|lzf_decompress|lzf_optimized_for';
 
     var zipFunctions =
-        'zip_close|zip_entry_close|zip_entry_compressedsize|zip_entry_compressionmethod|' +
+        'ziparchive|ziparchive_addemptydir|ziparchive_addfile|ziparchive_addfromstring|ziparchive_close|ziparchive_deleteindex|' +
+        'ziparchive_deletename|ziparchive_extractto|ziparchive_getarchivecomment|ziparchive_getcommentindex|ziparchive_getcommentname|' +
+        'ziparchive_getfromindex|ziparchive_getfromname|ziparchive_getnameindex|ziparchive_getstatusstring|ziparchive_getstream|' +
+        'ziparchive_locatename|ziparchive_open|ziparchive_renameindex|ziparchive_renamename|ziparchive_setCommentName|ziparchive_setarchivecomment|' +
+        'ziparchive_setcommentindex|ziparchive_statindex|ziparchive_statname|ziparchive_unchangeall|ziparchive_unchangearchive|' +
+        'ziparchive_unchangeindex|ziparchive_unchangename|zip_close|zip_entry_close|zip_entry_compressedsize|zip_entry_compressionmethod|' +
         'zip_entry_filesize|zip_entry_name|zip_entry_open|zip_entry_read|zip_open|zip_read';
 
     var zlibFunctions =
@@ -886,6 +891,13 @@ define(function (require, exports, module) {
         'httpresponse_setlastmodified|httpresponse_setstream|httpresponse_setthrottledelay|httpresponse_status';
 
     var hyperwaveFunctions =
+        'hwapi_attribute|hwapi_attribute_key|hwapi_attribute_langdepvalue|hwapi_attribute_value|hwapi_attribute_values|hwapi_checkin|' +
+        'hwapi_checkout|hwapi_children|hwapi_content|hwapi_content_mimetype|hwapi_content_read|hwapi_copy|hwapi_dbstat|hwapi_dcstat|' +
+        'hwapi_dstanchors|hwapi_dstofsrcanchor|hwapi_error_count|hwapi_error_reason|hwapi_find|hwapi_ftstat|hwapi_hgcsp|hwapi_hwstat|' +
+        'hwapi_identify|hwapi_info|hwapi_insert|hwapi_insertanchor|hwapi_insertcollection|hwapi_insertdocument|hwapi_link|hwapi_lock|hwapi_move|' +
+        'hwapi_new_content|hwapi_object|hwapi_object_assign|hwapi_object_attreditable|hwapi_object_count|hwapi_object_insert|hwapi_object_new|' +
+        'hwapi_object_remove|hwapi_object_title|hwapi_object_value|hwapi_objectbyanchor|hwapi_parents|hwapi_reason_description|hwapi_reason_type|' +
+        'hwapi_remove|hwapi_replace|hwapi_setcommittedversion|hwapi_srcanchors|hwapi_srcsofdst|hwapi_unlock|hwapi_user|hwapi_userlist|hypot|' +
         'hw_array2objrec|hw_changeobject|' +
         'hw_children|hw_childrenobj|hw_close|hw_connect|hw_connection_info|hw_cp|hw_deleteobject|hw_docbyanchor|hw_docbyanchorobj|' +
         'hw_document_attributes|hw_document_bodytag|hw_document_content|hw_document_setcontent|hw_document_size|hw_dummy|hw_edittext|hw_error|' +
@@ -1013,9 +1025,137 @@ define(function (require, exports, module) {
     var bbcodeFunctions =
         'bbcode_add_element|bbcode_add_smiley|bbcode_create|bbcode_destroy|bbcode_parse|bbcode_set_arg_parser|bbcode_set_flags';
 
+    var classkitFunctions =
+        'classkit_import|classkit_method_add|classkit_method_copy|classkit_method_redefine|classkit_method_remove|' +
+        'classkit_method_rename';
 
+    var ctypeFunctions =
+        'ctype_alnum|ctype_alpha|ctype_cntrl|ctype_digit|' +
+        'ctype_graph|ctype_lower|ctype_print|ctype_punct|ctype_space|ctype_upper|ctype_xdigit';
 
+    var filterFunctions =
+        'filter_has_var|filter_id|filter_input|filter_input_array|filter_list|filter_var|filter_var_array';
 
+    var reflectionFunctions =
+        'reflection|reflectionclass|reflectionexception|reflectionextension|' +
+        'reflectionfunction|reflectionfunctionabstract|reflectionmethod|reflectionobject|reflectionparameter|reflectionproperty';
+
+    // web services
+
+    var oauthFunctions =
+        'oauth|oauth_get_sbs|oauth_urlencode|oauthexception|oauthprovider';
+
+    var xmlrpcFunctions =
+        'xmlrpc_decode|xmlrpc_decode_request|xmlrpc_encode|xmlrpc_encode_request|xmlrpc_get_type|xmlrpc_is_fault|xmlrpc_parse_method_descriptions|' +
+        'xmlrpc_server_add_introspection_data|xmlrpc_server_call_method|xmlrpc_server_create|xmlrpc_server_destroy|' +
+        'xmlrpc_server_register_introspection_callback|xmlrpc_server_register_method|xmlrpc_set_type';
+
+    // Windows only extensions
+
+    var w32apiFunctions =
+        '32api_deftype|w32api_init_dtype|w32api_invoke_function|w32api_register_function|w32api_set_call_method';
+
+    var comFunctions =
+        'dotnet|dotnet_load|com_addref|com_create_guid|com_event_sink|com_get|' +
+        'com_get_active_object|com_invoke|com_isenum|com_load|com_load_typelib|com_message_pump|com_print_typeinfo|com_propget|com_propput|' +
+        'com_propset|com_release|com_set|variant|' +
+        'variant_abs|variant_add|variant_and|variant_cast|variant_cat|variant_cmp|variant_date_from_timestamp|variant_date_to_timestamp|' +
+        'variant_div|variant_eqv|variant_fix|variant_get_type|variant_idiv|variant_imp|variant_int|variant_mod|variant_mul|variant_neg|variant_not|' +
+        'variant_or|variant_pow|variant_round|variant_set|variant_set_type|variant_sub|variant_xor';
+
+    var win32psFunctions =
+        'win32_ps_list_procs|win32_ps_stat_mem|win32_ps_stat_proc';
+
+    var win32serviceFunctions =
+        'win32_continue_service|win32_create_service|win32_delete_service|' +
+        'win32_get_last_control_message|win32_pause_service|win32_query_service_status|' +
+        'win32_set_service_status|win32_start_service|win32_start_service_ctrl_dispatcher|win32_stop_service';
+
+    var printerFunctions =
+        'printer_abort|printer_close|printer_create_brush|printer_create_dc|printer_create_font|printer_create_pen|printer_delete_brush|' +
+        'printer_delete_dc|printer_delete_font|printer_delete_pen|printer_draw_bmp|printer_draw_chord|printer_draw_elipse|printer_draw_line|' +
+        'printer_draw_pie|printer_draw_rectangle|printer_draw_roundrect|printer_draw_text|printer_end_doc|printer_end_page|printer_get_option|' +
+        'printer_list|printer_logical_fontheight|printer_open|printer_select_brush|printer_select_font|printer_select_pen|printer_set_option|' +
+        'printer_start_doc|printer_start_page|printer_write';
+
+    // xml extensions
+
+    var domFunctions =
+        'dom_import_simplexml|domainexception|domattr|domattribute_name|domattribute_set_value|domattribute_specified|' +
+        'domattribute_value|domcharacterdata|domcomment|domdocument|domdocument_add_root|domdocument_create_attribute|' +
+        'domdocument_create_cdata_section|domdocument_create_comment|domdocument_create_element|domdocument_create_element_ns|' +
+        'domdocument_create_entity_reference|domdocument_create_processing_instruction|domdocument_create_text_node|domdocument_doctype|' +
+        'domdocument_document_element|domdocument_dump_file|domdocument_dump_mem|domdocument_get_element_by_id|domdocument_get_elements_by_tagname|' +
+        'domdocument_html_dump_mem|domdocument_xinclude|domdocumentfragment|domdocumenttype|domdocumenttype_entities|' +
+        'domdocumenttype_internal_subset|domdocumenttype_name|domdocumenttype_notations|domdocumenttype_public_id|domdocumenttype_system_id|' +
+        'domelement|domelement_get_attribute|domelement_get_attribute_node|domelement_get_elements_by_tagname|domelement_has_attribute|' +
+        'domelement_remove_attribute|domelement_set_attribute|domelement_set_attribute_node|domelement_tagname|domentity|domentityreference|' +
+        'domexception|domimplementation|domnamednodemap|domnode|domnode_add_namespace|domnode_append_child|domnode_append_sibling|' +
+        'domnode_attributes|domnode_child_nodes|domnode_clone_node|domnode_dump_node|domnode_first_child|domnode_get_content|' +
+        'domnode_has_attributes|domnode_has_child_nodes|domnode_insert_before|domnode_is_blank_node|domnode_last_child|domnode_next_sibling|' +
+        'domnode_node_name|domnode_node_type|domnode_node_value|domnode_owner_document|domnode_parent_node|domnode_prefix|domnode_previous_sibling|' +
+        'domnode_remove_child|domnode_replace_child|domnode_replace_node|domnode_set_content|domnode_set_name|domnode_set_namespace|' +
+        'domnode_unlink_node|domnodelist|domnotation|domprocessinginstruction|domprocessinginstruction_data|domprocessinginstruction_target|' +
+        'domtext|domxml_new_doc|domxml_open_file|domxml_open_mem|domxml_version|domxml_xmltree|domxml_xslt_stylesheet|domxml_xslt_stylesheet_doc|' +
+        'domxml_xslt_stylesheet_file|domxml_xslt_version|domxpath|domxsltstylesheet_process|domxsltstylesheet_result_dump_file|' +
+        'domxsltstylesheet_result_dump_mem';
+
+    var libxmlFunctions =
+        'libxml_clear_errors|' +
+        'libxml_disable_entity_loader|libxml_get_errors|libxml_get_last_error|libxml_set_streams_context|libxml_use_internal_errors|libxmlerror';
+
+    var qdomFunctions =
+        'qdom_error|qdom_tree';
+
+    var sdoFunctions =
+        'sdo_das_changesummary_beginlogging|sdo_das_changesummary_endlogging|' +
+        'sdo_das_changesummary_getchangeddataobjects|sdo_das_changesummary_getchangetype|sdo_das_changesummary_getoldcontainer|' +
+        'sdo_das_changesummary_getoldvalues|sdo_das_changesummary_islogging|sdo_das_datafactory_addpropertytotype|sdo_das_datafactory_addtype|' +
+        'sdo_das_datafactory_getdatafactory|sdo_das_dataobject_getchangesummary|sdo_das_relational_applychanges|sdo_das_relational_construct|' +
+        'sdo_das_relational_createrootdataobject|sdo_das_relational_executepreparedquery|sdo_das_relational_executequery|' +
+        'sdo_das_setting_getlistindex|sdo_das_setting_getpropertyindex|sdo_das_setting_getpropertyname|sdo_das_setting_getvalue|' +
+        'sdo_das_setting_isset|sdo_das_xml_addtypes|sdo_das_xml_create|sdo_das_xml_createdataobject|sdo_das_xml_createdocument|' +
+        'sdo_das_xml_document_getrootdataobject|sdo_das_xml_document_getrootelementname|sdo_das_xml_document_getrootelementuri|' +
+        'sdo_das_xml_document_setencoding|sdo_das_xml_document_setxmldeclaration|sdo_das_xml_document_setxmlversion|sdo_das_xml_loadfile|' +
+        'sdo_das_xml_loadstring|sdo_das_xml_savefile|sdo_das_xml_savestring|sdo_datafactory_create|sdo_dataobject_clear|' +
+        'sdo_dataobject_createdataobject|sdo_dataobject_getcontainer|sdo_dataobject_getsequence|sdo_dataobject_gettypename|' +
+        'sdo_dataobject_gettypenamespaceuri|sdo_exception_getcause|sdo_list_insert|sdo_model_property_getcontainingtype|' +
+        'sdo_model_property_getdefault|sdo_model_property_getname|sdo_model_property_gettype|sdo_model_property_iscontainment|' +
+        'sdo_model_property_ismany|sdo_model_reflectiondataobject_construct|sdo_model_reflectiondataobject_export|' +
+        'sdo_model_reflectiondataobject_getcontainmentproperty|sdo_model_reflectiondataobject_getinstanceproperties|' +
+        'sdo_model_reflectiondataobject_gettype|sdo_model_type_getbasetype|sdo_model_type_getname|sdo_model_type_getnamespaceuri|' +
+        'sdo_model_type_getproperties|sdo_model_type_getproperty|sdo_model_type_isabstracttype|sdo_model_type_isdatatype|sdo_model_type_isinstance|' +
+        'sdo_model_type_isopentype|sdo_model_type_issequencedtype|sdo_sequence_getproperty|sdo_sequence_insert|sdo_sequence_move';
+
+    var simplexmlFunctions =
+        'simplexml_import_dom|simplexml_load_file|simplexml_load_string|simplexmlelement|simplexmliterator';
+
+    var wddxFunctions =
+        'wddx_add_vars|wddx_deserialize|wddx_packet_end|' +
+        'wddx_packet_start|wddx_serialize_value|wddx_serialize_vars';
+
+    var xmlparserFunctions =
+        'utf8_decode|utf8_encode|xml_error_string|xml_get_current_byte_index|' +
+        'xml_get_current_column_number|xml_get_current_line_number|xml_get_error_code|xml_parse|xml_parse_into_struct|xml_parser_create|' +
+        'xml_parser_create_ns|xml_parser_free|xml_parser_get_option|xml_parser_set_option|xml_set_character_data_handler|xml_set_default_handler|' +
+        'xml_set_element_handler|xml_set_end_namespace_decl_handler|xml_set_external_entity_ref_handler|xml_set_notation_decl_handler|' +
+        'xml_set_object|xml_set_processing_instruction_handler|xml_set_start_namespace_decl_handler|xml_set_unparsed_entity_decl_handler';
+
+    var xmlreadwriteFunctions =
+        'xmlreader|xmlwriter_end_attribute|xmlwriter_end_cdata|' +
+        'xmlwriter_end_comment|xmlwriter_end_document|xmlwriter_end_dtd|xmlwriter_end_dtd_attlist|xmlwriter_end_dtd_element|' +
+        'xmlwriter_end_dtd_entity|xmlwriter_end_element|xmlwriter_end_pi|xmlwriter_flush|xmlwriter_full_end_element|xmlwriter_open_memory|' +
+        'xmlwriter_open_uri|xmlwriter_output_memory|xmlwriter_set_indent|xmlwriter_set_indent_string|xmlwriter_start_attribute|' +
+        'xmlwriter_start_attribute_ns|xmlwriter_start_cdata|xmlwriter_start_comment|xmlwriter_start_document|xmlwriter_start_dtd|' +
+        'xmlwriter_start_dtd_attlist|xmlwriter_start_dtd_element|xmlwriter_start_dtd_entity|xmlwriter_start_element|xmlwriter_start_element_ns|' +
+        'xmlwriter_start_pi|xmlwriter_text|xmlwriter_write_attribute|xmlwriter_write_attribute_ns|xmlwriter_write_cdata|xmlwriter_write_comment|' +
+        'xmlwriter_write_dtd|xmlwriter_write_dtd_attlist|xmlwriter_write_dtd_element|xmlwriter_write_dtd_entity|xmlwriter_write_element|' +
+        'xmlwriter_write_element_ns|xmlwriter_write_pi|xmlwriter_write_raw';
+
+    var xsltFunctions =
+        'xslt_backend_info|xslt_backend_name|xslt_backend_version|xslt_create|xslt_errno|' +
+        'xslt_error|xslt_free|xslt_getopt|xslt_process|xslt_set_base|xslt_set_encoding|xslt_set_error_handler|xslt_set_log|xslt_set_object|' +
+        'xslt_set_sax_handler|xslt_set_sax_handlers|xslt_set_scheme_handler|xslt_set_scheme_handlers|xslt_setopt|xsltprocessor';
 
 
 
@@ -1034,43 +1174,22 @@ define(function (require, exports, module) {
         'bumpValue|' +
         'cachingiterator|call_user_func|call_user_func_array|call_user_method|call_user_method_array|callbackfilteriterator|ceil|' +
         'chdb|chdb_create|chdir|checkdate|checkdnsrr|chgrp|chmod|chop|chown|chr|chroot|chunk_split|class_alias|class_exists|class_implements|' +
-        'class_parents|classkit_import|classkit_method_add|classkit_method_copy|classkit_method_redefine|classkit_method_remove|' +
-        'classkit_method_rename|clearstatcache|clone|closedir|closelog|collator|com|com_addref|com_create_guid|com_event_sink|com_get|' +
-        'com_get_active_object|com_invoke|com_isenum|com_load|com_load_typelib|com_message_pump|com_print_typeinfo|com_propget|com_propput|' +
-        'com_propset|com_release|com_set|compact|connection_aborted|connection_status|connection_timeout|constant|construct|construct|construct|' +
+        'class_parents|clearstatcache|clone|closedir|closelog|collator|com|compact|connection_aborted|connection_status|connection_timeout|constant|construct|construct|construct|' +
         'convert_cyr_string|convert_uudecode|convert_uuencode|copy|cos|cosh|count|count_chars|countable|counter_bump|counter_bump_value|' +
         'counter_create|counter_get|counter_get_meta|counter_get_named|counter_get_value|counter_reset|counter_reset_value|' +
-        'crc32|create_function|crypt|ctype_alnum|ctype_alpha|ctype_cntrl|ctype_digit|' +
-        'ctype_graph|ctype_lower|ctype_print|ctype_punct|ctype_space|ctype_upper|ctype_xdigit|current|date|date_add|date_create|' +
+        'crc32|create_function|crypt|current|date|date_add|date_create|' +
         'date_create_from_format|date_date_set|date_default_timezone_get|date_default_timezone_set|date_diff|date_format|date_get_last_errors|' +
         'date_interval_create_from_date_string|date_interval_format|date_isodate_set|date_modify|date_offset_get|date_parse|date_parse_from_format|' +
         'date_sub|date_sun_info|date_sunrise|date_sunset|date_time_set|date_timestamp_get|date_timestamp_set|date_timezone_get|date_timezone_set|' +
         'dateinterval|dateperiod|datetime|datetimezone|deaggregate|debug_backtrace|debug_print_backtrace|debug_zval_dump|decbin|dechex|decoct|define|' +
         'define_syslog_variables|defined|deg2rad|delete|die|dir|directoryiterator|dirname|disk_free_space|disk_total_space|diskfreespace|dl|dns_check_record|' +
-        'dns_get_mx|dns_get_record|dom_import_simplexml|domainexception|domattr|domattribute_name|domattribute_set_value|domattribute_specified|' +
-        'domattribute_value|domcharacterdata|domcomment|domdocument|domdocument_add_root|domdocument_create_attribute|' +
-        'domdocument_create_cdata_section|domdocument_create_comment|domdocument_create_element|domdocument_create_element_ns|' +
-        'domdocument_create_entity_reference|domdocument_create_processing_instruction|domdocument_create_text_node|domdocument_doctype|' +
-        'domdocument_document_element|domdocument_dump_file|domdocument_dump_mem|domdocument_get_element_by_id|domdocument_get_elements_by_tagname|' +
-        'domdocument_html_dump_mem|domdocument_xinclude|domdocumentfragment|domdocumenttype|domdocumenttype_entities|' +
-        'domdocumenttype_internal_subset|domdocumenttype_name|domdocumenttype_notations|domdocumenttype_public_id|domdocumenttype_system_id|' +
-        'domelement|domelement_get_attribute|domelement_get_attribute_node|domelement_get_elements_by_tagname|domelement_has_attribute|' +
-        'domelement_remove_attribute|domelement_set_attribute|domelement_set_attribute_node|domelement_tagname|domentity|domentityreference|' +
-        'domexception|domimplementation|domnamednodemap|domnode|domnode_add_namespace|domnode_append_child|domnode_append_sibling|' +
-        'domnode_attributes|domnode_child_nodes|domnode_clone_node|domnode_dump_node|domnode_first_child|domnode_get_content|' +
-        'domnode_has_attributes|domnode_has_child_nodes|domnode_insert_before|domnode_is_blank_node|domnode_last_child|domnode_next_sibling|' +
-        'domnode_node_name|domnode_node_type|domnode_node_value|domnode_owner_document|domnode_parent_node|domnode_prefix|domnode_previous_sibling|' +
-        'domnode_remove_child|domnode_replace_child|domnode_replace_node|domnode_set_content|domnode_set_name|domnode_set_namespace|' +
-        'domnode_unlink_node|domnodelist|domnotation|domprocessinginstruction|domprocessinginstruction_data|domprocessinginstruction_target|' +
-        'domtext|domxml_new_doc|domxml_open_file|domxml_open_mem|domxml_version|domxml_xmltree|domxml_xslt_stylesheet|domxml_xslt_stylesheet_doc|' +
-        'domxml_xslt_stylesheet_file|domxml_xslt_version|domxpath|domxsltstylesheet_process|domxsltstylesheet_result_dump_file|' +
-        'domxsltstylesheet_result_dump_mem|dotnet|dotnet_load|doubleval|each|echo|empty|emptyiterator|' +
+        'dns_get_mx|dns_get_record|doubleval|each|echo|empty|emptyiterator|' +
         'end|ereg|ereg_replace|eregi|' +
         'eregi_replace|error_get_last|error_log|error_reporting|errorexception|escapeshellarg|escapeshellcmd|eval|exception|exec|exit|exp|explode|' +
         'expm1|export|export|extension_loaded|extract|ezmlm_hash|fclose|feof|fflush|fgetc|fgetcsv|fgets|fgetss|file|' +
         'file_exists|file_get_contents|file_put_contents|fileatime|filectime|filegroup|fileinode|filemtime|fileowner|fileperms|' +
         'filesize|filesystemiterator|' +
-        'filetype|filter_has_var|filter_id|filter_input|filter_input_array|filter_list|filter_var|filter_var_array|filteriterator|finfo_buffer|' +
+        'filetype|filteriterator|finfo_buffer|' +
         'finfo_close|finfo_file|finfo_open|finfo_set_flags|floatval|flock|floor|fmod|fnmatch|fopen|forward_static_call|' +
         'forward_static_call_array|fpassthru|fprintf|fputcsv|fputs|fread|fribidi_log2vis|fscanf|fseek|fsockopen|fstat|ftell|' +
         'ftruncate|func_get_arg|func_get_args|' +
@@ -1088,13 +1207,6 @@ define(function (require, exports, module) {
         'halt_compiler|hasconstant|hasmethod|hasproperty|header|' +
         'header_register_callback|header_remove|headers_list|headers_sent|hebrev|hebrevc|hex2bin|hexdec|highlight_file|highlight_string|' +
         'html_entity_decode|htmlentities|htmlspecialchars|htmlspecialchars_decode|' +
-        'hwapi_attribute|hwapi_attribute_key|hwapi_attribute_langdepvalue|hwapi_attribute_value|hwapi_attribute_values|hwapi_checkin|' +
-        'hwapi_checkout|hwapi_children|hwapi_content|hwapi_content_mimetype|hwapi_content_read|hwapi_copy|hwapi_dbstat|hwapi_dcstat|' +
-        'hwapi_dstanchors|hwapi_dstofsrcanchor|hwapi_error_count|hwapi_error_reason|hwapi_find|hwapi_ftstat|hwapi_hgcsp|hwapi_hwstat|' +
-        'hwapi_identify|hwapi_info|hwapi_insert|hwapi_insertanchor|hwapi_insertcollection|hwapi_insertdocument|hwapi_link|hwapi_lock|hwapi_move|' +
-        'hwapi_new_content|hwapi_object|hwapi_object_assign|hwapi_object_attreditable|hwapi_object_count|hwapi_object_insert|hwapi_object_new|' +
-        'hwapi_object_remove|hwapi_object_title|hwapi_object_value|hwapi_objectbyanchor|hwapi_parents|hwapi_reason_description|hwapi_reason_type|' +
-        'hwapi_remove|hwapi_replace|hwapi_setcommittedversion|hwapi_srcanchors|hwapi_srcsofdst|hwapi_unlock|hwapi_user|hwapi_userlist|hypot|' +
         'ignore_user_abort|implementsinterface|implode|import_request_variables|in_array|include|' +
         'include_once|inclued_get_data|inet_ntop|inet_pton|infiniteiterator|ini_alter|ini_get|ini_get_all|ini_restore|ini_set|innamespace|interface_exists|' +
         'intldateformatter|intval|invalidargumentexception|invoke|invokeargs|ip2long|is_a|is_array|is_bool|is_callable|is_dir|' +
@@ -1103,8 +1215,7 @@ define(function (require, exports, module) {
         'iscloneable|isdisabled|isfinal|isinstance|isinstantiable|isinterface|isinternal|isiterateable|isset|issubclassof|isuserdefined|iterator|' +
         'iterator_apply|iterator_count|iterator_to_array|iteratoraggregate|iteratoriterator|java_last_exception_clear|java_last_exception_get|' +
         'json_decode|json_encode|' +
-        'json_last_error|jsonserializable|key|krsort|ksort|lcfirst|lcg_value|lchgrp|lchown|lengthexception|levenshtein|libxml_clear_errors|' +
-        'libxml_disable_entity_loader|libxml_get_errors|libxml_get_last_error|libxml_set_streams_context|libxml_use_internal_errors|libxmlerror|' +
+        'json_last_error|jsonserializable|key|krsort|ksort|lcfirst|lcg_value|lchgrp|lchown|lengthexception|levenshtein|' +
         'limititerator|link|linkinfo|list|locale|localeconv|localtime|log|log10|log1p|logicexception|long2ip|lstat|ltrim|' + 'magic_quotes_runtime|mail|' +
         'main|max|' +
         'md5|md5_file|' +
@@ -1112,7 +1223,7 @@ define(function (require, exports, module) {
         'ming_setcubicthreshold|ming_setscale|ming_setswfcompression|ming_useconstants|ming_useswfversion|mkdir|mktime|money_format|move_uploaded_file|mpegfile|' +
         'mt_getrandmax|mt_rand|mt_srand|multipleiterator|natcasesort|natsort|' +
         'next|nl2br|nl_langinfo|norewinditerator|normalizer|number_format|' +
-        'numberformatter|oauth|oauth_get_sbs|oauth_urlencode|oauthexception|oauthprovider|' +
+        'numberformatter|' +
         'octdec|opendir|openlog|ord|outeriterator|outofboundsexception|outofrangeexception|overflowexception|overload|override_function|' +
         'ovrimos_close|ovrimos_commit|ovrimos_connect|ovrimos_cursor|ovrimos_exec|ovrimos_execute|ovrimos_fetch_into|ovrimos_fetch_row|' +
         'ovrimos_field_len|ovrimos_field_name|ovrimos_field_num|ovrimos_field_type|ovrimos_free_result|ovrimos_longreadlen|ovrimos_num_fields|' +
@@ -1122,40 +1233,18 @@ define(function (require, exports, module) {
         'php_ini_loaded_file|php_ini_scanned_files|php_logo_guid|php_sapi_name|php_strip_whitespace|php_uname|phpcredits|phpinfo|phpversion|pi|' +
         'popen|pos|pow|preg_filter|' +
         'preg_grep|preg_last_error|preg_match|preg_match_all|preg_quote|preg_replace|preg_replace_callback|preg_split|prev|print|print_r|' +
-        'printer_abort|printer_close|printer_create_brush|printer_create_dc|printer_create_font|printer_create_pen|printer_delete_brush|' +
-        'printer_delete_dc|printer_delete_font|printer_delete_pen|printer_draw_bmp|printer_draw_chord|printer_draw_elipse|printer_draw_line|' +
-        'printer_draw_pie|printer_draw_rectangle|printer_draw_roundrect|printer_draw_text|printer_end_doc|printer_end_page|printer_get_option|' +
-        'printer_list|printer_logical_fontheight|printer_open|printer_select_brush|printer_select_font|printer_select_pen|printer_set_option|' +
-        'printer_start_doc|printer_start_page|printer_write|printf|proc_close|proc_get_status|proc_nice|proc_open|proc_terminate|property_exists|' +
-        'putenv|qdom_error|qdom_tree|quoted_printable_decode|quoted_printable_encode|quotemeta|rad2deg|rand|range|rangeexception|rar_wrapper_cache_stats|' +
+        'printf|proc_close|proc_get_status|proc_nice|proc_open|proc_terminate|property_exists|' +
+        'putenv|quoted_printable_decode|quoted_printable_encode|quotemeta|rad2deg|rand|range|rangeexception|rar_wrapper_cache_stats|' +
         'rararchive|rarentry|rarexception|rawurldecode|rawurlencode|readdir|readfile|readlink|realpath|realpath_cache_get|realpath_cache_size|recursivearrayiterator|' +
         'recursivecachingiterator|recursivecallbackfilteriterator|recursivedirectoryiterator|recursivefilteriterator|recursiveiterator|' +
-        'recursiveiteratoriterator|recursiveregexiterator|recursivetreeiterator|reflection|reflectionclass|reflectionexception|reflectionextension|' +
-        'reflectionfunction|reflectionfunctionabstract|reflectionmethod|reflectionobject|reflectionparameter|reflectionproperty|reflector|' +
+        'recursiveiteratoriterator|recursiveregexiterator|recursivetreeiterator|reflector|' +
         'regexiterator|register_shutdown_function|register_tick_function|rename|rename_function|require|require_once|reset|resetValue|' +
         'resourcebundle|restore_error_handler|restore_exception_handler|restore_include_path|return|rewind|rewinddir|rmdir|round|rsort|rtrim|runtimeexception|sca_createdataobject|sca_getservice|sca_localproxy_createdataobject|' +
-        'sca_soapproxy_createdataobject|scandir|sdo_das_changesummary_beginlogging|sdo_das_changesummary_endlogging|' +
-        'sdo_das_changesummary_getchangeddataobjects|sdo_das_changesummary_getchangetype|sdo_das_changesummary_getoldcontainer|' +
-        'sdo_das_changesummary_getoldvalues|sdo_das_changesummary_islogging|sdo_das_datafactory_addpropertytotype|sdo_das_datafactory_addtype|' +
-        'sdo_das_datafactory_getdatafactory|sdo_das_dataobject_getchangesummary|sdo_das_relational_applychanges|sdo_das_relational_construct|' +
-        'sdo_das_relational_createrootdataobject|sdo_das_relational_executepreparedquery|sdo_das_relational_executequery|' +
-        'sdo_das_setting_getlistindex|sdo_das_setting_getpropertyindex|sdo_das_setting_getpropertyname|sdo_das_setting_getvalue|' +
-        'sdo_das_setting_isset|sdo_das_xml_addtypes|sdo_das_xml_create|sdo_das_xml_createdataobject|sdo_das_xml_createdocument|' +
-        'sdo_das_xml_document_getrootdataobject|sdo_das_xml_document_getrootelementname|sdo_das_xml_document_getrootelementuri|' +
-        'sdo_das_xml_document_setencoding|sdo_das_xml_document_setxmldeclaration|sdo_das_xml_document_setxmlversion|sdo_das_xml_loadfile|' +
-        'sdo_das_xml_loadstring|sdo_das_xml_savefile|sdo_das_xml_savestring|sdo_datafactory_create|sdo_dataobject_clear|' +
-        'sdo_dataobject_createdataobject|sdo_dataobject_getcontainer|sdo_dataobject_getsequence|sdo_dataobject_gettypename|' +
-        'sdo_dataobject_gettypenamespaceuri|sdo_exception_getcause|sdo_list_insert|sdo_model_property_getcontainingtype|' +
-        'sdo_model_property_getdefault|sdo_model_property_getname|sdo_model_property_gettype|sdo_model_property_iscontainment|' +
-        'sdo_model_property_ismany|sdo_model_reflectiondataobject_construct|sdo_model_reflectiondataobject_export|' +
-        'sdo_model_reflectiondataobject_getcontainmentproperty|sdo_model_reflectiondataobject_getinstanceproperties|' +
-        'sdo_model_reflectiondataobject_gettype|sdo_model_type_getbasetype|sdo_model_type_getname|sdo_model_type_getnamespaceuri|' +
-        'sdo_model_type_getproperties|sdo_model_type_getproperty|sdo_model_type_isabstracttype|sdo_model_type_isdatatype|sdo_model_type_isinstance|' +
-        'sdo_model_type_isopentype|sdo_model_type_issequencedtype|sdo_sequence_getproperty|sdo_sequence_insert|sdo_sequence_move|seekableiterator|' +
+        'sca_soapproxy_createdataobject|scandir|seekableiterator|' +
         'serializable|serialize|setCounterClass|set_error_handler|set_exception_handler|set_file_buffer|' +
         'set_include_path|set_magic_quotes_runtime|set_socket_blocking|set_time_limit|setcookie|setlocale|setproctitle|setrawcookie|' +
         'setstaticpropertyvalue|setthreadtitle|settype|sha1|sha1_file|shell_exec|show_source|shuffle|signeurlpaiement|' +
-        'similar_text|simplexml_import_dom|simplexml_load_file|simplexml_load_string|simplexmlelement|simplexmliterator|sin|sinh|sizeof|sleep|soapclient|soapfault|' +
+        'similar_text|sin|sinh|sizeof|sleep|soapclient|soapfault|' +
         'soapheader|soapparam|soapserver|soapvar|sort|soundex|sphinxclient|spl_autoload|spl_autoload_call|spl_autoload_extensions|' +
         'spl_autoload_functions|spl_autoload_register|spl_autoload_unregister|spl_classes|spl_object_hash|splbool|spldoublylinkedlist|splenum|' +
         'splfileinfo|splfileobject|splfixedarray|splfloat|splheap|splint|split|spliti|splmaxheap|splminheap|splobjectstorage|splobserver|' +
@@ -1181,40 +1270,10 @@ define(function (require, exports, module) {
         'udm_check_stored|udm_clear_search_limits|udm_close_stored|udm_crc32|udm_errno|udm_error|udm_find|udm_free_agent|udm_free_ispell_data|' +
         'udm_free_res|udm_get_doc_count|udm_get_res_field|udm_get_res_param|udm_hash32|udm_load_ispell_data|udm_open_stored|udm_set_agent_param|' +
         'uksort|umask|underflowexception|unexpectedvalueexception|uniqid|unlink|unpack|unregister_tick_function|unserialize|unset|' +
-        'urldecode|urlencode|use_soap_error_handler|user_error|usleep|usort|utf8_decode|utf8_encode|v8js|v8jsexception|var_dump|var_export|variant|' +
-        'variant_abs|variant_add|variant_and|variant_cast|variant_cat|variant_cmp|variant_date_from_timestamp|variant_date_to_timestamp|' +
-        'variant_div|variant_eqv|variant_fix|variant_get_type|variant_idiv|variant_imp|variant_int|variant_mod|variant_mul|variant_neg|variant_not|' +
-        'variant_or|variant_pow|variant_round|variant_set|variant_set_type|variant_sub|variant_xor|version_compare|vfprintf|virtual|' +
-        'vprintf|vsprintf|w32api_deftype|' +
-        'w32api_init_dtype|w32api_invoke_function|w32api_register_function|w32api_set_call_method|wddx_add_vars|wddx_deserialize|wddx_packet_end|' +
-        'wddx_packet_start|wddx_serialize_value|wddx_serialize_vars|win32_continue_service|win32_create_service|win32_delete_service|' +
-        'win32_get_last_control_message|win32_pause_service|win32_ps_list_procs|win32_ps_stat_mem|win32_ps_stat_proc|win32_query_service_status|' +
-        'win32_set_service_status|win32_start_service|win32_start_service_ctrl_dispatcher|win32_stop_service|wordwrap|' +
-        'xml_error_string|xml_get_current_byte_index|' +
-        'xml_get_current_column_number|xml_get_current_line_number|xml_get_error_code|xml_parse|xml_parse_into_struct|xml_parser_create|' +
-        'xml_parser_create_ns|xml_parser_free|xml_parser_get_option|xml_parser_set_option|xml_set_character_data_handler|xml_set_default_handler|' +
-        'xml_set_element_handler|xml_set_end_namespace_decl_handler|xml_set_external_entity_ref_handler|xml_set_notation_decl_handler|' +
-        'xml_set_object|xml_set_processing_instruction_handler|xml_set_start_namespace_decl_handler|xml_set_unparsed_entity_decl_handler|xmlreader|' +
-        'xmlrpc_decode|xmlrpc_decode_request|xmlrpc_encode|xmlrpc_encode_request|xmlrpc_get_type|xmlrpc_is_fault|xmlrpc_parse_method_descriptions|' +
-        'xmlrpc_server_add_introspection_data|xmlrpc_server_call_method|xmlrpc_server_create|xmlrpc_server_destroy|' +
-        'xmlrpc_server_register_introspection_callback|xmlrpc_server_register_method|xmlrpc_set_type|xmlwriter_end_attribute|xmlwriter_end_cdata|' +
-        'xmlwriter_end_comment|xmlwriter_end_document|xmlwriter_end_dtd|xmlwriter_end_dtd_attlist|xmlwriter_end_dtd_element|' +
-        'xmlwriter_end_dtd_entity|xmlwriter_end_element|xmlwriter_end_pi|xmlwriter_flush|xmlwriter_full_end_element|xmlwriter_open_memory|' +
-        'xmlwriter_open_uri|xmlwriter_output_memory|xmlwriter_set_indent|xmlwriter_set_indent_string|xmlwriter_start_attribute|' +
-        'xmlwriter_start_attribute_ns|xmlwriter_start_cdata|xmlwriter_start_comment|xmlwriter_start_document|xmlwriter_start_dtd|' +
-        'xmlwriter_start_dtd_attlist|xmlwriter_start_dtd_element|xmlwriter_start_dtd_entity|xmlwriter_start_element|xmlwriter_start_element_ns|' +
-        'xmlwriter_start_pi|xmlwriter_text|xmlwriter_write_attribute|xmlwriter_write_attribute_ns|xmlwriter_write_cdata|xmlwriter_write_comment|' +
-        'xmlwriter_write_dtd|xmlwriter_write_dtd_attlist|xmlwriter_write_dtd_element|xmlwriter_write_dtd_entity|xmlwriter_write_element|' +
-        'xmlwriter_write_element_ns|xmlwriter_write_pi|xmlwriter_write_raw|xpath_eval|xpath_eval_expression|xpath_new_context|xpath_register_ns|' +
-        'xpath_register_ns_auto|xptr_eval|xptr_new_context|xslt_backend_info|xslt_backend_name|xslt_backend_version|xslt_create|xslt_errno|' +
-        'xslt_error|xslt_free|xslt_getopt|xslt_process|xslt_set_base|xslt_set_encoding|xslt_set_error_handler|xslt_set_log|xslt_set_object|' +
-        'xslt_set_sax_handler|xslt_set_sax_handlers|xslt_set_scheme_handler|xslt_set_scheme_handlers|xslt_setopt|xsltprocessor|zend_logo_guid|zend_thread_id|zend_version|' +
-        'ziparchive|ziparchive_addemptydir|ziparchive_addfile|ziparchive_addfromstring|ziparchive_close|ziparchive_deleteindex|' +
-        'ziparchive_deletename|ziparchive_extractto|ziparchive_getarchivecomment|ziparchive_getcommentindex|ziparchive_getcommentname|' +
-        'ziparchive_getfromindex|ziparchive_getfromname|ziparchive_getnameindex|ziparchive_getstatusstring|ziparchive_getstream|' +
-        'ziparchive_locatename|ziparchive_open|ziparchive_renameindex|ziparchive_renamename|ziparchive_setCommentName|ziparchive_setarchivecomment|' +
-        'ziparchive_setcommentindex|ziparchive_statindex|ziparchive_statname|ziparchive_unchangeall|ziparchive_unchangearchive|' +
-        'ziparchive_unchangeindex|ziparchive_unchangename';
+        'urldecode|urlencode|use_soap_error_handler|user_error|usleep|usort|v8js|v8jsexception|var_dump|var_export|version_compare|vfprintf|virtual|' +
+        'vprintf|vsprintf|wordwrap|' +
+        'xpath_eval|xpath_eval_expression|xpath_new_context|xpath_register_ns|' +
+        'xpath_register_ns_auto|xptr_eval|xptr_new_context|zend_logo_guid|zend_thread_id|zend_version';
 
     var predefinedFunctions = strPredefinedFunctions.split("|");
 
