@@ -59,4 +59,76 @@
         "name": "Newt Terminal library",
         "var": "newtFunctions"
     },
+    "readline": {
+        "name": "GNU readline",
+        "var": "readlineFunctions"
+    },
+    "bzip2": {
+        "name": "Bzip2 compression lib",
+        "var": "bzip2Functions"
+    },
+    "lzf": {
+        "name": "lzf compression lib",
+        "var": "lzfFunctions"
+    },
+    "zip": {
+        "name": "zip compression lib",
+        "var": "newtFunctions"
+    },
+    "zlib": {
+        "name": "zlib compression lib",
+        "var": "zlibFunctions"
+    },
+    "mcve": {
+        "name": "MCVE (Montera) payments",
+        "var": "mcveFunctions"
+    },
+    "spplus": {
+        "name": "SP Plus payments",
+        "var": "spplusFunctions"
+    },
+    "crack": {
+        "name": "Cracklib",
+        "var": "crackFunctions"
+    },
+    "hash": {
+        "name": "HASH message digest framework",
+        "var": "hashFunctions"
+    },
+    "mcrypt": {
+        "name": "Mcrypt library",
+        "var": "mcryptFunctions"
+    },
+    "mhash": {
+        "name": "mhash library",
+        "var": "mhashFunctions"
+    },
+    "openssl": {
+        "name": "OpenSSL library",
+        "var": "opensslFunctions"
+    },
+    "passwordhash": {
+        "name": "Password hash library",
+        "var": "passwordFunctions"
+    },
+    "dba": {
+        "name": "Database (dbm-style) abstraction layer",
+        "var": "dbaFunctions"
+    },
+    "dbx": {
+        "name": "database abstraction layer",
+        "var": "dbxFunctions"
+    },
+    "odbc": {
+        "name": "ODBC database library",
+        "var": "odbcFunctions"
+    },
+    "cubrid": {
+        "name": "CUBRID database library",
+        "var": "cubridFunctions"
+    },
+    "dbplus": {
+        "name": "DB++ database library",
+        "var": "dbplusFunctions"
+    },
 }
