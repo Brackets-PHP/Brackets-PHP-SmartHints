@@ -1,0 +1,62 @@
+{
+    "apc": {
+        "name": "APC Alternative PHP Cache",
+        "var": "apcFunctions"
+    },
+    "apd": {
+        "name": "APD Advanced PHP Debugger",
+        "var": "apdFunctions"
+    },
+    "bcompiler": {
+        "name": "PHP Byte Compiler",
+        "var": "bcompilerFunctions"
+    },
+    "opcache": {
+        "name": "OP Cache",
+        "var": "opcacheFunctions"
+    },
+    "outputbuffer": {
+        "name": "Output Buffer",
+        "var": "outputbufferFunctions"
+    },
+    "runkit": {
+        "name": "Runkit",
+        "var": "runkitFunctions"
+    },
+    "uopz": {
+        "name": "User Operations for Zend",
+        "var": "uopzFunctions"
+    },
+    "wincache": {
+        "name": "Windows Cache for PHP",
+        "var": "wincacheFunctions"
+    },
+    "xhprof": {
+        "name": "Historical Profiler",
+        "var": "xhprofFunctions"
+    },
+    "id3": {
+        "name": "ID3 Tags",
+        "var": "id3Functions"
+    },
+    "openal": {
+        "name": "OpenAL Audio Bindings",
+        "var": "openalFunctions"
+    },
+    "kadm5": {
+        "name": "Kerberos V",
+        "var": "kadm5Functions"
+    },
+    "radius": {
+        "name": "Radius",
+        "var": "radiusFunctions"
+    },
+    "ncurses": {
+        "name": "Ncurses Terminal Screen Control",
+        "var": "ncursesFunctions"
+    },
+    "newt": {
+        "name": "Newt Terminal library",
+        "var": "newtFunctions"
+    },
+}
