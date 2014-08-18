@@ -233,6 +233,11 @@ define(function (require, exports, module) {
         'odbc_primarykeys|odbc_procedurecolumns|odbc_procedures|odbc_result|odbc_result_all|odbc_rollback|odbc_setoption|odbc_specialcolumns|' +
         'odbc_statistics|odbc_tableprivileges|odbc_tables';
 
+    var pdoFunctions =
+        'beginTransaction|commit|errorCode|errorInfo|exec|getAttribute|getAvailableDrivers|inTransaction|lastInsertId|prepare|query|quote|' +
+        'rollBack|setAttribute|bindColumn|bindParam|bindValue|closeCursor|columnCount|debugDumpParams|errorCode|errorInfo|execute|fetch|' +
+        'fetchAll|fetchColumn|fetchObject|getAttribute|getColumnMeta|nextRowset|rowCount|setAttribute|setFetchMode';
+
     // database - vendor specific
 
     var cubridFunctions =
