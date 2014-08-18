@@ -792,7 +792,7 @@ define(function (require, exports, module) {
         'pcntl_fork|pcntl_getpriority|pcntl_setpriority|pcntl_signal|pcntl_signal_dispatch|pcntl_sigprocmask|pcntl_sigtimedwait|pcntl_sigwaitinfo|' +
         'pcntl_wait|pcntl_waitpid|pcntl_wexitstatus|pcntl_wifexited|pcntl_wifsignaled|pcntl_wifstopped|pcntl_wstopsig|pcntl_wtermsig';
 
-    var posix_functions =
+    var posixfunctions =
         'posix_access|posix_ctermid|posix_errno|posix_get_last_error|posix_getcwd|posix_getegid|posix_geteuid|posix_getgid|' +
         'posix_getgrgid|posix_getgrnam|posix_getgroups|posix_getlogin|posix_getpgid|posix_getpgrp|posix_getpid|posix_getppid|posix_getpwnam|' +
         'posix_getpwuid|posix_getrlimit|posix_getsid|posix_getuid|posix_initgroups|posix_isatty|posix_kill|posix_mkfifo|posix_mknod|posix_setegid|' +
@@ -1024,7 +1024,7 @@ define(function (require, exports, module) {
         'session_regenerate_id|session_register|session_save_path|session_set_cookie_params|session_set_save_handler|session_start|' +
         'session_unregister|session_unset|session_write_close';
 
-    var pgsqlFunctions =
+    var pgsqlsessionFunctions =
         'session_pgsql_add_error|session_pgsql_get_error|session_pgsql_get_field|session_pgsql_reset|session_pgsql_set_field|session_pgsql_status';
 
     var bbcodeFunctions =
@@ -1109,7 +1109,7 @@ define(function (require, exports, module) {
         'libxml_clear_errors|' +
         'libxml_disable_entity_loader|libxml_get_errors|libxml_get_last_error|libxml_set_streams_context|libxml_use_internal_errors|libxmlerror';
 
-    var qdomFunctions =
+    var qtdomFunctions =
         'qdom_error|qdom_tree';
 
     var sdoFunctions =

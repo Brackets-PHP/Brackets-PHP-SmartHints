@@ -111,6 +111,10 @@
         "name": "Password hash library",
         "var": "passwordFunctions"
     },
+    "pdo": {
+        "name": "PDO classes",
+        "var": "pdoFunctions"
+    },
     "dba": {
         "name": "Database (dbm-style) abstraction layer",
         "var": "dbaFunctions"
@@ -131,4 +135,432 @@
         "name": "DB++ database library",
         "var": "dbplusFunctions"
     },
+    "dbase": {
+        "name": "dBase database library",
+        "var": "dbaseFunctions"
+    },
+    "filepro": {
+        "name": "FilePro database library",
+        "var": "fileproFunctions"
+    },
+    "ibase": {
+        "name": "Firebird/Interbase database library",
+        "var": "ibaseFunctions"
+    },
+    "frontbase": {
+        "name": "FrontBase database library",
+        "var": "frontbaseFunctions"
+    },
+    "db2": {
+        "name": "IBM DB2 database library",
+        "var": "db2Functions"
+    },
+    "informix": {
+        "name": "Informix database library",
+        "var": "informixFunctions"
+    },
+    "ingres": {
+        "name": "Ingres database library",
+        "var": "ingresFunctions"
+    },
+    "maxdb": {
+        "name": "MaxDB database library",
+        "var": "maxdbFunctions"
+    },
+    "msql": {
+        "name": "mSQL database library",
+        "var": "msqlFunctions"
+    },
+    "mssql": {
+        "name": "MSSQL database library",
+        "var": "mssqlFunctions"
+    },
+    "mysql": {
+        "name": "MySQL database library",
+        "var": "dbplusFunctions"
+    },
+    "mysqli": {
+        "name": "MySQLi database library",
+        "var": "mysqliFunctions"
+    },
+    "mysqlnd": {
+        "name": "MySQLnd database library",
+        "var": "mysqlndFunctions"
+    },
+    "oci": {
+        "name": "OCI8 Oracle database library",
+        "var": "ociFunctions"
+    },
+    "paradox": {
+        "name": "Paradox database library",
+        "var": "paradoxFunctions"
+    },
+    "postgres": {
+        "name": "PostgreSQL database library",
+        "var": "postgresFunctions"
+    },
+    "sqlite": {
+        "name": "SQLite/SQLite3 database libraries",
+        "var": "sqliteFunctions"
+    },
+    "sybase": {
+        "name": "Sybase database library",
+        "var": "sybaseFunctions"
+    },
+    "calendar": {
+        "name": "Calendar library",
+        "var": "calendarFunctions"
+    },
+    "directio": {
+        "name": "Direct IO library",
+        "var": "directioFunctions"
+    },
+    "inotify": {
+        "name": "Inotify library",
+        "var": "inotifyFunctions"
+    },
+    "xattr": {
+        "name": "Extended Attribute (xattr) library",
+        "var": "xattrFunctions"
+    },
+    "xdiff": {
+        "name": "XDiff library",
+        "var": "xdiffFunctions"
+    },
+    "enchant": {
+        "name": "Enchant spelling library",
+        "var": "enchantFunctions"
+    },
+    "gettext": {
+        "name": "gettext library",
+        "var": "gettextFunctions"
+    },
+    "iconv": {
+        "name": "iconv library",
+        "var": "iconvFunctions"
+    },
+    "intl": {
+        "name": "Internationalization library",
+        "var": "intlFunctions"
+    },
+    "multibyte": {
+        "name": "Multibyte String library",
+        "var": "multibyteFunctions"
+    },
+    "pspell": {
+        "name": "PSpell library",
+        "var": "pspellFunctions"
+    },
+    "recode": {
+        "name": "GNU Recode library",
+        "var": "recodeFunctions"
+    },
+    "cairo": {
+        "name": "Cairo graphics library",
+        "var": "cairoFunctions"
+    },
+    "gd": {
+        "name": "GD graphics library",
+        "var": "gdFunctions"
+    },
+    "gmagick": {
+        "name": "Gmagick graphics library",
+        "var": "gmagickFunctions"
+    },
+    "imagemagick": {
+        "name": "ImageMagick graphics library",
+        "var": "imagemagickFunctions"
+    },
+    "cyrus": {
+        "name": "Cyrus IMAP admin library",
+        "var": "cyrusFunctions"
+    },
+    "imap": {
+        "name": "IMAP email library",
+        "var": "imapFunctions"
+    },
+    "mailparse": {
+        "name": "Mailparse email library",
+        "var": "mailparseFunctions"
+    },
+    "vpopmail": {
+        "name": "vpop mail library",
+        "var": "vpopmailFunctions"
+    },
+    "bcmath": {
+        "name": "BCMath library",
+        "var": "bcmathFunctions"
+    },
+    "gmp": {
+        "name": "GNU Multiple Precision library",
+        "var": "gmpFunctions"
+    },
+    "stats": {
+        "name": "Statistics library",
+        "var": "statsFunctions"
+    },
+    "gnupg": {
+        "name": "GNU Privacy Guard library",
+        "var": "gnupgFunctions"
+    },
+    "harupdf": {
+        "name": "Haru PDF library",
+        "var": "harupdfFunctions"
+    },
+    "swfflash": {
+        "name": "Shockwave Flash library",
+        "var": "swfflashFunctions"
+    },
+    "pdf": {
+        "name": "PDF library",
+        "var": "pdfFunctions"
+    },
+    "ps": {
+        "name": "PostScript creation library",
+        "var": "psFunctions"
+    },
+    "rpm": {
+        "name": "RPM Header library",
+        "var": "rpmFunctions"
+    },
+    "expect": {
+        "name": "Process PTY library",
+        "var": "expectFunctions"
+    },
+    "libevent": {
+        "name": "libEvent library",
+        "var": "libeventFunctions"
+    },
+    "pcntl": {
+        "name": "PCNTL Process Control library",
+        "var": "pcntlFunctions"
+    },
+    "posix": {
+        "name": "POSIX library",
+        "var": "posixFunctions"
+    },
+    "semaphore": {
+        "name": "Semaphore library",
+        "var": "semaphoreFunctions"
+    },
+    "sharedmemory": {
+        "name": "Shared Memory library",
+        "var": "sharedmemoryFunctions"
+    },
+    "geoip": {
+        "name": "Geo IP library",
+        "var": "geoipFunctions"
+    },
+    "judy": {
+        "name": "Judy Array library",
+        "var": "judyFunctions"
+    },
+    "parsekit": {
+        "name": "ParseKit library",
+        "var": "parsekitFunctions"
+    },
+    "tidy": {
+        "name": "Tidy library",
+        "var": "tidyFunctions"
+    },
+    "yaml": {
+        "name": "Yaml library",
+        "var": "yamlFunctions"
+    },
+    "curl": {
+        "name": "Curl library",
+        "var": "curlFunctions"
+    },
+    "fam": {
+        "name": "File Alteration Monitor library",
+        "var": "famFunctions"
+    },
+    "ftp": {
+        "name": "FTP library",
+        "var": "ftpFunctions"
+    },
+    "gearman": {
+        "name": "Gearman library",
+        "var": "gearmanFunctions"
+    },
+    "gupnp": {
+        "name": "GU UPnP library",
+        "var": "gupnpFunctions"
+    },
+    "http": {
+        "name": "HTTP library",
+        "var": "httpFunctions"
+    },
+    "hyperwave": {
+        "name": "HyperWave library",
+        "var": "hyperwaveFunctions"
+    },
+    "ldap": {
+        "name": "LDAP library",
+        "var": "ldapFunctions"
+    },
+    "lotusnotes": {
+        "name": "Lotus Notes library",
+        "var": "lotusnotesFunctions"
+    },
+    "memcache": {
+        "name": "Memcache library",
+        "var": "memcacheFunctions"
+    },
+    "mqseries": {
+        "name": "MQ Series library",
+        "var": "mqseriesFunctions"
+    },
+    "rrd": {
+        "name": "RRDTool library",
+        "var": "rrdFunctions"
+    },
+    "sam": {
+        "name": "Simple Async Messaging library",
+        "var": "samFunctions"
+    },
+    "snmp": {
+        "name": "SNMP library",
+        "var": "snmpFunctions"
+    },
+    "sockets": {
+        "name": "Sockets library",
+        "var": "socketsFunctions"
+    },
+    "ssh2": {
+        "name": "SSH2 library",
+        "var": "ssh2Functions"
+    },
+    "stomp": {
+        "name": "Stomp client library",
+        "var": "stompFunctions"
+    },
+    "svn": {
+        "name": "Subversion VCS library",
+        "var": "svnFunctions"
+    },
+    "yaz": {
+        "name": "YAZ library",
+        "var": "yazFunctions"
+    },
+    "yp": {
+        "name": "YP/NIS library",
+        "var": "ypFunctions"
+    },
+    "solr": {
+        "name": "Apache Solr library",
+        "var": "solrFunctions"
+    },
+    "swish": {
+        "name": "Swish indexing library",
+        "var": "swishFunctions"
+    },
+    "apache": {
+        "name": "Apache HTTPd library",
+        "var": "apacheFunctions"
+    },
+    "iis": {
+        "name": "IIS Admin library",
+        "var": "iisFunctions"
+    },
+    "nsapi": {
+        "name": "NSAPI library",
+        "var": "nsapiFunctions"
+    },
+    "msession": {
+        "name": "Mohawk session library",
+        "var": "msessionFunctions"
+    },
+    "session": {
+        "name": "Session handling library",
+        "var": "sessionFunctions"
+    },
+    "pgsqlsession": {
+        "name": "PostgreSQL session library",
+        "var": "pgsqlsessionFunctions"
+    },
+    "bbcode": {
+        "name": "bbCode library",
+        "var": "bbcodeFunctions"
+    },
+    "classkit": {
+        "name": "ClassKit library",
+        "var": "classkitFunctions"
+    },
+    "ctype": {
+        "name": "Character type checking library",
+        "var": "ctypeFunctions"
+    },
+    "filter": {
+        "name": "Data Filtering library",
+        "var": "filterFunctions"
+    },
+    "reflection": {
+        "name": "Reflection library",
+        "var": "reflectFunctions"
+    },
+    "oauth": {
+        "name": "OAuth library",
+        "var": "oauthFunctions"
+    },
+    "xmlrpc": {
+        "name": "XMLRPC library",
+        "var": "xmlrpcFunctions"
+    },
+    "w32api": {
+        "name": "W32 API library",
+        "var": "w32apiFunctions"
+    },
+    "com": {
+        "name": "COM and .Net library",
+        "var": "comFunctions"
+    },
+    "win32ps": {
+        "name": "win32 Process library",
+        "var": "win32psFunctions"
+    },
+    "win32service": {
+        "name": "win32 Services library",
+        "var": "win32serviceFunctions"
+    },
+    "printer": {
+        "name": "Printer library",
+        "var": "printerFunctions"
+    },
+    "dom": {
+        "name": "DOM library",
+        "var": "domFunctions"
+    },
+    "libxml": {
+        "name": "libxml library",
+        "var": "libxmlFunctions"
+    },
+    "qtdom": {
+        "name": "QTDom library",
+        "var": "qtdomFunctions"
+    },
+    "sdo": {
+        "name": "SDO library",
+        "var": "sdoFunctions"
+    },
+    "simplexml": {
+        "name": "SimpleXML library",
+        "var": "simplexmlFunctions"
+    },
+    "wddx": {
+        "name": "WDDX library",
+        "var": "wddxFunctions"
+    },
+    "xmlparser": {
+        "name": "XML Parser library",
+        "var": "xmlparserFunctions"
+    },
+    "xmlreadwrite": {
+        "name": "XML Reader/Writer library",
+        "var": "xmlreaderFunctions"
+    },
+    "xslt": {
+        "name": "XSLT library",
+        "var": "xsltFunctions"
+    }
 }
