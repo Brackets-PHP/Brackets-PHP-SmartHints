@@ -33,9 +33,14 @@ define(function (require, exports, module) {
     var phpBuiltins         = require("phpdata/php-predefined"),
         functionGroups      = require("text!php-function-groups.json");
 
-    var fg                  = JSON.parse(functionGroups);
+    var fg                  = JSON.parse(functionGroups),
+        fgKey;
 
-    console.log(fg);
+    Object.keys(fg).forEach(function (key) {
+        fgKey = fg[key];
+        console.log(fgKey.name, fgKey.varName);
+    });
+
 
     
     /**

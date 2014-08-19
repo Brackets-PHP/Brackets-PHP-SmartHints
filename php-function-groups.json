@@ -1,566 +1,566 @@
 {
     "apc": {
         "name": "APC Alternative PHP Cache",
-        "var": "apcFunctions"
+        "varName": "apcFunctions"
     },
     "apd": {
         "name": "APD Advanced PHP Debugger",
-        "var": "apdFunctions"
+        "varName": "apdFunctions"
     },
     "bcompiler": {
         "name": "PHP Byte Compiler",
-        "var": "bcompilerFunctions"
+        "varName": "bcompilerFunctions"
     },
     "opcache": {
         "name": "OP Cache",
-        "var": "opcacheFunctions"
+        "varName": "opcacheFunctions"
     },
     "outputbuffer": {
         "name": "Output Buffer",
-        "var": "outputbufferFunctions"
+        "varName": "outputbufferFunctions"
     },
     "runkit": {
         "name": "Runkit",
-        "var": "runkitFunctions"
+        "varName": "runkitFunctions"
     },
     "uopz": {
         "name": "User Operations for Zend",
-        "var": "uopzFunctions"
+        "varName": "uopzFunctions"
     },
     "wincache": {
         "name": "Windows Cache for PHP",
-        "var": "wincacheFunctions"
+        "varName": "wincacheFunctions"
     },
     "xhprof": {
         "name": "Historical Profiler",
-        "var": "xhprofFunctions"
+        "varName": "xhprofFunctions"
     },
     "id3": {
         "name": "ID3 Tags",
-        "var": "id3Functions"
+        "varName": "id3Functions"
     },
     "openal": {
         "name": "OpenAL Audio Bindings",
-        "var": "openalFunctions"
+        "varName": "openalFunctions"
     },
     "kadm5": {
         "name": "Kerberos V",
-        "var": "kadm5Functions"
+        "varName": "kadm5Functions"
     },
     "radius": {
         "name": "Radius",
-        "var": "radiusFunctions"
+        "varName": "radiusFunctions"
     },
     "ncurses": {
         "name": "Ncurses Terminal Screen Control",
-        "var": "ncursesFunctions"
+        "varName": "ncursesFunctions"
     },
     "newt": {
         "name": "Newt Terminal library",
-        "var": "newtFunctions"
+        "varName": "newtFunctions"
     },
     "readline": {
         "name": "GNU readline",
-        "var": "readlineFunctions"
+        "varName": "readlineFunctions"
     },
     "bzip2": {
         "name": "Bzip2 compression lib",
-        "var": "bzip2Functions"
+        "varName": "bzip2Functions"
     },
     "lzf": {
         "name": "lzf compression lib",
-        "var": "lzfFunctions"
+        "varName": "lzfFunctions"
     },
     "zip": {
         "name": "zip compression lib",
-        "var": "newtFunctions"
+        "varName": "newtFunctions"
     },
     "zlib": {
         "name": "zlib compression lib",
-        "var": "zlibFunctions"
+        "varName": "zlibFunctions"
     },
     "mcve": {
         "name": "MCVE (Montera) payments",
-        "var": "mcveFunctions"
+        "varName": "mcveFunctions"
     },
     "spplus": {
         "name": "SP Plus payments",
-        "var": "spplusFunctions"
+        "varName": "spplusFunctions"
     },
     "crack": {
         "name": "Cracklib",
-        "var": "crackFunctions"
+        "varName": "crackFunctions"
     },
     "hash": {
         "name": "HASH message digest framework",
-        "var": "hashFunctions"
+        "varName": "hashFunctions"
     },
     "mcrypt": {
         "name": "Mcrypt library",
-        "var": "mcryptFunctions"
+        "varName": "mcryptFunctions"
     },
     "mhash": {
         "name": "mhash library",
-        "var": "mhashFunctions"
+        "varName": "mhashFunctions"
     },
     "openssl": {
         "name": "OpenSSL library",
-        "var": "opensslFunctions"
+        "varName": "opensslFunctions"
     },
     "passwordhash": {
         "name": "Password hash library",
-        "var": "passwordFunctions"
+        "varName": "passwordFunctions"
     },
     "pdo": {
         "name": "PDO classes",
-        "var": "pdoFunctions"
+        "varName": "pdoFunctions"
     },
     "dba": {
         "name": "Database (dbm-style) abstraction layer",
-        "var": "dbaFunctions"
+        "varName": "dbaFunctions"
     },
     "dbx": {
         "name": "database abstraction layer",
-        "var": "dbxFunctions"
+        "varName": "dbxFunctions"
     },
     "odbc": {
         "name": "ODBC database library",
-        "var": "odbcFunctions"
+        "varName": "odbcFunctions"
     },
     "cubrid": {
         "name": "CUBRID database library",
-        "var": "cubridFunctions"
+        "varName": "cubridFunctions"
     },
     "dbplus": {
         "name": "DB++ database library",
-        "var": "dbplusFunctions"
+        "varName": "dbplusFunctions"
     },
     "dbase": {
         "name": "dBase database library",
-        "var": "dbaseFunctions"
+        "varName": "dbaseFunctions"
     },
     "filepro": {
         "name": "FilePro database library",
-        "var": "fileproFunctions"
+        "varName": "fileproFunctions"
     },
     "ibase": {
         "name": "Firebird/Interbase database library",
-        "var": "ibaseFunctions"
+        "varName": "ibaseFunctions"
     },
     "frontbase": {
         "name": "FrontBase database library",
-        "var": "frontbaseFunctions"
+        "varName": "frontbaseFunctions"
     },
     "db2": {
         "name": "IBM DB2 database library",
-        "var": "db2Functions"
+        "varName": "db2Functions"
     },
     "informix": {
         "name": "Informix database library",
-        "var": "informixFunctions"
+        "varName": "informixFunctions"
     },
     "ingres": {
         "name": "Ingres database library",
-        "var": "ingresFunctions"
+        "varName": "ingresFunctions"
     },
     "maxdb": {
         "name": "MaxDB database library",
-        "var": "maxdbFunctions"
+        "varName": "maxdbFunctions"
     },
     "msql": {
         "name": "mSQL database library",
-        "var": "msqlFunctions"
+        "varName": "msqlFunctions"
     },
     "mssql": {
         "name": "MSSQL database library",
-        "var": "mssqlFunctions"
+        "varName": "mssqlFunctions"
     },
     "mysql": {
         "name": "MySQL database library",
-        "var": "dbplusFunctions"
+        "varName": "dbplusFunctions"
     },
     "mysqli": {
         "name": "MySQLi database library",
-        "var": "mysqliFunctions"
+        "varName": "mysqliFunctions"
     },
     "mysqlnd": {
         "name": "MySQLnd database library",
-        "var": "mysqlndFunctions"
+        "varName": "mysqlndFunctions"
     },
     "oci": {
         "name": "OCI8 Oracle database library",
-        "var": "ociFunctions"
+        "varName": "ociFunctions"
     },
     "paradox": {
         "name": "Paradox database library",
-        "var": "paradoxFunctions"
+        "varName": "paradoxFunctions"
     },
     "postgres": {
         "name": "PostgreSQL database library",
-        "var": "postgresFunctions"
+        "varName": "postgresFunctions"
     },
     "sqlite": {
         "name": "SQLite/SQLite3 database libraries",
-        "var": "sqliteFunctions"
+        "varName": "sqliteFunctions"
     },
     "sybase": {
         "name": "Sybase database library",
-        "var": "sybaseFunctions"
+        "varName": "sybaseFunctions"
     },
     "calendar": {
         "name": "Calendar library",
-        "var": "calendarFunctions"
+        "varName": "calendarFunctions"
     },
     "directio": {
         "name": "Direct IO library",
-        "var": "directioFunctions"
+        "varName": "directioFunctions"
     },
     "inotify": {
         "name": "Inotify library",
-        "var": "inotifyFunctions"
+        "varName": "inotifyFunctions"
     },
     "xattr": {
         "name": "Extended Attribute (xattr) library",
-        "var": "xattrFunctions"
+        "varName": "xattrFunctions"
     },
     "xdiff": {
         "name": "XDiff library",
-        "var": "xdiffFunctions"
+        "varName": "xdiffFunctions"
     },
     "enchant": {
         "name": "Enchant spelling library",
-        "var": "enchantFunctions"
+        "varName": "enchantFunctions"
     },
     "gettext": {
         "name": "gettext library",
-        "var": "gettextFunctions"
+        "varName": "gettextFunctions"
     },
     "iconv": {
         "name": "iconv library",
-        "var": "iconvFunctions"
+        "varName": "iconvFunctions"
     },
     "intl": {
         "name": "Internationalization library",
-        "var": "intlFunctions"
+        "varName": "intlFunctions"
     },
     "multibyte": {
         "name": "Multibyte String library",
-        "var": "multibyteFunctions"
+        "varName": "multibyteFunctions"
     },
     "pspell": {
         "name": "PSpell library",
-        "var": "pspellFunctions"
+        "varName": "pspellFunctions"
     },
     "recode": {
         "name": "GNU Recode library",
-        "var": "recodeFunctions"
+        "varName": "recodeFunctions"
     },
     "cairo": {
         "name": "Cairo graphics library",
-        "var": "cairoFunctions"
+        "varName": "cairoFunctions"
     },
     "gd": {
         "name": "GD graphics library",
-        "var": "gdFunctions"
+        "varName": "gdFunctions"
     },
     "gmagick": {
         "name": "Gmagick graphics library",
-        "var": "gmagickFunctions"
+        "varName": "gmagickFunctions"
     },
     "imagemagick": {
         "name": "ImageMagick graphics library",
-        "var": "imagemagickFunctions"
+        "varName": "imagemagickFunctions"
     },
     "cyrus": {
         "name": "Cyrus IMAP admin library",
-        "var": "cyrusFunctions"
+        "varName": "cyrusFunctions"
     },
     "imap": {
         "name": "IMAP email library",
-        "var": "imapFunctions"
+        "varName": "imapFunctions"
     },
     "mailparse": {
         "name": "Mailparse email library",
-        "var": "mailparseFunctions"
+        "varName": "mailparseFunctions"
     },
     "vpopmail": {
         "name": "vpop mail library",
-        "var": "vpopmailFunctions"
+        "varName": "vpopmailFunctions"
     },
     "bcmath": {
         "name": "BCMath library",
-        "var": "bcmathFunctions"
+        "varName": "bcmathFunctions"
     },
     "gmp": {
         "name": "GNU Multiple Precision library",
-        "var": "gmpFunctions"
+        "varName": "gmpFunctions"
     },
     "stats": {
         "name": "Statistics library",
-        "var": "statsFunctions"
+        "varName": "statsFunctions"
     },
     "gnupg": {
         "name": "GNU Privacy Guard library",
-        "var": "gnupgFunctions"
+        "varName": "gnupgFunctions"
     },
     "harupdf": {
         "name": "Haru PDF library",
-        "var": "harupdfFunctions"
+        "varName": "harupdfFunctions"
     },
     "swfflash": {
         "name": "Shockwave Flash library",
-        "var": "swfflashFunctions"
+        "varName": "swfflashFunctions"
     },
     "pdf": {
         "name": "PDF library",
-        "var": "pdfFunctions"
+        "varName": "pdfFunctions"
     },
     "ps": {
         "name": "PostScript creation library",
-        "var": "psFunctions"
+        "varName": "psFunctions"
     },
     "rpm": {
         "name": "RPM Header library",
-        "var": "rpmFunctions"
+        "varName": "rpmFunctions"
     },
     "expect": {
         "name": "Process PTY library",
-        "var": "expectFunctions"
+        "varName": "expectFunctions"
     },
     "libevent": {
         "name": "libEvent library",
-        "var": "libeventFunctions"
+        "varName": "libeventFunctions"
     },
     "pcntl": {
         "name": "PCNTL Process Control library",
-        "var": "pcntlFunctions"
+        "varName": "pcntlFunctions"
     },
     "posix": {
         "name": "POSIX library",
-        "var": "posixFunctions"
+        "varName": "posixFunctions"
     },
     "semaphore": {
         "name": "Semaphore library",
-        "var": "semaphoreFunctions"
+        "varName": "semaphoreFunctions"
     },
     "sharedmemory": {
         "name": "Shared Memory library",
-        "var": "sharedmemoryFunctions"
+        "varName": "sharedmemoryFunctions"
     },
     "geoip": {
         "name": "Geo IP library",
-        "var": "geoipFunctions"
+        "varName": "geoipFunctions"
     },
     "judy": {
         "name": "Judy Array library",
-        "var": "judyFunctions"
+        "varName": "judyFunctions"
     },
     "parsekit": {
         "name": "ParseKit library",
-        "var": "parsekitFunctions"
+        "varName": "parsekitFunctions"
     },
     "tidy": {
         "name": "Tidy library",
-        "var": "tidyFunctions"
+        "varName": "tidyFunctions"
     },
     "yaml": {
         "name": "Yaml library",
-        "var": "yamlFunctions"
+        "varName": "yamlFunctions"
     },
     "curl": {
         "name": "Curl library",
-        "var": "curlFunctions"
+        "varName": "curlFunctions"
     },
     "fam": {
         "name": "File Alteration Monitor library",
-        "var": "famFunctions"
+        "varName": "famFunctions"
     },
     "ftp": {
         "name": "FTP library",
-        "var": "ftpFunctions"
+        "varName": "ftpFunctions"
     },
     "gearman": {
         "name": "Gearman library",
-        "var": "gearmanFunctions"
+        "varName": "gearmanFunctions"
     },
     "gupnp": {
         "name": "GU UPnP library",
-        "var": "gupnpFunctions"
+        "varName": "gupnpFunctions"
     },
     "http": {
         "name": "HTTP library",
-        "var": "httpFunctions"
+        "varName": "httpFunctions"
     },
     "hyperwave": {
         "name": "HyperWave library",
-        "var": "hyperwaveFunctions"
+        "varName": "hyperwaveFunctions"
     },
     "ldap": {
         "name": "LDAP library",
-        "var": "ldapFunctions"
+        "varName": "ldapFunctions"
     },
     "lotusnotes": {
         "name": "Lotus Notes library",
-        "var": "lotusnotesFunctions"
+        "varName": "lotusnotesFunctions"
     },
     "memcache": {
         "name": "Memcache library",
-        "var": "memcacheFunctions"
+        "varName": "memcacheFunctions"
     },
     "mqseries": {
         "name": "MQ Series library",
-        "var": "mqseriesFunctions"
+        "varName": "mqseriesFunctions"
     },
     "rrd": {
         "name": "RRDTool library",
-        "var": "rrdFunctions"
+        "varName": "rrdFunctions"
     },
     "sam": {
         "name": "Simple Async Messaging library",
-        "var": "samFunctions"
+        "varName": "samFunctions"
     },
     "snmp": {
         "name": "SNMP library",
-        "var": "snmpFunctions"
+        "varName": "snmpFunctions"
     },
     "sockets": {
         "name": "Sockets library",
-        "var": "socketsFunctions"
+        "varName": "socketsFunctions"
     },
     "ssh2": {
         "name": "SSH2 library",
-        "var": "ssh2Functions"
+        "varName": "ssh2Functions"
     },
     "stomp": {
         "name": "Stomp client library",
-        "var": "stompFunctions"
+        "varName": "stompFunctions"
     },
     "svn": {
         "name": "Subversion VCS library",
-        "var": "svnFunctions"
+        "varName": "svnFunctions"
     },
     "yaz": {
         "name": "YAZ library",
-        "var": "yazFunctions"
+        "varName": "yazFunctions"
     },
     "yp": {
         "name": "YP/NIS library",
-        "var": "ypFunctions"
+        "varName": "ypFunctions"
     },
     "solr": {
         "name": "Apache Solr library",
-        "var": "solrFunctions"
+        "varName": "solrFunctions"
     },
     "swish": {
         "name": "Swish indexing library",
-        "var": "swishFunctions"
+        "varName": "swishFunctions"
     },
     "apache": {
         "name": "Apache HTTPd library",
-        "var": "apacheFunctions"
+        "varName": "apacheFunctions"
     },
     "iis": {
         "name": "IIS Admin library",
-        "var": "iisFunctions"
+        "varName": "iisFunctions"
     },
     "nsapi": {
         "name": "NSAPI library",
-        "var": "nsapiFunctions"
+        "varName": "nsapiFunctions"
     },
     "msession": {
         "name": "Mohawk session library",
-        "var": "msessionFunctions"
+        "varName": "msessionFunctions"
     },
     "session": {
         "name": "Session handling library",
-        "var": "sessionFunctions"
+        "varName": "sessionFunctions"
     },
     "pgsqlsession": {
         "name": "PostgreSQL session library",
-        "var": "pgsqlsessionFunctions"
+        "varName": "pgsqlsessionFunctions"
     },
     "bbcode": {
         "name": "bbCode library",
-        "var": "bbcodeFunctions"
+        "varName": "bbcodeFunctions"
     },
     "classkit": {
         "name": "ClassKit library",
-        "var": "classkitFunctions"
+        "varName": "classkitFunctions"
     },
     "ctype": {
         "name": "Character type checking library",
-        "var": "ctypeFunctions"
+        "varName": "ctypeFunctions"
     },
     "filter": {
         "name": "Data Filtering library",
-        "var": "filterFunctions"
+        "varName": "filterFunctions"
     },
     "reflection": {
         "name": "Reflection library",
-        "var": "reflectFunctions"
+        "varName": "reflectFunctions"
     },
     "oauth": {
         "name": "OAuth library",
-        "var": "oauthFunctions"
+        "varName": "oauthFunctions"
     },
     "xmlrpc": {
         "name": "XMLRPC library",
-        "var": "xmlrpcFunctions"
+        "varName": "xmlrpcFunctions"
     },
     "w32api": {
         "name": "W32 API library",
-        "var": "w32apiFunctions"
+        "varName": "w32apiFunctions"
     },
     "com": {
         "name": "COM and .Net library",
-        "var": "comFunctions"
+        "varName": "comFunctions"
     },
     "win32ps": {
         "name": "win32 Process library",
-        "var": "win32psFunctions"
+        "varName": "win32psFunctions"
     },
     "win32service": {
         "name": "win32 Services library",
-        "var": "win32serviceFunctions"
+        "varName": "win32serviceFunctions"
     },
     "printer": {
         "name": "Printer library",
-        "var": "printerFunctions"
+        "varName": "printerFunctions"
     },
     "dom": {
         "name": "DOM library",
-        "var": "domFunctions"
+        "varName": "domFunctions"
     },
     "libxml": {
         "name": "libxml library",
-        "var": "libxmlFunctions"
+        "varName": "libxmlFunctions"
     },
     "qtdom": {
         "name": "QTDom library",
-        "var": "qtdomFunctions"
+        "varName": "qtdomFunctions"
     },
     "sdo": {
         "name": "SDO library",
-        "var": "sdoFunctions"
+        "varName": "sdoFunctions"
     },
     "simplexml": {
         "name": "SimpleXML library",
-        "var": "simplexmlFunctions"
+        "varName": "simplexmlFunctions"
     },
     "wddx": {
         "name": "WDDX library",
-        "var": "wddxFunctions"
+        "varName": "wddxFunctions"
     },
     "xmlparser": {
         "name": "XML Parser library",
-        "var": "xmlparserFunctions"
+        "varName": "xmlparserFunctions"
     },
     "xmlreadwrite": {
         "name": "XML Reader/Writer library",
-        "var": "xmlreaderFunctions"
+        "varName": "xmlreaderFunctions"
     },
     "xslt": {
         "name": "XSLT library",
-        "var": "xsltFunctions"
+        "varName": "xsltFunctions"
     }
 }
