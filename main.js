@@ -30,7 +30,12 @@ define(function (require, exports, module) {
         CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
         ExtensionUtils      = brackets.getModule("utils/ExtensionUtils");
     
-    var phpBuiltins         = require("phpdata/php-predefined");
+    var phpBuiltins         = require("phpdata/php-predefined"),
+        functionGroups      = require("text!php-function-groups.json");
+
+    var fg                  = JSON.parse(functionGroups);
+
+    console.log(fg);
 
     
     /**
