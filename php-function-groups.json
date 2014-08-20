@@ -1,31 +1,57 @@
 {
     "apc": {
         "name": "APC Alternative PHP Cache",
-        "varName": "apcFunctions"
+        "varName": [
+            "apc_add|apc_bin_dump|apc_bin_dumpfile|apc_bin_load|apc_bin_loadfile|",
+        "apc_cache_info|apc_cas|apc_clear_cache|apc_compile_file|apc_dec|apc_define_constants|apc_delete|apc_delete_file|apc_exists|apc_fetch|",
+        "apc_inc|apc_load_constants|apc_sma_info|apc_store|apciterator"]
     },
     "apd": {
         "name": "APD Advanced PHP Debugger",
-        "varName": "apdFunctions"
+        "varName": [
+            "apd_breakpoint|apd_callstack|apd_clunk|apd_continue|apd_croak|",
+        "apd_dump_function_table|apd_dump_persistent_resources|apd_dump_regular_resources|apd_echo|apd_get_active_symbols|apd_set_pprof_trace|",
+        "apd_set_session|apd_set_session_trace|apd_set_session_trace_socket"
+        ]
     },
     "bcompiler": {
         "name": "PHP Byte Compiler",
-        "varName": "bcompilerFunctions"
+        "varName": [
+            "bcompiler_load|bcompiler_load_exe|bcompiler_parse_class|bcompiler_read|bcompiler_write_class|bcompiler_write_constant|",
+        "bcompiler_write_exe_footer|bcompiler_write_file|bcompiler_write_footer|bcompiler_write_function|bcompiler_write_functions_from_file|",
+        "bcompiler_write_header|bcompiler_write_included_filename"
+        ]
     },
     "opcache": {
         "name": "OP Cache",
-        "varName": "opcacheFunctions"
+        "varName": [
+            "opcache_compile_file|opcache_get_configuration|opcache_get_status|opcache_invalidate|opcache_reset"
+        ]
     },
     "outputbuffer": {
         "name": "Output Buffer",
-        "varName": "outputbufferFunctions"
+        "varName": [
+            "flush|ob_clean|ob_deflatehandler|ob_end_clean|ob_end_flush|",
+        "ob_etaghandler|ob_flush|ob_get_clean|ob_get_contents|ob_get_flush|ob_get_length|ob_get_level|ob_get_status|ob_gzhandler|ob_iconv_handler|",
+        "ob_implicit_flush|ob_inflatehandler|ob_list_handlers|ob_start|ob_tidyhandler|output_add_rewrite_var|output_reset_rewrite_vars"
+        ]
     },
     "runkit": {
         "name": "Runkit",
-        "varName": "runkitFunctions"
+        "varName": [
+            "runkit_class_adopt|runkit_class_emancipate|",
+        "runkit_constant_add|runkit_constant_redefine|runkit_constant_remove|runkit_function_add|runkit_function_copy|runkit_function_redefine|",
+        "runkit_function_remove|runkit_function_rename|runkit_import|runkit_lint|runkit_lint_file|runkit_method_add|runkit_method_copy|",
+        "runkit_method_redefine|runkit_method_remove|runkit_method_rename|runkit_return_value_used|runkit_sandbox_output_handler|",
+        "runkit_superglobals"
+        ]
     },
     "uopz": {
         "name": "User Operations for Zend",
-        "varName": "uopzFunctions"
+        "varName": [
+            "uopz_backup|uopz_compose|uopz_copy|uopz_delete|uopz_extend|uopz_flags|uopz_function|uopz_implement|uopz_overload|uopz_redefine|",
+        "uopz_rename|uopz_restore|uopz_undefine"
+        ]
     },
     "wincache": {
         "name": "Windows Cache for PHP",
