@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global require, define */
+/*global require, define, brackets */
 
 define(function (require, exports, module) {
     "use strict";
@@ -143,25 +143,45 @@ define(function (require, exports, module) {
         "xpath_register_ns_auto|xptr_eval|xptr_new_context|zend_logo_guid|zend_thread_id|zend_version"
     ];
 
-    var predefinedFunctions = strPredefinedFunctions.split("|");
-
     var strKeywords =
         "abstract|and|array|as|break|case|catch|class|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|" +
         "endswitch|endwhile|eval|exit|extends|final|for|foreach|function|global|goto|if|implements|include|include_once|interface|instanceof|isset|list|namespace|new|or|print|private|protected|" +
         "public|require|require_once|return|static|switch|throw|try|unset|use|var|while|xor";
 
-    var keywords = strKeywords.split("|");
-
     var strPredefinedConstants =
         "true|false|null|__CLASS__|__DIR__|__FILE__|__LINE__|__METHOD__|__FUNCTION__|__NAMESPACE__";
-
-    var predefinedConstants = strPredefinedConstants.split("|");
 
     var strPredefinedVariables =
         "$GLOBALS|$_SERVER|$_GET|$_POST|$_FILES|$_REQUEST|$_SESSION|$_ENV|$_COOKIE|$php_errormsg|$HTTP_RAW_POST_DATA|" +
         "$http_response_header|$argc|$argv";
 
-    var predefinedVariables = strPredefinedVariables.split("|");
+    var keywords                = strKeywords.split("|"),
+        predefinedConstants     = strPredefinedConstants.split("|"),
+        predefinedVariables     = strPredefinedVariables.split("|"),
+        predefinedFunctions     = strPredefinedFunctions.join('\n').split('|'),
+        fnArray                 = [],
+        PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints"),
+        functionGroups          = require("text!phpdata/php-function-groups.json"),
+        fg                      = JSON.parse(functionGroups),
+        fgKey,
+        i                       = 0,
+        selectedFunctions       = [];
+
+    prefs.definePreference("filteredFunctionList", "array", []);
+
+    selectedFunctions = prefs.get("filteredFunctionList");
+    console.log(selectedFunctions.length);
+
+    Object.keys(fg).forEach(function (key) {
+        fgKey = fg[key];
+        if (selectedFunctions.indexOf(key) > -1) {
+            fnArray = fgKey.fnNames.join('\n').split('|');
+            for (i = 0; i < fnArray.length; i++) {
+                predefinedFunctions.push(fnArray[i]);
+            }
+        }
+    });
 
     exports.predefinedFunctions = predefinedFunctions;
     exports.predefinedConstants = predefinedConstants;

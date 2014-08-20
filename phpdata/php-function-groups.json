@@ -1,14 +1,14 @@
 {
     "apc": {
         "name": "APC Alternative PHP Cache",
-        "varName": [
+        "fnNames": [
             "apc_add|apc_bin_dump|apc_bin_dumpfile|apc_bin_load|apc_bin_loadfile|",
         "apc_cache_info|apc_cas|apc_clear_cache|apc_compile_file|apc_dec|apc_define_constants|apc_delete|apc_delete_file|apc_exists|apc_fetch|",
         "apc_inc|apc_load_constants|apc_sma_info|apc_store|apciterator"]
     },
     "apd": {
         "name": "APD Advanced PHP Debugger",
-        "varName": [
+        "fnNames": [
             "apd_breakpoint|apd_callstack|apd_clunk|apd_continue|apd_croak|",
         "apd_dump_function_table|apd_dump_persistent_resources|apd_dump_regular_resources|apd_echo|apd_get_active_symbols|apd_set_pprof_trace|",
         "apd_set_session|apd_set_session_trace|apd_set_session_trace_socket"
@@ -16,7 +16,7 @@
     },
     "bcompiler": {
         "name": "PHP Byte Compiler",
-        "varName": [
+        "fnNames": [
             "bcompiler_load|bcompiler_load_exe|bcompiler_parse_class|bcompiler_read|bcompiler_write_class|bcompiler_write_constant|",
         "bcompiler_write_exe_footer|bcompiler_write_file|bcompiler_write_footer|bcompiler_write_function|bcompiler_write_functions_from_file|",
         "bcompiler_write_header|bcompiler_write_included_filename"
@@ -24,13 +24,13 @@
     },
     "opcache": {
         "name": "OP Cache",
-        "varName": [
+        "fnNames": [
             "opcache_compile_file|opcache_get_configuration|opcache_get_status|opcache_invalidate|opcache_reset"
         ]
     },
     "outputbuffer": {
         "name": "Output Buffer",
-        "varName": [
+        "fnNames": [
             "flush|ob_clean|ob_deflatehandler|ob_end_clean|ob_end_flush|",
         "ob_etaghandler|ob_flush|ob_get_clean|ob_get_contents|ob_get_flush|ob_get_length|ob_get_level|ob_get_status|ob_gzhandler|ob_iconv_handler|",
         "ob_implicit_flush|ob_inflatehandler|ob_list_handlers|ob_start|ob_tidyhandler|output_add_rewrite_var|output_reset_rewrite_vars"
@@ -38,7 +38,7 @@
     },
     "runkit": {
         "name": "Runkit",
-        "varName": [
+        "fnNames": [
             "runkit_class_adopt|runkit_class_emancipate|",
         "runkit_constant_add|runkit_constant_redefine|runkit_constant_remove|runkit_function_add|runkit_function_copy|runkit_function_redefine|",
         "runkit_function_remove|runkit_function_rename|runkit_import|runkit_lint|runkit_lint_file|runkit_method_add|runkit_method_copy|",
@@ -48,14 +48,14 @@
     },
     "uopz": {
         "name": "User Operations for Zend",
-        "varName": [
+        "fnNames": [
             "uopz_backup|uopz_compose|uopz_copy|uopz_delete|uopz_extend|uopz_flags|uopz_function|uopz_implement|uopz_overload|uopz_redefine|",
         "uopz_rename|uopz_restore|uopz_undefine"
         ]
     },
     "wincache": {
         "name": "Windows Cache for PHP",
-        "varName": [
+        "fnNames": [
             "wincache_fcache_fileinfo|",
         "wincache_fcache_meminfo|wincache_lock|wincache_ocache_fileinfo|wincache_ocache_meminfo|wincache_refresh_if_changed|",
         "wincache_rplist_fileinfo|wincache_rplist_meminfo|wincache_scache_info|wincache_scache_meminfo|wincache_ucache_add|wincache_ucache_cas|",
@@ -65,20 +65,20 @@
     },
     "xhprof": {
         "name": "Historical Profiler",
-        "varName": [
+        "fnNames": [
             "xhprof_disable|xhprof_enable|xhprof_sample_disable|xhprof_sample_enable"
         ]
     },
     "id3": {
         "name": "ID3 Tags",
-        "varName": [
+        "fnNames": [
             "id3_get_frame_long_name|id3_get_frame_short_name|id3_get_genre_id|id3_get_genre_list|",
         "id3_get_genre_name|id3_get_tag|id3_get_version|id3_remove_tag|id3_set_tag|id3v2attachedpictureframe|id3v2frame|id3v2tag"
         ]
     },
     "openal": {
         "name": "OpenAL Audio Bindings",
-        "varName": [
+        "fnNames": [
             "openal_buffer_create|openal_buffer_data|openal_buffer_destroy|openal_buffer_get|",
         "openal_buffer_loadwav|openal_context_create|openal_context_current|openal_context_destroy|openal_context_process|openal_context_suspend|",
         "openal_device_close|openal_device_open|openal_listener_get|openal_listener_set|openal_source_create|openal_source_destroy|",
@@ -87,7 +87,7 @@
     },
     "kadm5": {
         "name": "Kerberos V",
-        "varName": [
+        "fnNames": [
             "kadm5_chpass_principal|kadm5_create_principal|",
         "kadm5_delete_principal|kadm5_destroy|kadm5_flush|kadm5_get_policies|kadm5_get_principal|kadm5_get_principals|kadm5_init_with_password|",
         "kadm5_modify_principal"
@@ -95,7 +95,7 @@
     },
     "radius": {
         "name": "Radius",
-        "varName": [
+        "fnNames": [
             "radius_acct_open|",
         "radius_add_server|radius_auth_open|radius_close|radius_config|radius_create_request|radius_cvt_addr|radius_cvt_int|radius_cvt_string|",
         "radius_demangle|radius_demangle_mppe_key|radius_get_attr|radius_get_vendor_attr|radius_put_addr|radius_put_attr|radius_put_int|",
@@ -105,7 +105,7 @@
     },
     "ncurses": {
         "name": "Ncurses Terminal Screen Control",
-        "varName": [
+        "fnNames": [
             "ncurses_addch|ncurses_addchnstr|ncurses_addchstr|ncurses_addnstr|ncurses_addstr|ncurses_assume_default_colors|ncurses_attroff|",
         "ncurses_attron|ncurses_attrset|ncurses_baudrate|ncurses_beep|ncurses_bkgd|ncurses_bkgdset|ncurses_border|ncurses_bottom_panel|",
         "ncurses_can_change_color|ncurses_cbreak|ncurses_clear|ncurses_clrtobot|ncurses_clrtoeol|ncurses_color_content|ncurses_color_set|",
@@ -132,7 +132,7 @@
     },
     "newt": {
         "name": "Newt Terminal library",
-        "varName": [
+        "fnNames": [
             "newt_bell|newt_button|newt_button_bar|newt_centered_window|newt_checkbox|",
         "newt_checkbox_get_value|newt_checkbox_set_flags|newt_checkbox_set_value|newt_checkbox_tree|newt_checkbox_tree_add_item|",
         "newt_checkbox_tree_find_item|newt_checkbox_tree_get_current|newt_checkbox_tree_get_entry_value|newt_checkbox_tree_get_multi_selection|",
@@ -157,7 +157,7 @@
     },
     "readline": {
         "name": "GNU readline",
-        "varName": [
+        "fnNames": [
             "readline|readline_add_history|",
         "readline_callback_handler_install|readline_callback_handler_remove|readline_callback_read_char|readline_clear_history|",
         "readline_completion_function|readline_info|readline_list_history|readline_on_new_line|readline_read_history|readline_redisplay|",
@@ -166,19 +166,19 @@
     },
     "bzip2": {
         "name": "Bzip2 compression lib",
-        "varName": [
+        "fnNames": [
             "bzclose|bzcompress|bzdecompress|bzerrno|bzerror|bzerrstr|bzflush|bzopen|bzread|bzwrite"
         ]
     },
     "lzf": {
         "name": "lzf compression lib",
-        "varName": [
+        "fnNames": [
             "lzf_compress|lzf_decompress|lzf_optimized_for"
         ]
     },
     "zip": {
         "name": "zip compression lib",
-        "varName": [
+        "fnNames": [
             "ziparchive|ziparchive_addemptydir|ziparchive_addfile|ziparchive_addfromstring|ziparchive_close|ziparchive_deleteindex|",
         "ziparchive_deletename|ziparchive_extractto|ziparchive_getarchivecomment|ziparchive_getcommentindex|ziparchive_getcommentname|",
         "ziparchive_getfromindex|ziparchive_getfromname|ziparchive_getnameindex|ziparchive_getstatusstring|ziparchive_getstream|",
@@ -190,7 +190,7 @@
     },
     "zlib": {
         "name": "zlib compression lib",
-        "varName": [
+        "fnNames": [
             "gzclose|gzcompress|gzdecode|gzdeflate|gzencode|gzeof|gzfile|gzgetc|gzgets|gzgetss|",
         "gzinflate|gzopen|gzpassthru|gzputs|gzread|gzrewind|gzseek|gztell|gzuncompress|gzwrite|",
         "readgzfile|zlib_encode|zlib_decode|zlib_get_coding_type"
@@ -198,7 +198,7 @@
     },
     "mcve": {
         "name": "MCVE (Montera) payments",
-        "varName": [
+        "fnNames": [
             "m_checkstatus|m_completeauthorizations|m_connect|m_connectionerror|m_deletetrans|m_destroyconn|",
         "m_destroyengine|m_getcell|m_getcellbynum|m_getcommadelimited|m_getheader|m_initconn|m_initengine|m_iscommadelimited|",
         "m_maxconntimeout|m_monitor|m_numcolumns|m_numrows|m_parsecommadelimited|m_responsekeys|m_responseparam|m_returnstatus|",
@@ -209,25 +209,25 @@
     },
     "spplus": {
         "name": "SP Plus payments",
-        "varName": [
+        "fnNames": [
             "calcul_hmac|calculhmac|nthmac"
         ]
     },
     "crack": {
         "name": "Cracklib",
-        "varName": [
+        "fnNames": [
              "crack_check|crack_closedict|crack_getlastmessage|crack_opendict"
         ]
     },
     "hash": {
         "name": "HASH message digest framework",
-        "varName": [
+        "fnNames": [
             "hash|hash_algos|hash_copy|hash_file|hash_final|hash_hmac|hash_hmac_file|hash_init|hash_update|hash_update_file|hash_update_stream"
         ]
     },
     "mcrypt": {
         "name": "Mcrypt library",
-        "varName": [
+        "fnNames": [
             "mcrypt_cbc|mcrypt_cfb|mcrypt_create_iv|mcrypt_decrypt|mcrypt_ecb|",
         "mcrypt_enc_get_algorithms_name|mcrypt_enc_get_block_size|mcrypt_enc_get_iv_size|mcrypt_enc_get_key_size|mcrypt_enc_get_modes_name|",
         "mcrypt_enc_get_supported_key_sizes|mcrypt_enc_is_block_algorithm|mcrypt_enc_is_block_algorithm_mode|mcrypt_enc_is_block_mode|",
@@ -239,13 +239,13 @@
     },
     "mhash": {
         "name": "mhash library",
-        "varName": [
+        "fnNames": [
             "mhash|mhash_count|mhash_get_block_size|mhash_get_hash_name|mhash_keygen_s2k"
         ]
     },
     "openssl": {
         "name": "OpenSSL library",
-        "varName": [
+        "fnNames": [
             "openssl_cipher_iv_length|openssl_csr_export|openssl_csr_export_to_file|openssl_csr_get_public_key|openssl_csr_get_subject|",
         "openssl_csr_new|openssl_csr_sign|openssl_decrypt|openssl_dh_compute_key|openssl_digest|openssl_encrypt|openssl_error_string|",
         "openssl_free_key|openssl_get_cipher_methods|openssl_get_md_methods|openssl_get_privatekey|openssl_get_publickey|openssl_open|",
@@ -258,26 +258,26 @@
     },
     "passwordhash": {
         "name": "Password hash library",
-        "varName": [
+        "fnNames": [
             "password_get_info|password_hash|password_needs_rehash|password_verify"
         ]
     },
     "pdo": {
         "name": "PDO classes",
-        "varName": [
+        "fnNames": [
             "dba_close|dba_delete|dba_exists|dba_fetch|dba_firstkey|dba_handlers|dba_insert|dba_key_split|dba_list|",
         "dba_nextkey|dba_open|dba_optimize|dba_popen|dba_replace|dba_sync"
         ]
     },
     "dba": {
         "name": "Database (dbm-style) abstraction layer",
-        "varName": [
+        "fnNames": [
             "dbx_close|dbx_compare|dbx_connect|dbx_error|dbx_escape_string|dbx_fetch_row|dbx_query|dbx_sort|"
         ]
     },
     "dbx": {
         "name": "database abstraction layer",
-        "varName": [
+        "fnNames": [
             "odbc_autocommit|odbc_binmode|odbc_close|odbc_close_all|odbc_columnprivileges|odbc_columns|odbc_commit|odbc_connect|odbc_cursor|",
         "odbc_data_source|odbc_do|odbc_error|odbc_errormsg|odbc_exec|odbc_execute|odbc_fetch_array|odbc_fetch_into|odbc_fetch_object|",
         "odbc_fetch_row|odbc_field_len|odbc_field_name|odbc_field_num|odbc_field_precision|odbc_field_scale|odbc_field_type|odbc_foreignkeys|",
@@ -288,7 +288,7 @@
     },
     "pdo": {
         "name": "PDO Database abstraction classes",
-        "varName": [
+        "fnNames": [
             "beginTransaction|commit|errorCode|errorInfo|exec|getAttribute|getAvailableDrivers|inTransaction|lastInsertId|prepare|query|quote|",
         "rollBack|setAttribute|bindColumn|bindParam|bindValue|closeCursor|columnCount|debugDumpParams|errorCode|errorInfo|execute|fetch|",
         "fetchAll|fetchColumn|fetchObject|getAttribute|getColumnMeta|nextRowset|rowCount|setAttribute|setFetchMode"
@@ -296,7 +296,7 @@
     },
     "odbc": {
         "name": "ODBC database library",
-        "varName": [
+        "fnNames": [
             "odbc_autocommit|odbc_binmode|odbc_close|odbc_close_all|odbc_columnprivileges|odbc_columns|odbc_commit|odbc_connect|odbc_cursor|",
         "odbc_data_source|odbc_do|odbc_error|odbc_errormsg|odbc_exec|odbc_execute|odbc_fetch_array|odbc_fetch_into|odbc_fetch_object|",
         "odbc_fetch_row|odbc_field_len|odbc_field_name|odbc_field_num|odbc_field_precision|odbc_field_scale|odbc_field_type|odbc_foreignkeys|",
@@ -307,7 +307,7 @@
     },
     "cubrid": {
         "name": "CUBRID database library",
-        "varName": [
+        "fnNames": [
             "cubrid_affected_rows|cubrid_bind|",
         "cubrid_client_encoding|cubrid_close|cubrid_close_prepare|cubrid_close_request|cubrid_col_get|cubrid_col_size|cubrid_column_names|",
         "cubrid_column_types|cubrid_commit|cubrid_connect|cubrid_connect_with_url|cubrid_current_oid|cubrid_data_seek|cubrid_db_name|",
@@ -324,7 +324,7 @@
     },
     "dbplus": {
         "name": "DB++ database library",
-        "varName": [
+        "fnNames": [
             "dbplus_add|dbplus_aql|dbplus_chdir|dbplus_close|dbplus_curr|dbplus_errcode|dbplus_errno|dbplus_find|dbplus_first|",
         "dbplus_flush|dbplus_freealllocks|dbplus_freelock|dbplus_freerlocks|dbplus_getlock|dbplus_getunique|dbplus_info|dbplus_last|dbplus_lockrel|",
         "dbplus_next|dbplus_open|dbplus_prev|dbplus_rchperm|dbplus_rcreate|dbplus_rcrtexact|dbplus_rcrtlike|dbplus_resolve|dbplus_restorepos|",
@@ -335,7 +335,7 @@
     },
     "dbase": {
         "name": "dBase database library",
-        "varName": [
+        "fnNames": [
             "dbase_add_record|dbase_close|dbase_create|dbase_delete_record|",
         "dbase_get_header_info|dbase_get_record|dbase_get_record_with_names|dbase_numfields|dbase_numrecords|dbase_open|dbase_pack|",
         "dbase_replace_record"
@@ -343,13 +343,13 @@
     },
     "filepro": {
         "name": "FilePro database library",
-        "varName": [
+        "fnNames": [
             "filepro_fieldcount|filepro_fieldname|filepro_fieldtype|filepro_fieldwidth|filepro_retrieve|filepro_rowcount"
         ]
     },
     "ibase": {
         "name": "Firebird/Interbase database library",
-        "varName": [
+        "fnNames": [
             "ibase_add_user|ibase_affected_rows|ibase_backup|ibase_blob_add|ibase_blob_cancel|ibase_blob_close|ibase_blob_create|ibase_blob_echo|",
         "ibase_blob_get|ibase_blob_import|ibase_blob_info|ibase_blob_open|ibase_close|ibase_commit|ibase_commit_ret|ibase_connect|ibase_db_info|",
         "ibase_delete_user|ibase_drop_db|ibase_errcode|ibase_errmsg|ibase_execute|ibase_fetch_assoc|ibase_fetch_object|ibase_fetch_row|",
@@ -361,7 +361,7 @@
     },
     "frontbase": {
         "name": "FrontBase database library",
-        "varName": [
+        "fnNames": [
             "fbsql_affected_rows|fbsql_autocommit|",
         "fbsql_blob_size|fbsql_change_user|fbsql_clob_size|fbsql_close|fbsql_commit|fbsql_connect|fbsql_create_blob|fbsql_create_clob|",
         "fbsql_create_db|fbsql_data_seek|fbsql_database|fbsql_database_password|fbsql_db_query|fbsql_db_status|fbsql_drop_db|fbsql_errno|",
@@ -375,7 +375,7 @@
     },
     "db2": {
         "name": "IBM DB2 database library",
-        "varName": [
+        "fnNames": [
             "db2_autocommit|db2_bind_param|db2_client_info|db2_close|db2_column_privileges|db2_columns|",
         "db2_commit|db2_conn_error|db2_conn_errormsg|db2_connect|db2_cursor_type|db2_escape_string|db2_exec|db2_execute|db2_fetch_array|",
         "db2_fetch_assoc|db2_fetch_both|db2_fetch_object|db2_fetch_row|db2_field_display_size|db2_field_name|db2_field_num|db2_field_precision|",
@@ -387,7 +387,7 @@
     },
     "informix": {
         "name": "Informix database library",
-        "varName": [
+        "fnNames": [
             "ifx_affected_rows|ifx_blobinfile_mode|ifx_byteasvarchar|ifx_close|ifx_connect|ifx_copy_blob|",
         "ifx_create_blob|ifx_create_char|ifx_do|ifx_error|ifx_errormsg|ifx_fetch_row|ifx_fieldproperties|ifx_fieldtypes|ifx_free_blob|",
         "ifx_free_char|ifx_free_result|ifx_get_blob|ifx_get_char|ifx_getsqlca|ifx_htmltbl_result|ifx_nullformat|ifx_num_fields|ifx_num_rows|",
@@ -397,7 +397,7 @@
     },
     "ingres": {
         "name": "Ingres database library",
-        "varName": [
+        "fnNames": [
             "ingres_autocommit|ingres_autocommit_state|ingres_charset|ingres_close|",
         "ingres_commit|ingres_connect|ingres_cursor|ingres_errno|ingres_error|ingres_errsqlstate|ingres_escape_string|ingres_execute|",
         "ingres_fetch_array|ingres_fetch_assoc|ingres_fetch_object|ingres_fetch_proc_return|ingres_fetch_row|ingres_field_length|ingres_field_name|",
@@ -408,7 +408,7 @@
     },
     "maxdb": {
         "name": "MaxDB database library",
-        "varName": [
+        "fnNames": [
             "maxdb_affected_rows|maxdb_autocommit|maxdb_bind_param|maxdb_bind_result|maxdb_change_user|maxdb_character_set_name|maxdb_client_encoding|",
         "maxdb_close|maxdb_close_long_data|maxdb_commit|maxdb_connect|maxdb_connect_errno|maxdb_connect_error|maxdb_data_seek|maxdb_debug|",
         "maxdb_disable_reads_from_master|maxdb_disable_rpl_parse|maxdb_dump_debug_info|maxdb_embedded_connect|maxdb_enable_reads_from_master|",
@@ -428,7 +428,7 @@
     },
     "msql": {
         "name": "mSQL database library",
-        "varName": [
+        "fnNames": [
             "msql|msql_affected_rows|msql_close|msql_connect|msql_create_db|",
         "msql_createdb|msql_data_seek|msql_db_query|msql_dbname|msql_drop_db|msql_error|msql_fetch_array|msql_fetch_field|msql_fetch_object|",
         "msql_fetch_row|msql_field_flags|msql_field_len|msql_field_name|msql_field_seek|msql_field_table|msql_field_type|msql_fieldflags|",
@@ -438,7 +438,7 @@
     },
     "mongo": {
         "name": "MongoDB database library",
-        "varName": [
+        "fnNames": [
             "bson_decode|bson_encode|mongo|",
         "mongobindata|mongocode|mongocollection|mongoconnectionexception|mongocursor|mongocursorexception|mongocursortimeoutexception|mongodate|",
         "mongodb|mongodbref|mongoexception|mongogridfs|mongogridfscursor|mongogridfsexception|mongogridfsfile|mongoid|mongoint32|mongoint64|",
@@ -447,7 +447,7 @@
     },
     "mssql": {
         "name": "MSSQL database library",
-        "varName": [
+        "fnNames": [
             "mssql_bind|mssql_close|mssql_connect|mssql_data_seek|mssql_execute|mssql_fetch_array|mssql_fetch_assoc|mssql_fetch_batch|",
         "mssql_fetch_field|mssql_fetch_object|mssql_fetch_row|mssql_field_length|mssql_field_name|mssql_field_seek|mssql_field_type|",
         "mssql_free_result|mssql_free_statement|mssql_get_last_message|mssql_guid_string|mssql_init|mssql_min_error_severity|",
@@ -457,7 +457,7 @@
     },
     "mysql": {
         "name": "MySQL database library",
-        "varName": [
+        "fnNames": [
             "mysql_affected_rows|mysql_client_encoding|mysql_close|mysql_connect|",
         "mysql_create_db|mysql_data_seek|mysql_db_name|mysql_db_query|mysql_drop_db|mysql_errno|mysql_error|mysql_escape_string|mysql_fetch_array|",
         "mysql_fetch_assoc|mysql_fetch_field|mysql_fetch_lengths|mysql_fetch_object|mysql_fetch_row|mysql_field_flags|mysql_field_len|",
@@ -469,7 +469,7 @@
     },
     "mysqli": {
         "name": "MySQLi database library",
-        "varName": [
+        "fnNames": [
             "mysqli|mysqli_bind_param|",
         "mysqli_bind_result|mysqli_client_encoding|mysqli_connect|mysqli_disable_reads_from_master|mysqli_disable_rpl_parse|mysqli_driver|",
         "mysqli_enable_reads_from_master|mysqli_enable_rpl_parse|mysqli_escape_string|mysqli_execute|mysqli_fetch|mysqli_get_metadata|",
@@ -479,7 +479,7 @@
     },
     "mysqlnd": {
         "name": "MySQLnd database library",
-        "varName": [
+        "fnNames": [
             "mysqlnd_ms_get_stats|",
         "mysqlnd_ms_query_is_select|mysqlnd_ms_set_user_pick_server|mysqlnd_qc_change_handler|mysqlnd_qc_clear_cache|mysqlnd_qc_get_cache_info|",
         "mysqlnd_qc_get_core_stats|mysqlnd_qc_get_handler|mysqlnd_qc_get_query_trace_log|mysqlnd_qc_set_user_handlers"
@@ -487,7 +487,7 @@
     },
     "oci": {
         "name": "OCI8 Oracle database library",
-        "varName": [
+        "fnNames": [
             "oci_bind_array_by_name|oci_bind_by_name|oci_cancel|",
         "oci_client_version|oci_close|oci_collection_append|oci_collection_assign|oci_collection_element_assign|oci_collection_element_get|",
         "oci_collection_free|oci_collection_max|oci_collection_size|oci_collection_trim|oci_commit|oci_connect|oci_define_by_name|oci_error|",
@@ -507,7 +507,7 @@
     },
     "paradox": {
         "name": "Paradox database library",
-        "varName": [
+        "fnNames": [
             "px_close|px_create_fp|px_date2string|px_delete|px_delete_record|px_get_field|px_get_info|",
         "px_get_parameter|px_get_record|px_get_schema|px_get_value|px_insert_record|px_new|px_numfields|px_numrecords|px_open_fp|px_put_record|",
         "px_retrieve_record|px_set_blob_file|px_set_parameter|px_set_tablename|px_set_targetencoding|px_set_value|px_timestamp2string|",
@@ -516,7 +516,7 @@
     },
     "postgres": {
         "name": "PostgreSQL database library",
-        "varName": [
+        "fnNames": [
             "pg_affected_rows|pg_cancel_query|pg_client_encoding|pg_close|pg_connect|pg_connection_busy|pg_connection_reset|pg_connection_status|",
         "pg_convert|pg_copy_from|pg_copy_to|pg_dbname|pg_delete|pg_end_copy|pg_escape_bytea|pg_escape_string|pg_execute|pg_fetch_all|",
         "pg_fetch_all_columns|pg_fetch_array|pg_fetch_assoc|pg_fetch_object|pg_fetch_result|pg_fetch_row|pg_field_is_null|pg_field_name|",
@@ -530,7 +530,7 @@
     },
     "sqlite": {
         "name": "SQLite/SQLite3 database libraries",
-        "varName": [
+        "fnNames": [
             "sqlite3|sqlite3result|",
         "sqlite3stmt|sqlite_array_query|sqlite_busy_timeout|sqlite_changes|sqlite_close|sqlite_column|sqlite_create_aggregate|",
         "sqlite_create_function|sqlite_current|sqlite_error_string|sqlite_escape_string|sqlite_exec|sqlite_factory|sqlite_fetch_all|",
@@ -542,7 +542,7 @@
     },
     "sybase": {
         "name": "Sybase database library",
-        "varName": [
+        "fnNames": [
             "sybase_affected_rows|sybase_close|sybase_connect|sybase_data_seek|",
         "sybase_deadlock_retry_count|sybase_fetch_array|sybase_fetch_assoc|sybase_fetch_field|sybase_fetch_object|sybase_fetch_row|",
         "sybase_field_seek|sybase_free_result|sybase_get_last_message|sybase_min_client_severity|sybase_min_error_severity|",
@@ -552,7 +552,7 @@
     },
     "calendar": {
         "name": "Calendar library",
-        "varName": [
+        "fnNames": [
             "cal_days_in_month|cal_from_jd|cal_info|",
         "cal_to_jd|easter_date|easter_days|frenchtojd|gregoriantojd|jddayofweek|jdmonthname|jdtofrench|jdtogregorian|jdtojewish|jdtojulian|jdtounix|jewishtojd|",
         "juliantojd|unixtojd"
@@ -560,28 +560,28 @@
     },
     "directio": {
         "name": "Direct IO library",
-        "varName": [
+        "fnNames": [
             "dio_close|dio_fcntl|dio_open|dio_read|dio_seek|dio_stat|dio_tcsetattr|",
         "dio_truncate|dio_write"
         ]
     },
     "inotify": {
         "name": "Inotify library",
-        "varName": [
+        "fnNames": [
             "inotify_add_watch|inotify_init|inotify_queue_len|",
         "inotify_read|inotify_rm_watch"
         ]
     },
     "xattr": {
         "name": "Extended Attribute (xattr) library",
-        "varName": [
+        "fnNames": [
             "xattr_get|xattr_list|xattr_remove|xattr_set|",
         "xattr_supported"
         ]
     },
     "xdiff": {
         "name": "XDiff library",
-        "varName": [
+        "fnNames": [
             "xdiff_file_bdiff|xdiff_file_bdiff_size|xdiff_file_bpatch|xdiff_file_diff|xdiff_file_diff_binary|xdiff_file_merge3|",
         "xdiff_file_patch|xdiff_file_patch_binary|xdiff_file_rabdiff|xdiff_string_bdiff|xdiff_string_bdiff_size|xdiff_string_bpatch|",
         "xdiff_string_diff|xdiff_string_diff_binary|xdiff_string_merge3|xdiff_string_patch|xdiff_string_patch_binary|xdiff_string_rabdiff"
@@ -589,7 +589,7 @@
     },
     "enchant": {
         "name": "Enchant spelling library",
-        "varName": [
+        "fnNames": [
             "enchant_broker_describe|enchant_broker_dict_exists|enchant_broker_free|enchant_broker_free_dict|enchant_broker_get_error|",
         "enchant_broker_init|enchant_broker_list_dicts|enchant_broker_request_dict|enchant_broker_request_pwl_dict|enchant_broker_set_ordering|",
         "enchant_dict_add_to_personal|enchant_dict_add_to_session|enchant_dict_check|enchant_dict_describe|enchant_dict_get_error|",
@@ -598,20 +598,20 @@
     },
     "gettext": {
         "name": "gettext library",
-        "varName": [
+        "fnNames": [
             "dcgettext|dcngettext|dgettext|dngettext|gettext|ngettext|bind_textdomain_codeset|bindtextdomain|textdomain"
         ]
     },
     "iconv": {
         "name": "iconv library",
-        "varName": [
+        "fnNames": [
             "iconv|iconv_get_encoding|iconv_mime_decode|iconv_mime_decode_headers|iconv_mime_encode|iconv_set_encoding|",
         "iconv_strlen|iconv_strpos|iconv_strrpos|iconv_substr|idate"
         ]
     },
     "intl": {
         "name": "Internationalization library",
-        "varName": [
+        "fnNames": [
             "grapheme_extract|grapheme_stripos|",
         "grapheme_stristr|grapheme_strlen|grapheme_strpos|grapheme_strripos|grapheme_strrpos|grapheme_strstr|grapheme_substr|",
         "idn_to_ascii|idn_to_unicode|idn_to_utf8|intl_error_name|intl_get_error_code|intl_get_error_message|intl_is_failure"
@@ -619,7 +619,7 @@
     },
     "multibyte": {
         "name": "Multibyte String library",
-        "varName": [
+        "fnNames": [
             "mb_check_encoding|mb_convert_case|mb_convert_encoding|",
         "mb_convert_kana|mb_convert_variables|mb_decode_mimeheader|mb_decode_numericentity|mb_detect_encoding|mb_detect_order|mb_encode_mimeheader|",
         "mb_encode_numericentity|mb_encoding_aliases|mb_ereg|mb_ereg_match|mb_ereg_replace|mb_ereg_search|mb_ereg_search_getpos|",
@@ -632,7 +632,7 @@
     },
     "pspell": {
         "name": "PSpell library",
-        "varName": [
+        "fnNames": [
             "pspell_add_to_personal|pspell_add_to_session|pspell_check|pspell_clear_session|pspell_config_create|",
         "pspell_config_data_dir|pspell_config_dict_dir|pspell_config_ignore|pspell_config_mode|pspell_config_personal|pspell_config_repl|",
         "pspell_config_runtogether|pspell_config_save_repl|pspell_new|pspell_new_config|pspell_new_personal|pspell_save_wordlist|",
@@ -641,13 +641,13 @@
     },
     "recode": {
         "name": "GNU Recode library",
-        "varName": [
+        "fnNames": [
             "recode|recode_file|recode_string"
         ]
     },
     "cairo": {
         "name": "Cairo graphics library",
-        "varName": [
+        "fnNames": [
             "cairo|cairo_create|cairo_font_face_get_type|cairo_font_face_status|cairo_font_options_create|cairo_font_options_equal|",
         "cairo_font_options_get_antialias|cairo_font_options_get_hint_metrics|cairo_font_options_get_hint_style|",
         "cairo_font_options_get_subpixel_order|cairo_font_options_hash|cairo_font_options_merge|cairo_font_options_set_antialias|",
@@ -679,13 +679,13 @@
     },
     "exif": {
         "name": "EXIF library",
-        "varName": [
+        "fnNames": [
             "exif_imagetype|exif_read_data|exif_tagname|exif_thumbnail|read_exif_data"
         ]
     },
     "gd": {
         "name": "GD graphics library",
-        "varName": [
+        "fnNames": [
             "gd_info|getimagesize|getimagesizefromstring|image2wbmp|image_type_to_extension|image_type_to_mime_type|imagealphablending|imageantialias|imagearc|imagechar|",
         "imagecharup|imagecolorallocate|imagecolorallocatealpha|imagecolorat|imagecolorclosest|imagecolorclosestalpha|imagecolorclosesthwb|",
         "imagecolordeallocate|imagecolorexact|imagecolorexactalpha|imagecolormatch|imagecolorresolve|imagecolorresolvealpha|imagecolorset|",
@@ -703,13 +703,13 @@
     },
     "gmagick": {
         "name": "Gmagick graphics library",
-        "varName": [
+        "fnNames": [
             "gmagick|gmagickdraw|gmagickpixel"
         ]
     },
     "imagemagick": {
         "name": "ImageMagick graphics library",
-        "varName": [
+        "fnNames": [
             "imagick|",
         "imagick_adaptiveblurimage|imagick_adaptiveresizeimage|imagick_adaptivesharpenimage|imagick_adaptivethresholdimage|imagick_addimage|",
         "imagick_addnoiseimage|imagick_affinetransformimage|imagick_animateimages|imagick_annotateimage|imagick_appendimages|imagick_averageimages|",
@@ -806,13 +806,13 @@
     },
     "cyrus": {
         "name": "Cyrus IMAP admin library",
-        "varName": [
+        "fnNames": [
             "cyrus_authenticate|cyrus_bind|cyrus_close|cyrus_connect|cyrus_query|cyrus_unbind"
         ]
     },
     "imap": {
         "name": "IMAP email library",
-        "varName": [
+        "fnNames": [
             "imap_8bit|imap_alerts|imap_append|imap_base64|imap_binary|imap_body|imap_bodystruct|imap_check|",
         "imap_clearflag_full|imap_close|imap_create|imap_createmailbox|imap_delete|imap_deletemailbox|imap_errors|imap_expunge|imap_fetch_overview|",
         "imap_fetchbody|imap_fetchheader|imap_fetchmime|imap_fetchstructure|imap_fetchtext|imap_gc|imap_get_quota|imap_get_quotaroot|imap_getacl|",
@@ -826,7 +826,7 @@
     },
     "mailparse": {
         "name": "Mailparse email library",
-        "varName": [
+        "fnNames": [
             "mailparse_determine_best_xfer_encoding|mailparse_msg_create|mailparse_msg_extract_part|mailparse_msg_extract_part_file|",
         "mailparse_msg_extract_whole_part_file|mailparse_msg_free|mailparse_msg_get_part|mailparse_msg_get_part_data|mailparse_msg_get_structure|",
         "mailparse_msg_parse|mailparse_msg_parse_file|mailparse_rfc822_parse_addresses|mailparse_stream_encode|mailparse_uudecode_all"
@@ -834,7 +834,7 @@
     },
     "vpopmail": {
         "name": "vpop mail library",
-        "varName": [
+        "fnNames": [
             "vpopmail_add_alias_domain|vpopmail_add_alias_domain_ex|vpopmail_add_domain|vpopmail_add_domain_ex|vpopmail_add_user|vpopmail_alias_add|",
         "vpopmail_alias_del|vpopmail_alias_del_domain|vpopmail_alias_get|vpopmail_alias_get_all|vpopmail_auth_user|vpopmail_del_domain|",
         "vpopmail_del_domain_ex|vpopmail_del_user|vpopmail_error|vpopmail_passwd|vpopmail_set_user_quota"
@@ -842,14 +842,14 @@
     },
     "bcmath": {
         "name": "BCMath library",
-        "varName": [
+        "fnNames": [
             "bcadd|bccomp|bcdiv|",
         "bcmod|bcmul|bcpow|bcpowmod|bcscale|bcsqrt|bcsub"
         ]
     },
     "gmp": {
         "name": "GNU Multiple Precision library",
-        "varName": [
+        "fnNames": [
             "gmp_abs|gmp_add|gmp_and|gmp_clrbit|gmp_cmp|",
         "gmp_com|gmp_div|gmp_div_q|gmp_div_qr|gmp_div_r|gmp_divexact|gmp_fact|gmp_gcd|gmp_gcdext|gmp_hamdist|gmp_init|gmp_intval|gmp_invert|",
         "gmp_jacobi|gmp_legendre|gmp_mod|gmp_mul|gmp_neg|gmp_nextprime|gmp_or|gmp_perfect_square|gmp_popcount|gmp_pow|gmp_powm|gmp_prob_prime|",
@@ -858,7 +858,7 @@
     },
     "stats": {
         "name": "Statistics library",
-        "varName": [
+        "fnNames": [
             "stats_absolute_deviation|stats_cdf_beta|stats_cdf_binomial|stats_cdf_cauchy|stats_cdf_chisquare|stats_cdf_exponential|stats_cdf_f|",
         "stats_cdf_gamma|stats_cdf_laplace|stats_cdf_logistic|stats_cdf_negative_binomial|stats_cdf_noncentral_chisquare|stats_cdf_noncentral_f|",
         "stats_cdf_poisson|stats_cdf_t|stats_cdf_uniform|stats_cdf_weibull|stats_covariance|stats_den_uniform|stats_dens_beta|stats_dens_cauchy|",
@@ -875,7 +875,7 @@
     },
     "gnupg": {
         "name": "GNU Privacy Guard library",
-        "varName": [
+        "fnNames": [
             "gnupg_adddecryptkey|gnupg_addencryptkey|gnupg_addsignkey|gnupg_cleardecryptkeys|gnupg_clearencryptkeys|gnupg_clearsignkeys|gnupg_decrypt|",
         "gnupg_decryptverify|gnupg_encrypt|gnupg_encryptsign|gnupg_export|gnupg_geterror|gnupg_getprotocol|gnupg_import|gnupg_init|gnupg_keyinfo|",
         "gnupg_setarmor|gnupg_seterrormode|gnupg_setsignmode|gnupg_sign|gnupg_verify"
@@ -883,7 +883,7 @@
     },
     "harupdf": {
         "name": "Haru PDF library",
-        "varName": [
+        "fnNames": [
             "haruannotation|haruannotation_setborderstyle|haruannotation_sethighlightmode|haruannotation_seticon|",
         "haruannotation_setopened|harudestination|harudestination_setfit|harudestination_setfitb|harudestination_setfitbh|harudestination_setfitbv|",
         "harudestination_setfith|harudestination_setfitr|harudestination_setfitv|harudestination_setxyz|harudoc|harudoc_addpage|",
@@ -917,7 +917,7 @@
     },
     "swfflash": {
         "name": "Shockwave Flash library",
-        "varName": [
+        "fnNames": [
             "swf_actiongeturl|",
         "swf_actiongotoframe|swf_actiongotolabel|swf_actionnextframe|swf_actionplay|swf_actionprevframe|swf_actionsettarget|swf_actionstop|",
         "swf_actiontogglequality|swf_actionwaitforframe|swf_addbuttonrecord|swf_addcolor|swf_closefile|swf_definebitmap|swf_definefont|",
@@ -933,7 +933,7 @@
     },
     "pdf": {
         "name": "PDF library",
-        "varName": [
+        "fnNames": [
             "pdf_activate_item|pdf_add_annotation|pdf_add_bookmark|pdf_add_launchlink|pdf_add_locallink|pdf_add_nameddest|pdf_add_note|pdf_add_outline|",
         "pdf_add_pdflink|pdf_add_table_cell|pdf_add_textflow|pdf_add_thumbnail|pdf_add_weblink|pdf_arc|pdf_arcn|pdf_attach_file|pdf_begin_document|",
         "pdf_begin_font|pdf_begin_glyph|pdf_begin_item|pdf_begin_layer|pdf_begin_page|pdf_begin_page_ext|pdf_begin_pattern|pdf_begin_template|",
@@ -961,7 +961,7 @@
     },
     "ps": {
         "name": "PostScript creation library",
-        "varName": [
+        "fnNames": [
             "ps_add_bookmark|ps_add_launchlink|ps_add_locallink|ps_add_note|ps_add_pdflink|ps_add_weblink|ps_arc|ps_arcn|ps_begin_page|",
         "ps_begin_pattern|ps_begin_template|ps_circle|ps_clip|ps_close|ps_close_image|ps_closepath|ps_closepath_stroke|ps_continue_text|ps_curveto|",
         "ps_delete|ps_end_page|ps_end_pattern|ps_end_template|ps_fill|ps_fill_stroke|ps_findfont|ps_get_buffer|ps_get_parameter|ps_get_value|",
@@ -975,19 +975,19 @@
     },
     "rpm": {
         "name": "RPM Header library",
-        "varName": [
+        "fnNames": [
             "rpm_close|rpm_get_tag|rpm_is_valid|rpm_open|rpm_version"
         ]
     },
     "expect": {
         "name": "Process PTY library",
-        "varName": [
+        "fnNames": [
             "expect_expectl|expect_popen"
         ]
     },
     "libevent": {
         "name": "libEvent library",
-        "varName": [
+        "fnNames": [
             "event_add|event_base_free|",
         "event_base_loop|event_base_loopbreak|event_base_loopexit|event_base_new|event_base_priority_init|event_base_set|event_buffer_base_set|",
         "event_buffer_disable|event_buffer_enable|event_buffer_fd_set|event_buffer_free|event_buffer_new|event_buffer_priority_set|",
@@ -997,7 +997,7 @@
     },
     "pcntl": {
         "name": "PCNTL Process Control library",
-        "varName": [
+        "fnNames": [
             "pcntl_alarm|pcntl_exec|",
         "pcntl_fork|pcntl_getpriority|pcntl_setpriority|pcntl_signal|pcntl_signal_dispatch|pcntl_sigprocmask|pcntl_sigtimedwait|pcntl_sigwaitinfo|",
         "pcntl_wait|pcntl_waitpid|pcntl_wexitstatus|pcntl_wifexited|pcntl_wifsignaled|pcntl_wifstopped|pcntl_wstopsig|pcntl_wtermsig"
@@ -1005,7 +1005,7 @@
     },
     "posix": {
         "name": "POSIX library",
-        "varName": [
+        "fnNames": [
             "posix_access|posix_ctermid|posix_errno|posix_get_last_error|posix_getcwd|posix_getegid|posix_geteuid|posix_getgid|",
         "posix_getgrgid|posix_getgrnam|posix_getgroups|posix_getlogin|posix_getpgid|posix_getpgrp|posix_getpid|posix_getppid|posix_getpwnam|",
         "posix_getpwuid|posix_getrlimit|posix_getsid|posix_getuid|posix_initgroups|posix_isatty|posix_kill|posix_mkfifo|posix_mknod|posix_setegid|",
@@ -1014,7 +1014,7 @@
     },
     "semaphore": {
         "name": "Semaphore library",
-        "varName": [
+        "fnNames": [
             "ftok|msg_get_queue|msg_queue_exists|",
         "msg_receive|msg_remove_queue|msg_send|msg_set_queue|msg_stat_queue|sem_acquire|sem_get|sem_release|sem_remove|shm_attach|shm_detach|shm_get_var|shm_has_var|shm_put_var|",
         "shm_remove|shm_remove_var"
@@ -1022,13 +1022,13 @@
     },
     "sharedmemory": {
         "name": "Shared Memory library",
-        "varName": [
+        "fnNames": [
             "shmop_close|shmop_delete|shmop_open|shmop_read|shmop_size|shmop_write"
         ]
     },
     "geoip": {
         "name": "Geo IP library",
-        "varName": [
+        "fnNames": [
             "geoip_continent_code_by_name|geoip_country_code3_by_name|geoip_country_code_by_name|geoip_country_name_by_name|",
         "geoip_database_info|geoip_db_avail|geoip_db_filename|geoip_db_get_all_info|geoip_id_by_name|geoip_isp_by_name|geoip_org_by_name|",
         "geoip_record_by_name|geoip_region_by_name|geoip_region_name_by_code|geoip_time_zone_by_country_and_region"
@@ -1036,32 +1036,32 @@
     },
     "judy": {
         "name": "Judy Array library",
-        "varName": [
+        "fnNames": [
             "judy|judy_type|judy_version"
         ]
     },
     "parsekit": {
         "name": "ParseKit library",
-        "varName": [
+        "fnNames": [
             "parsekit_compile_file|parsekit_compile_string|parsekit_func_arginfo"
         ]
     },
     "tidy": {
         "name": "Tidy library",
-        "varName": [
+        "fnNames": [
             "tidy|tidy_access_count|tidy_config_count|tidy_diagnose|tidy_error_count|tidy_get_error_buffer|",
         "tidy_get_output|tidy_load_config|tidy_reset_config|tidy_save_config|tidy_set_encoding|tidy_setopt|tidy_warning_count|tidynode"
         ]
     },
     "yaml": {
         "name": "Yaml library",
-        "varName": [
+        "fnNames": [
             "yaml_emit|yaml_emit_file|yaml_parse|yaml_parse_file|yaml_parse_url"
         ]
     },
     "curl": {
         "name": "Curl library",
-        "varName": [
+        "fnNames": [
         "curl_close|",
         "curl_copy_handle|curl_errno|curl_error|curl_exec|curl_getinfo|curl_init|curl_multi_add_handle|curl_multi_close|curl_multi_exec|",
         "curl_multi_getcontent|curl_multi_info_read|curl_multi_init|curl_multi_remove_handle|curl_multi_select|curl_setopt|curl_setopt_array|",
@@ -1070,14 +1070,14 @@
     },
     "fam": {
         "name": "File Alteration Monitor library",
-        "varName": [
+        "fnNames": [
             "fam_cancel_monitor|fam_close|fam_monitor_collection|fam_monitor_directory|",
         "fam_monitor_file|fam_next_event|fam_open|fam_pending|fam_resume_monitor|fam_suspend_monitor"
         ]
     },
     "ftp": {
         "name": "FTP library",
-        "varName": [
+        "fnNames": [
             "ftp_alloc|ftp_cdup|ftp_chdir|ftp_chmod|ftp_close|ftp_connect|ftp_delete|ftp_exec|ftp_fget|ftp_fput|ftp_get|ftp_get_option|ftp_login|",
         "ftp_mdtm|ftp_mkdir|ftp_nb_continue|ftp_nb_fget|ftp_nb_fput|ftp_nb_get|ftp_nb_put|ftp_nlist|ftp_pasv|ftp_put|ftp_pwd|ftp_quit|ftp_raw|",
         "ftp_rawlist|ftp_rename|ftp_rmdir|ftp_set_option|ftp_site|ftp_size|ftp_ssl_connect|ftp_systype"
@@ -1085,13 +1085,13 @@
     },
     "gearman": {
         "name": "Gearman library",
-        "varName": [
+        "fnNames": [
             "gearmanclient|gearmanjob|gearmantask|gearmanworker"
         ]
     },
     "gupnp": {
         "name": "GU UPnP library",
-        "varName": [
+        "fnNames": [
             "gupnp_context_get_host_ip|gupnp_context_get_port|gupnp_context_get_subscription_timeout|gupnp_context_host_path|gupnp_context_new|",
         "gupnp_context_set_subscription_timeout|gupnp_context_timeout_add|gupnp_context_unhost_path|gupnp_control_point_browse_start|",
         "gupnp_control_point_browse_stop|gupnp_control_point_callback_set|gupnp_control_point_new|gupnp_device_action_callback_set|",
@@ -1105,7 +1105,7 @@
     },
     "http": {
         "name": "HTTP library",
-        "varName": [
+        "fnNames": [
             "http_build_cookie|http_build_query|http_build_str|http_build_url|",
         "http_cache_etag|http_cache_last_modified|http_chunked_decode|http_date|http_deflate|http_get|http_get_request_body|",
         "http_get_request_body_stream|http_get_request_headers|http_head|http_inflate|http_match_etag|http_match_modified|",
@@ -1148,7 +1148,7 @@
     },
     "hyperwave": {
         "name": "HyperWave library",
-        "varName": [
+        "fnNames": [
             "hwapi_attribute|hwapi_attribute_key|hwapi_attribute_langdepvalue|hwapi_attribute_value|hwapi_attribute_values|hwapi_checkin|",
         "hwapi_checkout|hwapi_children|hwapi_content|hwapi_content_mimetype|hwapi_content_read|hwapi_copy|hwapi_dbstat|hwapi_dcstat|",
         "hwapi_dstanchors|hwapi_dstofsrcanchor|hwapi_error_count|hwapi_error_reason|hwapi_find|hwapi_ftstat|hwapi_hgcsp|hwapi_hwstat|",
@@ -1168,7 +1168,7 @@
     },
     "ldap": {
         "name": "LDAP library",
-        "varName": [
+        "fnNames": [
             "ldap_8859_to_t61|ldap_add|ldap_bind|ldap_close|ldap_compare|",
         "ldap_connect|ldap_count_entries|ldap_delete|ldap_dn2ufn|ldap_err2str|ldap_errno|ldap_error|ldap_explode_dn|ldap_first_attribute|",
         "ldap_first_entry|ldap_first_reference|ldap_free_result|ldap_get_attributes|ldap_get_dn|ldap_get_entries|ldap_get_option|ldap_get_values|",
@@ -1179,7 +1179,7 @@
     },
     "lotusnotes": {
         "name": "Lotus Notes library",
-        "varName": [
+        "fnNames": [
             "notes_body|notes_copy_db|",
         "notes_create_db|notes_create_note|notes_drop_db|notes_find_note|notes_header_info|notes_list_msgs|notes_mark_read|notes_mark_unread|",
         "notes_nav_create|notes_search|notes_unread|notes_version"
@@ -1187,13 +1187,13 @@
     },
     "memcache": {
         "name": "Memcache library",
-        "varName": [
+        "fnNames": [
             "memcache|memcache_debug|memcached"
         ]
     },
     "mqseries": {
         "name": "MQ Series library",
-        "varName": [
+        "fnNames": [
             "mqseries_back|mqseries_begin|mqseries_close|mqseries_cmit|",
         "mqseries_conn|mqseries_connx|mqseries_disc|mqseries_get|mqseries_inq|mqseries_open|mqseries_put|mqseries_put1|mqseries_set|",
         "mqseries_strerror"
@@ -1201,14 +1201,14 @@
     },
     "rrd": {
         "name": "RRDTool library",
-        "varName": [
+        "fnNames": [
             "rrd_create|rrd_error|rrd_fetch|rrd_first|rrd_graph|rrd_info|rrd_last|rrd_lastupdate|",
         "rrd_restore|rrd_tune|rrd_update|rrd_xport|rrdcreator|rrdgraph|rrdupdater"
         ]
     },
     "sam": {
         "name": "Simple Async Messaging library",
-        "varName": [
+        "fnNames": [
             "samconnection_commit|samconnection_connect|samconnection_constructor|samconnection_disconnect|",
         "samconnection_errno|samconnection_error|samconnection_isconnected|samconnection_peek|samconnection_peekall|samconnection_receive|",
         "samconnection_remove|samconnection_rollback|samconnection_send|samconnection_setDebug|samconnection_subscribe|samconnection_unsubscribe|",
@@ -1217,7 +1217,7 @@
     },
     "snmp": {
         "name": "SNMP library",
-        "varName": [
+        "fnNames": [
             "snmp|",
         "snmp2_get|snmp2_getnext|snmp2_real_walk|snmp2_set|snmp2_walk|snmp3_get|snmp3_getnext|snmp3_real_walk|snmp3_set|snmp3_walk|",
         "snmp_get_quick_print|snmp_get_valueretrieval|snmp_read_mib|snmp_set_enum_print|snmp_set_oid_numeric_print|snmp_set_oid_output_format|",
@@ -1226,7 +1226,7 @@
     },
     "sockets": {
         "name": "Sockets library",
-        "varName": [
+        "fnNames": [
             "socket_accept|socket_bind|socket_clear_error|socket_close|socket_connect|socket_create|",
         "socket_create_listen|socket_create_pair|socket_get_option|socket_get_status|socket_getpeername|socket_getsockname|socket_last_error|",
         "socket_listen|socket_read|socket_recv|socket_recvfrom|socket_select|socket_send|socket_sendto|socket_set_block|socket_set_blocking|",
@@ -1235,7 +1235,7 @@
     },
     "ssh2": {
         "name": "SSH2 library",
-        "varName": [
+        "fnNames": [
             "ssh2_auth_hostbased_file|ssh2_auth_none|ssh2_auth_password|ssh2_auth_pubkey_file|",
         "ssh2_connect|ssh2_exec|ssh2_fetch_stream|ssh2_fingerprint|ssh2_methods_negotiated|ssh2_publickey_add|ssh2_publickey_init|",
         "ssh2_publickey_list|ssh2_publickey_remove|ssh2_scp_recv|ssh2_scp_send|ssh2_sftp|ssh2_sftp_lstat|ssh2_sftp_mkdir|ssh2_sftp_readlink|",
@@ -1244,13 +1244,13 @@
     },
     "stomp": {
         "name": "Stomp client library",
-        "varName": [
+        "fnNames": [
             "stomp|stomp_connect_error|stomp_version|stompexception|stompframe"
         ]
     },
     "svn": {
         "name": "Subversion VCS library",
-        "varName": [
+        "fnNames": [
             "svn_add|",
         "svn_auth_get_parameter|svn_auth_set_parameter|svn_blame|svn_cat|svn_checkout|svn_cleanup|svn_client_version|svn_commit|svn_delete|",
         "svn_diff|svn_export|svn_fs_abort_txn|svn_fs_apply_text|svn_fs_begin_txn2|svn_fs_change_node_prop|svn_fs_check_path|",
@@ -1262,7 +1262,7 @@
     },
     "yaz": {
         "name": "YAZ library",
-        "varName": [
+        "fnNames": [
             "yaz_addinfo|yaz_ccl_conf|yaz_ccl_parse|yaz_close|yaz_connect|yaz_database|",
         "yaz_element|yaz_errno|yaz_error|yaz_es|yaz_es_result|yaz_get_option|yaz_hits|yaz_itemorder|yaz_present|yaz_range|yaz_record|yaz_scan|",
         "yaz_scan_result|yaz_schema|yaz_search|yaz_set_option|yaz_sort|yaz_syntax|yaz_wait"
@@ -1270,14 +1270,14 @@
     },
     "yp": {
         "name": "YP/NIS library",
-        "varName": [
+        "fnNames": [
             "yp_all|yp_cat|yp_err_string|yp_errno|yp_first|",
         "yp_get_default_domain|yp_master|yp_match|yp_next|yp_order"
         ]
     },
     "solr": {
         "name": "Apache Solr library",
-        "varName": [
+        "fnNames": [
             "solr_get_version|solrclient|",
         "solrclientexception|solrdocument|solrdocumentfield|solrexception|solrgenericresponse|solrillegalargumentexception|",
         "solrillegaloperationexception|solrinputdocument|solrmodifiableparams|solrobject|solrparams|solrpingresponse|solrquery|solrqueryresponse|",
@@ -1286,7 +1286,7 @@
     },
     "swish": {
         "name": "Swish indexing library",
-        "varName": [
+        "fnNames": [
             "swish_construct|swish_getmetalist|swish_getpropertylist|swish_prepare|",
         "swish_query|swishresult_getmetalist|swishresult_stem|swishresults_getparsedwords|swishresults_getremovedstopwords|swishresults_nextresult|",
         "swishresults_seekresult|swishsearch_execute|swishsearch_resetlimit|swishsearch_setlimit|swishsearch_setphrasedelimiter|",
@@ -1295,14 +1295,14 @@
     },
     "apache": {
         "name": "Apache HTTPd library",
-        "varName": [
+        "fnNames": [
             "apache_child_terminate|apache_get_modules|apache_get_version|apache_getenv|apache_lookup_uri|apache_note|apache_request_headers|",
         "apache_reset_timeout|apache_response_headers|apache_setenv"
         ]
     },
     "iis": {
         "name": "IIS Admin library",
-        "varName": [
+        "fnNames": [
             "iis_add_server|iis_get_dir_security|",
         "iis_get_script_map|iis_get_server_by_comment|iis_get_server_by_path|iis_get_server_rights|iis_get_service_state|iis_remove_server|",
         "iis_set_app_settings|iis_set_dir_security|iis_set_script_map|iis_set_server_rights|iis_start_server|iis_start_service|iis_stop_server|",
@@ -1311,13 +1311,13 @@
     },
     "nsapi": {
         "name": "NSAPI library",
-        "varName": [
+        "fnNames": [
             "nsapi_request_headers|nsapi_response_headers|nsapi_virtual"
         ]
     },
     "msession": {
         "name": "Mohawk session library",
-        "varName": [
+        "fnNames": [
             "msession_connect|msession_count|msession_create|msession_destroy|msession_disconnect|msession_find|msession_get|",
         "msession_get_array|msession_get_data|msession_inc|msession_list|msession_listvar|msession_lock|msession_plugin|msession_randstr|",
         "msession_set|msession_set_array|msession_set_data|msession_timeout|msession_uniq|msession_unlock"
@@ -1325,7 +1325,7 @@
     },
     "session": {
         "name": "Session handling library",
-        "varName": [
+        "fnNames": [
             "session_cache_expire|session_cache_limiter|session_commit|",
         "session_decode|session_destroy|session_encode|session_get_cookie_params|session_id|session_is_registered|session_module_name|session_name|",
         "session_regenerate_id|session_register|session_save_path|session_set_cookie_params|session_set_save_handler|session_start|",
@@ -1334,52 +1334,52 @@
     },
     "pgsqlsession": {
         "name": "PostgreSQL session library",
-        "varName": [
+        "fnNames": [
             "session_pgsql_add_error|session_pgsql_get_error|session_pgsql_get_field|session_pgsql_reset|session_pgsql_set_field|session_pgsql_status"
         ]
     },
     "bbcode": {
         "name": "bbCode library",
-        "varName": [
+        "fnNames": [
             "bbcode_add_element|bbcode_add_smiley|bbcode_create|bbcode_destroy|bbcode_parse|bbcode_set_arg_parser|bbcode_set_flags"
         ]
     },
     "classkit": {
         "name": "ClassKit library",
-        "varName": [
+        "fnNames": [
             "classkit_import|classkit_method_add|classkit_method_copy|classkit_method_redefine|classkit_method_remove|",
         "classkit_method_rename"
         ]
     },
     "ctype": {
         "name": "Character type checking library",
-        "varName": [
+        "fnNames": [
             "ctype_alnum|ctype_alpha|ctype_cntrl|ctype_digit|",
         "ctype_graph|ctype_lower|ctype_print|ctype_punct|ctype_space|ctype_upper|ctype_xdigit"
         ]
     },
     "filter": {
         "name": "Data Filtering library",
-        "varName": [
+        "fnNames": [
             "filter_has_var|filter_id|filter_input|filter_input_array|filter_list|filter_var|filter_var_array"
         ]
     },
     "reflection": {
         "name": "Reflection library",
-        "varName": [
+        "fnNames": [
             "reflection|reflectionclass|reflectionexception|reflectionextension|",
         "reflectionfunction|reflectionfunctionabstract|reflectionmethod|reflectionobject|reflectionparameter|reflectionproperty"
         ]
     },
     "oauth": {
         "name": "OAuth library",
-        "varName": [
+        "fnNames": [
             "oauth|oauth_get_sbs|oauth_urlencode|oauthexception|oauthprovider"
         ]
     },
     "xmlrpc": {
         "name": "XMLRPC library",
-        "varName": [
+        "fnNames": [
             "xmlrpc_decode|xmlrpc_decode_request|xmlrpc_encode|xmlrpc_encode_request|xmlrpc_get_type|xmlrpc_is_fault|xmlrpc_parse_method_descriptions|",
         "xmlrpc_server_add_introspection_data|xmlrpc_server_call_method|xmlrpc_server_create|xmlrpc_server_destroy|",
         "xmlrpc_server_register_introspection_callback|xmlrpc_server_register_method|xmlrpc_set_type"
@@ -1387,13 +1387,13 @@
     },
     "w32api": {
         "name": "W32 API library",
-        "varName": [
+        "fnNames": [
             "w32api_deftype|w32api_init_dtype|w32api_invoke_function|w32api_register_function|w32api_set_call_method"
         ]
     },
     "com": {
         "name": "COM and .Net library",
-        "varName": [
+        "fnNames": [
             "dotnet|dotnet_load|com_addref|com_create_guid|com_event_sink|com_get|",
         "com_get_active_object|com_invoke|com_isenum|com_load|com_load_typelib|com_message_pump|com_print_typeinfo|com_propget|com_propput|",
         "com_propset|com_release|com_set|variant|",
@@ -1404,13 +1404,13 @@
     },
     "win32ps": {
         "name": "win32 Process library",
-        "varName": [
+        "fnNames": [
             "win32_ps_list_procs|win32_ps_stat_mem|win32_ps_stat_proc"
         ]
     },
     "win32service": {
         "name": "win32 Services library",
-        "varName": [
+        "fnNames": [
             "win32_continue_service|win32_create_service|win32_delete_service|",
         "win32_get_last_control_message|win32_pause_service|win32_query_service_status|",
         "win32_set_service_status|win32_start_service|win32_start_service_ctrl_dispatcher|win32_stop_service"
@@ -1418,7 +1418,7 @@
     },
     "printer": {
         "name": "Printer library",
-        "varName": [
+        "fnNames": [
             "printer_abort|printer_close|printer_create_brush|printer_create_dc|printer_create_font|printer_create_pen|printer_delete_brush|",
         "printer_delete_dc|printer_delete_font|printer_delete_pen|printer_draw_bmp|printer_draw_chord|printer_draw_elipse|printer_draw_line|",
         "printer_draw_pie|printer_draw_rectangle|printer_draw_roundrect|printer_draw_text|printer_end_doc|printer_end_page|printer_get_option|",
@@ -1428,7 +1428,7 @@
     },
     "dom": {
         "name": "DOM library",
-        "varName": [
+        "fnNames": [
             "dom_import_simplexml|domainexception|domattr|domattribute_name|domattribute_set_value|domattribute_specified|",
         "domattribute_value|domcharacterdata|domcomment|domdocument|domdocument_add_root|domdocument_create_attribute|",
         "domdocument_create_cdata_section|domdocument_create_comment|domdocument_create_element|domdocument_create_element_ns|",
@@ -1451,20 +1451,20 @@
     },
     "libxml": {
         "name": "libxml library",
-        "varName": [
+        "fnNames": [
             "libxml_clear_errors|",
         "libxml_disable_entity_loader|libxml_get_errors|libxml_get_last_error|libxml_set_streams_context|libxml_use_internal_errors|libxmlerror"
         ]
     },
     "qtdom": {
         "name": "QTDom library",
-        "varName": [
+        "fnNames": [
             "qdom_error|qdom_tree"
         ]
     },
     "sdo": {
         "name": "SDO library",
-        "varName": [
+        "fnNames": [
             "sdo_das_changesummary_beginlogging|sdo_das_changesummary_endlogging|",
         "sdo_das_changesummary_getchangeddataobjects|sdo_das_changesummary_getchangetype|sdo_das_changesummary_getoldcontainer|",
         "sdo_das_changesummary_getoldvalues|sdo_das_changesummary_islogging|sdo_das_datafactory_addpropertytotype|sdo_das_datafactory_addtype|",
@@ -1487,20 +1487,20 @@
     },
     "simplexml": {
         "name": "SimpleXML library",
-        "varName": [
+        "fnNames": [
             "simplexml_import_dom|simplexml_load_file|simplexml_load_string|simplexmlelement|simplexmliterator"
         ]
     },
     "wddx": {
         "name": "WDDX library",
-        "varName": [
+        "fnNames": [
             "wddx_add_vars|wddx_deserialize|wddx_packet_end|",
         "wddx_packet_start|wddx_serialize_value|wddx_serialize_vars"
         ]
     },
     "xmlparser": {
         "name": "XML Parser library",
-        "varName": [
+        "fnNames": [
             "utf8_decode|utf8_encode|xml_error_string|xml_get_current_byte_index|",
         "xml_get_current_column_number|xml_get_current_line_number|xml_get_error_code|xml_parse|xml_parse_into_struct|xml_parser_create|",
         "xml_parser_create_ns|xml_parser_free|xml_parser_get_option|xml_parser_set_option|xml_set_character_data_handler|xml_set_default_handler|",
@@ -1510,7 +1510,7 @@
     },
     "xmlreadwrite": {
         "name": "XML Reader/Writer library",
-        "varName": [
+        "fnNames": [
             "xmlreader|xmlwriter_end_attribute|xmlwriter_end_cdata|",
         "xmlwriter_end_comment|xmlwriter_end_document|xmlwriter_end_dtd|xmlwriter_end_dtd_attlist|xmlwriter_end_dtd_element|",
         "xmlwriter_end_dtd_entity|xmlwriter_end_element|xmlwriter_end_pi|xmlwriter_flush|xmlwriter_full_end_element|xmlwriter_open_memory|",
@@ -1524,7 +1524,7 @@
     },
     "xslt": {
         "name": "XSLT library",
-        "varName": [
+        "fnNames": [
             "xslt_backend_info|xslt_backend_name|xslt_backend_version|xslt_create|xslt_errno|",
         "xslt_error|xslt_free|xslt_getopt|xslt_process|xslt_set_base|xslt_set_encoding|xslt_set_error_handler|xslt_set_log|xslt_set_object|",
         "xslt_set_sax_handler|xslt_set_sax_handlers|xslt_set_scheme_handler|xslt_set_scheme_handlers|xslt_setopt|xsltprocessor"
