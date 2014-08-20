@@ -161,6 +161,7 @@ define(function (require, exports, module) {
         predefinedFunctions     = strPredefinedFunctions.join('\n').split('|'),
         fnArray                 = [],
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        AppInit                 = brackets.getModule("utils/AppInit"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         fg                      = JSON.parse(functionGroups),
@@ -168,19 +169,28 @@ define(function (require, exports, module) {
         i                       = 0,
         selectedFunctions       = [];
 
-    prefs.definePreference("filteredFunctionList", "array", []);
+    AppInit.appReady(function () {
+        prefs.definePreference("filteredFunctionList", "array", []);
 
-    selectedFunctions = prefs.get("filteredFunctionList");
-    console.log(selectedFunctions.length);
+        selectedFunctions = prefs.get("filteredFunctionList");
+        console.log(selectedFunctions.length);
 
-    Object.keys(fg).forEach(function (key) {
-        fgKey = fg[key];
-        if (selectedFunctions.indexOf(key) > -1) {
-            fnArray = fgKey.fnNames.join('\n').split('|');
-            for (i = 0; i < fnArray.length; i++) {
-                predefinedFunctions.push(fnArray[i]);
+        Object.keys(fg).forEach(function (key) {
+            fgKey = fg[key];
+            if (selectedFunctions.length > 0) {
+                if (selectedFunctions.indexOf(key) > -1) {
+                    fnArray = fgKey.fnNames.join('\n').split('|');
+                    for (i = 0; i < fnArray.length; i++) {
+                        predefinedFunctions.push(fnArray[i]);
+                    }
+                }
+            } else {
+                fnArray = fgKey.fnNames.join('\n').split('|');
+                for (i = 0; i < fnArray.length; i++) {
+                    predefinedFunctions.push(fnArray[i]);
+                }
             }
-        }
+        });
     });
 
     exports.predefinedFunctions = predefinedFunctions;
