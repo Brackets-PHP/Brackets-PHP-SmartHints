@@ -40,7 +40,6 @@ define(function (require, exports, module) {
      * @constructor
      */
     function PHPHints() {
-        this.lastLine = 0;
         this.cachedPhpVariables =       [];
         this.cachedPhpConstants =       [];
         this.cachedPhpKeywords  =       [];
@@ -102,18 +101,15 @@ define(function (require, exports, module) {
             return null;
         }
         // if it's a $variable, then build the local variable list
-        // rebuild list if the line changed.  keeps it fresh
         if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
-            if (cursor.line !== this.lastLine) {
-                var varList = this.editor.document.getText().match(this.tokenVariable);
-                for (i = 0; i < varList.length; i++) {
-                    var word = varList[i];
-                    if (this.cachedLocalVariables.indexOf(word) === -1) {
-                        this.cachedLocalVariables.push(word);
-                    }
+
+            var varList = this.editor.document.getText().match(this.tokenVariable);
+            for (i = 0; i < varList.length; i++) {
+                var word = varList[i];
+                if (this.cachedLocalVariables.indexOf(word) === -1) {
+                    this.cachedLocalVariables.push(word);
                 }
             }
-            this.lastLine = cursor.line;
 
             if (this.cachedLocalVariables === null) {
                 return null;
