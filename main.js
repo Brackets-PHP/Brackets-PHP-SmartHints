@@ -34,8 +34,7 @@ define(function (require, exports, module) {
     
     var phpBuiltins             = require("phpdata/php-predefined"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
-        predefinedFunctions     = phpBuiltins.predefinedFunctions,
-        selectedFunctions       = [];
+        predefinedFunctions     = phpBuiltins.predefinedFunctions;
     
     /**
      * @constructor
@@ -213,6 +212,7 @@ define(function (require, exports, module) {
 
         Object.keys(fg).forEach(function (key) {
             fgKey = fg[key];
+
             if (selectedFunctions.length > 0) {
                 if (selectedFunctions.indexOf(key) > -1) {
                     fnArray = fgKey.fnNames.join('\n').split('|');
@@ -227,7 +227,6 @@ define(function (require, exports, module) {
                 }
             }
         });
-        console.log(predefinedFunctions.length);
         return predefinedFunctions;
     }
 
@@ -246,27 +245,25 @@ define(function (require, exports, module) {
         return finalList;
     }
 
-    function handlePrefs() {
+    function handlePrefs(selectedFunctions) {
         var fnList = [];
-        selectedFunctions = prefs.get("filteredFunctionList");
         fnList = buildFunctionsList(selectedFunctions);
         phpHints.cachedPhpFunctions.length = 0;
         phpHints.cachedPhpFunctions = createHintArray(fnList);
     }
 
-    prefs.definePreference("filteredFunctionList", "array", [])
-        .on("change", function () {
-            handlePrefs();
-        });
-
     AppInit.appReady(function () {
-        handlePrefs();
+        prefs.definePreference("filteredFunctionList", "array", [])
+            .on("change", function () {
+                handlePrefs(prefs.get("filteredFunctionList"));
+            });
+        // register the provider.  Priority = 10 to be the provider of choice for php
+        CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
+        handlePrefs(prefs.get("filteredFunctionList"));
         phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
         phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
-        // register the provider.  Priority = 10 to be the provider of choice for php
-        CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
     });
 });
