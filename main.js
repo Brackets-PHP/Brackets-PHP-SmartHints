@@ -26,11 +26,16 @@ SOFTWARE.*/
 define(function (require, exports, module) {
     "use strict";
 
-    var AppInit             = brackets.getModule("utils/AppInit"),
-        CodeHintManager     = brackets.getModule("editor/CodeHintManager"),
-        ExtensionUtils      = brackets.getModule("utils/ExtensionUtils");
+    var AppInit                 = brackets.getModule("utils/AppInit"),
+        CodeHintManager         = brackets.getModule("editor/CodeHintManager"),
+        ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
+        PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
     
-    var phpBuiltins         = require("phpdata/php-predefined");
+    var phpBuiltins             = require("phpdata/php-predefined"),
+        functionGroups          = require("text!phpdata/php-function-groups.json"),
+        predefinedFunctions     = phpBuiltins.predefinedFunctions,
+        selectedFunctions       = [];
     
     /**
      * @constructor
@@ -188,7 +193,7 @@ define(function (require, exports, module) {
             textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
             indexOfTheSymbol    = textBeforeCursor.indexOf(currentToken.string),
             replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
-        console.log(indexOfTheSymbol + "|" + currentToken.string);
+
         if (indexOfTheSymbol === -1) {
             return false;
         }
@@ -196,6 +201,36 @@ define(function (require, exports, module) {
         return false;
     };
     
+    var phpHints = new PHPHints();
+
+    function buildFunctionsList(selectedFunctions) {
+        var i = 0,
+            fnArray             = [],
+            fg                  = JSON.parse(functionGroups),
+            fgKey;
+        predefinedFunctions.length = 0;
+        predefinedFunctions = phpBuiltins.predefinedFunctions;
+
+        Object.keys(fg).forEach(function (key) {
+            fgKey = fg[key];
+            if (selectedFunctions.length > 0) {
+                if (selectedFunctions.indexOf(key) > -1) {
+                    fnArray = fgKey.fnNames.join('\n').split('|');
+                    for (i = 0; i < fnArray.length; i++) {
+                        predefinedFunctions.push(fnArray[i]);
+                    }
+                }
+            } else {
+                fnArray = fgKey.fnNames.join('\n').split('|');
+                for (i = 0; i < fnArray.length; i++) {
+                    predefinedFunctions.push(fnArray[i]);
+                }
+            }
+        });
+        console.log(predefinedFunctions.length);
+        return predefinedFunctions;
+    }
+
     function createHintArray(rawList) {
         var sortedRawList   = rawList.sort(),
             i               = 0,
@@ -211,10 +246,21 @@ define(function (require, exports, module) {
         return finalList;
     }
 
-    AppInit.appReady(function () {
-        var phpHints = new PHPHints();
+    function handlePrefs() {
+        var fnList = [];
+        selectedFunctions = prefs.get("filteredFunctionList");
+        fnList = buildFunctionsList(selectedFunctions);
+        phpHints.cachedPhpFunctions.length = 0;
+        phpHints.cachedPhpFunctions = createHintArray(fnList);
+    }
 
-        phpHints.cachedPhpFunctions = createHintArray(phpBuiltins.predefinedFunctions);
+    prefs.definePreference("filteredFunctionList", "array", [])
+        .on("change", function () {
+            handlePrefs();
+        });
+
+    AppInit.appReady(function () {
+        handlePrefs();
         phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
         phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);

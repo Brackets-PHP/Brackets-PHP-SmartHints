@@ -158,43 +158,10 @@ define(function (require, exports, module) {
     var keywords                = strKeywords.split("|"),
         predefinedConstants     = strPredefinedConstants.split("|"),
         predefinedVariables     = strPredefinedVariables.split("|"),
-        predefinedFunctions     = strPredefinedFunctions.join('\n').split('|'),
-        fnArray                 = [],
-        PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
-        AppInit                 = brackets.getModule("utils/AppInit"),
-        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints"),
-        functionGroups          = require("text!phpdata/php-function-groups.json"),
-        fg                      = JSON.parse(functionGroups),
-        fgKey,
-        i                       = 0,
-        selectedFunctions       = [];
+        predefinedFunctions     = strPredefinedFunctions.join('\n').split('|');
 
-    AppInit.appReady(function () {
-        prefs.definePreference("filteredFunctionList", "array", []);
-
-        selectedFunctions = prefs.get("filteredFunctionList");
-        console.log(selectedFunctions.length);
-
-        Object.keys(fg).forEach(function (key) {
-            fgKey = fg[key];
-            if (selectedFunctions.length > 0) {
-                if (selectedFunctions.indexOf(key) > -1) {
-                    fnArray = fgKey.fnNames.join('\n').split('|');
-                    for (i = 0; i < fnArray.length; i++) {
-                        predefinedFunctions.push(fnArray[i]);
-                    }
-                }
-            } else {
-                fnArray = fgKey.fnNames.join('\n').split('|');
-                for (i = 0; i < fnArray.length; i++) {
-                    predefinedFunctions.push(fnArray[i]);
-                }
-            }
-        });
-    });
-
-    exports.predefinedFunctions = predefinedFunctions;
     exports.predefinedConstants = predefinedConstants;
     exports.predefinedVariables = predefinedVariables;
     exports.keywords = keywords;
+    exports.predefinedFunctions = predefinedFunctions;
 });
