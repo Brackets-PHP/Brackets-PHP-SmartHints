@@ -37,11 +37,19 @@ define(function (require, exports, module) {
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         predefinedFunctions     = phpBuiltins.predefinedFunctions;
     
+    function getTokenToCursor(token) {
+        var tokenStart = token.token.start,
+            tokenCursor = token.pos.ch,
+            tokenString = token.token.string;
+        return tokenString.substr(0, (tokenCursor - tokenStart));
+    }
+
     /**
      * @constructor
      */
     function PHPHints() {
-        this.lastTokenStart         = "";
+        this.activeToken            = "";
+        this.lastToken              = "";
         this.cachedPhpVariables     = [];
         this.cachedPhpConstants     = [];
         this.cachedPhpKeywords      = [];
@@ -52,33 +60,36 @@ define(function (require, exports, module) {
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
         this.editor = editor;
-        var currentToken = "",
-            i,
-            cursor = editor.getCursorPos();
-        this.initialContext = TokenUtils.getInitialContext(editor._codeMirror, cursor);
-        
-        currentToken = this.initialContext.token;
+        var i               = 0,
+            cursor          = editor.getCursorPos(),
+            tokenToCursor   = "";
+
+        this.activeToken = TokenUtils.getInitialContext(editor._codeMirror, cursor);
+
         // if implicitChar or 1 letter token is $, we *always* have hints so return immediately
-        if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
+        if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
             return true;
         }
+
+        tokenToCursor = getTokenToCursor(this.activeToken);
+        console.log(tokenToCursor);
         // start at 2nd char unless explicit request then start immediately
-        if (currentToken.string.length > 1 || implicitChar === null) {
+        if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
             // do constants 2nd as they are also small
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
             // do functions last as the array is quite large
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
