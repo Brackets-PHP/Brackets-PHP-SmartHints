@@ -29,6 +29,7 @@ define(function (require, exports, module) {
     var AppInit                 = brackets.getModule("utils/AppInit"),
         CodeHintManager         = brackets.getModule("editor/CodeHintManager"),
         ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
+        TokenUtils              = brackets.getModule("utils/TokenUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
     
@@ -40,12 +41,13 @@ define(function (require, exports, module) {
      * @constructor
      */
     function PHPHints() {
-        this.cachedPhpVariables =       [];
-        this.cachedPhpConstants =       [];
-        this.cachedPhpKeywords  =       [];
-        this.cachedPhpFunctions =       [];
-        this.cachedLocalVariables =     [];
-        this.tokenVariable =            /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
+        this.lastTokenStart         = "";
+        this.cachedPhpVariables     = [];
+        this.cachedPhpConstants     = [];
+        this.cachedPhpKeywords      = [];
+        this.cachedPhpFunctions     = [];
+        this.cachedLocalVariables   = [];
+        this.tokenVariable          = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -53,8 +55,9 @@ define(function (require, exports, module) {
         var currentToken = "",
             i,
             cursor = editor.getCursorPos();
+        this.initialContext = TokenUtils.getInitialContext(editor._codeMirror, cursor);
         
-        currentToken = this.editor._codeMirror.getTokenAt(cursor);
+        currentToken = this.initialContext.token;
         // if implicitChar or 1 letter token is $, we *always* have hints so return immediately
         if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
             return true;
@@ -96,7 +99,8 @@ define(function (require, exports, module) {
             $fHint,
             cursor =            this.editor.getCursorPos();
 
-        currentToken = this.editor._codeMirror.getTokenAt(cursor);
+        currentToken = this.initialContext.token;
+
         if (currentToken === null) {
             return null;
         }
@@ -104,11 +108,13 @@ define(function (require, exports, module) {
         if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
 
             var varList = this.editor.document.getText().match(this.tokenVariable);
+            console.log(varList.length);
             for (i = 0; i < varList.length; i++) {
                 var word = varList[i];
                 if (this.cachedLocalVariables.indexOf(word) === -1) {
                     this.cachedLocalVariables.push(word);
                 }
+
             }
 
             if (this.cachedLocalVariables === null) {
@@ -184,15 +190,10 @@ define(function (require, exports, module) {
     PHPHints.prototype.insertHint = function ($hint) {
         var cursor              = this.editor.getCursorPos(),
             currentToken        = this.editor._codeMirror.getTokenAt(cursor),
-            lineBeginning       = {line: cursor.line, ch: 0},
-            textBeforeCursor    = this.editor.document.getRange(lineBeginning, cursor),
-            indexOfTheSymbol    = textBeforeCursor.indexOf(currentToken.string),
-            replaceStart = {line: cursor.line, ch: indexOfTheSymbol};
+            replaceStart        = {line: cursor.line, ch: currentToken.start},
+            replaceEnd          = {line: cursor.line, ch: cursor.ch};
 
-        if (indexOfTheSymbol === -1) {
-            return false;
-        }
-        this.editor.document.replaceRange($hint.text(), replaceStart, cursor);
+        this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
         return false;
     };
     
