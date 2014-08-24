@@ -37,6 +37,8 @@ define(function (require, exports, module) {
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         predefinedFunctions     = phpBuiltins.predefinedFunctions;
     
+    var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>');
+
     function getTokenToCursor(token) {
         var tokenStart = token.token.start,
             tokenCursor = token.pos.ch,
@@ -134,8 +136,8 @@ define(function (require, exports, module) {
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
                 if (this.cachedLocalVariables[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
-                        .addClass("PHPHint-completion")
-                        .addClass("PHPHint-completion-localvar")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-localvar")
                         .text(this.cachedLocalVariables[i]);
                     localVarList.push($fHint);
                 }
@@ -144,8 +146,8 @@ define(function (require, exports, module) {
             for (i = 0; i < this.cachedPhpVariables.length; i++) {
                 if (this.cachedPhpVariables[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
-                        .addClass("PHPHint-completion")
-                        .addClass("PHPHint-completion-phpvar")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpvar")
                         .text(this.cachedPhpVariables[i]);
                     phpVarList.push($fHint);
                 }
@@ -158,8 +160,8 @@ define(function (require, exports, module) {
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
                 if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
-                        .addClass("PHPHint-completion")
-                        .addClass("PHPHint-completion-phpkeyword")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpkeyword")
                         .text(this.cachedPhpKeywords[i]);
                     phpKeywordList.push($fHint);
                 }
@@ -168,8 +170,8 @@ define(function (require, exports, module) {
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
                 if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
-                        .addClass("PHPHint-completion")
-                        .addClass("PHPHint-completion-phpconstant")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpconstant")
                         .text(this.cachedPhpConstants[i]);
                     phpConstList.push($fHint);
                 }
@@ -178,8 +180,8 @@ define(function (require, exports, module) {
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
                 if (this.cachedPhpFunctions[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
-                        .addClass("PHPHint-completion")
-                        .addClass("PHPHint-completion-phpfunction")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpfunction")
                         .text(this.cachedPhpFunctions[i]);
                     phpFuncList.push($fHint);
                 }
@@ -251,25 +253,42 @@ define(function (require, exports, module) {
         return finalList;
     }
 
-    function handlePrefs(selectedFunctions) {
+    function handleFunctionPrefs(selectedFunctions) {
         var fnList = [];
         fnList = buildFunctionsList(selectedFunctions);
         phpHints.cachedPhpFunctions.length = 0;
         phpHints.cachedPhpFunctions = createHintArray(fnList);
     }
 
+    function handlePhpProjectPrefs(isPhpProject) {
+        if (isPhpProject) {
+            toolbarIcon.addClass('active');
+        } else {
+            toolbarIcon.removeClass('active');
+        }
+    }
+
     AppInit.appReady(function () {
+        // PHP SmartHints prefs
         prefs.definePreference("filteredFunctionList", "array", [])
             .on("change", function () {
-                handlePrefs(prefs.get("filteredFunctionList"));
+                handleFunctionPrefs(prefs.get("filteredFunctionList"));
             });
+        prefs.definePreference("isPhpProject", "boolean", false)
+            .on("change", function () {
+                handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
+            });
+        handleFunctionPrefs(prefs.get("filteredFunctionList"));
+        handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
+
         // register the provider.  Priority = 10 to be the provider of choice for php
         CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
-        handlePrefs(prefs.get("filteredFunctionList"));
+
         phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
         phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
+        toolbarIcon.appendTo('#main-toolbar .buttons');
     });
 });
