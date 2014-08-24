@@ -72,7 +72,7 @@ define(function (require, exports, module) {
         }
 
         tokenToCursor = getTokenToCursor(this.activeToken);
-        console.log(tokenToCursor);
+
         // start at 2nd char unless explicit request then start immediately
         if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
@@ -99,8 +99,7 @@ define(function (require, exports, module) {
     };
 
     PHPHints.prototype.getHints = function (implicitChar) {
-        var currentToken =      "",
-            i =                 0,
+        var i =                 0,
             hintList =          [],
             localVarList =      [],
             phpVarList =        [],
@@ -108,25 +107,24 @@ define(function (require, exports, module) {
             phpConstList =      [],
             phpKeywordList =    [],
             $fHint,
-            cursor =            this.editor.getCursorPos();
+            cursor = this.editor.getCursorPos(),
+            tokenToCursor = "";
 
-        currentToken = this.initialContext.token;
-
-        if (currentToken === null) {
-            return null;
-        }
+        this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
+        tokenToCursor = getTokenToCursor(this.activeToken);
         // if it's a $variable, then build the local variable list
-        if (implicitChar === "$"  || currentToken.string.charAt(0) === "$") {
-
-            var varList = this.editor.document.getText().match(this.tokenVariable);
-            console.log(varList.length);
-            for (i = 0; i < varList.length; i++) {
-                var word = varList[i];
-                if (this.cachedLocalVariables.indexOf(word) === -1) {
-                    this.cachedLocalVariables.push(word);
+        if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
+            if (this.lastToken === "" || (this.activeToken.token.start !== this.lastToken.token.start)) {
+                this.cachedLocalVariables.length = 0;
+                var varList = this.editor.document.getText().match(this.tokenVariable);
+                for (i = 0; i < varList.length; i++) {
+                    var word = varList[i];
+                    if (this.cachedLocalVariables.indexOf(word) === -1) {
+                        this.cachedLocalVariables.push(word);
+                    }
                 }
-
             }
+            this.lastToken = this.activeToken;
 
             if (this.cachedLocalVariables === null) {
                 return null;
@@ -134,7 +132,7 @@ define(function (require, exports, module) {
             this.cachedLocalVariables.sort();
             // add unique local $variables
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
-                if (this.cachedLocalVariables[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedLocalVariables[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPHint-completion")
                         .addClass("PHPHint-completion-localvar")
@@ -144,7 +142,7 @@ define(function (require, exports, module) {
             }
             // load the predefined $variables next
             for (i = 0; i < this.cachedPhpVariables.length; i++) {
-                if (this.cachedPhpVariables[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpVariables[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPHint-completion")
                         .addClass("PHPHint-completion-phpvar")
@@ -158,7 +156,7 @@ define(function (require, exports, module) {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPHint-completion")
                         .addClass("PHPHint-completion-phpkeyword")
@@ -168,7 +166,7 @@ define(function (require, exports, module) {
             }
             // load constants that match
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPHint-completion")
                         .addClass("PHPHint-completion-phpconstant")
@@ -178,7 +176,7 @@ define(function (require, exports, module) {
             }
             // load functions that match
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(currentToken.string) === 0) {
+                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPHint-completion")
                         .addClass("PHPHint-completion-phpfunction")
