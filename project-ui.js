@@ -21,10 +21,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
-/*global define, brackets, $ */
+/*global define, brackets, $, Mustache */
 
 define(function (require, exports, module) {
     "use strict";
 
+    var Dialogs             = brackets.getModule("widgets/Dialogs"),
+        projectDialog       = require("text!templates/php-project-dialog.html");
 
+    function showProjectDialog() {
+        Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog));
+    }
+
+    exports.showProjectDialog = showProjectDialog;
 });

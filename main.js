@@ -37,7 +37,8 @@ define(function (require, exports, module) {
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         predefinedFunctions     = phpBuiltins.predefinedFunctions;
     
-    var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>');
+    var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>'),
+        projectUI               = require("project-ui");
 
     function getTokenToCursor(token) {
         var tokenStart = token.token.start,
@@ -289,6 +290,9 @@ define(function (require, exports, module) {
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
-        toolbarIcon.appendTo('#main-toolbar .buttons');
+        toolbarIcon.appendTo('#main-toolbar .buttons')
+            .on("click", function () {
+                projectUI.showProjectDialog();
+            });
     });
 });
