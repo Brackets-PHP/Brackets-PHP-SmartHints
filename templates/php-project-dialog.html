@@ -1,13 +1,23 @@
-<div class="php-smarthints template modal">
-    <div class="modal-header no-padding">
-        <ul class="nav nav-tabs">
+<div class="php-smarthints modal">
+    <div class="modal-header">
+         <ul class="nav nav-tabs">
             <li class="active"><a href="#php-settings" data-toggle="tab">PHP Settings</a></li>
             <li><a href="#function-filter" data-toggle="tab">Filter Function List</a></li>
         </ul>
     </div>
-    <div class="modal-body tab-content">
-        <div class="tab-pane active" id="php-settings">php settings go here</div>
-        <div class="tab-pane" id="function-filter">UI to filter functions goes here</div>
+    <div class="modal-body">
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="php-settings">
+                {{#filters}}
+                <label>
+                  <input type="checkbox" name="{{filter}}">
+                  {{filterName}}
+                </label>
+                {{/filters}}
+            </div>
+            <div class="tab-pane" id="function-filter">UI to filter functions goes here</div>
+        </div>
     </div>
 
     <div class="modal-footer">
