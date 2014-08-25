@@ -43,6 +43,7 @@ define(function (require, exports, module) {
         });
         Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
 
+
     }
 
     exports.showProjectDialog = showProjectDialog;

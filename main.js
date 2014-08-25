@@ -230,18 +230,19 @@ define(function (require, exports, module) {
                     for (i = 0; i < fnArray.length; i++) {
                         predefinedFunctions.push(fnArray[i]);
                     }
+                    filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
+                } else {
+                    filter = { "filter": key, "filterName": fgKey.name, "checked": "" };
                 }
             } else {
                 fnArray = fgKey.fnNames.join('\n').split('|');
                 for (i = 0; i < fnArray.length; i++) {
                     predefinedFunctions.push(fnArray[i]);
                 }
+                filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
             }
-            // and build the filters array for the ui
-            filter = { "filter": key, "filterName": fgKey.name};
             filters.push(filter);
         });
-        console.log(filters);
         return predefinedFunctions;
     }
 
