@@ -29,6 +29,8 @@ define(function (require, exports, module) {
     var Dialogs             = brackets.getModule("widgets/Dialogs"),
         projectDialog       = require("text!templates/php-project-dialog.html");
 
+    require("lib/icheck");
+
     function showProjectDialog(filters) {
         filters.sort(function (a, b) {
             var nameA = a.filterName.toLowerCase(),
@@ -42,7 +44,9 @@ define(function (require, exports, module) {
             return 0;
         });
         Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
-
+        $('input:checkbox').iCheck({
+            checkboxClass: 'icheckbox_minimal'
+        });
 
     }
 

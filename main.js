@@ -297,6 +297,7 @@ define(function (require, exports, module) {
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
+        ExtensionUtils.loadStyleSheet(module, "css/skins/minimal/_all.css");
         toolbarIcon.appendTo('#main-toolbar .buttons')
             .on("click", function () {
                 projectUI.showProjectDialog(filters);
