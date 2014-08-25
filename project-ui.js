@@ -29,18 +29,19 @@ define(function (require, exports, module) {
     var Dialogs             = brackets.getModule("widgets/Dialogs"),
         projectDialog       = require("text!templates/php-project-dialog.html");
 
-    var filters = {
-        "filters": [
-            { "filter": "test1", "filterName": "long form of test1"},
-            { "filter": "test2", "filterName": "long form of test2"},
-            { "filter": "test3", "filterName": "long form of test3"},
-            { "filter": "test4", "filterName": "long form of test4"},
-            { "filter": "test5", "filterName": "long form of test5"}
-        ]
-    };
-
-    function showProjectDialog() {
-        Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, filters));
+    function showProjectDialog(filters) {
+        filters.sort(function (a, b) {
+            var nameA = a.filterName.toLowerCase(),
+                nameB = b.filterName.toLowerCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+        Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
 
     }
 

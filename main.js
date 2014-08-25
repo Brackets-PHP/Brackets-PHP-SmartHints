@@ -38,6 +38,7 @@ define(function (require, exports, module) {
         predefinedFunctions     = phpBuiltins.predefinedFunctions;
     
     var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>'),
+        filters                 = [],
         projectUI               = require("project-ui");
 
     function getTokenToCursor(token) {
@@ -213,6 +214,7 @@ define(function (require, exports, module) {
 
     function buildFunctionsList(selectedFunctions) {
         var i = 0,
+            filter,
             fnArray             = [],
             fg                  = JSON.parse(functionGroups),
             fgKey;
@@ -235,7 +237,11 @@ define(function (require, exports, module) {
                     predefinedFunctions.push(fnArray[i]);
                 }
             }
+            // and build the filters array for the ui
+            filter = { "filter": key, "filterName": fgKey.name};
+            filters.push(filter);
         });
+        console.log(filters);
         return predefinedFunctions;
     }
 
@@ -292,7 +298,7 @@ define(function (require, exports, module) {
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
         toolbarIcon.appendTo('#main-toolbar .buttons')
             .on("click", function () {
-                projectUI.showProjectDialog();
+                projectUI.showProjectDialog(filters);
             });
     });
 });

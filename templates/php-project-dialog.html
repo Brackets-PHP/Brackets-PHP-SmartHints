@@ -9,14 +9,16 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="php-settings">
-                {{#filters}}
+
+            </div>
+            <div class="tab-pane" id="function-filter">
+                {{#arr}}
                 <label>
                   <input type="checkbox" name="{{filter}}">
                   {{filterName}}
                 </label>
-                {{/filters}}
+                {{/arr}}
             </div>
-            <div class="tab-pane" id="function-filter">UI to filter functions goes here</div>
         </div>
     </div>
 
