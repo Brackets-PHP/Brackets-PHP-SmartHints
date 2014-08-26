@@ -44,13 +44,17 @@ define(function (require, exports, module) {
             return 0;
         });
         Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
-        $('input:checkbox').iCheck({
+        $('.php-smarthints input:checkbox').iCheck({
             checkboxClass: 'icheckbox_square-blue'
         });
-        $('#chkAll').on('ifChecked', function (event) {
-            console.log("all checked");
+        $('#chkAll').on({
+            'ifChecked': function (event) {
+                $('[id^=php-]').iCheck('check');
+            },
+            'ifUnchecked': function (event) {
+                $('[id^=php-]').iCheck('uncheck');
+            }
         });
-
     }
 
     exports.showProjectDialog = showProjectDialog;
