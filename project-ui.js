@@ -47,11 +47,13 @@ define(function (require, exports, module) {
         $('.php-smarthints input:checkbox').iCheck({
             checkboxClass: 'icheckbox_square-blue'
         });
-        $('#chkAll').on({
-            'ifChecked': function (event) {
+        $('#btnChkAll').on({
+            'click': function (event) {
                 $('[id^=php-]').iCheck('check');
-            },
-            'ifUnchecked': function (event) {
+            }
+        });
+        $('#btnUchkAll').on({
+            'click': function (event) {
                 $('[id^=php-]').iCheck('uncheck');
             }
         });
