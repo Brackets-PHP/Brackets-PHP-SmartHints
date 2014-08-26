@@ -45,7 +45,10 @@ define(function (require, exports, module) {
         });
         Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
         $('input:checkbox').iCheck({
-            checkboxClass: 'icheckbox_minimal'
+            checkboxClass: 'icheckbox_square-blue'
+        });
+        $('#chkAll').on('ifChecked', function (event) {
+            console.log("all checked");
         });
 
     }

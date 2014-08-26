@@ -12,12 +12,19 @@
 
             </div>
             <div class="tab-pane" id="function-filter">
+                <fieldset>
+                    <label>
+                    <input type="checkbox" id="chkAll">
+                        Check/Uncheck All
+                    </label>
+                <hr/>
                 {{#arr}}
                 <label>
                   <input type="checkbox" id="{{filter}}" {{checked}}>
                   {{filterName}}
                 </label>
                 {{/arr}}
+                </fieldset>
             </div>
         </div>
     </div>
