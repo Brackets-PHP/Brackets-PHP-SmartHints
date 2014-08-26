@@ -26,10 +26,13 @@ SOFTWARE.*/
 define(function (require, exports, module) {
     "use strict";
 
-    var Dialogs             = brackets.getModule("widgets/Dialogs"),
-        projectDialog       = require("text!templates/php-project-dialog.html");
+    var Dialogs                 = brackets.getModule("widgets/Dialogs"),
+        projectDialog           = require("text!templates/php-project-dialog.html"),
+        PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
     require("lib/icheck");
+    require("lib/jquery.add-input-area");
 
     function showProjectDialog(filters) {
         filters.sort(function (a, b) {
@@ -57,6 +60,16 @@ define(function (require, exports, module) {
                 $('[id^=php-]').iCheck('uncheck');
             }
         });
+        $('#btnApplyProject').on('click', function (event) {
+            var newFunctionList = [];
+            $('[id^=php-]').each(function (index) {
+                if ($(this).is(':checked')) {
+                    newFunctionList.push($(this).attr('id').substr(4));
+                }
+            });
+            prefs.set("filteredFunctionList", newFunctionList, PreferencesManager.CURRENT_PROJECT);
+        });
+        $('#phplist').addInputArea();
     }
 
     exports.showProjectDialog = showProjectDialog;

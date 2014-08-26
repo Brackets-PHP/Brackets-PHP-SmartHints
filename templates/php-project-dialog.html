@@ -9,15 +9,22 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="php-settings">
-
+                <label>
+                  <input type="checkbox" id="isProject" {{projectChecked}}>
+                  &nbsp;Is this a PHP Project?
+                </label>
+                <div class="php-versions">
+                    <label>PHP Version:</label>
+                    <input class="input-block-level" type="text" id="phpVersion" placeholder="Enter path to php">
+                     <span class="help-block">Can be full path to php or just the executable if PHP is in your path</span>
+                </div>
             </div>
             <div class="tab-pane" id="function-filter">
+                <div class="btn-group">
+                        <button class="btn" type="button" id="btnChkAll">Check All</button>
+                        <button class="btn" type="button" id="btnUchkAll">Uncheck All</button>
+                </div>
                 <fieldset>
-                    <button class="btn btn-small" type="button" id="btnChkAll">Check All</button>
-                    <button class="btn btn-small" type="button" id="btnUchkAll">Uncheck All</button>
-                    <button class="btn btn-small" type="button" id="btnApplyProject">Apply as Project Setting</button>
-                    <button class="btn btn-small" type="button" id="btnApplyProject">Apply as Global Setting</button>
-                <hr/>
                 {{#arr}}
                 <label>
                   <input type="checkbox" id="php-{{filter}}" {{checked}}>
@@ -30,6 +37,7 @@
     </div>
 
     <div class="modal-footer">
+        <button class="btn" type="button" id="btnApplyProject">Apply Settings To Project</button>
         <button class="dialog-button btn primary" data-button-id="close">Close</button>
     </div>
 </div>

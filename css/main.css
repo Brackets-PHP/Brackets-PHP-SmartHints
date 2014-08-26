@@ -1,3 +1,4 @@
+/* hint styling */
 .PHPSmartHints-completion {
   padding-left: 22px;
   position: relative;
@@ -43,4 +44,21 @@
 }
 #PHPSmartHints-icon.active {
     background-image: url(../smarthints_icon_active.svg);
+}
+/* dialog settings */
+.php-smarthints {
+    width: 500px;
+}
+.php-smarthints .modal-body {
+    height: 350px;
+}
+.php-smarthints .btn-group {
+    padding-bottom: 10px;
+}
+.php-smarthints .tab-pane {
+    padding: 5px 20px;
+}
+.php-smarthints .php-versions {
+    border: 1px;
+    padding-top: 10px;
 }

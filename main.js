@@ -221,6 +221,8 @@ define(function (require, exports, module) {
         predefinedFunctions.length = 0;
         predefinedFunctions = phpBuiltins.predefinedFunctions;
 
+        filters.length = 0;
+
         Object.keys(fg).forEach(function (key) {
             fgKey = fg[key];
 
@@ -280,13 +282,13 @@ define(function (require, exports, module) {
         // PHP SmartHints prefs
         prefs.definePreference("filteredFunctionList", "array", [])
             .on("change", function () {
-                handleFunctionPrefs(prefs.get("filteredFunctionList"));
+                handleFunctionPrefs(prefs.get("filteredFunctionList", PreferencesManager.CURRENT_PROJECT));
             });
         prefs.definePreference("isPhpProject", "boolean", false)
             .on("change", function () {
                 handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
             });
-        handleFunctionPrefs(prefs.get("filteredFunctionList"));
+        handleFunctionPrefs(prefs.get("filteredFunctionList", PreferencesManager.CURRENT_PROJECT));
         handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
 
         // register the provider.  Priority = 10 to be the provider of choice for php
