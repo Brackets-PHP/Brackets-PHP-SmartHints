@@ -35,7 +35,7 @@ define(function (require, exports, module) {
     
     var phpBuiltins             = require("phpdata/php-predefined"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
-        predefinedFunctions     = phpBuiltins.predefinedFunctions;
+        predefinedFunctions     = [];
     
     var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -217,9 +217,8 @@ define(function (require, exports, module) {
             filter,
             fnArray             = [],
             fg                  = JSON.parse(functionGroups),
-            fgKey;
-        predefinedFunctions.length = 0;
-        predefinedFunctions = phpBuiltins.predefinedFunctions;
+            fgKey,
+            theFunctionList     = [];
 
         filters.length = 0;
 
@@ -230,7 +229,7 @@ define(function (require, exports, module) {
                 if (selectedFunctions.indexOf(key) > -1) {
                     fnArray = fgKey.fnNames.join('\n').split('|');
                     for (i = 0; i < fnArray.length; i++) {
-                        predefinedFunctions.push(fnArray[i]);
+                        theFunctionList.push(fnArray[i]);
                     }
                     filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
                 } else {
@@ -239,13 +238,13 @@ define(function (require, exports, module) {
             } else {
                 fnArray = fgKey.fnNames.join('\n').split('|');
                 for (i = 0; i < fnArray.length; i++) {
-                    predefinedFunctions.push(fnArray[i]);
+                    theFunctionList.push(fnArray[i]);
                 }
                 filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
             }
             filters.push(filter);
         });
-        return predefinedFunctions;
+        return theFunctionList.concat(predefinedFunctions);
     }
 
     function createHintArray(rawList) {
@@ -279,17 +278,18 @@ define(function (require, exports, module) {
     }
 
     AppInit.appReady(function () {
+        predefinedFunctions = phpBuiltins.predefinedFunctions;
         // PHP SmartHints prefs
         prefs.definePreference("filteredFunctionList", "array", [])
             .on("change", function () {
-                handleFunctionPrefs(prefs.get("filteredFunctionList", PreferencesManager.CURRENT_PROJECT));
+                handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
             });
         prefs.definePreference("isPhpProject", "boolean", false)
             .on("change", function () {
-                handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
+                handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
             });
-        handleFunctionPrefs(prefs.get("filteredFunctionList", PreferencesManager.CURRENT_PROJECT));
-        handlePhpProjectPrefs(prefs.get("isPhpProject", PreferencesManager.CURRENT_PROJECT));
+        handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
+        handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
 
         // register the provider.  Priority = 10 to be the provider of choice for php
         CodeHintManager.registerHintProvider(phpHints, ["php"], 10);

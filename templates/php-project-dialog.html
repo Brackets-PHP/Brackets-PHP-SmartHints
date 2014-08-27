@@ -1,25 +1,15 @@
 <div class="php-smarthints modal">
     <div class="modal-header">
          <ul class="nav nav-tabs">
-            <li class="active"><a href="#php-settings" data-toggle="tab">PHP Settings</a></li>
-            <li><a href="#function-filter" data-toggle="tab">Filter Function List</a></li>
+            <li class="active"><a href="#function-filter" data-toggle="tab">Filter Function List</a></li>
+            <li><a href="#php-settings" data-toggle="tab">PHP Settings</a></li>
+
         </ul>
     </div>
     <div class="modal-body">
 
         <div class="tab-content">
-            <div class="tab-pane active" id="php-settings">
-                <label>
-                  <input type="checkbox" id="isProject" {{projectChecked}}>
-                  &nbsp;Is this a PHP Project?
-                </label>
-                <div class="php-versions">
-                    <label>PHP Version:</label>
-                    <input class="input-block-level" type="text" id="phpVersion" placeholder="Enter path to php">
-                     <span class="help-block">Can be full path to php or just the executable if PHP is in your path</span>
-                </div>
-            </div>
-            <div class="tab-pane" id="function-filter">
+             <div class="tab-pane active" id="function-filter">
                 <div class="btn-group">
                         <button class="btn" type="button" id="btnChkAll">Check All</button>
                         <button class="btn" type="button" id="btnUchkAll">Uncheck All</button>
@@ -32,6 +22,9 @@
                 </label>
                 {{/arr}}
                 </fieldset>
+            </div>
+            <div class="tab-pane" id="php-settings">
+                <h3>This tab is for future functionality and is not used in this version.</h3>
             </div>
         </div>
     </div>

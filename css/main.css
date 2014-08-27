@@ -49,6 +49,12 @@
 .php-smarthints {
     width: 500px;
 }
+.php-smarthints .modal-header {
+    padding: 0;
+}
+.php-smarthints .nav-tabs {
+    margin: 0;
+}
 .php-smarthints .modal-body {
     height: 350px;
 }

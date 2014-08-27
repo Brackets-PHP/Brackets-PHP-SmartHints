@@ -67,7 +67,8 @@ define(function (require, exports, module) {
                     newFunctionList.push($(this).attr('id').substr(4));
                 }
             });
-            prefs.set("filteredFunctionList", newFunctionList, PreferencesManager.CURRENT_PROJECT);
+            prefs.set("filteredFunctionList", newFunctionList, {location: { scope: "project"}});
+            prefs.save();
         });
         $('#phplist').addInputArea();
     }
