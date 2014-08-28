@@ -41,5 +41,13 @@ of the *Brackets PHP SIG*.
 * Fix for issue #5
 * Fix for issue #7
 
+**v1.1.0**
+
+* Fix for issue #9
+* Fix for issue #12
+* New: Added the ability to filter the suggested hints by their grouping in PHP.
+* New: Added toolbar icon to handle the User Interface for selecting/de-selecting PHP function groups (you can also edit `.brackets.json` in the project root)
+* Changed: re-factored most of the code around getting and inserting hints.  Using the Brackets utility library `utils/TokenUtils.js` for token handling.
+
 
 
