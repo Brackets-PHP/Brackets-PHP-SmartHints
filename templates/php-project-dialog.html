@@ -1,0 +1,36 @@
+<div class="php-smarthints modal">
+    <div class="modal-header">
+         <ul class="nav nav-tabs">
+            <li class="active"><a href="#function-filter" data-toggle="tab">Filter Function List</a></li>
+            <li><a href="#php-settings" data-toggle="tab">PHP Settings</a></li>
+
+        </ul>
+    </div>
+    <div class="modal-body">
+
+        <div class="tab-content">
+             <div class="tab-pane active" id="function-filter">
+                <div class="btn-group">
+                        <button class="btn" type="button" id="btnChkAll">Check All</button>
+                        <button class="btn" type="button" id="btnUchkAll">Uncheck All</button>
+                </div>
+                <fieldset>
+                {{#arr}}
+                <label>
+                  <input type="checkbox" id="php-{{filter}}" {{checked}}>
+                  {{filterName}}
+                </label>
+                {{/arr}}
+                </fieldset>
+            </div>
+            <div class="tab-pane" id="php-settings">
+                <h3>This tab is for future functionality and is not used in this version.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn" type="button" id="btnApplyProject">Apply Settings To Project</button>
+        <button class="dialog-button btn primary" data-button-id="close">Close</button>
+    </div>
+</div>

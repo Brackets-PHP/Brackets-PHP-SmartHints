@@ -1,8 +1,9 @@
-.PHPHint-completion {
+/* hint styling */
+.PHPSmartHints-completion {
   padding-left: 22px;
   position: relative;
 }
-.PHPHint-completion:before {
+.PHPSmartHints-completion:before {
   position: absolute;
   left: 2px;
   bottom: 2px;
@@ -16,23 +17,54 @@
   color: white;
   box-sizing: border-box;
 }
-.PHPHint-completion-localvar:before {
+.PHPSmartHints-completion-localvar:before {
   content: "V";
   background: #218434;
 }
-.PHPHint-completion-phpvar:before {
+.PHPSmartHints-completion-phpvar:before {
   content: "V";
   background: #217184;
 }
-.PHPHint-completion-phpkeyword:before {
+.PHPSmartHints-completion-phpkeyword:before {
   content: "K";
   background: #302184;
 }
-.PHPHint-completion-phpconstant:before {
+.PHPSmartHints-completion-phpconstant:before {
   content: "C";
   background: #692184;
 }
-.PHPHint-completion-phpfunction:before {
+.PHPSmartHints-completion-phpfunction:before {
   content: "F";
   background: #842156;
+}
+
+/*toolbar icon styles*/
+#PHPSmartHints-icon {
+    background-image: url(../smarthints_icon.svg);
+}
+#PHPSmartHints-icon.active {
+    background-image: url(../smarthints_icon_active.svg);
+}
+/* dialog settings */
+.php-smarthints {
+    width: 500px;
+}
+.php-smarthints .modal-header {
+    padding: 0;
+}
+.php-smarthints .nav-tabs {
+    margin: 0;
+}
+.php-smarthints .modal-body {
+    height: 350px;
+}
+.php-smarthints .btn-group {
+    padding-bottom: 10px;
+}
+.php-smarthints .tab-pane {
+    padding: 5px 20px;
+}
+.php-smarthints .php-versions {
+    border: 1px;
+    padding-top: 10px;
 }
