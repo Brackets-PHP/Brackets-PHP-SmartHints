@@ -118,7 +118,7 @@ define(function (require, exports, module) {
         tokenToCursor = getTokenToCursor(this.activeToken);
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
-            if (this.lastToken === "" || (this.activeToken.token.start !== this.lastToken.token.start)) {
+            if ((this.lastToken === "") || (this.activeToken.token.start !== this.lastToken.token.start) || (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
                 var varList = this.editor.document.getText().match(this.tokenVariable);
                 for (i = 0; i < varList.length; i++) {
