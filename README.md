@@ -32,9 +32,14 @@ of the *Brackets PHP SIG*.
 
 ####Changelog
 
-** v1.0.0**
+**v1.0.0**
 
 * Initial release with Phase 1 features
+
+**v1.0.1**
+
+* Fix for issue #5
+* Fix for issue #7
 
 
 
