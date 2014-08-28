@@ -27,8 +27,18 @@ has built parameter hinting in to the JS hint manager so there is some prior art
 ** Please note that this extension will make NO ATTEMPT to support PHP prior to version 5.3 and any issues/PRs
 that are specific to versions prior to 5.3 will be closed without review **
 
-> *note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.  Mikael is also a member
-of the *Brackets PHP SIG*.
+### Filter PHP Functions by Module
+As of release 1.1.0, you can add project-level filtering of which PHP modules are included in the hint list for
+PHP files.  This helps reduce the size of the lists and therefore allow the suggestions to be more suited to your
+specific project.
+
+The filter can be set in one of two ways:
+* using the new Project Settings Dialog UI (see below for a screenshot).  This dialog is accessed using the *lightbulb* icon on the toolbar.
+* editing the `.brackets.json` file manually.  This file must be in the root of your PHP project.  The key you edit is: `"php-sig.php-smarthints.filteredFunctionList"` and it takes an array of module shortnames as modules you **do want included**.  The module short names can be found in the `phpdata/php-function-groups.json` config file.
+
+**Note** if there is no setting in the project-level `.brackets.json` file, the default is that **all* modules are included in hinting.
+
+![Filter Dialog](php-smarthints_filter_dialog.png)
 
 ####Changelog
 
@@ -49,5 +59,5 @@ of the *Brackets PHP SIG*.
 * New: Added toolbar icon to handle the User Interface for selecting/de-selecting PHP function groups (you can also edit `.brackets.json` in the project root) (addresses issue #3)
 * Changed: re-factored most of the code around getting and inserting hints.  Using the Brackets utility library `utils/TokenUtils.js` for token handling.
 
-
-
+> *note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.  Mikael is also a member
+of the *Brackets PHP SIG*.
