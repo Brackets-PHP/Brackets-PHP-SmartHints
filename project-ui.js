@@ -31,7 +31,6 @@ define(function (require, exports, module) {
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
-    require("lib/icheck");
     require("lib/jquery.add-input-area");
 
     function showProjectDialog(filters) {
@@ -47,19 +46,35 @@ define(function (require, exports, module) {
             return 0;
         });
         Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
-        $('.php-smarthints input:checkbox').iCheck({
-            checkboxClass: 'icheckbox_square-blue'
-        });
-        $('#btnChkAll').on({
-            'click': function (event) {
-                $('[id^=php-]').iCheck('check');
+
+        function _setIndeterminateState() {
+            var checked,
+                indeterminate;
+            if ($('.php-filter:checked').length === 0) {
+                checked = false;
+                indeterminate = false;
+            } else if ($('.php-filter:not(:checked)').length === 0) {
+                checked = true;
+                indeterminate = false;
+            } else {
+                checked = false;
+                indeterminate = true;
             }
+            $('.php-filter-all').prop({
+                checked: checked,
+                indeterminate: indeterminate
+            });
+         }
+
+        $('.php-filter-all').change(function() {
+            $('.php-filter').prop('checked', $(this).prop('checked'));
         });
-        $('#btnUchkAll').on({
-            'click': function (event) {
-                $('[id^=php-]').iCheck('uncheck');
-            }
-        });
+
+        $('.php-filter').change(_setIndeterminateState);
+        _setIndeterminateState();
+
+
+
         $('#btnApplyProject').on('click', function (event) {
             var newFunctionList = [];
             $('[id^=php-]').each(function (index) {
