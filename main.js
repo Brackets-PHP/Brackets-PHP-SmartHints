@@ -32,11 +32,11 @@ define(function (require, exports, module) {
         TokenUtils              = brackets.getModule("utils/TokenUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
-    
+
     var phpBuiltins             = require("phpdata/php-predefined"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         predefinedFunctions     = [];
-    
+
     var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
         projectUI               = require("project-ui");
@@ -121,10 +121,12 @@ define(function (require, exports, module) {
             if ((this.lastToken === "") || (this.activeToken.token.start !== this.lastToken.token.start) || (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
                 var varList = this.editor.document.getText().match(this.tokenVariable);
-                for (i = 0; i < varList.length; i++) {
-                    var word = varList[i];
-                    if (this.cachedLocalVariables.indexOf(word) === -1) {
-                        this.cachedLocalVariables.push(word);
+                if (varList) {
+                    for (i = 0; i < varList.length; i++) {
+                        var word = varList[i];
+                        if (this.cachedLocalVariables.indexOf(word) === -1) {
+                            this.cachedLocalVariables.push(word);
+                        }
                     }
                 }
             }
@@ -210,7 +212,7 @@ define(function (require, exports, module) {
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
         return false;
     };
-    
+
     var phpHints = new PHPHints();
 
     function buildFunctionsList(selectedFunctions) {
@@ -300,7 +302,6 @@ define(function (require, exports, module) {
         phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
         ExtensionUtils.loadStyleSheet(module, "css/main.css");
-        ExtensionUtils.loadStyleSheet(module, "css/skins/square/blue.css");
         toolbarIcon.appendTo('#main-toolbar .buttons')
             .on("click", function () {
                 projectUI.showProjectDialog(filters);
