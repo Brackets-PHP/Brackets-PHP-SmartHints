@@ -26,10 +26,17 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
 /*global define */
 
-define(function (require, exports, module) {
-    "use strict";
-    module.exports = {
-        root: true,
-        de: true
-    };
+define({
+    // EXTENSION.
+    EXTENSION_NAME: "PHP SmartHints",
+
+    // SETTINGS DIALOG
+    SETTINGS_DIALOG_FUNCTION_FILTER: "Filter Funktionsliste",
+    SETTINGS_DIALOG_PHP_SETTINGS: "PHP Einstellungen",
+    SETTINGS_DIALOG_TOGGLE_ALL: "Alle umschalten",
+    SETTINGS_DIALOG_UNUSED_TAB: "Dieser Tab ist für zukünftige Entwicklung und hat in dieser Version keine Funktion.",
+    SETTINGS_DIALOG_CLOSE: "Schließen",
+    SETTINGS_DIALOG_APPLY: "Einstellungen für Projekt übernehmen"
 });
+
+/* Last translated for eb2fe9813c7d81f8a98c12dacc40b70eecbe3890 */
