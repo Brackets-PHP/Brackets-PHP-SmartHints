@@ -29,7 +29,8 @@ define(function (require, exports, module) {
     var Dialogs                 = brackets.getModule("widgets/Dialogs"),
         projectDialog           = require("text!templates/php-project-dialog.html"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
-        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
+        prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints"),
+        Strings                 = require( 'strings' );
 
     require("lib/jquery.add-input-area");
 
@@ -45,7 +46,10 @@ define(function (require, exports, module) {
             }
             return 0;
         });
-        Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, { arr: filters }));
+        Dialogs.showModalDialogUsingTemplate(Mustache.render(projectDialog, {
+            arr: filters,
+            strings: Strings
+        }));
 
         function _setIndeterminateState() {
             var checked,
