@@ -121,10 +121,12 @@ define(function (require, exports, module) {
             if ((this.lastToken === "") || (this.activeToken.token.start !== this.lastToken.token.start) || (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
                 var varList = this.editor.document.getText().match(this.tokenVariable);
-                for (i = 0; i < varList.length; i++) {
-                    var word = varList[i];
-                    if (this.cachedLocalVariables.indexOf(word) === -1) {
-                        this.cachedLocalVariables.push(word);
+                if (varList) {
+                    for (i = 0; i < varList.length; i++) {
+                        var word = varList[i];
+                        if (this.cachedLocalVariables.indexOf(word) === -1) {
+                            this.cachedLocalVariables.push(word);
+                        }
                     }
                 }
             }
