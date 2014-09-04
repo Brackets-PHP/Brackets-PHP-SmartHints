@@ -61,6 +61,11 @@
     border-color: #c3c6c5;
 }
 
+.dark .php-smarthints .modal-header .nav-tabs {
+    margin: 0;
+    border-color: #232323;
+}
+
 .php-smarthints .modal-header .nav-tabs>li:nth-child(1)>a {
     border-left: transparent;
 }
@@ -69,6 +74,12 @@
 .php-smarthints .modal-header .nav-tabs>.active>a:hover {
     background-color: #dfe2e2;
     border-color: #b4b7b7 #b4b7b7 transparent #b4b7b7;
+}
+
+.dark .php-smarthints .modal-header .nav-tabs>.active>a,
+.dark .php-smarthints .modal-header .nav-tabs>.active>a:hover {
+    background-color: #232323;
+    border-color: #121212 #121212 transparent #121212;
 }
 
 .php-smarthints .modal-header .nav-tabs>li>a {
@@ -80,10 +91,14 @@
     font-size: 12px;
     justify-content: center;
     margin: 0;
-    min-height: 60px;
+    min-height: 45px;
     min-width: 80px;
     padding: 0 15px;
     text-align: center;
+}
+
+.dark .php-smarthints .modal-header .nav-tabs>li>a {
+    color: #eee;
 }
 
 .php-smarthints .modal-header .nav-tabs>li>a:hover {
