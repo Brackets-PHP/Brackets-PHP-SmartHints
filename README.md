@@ -42,22 +42,7 @@ The filter can be set in one of two ways:
 
 ####Changelog
 
-**v1.0.0**
+[CHANGELOG](CHANGELOG.md)
 
-* Initial release with Phase 1 features
-
-**v1.0.1**
-
-* Fix for issue #5
-* Fix for issue #7
-
-**v1.1.0**
-
-* Fix for issue #9
-* Fix for issue #12
-* New: Added the ability to filter the suggested hints by their grouping in PHP.
-* New: Added toolbar icon to handle the User Interface for selecting/de-selecting PHP function groups (you can also edit `.brackets.json` in the project root) (addresses issue #3)
-* Changed: re-factored most of the code around getting and inserting hints.  Using the Brackets utility library `utils/TokenUtils.js` for token handling.
-
-> *note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.  Mikael is also a member
+*note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.  Mikael is also a member
 of the *Brackets PHP SIG*.
