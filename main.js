@@ -33,11 +33,13 @@ define(function (require, exports, module) {
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
+    var Strings = require( 'strings' );
+
     var phpBuiltins             = require("phpdata/php-predefined"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
         predefinedFunctions     = [];
 
-    var toolbarIcon             = $('<a title="PHP SmartHints" id="PHPSmartHints-icon"></a>'),
+    var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
         projectUI               = require("project-ui");
 

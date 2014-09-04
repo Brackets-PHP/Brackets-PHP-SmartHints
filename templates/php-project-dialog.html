@@ -1,8 +1,8 @@
 <div class="php-smarthints modal">
     <div class="modal-header">
          <ul class="nav nav-tabs">
-            <li class="active"><a href="#function-filter" data-toggle="tab">Filter Function List</a></li>
-            <li><a href="#php-settings" data-toggle="tab">PHP Settings</a></li>
+            <li class="active"><a href="#function-filter" data-toggle="tab">{{strings.SETTINGS_DIALOG_FUNCTION_FILTER}}</a></li>
+            <li><a href="#php-settings" data-toggle="tab">{{strings.SETTINGS_DIALOG_PHP_SETTINGS}}</a></li>
         </ul>
     </div>
     <div class="modal-body">
@@ -10,7 +10,7 @@
              <div class="tab-pane active" id="function-filter">
                 <label>
                     <input type="checkbox" class="php-filter-all"/>
-                    Toggle All
+                    {{strings.SETTINGS_DIALOG_TOGGLE_ALL}}
                  </label>
                  <hr/>
                 <fieldset>
@@ -23,12 +23,12 @@
                 </fieldset>
             </div>
             <div class="tab-pane" id="php-settings">
-                <h3>This tab is for future functionality and is not used in this version.</h3>
+                <h3>{{strings.SETTINGS_DIALOG_UNUSED_TAB}}</h3>
             </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button class="dialog-button btn primary" data-button-id="close">Close</button>
-        <button class="btn" type="button" id="btnApplyProject">Apply Settings To Project</button>
+        <button class="dialog-button btn primary" data-button-id="close">{{strings.SETTINGS_DIALOG_CLOSE}}</button>
+        <button class="btn" type="button" id="btnApplyProject">{{strings.SETTINGS_DIALOG_APPLY}}</button>
     </div>
 </div>
