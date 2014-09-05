@@ -106,6 +106,16 @@
     border-color: rgba(0,0,0,0.04);
 }
 
+.php-smarthints .modal-header .nav-tabs>li>a:focus {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.dark .php-smarthints .modal-header .nav-tabs>li>a:focus {
+    background-color: #000;
+    border-color: #000;
+}
+
 .php-smarthints .modal-body {
     height: 400px;
     padding: 0;
@@ -123,20 +133,24 @@
 }
 
 /* Checkbox styling */
-.php-smarthints input[type="checkbox"]:indeterminate {
+.php-smarthints input[type="checkbox"]:indeterminate:before {
     background-color: #333333;
-    box-shadow: inset 0 1px 0 #f3f3f3, inset 0 0 1px 2px #e5e9e9;
+    border-radius: 2px;
+    content: '';
+    height: 7px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 7px;
 }
 
-.php-smarthints input[type="checkbox"]:indeterminate:focus {
-    box-shadow: 0 0 0 1px #94ceff, inset 0 0 1px 2px #e5e9e9;
-}
-
-.php-smarthints input[type="checkbox"]:indeterminate:active:not(:disabled) {
-    background-color: #333333;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.06), inset 0 0 1px 2px #d3d7d7;
-}
-
-.php-smarthints input[type="checkbox"]:checked:indeterminate:before {
-    visibility: hidden;
+.dark .php-smarthints input[type="checkbox"]:indeterminate:before {
+    background-color: #cccccc;
+    border-radius: 2px;
+    content: '';
+    height: 7px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 7px;
 }
