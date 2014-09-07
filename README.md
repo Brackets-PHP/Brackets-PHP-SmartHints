@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Brackets-PHP-SIG/Brackets-PHP-SmartHints.png?label=ready&title=Ready)](https://waffle.io/Brackets-PHP-SIG/Brackets-PHP-SmartHints)
 PHP-SmartHints
 ==============
 
