@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.1.2 - 2014-09-10
+
+### Added
+- The extension is now enabled for NLS - thanks [@Hirse](https://github.com/Hirse)
+- Translation `de` - thanks [@Hirse](https://github.com/Hirse)
+- Translation `it` - thanks [@Denisov21](https://github.com/Denisov21)
+- Dark theme fixes for indeterminate checkbox and tab-focus - [PR#19](https://github.com/Brackets-PHP-SIG/Brackets-PHP-SmartHints/pull/19) - thanks [@Hirse](https://github.com/Hirse)
+- Updated screenshot to show new dark treatment
+
 ## 1.1.1 - 2014-09-04
 
 ### Added
