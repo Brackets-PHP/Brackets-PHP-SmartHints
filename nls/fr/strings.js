@@ -31,7 +31,7 @@ define({
     EXTENSION_NAME: "PHP SmartHints",
 
     // SETTINGS DIALOG
-    SETTINGS_DIALOG_FUNCTION_FILTER: "Filter Function List",
+    SETTINGS_DIALOG_FUNCTION_FILTER: "Liste des Fonctions",
     SETTINGS_DIALOG_PHP_SETTINGS: "Paramètres PHP",
     SETTINGS_DIALOG_TOGGLE_ALL: "Tout activer",
     SETTINGS_DIALOG_UNUSED_TAB: "Cet onglet sera destiné aux futures fonctionalités non disponibles dans cette version.",
