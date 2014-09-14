@@ -1,0 +1,52 @@
+{
+    "variables": [
+        "$_COOKIE",
+        "$_ENV",
+        "$_FILES",
+        "$_GET",
+        "$_POST",
+        "$_REQUEST",
+        "$_SERVER",
+        "$_SESSION",
+        "$GLOBALS",
+        "$argc",
+        "$argv",
+        "$HTTP_COOKIE_VARS",
+        "$HTTP_ENV_VARS",
+        "$HTTP_GET_VARS",
+        "$HTTP_POST_FILES",
+        "$HTTP_POST_VARS",
+        "$HTTP_SERVER_VARS",
+        "$HTTP_SESSION_VARS",
+        "$php_error_msg",
+        "$php_response_header"
+    ],
+    "magic_methods": [
+        "__autoload",
+        "__call",
+        "__callstatic",
+        "__clone",
+        "__get",
+        "__invoke",
+        "__isset",
+        "__set",
+        "__set_state",
+        "__sleep",
+        "__toString",
+        "__unset",
+        "__wakeup"
+    ],
+    "constants": [
+        "true",
+        "false",
+        "null",
+        "__CLASS__",
+        "__DIR__",
+        "__FILE__",
+        "__FUNCTION__",
+        "__LINE__",
+        "__METHOD__",
+        "__NAMESPACE__",
+        "__TRAIT__"
+    ]
+}
