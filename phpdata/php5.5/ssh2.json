@@ -1,0 +1,829 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ssh2_connect",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "methods",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "callbacks",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_methods_negotiated",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_fingerprint",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_auth_none",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_auth_password",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_auth_pubkey_file",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pubkeyfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "privkeyfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_auth_hostbased_file",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pubkeyfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "privkeyfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "local_username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_forward_listen",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_forward_accept",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_shell",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "term_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "env",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "width_height_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_exec",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "command",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pty",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "env",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "width_height_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_tunnel",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_scp_recv",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_scp_send",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "create_mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_fetch_stream",
+        "params": [
+            {
+                "name": "channel",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "streamid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_poll",
+        "params": [
+            {
+                "name": "var1",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_rename",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "from",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_unlink",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_mkdir",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dirname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "recursive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_rmdir",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dirname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_chmod",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_stat",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_lstat",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_symlink",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "target",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_readlink",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_sftp_realpath",
+        "params": [
+            {
+                "name": "sftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_publickey_init",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_publickey_add",
+        "params": [
+            {
+                "name": "pkey",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "algoname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "overwrite",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "attributes",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_publickey_remove",
+        "params": [
+            {
+                "name": "pkey",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "algoname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_publickey_list",
+        "params": [
+            {
+                "name": "pkey",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ssh2_auth_agent",
+        "params": [
+            {
+                "name": "session",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_FINGERPRINT_MD5",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_FINGERPRINT_SHA1",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_FINGERPRINT_HEX",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_FINGERPRINT_RAW",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_TERM_UNIT_CHARS",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_TERM_UNIT_PIXELS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_DEFAULT_TERMINAL",
+        "value": "vanilla"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_DEFAULT_TERM_WIDTH",
+        "value": 80
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_DEFAULT_TERM_HEIGHT",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_DEFAULT_TERM_UNIT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_STREAM_STDIO",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_STREAM_STDERR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLIN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLEXT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLOUT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLERR",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLHUP",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLLNVAL",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLL_SESSION_CLOSED",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLL_CHANNEL_CLOSED",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SSH2_POLL_LISTENER_CLOSED",
+        "value": 128
+    }
+]

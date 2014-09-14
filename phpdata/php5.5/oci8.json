@@ -1,0 +1,2971 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "OCI_Lob",
+        "fqn": "\\OCI_Lob",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "load",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns large object's contents\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.load.php\n * @return string the contents of the object, or false on errors.\n *\/"
+            },
+            {
+                "name": "tell",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the current position of internal pointer of large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.tell.php\n * @return int current position of a LOB's internal pointer or false if an\n * error occurred.\n *\/"
+            },
+            {
+                "name": "truncate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Truncates large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.truncate.php\n * @param length int[optional] <p>\n * If provided, this method will truncate the LOB to\n * length bytes. Otherwise, it will completely\n * purge the LOB.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "erase",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Erases a specified portion of the internal LOB data\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.erase.php\n * @param offset int[optional] <p>\n * <\/p>\n * @param length int[optional] <p>\n * <\/p>\n * @return int the actual number of characters\/bytes erased  or false on failure.\n *\/"
+            },
+            {
+                "name": "flush",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flag",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Flushes\/writes buffer of the LOB to the server\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.flush.php\n * @param flag int[optional] <p>\n * By default, resources are not freed, but using flag\n * OCI_LOB_BUFFER_FREE you can do it explicitly.\n * Be sure you know what you're doing - next read\/write operation to the\n * same part of LOB will involve a round-trip to the server and initialize\n * new buffer resources. It is recommended to use\n * OCI_LOB_BUFFER_FREE flag only when you are not\n * going to work with the LOB anymore.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n * <\/p>\n * <p>\n * Returns false if buffering was not enabled or an error occurred.\n *\/"
+            },
+            {
+                "name": "setbuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "on_off",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Changes current state of buffering for the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.setbuffering.php\n * @param on_off bool <p>\n * true for on and false for off.\n * <\/p>\n * @return bool Returns true on success or false on failure. Repeated calls to this method with the same flag will\n * return true.\n *\/"
+            },
+            {
+                "name": "getbuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns current state of buffering for the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.getbuffering.php\n * @return bool false if buffering for the large object is off and true if\n * buffering is used.\n *\/"
+            },
+            {
+                "name": "rewind",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Moves the internal pointer to the beginning of the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.rewind.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "read",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Reads part of the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.read.php\n * @param length int <p>\n * The length of data to read, in bytes.\n * <\/p>\n * @return string the contents as a string,  or false on failure.\n *\/"
+            },
+            {
+                "name": "eof",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Tests for end-of-file on a large object's descriptor\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.eof.php\n * @return bool true if internal pointer of large object is at the end of LOB.\n * Otherwise returns false.\n *\/"
+            },
+            {
+                "name": "seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "whence",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Sets the internal pointer of the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.seek.php\n * @param offset int <p>\n * Indicates the amount of bytes, on which internal pointer should be\n * moved from the position, pointed by whence.\n * <\/p>\n * @param whence int[optional] <p>\n * May be one of:\n * OCI_SEEK_SET - sets the position equal to\n * offset\n * OCI_SEEK_CUR - adds offset\n * bytes to the current position\n * OCI_SEEK_END - adds offset\n * bytes to the end of large object (use negative value to move to a position\n * before the end of large object)\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "write",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Writes data to the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.write.php\n * @param data string <p>\n * The data to write in the LOB.\n * <\/p>\n * @param length int[optional] <p>\n * If this parameter is given, writing will stop after\n * length bytes have been written or the end of\n * data is reached, whichever comes first.\n * <\/p>\n * @return int the number of bytes written  or false on failure.\n *\/"
+            },
+            {
+                "name": "append",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "lob_from",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Appends data from the large object to another large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.append.php\n * @param lob_from OCI-Lob <p>\n * The copied LOB.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "size",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns size of large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.size.php\n * @return int length of large object value  or false on failure.\n * Empty objects have zero length.\n *\/"
+            },
+            {
+                "name": "writetofile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * &Alias; <function>OCI-Lob::export<\/function>\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.writetofile.php\n * @param filename\n * @param start[optional]\n * @param length[optional]\n *\/"
+            },
+            {
+                "name": "export",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Exports LOB's contents to a file\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.export.php\n * @param filename string <p>\n * Path to the file.\n * <\/p>\n * @param start int[optional] <p>\n * Indicates from where to start exporting.\n * <\/p>\n * @param length int[optional] <p>\n * Indicates the length of data to be exported.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "import",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Imports file data to the LOB\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.import.php\n * @param filename string <p>\n * Path to the file.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "writetemporary",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "lob_type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Writes a temporary large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.writetemporary.php\n * @param data string <p>\n * The data to write.\n * <\/p>\n * @param lob_type int[optional] <p>\n * Can be one of the following:\n * OCI_TEMP_BLOB is used to create temporary BLOBs\n * OCI_TEMP_CLOB is used to create\n * temporary CLOBs\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Closes LOB descriptor\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.close.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "save",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Saves data to the large object\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.save.php\n * @param data string <p>\n * The data to be saved.\n * <\/p>\n * @param offset int[optional] <p>\n * Can be used to indicate offset from the beginning of the large object.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "savefile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * &Alias; <function>OCI-Lob::import<\/function>\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.savefile.php\n * @param filename\n *\/"
+            },
+            {
+                "name": "free",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Frees resources associated with the LOB descriptor\n * @link http:\/\/www.php.net\/manual\/en\/oci-lob.free.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "OCI_Collection",
+        "fqn": "\\OCI_Collection",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "append",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Appends element to the collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.append.php\n * @param value mixed <p>\n * The value to be added to the collection. Can be a string or a number.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getelem",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns value of the element\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.getelem.php\n * @param index int <p>\n * The element index. First index is 1.\n * <\/p>\n * @return mixed false if such element doesn't exist; &null; if element is &null;;\n * string if element is column of a string datatype or number if element is\n * numeric field.\n *\/"
+            },
+            {
+                "name": "assignelem",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Assigns a value to the element of the collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.assignelem.php\n * @param index int <p>\n * The element index. First index is 1.\n * <\/p>\n * @param value mixed <p>\n * Can be a string or a number.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "assign",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "from",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Assigns a value to the collection from another existing collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.assign.php\n * @param from OCI-Collection <p>\n * An instance of OCI-Collection.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "size",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns size of the collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.size.php\n * @return int the number of elements in the collection or false on error.\n *\/"
+            },
+            {
+                "name": "max",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the maximum number of elements in the collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.max.php\n * @return int the maximum number as an integer, or false on errors.\n * <\/p>\n * <p>\n * If the returned value is 0, then the number of elements is not limited.\n *\/"
+            },
+            {
+                "name": "trim",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "num",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Trims elements from the end of the collection\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.trim.php\n * @param num int <p>\n * The number of elements to be trimmed.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "free",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Frees the resources associated with the collection object\n * @link http:\/\/www.php.net\/manual\/en\/oci-collection.free.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_define_by_name",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_bind_by_name",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bv_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "maxlength",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_bind_array_by_name",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var_array",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "max_table_length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "max_item_length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_is_null",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_name",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_size",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_scale",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_precision",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_type",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_field_type_raw",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_execute",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_cancel",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch_object",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch_row",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch_assoc",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch_array",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifetchinto",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_fetch_all",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "skip",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "maxrows",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_free_statement",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_internal_debug",
+        "params": [
+            {
+                "name": "onoff",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_num_fields",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_parse",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sql_text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_new_cursor",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_result",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_client_version",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_server_version",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_statement_type",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_num_rows",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_close",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_connect",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_new_connect",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_pconnect",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_error",
+        "params": [
+            {
+                "name": "resource",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_free_descriptor",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_save",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_import",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_size",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_load",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_read",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_eof",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_tell",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_truncate",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_erase",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_flush",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocisetbufferinglob",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocigetbufferinglob",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_is_equal",
+        "params": [
+            {
+                "name": "lob1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "lob2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_rewind",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_write",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_append",
+        "params": [
+            {
+                "name": "lob_descriptor_to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "lob_descriptor_from",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_copy",
+        "params": [
+            {
+                "name": "lob_to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "lob_from",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_export",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_lob_seek",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "whence",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_commit",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_rollback",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_new_descriptor",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_prefetch",
+        "params": [
+            {
+                "name": "statement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rows",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_client_identifier",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "client_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_edition",
+        "params": [
+            {
+                "name": "edition",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_module_name",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "module_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_action",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_set_client_info",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "client_info",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_password_change",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_free_collection",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_append",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_element_get",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_element_assign",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_assign",
+        "params": [
+            {
+                "name": "collection_to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "collection_from",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_size",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_max",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_collection_trim",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_new_collection",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tdo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "schema",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "oci_free_cursor",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifreecursor",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocibindbyname",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "maximum_length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocidefinebyname",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumnisnull",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number_or_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumnname",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumnsize",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number_or_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumnscale",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumnprecision",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumntype",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolumntyperaw",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociexecute",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicancel",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifetch",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifetchstatement",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "skip",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "maximum_rows",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifreestatement",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociinternaldebug",
+        "params": [
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocinumcols",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociparse",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sql_text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocinewcursor",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociresult",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_number_or_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociserverversion",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocistatementtype",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocirowcount",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocilogoff",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocilogon",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocinlogon",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociplogon",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connection_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "character_set",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "session_mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocierror",
+        "params": [
+            {
+                "name": "connection_or_statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifreedesc",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocisavelob",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocisavelobfile",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociwritelobtofile",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ociloadlob",
+        "params": [
+            {
+                "name": "lob_descriptor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicommit",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocirollback",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocinewdescriptor",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocisetprefetch",
+        "params": [
+            {
+                "name": "statement_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "number_of_rows",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocipasswordchange",
+        "params": [
+            {
+                "name": "connection_resource_or_connection_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocifreecollection",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocinewcollection",
+        "params": [
+            {
+                "name": "connection_resource",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "schema_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicollappend",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicollgetelem",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicollassignelem",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicollsize",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicollmax",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ocicolltrim",
+        "params": [
+            {
+                "name": "collection",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_DEFAULT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SYSOPER",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SYSDBA",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_CRED_EXT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_DESCRIBE_ONLY",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_COMMIT_ON_SUCCESS",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_NO_AUTO_COMMIT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_EXACT_FETCH",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SEEK_SET",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SEEK_CUR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SEEK_END",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_LOB_BUFFER_FREE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_BFILEE",
+        "value": 114
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_CFILEE",
+        "value": 115
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_CLOB",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_BLOB",
+        "value": 113
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_RDD",
+        "value": 104
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_INT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_RSET",
+        "value": 116
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_AFC",
+        "value": 96
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_CHR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_VCS",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_AVC",
+        "value": 97
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_STR",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_LVC",
+        "value": 94
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_FLT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_UIN",
+        "value": 68
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_LNG",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_LBI",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_BIN",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_ODT",
+        "value": 156
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_BDOUBLE",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_BFLOAT",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_NTY",
+        "value": 108
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLT_NTY",
+        "value": 108
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_SYSDATE",
+        "value": "SYSDATE"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_BFILE",
+        "value": 114
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_CFILEE",
+        "value": 115
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_CLOB",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_BLOB",
+        "value": 113
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_ROWID",
+        "value": 104
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_CURSOR",
+        "value": 116
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_BIN",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_INT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_B_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_FETCHSTATEMENT_BY_COLUMN",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_FETCHSTATEMENT_BY_ROW",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_ASSOC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_RETURN_NULLS",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_RETURN_LOBS",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_DTYPE_FILE",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_DTYPE_LOB",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_DTYPE_ROWID",
+        "value": 54
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_D_FILE",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_D_LOB",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_D_ROWID",
+        "value": 54
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_TEMP_CLOB",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OCI_TEMP_BLOB",
+        "value": 1
+    }
+]

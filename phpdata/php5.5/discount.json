@@ -1,0 +1,412 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "MarkdownDocument",
+        "fqn": "\\MarkdownDocument",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "createFromStream",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_stream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_stream\n * @param flags[optional]\n *\/"
+            },
+            {
+                "name": "createFromString",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_doc",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_doc\n * @param flags[optional]\n *\/"
+            },
+            {
+                "name": "compile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param flags[optional]\n *\/"
+            },
+            {
+                "name": "isCompiled",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "dumpTree",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "out_stream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "title",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param out_stream\n * @param title[optional]\n *\/"
+            },
+            {
+                "name": "transformFragment",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_fragment",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_fragment\n * @param flags[optional]\n *\/"
+            },
+            {
+                "name": "writeFragment",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_fragment",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "out_stream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_fragment\n * @param out_stream\n * @param flags[optional]\n *\/"
+            },
+            {
+                "name": "setReferencePrefix",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param prefix\n *\/"
+            },
+            {
+                "name": "getTitle",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getAuthor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getDate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getHtml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "writeHtml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_outstream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_outstream\n *\/"
+            },
+            {
+                "name": "writeXhtmlPage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_outstream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_outstream\n *\/"
+            },
+            {
+                "name": "getToc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getCss",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "writeToc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_outstream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_outstream\n *\/"
+            },
+            {
+                "name": "writeCss",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "markdown_outstream",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param markdown_outstream\n *\/"
+            },
+            {
+                "name": "setUrlCallback",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "callback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param callback\n *\/"
+            },
+            {
+                "name": "setAttributesCallback",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "callback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param callback\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NOLINKS",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "NOIMAGE",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "NOPANTS",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "NOHTML",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "STRICT",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "TAGTEXT",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "NO_EXT",
+                "value": 64,
+                "doc": null
+            },
+            {
+                "name": "CDATA",
+                "value": 128,
+                "doc": null
+            },
+            {
+                "name": "NOSUPERSCRIPT",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "NORELAXED",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "NOTABLES",
+                "value": 1024,
+                "doc": null
+            },
+            {
+                "name": "NOSTRIKETHROUGH",
+                "value": 2048,
+                "doc": null
+            },
+            {
+                "name": "TOC",
+                "value": 4096,
+                "doc": null
+            },
+            {
+                "name": "ONE_COMPAT",
+                "value": 8192,
+                "doc": null
+            },
+            {
+                "name": "AUTOLINK",
+                "value": 16384,
+                "doc": null
+            },
+            {
+                "name": "SAFELINK",
+                "value": 32768,
+                "doc": null
+            },
+            {
+                "name": "NOHEADER",
+                "value": 65536,
+                "doc": null
+            },
+            {
+                "name": "TABSTOP",
+                "value": 131072,
+                "doc": null
+            },
+            {
+                "name": "NODIVQUOTE",
+                "value": 262144,
+                "doc": null
+            },
+            {
+                "name": "NOALPHALIST",
+                "value": 524288,
+                "doc": null
+            },
+            {
+                "name": "NODLIST",
+                "value": 1048576,
+                "doc": null
+            },
+            {
+                "name": "EMBED",
+                "value": 35,
+                "doc": null
+            },
+            {
+                "name": "EXTRA_FOOTNOTE",
+                "value": 2097152,
+                "doc": null
+            }
+        ]
+    }
+]

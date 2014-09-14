@@ -1,0 +1,158 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ereg",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "regs",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ereg_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "eregi",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "regs",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "eregi_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "split",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "spliti",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sql_regcase",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

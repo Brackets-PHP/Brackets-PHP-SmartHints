@@ -1,0 +1,890 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_connect",
+        "params": [
+            {
+                "name": "serverName",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "connectionInfo",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_close",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_commit",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_begin_transaction",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_rollback",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_errors",
+        "params": [
+            {
+                "name": "errorsOrWarnings",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_configure",
+        "params": [
+            {
+                "name": "setting",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_get_config",
+        "params": [
+            {
+                "name": "setting",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_prepare",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sql",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "params",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "options",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_execute",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_query",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sql",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "params",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "options",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_fetch",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_get_field",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fieldIndex",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "getAsType",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_fetch_array",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetchType",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_fetch_object",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "className",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "ctorParams",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_has_rows",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_num_fields",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_next_result",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_num_rows",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_rows_affected",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_PHPTYPE_STREAM",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_PHPTYPE_STRING",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_client_info",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_server_info",
+        "params": [
+            {
+                "name": "conn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_cancel",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_free_stmt",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_field_metadata",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sqlsrv_send_stream_data",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_BINARY",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_CHAR",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_DECIMAL",
+        "params": [
+            {
+                "name": "precision",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_NCHAR",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_NUMERIC",
+        "params": [
+            {
+                "name": "precision",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_NVARCHAR",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_VARBINARY",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "SQLSRV_SQLTYPE_VARCHAR",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_ERR_ERRORS",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_ERR_WARNINGS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_ERR_ALL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_OFF",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_INIT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_CONN",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_STMT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_UTIL",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SYSTEM_ALL",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SEVERITY_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SEVERITY_WARNING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SEVERITY_NOTICE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_LOG_SEVERITY_ALL",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_FETCH_NUMERIC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_FETCH_ASSOC",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_FETCH_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PHPTYPE_NULL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PHPTYPE_INT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PHPTYPE_FLOAT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PHPTYPE_DATETIME",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_ENC_BINARY",
+        "value": "binary"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_ENC_CHAR",
+        "value": "char"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_NULLABLE_NO",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_NULLABLE_YES",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_NULLABLE_UNKNOWN",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_BIGINT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_BIT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_DATETIME",
+        "value": 25177693
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_FLOAT",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_IMAGE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_INT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_MONEY",
+        "value": 33564163
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_NTEXT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_TEXT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_REAL",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_SMALLDATETIME",
+        "value": 8285
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_SMALLINT",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_SMALLMONEY",
+        "value": 33559555
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_TIMESTAMP",
+        "value": 4606
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_TINYINT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_UDT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_UNIQUEIDENTIFIER",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_XML",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_DATE",
+        "value": 5211
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_TIME",
+        "value": 58728806
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_DATETIMEOFFSET",
+        "value": 58738021
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SQLTYPE_DATETIME2",
+        "value": 58734173
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PARAM_IN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PARAM_OUT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_PARAM_INOUT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_TXN_READ_UNCOMMITTED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_TXN_READ_COMMITTED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_TXN_REPEATABLE_READ",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_TXN_SERIALIZABLE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_TXN_SNAPSHOT",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_NEXT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_PRIOR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_FIRST",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_LAST",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_ABSOLUTE",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_SCROLL_RELATIVE",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_CURSOR_FORWARD",
+        "value": "forward"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_CURSOR_STATIC",
+        "value": "static"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_CURSOR_DYNAMIC",
+        "value": "dynamic"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_CURSOR_KEYSET",
+        "value": "keyset"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLSRV_CURSOR_CLIENT_BUFFERED",
+        "value": "buffered"
+    }
+]

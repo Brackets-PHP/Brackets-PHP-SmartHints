@@ -1,0 +1,224 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "bcadd",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcsub",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcmul",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcdiv",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcmod",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "modulus",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcpow",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcsqrt",
+        "params": [
+            {
+                "name": "operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcscale",
+        "params": [
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bccomp",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bcpowmod",
+        "params": [
+            {
+                "name": "left_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "right_operand",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "modulus",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    }
+]

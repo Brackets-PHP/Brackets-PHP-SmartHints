@@ -1,0 +1,217 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "LibXMLError",
+        "fqn": "\\LibXMLError",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_set_streams_context",
+        "params": [
+            {
+                "name": "streams_context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_use_internal_errors",
+        "params": [
+            {
+                "name": "use_errors",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_get_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_clear_errors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_get_errors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_disable_entity_loader",
+        "params": [
+            {
+                "name": "disable",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "libxml_set_external_entity_loader",
+        "params": [
+            {
+                "name": "resolver_function",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_VERSION",
+        "value": 20901
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_DOTTED_VERSION",
+        "value": "2.9.1"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_LOADED_VERSION",
+        "value": 20901
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_DTDLOAD",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_DTDATTR",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_DTDVALID",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOERROR",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOWARNING",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOBLANKS",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_XINCLUDE",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NSCLEAN",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOCDATA",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NONET",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_PEDANTIC",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_COMPACT",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOXMLDECL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_PARSEHUGE",
+        "value": 524288
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_NOEMPTYTAG",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_SCHEMA_CREATE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_HTML_NOIMPLIED",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_HTML_NODEFDTD",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_ERR_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_ERR_WARNING",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_ERR_ERROR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXML_ERR_FATAL",
+        "value": 3
+    }
+]

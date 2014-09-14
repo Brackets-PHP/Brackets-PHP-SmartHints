@@ -1,0 +1,3038 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "ReflectionException",
+        "fqn": "\\ReflectionException",
+        "type": 0,
+        "extends": "Exception",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param message[optional]\n * @param code[optional]\n * @param previous[optional]\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Reflection",
+        "fqn": "\\Reflection",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "getModifierNames",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "modifiers",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets modifier names\n * @link http:\/\/www.php.net\/manual\/en\/reflection.getmodifiernames.php\n * @param modifiers int <p>\n * The modifiers to get, which is from a numeric value.\n * <\/p>\n * @return array An array of modifier names.\n *\/"
+            },
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "reflector",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Exports\n * @link http:\/\/www.php.net\/manual\/en\/reflection.export.php\n * @param reflector Reflector <p>\n * The reflection to export.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionFunctionAbstract",
+        "fqn": "\\ReflectionFunctionAbstract",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__toString",
+                "type": 17,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.tostring.php\n * @return void The string.\n *\/"
+            },
+            {
+                "name": "inNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if function in namespace\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool true if it's in a namespace, otherwise false\n *\/"
+            },
+            {
+                "name": "isClosure",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool true if it's a closure, otherwise false\n *\/"
+            },
+            {
+                "name": "isDeprecated",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if deprecated\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool true if it's deprecated, otherwise false\n *\/"
+            },
+            {
+                "name": "isInternal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if is internal\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool true if it's internal, otherwise false\n *\/"
+            },
+            {
+                "name": "isUserDefined",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if user defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool true if it's user-defined, otherwise false;\n *\/"
+            },
+            {
+                "name": "isGenerator",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this function is a generator\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool true if the function is generator, false if it is not or &null;\n * on failure.\n *\/"
+            },
+            {
+                "name": "getClosureThis",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns this pointer bound to closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getClosureScopeClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the scope associated to the closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or &null; on failure.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comment\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise false\n *\/"
+            },
+            {
+                "name": "getEndLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets end line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or false if unknown.\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension info\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a ReflectionExtension object.\n *\/"
+            },
+            {
+                "name": "getExtensionName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
+            },
+            {
+                "name": "getFileName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets file name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
+            },
+            {
+                "name": "getNamespaceName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets namespace name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
+            },
+            {
+                "name": "getNumberOfParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
+            },
+            {
+                "name": "getNumberOfRequiredParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of required parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
+            },
+            {
+                "name": "getParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a ReflectionParameter object.\n *\/"
+            },
+            {
+                "name": "getShortName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function short name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
+            },
+            {
+                "name": "getStartLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets starting line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
+            },
+            {
+                "name": "getStaticVariables",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets static variables\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
+            },
+            {
+                "name": "returnsReference",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if returns reference\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool true if it returns a reference, otherwise false\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionFunction",
+        "fqn": "\\ReflectionFunction",
+        "type": 0,
+        "extends": "ReflectionFunctionAbstract",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructs a ReflectionFunction object\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.construct.php\n * @param name\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.tostring.php\n * @return string ReflectionFunction::export-like output for\n * the function.\n *\/"
+            },
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Exports function\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.export.php\n * @param name string <p>\n * The reflection to export.\n * <\/p>\n * @param return string[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            },
+            {
+                "name": "isDisabled",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if function is disabled\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.isdisabled.php\n * @return bool true if it's disable, otherwise false\n *\/"
+            },
+            {
+                "name": "invoke",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "parameter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Invokes function\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.invoke.php\n * @param parameter mixed[optional]\n * @param _ mixed[optional]\n * @return mixed the result of the invoked function call.\n *\/"
+            },
+            {
+                "name": "invokeArgs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Invokes function args\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.invokeargs.php\n * @param args array <p>\n * The passed arguments to the function as an array, much like\n * call_user_func_array works.\n * <\/p>\n * @return mixed the result of the invoked function\n *\/"
+            },
+            {
+                "name": "getClosure",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns a dynamically created closure for the function\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunction.getclosure.php\n * @return Closure Closure.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "inNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if function in namespace\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool true if it's in a namespace, otherwise false\n *\/"
+            },
+            {
+                "name": "isClosure",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool true if it's a closure, otherwise false\n *\/"
+            },
+            {
+                "name": "isDeprecated",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if deprecated\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool true if it's deprecated, otherwise false\n *\/"
+            },
+            {
+                "name": "isInternal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if is internal\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool true if it's internal, otherwise false\n *\/"
+            },
+            {
+                "name": "isUserDefined",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if user defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool true if it's user-defined, otherwise false;\n *\/"
+            },
+            {
+                "name": "isGenerator",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this function is a generator\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool true if the function is generator, false if it is not or &null;\n * on failure.\n *\/"
+            },
+            {
+                "name": "getClosureThis",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns this pointer bound to closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getClosureScopeClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the scope associated to the closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or &null; on failure.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comment\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise false\n *\/"
+            },
+            {
+                "name": "getEndLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets end line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or false if unknown.\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension info\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a ReflectionExtension object.\n *\/"
+            },
+            {
+                "name": "getExtensionName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
+            },
+            {
+                "name": "getFileName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets file name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
+            },
+            {
+                "name": "getNamespaceName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets namespace name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
+            },
+            {
+                "name": "getNumberOfParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
+            },
+            {
+                "name": "getNumberOfRequiredParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of required parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
+            },
+            {
+                "name": "getParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a ReflectionParameter object.\n *\/"
+            },
+            {
+                "name": "getShortName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function short name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
+            },
+            {
+                "name": "getStartLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets starting line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
+            },
+            {
+                "name": "getStaticVariables",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets static variables\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
+            },
+            {
+                "name": "returnsReference",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if returns reference\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool true if it returns a reference, otherwise false\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "IS_DEPRECATED",
+                "value": 262144,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionParameter",
+        "fqn": "\\ReflectionParameter",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "function",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "parameter",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Exports\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.export.php\n * @param function string <p>\n * The function name.\n * <\/p>\n * @param parameter string <p>\n * The parameter name.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string The exported reflection.\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "function",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "parameter",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Construct\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.construct.php\n * @param function\n * @param parameter\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.tostring.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parameter name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getname.php\n * @return string The name of the reflected parameter.\n *\/"
+            },
+            {
+                "name": "isPassedByReference",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if passed by reference\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.ispassedbyreference.php\n * @return bool true if the parameter is passed in by reference, otherwise false\n *\/"
+            },
+            {
+                "name": "canBePassedByValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this parameter can be passed by value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.canbepassedbyvalue.php\n * @return bool true if the parameter can be passed by value, false otherwise.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getDeclaringFunction",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets declaring function\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getdeclaringfunction.php\n * @return ReflectionFunctionAbstract A ReflectionFunction object.\n *\/"
+            },
+            {
+                "name": "getDeclaringClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets declaring class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getdeclaringclass.php\n * @return ReflectionClass A ReflectionClass object.\n *\/"
+            },
+            {
+                "name": "getClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Get the type hinted class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getclass.php\n * @return ReflectionClass A ReflectionClass object.\n *\/"
+            },
+            {
+                "name": "isArray",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if parameter expects an array\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.isarray.php\n * @return bool true if an array is expected, false otherwise.\n *\/"
+            },
+            {
+                "name": "isCallable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether parameter MUST be callable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.iscallable.php\n * @return bool true if the parameter is callable, false if it is\n * not or &null; on failure.\n *\/"
+            },
+            {
+                "name": "allowsNull",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if null is allowed\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.allowsnull.php\n * @return bool true if &null; is allowed, otherwise false\n *\/"
+            },
+            {
+                "name": "getPosition",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parameter position\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getposition.php\n * @return int The position of the parameter, left to right, starting at position #0.\n *\/"
+            },
+            {
+                "name": "isOptional",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if optional\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.isoptional.php\n * @return bool true if the parameter is optional, otherwise false\n *\/"
+            },
+            {
+                "name": "isDefaultValueAvailable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if a default value is available\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.isdefaultvalueavailable.php\n * @return bool true if a default value is available, otherwise false\n *\/"
+            },
+            {
+                "name": "getDefaultValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets default parameter value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getdefaultvalue.php\n * @return mixed The parameters default value.\n *\/"
+            },
+            {
+                "name": "isDefaultValueConstant",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether the default value of this parameter is constant\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.isdefaultvalueconstant.php\n * @return bool true if the default value is constant, false if it is not or\n * &null; on failure.\n *\/"
+            },
+            {
+                "name": "getDefaultValueConstantName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the default value's constant name if default value is constant or null\n * @link http:\/\/www.php.net\/manual\/en\/reflectionparameter.getdefaultvalueconstantname.php\n * @return string string on success or &null; on failure.\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionMethod",
+        "fqn": "\\ReflectionMethod",
+        "type": 0,
+        "extends": "ReflectionFunctionAbstract",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Export a reflection method.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.export.php\n * @param class string <p>\n * The class name.\n * <\/p>\n * @param name string <p>\n * The name of the method.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_method",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructs a ReflectionMethod\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.construct.php\n * @param class_method string <p>\n * Class name and method name delimited by ::.\n * <\/p>\n * @return mixed\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the string representation of the Reflection method object.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.tostring.php\n * @return string A string representation of this ReflectionMethod instance.\n *\/"
+            },
+            {
+                "name": "isPublic",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is public\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.ispublic.php\n * @return bool true if the method is public, otherwise false\n *\/"
+            },
+            {
+                "name": "isPrivate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is private\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isprivate.php\n * @return bool true if the method is private, otherwise false\n *\/"
+            },
+            {
+                "name": "isProtected",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is protected\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isprotected.php\n * @return bool true if the method is protected, otherwise false\n *\/"
+            },
+            {
+                "name": "isAbstract",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is abstract\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isabstract.php\n * @return bool true if the method is abstract, otherwise false\n *\/"
+            },
+            {
+                "name": "isFinal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is final\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isfinal.php\n * @return bool true if the method is final, otherwise false\n *\/"
+            },
+            {
+                "name": "isStatic",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is static\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isstatic.php\n * @return bool true if the method is static, otherwise false\n *\/"
+            },
+            {
+                "name": "isConstructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is a constructor\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isconstructor.php\n * @return bool true if the method is a constructor, otherwise false\n *\/"
+            },
+            {
+                "name": "isDestructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if method is a destructor\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.isdestructor.php\n * @return bool true if the method is a destructor, otherwise false\n *\/"
+            },
+            {
+                "name": "getClosure",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns a dynamically created closure for the method\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.getclosure.php\n * @param object object <p>\n * Forbidden for static methods, required for other methods.\n * <\/p>\n * @return Closure Closure.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getModifiers",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the method modifiers\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.getmodifiers.php\n * @return int A numeric representation of the modifiers. The modifiers are listed below.\n * The actual meanings of these modifiers are described in the\n * predefined constants.\n *\/"
+            },
+            {
+                "name": "invoke",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "parameter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Invoke\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.invoke.php\n * @param object object <p>\n * The object to invoke the method on. For static methods, pass\n * null to this parameter.\n * <\/p>\n * @param parameter mixed[optional] <p>\n * Zero or more parameters to be passed to the method.\n * It accepts a variable number of parameters which are passed to the method.\n * <\/p>\n * @param _ mixed[optional]\n * @return mixed the method result.\n *\/"
+            },
+            {
+                "name": "invokeArgs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Invoke args\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.invokeargs.php\n * @param object object <p>\n * The object to invoke the method on. In case of static methods, you can pass\n * null to this parameter.\n * <\/p>\n * @param args array <p>\n * The parameters to be passed to the function, as an array.\n * <\/p>\n * @return mixed the method result.\n *\/"
+            },
+            {
+                "name": "getDeclaringClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets declaring class for the reflected method.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.getdeclaringclass.php\n * @return ReflectionClass A ReflectionClass object of the class that the\n * reflected method is part of.\n *\/"
+            },
+            {
+                "name": "getPrototype",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the method prototype (if there is one).\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.getprototype.php\n * @return ReflectionMethod A ReflectionMethod instance of the method prototype.\n *\/"
+            },
+            {
+                "name": "setAccessible",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "accessible",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Set method accessibility\n * @link http:\/\/www.php.net\/manual\/en\/reflectionmethod.setaccessible.php\n * @param accessible bool <p>\n * true to allow accessibility, or false.\n * <\/p>\n * @return void\n *\/"
+            },
+            {
+                "name": "inNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if function in namespace\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool true if it's in a namespace, otherwise false\n *\/"
+            },
+            {
+                "name": "isClosure",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool true if it's a closure, otherwise false\n *\/"
+            },
+            {
+                "name": "isDeprecated",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if deprecated\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool true if it's deprecated, otherwise false\n *\/"
+            },
+            {
+                "name": "isInternal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if is internal\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool true if it's internal, otherwise false\n *\/"
+            },
+            {
+                "name": "isUserDefined",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if user defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool true if it's user-defined, otherwise false;\n *\/"
+            },
+            {
+                "name": "isGenerator",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this function is a generator\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool true if the function is generator, false if it is not or &null;\n * on failure.\n *\/"
+            },
+            {
+                "name": "getClosureThis",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns this pointer bound to closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getClosureScopeClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the scope associated to the closure\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or &null; on failure.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comment\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise false\n *\/"
+            },
+            {
+                "name": "getEndLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets end line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or false if unknown.\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension info\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a ReflectionExtension object.\n *\/"
+            },
+            {
+                "name": "getExtensionName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
+            },
+            {
+                "name": "getFileName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets file name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
+            },
+            {
+                "name": "getNamespaceName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets namespace name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
+            },
+            {
+                "name": "getNumberOfParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
+            },
+            {
+                "name": "getNumberOfRequiredParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets number of required parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
+            },
+            {
+                "name": "getParameters",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parameters\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a ReflectionParameter object.\n *\/"
+            },
+            {
+                "name": "getShortName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets function short name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
+            },
+            {
+                "name": "getStartLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets starting line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
+            },
+            {
+                "name": "getStaticVariables",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets static variables\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
+            },
+            {
+                "name": "returnsReference",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if returns reference\n * @link http:\/\/www.php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool true if it returns a reference, otherwise false\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            },
+            {
+                "name": "class",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "IS_STATIC",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "IS_PUBLIC",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "IS_PROTECTED",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "IS_PRIVATE",
+                "value": 1024,
+                "doc": null
+            },
+            {
+                "name": "IS_ABSTRACT",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "IS_FINAL",
+                "value": 4,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionClass",
+        "fqn": "\\ReflectionClass",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "argument",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Exports a class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.export.php\n * @param argument mixed <p>\n * The reflection to export.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "argument",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructs a ReflectionClass\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.construct.php\n * @param argument\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the string representation of the ReflectionClass object.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.tostring.php\n * @return string A string representation of this ReflectionClass instance.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets class name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getname.php\n * @return string The class name.\n *\/"
+            },
+            {
+                "name": "isInternal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is defined internally by an extension, or the core\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinternal.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isUserDefined",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if user defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isuserdefined.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isInstantiable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if the class is instantiable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinstantiable.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isCloneable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this class is cloneable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.iscloneable.php\n * @return bool true if the class is cloneable, false otherwise.\n *\/"
+            },
+            {
+                "name": "getFileName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the filename of the file in which the class has been defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getfilename.php\n * @return string the filename of the file in which the class has been defined.\n * If the class is defined in the PHP core or in a PHP extension, false\n * is returned.\n *\/"
+            },
+            {
+                "name": "getStartLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets starting line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstartline.php\n * @return int The starting line number, as an integer.\n *\/"
+            },
+            {
+                "name": "getEndLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets end line\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getendline.php\n * @return int The ending line number of the user defined class, or false if unknown.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comments\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getdoccomment.php\n * @return string The doc comment if it exists, otherwise false\n *\/"
+            },
+            {
+                "name": "getConstructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the constructor of the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstructor.php\n * @return ReflectionMethod A ReflectionMethod object reflecting the class' constructor, or &null; if the class\n * has no constructor.\n *\/"
+            },
+            {
+                "name": "hasMethod",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if method is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasmethod.php\n * @param name string <p>\n * Name of the method being checked for.\n * <\/p>\n * @return bool true if it has the method, otherwise false\n *\/"
+            },
+            {
+                "name": "getMethod",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionMethod<\/classname> for a class method.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmethod.php\n * @param name string <p>\n * The method name to reflect.\n * <\/p>\n * @return ReflectionMethod A ReflectionMethod.\n *\/"
+            },
+            {
+                "name": "getMethods",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets an array of methods\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmethods.php\n * @param filter int[optional] <p>\n * Filter the results to include only methods with certain attributes. Defaults\n * to no filtering.\n * <\/p>\n * <p>\n * Any combination of ReflectionMethod::IS_STATIC,\n * ReflectionMethod::IS_PUBLIC,\n * ReflectionMethod::IS_PROTECTED,\n * ReflectionMethod::IS_PRIVATE,\n * ReflectionMethod::IS_ABSTRACT,\n * ReflectionMethod::IS_FINAL.\n * <\/p>\n * @return array An array of ReflectionMethod objects\n * reflecting each method.\n *\/"
+            },
+            {
+                "name": "hasProperty",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if property is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasproperty.php\n * @param name string <p>\n * Name of the property being checked for.\n * <\/p>\n * @return bool true if it has the property, otherwise false\n *\/"
+            },
+            {
+                "name": "getProperty",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionProperty<\/classname> for a class's property\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getproperty.php\n * @param name string <p>\n * The property name.\n * <\/p>\n * @return ReflectionProperty A ReflectionProperty.\n *\/"
+            },
+            {
+                "name": "getProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getproperties.php\n * @param filter int[optional] <p>\n * The optional filter, for filtering desired property types. It's configured using\n * the ReflectionProperty constants,\n * and defaults to all property types.\n * <\/p>\n * @return array An array of ReflectionProperty objects.\n *\/"
+            },
+            {
+                "name": "hasConstant",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if constant is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasconstant.php\n * @param name string <p>\n * The name of the constant being checked for.\n * <\/p>\n * @return bool true if the constant is defined, otherwise false.\n *\/"
+            },
+            {
+                "name": "getConstants",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets constants\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstants.php\n * @return array An array of constants.\n * Constant name in key, constant value in value.\n *\/"
+            },
+            {
+                "name": "getConstant",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets defined constant\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstant.php\n * @param name string <p>\n * Name of the constant.\n * <\/p>\n * @return mixed Value of the constant.\n *\/"
+            },
+            {
+                "name": "getInterfaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the interfaces\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getinterfaces.php\n * @return array An associative array of interfaces, with keys as interface\n * names and the array values as ReflectionClass objects.\n *\/"
+            },
+            {
+                "name": "getInterfaceNames",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the interface names\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getinterfacenames.php\n * @return array A numerical array with interface names as the values.\n *\/"
+            },
+            {
+                "name": "isInterface",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if the class is an interface\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinterface.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getTraits",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of traits used by this class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraits.php\n * @return array an array with trait names in keys and instances of trait's\n * ReflectionClass in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getTraitNames",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of names of traits used by this class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraitnames.php\n * @return array an array with trait names in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getTraitAliases",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of trait aliases\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraitaliases.php\n * @return array an array with new method names in keys and original names (in the\n * format \"TraitName::original\") in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "isTrait",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this is a trait\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.istrait.php\n * @return bool true if this is a trait, false otherwise.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "isAbstract",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is abstract\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isabstract.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isFinal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is final\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isfinal.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getModifiers",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets modifiers\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmodifiers.php\n * @return int bitmask of\n * modifier constants.\n *\/"
+            },
+            {
+                "name": "isInstance",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks class for instance\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinstance.php\n * @param object object <p>\n * The object being compared to.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "newInstance",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Creates a new class instance from given arguments.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstance.php\n * @param args mixed <p>\n * Accepts a variable number of arguments which are passed to the class\n * constructor, much like call_user_func.\n * <\/p>\n * @param _ mixed[optional]\n * @return object\n *\/"
+            },
+            {
+                "name": "newInstanceWithoutConstructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Creates a new class instance without invoking the constructor.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\n * @return object\n *\/"
+            },
+            {
+                "name": "newInstanceArgs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Creates a new class instance from given arguments.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstanceargs.php\n * @param args array[optional] <p>\n * The parameters to be passed to the class constructor as an array.\n * <\/p>\n * @return object a new instance of the class.\n *\/"
+            },
+            {
+                "name": "getParentClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parent class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getparentclass.php\n * @return object A ReflectionClass.\n *\/"
+            },
+            {
+                "name": "isSubclassOf",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if a subclass\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.issubclassof.php\n * @param class string <p>\n * The class name being checked against.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getStaticProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets static properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstaticproperties.php\n * @return array The static properties, as an array.\n *\/"
+            },
+            {
+                "name": "getStaticPropertyValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "def_value",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets static property value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\n * @param name string <p>\n * The name of the static property for which to return a value.\n * <\/p>\n * @param def_value mixed[optional] <p>\n * <\/p>\n * @return mixed The value of the static property.\n *\/"
+            },
+            {
+                "name": "setStaticPropertyValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets static property value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\n * @param name string <p>\n * Property name.\n * <\/p>\n * @param value string <p>\n * New property value.\n * <\/p>\n * @return void\n *\/"
+            },
+            {
+                "name": "getDefaultProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets default properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\n * @return array An array of default properties, with the key being the name of\n * the property and the value being the default value of the property or &null;\n * if the property doesn't have a default value. The function does not distinguish\n * between static and non static properties and does not take visibility modifiers\n * into account.\n *\/"
+            },
+            {
+                "name": "isIterateable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if iterateable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isiterateable.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "implementsInterface",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interface",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Implements interface\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.implementsinterface.php\n * @param interface string <p>\n * The interface name.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionExtension<\/classname> object for the extension which defined the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getextension.php\n * @return ReflectionExtension A ReflectionExtension object representing the extension which defined the class,\n * or &null; for user-defined classes.\n *\/"
+            },
+            {
+                "name": "getExtensionName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the name of the extension which defined the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getextensionname.php\n * @return string The name of the extension which defined the class, or false for user-defined classes.\n *\/"
+            },
+            {
+                "name": "inNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if in namespace\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.innamespace.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getNamespaceName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets namespace name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getnamespacename.php\n * @return string The namespace name.\n *\/"
+            },
+            {
+                "name": "getShortName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets short name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getshortname.php\n * @return string The class short name.\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "IS_IMPLICIT_ABSTRACT",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "IS_EXPLICIT_ABSTRACT",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "IS_FINAL",
+                "value": 64,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionObject",
+        "fqn": "\\ReflectionObject",
+        "type": 0,
+        "extends": "ReflectionClass",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "argument",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Export\n * @link http:\/\/www.php.net\/manual\/en\/reflectionobject.export.php\n * @param argument string <p>\n * The reflection to export.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "argument",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructs a ReflectionObject\n * @link http:\/\/www.php.net\/manual\/en\/reflectionobject.construct.php\n * @param argument\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the string representation of the ReflectionClass object.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.tostring.php\n * @return string A string representation of this ReflectionClass instance.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets class name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getname.php\n * @return string The class name.\n *\/"
+            },
+            {
+                "name": "isInternal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is defined internally by an extension, or the core\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinternal.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isUserDefined",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if user defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isuserdefined.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isInstantiable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if the class is instantiable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinstantiable.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isCloneable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this class is cloneable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.iscloneable.php\n * @return bool true if the class is cloneable, false otherwise.\n *\/"
+            },
+            {
+                "name": "getFileName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the filename of the file in which the class has been defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getfilename.php\n * @return string the filename of the file in which the class has been defined.\n * If the class is defined in the PHP core or in a PHP extension, false\n * is returned.\n *\/"
+            },
+            {
+                "name": "getStartLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets starting line number\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstartline.php\n * @return int The starting line number, as an integer.\n *\/"
+            },
+            {
+                "name": "getEndLine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets end line\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getendline.php\n * @return int The ending line number of the user defined class, or false if unknown.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comments\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getdoccomment.php\n * @return string The doc comment if it exists, otherwise false\n *\/"
+            },
+            {
+                "name": "getConstructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the constructor of the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstructor.php\n * @return ReflectionMethod A ReflectionMethod object reflecting the class' constructor, or &null; if the class\n * has no constructor.\n *\/"
+            },
+            {
+                "name": "hasMethod",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if method is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasmethod.php\n * @param name string <p>\n * Name of the method being checked for.\n * <\/p>\n * @return bool true if it has the method, otherwise false\n *\/"
+            },
+            {
+                "name": "getMethod",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionMethod<\/classname> for a class method.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmethod.php\n * @param name string <p>\n * The method name to reflect.\n * <\/p>\n * @return ReflectionMethod A ReflectionMethod.\n *\/"
+            },
+            {
+                "name": "getMethods",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets an array of methods\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmethods.php\n * @param filter int[optional] <p>\n * Filter the results to include only methods with certain attributes. Defaults\n * to no filtering.\n * <\/p>\n * <p>\n * Any combination of ReflectionMethod::IS_STATIC,\n * ReflectionMethod::IS_PUBLIC,\n * ReflectionMethod::IS_PROTECTED,\n * ReflectionMethod::IS_PRIVATE,\n * ReflectionMethod::IS_ABSTRACT,\n * ReflectionMethod::IS_FINAL.\n * <\/p>\n * @return array An array of ReflectionMethod objects\n * reflecting each method.\n *\/"
+            },
+            {
+                "name": "hasProperty",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if property is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasproperty.php\n * @param name string <p>\n * Name of the property being checked for.\n * <\/p>\n * @return bool true if it has the property, otherwise false\n *\/"
+            },
+            {
+                "name": "getProperty",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionProperty<\/classname> for a class's property\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getproperty.php\n * @param name string <p>\n * The property name.\n * <\/p>\n * @return ReflectionProperty A ReflectionProperty.\n *\/"
+            },
+            {
+                "name": "getProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filter",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getproperties.php\n * @param filter int[optional] <p>\n * The optional filter, for filtering desired property types. It's configured using\n * the ReflectionProperty constants,\n * and defaults to all property types.\n * <\/p>\n * @return array An array of ReflectionProperty objects.\n *\/"
+            },
+            {
+                "name": "hasConstant",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if constant is defined\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.hasconstant.php\n * @param name string <p>\n * The name of the constant being checked for.\n * <\/p>\n * @return bool true if the constant is defined, otherwise false.\n *\/"
+            },
+            {
+                "name": "getConstants",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets constants\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstants.php\n * @return array An array of constants.\n * Constant name in key, constant value in value.\n *\/"
+            },
+            {
+                "name": "getConstant",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Gets defined constant\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getconstant.php\n * @param name string <p>\n * Name of the constant.\n * <\/p>\n * @return mixed Value of the constant.\n *\/"
+            },
+            {
+                "name": "getInterfaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the interfaces\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getinterfaces.php\n * @return array An associative array of interfaces, with keys as interface\n * names and the array values as ReflectionClass objects.\n *\/"
+            },
+            {
+                "name": "getInterfaceNames",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the interface names\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getinterfacenames.php\n * @return array A numerical array with interface names as the values.\n *\/"
+            },
+            {
+                "name": "isInterface",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if the class is an interface\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinterface.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getTraits",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of traits used by this class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraits.php\n * @return array an array with trait names in keys and instances of trait's\n * ReflectionClass in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getTraitNames",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of names of traits used by this class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraitnames.php\n * @return array an array with trait names in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "getTraitAliases",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns an array of trait aliases\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.gettraitaliases.php\n * @return array an array with new method names in keys and original names (in the\n * format \"TraitName::original\") in values.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "isTrait",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this is a trait\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.istrait.php\n * @return bool true if this is a trait, false otherwise.\n * Returns &null; in case of an error.\n *\/"
+            },
+            {
+                "name": "isAbstract",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is abstract\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isabstract.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "isFinal",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if class is final\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isfinal.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getModifiers",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets modifiers\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getmodifiers.php\n * @return int bitmask of\n * modifier constants.\n *\/"
+            },
+            {
+                "name": "isInstance",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks class for instance\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isinstance.php\n * @param object object <p>\n * The object being compared to.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "newInstance",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Creates a new class instance from given arguments.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstance.php\n * @param args mixed <p>\n * Accepts a variable number of arguments which are passed to the class\n * constructor, much like call_user_func.\n * <\/p>\n * @param _ mixed[optional]\n * @return object\n *\/"
+            },
+            {
+                "name": "newInstanceWithoutConstructor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Creates a new class instance without invoking the constructor.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\n * @return object\n *\/"
+            },
+            {
+                "name": "newInstanceArgs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Creates a new class instance from given arguments.\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.newinstanceargs.php\n * @param args array[optional] <p>\n * The parameters to be passed to the class constructor as an array.\n * <\/p>\n * @return object a new instance of the class.\n *\/"
+            },
+            {
+                "name": "getParentClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets parent class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getparentclass.php\n * @return object A ReflectionClass.\n *\/"
+            },
+            {
+                "name": "isSubclassOf",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Checks if a subclass\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.issubclassof.php\n * @param class string <p>\n * The class name being checked against.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getStaticProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets static properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstaticproperties.php\n * @return array The static properties, as an array.\n *\/"
+            },
+            {
+                "name": "getStaticPropertyValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "def_value",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets static property value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\n * @param name string <p>\n * The name of the static property for which to return a value.\n * <\/p>\n * @param def_value mixed[optional] <p>\n * <\/p>\n * @return mixed The value of the static property.\n *\/"
+            },
+            {
+                "name": "setStaticPropertyValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets static property value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\n * @param name string <p>\n * Property name.\n * <\/p>\n * @param value string <p>\n * New property value.\n * <\/p>\n * @return void\n *\/"
+            },
+            {
+                "name": "getDefaultProperties",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets default properties\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\n * @return array An array of default properties, with the key being the name of\n * the property and the value being the default value of the property or &null;\n * if the property doesn't have a default value. The function does not distinguish\n * between static and non static properties and does not take visibility modifiers\n * into account.\n *\/"
+            },
+            {
+                "name": "isIterateable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if iterateable\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.isiterateable.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "implementsInterface",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interface",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Implements interface\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.implementsinterface.php\n * @param interface string <p>\n * The interface name.\n * <\/p>\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets a <classname>ReflectionExtension<\/classname> object for the extension which defined the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getextension.php\n * @return ReflectionExtension A ReflectionExtension object representing the extension which defined the class,\n * or &null; for user-defined classes.\n *\/"
+            },
+            {
+                "name": "getExtensionName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the name of the extension which defined the class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getextensionname.php\n * @return string The name of the extension which defined the class, or false for user-defined classes.\n *\/"
+            },
+            {
+                "name": "inNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if in namespace\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.innamespace.php\n * @return bool Returns true on success or false on failure.\n *\/"
+            },
+            {
+                "name": "getNamespaceName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets namespace name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getnamespacename.php\n * @return string The namespace name.\n *\/"
+            },
+            {
+                "name": "getShortName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets short name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionclass.getshortname.php\n * @return string The class short name.\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "IS_IMPLICIT_ABSTRACT",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "IS_EXPLICIT_ABSTRACT",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "IS_FINAL",
+                "value": 64,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionProperty",
+        "fqn": "\\ReflectionProperty",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Export\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.export.php\n * @param class mixed\n * @param name string <p>\n * The property name.\n * <\/p>\n * @param return bool[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Construct a ReflectionProperty object\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.construct.php\n * @param class\n * @param name\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.tostring.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets property name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.getname.php\n * @return string The name of the reflected property.\n *\/"
+            },
+            {
+                "name": "getValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Gets value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.getvalue.php\n * @param object object[optional] <p>\n * If the property is non-static an object must be provided to fetch the\n * property from. If you want to fetch the default property without\n * providing an object use ReflectionClass::getDefaultProperties\n * instead.\n * <\/p>\n * @return mixed The current value of the property.\n *\/"
+            },
+            {
+                "name": "setValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Set property value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.setvalue.php\n * @param object object <p>\n * If the property is non-static an object must be provided to change\n * the property on. If the property is static this parameter is left\n * out and only value needs to be provided.\n * <\/p>\n * @param value mixed <p>\n * The new value.\n * <\/p>\n * @return void\n *\/"
+            },
+            {
+                "name": "isPublic",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if property is public\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.ispublic.php\n * @return bool true if the property is public, false otherwise.\n *\/"
+            },
+            {
+                "name": "isPrivate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if property is private\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.isprivate.php\n * @return bool true if the property is private, false otherwise.\n *\/"
+            },
+            {
+                "name": "isProtected",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if property is protected\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.isprotected.php\n * @return bool true if the property is protected, false otherwise.\n *\/"
+            },
+            {
+                "name": "isStatic",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if property is static\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.isstatic.php\n * @return bool true if the property is static, false otherwise.\n *\/"
+            },
+            {
+                "name": "isDefault",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Checks if default value\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.isdefault.php\n * @return bool true if the property was declared at compile-time, or false if\n * it was created at run-time.\n *\/"
+            },
+            {
+                "name": "getModifiers",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets modifiers\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.getmodifiers.php\n * @return int A numeric representation of the modifiers.\n *\/"
+            },
+            {
+                "name": "getDeclaringClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets declaring class\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.getdeclaringclass.php\n * @return ReflectionClass A ReflectionClass object.\n *\/"
+            },
+            {
+                "name": "getDocComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets doc comment\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.getdoccomment.php\n * @return string The doc comment.\n *\/"
+            },
+            {
+                "name": "setAccessible",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "accessible",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Set property accessibility\n * @link http:\/\/www.php.net\/manual\/en\/reflectionproperty.setaccessible.php\n * @param accessible bool <p>\n * true to allow accessibility, or false.\n * <\/p>\n * @return void\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            },
+            {
+                "name": "class",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "IS_STATIC",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "IS_PUBLIC",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "IS_PROTECTED",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "IS_PRIVATE",
+                "value": 1024,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionExtension",
+        "fqn": "\\ReflectionExtension",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Export\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.export.php\n * @param name string <p>\n * The reflection to export.\n * <\/p>\n * @param return string[optional] <p>\n * &reflection.export.param.return;\n * <\/p>\n * @return string &reflection.export.return;\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructs a ReflectionExtension\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.construct.php\n * @param name\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.tostring.php\n * @return string the exported extension as a string, in the same way as the\n * ReflectionExtension::export.\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getname.php\n * @return string The extensions name.\n *\/"
+            },
+            {
+                "name": "getVersion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension version\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getversion.php\n * @return string The version of the extension.\n *\/"
+            },
+            {
+                "name": "getFunctions",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension functions\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getfunctions.php\n * @return array An associative array of ReflectionFunction objects,\n * for each function defined in the extension with the keys being the function\n * names. If no function are defined, an empty array is returned.\n *\/"
+            },
+            {
+                "name": "getConstants",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets constants\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getconstants.php\n * @return array An associative array with constant names as keys.\n *\/"
+            },
+            {
+                "name": "getINIEntries",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets extension ini entries\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getinientries.php\n * @return array An associative array with the ini entries as keys,\n * with their defined values as values.\n *\/"
+            },
+            {
+                "name": "getClasses",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets classes\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getclasses.php\n * @return array An array of ReflectionClass objects, one\n * for each class within the extension. If no classes are defined,\n * an empty array is returned.\n *\/"
+            },
+            {
+                "name": "getClassNames",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets class names\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getclassnames.php\n * @return array An array of class names, as defined in the extension.\n * If no classes are defined, an empty array is returned.\n *\/"
+            },
+            {
+                "name": "getDependencies",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets dependencies\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.getdependencies.php\n * @return array An associative array with dependencies as keys and\n * either Required, Optional\n * or Conflicts as the values.\n *\/"
+            },
+            {
+                "name": "info",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Print extension info\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.info.php\n * @return void Information about the extension.\n *\/"
+            },
+            {
+                "name": "isPersistent",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this extension is persistent\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.ispersistent.php\n * @return void true for extensions loaded by extension, false\n * otherwise.\n *\/"
+            },
+            {
+                "name": "isTemporary",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns whether this extension is temporary\n * @link http:\/\/www.php.net\/manual\/en\/reflectionextension.istemporary.php\n * @return void true for extensions loaded by dl,\n * false otherwise.\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ReflectionZendExtension",
+        "fqn": "\\ReflectionZendExtension",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "export",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "return",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\n * Export\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.export.php\n * @param name string <p>\n * <\/p>\n * @param return string[optional] <p>\n * <\/p>\n * @return string\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Constructor\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.construct.php\n * @param name\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * To string handler\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.tostring.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets name\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.getname.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getVersion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets version\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.getversion.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getAuthor",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets author\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.getauthor.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getURL",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets URL\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.geturl.php\n * @return string\n *\/"
+            },
+            {
+                "name": "getCopyright",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets copyright\n * @link http:\/\/www.php.net\/manual\/en\/reflectionzendextension.getcopyright.php\n * @return string\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "name",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    }
+]

@@ -1,0 +1,1990 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "DateTime",
+        "fqn": "\\DateTime",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns new DateTime object\n * @link http:\/\/www.php.net\/manual\/en\/datetime.construct.php\n * @param time[optional]\n * @param object[optional]\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * The __wakeup handler\n * @link http:\/\/www.php.net\/manual\/en\/datetime.wakeup.php\n *\/"
+            },
+            {
+                "name": "__set_state",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * The __set_state handler\n * @link http:\/\/www.php.net\/manual\/en\/datetime.set-state.php\n *\/"
+            },
+            {
+                "name": "createFromFormat",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns new DateTime object formatted according to the specified format\n * @link http:\/\/www.php.net\/manual\/en\/datetime.createfromformat.php\n * @param format\n * @param time\n * @param object[optional]\n *\/"
+            },
+            {
+                "name": "getLastErrors",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the warnings and errors\n * @link http:\/\/www.php.net\/manual\/en\/datetime.getlasterrors.php\n *\/"
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns date formatted according to given format\n * @link http:\/\/www.php.net\/manual\/en\/datetime.format.php\n * @param format\n *\/"
+            },
+            {
+                "name": "modify",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "modify",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Alters the timestamp\n * @link http:\/\/www.php.net\/manual\/en\/datetime.modify.php\n * @param modify\n *\/"
+            },
+            {
+                "name": "add",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n* Adds an amount of days, months, years, hours, minutes and seconds to a\n   DateTime object\n* @link http:\/\/www.php.net\/manual\/en\/datetime.add.php\n* @param interval\n*\/"
+            },
+            {
+                "name": "sub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n* Subtracts an amount of days, months, years, hours, minutes and seconds from\n   a DateTime object\n* @link http:\/\/www.php.net\/manual\/en\/datetime.sub.php\n* @param interval\n*\/"
+            },
+            {
+                "name": "getTimezone",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Return time zone relative to given DateTime\n * @link http:\/\/www.php.net\/manual\/en\/datetime.gettimezone.php\n *\/"
+            },
+            {
+                "name": "setTimezone",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "timezone",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the time zone for the DateTime object\n * @link http:\/\/www.php.net\/manual\/en\/datetime.settimezone.php\n * @param timezone\n *\/"
+            },
+            {
+                "name": "getOffset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the timezone offset\n * @link http:\/\/www.php.net\/manual\/en\/datetime.getoffset.php\n *\/"
+            },
+            {
+                "name": "setTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "hour",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "minute",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "second",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the time\n * @link http:\/\/www.php.net\/manual\/en\/datetime.settime.php\n * @param hour\n * @param minute\n * @param second[optional]\n *\/"
+            },
+            {
+                "name": "setDate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "year",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "month",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "day",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the date\n * @link http:\/\/www.php.net\/manual\/en\/datetime.setdate.php\n * @param year\n * @param month\n * @param day\n *\/"
+            },
+            {
+                "name": "setISODate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "year",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "week",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "day",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the ISO date\n * @link http:\/\/www.php.net\/manual\/en\/datetime.setisodate.php\n * @param year\n * @param week\n * @param day[optional]\n *\/"
+            },
+            {
+                "name": "setTimestamp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "unixtimestamp",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the date and time based on an Unix timestamp\n * @link http:\/\/www.php.net\/manual\/en\/datetime.settimestamp.php\n * @param unixtimestamp\n *\/"
+            },
+            {
+                "name": "getTimestamp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Gets the Unix timestamp\n * @link http:\/\/www.php.net\/manual\/en\/datetime.gettimestamp.php\n *\/"
+            },
+            {
+                "name": "diff",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "absolute",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns the difference between two DateTime objects\n * @link http:\/\/www.php.net\/manual\/en\/datetime.diff.php\n * @param object\n * @param absolute[optional]\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "ATOM",
+                "value": "Y-m-d\\TH:i:sP",
+                "doc": null
+            },
+            {
+                "name": "COOKIE",
+                "value": "l, d-M-y H:i:s T",
+                "doc": null
+            },
+            {
+                "name": "ISO8601",
+                "value": "Y-m-d\\TH:i:sO",
+                "doc": null
+            },
+            {
+                "name": "RFC822",
+                "value": "D, d M y H:i:s O",
+                "doc": null
+            },
+            {
+                "name": "RFC850",
+                "value": "l, d-M-y H:i:s T",
+                "doc": null
+            },
+            {
+                "name": "RFC1036",
+                "value": "D, d M y H:i:s O",
+                "doc": null
+            },
+            {
+                "name": "RFC1123",
+                "value": "D, d M Y H:i:s O",
+                "doc": null
+            },
+            {
+                "name": "RFC2822",
+                "value": "D, d M Y H:i:s O",
+                "doc": null
+            },
+            {
+                "name": "RFC3339",
+                "value": "Y-m-d\\TH:i:sP",
+                "doc": null
+            },
+            {
+                "name": "RSS",
+                "value": "D, d M Y H:i:s O",
+                "doc": null
+            },
+            {
+                "name": "W3C",
+                "value": "Y-m-d\\TH:i:sP",
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "DateTimeImmutable",
+        "fqn": "\\DateTimeImmutable",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns new DateTimeImmutable object\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.construct.php\n * @param time[optional]\n * @param object[optional]\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__set_state",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * The __set_state handler\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.set-state.php\n *\/"
+            },
+            {
+                "name": "createFromFormat",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns new DateTimeImmutable object formatted according to the specified format\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.createfromformat.php\n * @param format\n * @param time\n * @param object[optional]\n *\/"
+            },
+            {
+                "name": "getLastErrors",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the warnings and errors\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.getlasterrors.php\n *\/"
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param format\n *\/"
+            },
+            {
+                "name": "getTimezone",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getOffset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTimestamp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "diff",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "absolute",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param object\n * @param absolute[optional]\n *\/"
+            },
+            {
+                "name": "modify",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "modify",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Alters the timestamp\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.modify.php\n * @param modify\n *\/"
+            },
+            {
+                "name": "add",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Adds an amount of days, months, years, hours, minutes and seconds\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.add.php\n * @param interval\n *\/"
+            },
+            {
+                "name": "sub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Subtracts an amount of days, months, years, hours, minutes and seconds\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.sub.php\n * @param interval\n *\/"
+            },
+            {
+                "name": "setTimezone",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "timezone",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the time zone\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.settimezone.php\n * @param timezone\n *\/"
+            },
+            {
+                "name": "setTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "hour",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "minute",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "second",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the time\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.settime.php\n * @param hour\n * @param minute\n * @param second[optional]\n *\/"
+            },
+            {
+                "name": "setDate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "year",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "month",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "day",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the date\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.setdate.php\n * @param year\n * @param month\n * @param day\n *\/"
+            },
+            {
+                "name": "setISODate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "year",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "week",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "day",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the ISO date\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.setisodate.php\n * @param year\n * @param week\n * @param day[optional]\n *\/"
+            },
+            {
+                "name": "setTimestamp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "unixtimestamp",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets the date and time based on an Unix timestamp\n * @link http:\/\/www.php.net\/manual\/en\/datetimeimmutable.settimestamp.php\n * @param unixtimestamp\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "DateTimeZone",
+        "fqn": "\\DateTimeZone",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "timezone",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Creates new DateTimeZone object\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.construct.php\n * @param timezone\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__set_state",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns the name of the timezone\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.getname.php\n *\/"
+            },
+            {
+                "name": "getOffset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "datetime",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns the timezone offset from GMT\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.getoffset.php\n * @param datetime\n *\/"
+            },
+            {
+                "name": "getTransitions",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "timestamp_begin",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timestamp_end",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns all transitions for the timezone\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.gettransitions.php\n * @param timestamp_begin\n * @param timestamp_end\n *\/"
+            },
+            {
+                "name": "getLocation",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns location information for a timezone\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.getlocation.php\n *\/"
+            },
+            {
+                "name": "listAbbreviations",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * Returns associative array containing dst, offset and the timezone name\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.listabbreviations.php\n *\/"
+            },
+            {
+                "name": "listIdentifiers",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "what",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "country",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Returns a numerically indexed array containing all defined timezone identifiers\n * @link http:\/\/www.php.net\/manual\/en\/datetimezone.listidentifiers.php\n * @param what[optional]\n * @param country[optional]\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "AFRICA",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "AMERICA",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "ANTARCTICA",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "ARCTIC",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "ASIA",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "ATLANTIC",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "AUSTRALIA",
+                "value": 64,
+                "doc": null
+            },
+            {
+                "name": "EUROPE",
+                "value": 128,
+                "doc": null
+            },
+            {
+                "name": "INDIAN",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "PACIFIC",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "UTC",
+                "value": 1024,
+                "doc": null
+            },
+            {
+                "name": "ALL",
+                "value": 2047,
+                "doc": null
+            },
+            {
+                "name": "ALL_WITH_BC",
+                "value": 4095,
+                "doc": null
+            },
+            {
+                "name": "PER_COUNTRY",
+                "value": 4096,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "DateInterval",
+        "fqn": "\\DateInterval",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "interval_spec",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Creates a new DateInterval object\n * @link http:\/\/www.php.net\/manual\/en\/dateinterval.construct.php\n * @param interval_spec[optional]\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__set_state",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Formats the interval\n * @link http:\/\/www.php.net\/manual\/en\/dateinterval.format.php\n * @param format\n *\/"
+            },
+            {
+                "name": "createFromDateString",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Sets up a DateInterval from the relative parts of the string\n * @link http:\/\/www.php.net\/manual\/en\/dateinterval.createfromdatestring.php\n * @param time\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "DatePeriod",
+        "fqn": "\\DatePeriod",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "end",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * Creates a new DatePeriod object\n * @link http:\/\/www.php.net\/manual\/en\/dateperiod.construct.php\n * @param start\n * @param interval\n * @param end\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__set_state",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "EXCLUDE_START_DATE",
+                "value": 1,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strtotime",
+        "params": [
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "now",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "idate",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmdate",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mktime",
+        "params": [
+            {
+                "name": "hour",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "minute",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "second",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "month",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "day",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "year",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "is_dst",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmmktime",
+        "params": [
+            {
+                "name": "hour",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "minute",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "second",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "month",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "day",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "year",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "is_dst",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "checkdate",
+        "params": [
+            {
+                "name": "month",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "day",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "year",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strftime",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmstrftime",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "time",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "localtime",
+        "params": [
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "is_associative",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "getdate",
+        "params": [
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_create",
+        "params": [
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_create_immutable",
+        "params": [
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_create_from_format",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_create_immutable_from_format",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_parse",
+        "params": [
+            {
+                "name": "date",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_parse_from_format",
+        "params": [
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "date",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_get_last_errors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_format",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_modify",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "modify",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_add",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "interval",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_sub",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "interval",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_timezone_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_timezone_set",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timezone",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_offset_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_diff",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "absolute",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_time_set",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "hour",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "minute",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "second",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_date_set",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "year",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "month",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "day",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_isodate_set",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "year",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "week",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "day",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_timestamp_set",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "unixtimestamp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_timestamp_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_open",
+        "params": [
+            {
+                "name": "timezone",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_name_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_name_from_abbr",
+        "params": [
+            {
+                "name": "abbr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "gmtOffset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "isdst",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_offset_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "datetime",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_transitions_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp_begin",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timestamp_end",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_location_get",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_identifiers_list",
+        "params": [
+            {
+                "name": "what",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "country",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_abbreviations_list",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "timezone_version_get",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_interval_create_from_date_string",
+        "params": [
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_interval_format",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_default_timezone_set",
+        "params": [
+            {
+                "name": "timezone_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_default_timezone_get",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_sunrise",
+        "params": [
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "latitude",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "longitude",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "zenith",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "gmt_offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_sunset",
+        "params": [
+            {
+                "name": "timestamp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "latitude",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "longitude",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "zenith",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "gmt_offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "date_sun_info",
+        "params": [
+            {
+                "name": "time",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "latitude",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "longitude",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_ATOM",
+        "value": "Y-m-d\\TH:i:sP"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_COOKIE",
+        "value": "l, d-M-y H:i:s T"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_ISO8601",
+        "value": "Y-m-d\\TH:i:sO"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC822",
+        "value": "D, d M y H:i:s O"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC850",
+        "value": "l, d-M-y H:i:s T"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC1036",
+        "value": "D, d M y H:i:s O"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC1123",
+        "value": "D, d M Y H:i:s O"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC2822",
+        "value": "D, d M Y H:i:s O"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RFC3339",
+        "value": "Y-m-d\\TH:i:sP"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_RSS",
+        "value": "D, d M Y H:i:s O"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DATE_W3C",
+        "value": "Y-m-d\\TH:i:sP"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SUNFUNCS_RET_TIMESTAMP",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SUNFUNCS_RET_STRING",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SUNFUNCS_RET_DOUBLE",
+        "value": 2
+    }
+]

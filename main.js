@@ -33,7 +33,7 @@ define(function (require, exports, module) {
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
-    var Strings = require( 'strings' );
+    var Strings = require('strings');
 
     var phpBuiltins             = require("phpdata/php-predefined"),
         functionGroups          = require("text!phpdata/php-function-groups.json"),
@@ -42,6 +42,10 @@ define(function (require, exports, module) {
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
         projectUI               = require("project-ui");
+
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]+[\=][\s+]new\s+/g,
+        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/;
+
 
     function getTokenToCursor(token) {
         var tokenStart = token.token.start,
@@ -54,6 +58,7 @@ define(function (require, exports, module) {
      * @constructor
      */
     function PHPHints() {
+        this.tempValue              = "";
         this.activeToken            = "";
         this.lastToken              = "";
         this.cachedPhpVariables     = [];
@@ -66,9 +71,10 @@ define(function (require, exports, module) {
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
         this.editor = editor;
-        var i               = 0,
-            cursor          = editor.getCursorPos(),
-            tokenToCursor   = "";
+        var i                   = 0,
+            cursor              = editor.getCursorPos(),
+            textFromLineStart   = "",
+            tokenToCursor       = "";
 
         this.activeToken = TokenUtils.getInitialContext(editor._codeMirror, cursor);
 
@@ -78,8 +84,17 @@ define(function (require, exports, module) {
         }
 
         tokenToCursor = getTokenToCursor(this.activeToken);
+        textFromLineStart = this.editor.document.getRange({
+            line: cursor.line,
+            ch: 0
+        }, cursor);
+        this.tempValue = textFromLineStart;
 
-        // start at 2nd char unless explicit request then start immediately
+        if (newClassRegex.test(textFromLineStart)) {
+            return true;
+        }
+
+ /*       // start at 2nd char unless explicit request then start immediately
         if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
@@ -99,7 +114,7 @@ define(function (require, exports, module) {
                     return true;
                 }
             }
-        }
+        }*/
         // nope, no hints
         return false;
     };
@@ -120,7 +135,9 @@ define(function (require, exports, module) {
         tokenToCursor = getTokenToCursor(this.activeToken);
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
-            if ((this.lastToken === "") || (this.activeToken.token.start !== this.lastToken.token.start) || (this.activeToken.pos.line !== this.lastToken.pos.line)) {
+            if ((this.lastToken === "") ||
+                    (this.activeToken.token.start !== this.lastToken.token.start) ||
+                    (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
                 var varList = this.editor.document.getText().match(this.tokenVariable);
                 if (varList) {
@@ -161,7 +178,7 @@ define(function (require, exports, module) {
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
         } else {
-            // not a $variable, could be a reserved word of some type
+            /*// not a $variable, could be a reserved word of some type
             // load keywords that match
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
                 if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
@@ -193,7 +210,8 @@ define(function (require, exports, module) {
                 }
             }
             // munge all the lists together and sort
-            hintList = phpKeywordList.concat(phpConstList, phpFuncList).sort();
+            hintList = phpKeywordList.concat(phpConstList, phpFuncList).sort();*/
+            hintList.push(this.tempValue);
         }
 
         return {

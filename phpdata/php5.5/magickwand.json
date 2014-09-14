@@ -1,0 +1,5044 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "wandgetexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wandgetexceptionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wandgetexceptiontype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wandhasexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "isdrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ismagickwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ispixeliterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ispixelwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "cleardrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clonedrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroydrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawaffine",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawannotation",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawarc",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawbezier",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawcircle",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawcomment",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawcomposite",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawellipse",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetclippath",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetcliprule",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetclipunits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetexceptionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetexceptiontype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfillalpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfillopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfillcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfillrule",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfont",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfontfamily",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfontsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfontstretch",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfontstyle",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetfontweight",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetgravity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokealpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokeopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokeantialias",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokecolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokedasharray",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokedashoffset",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokelinecap",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokelinejoin",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokemiterlimit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetstrokewidth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgettextalignment",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgettextantialias",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgettextdecoration",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgettextencoding",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgetvectorgraphics",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawgettextundercolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawline",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawmatte",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathclose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetoabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetorelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetoquadraticbezierabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetoquadraticbezierrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetoquadraticbeziersmoothabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetoquadraticbeziersmoothrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetosmoothabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathcurvetosmoothrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathellipticarcabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathellipticarcrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathfinish",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetoabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetorelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetohorizontalabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetohorizontalrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetoverticalabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathlinetoverticalrelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathmovetoabsolute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathmovetorelative",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpathstart",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpoint",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpolygon",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpolyline",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpopclippath",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpopdefs",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpoppattern",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpushclippath",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpushdefs",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawpushpattern",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawrectangle",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawrender",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawrotate",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawroundrectangle",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawscale",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetclippath",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetcliprule",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetclipunits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfillalpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfillopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfillcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfillpatternurl",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfillrule",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfont",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfontfamily",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfontsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfontstretch",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfontstyle",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetfontweight",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetgravity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokealpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokeopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokeantialias",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokecolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokedasharray",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokedashoffset",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokelinecap",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokelinejoin",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokemiterlimit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokepatternurl",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetstrokewidth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsettextalignment",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsettextantialias",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsettextdecoration",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsettextencoding",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsettextundercolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetvectorgraphics",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawskewx",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawskewy",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawtranslate",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "drawsetviewbox",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newdrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "popdrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pushdrawingwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clearmagickwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clonemagickwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroymagickwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickadaptivethresholdimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickaddimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickaddimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickaddnoiseimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickaffinetransformimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickannotateimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickappendimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickaverageimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickblackthresholdimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickblurimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickborderimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcharcoalimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickchopimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickclipimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickclippathimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcoalesceimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcolorfloodfillimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcolorizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcombineimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcommentimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcompareimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcompositeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickconstituteimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcontrastimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickconvolveimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcropimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickcyclecolormapimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdeconstructimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdescribeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickidentifyimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdespeckleimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdisplayimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdisplayimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickdrawimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickechoimageblob",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickechoimagesblob",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickedgeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickembossimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickenhanceimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickequalizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickevaluateimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickflattenimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickflipimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickflopimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickframeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickfximage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgammaimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgaussianblurimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetcompression",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetcompressionquality",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetcopyright",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetexceptionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetexceptiontype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetfilename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetformat",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgethomeurl",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagebackgroundcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageblob",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagesblob",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageblueprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagebordercolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagechannelmean",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecolormapcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecolors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecolorspace",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecompose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecompression",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagecompressionquality",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagedelay",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagedepth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagedistortion",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagedispose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageendian",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageattribute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageextrema",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagefilename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageformat",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagegamma",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagegreenprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageheight",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagehistogram",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageindex",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageinterlacescheme",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageiterations",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagemattecolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagemimetype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetmimetype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagepage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagepixelcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagepixels",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageprofile",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageproperty",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageredprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageregion",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagerenderingintent",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageresolution",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagescene",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagesignature",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagesize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagetickspersecond",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagetotalinkdensity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagetype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimageunits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagevirtualpixelmethod",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagewhitepoint",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetimagewidth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetinterlacescheme",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetnumberimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetoption",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetpackagename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetpage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetquantumdepth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetquantumrange",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetreleasedate",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetresource",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetresourcelimit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetsamplingfactors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetwandsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetversion",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetversionnumber",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetversionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickhasnextimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickhaspreviousimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickimplodeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicklabelimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicklevelimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmagnifyimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmapimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmattefloodfillimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmedianfilterimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickminifyimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmodulateimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmontageimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmorphimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmosaicimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickmotionblurimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicknegateimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicknewimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicknextimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicknormalizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickoilpaintimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickfloodfillpaintimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickopaquepaintimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicktransparentpaintimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickpingimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickposterizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickpreviewimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickpreviousimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickprofileimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickquantizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickquantizeimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickqueryconfigureoption",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickqueryconfigureoptions",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickqueryfontmetrics",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetcharwidth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetcharheight",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgettextascent",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgettextdescent",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetstringwidth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetstringheight",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickgetmaxtextadvance",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickqueryfonts",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickqueryformats",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickradialblurimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickraiseimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickreadimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickreadimageblob",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickreadimagefile",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickreadimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickrecolorimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickreducenoiseimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickremoveimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickremoveimageprofile",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickremoveimageprofiles",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickresetimagepage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickresetiterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickresampleimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickresizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickrollimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickrotateimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksampleimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickscaleimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickseparateimagechannel",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksepiatoneimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetbackgroundcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetcompression",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetcompressionquality",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetfilename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetfirstiterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetformat",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagealphachannel",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageattribute",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagebackgroundcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagebias",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageblueprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagebordercolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagecolormapcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagecolorspace",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagecompose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagecompression",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagecompressionquality",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagedelay",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagedepth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagedispose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageendian",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageextent",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagesize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagefilename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageformat",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagegamma",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagegreenprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageindex",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageinterlacescheme",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageiterations",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagemattecolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageoption",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagepage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagepixels",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageprofile",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageproperty",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageredprimary",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagerenderingintent",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageresolution",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagescene",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagetickspersecond",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagetype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimageunits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagevirtualpixelmethod",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetimagewhitepoint",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetinterlacescheme",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetlastiterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetoption",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetpage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetpassphrase",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetresolution",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetresourcelimit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetsamplingfactors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksetwandsize",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksettype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickshadowimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksharpenimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickshaveimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickshearimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksolarizeimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickspliceimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickspreadimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickstatisticimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicksteganoimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickstereoimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickstripimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickswirlimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicktextureimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickthresholdimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickthumbnailimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicktintimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicktransformimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magicktrimimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickunsharpmaskimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickwaveimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickwhitethresholdimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickwriteimage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickwriteimagefile",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "magickwriteimages",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newmagickwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clearpixeliterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroypixeliterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newpixeliterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newpixelregioniterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetiteratorexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetiteratorexceptionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetiteratorexceptiontype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetnextiteratorrow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetpreviousiteratorrow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelresetiterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetfirstiteratorrow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetiteratorrow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetlastiteratorrow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsynciterator",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clearpixelwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "clonepixelwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroypixelwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroypixelwands",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "destroypixelwandarray",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ispixelwandsimilar",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newpixelwand",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newpixelwands",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "newpixelwandarray",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetalpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetalphaquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetexception",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetexceptionstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetexceptiontype",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetblack",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetblackquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetblue",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetbluequantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetcolorasstring",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetcolorcount",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetcyan",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetcyanquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetgreen",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetgreenquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetindex",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetmagenta",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetmagentaquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetopacityquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetquantumcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetred",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetredquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetyellow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelgetyellowquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetalpha",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetalphaquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetblack",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetblackquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetblue",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetbluequantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetcolorcount",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetcyan",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetcyanquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetgreen",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetgreenquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetindex",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetmagenta",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetmagentaquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetopacity",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetopacityquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetquantumcolor",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetred",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetredquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetyellow",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pixelsetyellowquantum",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_QuantumRange",
+        "value": 65535
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MaxRGB",
+        "value": 65535
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OpaqueOpacity",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TransparentOpacity",
+        "value": 65535
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedAlphaChannel",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ActivateAlphaChannel",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DeactivateAlphaChannel",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ResetAlphaChannel",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SetAlphaChannel",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedAlign",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LeftAlign",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CenterAlign",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RightAlign",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedChannel",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RedChannel",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CyanChannel",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GreenChannel",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MagentaChannel",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlueChannel",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YellowChannel",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AlphaChannel",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OpacityChannel",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlackChannel",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_IndexChannel",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AllChannels",
+        "value": 134217727
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedPathUnits",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UserSpace",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UserSpaceOnUse",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ObjectBoundingBox",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedColorspace",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RGBColorspace",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GRAYColorspace",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TransparentColorspace",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OHTAColorspace",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LABColorspace",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_XYZColorspace",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YCbCrColorspace",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YCCColorspace",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YIQColorspace",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YPbPrColorspace",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_YUVColorspace",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CMYKColorspace",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_sRGBColorspace",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HSBColorspace",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HSLColorspace",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HWBColorspace",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedCompositeOp",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NoCompositeOp",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AddCompositeOp",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AtopCompositeOp",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlendCompositeOp",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BumpmapCompositeOp",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ClearCompositeOp",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ColorBurnCompositeOp",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ColorDodgeCompositeOp",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ColorizeCompositeOp",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyBlackCompositeOp",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyBlueCompositeOp",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyCompositeOp",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyCyanCompositeOp",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyGreenCompositeOp",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyMagentaCompositeOp",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyOpacityCompositeOp",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyRedCompositeOp",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CopyYellowCompositeOp",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DarkenCompositeOp",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DstAtopCompositeOp",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DstCompositeOp",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DstInCompositeOp",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DstOutCompositeOp",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DstOverCompositeOp",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DifferenceCompositeOp",
+        "value": 26
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DisplaceCompositeOp",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DissolveCompositeOp",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ExclusionCompositeOp",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HardLightCompositeOp",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HueCompositeOp",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_InCompositeOp",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LightenCompositeOp",
+        "value": 33
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LuminizeCompositeOp",
+        "value": 35
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MinusCompositeOp",
+        "value": 36
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ModulateCompositeOp",
+        "value": 37
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MultiplyCompositeOp",
+        "value": 38
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OutCompositeOp",
+        "value": 39
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OverCompositeOp",
+        "value": 40
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OverlayCompositeOp",
+        "value": 41
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PlusCompositeOp",
+        "value": 42
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ReplaceCompositeOp",
+        "value": 43
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SaturateCompositeOp",
+        "value": 44
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ScreenCompositeOp",
+        "value": 45
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SoftLightCompositeOp",
+        "value": 46
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SrcAtopCompositeOp",
+        "value": 47
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SrcCompositeOp",
+        "value": 48
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SrcInCompositeOp",
+        "value": 49
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SrcOutCompositeOp",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SrcOverCompositeOp",
+        "value": 51
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SubtractCompositeOp",
+        "value": 52
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ThresholdCompositeOp",
+        "value": 53
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_XorCompositeOp",
+        "value": 54
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedCompression",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NoCompression",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BZipCompression",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FaxCompression",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_Group4Compression",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_JPEGCompression",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LosslessJPEGCompression",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LZWCompression",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RLECompression",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ZipCompression",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedDecoration",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NoDecoration",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UnderlineDecoration",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OverlineDecoration",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LineThroughDecoration",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UnrecognizedDispose",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedDispose",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NoneDispose",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BackgroundDispose",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PreviousDispose",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedException",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WarningException",
+        "value": 300
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ResourceLimitWarning",
+        "value": 300
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TypeWarning",
+        "value": 305
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OptionWarning",
+        "value": 310
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DelegateWarning",
+        "value": 315
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MissingDelegateWarning",
+        "value": 320
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CorruptImageWarning",
+        "value": 325
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FileOpenWarning",
+        "value": 330
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlobWarning",
+        "value": 335
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_StreamWarning",
+        "value": 340
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CacheWarning",
+        "value": 345
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CoderWarning",
+        "value": 350
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ModuleWarning",
+        "value": 355
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DrawWarning",
+        "value": 360
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ImageWarning",
+        "value": 365
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WandWarning",
+        "value": 370
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MonitorWarning",
+        "value": 385
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RegistryWarning",
+        "value": 390
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ConfigureWarning",
+        "value": 395
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ErrorException",
+        "value": 400
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ResourceLimitError",
+        "value": 400
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TypeError",
+        "value": 405
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OptionError",
+        "value": 410
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DelegateError",
+        "value": 415
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MissingDelegateError",
+        "value": 420
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CorruptImageError",
+        "value": 425
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FileOpenError",
+        "value": 430
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlobError",
+        "value": 435
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_StreamError",
+        "value": 440
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CacheError",
+        "value": 445
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CoderError",
+        "value": 450
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ModuleError",
+        "value": 455
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DrawError",
+        "value": 460
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ImageError",
+        "value": 465
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WandError",
+        "value": 470
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MonitorError",
+        "value": 485
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RegistryError",
+        "value": 490
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ConfigureError",
+        "value": 495
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FatalErrorException",
+        "value": 700
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ResourceLimitFatalError",
+        "value": 700
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TypeFatalError",
+        "value": 705
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OptionFatalError",
+        "value": 710
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DelegateFatalError",
+        "value": 715
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MissingDelegateFatalError",
+        "value": 720
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CorruptImageFatalError",
+        "value": 725
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FileOpenFatalError",
+        "value": 730
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlobFatalError",
+        "value": 735
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_StreamFatalError",
+        "value": 740
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CacheFatalError",
+        "value": 745
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CoderFatalError",
+        "value": 750
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ModuleFatalError",
+        "value": 755
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DrawFatalError",
+        "value": 760
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ImageFatalError",
+        "value": 765
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WandFatalError",
+        "value": 770
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MonitorFatalError",
+        "value": 785
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RegistryFatalError",
+        "value": 790
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ConfigureFatalError",
+        "value": 795
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedRule",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_EvenOddRule",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NonZeroRule",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedFilter",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PointFilter",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BoxFilter",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TriangleFilter",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HermiteFilter",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HanningFilter",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HammingFilter",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlackmanFilter",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GaussianFilter",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_QuadraticFilter",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CubicFilter",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CatromFilter",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MitchellFilter",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LanczosFilter",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BesselFilter",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SincFilter",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedGravity",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ForgetGravity",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NorthWestGravity",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NorthGravity",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NorthEastGravity",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WestGravity",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CenterGravity",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_EastGravity",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SouthWestGravity",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SouthGravity",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SouthEastGravity",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_StaticGravity",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedType",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BilevelType",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GrayscaleType",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GrayscaleMatteType",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PaletteType",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PaletteMatteType",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TrueColorType",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TrueColorMatteType",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ColorSeparationType",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ColorSeparationMatteType",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OptimizeType",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedInterlace",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NoInterlace",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LineInterlace",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PlaneInterlace",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PartitionInterlace",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedCap",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ButtCap",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RoundCap",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SquareCap",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedJoin",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MiterJoin",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RoundJoin",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BevelJoin",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedEvaluateOperator",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AddEvaluateOperator",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AndEvaluateOperator",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DivideEvaluateOperator",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LeftShiftEvaluateOperator",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MaxEvaluateOperator",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MinEvaluateOperator",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MultiplyEvaluateOperator",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OrEvaluateOperator",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RightShiftEvaluateOperator",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SetEvaluateOperator",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SubtractEvaluateOperator",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_XorEvaluateOperator",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedMetric",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MeanAbsoluteErrorMetric",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MeanSquaredErrorMetric",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PeakAbsoluteErrorMetric",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PeakSignalToNoiseRatioMetric",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RootMeanSquaredErrorMetric",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedMode",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FrameMode",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UnframeMode",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ConcatenateMode",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedNoise",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UniformNoise",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GaussianNoise",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MultiplicativeGaussianNoise",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ImpulseNoise",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LaplacianNoise",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PoissonNoise",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedMethod",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PointMethod",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ReplaceMethod",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FloodfillMethod",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FillToBorderMethod",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ResetMethod",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedPreview",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RotatePreview",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ShearPreview",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RollPreview",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_HuePreview",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SaturationPreview",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BrightnessPreview",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GammaPreview",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SpiffPreview",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DullPreview",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GrayscalePreview",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_QuantizePreview",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DespecklePreview",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ReduceNoisePreview",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AddNoisePreview",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SharpenPreview",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_BlurPreview",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ThresholdPreview",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_EdgeDetectPreview",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SpreadPreview",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SolarizePreview",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ShadePreview",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RaisePreview",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SegmentPreview",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SwirlPreview",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ImplodePreview",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_WavePreview",
+        "value": 26
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_OilPaintPreview",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CharcoalDrawingPreview",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_JPEGPreview",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedIntent",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SaturationIntent",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PerceptualIntent",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AbsoluteIntent",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_RelativeIntent",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedResolution",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PixelsPerInchResolution",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_PixelsPerCentimeterResolution",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedResource",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AreaResource",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DiskResource",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FileResource",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MapResource",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MemoryResource",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedStatistic",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_GradientStatistic",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MaximumStatistic",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MeanStatistic",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MedianStatistic",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MinimumStatistic",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ModeStatistic",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NonpeakStatistic",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_StandardDeviationStatistic",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedPixel",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CharPixel",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ShortPixel",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_IntegerPixel",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_LongPixel",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_FloatPixel",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_DoublePixel",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedStretch",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NormalStretch",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UltraCondensedStretch",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ExtraCondensedStretch",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_CondensedStretch",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SemiCondensedStretch",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_SemiExpandedStretch",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ExpandedStretch",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ExtraExpandedStretch",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UltraExpandedStretch",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AnyStretch",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedStyle",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_NormalStyle",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ItalicStyle",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ObliqueStyle",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_AnyStyle",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_UndefinedVirtualPixelMethod",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_ConstantVirtualPixelMethod",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_EdgeVirtualPixelMethod",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_MirrorVirtualPixelMethod",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MW_TileVirtualPixelMethod",
+        "value": 7
+    }
+]

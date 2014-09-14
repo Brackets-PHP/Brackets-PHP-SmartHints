@@ -1,0 +1,268 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "finfo",
+        "fqn": "\\finfo",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "finfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "arg",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param options[optional]\n * @param arg[optional]\n *\/"
+            },
+            {
+                "name": "set_flags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param options\n *\/"
+            },
+            {
+                "name": "file",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param filename\n * @param options[optional]\n * @param context[optional]\n *\/"
+            },
+            {
+                "name": "buffer",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "string",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param string\n * @param options[optional]\n * @param context[optional]\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_open",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_close",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_set_flags",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_file",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_buffer",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mime_content_type",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_SYMLINK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME",
+        "value": 1040
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME_TYPE",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME_ENCODING",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_DEVICES",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_CONTINUE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_PRESERVE_ATIME",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_RAW",
+        "value": 256
+    }
+]

@@ -1,0 +1,1496 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "stdClass",
+        "fqn": "\\stdClass",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Exception",
+        "fqn": "\\Exception",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param message[optional]\n * @param code[optional]\n * @param previous[optional]\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ErrorException",
+        "fqn": "\\ErrorException",
+        "type": 0,
+        "extends": "Exception",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "severity",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "lineno",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param message[optional]\n * @param code[optional]\n * @param severity[optional]\n * @param filename[optional]\n * @param lineno[optional]\n * @param previous[optional]\n *\/"
+            },
+            {
+                "name": "getSeverity",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Closure",
+        "fqn": "\\Closure",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "bind",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "closure",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newthis",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newscope",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param closure\n * @param newthis\n * @param newscope[optional]\n *\/"
+            },
+            {
+                "name": "bindTo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "newthis",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newscope",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param newthis\n * @param newscope[optional]\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Generator",
+        "fqn": "\\Generator",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "rewind",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "valid",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "current",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "key",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "next",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "send",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\n * @param value\n *\/"
+            },
+            {
+                "name": "__wakeup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zend_version",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_num_args",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_get_arg",
+        "params": [
+            {
+                "name": "arg_num",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_get_args",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strlen",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strcmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strncmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strcasecmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strncasecmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "each",
+        "params": [
+            {
+                "name": "array",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "error_reporting",
+        "params": [
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "define",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "case_insensitive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "defined",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_called_class",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_parent_class",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "method_exists",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "property_exists",
+        "params": [
+            {
+                "name": "class",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "property",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "class_exists",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "interface_exists",
+        "params": [
+            {
+                "name": "interface_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "trait_exists",
+        "params": [
+            {
+                "name": "traitname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "function_exists",
+        "params": [
+            {
+                "name": "function_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "class_alias",
+        "params": [
+            {
+                "name": "original",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alias",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_included_files",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_required_files",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "is_subclass_of",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "allow_string",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "is_a",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "allow_string",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class_vars",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_object_vars",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class_methods",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "trigger_error",
+        "params": [
+            {
+                "name": "error_msg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "user_error",
+        "params": [
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "set_error_handler",
+        "params": [
+            {
+                "name": "error_handler",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_types",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "restore_error_handler",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "set_exception_handler",
+        "params": [
+            {
+                "name": "exception_handler",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "restore_exception_handler",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_classes",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_traits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_interfaces",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_functions",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_vars",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "create_function",
+        "params": [
+            {
+                "name": "args",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_resource_type",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_loaded_extensions",
+        "params": [
+            {
+                "name": "zend_extensions",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "extension_loaded",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_extension_funcs",
+        "params": [
+            {
+                "name": "module_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_constants",
+        "params": [
+            {
+                "name": "categorize",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debug_backtrace",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debug_print_backtrace",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_collect_cycles",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_enabled",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_enable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_disable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_RECOVERABLE_ERROR",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_WARNING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_PARSE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_NOTICE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_STRICT",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_DEPRECATED",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_CORE_ERROR",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_CORE_WARNING",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_COMPILE_ERROR",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_COMPILE_WARNING",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_ERROR",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_WARNING",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_NOTICE",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_DEPRECATED",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_ALL",
+        "value": 32767
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEBUG_BACKTRACE_PROVIDE_OBJECT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEBUG_BACKTRACE_IGNORE_ARGS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TRUE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FALSE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "NULL",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZEND_THREAD_SAFE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZEND_DEBUG_BUILD",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_VERSION",
+        "value": "5.5.5"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MAJOR_VERSION",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MINOR_VERSION",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_RELEASE_VERSION",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EXTRA_VERSION",
+        "value": ""
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_VERSION_ID",
+        "value": 50505
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_ZTS",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_DEBUG",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OS",
+        "value": "Darwin"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SAPI",
+        "value": "cli"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEFAULT_INCLUDE_PATH",
+        "value": ".:"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PEAR_INSTALL_DIR",
+        "value": ""
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PEAR_EXTENSION_DIR",
+        "value": "\/opt\/local\/lib\/php55\/extensions\/no-debug-non-zts-20121212"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EXTENSION_DIR",
+        "value": "\/opt\/local\/lib\/php55\/extensions\/no-debug-non-zts-20121212"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_PREFIX",
+        "value": "\/opt\/local"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_BINDIR",
+        "value": "\/opt\/local\/bin"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MANDIR",
+        "value": "\/opt\/local\/share\/man"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_LIBDIR",
+        "value": "\/opt\/local\/lib\/php55"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_DATADIR",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SYSCONFDIR",
+        "value": "\/opt\/local\/etc"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_LOCALSTATEDIR",
+        "value": "\/opt\/local\/var"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_CONFIG_FILE_PATH",
+        "value": "\/opt\/local\/etc\/php55"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_CONFIG_FILE_SCAN_DIR",
+        "value": "\/opt\/local\/var\/db\/php55"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SHLIB_SUFFIX",
+        "value": "so"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EOL",
+        "value": "\n"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MAXPATHLEN",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_INT_MAX",
+        "value": 9223372036854775807
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_INT_SIZE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_BINARY",
+        "value": "\/opt\/local\/bin\/php55"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_START",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_WRITE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FLUSH",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CLEAN",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FINAL",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CONT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_END",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CLEANABLE",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FLUSHABLE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_REMOVABLE",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_STDFLAGS",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_STARTED",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_DISABLED",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_OK",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_INI_SIZE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_FORM_SIZE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_PARTIAL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_NO_FILE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_NO_TMP_DIR",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_CANT_WRITE",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_EXTENSION",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDIN",
+        "value": "Resource id #1"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDOUT",
+        "value": "Resource id #2"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDERR",
+        "value": "Resource id #3"
+    }
+]

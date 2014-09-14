@@ -1,0 +1,44 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "twig_template_get_attributes",
+        "params": [
+            {
+                "name": "template",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "item",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "arguments",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "isDefinedTest",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

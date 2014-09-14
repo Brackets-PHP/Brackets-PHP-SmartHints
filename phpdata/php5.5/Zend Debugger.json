@@ -1,0 +1,65 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "debugger_print",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_call_stack",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_start_debug",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_connector_pid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_connect",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_get_server_start_time",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_start_debug_mode",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_is_debug_mode_enabled",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debugger_stop_debug_mode",
+        "params": [
+
+        ]
+    }
+]

@@ -1,0 +1,284 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "win32_start_service_ctrl_dispatcher",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_set_service_status",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "checkpoint",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_create_service",
+        "params": [
+            {
+                "name": "details",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "machine",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_delete_service",
+        "params": [
+            {
+                "name": "servicename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "machine",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_get_last_control_message",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_query_service_status",
+        "params": [
+            {
+                "name": "servicename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "machine",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_start_service",
+        "params": [
+            {
+                "name": "servicename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "machine",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "win32_stop_service",
+        "params": [
+            {
+                "name": "servicename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "machine",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_CONTINUE",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_INTERROGATE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_PAUSE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_STOP",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_SHUTDOWN",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_HARDWAREPROFILECHANGE",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_POWEREVENT",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTROL_SESSIONCHANGE",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_ERROR_CALL_NOT_IMPLEMENTED",
+        "value": 120
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_NO_ERROR",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_RUNNING",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_STOPPED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_START_PENDING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_STOP_PENDING",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_WIN32_OWN_PROCESS",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_INTERACTIVE_PROCESS",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_CONTINUE_PENDING",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_PAUSE_PENDING",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_PAUSED",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_NETBINDCHANGE",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_PARAMCHANGE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_PAUSE_CONTINUE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_SHUTDOWN",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_STOP",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_HARDWAREPROFILECHANGE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_POWEREVENT",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_ACCEPT_SESSIONCHANGE",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_FILE_SYSTEM_DRIVER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_KERNEL_DRIVER",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_WIN32_SHARE_PROCESS",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WIN32_SERVICE_RUNS_IN_SYSTEM_PROCESS",
+        "value": 1
+    }
+]
