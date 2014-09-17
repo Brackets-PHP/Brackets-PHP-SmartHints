@@ -43,8 +43,9 @@ define(function (require, exports, module) {
         filters                 = [],
         projectUI               = require("project-ui");
 
-    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]+[\=][\s+]new\s+/g,
-        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/;
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([a-zA-Z0-9_]*)/g,
+        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/,
+        tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
 
     function getTokenToCursor(token) {
@@ -66,7 +67,6 @@ define(function (require, exports, module) {
         this.cachedPhpKeywords      = [];
         this.cachedPhpFunctions     = [];
         this.cachedLocalVariables   = [];
-        this.tokenVariable          = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -89,9 +89,13 @@ define(function (require, exports, module) {
             ch: 0
         }, cursor);
 
+        // e.g. $var = new - we always have a class so return true right away
         if (newClassRegex.test(textFromLineStart)) {
             return true;
-        } else if (this.activeToken.token.string.length > 1 || implicitChar === null) {
+        }
+        
+        // if we have entered 2 or more chars, do a simple keyword match and return true
+        if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
                 if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
@@ -142,7 +146,7 @@ define(function (require, exports, module) {
                     (this.activeToken.token.start !== this.lastToken.token.start) ||
                     (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
-                var varList = this.editor.document.getText().match(this.tokenVariable);
+                var varList = this.editor.document.getText().match(tokenVariable);
                 if (varList) {
                     for (i = 0; i < varList.length; i++) {
                         var word = varList[i];
@@ -307,31 +311,37 @@ define(function (require, exports, module) {
         }
     }
 
-    AppInit.appReady(function () {
-        predefinedFunctions = phpBuiltins.predefinedFunctions;
-        // PHP SmartHints prefs
-        prefs.definePreference("filteredFunctionList", "array", [])
-            .on("change", function () {
-                handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
-            });
-        prefs.definePreference("isPhpProject", "boolean", false)
-            .on("change", function () {
-                handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
-            });
-        handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
-        handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
+    function loadGenericPredefines() {
+        
+    }
+    
+    function loadVersionKeywords() {
+        
+    }
 
-        // register the provider.  Priority = 10 to be the provider of choice for php
-        CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
+    predefinedFunctions = phpBuiltins.predefinedFunctions;
+    // PHP SmartHints prefs
+    prefs.definePreference("filteredFunctionList", "array", [])
+        .on("change", function () {
+            handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
+        });
+    prefs.definePreference("isPhpProject", "boolean", false)
+        .on("change", function () {
+            handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
+        });
+    handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
+    handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
 
-        phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
-        phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
-        phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
+    // register the provider.  Priority = 10 to be the provider of choice for php
+    CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
 
-        ExtensionUtils.loadStyleSheet(module, "css/main.css");
-        toolbarIcon.appendTo('#main-toolbar .buttons')
-            .on("click", function () {
-                projectUI.showProjectDialog(filters);
-            });
-    });
+    phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
+    phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
+    phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
+
+    ExtensionUtils.loadStyleSheet(module, "css/main.css");
+    toolbarIcon.appendTo('#main-toolbar .buttons')
+        .on("click", function () {
+            projectUI.showProjectDialog(filters);
+        });
 });
