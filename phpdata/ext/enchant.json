@@ -1,0 +1,361 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_init",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_free",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_get_error",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_set_dict_path",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_get_dict_path",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_list_dicts",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_request_dict",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_request_pwl_dict",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_free_dict",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_dict_exists",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_set_ordering",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ordering",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_broker_describe",
+        "params": [
+            {
+                "name": "broker",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_check",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_suggest",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_add_to_personal",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_add_to_session",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_is_in_session",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_store_replacement",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mis",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cor",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_get_error",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_describe",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "enchant_dict_quick_check",
+        "params": [
+            {
+                "name": "dict",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "suggestions",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCHANT_MYSPELL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCHANT_ISPELL",
+        "value": 2
+    }
+]

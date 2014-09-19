@@ -1,0 +1,1113 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "mssql_connect",
+        "params": [
+            {
+                "name": "servername",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "new_link",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_pconnect",
+        "params": [
+            {
+                "name": "servername",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "new_link",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_close",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_select_db",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "batch_size",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_batch",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_rows_affected",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_free_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_get_last_message",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_num_rows",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_num_fields",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_field",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_row",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_array",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_type",
+                "type": null,
+                "byRef": false,
+                "default": "MSSQL_BOTH"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_assoc",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_field_length",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_field_name",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_field_type",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_data_seek",
+        "params": [
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_field_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_next_result",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_min_error_severity",
+        "params": [
+            {
+                "name": "severity",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_min_message_severity",
+        "params": [
+            {
+                "name": "severity",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_init",
+        "params": [
+            {
+                "name": "sp_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_bind",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "param_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "is_null",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "maxlen",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_execute",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "skip_results",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_free_statement",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mssql_guid_string",
+        "params": [
+            {
+                "name": "binary",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "short_format",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_connect",
+        "params": [
+            {
+                "name": "servername",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "appname",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "new",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_pconnect",
+        "params": [
+            {
+                "name": "servername",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "appname",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_close",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_select_db",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_batch",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_affected_rows",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_free_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_get_last_message",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_num_rows",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_num_fields",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_field",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_row",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_array",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_assoc",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_field_length",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_field_name",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_field_type",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_data_seek",
+        "params": [
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_field_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_next_result",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_min_error_severity",
+        "params": [
+            {
+                "name": "severity",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_min_message_severity",
+        "params": [
+            {
+                "name": "severity",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_init",
+        "params": [
+            {
+                "name": "sp_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_bind",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "param_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_output",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_null",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "maxlen",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_execute",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "skip_results",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_free_statement",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sybase_guid_string",
+        "params": [
+            {
+                "name": "binary",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "short_format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSSQL_ASSOC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSSQL_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSSQL_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLTEXT",
+        "value": 35
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLVARCHAR",
+        "value": 39
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLCHAR",
+        "value": 47
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLINT1",
+        "value": 48
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLINT2",
+        "value": 52
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLINT4",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLBIT",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLFLT4",
+        "value": 59
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLFLT8",
+        "value": 62
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLFLTN",
+        "value": 109
+    }
+]

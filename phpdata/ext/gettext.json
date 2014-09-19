@@ -1,0 +1,206 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "textdomain",
+        "params": [
+            {
+                "name": "text_domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gettext",
+        "params": [
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "_",
+        "params": [
+            {
+                "name": "msgid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dgettext",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dcgettext",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "category",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bindtextdomain",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ngettext",
+        "params": [
+            {
+                "name": "msgid1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msgid2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dngettext",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msgid1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msgid2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dcngettext",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msgid1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msgid2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "category",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bind_textdomain_codeset",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "codeset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

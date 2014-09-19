@@ -1,0 +1,295 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "apcu_cache_info",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limited",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_clear_cache",
+        "params": [
+            {
+                "name": "info",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_sma_info",
+        "params": [
+            {
+                "name": "limited",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_store",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ttl",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_fetch",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_delete",
+        "params": [
+            {
+                "name": "keys",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_add",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ttl",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_inc",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "step",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_dec",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "step",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_cas",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_exists",
+        "params": [
+            {
+                "name": "keys",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_bin_dump",
+        "params": [
+            {
+                "name": "user_vars",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_bin_load",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_bin_dumpfile",
+        "params": [
+            {
+                "name": "user_vars",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apcu_bin_loadfile",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "APCU_APC_FULL_BC",
+        "value": null
+    }
+]

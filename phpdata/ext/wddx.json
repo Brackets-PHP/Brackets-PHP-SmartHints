@@ -1,0 +1,98 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "wddx_serialize_value",
+        "params": [
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "comment",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wddx_serialize_vars",
+        "params": [
+            {
+                "name": "var_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wddx_packet_start",
+        "params": [
+            {
+                "name": "comment",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wddx_packet_end",
+        "params": [
+            {
+                "name": "packet_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wddx_add_vars",
+        "params": [
+            {
+                "name": "packet_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "wddx_deserialize",
+        "params": [
+            {
+                "name": "packet",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

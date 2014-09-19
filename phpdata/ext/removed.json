@@ -1,0 +1,80 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ob_iconv_handler",
+        "params": [
+            {
+                "name": "contents",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ob_tidyhandler",
+        "params": [
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_register",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_unregister",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_is_registered",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

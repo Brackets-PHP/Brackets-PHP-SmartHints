@@ -1,0 +1,962 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "ZipArchive",
+        "fqn": "\\ZipArchive",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "open",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Open a ZIP file archive\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.open.php\r\n * @param string $filename <p>\r\n * The file name of the ZIP archive to open.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The mode to use to open the archive.\r\n * <p>\r\n * <b>ZipArchive::OVERWRITE<\/b>\r\n * <\/p>\r\n * @return mixed <i>Error codes<\/i>\r\n * <p>\r\n * Returns <b>TRUE<\/b> on success or the error code.\r\n * <p>\r\n * <b>ZipArchive::ER_EXISTS<\/b>\r\n * <\/p>\r\n * <p>\r\n * File already exists.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_INCONS<\/b>\r\n * <\/p>\r\n * <p>\r\n * Zip archive inconsistent.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_INVAL<\/b>\r\n * <\/p>\r\n * <p>\r\n * Invalid argument.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_MEMORY<\/b>\r\n * <\/p>\r\n * <p>\r\n * Malloc failure.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_NOENT<\/b>\r\n * <\/p>\r\n * <p>\r\n * No such file.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_NOZIP<\/b>\r\n * <\/p>\r\n * <p>\r\n * Not a zip archive.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_OPEN<\/b>\r\n * <\/p>\r\n * <p>\r\n * Can't open file.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_READ<\/b>\r\n * <\/p>\r\n * <p>\r\n * Read error.\r\n * <\/p>\r\n * <p>\r\n * <b>ZipArchive::ER_SEEK<\/b>\r\n * <\/p>\r\n * <p>\r\n * Seek error.\r\n * <\/p>\r\n * <\/p>\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Close the active archive (opened or newly created)\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getStatusString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.7)<br\/>\r\n * Returns the status error message, system and\/or zip messages\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getstatusstring.php\r\n * @return string a string with the status message on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addEmptyDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "dirname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.8.0)<br\/>\r\n * Add a new directory\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.addemptydir.php\r\n * @param string $dirname <p>\r\n * The directory to add.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addFromString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "contents",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Add a file to a ZIP archive using its contents\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.addfromstring.php\r\n * @param string $localname <p>\r\n * The name of the entry to create.\r\n * <\/p>\r\n * @param string $contents <p>\r\n * The contents to use to create the entry. It is used in a binary\r\n * safe mode.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Adds a file to a ZIP archive from the given path\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.addfile.php\r\n * @param string $filename <p>\r\n * The path to the file to add.\r\n * <\/p>\r\n * @param string $localname [optional] <p>\r\n * If supplied, this is the local name inside the ZIP archive that will override the <i>filename<\/i>.\r\n * <\/p>\r\n * @param int $start [optional] <p>\r\n * This parameter is not used but is required to extend <b>ZipArchive<\/b>.\r\n * <\/p>\r\n * @param int $length [optional] <p>\r\n * This parameter is not used but is required to extend <b>ZipArchive<\/b>.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addGlob",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "options",
+                        "type": "array",
+                        "byRef": false,
+                        "default": "array()"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL zip &gt;= 1.9.0)<br\/>\r\n * Add files from a directory by glob pattern\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.addglob.php\r\n * @param string $pattern <p>\r\n * A <b>glob<\/b> pattern against which files will be matched.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * A bit mask of glob() flags.\r\n * <\/p>\r\n * @param array $options [optional] <p>\r\n * An associative array of options. Available options are:\r\n * <p>\r\n * \"add_path\"\r\n * <\/p>\r\n * <p>\r\n * Prefix to prepend when translating to the local path of the file within\r\n * the archive. This is applied after any remove operations defined by the\r\n * \"remove_path\" or \"remove_all_path\"\r\n * options.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "path",
+                        "type": null,
+                        "byRef": false,
+                        "default": "."
+                    },
+                    {
+                        "name": "options",
+                        "type": "array",
+                        "byRef": false,
+                        "default": "array()"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL zip &gt;= 1.9.0)<br\/>\r\n * Add files from a directory by PCRE pattern\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.addpattern.php\r\n * @param string $pattern <p>\r\n * A PCRE pattern against which files will be matched.\r\n * <\/p>\r\n * @param string $path [optional] <p>\r\n * The directory that will be scanned. Defaults to the current working directory.\r\n * <\/p>\r\n * @param array $options [optional] <p>\r\n * An associative array of options accepted by <b>ZipArchive::addGlob<\/b>.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "renameIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Renames an entry defined by its index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.renameindex.php\r\n * @param int $index <p>\r\n * Index of the entry to rename.\r\n * <\/p>\r\n * @param string $newname <p>\r\n * New name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "renameName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Renames an entry defined by its name\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.renamename.php\r\n * @param string $name <p>\r\n * Name of the entry to rename.\r\n * <\/p>\r\n * @param string $newname <p>\r\n * New name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setArchiveComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "comment",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.4.0)<br\/>\r\n * Set the comment of a ZIP archive\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.setarchivecomment.php\r\n * @param string $comment <p>\r\n * The contents of the comment.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getArchiveComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Returns the Zip archive comment\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getarchivecomment.php\r\n * @param int $flags [optional] <p>\r\n * If flags is set to <b>ZipArchive::FL_UNCHANGED<\/b>, the original unchanged\r\n * comment is returned.\r\n * <\/p>\r\n * @return string the Zip archive comment or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setCommentIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "comment",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.4.0)<br\/>\r\n * Set the comment of an entry defined by its index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.setcommentindex.php\r\n * @param int $index <p>\r\n * Index of the entry.\r\n * <\/p>\r\n * @param string $comment <p>\r\n * The contents of the comment.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setCommentName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "comment",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.4.0)<br\/>\r\n * Set the comment of an entry defined by its name\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.setcommentname.php\r\n * @param string $name <p>\r\n * Name of the entry.\r\n * <\/p>\r\n * @param string $comment <p>\r\n * The contents of the comment.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getCommentIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.4.0)<br\/>\r\n * Returns the comment of an entry using the entry index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getcommentindex.php\r\n * @param int $index <p>\r\n * Index of the entry\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * If flags is set to <b>ZipArchive::FL_UNCHANGED<\/b>, the original unchanged\r\n * comment is returned.\r\n * <\/p>\r\n * @return string the comment on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getCommentName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.4.0)<br\/>\r\n * Returns the comment of an entry using the entry name\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getcommentname.php\r\n * @param string $name <p>\r\n * Name of the entry\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * If flags is set to <b>ZipArchive::FL_UNCHANGED<\/b>, the original unchanged\r\n * comment is returned.\r\n * <\/p>\r\n * @return string the comment on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "deleteIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * delete an entry in the archive using its index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.deleteindex.php\r\n * @param int $index <p>\r\n * Index of the entry to delete.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "deleteName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * delete an entry in the archive using its name\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.deletename.php\r\n * @param string $name <p>\r\n * Name of the entry to delete.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "statName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Get the details of an entry defined by its name.\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.statname.php\r\n * @param string $name <p>\r\n * Name of the entry\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags argument specifies how the name lookup should be done.\r\n * Also, <b>ZipArchive::FL_UNCHANGED<\/b> may be ORed to it to request\r\n * information about the original file in the archive,\r\n * ignoring any changes made.\r\n * <p>\r\n * <b>ZipArchive::FL_NOCASE<\/b>\r\n * <\/p>\r\n * @return array an array containing the entry details or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "statIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Get the details of an entry defined by its index.\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.statindex.php\r\n * @param int $index <p>\r\n * Index of the entry\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * <b>ZipArchive::FL_UNCHANGED<\/b> may be ORed to it to request\r\n * information about the original file in the archive,\r\n * ignoring any changes made.\r\n * <\/p>\r\n * @return array an array containing the entry details or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "locateName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Returns the index of the entry in the archive\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.locatename.php\r\n * @param string $name <p>\r\n * The name of the entry to look up\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags are specified by ORing the following values,\r\n * or 0 for none of them.\r\n * <p>\r\n * <b>ZipArchive::FL_NOCASE<\/b>\r\n * <\/p>\r\n * @return int the index of the entry on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getNameIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Returns the name of an entry using its index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getnameindex.php\r\n * @param int $index <p>\r\n * Index of the entry.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * If flags is set to <b>ZipArchive::FL_UNCHANGED<\/b>, the original unchanged\r\n * name is returned.\r\n * <\/p>\r\n * @return string the name on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "unchangeArchive",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Revert all global changes done in the archive.\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.unchangearchive.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "unchangeAll",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Undo all changes done in the archive\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.unchangeall.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "unchangeIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Revert all changes done to an entry at the given index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.unchangeindex.php\r\n * @param int $index <p>\r\n * Index of the entry.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "unchangeName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.5.0)<br\/>\r\n * Revert all changes done to an entry with the given name.\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.unchangename.php\r\n * @param string $name <p>\r\n * Name of the entry.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "extractTo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "destination",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "entries",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Extract the archive contents\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.extractto.php\r\n * @param string $destination <p>\r\n * Location where to extract the files.\r\n * <\/p>\r\n * @param mixed $entries [optional] <p>\r\n * The entries to extract. It accepts either a single entry name or\r\n * an array of names.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getFromName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Returns the entry contents using its name\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getfromname.php\r\n * @param string $name <p>\r\n * Name of the entry\r\n * <\/p>\r\n * @param int $length [optional] <p>\r\n * The length to be read from the entry. If 0, then the\r\n * entire entry is read.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags to use to open the archive. the following values may\r\n * be ORed to it.\r\n * <p>\r\n * <b>ZipArchive::FL_UNCHANGED<\/b>\r\n * <\/p>\r\n * @return string the contents of the entry on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getFromIndex",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "length",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.3.0)<br\/>\r\n * Returns the entry contents using its index\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getfromindex.php\r\n * @param int $index <p>\r\n * Index of the entry\r\n * <\/p>\r\n * @param int $length [optional] <p>\r\n * The length to be read from the entry. If 0, then the\r\n * entire entry is read.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags to use to open the archive. the following values may\r\n * be ORed to it.\r\n * <p>\r\n * <b>ZipArchive::FL_UNCHANGED<\/b>\r\n * <\/p>\r\n * @return string the contents of the entry on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getStream",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL zip &gt;= 1.1.0)<br\/>\r\n * Get a file handler to the entry defined by its name (read only).\r\n * @link http:\/\/php.net\/manual\/en\/ziparchive.getstream.php\r\n * @param string $name <p>\r\n * The name of the entry to use.\r\n * <\/p>\r\n * @return resource a file pointer (resource) on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "status",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">Status of the Zip Archive<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "statusSys",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">System status of the Zip Archive<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "numFiles",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">Number of files in archive<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "filename",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">File name in the file system<\/p>\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "comment",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">Comment for the archive<\/p>\r\n * @var string\r\n *\/"
+            }
+        ],
+        "constants": [
+            {
+                "name": "CREATE",
+                "value": 1,
+                "doc": "\/**\r\n * Create the archive if it does not exist.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "EXCL",
+                "value": 2,
+                "doc": "\/**\r\n * Error if archive already exists.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CHECKCONS",
+                "value": 4,
+                "doc": "\/**\r\n * Perform additional consistency checks on the archive, and error if they fail.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "OVERWRITE",
+                "value": 8,
+                "doc": "\/**\r\n * Always start a new archive, this mode will overwrite the file if\r\n * it already exists.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "FL_NOCASE",
+                "value": 1,
+                "doc": "\/**\r\n * Ignore case on name lookup\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "FL_NODIR",
+                "value": 2,
+                "doc": "\/**\r\n * Ignore directory component\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "FL_COMPRESSED",
+                "value": 4,
+                "doc": "\/**\r\n * Read compressed data\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "FL_UNCHANGED",
+                "value": 8,
+                "doc": "\/**\r\n * Use original data, ignoring changes.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_DEFAULT",
+                "value": null,
+                "doc": "\/**\r\n * better of deflate or store.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_STORE",
+                "value": 0,
+                "doc": "\/**\r\n * stored (uncompressed).\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_SHRINK",
+                "value": 1,
+                "doc": "\/**\r\n * shrunk\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_REDUCE_1",
+                "value": 2,
+                "doc": "\/**\r\n * reduced with factor 1\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_REDUCE_2",
+                "value": 3,
+                "doc": "\/**\r\n * reduced with factor 2\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_REDUCE_3",
+                "value": 4,
+                "doc": "\/**\r\n * reduced with factor 3\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_REDUCE_4",
+                "value": 5,
+                "doc": "\/**\r\n * reduced with factor 4\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_IMPLODE",
+                "value": 6,
+                "doc": "\/**\r\n * imploded\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_DEFLATE",
+                "value": 8,
+                "doc": "\/**\r\n * deflated\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_DEFLATE64",
+                "value": 9,
+                "doc": "\/**\r\n * deflate64\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_PKWARE_IMPLODE",
+                "value": 10,
+                "doc": "\/**\r\n * PKWARE imploding\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_BZIP2",
+                "value": 12,
+                "doc": "\/**\r\n * BZIP2 algorithm\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "CM_LZMA",
+                "value": 14,
+                "doc": null
+            },
+            {
+                "name": "CM_TERSE",
+                "value": 18,
+                "doc": null
+            },
+            {
+                "name": "CM_LZ77",
+                "value": 19,
+                "doc": null
+            },
+            {
+                "name": "CM_WAVPACK",
+                "value": 97,
+                "doc": null
+            },
+            {
+                "name": "CM_PPMD",
+                "value": 98,
+                "doc": null
+            },
+            {
+                "name": "ER_OK",
+                "value": 0,
+                "doc": "\/**\r\n * No error.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_MULTIDISK",
+                "value": 1,
+                "doc": "\/**\r\n * Multi-disk zip archives not supported.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_RENAME",
+                "value": 2,
+                "doc": "\/**\r\n * Renaming temporary file failed.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_CLOSE",
+                "value": 3,
+                "doc": "\/**\r\n * Closing zip archive failed\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_SEEK",
+                "value": 4,
+                "doc": "\/**\r\n * Seek error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_READ",
+                "value": 5,
+                "doc": "\/**\r\n * Read error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_WRITE",
+                "value": 6,
+                "doc": "\/**\r\n * Write error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_CRC",
+                "value": 7,
+                "doc": "\/**\r\n * CRC error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_ZIPCLOSED",
+                "value": 8,
+                "doc": "\/**\r\n * Containing zip archive was closed\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_NOENT",
+                "value": 9,
+                "doc": "\/**\r\n * No such file.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_EXISTS",
+                "value": 10,
+                "doc": "\/**\r\n * File already exists\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_OPEN",
+                "value": 11,
+                "doc": "\/**\r\n * Can't open file\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_TMPOPEN",
+                "value": 12,
+                "doc": "\/**\r\n * Failure to create temporary file.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_ZLIB",
+                "value": 13,
+                "doc": "\/**\r\n * Zlib error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_MEMORY",
+                "value": 14,
+                "doc": "\/**\r\n * Memory allocation failure\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_CHANGED",
+                "value": 15,
+                "doc": "\/**\r\n * Entry has been changed\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_COMPNOTSUPP",
+                "value": 16,
+                "doc": "\/**\r\n * Compression method not supported.\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_EOF",
+                "value": 17,
+                "doc": "\/**\r\n * Premature EOF\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_INVAL",
+                "value": 18,
+                "doc": "\/**\r\n * Invalid argument\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_NOZIP",
+                "value": 19,
+                "doc": "\/**\r\n * Not a zip archive\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_INTERNAL",
+                "value": 20,
+                "doc": "\/**\r\n * Internal error\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_INCONS",
+                "value": 21,
+                "doc": "\/**\r\n * Zip archive inconsistent\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_REMOVE",
+                "value": 22,
+                "doc": "\/**\r\n * Can't remove file\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            },
+            {
+                "name": "ER_DELETED",
+                "value": 23,
+                "doc": "\/**\r\n * Entry has been deleted\r\n * @link http:\/\/php.net\/manual\/en\/zip.constants.php\r\n *\/"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_open",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_close",
+        "params": [
+            {
+                "name": "zip",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_read",
+        "params": [
+            {
+                "name": "zip",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_open",
+        "params": [
+            {
+                "name": "zip",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_close",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_read",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": 1024
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_filesize",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_name",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_compressedsize",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zip_entry_compressionmethod",
+        "params": [
+            {
+                "name": "zip_entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

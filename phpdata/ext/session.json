@@ -1,0 +1,369 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "SessionHandler",
+        "fqn": "\\SessionHandler",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "open",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "save_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "session_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Initialize session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.open.php\r\n * @param string $save_path <p>\r\n * The path where to store\/retrieve the session.\r\n * <\/p>\r\n * @param string $session_id <p>\r\n * The session id.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Close the session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.close.php\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "read",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "session_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Read session data\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.read.php\r\n * @param string $session_id <p>\r\n * The session id to read data for.\r\n * <\/p>\r\n * @return string an encoded string of the read data. If nothing was read, it must return an empty string. Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "write",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "session_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "session_data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Write session data\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.write.php\r\n * @param string $session_id <p>\r\n * The session id.\r\n * <\/p>\r\n * @param string $session_data <p>\r\n * The encoded session data. This data is the result of the PHP internally encoding the $_SESSION superglobal to a serialized\r\n * string and passing it as this parameter. Please note sessions use an alternative serialization method.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "destroy",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "session_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Destroy a session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.destroy.php\r\n * @param string $session_id <p>\r\n * The session ID being destroyed.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "gc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "maxlifetime",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Cleanup old sessions\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.gc.php\r\n * @param int $maxlifetime <p>\r\n * Sessions that have not updated for the last <i>maxlifetime<\/i> seconds will be removed.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+            },
+            {
+                "name": "create_sid",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_name",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_module_name",
+        "params": [
+            {
+                "name": "module",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_save_path",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_id",
+        "params": [
+            {
+                "name": "id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_regenerate_id",
+        "params": [
+            {
+                "name": "delete_old_session",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_decode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_encode",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_start",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_destroy",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_unset",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_set_save_handler",
+        "params": [
+            {
+                "name": "open",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "close",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "read",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "write",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "destroy",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "gc",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_cache_limiter",
+        "params": [
+            {
+                "name": "cache_limiter",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_cache_expire",
+        "params": [
+            {
+                "name": "new_cache_expire",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_set_cookie_params",
+        "params": [
+            {
+                "name": "lifetime",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "secure",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "httponly",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_get_cookie_params",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_write_close",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_status",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_register_shutdown",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "session_commit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SESSION_DISABLED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SESSION_NONE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SESSION_ACTIVE",
+        "value": 2
+    }
+]

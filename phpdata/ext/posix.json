@@ -1,0 +1,442 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "posix_kill",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sig",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getpid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getppid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getuid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_setuid",
+        "params": [
+            {
+                "name": "uid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_geteuid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_seteuid",
+        "params": [
+            {
+                "name": "uid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getgid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_setgid",
+        "params": [
+            {
+                "name": "gid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getegid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_setegid",
+        "params": [
+            {
+                "name": "gid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getgroups",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getlogin",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getpgrp",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_setsid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_setpgid",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pgid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getpgid",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getsid",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_uname",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_times",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_ctermid",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_ttyname",
+        "params": [
+            {
+                "name": "fd",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_isatty",
+        "params": [
+            {
+                "name": "fd",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getcwd",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_mkfifo",
+        "params": [
+            {
+                "name": "pathname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_mknod",
+        "params": [
+            {
+                "name": "pathname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "major",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "minor",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_access",
+        "params": [
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": "POSIX_F_OK"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getgrnam",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getgrgid",
+        "params": [
+            {
+                "name": "gid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getpwnam",
+        "params": [
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getpwuid",
+        "params": [
+            {
+                "name": "uid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_getrlimit",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_get_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_errno",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_strerror",
+        "params": [
+            {
+                "name": "errno",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "posix_initgroups",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base_group_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_F_OK",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_X_OK",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_W_OK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_R_OK",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_S_IFREG",
+        "value": 32768
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_S_IFCHR",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_S_IFBLK",
+        "value": 24576
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_S_IFIFO",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POSIX_S_IFSOCK",
+        "value": 49152
+    }
+]

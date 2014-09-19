@@ -1,0 +1,73 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "dl",
+        "params": [
+            {
+                "name": "library",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "cli_set_process_title",
+        "params": [
+            {
+                "name": "title",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "cli_get_process_title",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__FILE__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__LINE__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__CLASS__",
+        "value": ""
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__FUNCTION__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__METHOD__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__TRAIT__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__DIR__",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "__NAMESPACE__",
+        "value": null
+    }
+]

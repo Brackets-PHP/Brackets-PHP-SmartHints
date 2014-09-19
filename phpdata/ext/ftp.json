@@ -1,0 +1,820 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ftp_connect",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 21
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 90
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_ssl_connect",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 21
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 90
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_login",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_pwd",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_cdup",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_chdir",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_exec",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "command",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_raw",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "command",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_mkdir",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_rmdir",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_chmod",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_alloc",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filesize",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nlist",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_rawlist",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recursive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_systype",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_pasv",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pasv",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_get",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resumepos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_fget",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resumepos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_put",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "startpos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_fput",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "startpos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_size",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_mdtm",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_rename",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "oldname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "newname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_delete",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_site",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "command",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_close",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_set_option",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_get_option",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nb_fget",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resumepos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nb_get",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resumepos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nb_continue",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nb_put",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "local_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "startpos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_nb_fput",
+        "params": [
+            {
+                "name": "ftp_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "remote_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "startpos",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ftp_quit",
+        "params": [
+            {
+                "name": "ftp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_ASCII",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_TEXT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_BINARY",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_IMAGE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_AUTORESUME",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_TIMEOUT_SEC",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_AUTOSEEK",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_FAILED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_FINISHED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FTP_MOREDATA",
+        "value": 2
+    }
+]

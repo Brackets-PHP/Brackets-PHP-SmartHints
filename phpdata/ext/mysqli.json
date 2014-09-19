@@ -1,0 +1,3278 @@
+[
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TRANS_START_WITH_CONSISTENT_SNAPSHOT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TRANS_START_READ_WRITE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TRANS_START_READ_ONLY",
+        "value": null
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli_sql_exception",
+        "fqn": "\\mysqli_sql_exception",
+        "type": 0,
+        "extends": "RuntimeException",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli_driver",
+        "fqn": "\\mysqli_driver",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "embedded_server_start",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "arguments",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "groups",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * <b>Warning<\/b>\r\n * This function is currently not documented; only its argument list is available.\r\n *\/"
+            },
+            {
+                "name": "embedded_server_end",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * <b>Warning<\/b>\r\n * This function is currently not documented; only its argument list is available.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "client_info",
+                "doc": "\/**\r\n * The Client API header version.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "client_version",
+                "doc": "\/**\r\n * The Client version.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "driver_version",
+                "doc": "\/**\r\n * The MySQLi Driver version.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "embedded",
+                "doc": "\/**\r\n * Whether MySQLi Embedded support is enabled.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "reconnect",
+                "doc": "\/**\r\n * Allow or prevent reconnect (see the mysqli.reconnect INI directive).\r\n *\r\n * @var boolean\r\n *\/"
+            },
+            {
+                "name": "report_mode",
+                "doc": "\/**\r\n * Set to <code>MYSQLI_REPORT_OFF<\/code>, <code>MYSQLI_REPORT_ALL<\/code> or any combination of\r\n * <code>MYSQLI_REPORT_STRICT<\/code> (throw Exceptions for errors), <code>MYSQLI_REPORT_ERROR<\/code> (report errors)\r\n * and <code>MYSQLI_REPORT_INDEX<\/code> (errors regarding indexes). See also {@see mysqli_report()}.\r\n *\r\n * @var integer\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli",
+        "fqn": "\\mysqli",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": "ini_get('mysqli.default_host')"
+                    },
+                    {
+                        "name": "username",
+                        "type": null,
+                        "byRef": false,
+                        "default": "ini_get('mysqli.default_user')"
+                    },
+                    {
+                        "name": "password",
+                        "type": null,
+                        "byRef": false,
+                        "default": "ini_get('mysqli.default_pw')"
+                    },
+                    {
+                        "name": "databaseName",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": "ini_get('mysqli.default_port')"
+                    },
+                    {
+                        "name": "socket",
+                        "type": null,
+                        "byRef": false,
+                        "default": "ini_get('mysqli.default_socket')"
+                    }
+                ],
+                "doc": "\/**\r\n * Instantiate new MySQLi object.\r\n *\r\n * @link http:\/\/php.net\/manual\/mysqli.construct.php\r\n * @param null|string $host [optional]\r\n *   A host name, IP address, or <code>NULL<\/code>. The latter and the string <code>\"localhost\"<\/code> have the same\r\n *   meaning and a connection to the current host is attempted. When possible, pipse will be used instead of TCP\/IP\r\n *   sockets.\r\n *\r\n *   You can also affect this parameter by setting the <code>mysqli.default_host<\/code> setting in your\r\n *   {@link http:\/\/php.net\/manual\/mysqli.configuration.php <code>php.ini<\/code>}.\r\n *\r\n *   Prepending by <code>\"p:\"<\/code> opens a persistent connection. {@see \\mysqli::change_user} is automatically\r\n *   called on connections opened from the connection pool.\r\n * @param null|string $username [optional]\r\n *   The database user's name. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will be\r\n *   used if set, otherwise the name of the process owner is used.\r\n * @param null|string $password [optional]\r\n *   The database user's password. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will\r\n *   be used is set, otherwise authentication is done without password.\r\n * @param null|string $databaseName [optional]\r\n *   The name of the database that should be used, defaults to <code>\"\"<\/code>.\r\n * @param null|integer $port [optional]\r\n *   The port the database server is listening if using TCP\/IP sockets.\r\n * @param null|string $socket [optional]\r\n *   The canonical absolute path to the UNIX domain socket or pipe that should be used for communication.\r\n *\r\n *   <b>NOTE<\/b><br>\r\n *   Specifying the <var>$socket<\/var> parameter will not explicitly determin the type of connection to be used when\r\n *   connecting to the MySQL server. How the connection is made to the MySQL database is determined by the\r\n *   <var>$host<\/var> parameter.\r\n * @since 5.0.0\r\n * @since 5.3.0 Ability to use persistent connections.\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon errors.\r\n *\/"
+            },
+            {
+                "name": "begin_transaction",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Starts a transaction.\r\n *\r\n * <b>NOTE<\/b><br>\r\n * This method is only available with the mysqlnd extension.\r\n *\r\n * <b>IMPORTANT<\/b><br>\r\n * This method will emit a WARNING if the server version is less than MySQL 5.6.5.\r\n *\r\n * @link http:\/\/php.net\/mysqli.begin-transaction\r\n * @param integer $flags [optional]\r\n *   The transaction's properties.\r\n * @param string $name [optional]\r\n *   The transaction's name.\r\n * @return boolean\r\n *   <code>TRUE<\/code> if the transaction was successfully started, <code>FALSE<\/code> otherwise.\r\n * @since 5.5.0\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon failure.\r\n *\/"
+            },
+            {
+                "name": "query",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "resultMode",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Perform a query against the database.\r\n *\r\n * For non-DML queries (not <code>INSERT<\/code>, <code>UPDATE<\/code>, or <code>DELETE<\/code>), this method is similar\r\n * to calling {@see \\mysqli::real_query()} followed by either {@see \\mysqli::use_result()} or\r\n * {@see \\mysqli::store_result()}.\r\n *\r\n * @link http:\/\/php.net\/manual\/mysqli.query.php\r\n * @param string $query\r\n *   The SQL query to execute, <b>always<\/b> make sure that everything is properly escaped\r\n *   ({@see \\mysqli::real_escape_string()}).\r\n * @param integer $resultMode [optional]\r\n *   Either of the constants <code>MYSQLI_STORE_RESULT<\/code> or <code>MYSQLI_USE_RESULT<\/code> depending on the\r\n *   desired behavior. By default <code>MYSQLI_STORE_RESULT<\/code> is used. If you use <code>MYSQLI_USE_RESULT<\/code>\r\n *   all subsequent calls will return <i>commands out of sync<\/i> unless you call {@see \\mysqli::free_result()}.\r\n *\r\n *   With <code>MYSQLI_ASYNC<\/code> (only available with {@link http:\/\/php.net\/manual\/book.mysqlnd.php MySQL Native\r\n *   Driver}), it is possible to perform query asynchronously. {@see \\mysqli::poll()} is then used to get results from\r\n *   such queries.\r\n * @return \\mysqli_result|boolean\r\n *   For successful <code>SELECT<\/code>, <code>SHOW<\/code>, <code>DESCRIBE<\/code>, or <code>EXPLAIN<\/code> queries a\r\n *   MySQLi result is returned, for other successful queries <code>TRUE<\/code> is returned, <code>FALSE<\/code> on\r\n *   failure.\r\n * @since 5.0.0\r\n * @since 5.3.0 Ability to perform asynchronous queries with MySQL Native Driver.\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon errors, strict warnings, or even bad indexes.\r\n *\/"
+            },
+            {
+                "name": "autocommit",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Turns on or off auto-committing database modifications\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.autocommit.php\r\n * @param bool $mode <p>\r\n * Whether to turn on auto-commit or not.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "change_user",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "user",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "password",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "database",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Changes the user of the specified database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.change-user.php\r\n * @param string $user <p>\r\n * The MySQL user name.\r\n * <\/p>\r\n * @param string $password <p>\r\n * The MySQL password.\r\n * <\/p>\r\n * @param string $database <p>\r\n * The database to change to.\r\n * <\/p>\r\n * <p>\r\n * If desired, the <b>NULL<\/b> value may be passed resulting in only changing\r\n * the user and not selecting a database. To select a database in this\r\n * case use the <b>mysqli_select_db<\/b> function.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "character_set_name",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the default character set for the database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.character-set-name.php\r\n * @return string The default character set for the current connection\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Closes a previously opened database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "commit",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Commits the current transaction\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.commit.php\r\n * @param int $flags [optional] <p>\r\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\r\n * <\/p>\r\n * @param string $name [optional] <p>\r\n * If provided then COMMIT\/*name* \/ is executed.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "connect",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "user",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "password",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "database",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "socket",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $host [optional]\r\n * @param $user [optional]\r\n * @param $password [optional]\r\n * @param $database [optional]\r\n * @param $port [optional]\r\n * @param $socket [optional]\r\n *\/"
+            },
+            {
+                "name": "dump_debug_info",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Dump debugging information into the log\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.dump-debug-info.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "debug",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Performs debugging operations\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.debug.php\r\n * @param string $message <p>\r\n * A string representing the debugging operation to perform\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "get_charset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns a character set object\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-charset.php\r\n * @return object The function returns a character set object with the following properties:\r\n * <i>charset<\/i>\r\n * <p>Character set name<\/p>\r\n * <i>collation<\/i>\r\n * <p>Collation name<\/p>\r\n * <i>dir<\/i>\r\n * <p>Directory the charset description was fetched from (?) or \"\" for built-in character sets<\/p>\r\n * <i>min_length<\/i>\r\n * <p>Minimum character length in bytes<\/p>\r\n * <i>max_length<\/i>\r\n * <p>Maximum character length in bytes<\/p>\r\n * <i>number<\/i>\r\n * <p>Internal character set number<\/p>\r\n * <i>state<\/i>\r\n * <p>Character set status (?)<\/p>\r\n *\/"
+            },
+            {
+                "name": "get_client_info",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get MySQL client info\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-client-info.php\r\n * @return string A string that represents the MySQL client library version\r\n *\/"
+            },
+            {
+                "name": "get_server_info",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "get_warnings",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get result of SHOW WARNINGS\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-warnings.php\r\n * @return mysqli_warning\r\n *\/"
+            },
+            {
+                "name": "init",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initializes MySQLi and returns a resource for use with mysqli_real_connect()\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.init.php\r\n * @return mysqli an object.\r\n *\/"
+            },
+            {
+                "name": "kill",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "processid",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Asks the server to kill a MySQL thread\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.kill.php\r\n * @param int $processid\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "set_local_infile_default",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "link",
+                        "type": "mysqli",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Unsets user defined handler for load local infile command\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-default.php\r\n * @param mysqli $link\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "set_local_infile_handler",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "link",
+                        "type": "mysqli",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "read_func",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set callback function for LOAD DATA LOCAL INFILE command\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-handler.php\r\n * @param mysqli $link\r\n * @param callable $read_func <p>\r\n * A callback function or object method taking the following parameters:\r\n * <\/p>\r\n * <i>stream<\/i>\r\n * <p>A PHP stream associated with the SQL commands INFILE<\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "multi_query",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Performs a query on the database\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.multi-query.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * Data inside the query should be properly escaped.\r\n * <\/p>\r\n * @return bool <b>FALSE<\/b> if the first statement failed.\r\n * To retrieve subsequent errors from other statements you have to call\r\n * <b>mysqli_next_result<\/b> first.\r\n *\/"
+            },
+            {
+                "name": "mysqli",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "user",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "password",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "database",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "socket",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $host [optional]\r\n * @param $user [optional]\r\n * @param $password [optional]\r\n * @param $database [optional]\r\n * @param $port [optional]\r\n * @param $socket [optional]\r\n *\/"
+            },
+            {
+                "name": "more_results",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Check if there are any more query results from a multi query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.more-results.php\r\n * @return bool <b>TRUE<\/b> if one or more result sets are available from a previous call to\r\n * <b>mysqli_multi_query<\/b>, otherwise <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "next_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare next result from multi_query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.next-result.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "options",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "option",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set options\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.options.php\r\n * @param int $option <p>\r\n * The option that you want to set. It can be one of the following values:\r\n * <table>\r\n * Valid options\r\n * <tr valign=\"top\">\r\n * <td>Name<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_OPT_CONNECT_TIMEOUT<\/b><\/td>\r\n * <td>connection timeout in seconds (supported on Windows with TCP\/IP since PHP 5.3.1)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_OPT_LOCAL_INFILE<\/b><\/td>\r\n * <td>enable\/disable use of LOAD LOCAL INFILE<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_INIT_COMMAND<\/b><\/td>\r\n * <td>command to execute after when connecting to MySQL server<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_READ_DEFAULT_FILE<\/b><\/td>\r\n * <td>\r\n * Read options from named option file instead of my.cnf\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_READ_DEFAULT_GROUP<\/b><\/td>\r\n * <td>\r\n * Read options from the named group from my.cnf\r\n * or the file specified with <b>MYSQL_READ_DEFAULT_FILE<\/b>.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_SERVER_PUBLIC_KEY<\/b><\/td>\r\n * <td>\r\n * RSA public key file used with the SHA-256 based authentication.\r\n * <\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value for the option.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "ping",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Pings a server connection, or tries to reconnect if the connection has gone down\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.ping.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "prepare",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare an SQL statement for execution\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.prepare.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * You should not add a terminating semicolon or \\g\r\n * to the statement.\r\n * <\/p>\r\n * <p>\r\n * This parameter can include one or more parameter markers in the SQL\r\n * statement by embedding question mark (?) characters\r\n * at the appropriate positions.\r\n * <\/p>\r\n * <p>\r\n * The markers are legal only in certain places in SQL statements.\r\n * For example, they are allowed in the VALUES()\r\n * list of an INSERT statement (to specify column\r\n * values for a row), or in a comparison with a column in a\r\n * WHERE clause to specify a comparison value.\r\n * <\/p>\r\n * <p>\r\n * However, they are not allowed for identifiers (such as table or\r\n * column names), in the select list that names the columns to be\r\n * returned by a SELECT statement, or to specify both\r\n * operands of a binary operator such as the = equal\r\n * sign. The latter restriction is necessary because it would be\r\n * impossible to determine the parameter type. It's not allowed to\r\n * compare marker with NULL by\r\n * ? IS NULL too. In general, parameters are legal\r\n * only in Data Manipulation Language (DML) statements, and not in Data\r\n * Definition Language (DDL) statements.\r\n * <\/p>\r\n * @return mysqli_stmt <b>mysqli_prepare<\/b> returns a statement object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "real_connect",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "username",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "passwd",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "dbname",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "socket",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Opens a connection to a mysql server\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-connect.php\r\n * @param string $host [optional] <p>\r\n * Can be either a host name or an IP address. Passing the <b>NULL<\/b> value\r\n * or the string \"localhost\" to this parameter, the local host is\r\n * assumed. When possible, pipes will be used instead of the TCP\/IP\r\n * protocol.\r\n * <\/p>\r\n * @param string $username [optional] <p>\r\n * The MySQL user name.\r\n * <\/p>\r\n * @param string $passwd [optional] <p>\r\n * If provided or <b>NULL<\/b>, the MySQL server will attempt to authenticate\r\n * the user against those user records which have no password only. This\r\n * allows one username to be used with different permissions (depending\r\n * on if a password as provided or not).\r\n * <\/p>\r\n * @param string $dbname [optional] <p>\r\n * If provided will specify the default database to be used when\r\n * performing queries.\r\n * <\/p>\r\n * @param int $port [optional] <p>\r\n * Specifies the port number to attempt to connect to the MySQL server.\r\n * <\/p>\r\n * @param string $socket [optional] <p>\r\n * Specifies the socket or named pipe that should be used.\r\n * <\/p>\r\n * <p>\r\n * Specifying the <i>socket<\/i> parameter will not\r\n * explicitly determine the type of connection to be used when\r\n * connecting to the MySQL server. How the connection is made to the\r\n * MySQL database is determined by the <i>host<\/i>\r\n * parameter.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * With the parameter <i>flags<\/i> you can set different\r\n * connection options:\r\n * <\/p>\r\n * <table>\r\n * Supported flags\r\n * <tr valign=\"top\">\r\n * <td>Name<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_COMPRESS<\/b><\/td>\r\n * <td>Use compression protocol<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_FOUND_ROWS<\/b><\/td>\r\n * <td>return number of matched rows, not the number of affected rows<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_IGNORE_SPACE<\/b><\/td>\r\n * <td>Allow spaces after function names. Makes all function names reserved words.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_INTERACTIVE<\/b><\/td>\r\n * <td>\r\n * Allow interactive_timeout seconds (instead of\r\n * wait_timeout seconds) of inactivity before closing the connection\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_SSL<\/b><\/td>\r\n * <td>Use SSL (encryption)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <p>\r\n * For security reasons the <b>MULTI_STATEMENT<\/b> flag is\r\n * not supported in PHP. If you want to execute multiple queries use the\r\n * <b>mysqli_multi_query<\/b> function.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "real_escape_string",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "escapestr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-escape-string.php\r\n * @param string $escapestr <p>\r\n * The string to be escaped.\r\n * <\/p>\r\n * <p>\r\n * Characters encoded are NUL (ASCII 0), \\n, \\r, \\, ', \", and\r\n * Control-Z.\r\n * <\/p>\r\n * @return string an escaped string.\r\n *\/"
+            },
+            {
+                "name": "escape_string",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "string_to_escape",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $string_to_escape\r\n *\/"
+            },
+            {
+                "name": "real_query",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Execute an SQL query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-query.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * Data inside the query should be properly escaped.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "rollback",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Rolls back current transaction\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.rollback.php\r\n * @param int $flags [optional] <p>\r\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\r\n * <\/p>\r\n * @param string $name [optional] <p>\r\n * If provided then ROLLBACK\/*name* \/ is executed.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "select_db",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "dbname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Selects the default database for database queries\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.select-db.php\r\n * @param string $dbname <p>\r\n * The database name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "set_charset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "charset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.5)<br\/>\r\n * Sets the default client character set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-charset.php\r\n * @param string $charset <p>\r\n * The charset to be set as default.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "set_opt",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "option",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Alias of <b>mysqli_options<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/function.mysqli-set-opt.php\r\n * @param $option\r\n * @param $value\r\n *\/"
+            },
+            {
+                "name": "ssl_set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cert",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ca",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "capath",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cipher",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used for establishing secure connections using SSL\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.ssl-set.php\r\n * @param string $key <p>\r\n * The path name to the key file.\r\n * <\/p>\r\n * @param string $cert <p>\r\n * The path name to the certificate file.\r\n * <\/p>\r\n * @param string $ca <p>\r\n * The path name to the certificate authority file.\r\n * <\/p>\r\n * @param string $capath <p>\r\n * The pathname to a directory that contains trusted SSL CA certificates\r\n * in PEM format.\r\n * <\/p>\r\n * @param string $cipher <p>\r\n * A list of allowable ciphers to use for SSL encryption.\r\n * <\/p>\r\n * @return bool This function always returns <b>TRUE<\/b> value. If SSL setup is\r\n * incorrect <b>mysqli_real_connect<\/b> will return an error\r\n * when you attempt to connect.\r\n *\/"
+            },
+            {
+                "name": "stat",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the current system status\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.stat.php\r\n * @return string A string describing the server status. <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "stmt_init",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initializes a statement and returns an object for use with mysqli_stmt_prepare\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.stmt-init.php\r\n * @return mysqli_stmt an object.\r\n *\/"
+            },
+            {
+                "name": "store_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transfers a result set from the last query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.store-result.php\r\n * @return mysqli_result a buffered result object or <b>FALSE<\/b> if an error occurred.\r\n * <\/p>\r\n * <p>\r\n * <b>mysqli_store_result<\/b> returns <b>FALSE<\/b> in case the query\r\n * didn't return a result set (if the query was, for example an INSERT\r\n * statement). This function also returns <b>FALSE<\/b> if the reading of the\r\n * result set failed. You can check if you have got an error by checking\r\n * if <b>mysqli_error<\/b> doesn't return an empty string, if\r\n * <b>mysqli_errno<\/b> returns a non zero value, or if\r\n * <b>mysqli_field_count<\/b> returns a non zero value.\r\n * Also possible reason for this function returning <b>FALSE<\/b> after\r\n * successful call to <b>mysqli_query<\/b> can be too large\r\n * result set (memory for it cannot be allocated). If\r\n * <b>mysqli_field_count<\/b> returns a non-zero value, the\r\n * statement should have produced a non-empty result set.\r\n *\/"
+            },
+            {
+                "name": "thread_safe",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns whether thread safety is given or not\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.thread-safe.php\r\n * @return bool <b>TRUE<\/b> if the client library is thread-safe, otherwise <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "use_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initiate a result set retrieval\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.use-result.php\r\n * @return mysqli_result an unbuffered result object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "refresh",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &lt;= 5.3.0)<br\/>\r\n * Refreshes\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.refresh.php\r\n * @param int $options <p>\r\n * The options to refresh, using the MYSQLI_REFRESH_* constants as documented\r\n * within the MySQLi constants documentation.\r\n * <\/p>\r\n * <p>\r\n * See also the official MySQL Refresh\r\n * documentation.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the refresh was a success, otherwise <b>FALSE<\/b>\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "affected_rows",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "client_info",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "client_version",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "connect_errno",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "connect_error",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "errno",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "error_list",
+                "doc": "\/**\r\n * @var array\r\n *\/"
+            },
+            {
+                "name": "error",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "field_count",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "client_version",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "host_info",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "protocol_version",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "server_info",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "server_version",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "info",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "insert_id",
+                "doc": "\/**\r\n * @var mixed\r\n *\/"
+            },
+            {
+                "name": "sqlstate",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "thread_id",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "warning_count",
+                "doc": "\/**\r\n * @var int\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli_warning",
+        "fqn": "\\mysqli_warning",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "next",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * The next purpose\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-warning.next.php\r\n * @return void\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "message",
+                "doc": null
+            },
+            {
+                "name": "sqlstate",
+                "doc": null
+            },
+            {
+                "name": "errno",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli_result",
+        "fqn": "\\mysqli_result",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Alias of {@see \\mysqli_result::free()}\r\n *\r\n * @deprecated\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "data_seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * Seek to an arbitrary result pointer specified by the offset in the current result.\r\n *\r\n * <b>Note:<\/b>\r\n * This method can only be used with buffered results attained from the use of the {@see \\mysqli::store_result()} or\r\n * {@see \\mysqli::query()} methods.\r\n *\r\n * @param integer $offset\r\n *   The field offset. Must be between zero and the total number of rows minus one.\r\n * @return boolean <code>TRUE<\/code> on success or <code>FALSE<\/code> on failure.\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "fetch_all",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "resulttype",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Fetch all result rows as array.\r\n *\r\n * <b>MySQL Native Driver Only<\/b>\r\n * Available only with {@link http:\/\/php.net\/mysqlnd.php mysqlnd}.\r\n *\r\n * <b>Note:<\/b>\r\n * As <code>\\mysqli::fetch_all()<\/code> returns all the rows as an array in a single step, it may consume more memory\r\n * than some similar functions such as <code>\\mysqli::fetch_array()<\/code>, which only returns one row at a time from\r\n * the result set. Further, if you need to iterate over the result set, you will need a looping construct that will\r\n * further impact performance. For these reasons <code>\\mysqli::fetch_all()<\/code> should only be used in those\r\n * situations where the fetched result set will be sent to another layer for processing.\r\n *\r\n * @param integer $resulttype [optional]\r\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\r\n *   <var>MYSQLI_BOTH<\/var>.\r\n * @return null|array Array in <var>$resulttype<\/var> form containing all rows of the result, or <code>NULL<\/code> if\r\n *   the result is empty.\r\n * @since 5.3.0\r\n *\/"
+            },
+            {
+                "name": "fetch_array",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "resulttype",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Fetch row as array.\r\n *\r\n * @see \\mysqli_result::fetch_assoc()\r\n * @see \\mysqli_result::fetch_row()\r\n * @param integer $resulttype [optional]\r\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\r\n *   <var>MYSQLI_BOTH<\/var>.\r\n * @return null|array Array in <var>$resulttype<\/var> form containing the current row of the result, or\r\n *   <code>NULL<\/code> if there are no more rows in the result set.\r\n * @version 5.0.0\r\n *\/"
+            },
+            {
+                "name": "fetch_assoc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Fetch row as associative array.\r\n *\r\n * @see \\mysqli_result::fetch_array()\r\n * @see \\mysqli_result::fetch_row()\r\n * @return null|array Associative array containing the current row of the result, or <code>NULL<\/code> if there are\r\n *   no more rows in the result set.\r\n * @version 5.0.0\r\n *\/"
+            },
+            {
+                "name": "free",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Frees the memory associated with the result.\r\n *\r\n * <b>Note:<\/b>\r\n * You should always free your result when your result object isn't needed anymore.\r\n *\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "free_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Alias of {@see \\mysqli_result::free()}\r\n *\r\n * @deprecated\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "fetch_field",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the next field in the result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field.php\r\n * @return object an object which contains field definition information or <b>FALSE<\/b>\r\n * if no field information is available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object properties\r\n * <tr valign=\"top\">\r\n * <td>Property<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>def<\/td>\r\n * <td>Reserved for default value, currently always \"\"<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>db<\/td>\r\n * <td>Database (since PHP 5.3.6)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>catalog<\/td>\r\n * <td>The catalog name, always \"def\" (since PHP 5.3.6)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+            },
+            {
+                "name": "fetch_fields",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns an array of objects representing the fields in a result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-fields.php\r\n * @return array an array of objects which contains field definition information or\r\n * <b>FALSE<\/b> if no field information is available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object properties\r\n * <tr valign=\"top\">\r\n * <td>Property<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+            },
+            {
+                "name": "fetch_field_direct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "fieldnr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Fetch meta-data for a single field\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field-direct.php\r\n * @param int $fieldnr <p>\r\n * The field number. This value must be in the range from\r\n * 0 to number of fields - 1.\r\n * <\/p>\r\n * @return object an object which contains field definition information or <b>FALSE<\/b>\r\n * if no field information for specified fieldnr is\r\n * available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object attributes\r\n * <tr valign=\"top\">\r\n * <td>Attribute<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>def<\/td>\r\n * <td>The default value for this field, represented as a string<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+            },
+            {
+                "name": "fetch_object",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "params",
+                        "type": "array",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the current row of a result set as an object\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-object.php\r\n * @param string $class_name [optional] <p>\r\n * The name of the class to instantiate, set the properties of and return.\r\n * If not specified, a <b>stdClass<\/b> object is returned.\r\n * <\/p>\r\n * @param array $params [optional] <p>\r\n * An optional array of parameters to pass to the constructor\r\n * for <i>class_name<\/i> objects.\r\n * <\/p>\r\n * @return object an object with string properties that corresponds to the fetched\r\n * row or <b>NULL<\/b> if there are no more rows in resultset.\r\n *\/"
+            },
+            {
+                "name": "fetch_row",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get a result row as an enumerated array\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-row.php\r\n * @return mixed <b>mysqli_fetch_row<\/b> returns an array of strings that corresponds to the fetched row\r\n * or <b>NULL<\/b> if there are no more rows in result set.\r\n *\/"
+            },
+            {
+                "name": "field_seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "fieldnr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set result pointer to a specified field offset\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.field-seek.php\r\n * @param int $fieldnr <p>\r\n * The field number. This value must be in the range from\r\n * 0 to number of fields - 1.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "current_field",
+                "doc": "\/**\r\n * Current field offset of this result.\r\n *\r\n * The position of the field cursor used for the last {@see \\mysqli::fetch_field()} call. This value can be used as an\r\n * argument to {@see \\mysqli::field_seek()}.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.current-field.php\r\n * @var integer\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "field_count",
+                "doc": "\/**\r\n * The number of fields in this result.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.field-count.php\r\n * @var integer\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "lengths",
+                "doc": "\/**\r\n * Array of integers representing the size of each column (not including any terminating null characters) or\r\n * <code>FALSE<\/code> if an error occurred. Only contains a valid array if called after a call to\r\n * {@see \\mysqli::fetch_row()}, {@see \\mysqli::fetch_array()}, or similar methods.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.lengths.php\r\n * @var array\r\n * @since 5.0.0\r\n *\/"
+            },
+            {
+                "name": "num_rows",
+                "doc": "\/**\r\n * The number of rows in the result set.\r\n *\r\n * Depends on whether buffered or unbuffered result sets are being used. If unbuffered result sets are used this won't\r\n * contain the correct number of rows until all the rows in the result have been retrieved. If you encounter this\r\n * problem, call <code>\\mysqli::store_result()<\/code> after execution of the query.\r\n *\r\n * <b>Note:<\/b>\r\n * If the number of rows is greater than PHP_INT_MAX, the number will be returned as a string.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.num-rows.php\r\n * @var integer|string\r\n * @since 5.0.0\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "mysqli_stmt",
+        "fqn": "\\mysqli_stmt",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "attr_get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used to get the current value of a statement attribute\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.attr-get.php\r\n * @param integer $attr The attribute that you want to get.\r\n * @return mixed <code>FALSE<\/code> if the attribute is not found, otherwise returns the value of the attribute.\r\n *\/"
+            },
+            {
+                "name": "attr_set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used to modify the behavior of a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.attr-set.php\r\n * @param int $attr <p>\r\n * The attribute that you want to set. It can have one of the following values:\r\n * <table>\r\n * Attribute values\r\n * <tr valign=\"top\">\r\n * <td>Character<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH<\/td>\r\n * <td>\r\n * If set to 1, causes <b>mysqli_stmt_store_result<\/b> to\r\n * update the metadata MYSQL_FIELD->max_length value.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_CURSOR_TYPE<\/td>\r\n * <td>\r\n * Type of cursor to open for statement when <b>mysqli_stmt_execute<\/b>\r\n * is invoked. <i>mode<\/i> can be MYSQLI_CURSOR_TYPE_NO_CURSOR\r\n * (the default) or MYSQLI_CURSOR_TYPE_READ_ONLY.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_PREFETCH_ROWS<\/td>\r\n * <td>\r\n * Number of rows to fetch from server at a time when using a cursor.\r\n * <i>mode<\/i> can be in the range from 1 to the maximum\r\n * value of unsigned long. The default is 1.\r\n * <\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * <p>\r\n * If you use the MYSQLI_STMT_ATTR_CURSOR_TYPE option with\r\n * MYSQLI_CURSOR_TYPE_READ_ONLY, a cursor is opened for the\r\n * statement when you invoke <b>mysqli_stmt_execute<\/b>. If there\r\n * is already an open cursor from a previous <b>mysqli_stmt_execute<\/b> call,\r\n * it closes the cursor before opening a new one. <b>mysqli_stmt_reset<\/b>\r\n * also closes any open cursor before preparing the statement for re-execution.\r\n * <b>mysqli_stmt_free_result<\/b> closes any open cursor.\r\n * <\/p>\r\n * <p>\r\n * If you open a cursor for a prepared statement, <b>mysqli_stmt_store_result<\/b>\r\n * is unnecessary.\r\n * <\/p>\r\n * @param int $mode <p>The value to assign to the attribute.<\/p>\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "bind_param",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "types",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "var1",
+                        "type": null,
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Binds variables to a prepared statement as parameters\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-param.php\r\n * @param string $types <p>\r\n * A string that contains one or more characters which specify the types\r\n * for the corresponding bind variables:\r\n * <table>\r\n * Type specification chars\r\n * <tr valign=\"top\">\r\n * <td>Character<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>i<\/td>\r\n * <td>corresponding variable has type integer<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>d<\/td>\r\n * <td>corresponding variable has type double<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>s<\/td>\r\n * <td>corresponding variable has type string<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>b<\/td>\r\n * <td>corresponding variable is a blob and will be sent in packets<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * @param mixed $var1 <p>\r\n * The number of variables and length of string\r\n * <i>types<\/i> must match the parameters in the statement.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "bind_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "var1",
+                        "type": null,
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "_",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Binds variables to a prepared statement for result storage\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-result.php\r\n * @param mixed $var1 <p>\r\n * The variable to be bound.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Closes a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "data_seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Seeks to an arbitrary row in statement result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.data-seek.php\r\n * @param int $offset <p>\r\n * Must be between zero and the total number of rows minus one (0..\r\n * <b>mysqli_stmt_num_rows<\/b> - 1).\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "execute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Executes a prepared Query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.execute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "fetch",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Fetch results from a prepared statement into the bound variables\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.fetch.php\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "get_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 >= 5.3.0)<br\/>\r\n * Gets a result set from a prepared statement\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.get-result.php\r\n * @return \\mysqli_result|boolean Returns a resultset or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "get_warnings",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "stmt",
+                        "type": "mysqli_stmt",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get result of SHOW WARNINGS\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.get-warnings.php\r\n * @param mysqli_stmt $stmt\r\n * @return object\r\n *\/"
+            },
+            {
+                "name": "result_metadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns result set metadata from a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.result-metadata.php\r\n * @return mysqli_result a result object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "num_rows",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "send_long_data",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "param_nr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Send data in blocks\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.send-long-data.php\r\n * @param int $param_nr <p>\r\n * Indicates which parameter to associate the data with. Parameters are\r\n * numbered beginning with 0.\r\n * <\/p>\r\n * @param string $data <p>\r\n * A string containing data to be sent.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "free_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Frees stored result memory for the given statement handle\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.free-result.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "reset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Resets a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.reset.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "prepare",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare an SQL statement for execution\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.prepare.php\r\n * @param string $query <p>\r\n * The query, as a string. It must consist of a single SQL statement.\r\n * <\/p>\r\n * <p>\r\n * You can include one or more parameter markers in the SQL statement by\r\n * embedding question mark (?) characters at the\r\n * appropriate positions.\r\n * <\/p>\r\n * <p>\r\n * You should not add a terminating semicolon or \\g\r\n * to the statement.\r\n * <\/p>\r\n * <p>\r\n * The markers are legal only in certain places in SQL statements.\r\n * For example, they are allowed in the VALUES() list of an INSERT statement\r\n * (to specify column values for a row), or in a comparison with a column in\r\n * a WHERE clause to specify a comparison value.\r\n * <\/p>\r\n * <p>\r\n * However, they are not allowed for identifiers (such as table or column names),\r\n * in the select list that names the columns to be returned by a SELECT statement),\r\n * or to specify both operands of a binary operator such as the =\r\n * equal sign. The latter restriction is necessary because it would be impossible\r\n * to determine the parameter type. In general, parameters are legal only in Data\r\n * Manipulation Language (DML) statements, and not in Data Definition Language\r\n * (DDL) statements.\r\n * <\/p>\r\n * @return mixed <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "store_result",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transfers a result set from a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.store-result.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "affected_rows",
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the total number of rows changed, deleted, or inserted by the last executed statement.\r\n *\r\n * Returns the number of rows affected by <i>INSERT<\/i>, <i>UPDATE<\/i>, or <i>DELETE<\/i> query. This function only\r\n * works with queries which update a table. In order to get the number of rows from a <i>SELECT<\/i> query, use\r\n * {@see mysqli_stmt::num_rows()} instead.\r\n *\r\n * An integer greater than zero indicates the number of rows affected or retrieved. Zero indicates that no records\r\n * where updated for an <i>UPDATE<\/i>\/<i>DELETE<\/i> statement, no rows matched the <i>WHERE<\/i> clause in the query or\r\n * that no query has yet been executed. <code>-1<\/code> indicates that the query has returned an error.\r\n * <code>NULL<\/code> indicates an invalid argument was supplied to the function.\r\n *\r\n * <b>Note:<\/b>\r\n * If the number of affected rows is greater than maximal PHP int value, the number of affected rows will be returned\r\n * as a string value.\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.affected-rows.php\r\n * @var integer|string\r\n *\/"
+            },
+            {
+                "name": "insert_id",
+                "doc": null
+            },
+            {
+                "name": "num_rows",
+                "doc": null
+            },
+            {
+                "name": "param_count",
+                "doc": null
+            },
+            {
+                "name": "field_count",
+                "doc": null
+            },
+            {
+                "name": "errno",
+                "doc": null
+            },
+            {
+                "name": "error",
+                "doc": null
+            },
+            {
+                "name": "error_list",
+                "doc": null
+            },
+            {
+                "name": "sqlstate",
+                "doc": null
+            },
+            {
+                "name": "id",
+                "doc": null
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_affected_rows",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_autocommit",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_change_user",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_character_set_name",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_close",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_commit",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_connect",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_connect_errno",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_connect_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_data_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_dump_debug_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_debug",
+        "params": [
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_errno",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_error",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_error_list",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_execute",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_execute",
+        "params": [
+            {
+                "name": "stmt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_field",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_fields",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_field_direct",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fieldnr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_lengths",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_array",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resulttype",
+                "type": null,
+                "byRef": false,
+                "default": "MYSQLI_BOTH"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_assoc",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "params",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_fetch_row",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_field_count",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_field_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fieldnr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_field_tell",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_free_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_charset",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_client_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_client_version",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_host_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_proto_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_server_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_server_version",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_get_warnings",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_init",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_info",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_insert_id",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_kill",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "processid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_set_local_infile_default",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_set_local_infile_handler",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "read_func",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_more_results",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_multi_query",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_next_result",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_num_fields",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_num_rows",
+        "params": [
+            {
+                "name": "result",
+                "type": "mysqli_result",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_options",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_ping",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_prepare",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_report",
+        "params": [
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_query",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "resultmode",
+                "type": null,
+                "byRef": false,
+                "default": "MYSQLI_STORE_RESULT"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_real_connect",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "passwd",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "dbname",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_real_escape_string",
+        "params": [
+            {
+                "name": "escapestr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_real_query",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_rollback",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_select_db",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dbname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_set_charset",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_affected_rows",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_attr_get",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_attr_set",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_bind_param",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "types",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var1",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_bind_result",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var1",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_close",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_data_seek",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_errno",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_error",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_error_list",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_fetch",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_field_count",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_free_result",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_get_warnings",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_init",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_insert_id",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_num_rows",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_param_count",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_prepare",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_reset",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_result_metadata",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_send_long_data",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "param_nr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_store_result",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stmt_sqlstate",
+        "params": [
+            {
+                "name": "stmt",
+                "type": "mysqli_stmt",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_sqlstate",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_ssl_set",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ca",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "capath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cipher",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_stat",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_store_result",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_thread_id",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_thread_safe",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_use_result",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_warning_count",
+        "params": [
+            {
+                "name": "link",
+                "type": "mysqli",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_refresh",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_escape_string",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysqli_set_opt",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_READ_DEFAULT_GROUP",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_READ_DEFAULT_FILE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_OPT_CONNECT_TIMEOUT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_OPT_LOCAL_INFILE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_INIT_COMMAND",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_OPT_SSL_VERIFY_SERVER_CERT",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_SSL",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_COMPRESS",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_INTERACTIVE",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_IGNORE_SPACE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_NO_SCHEMA",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CLIENT_FOUND_ROWS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_STORE_RESULT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_USE_RESULT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_ASSOC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_STMT_ATTR_CURSOR_TYPE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CURSOR_TYPE_NO_CURSOR",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CURSOR_TYPE_READ_ONLY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CURSOR_TYPE_FOR_UPDATE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_CURSOR_TYPE_SCROLLABLE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_STMT_ATTR_PREFETCH_ROWS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_NOT_NULL_FLAG",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_PRI_KEY_FLAG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_UNIQUE_KEY_FLAG",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_MULTIPLE_KEY_FLAG",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_BLOB_FLAG",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_UNSIGNED_FLAG",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_ZEROFILL_FLAG",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_AUTO_INCREMENT_FLAG",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TIMESTAMP_FLAG",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SET_FLAG",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_NUM_FLAG",
+        "value": 32768
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_PART_KEY_FLAG",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_GROUP_FLAG",
+        "value": 32768
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_ENUM_FLAG",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_BINARY_FLAG",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_NO_DEFAULT_VALUE_FLAG",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_DECIMAL",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_TINY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_SHORT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_LONG",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_FLOAT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_DOUBLE",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_NULL",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_TIMESTAMP",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_LONGLONG",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_INT24",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_DATE",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_TIME",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_DATETIME",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_YEAR",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_NEWDATE",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_ENUM",
+        "value": 247
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_SET",
+        "value": 248
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_TINY_BLOB",
+        "value": 249
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_MEDIUM_BLOB",
+        "value": 250
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_LONG_BLOB",
+        "value": 251
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_BLOB",
+        "value": 252
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_VAR_STRING",
+        "value": 253
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_STRING",
+        "value": 254
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_CHAR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_INTERVAL",
+        "value": 247
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_GEOMETRY",
+        "value": 255
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_NEWDECIMAL",
+        "value": 246
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_TYPE_BIT",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SET_CHARSET_NAME",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SET_CHARSET_DIR",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_NO_DATA",
+        "value": 100
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_DATA_TRUNCATED",
+        "value": 101
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REPORT_INDEX",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REPORT_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REPORT_STRICT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REPORT_ALL",
+        "value": 255
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REPORT_OFF",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_DEBUG_TRACE_ENABLED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SERVER_QUERY_NO_GOOD_INDEX_USED",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SERVER_QUERY_NO_INDEX_USED",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SERVER_QUERY_WAS_SLOW",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_SERVER_PS_OUT_PARAMS",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_GRANT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_LOG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_TABLES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_HOSTS",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_STATUS",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_THREADS",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_SLAVE",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQLI_REFRESH_MASTER",
+        "value": 128
+    }
+]

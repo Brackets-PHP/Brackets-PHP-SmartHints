@@ -1,0 +1,62 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "recode_string",
+        "params": [
+            {
+                "name": "request",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "recode_file",
+        "params": [
+            {
+                "name": "request",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "recode",
+        "params": [
+            {
+                "name": "request",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

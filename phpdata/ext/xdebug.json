@@ -1,0 +1,281 @@
+[
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_STACK_NO_DESC",
+        "value": 1
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_stack_depth",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_function_stack",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_formatted_function_stack",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_print_function_stack",
+        "params": [
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_declared_vars",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_call_class",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_call_function",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_call_file",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_call_line",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_var_dump",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_debug_zval",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_debug_zval_stdout",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_enable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_disable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_is_enabled",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_break",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_start_trace",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_stop_trace",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_tracefile_name",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_profiler_filename",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_dump_aggr_profiling_data",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_clear_aggr_profiling_data",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_memory_usage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_peak_memory_usage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_time_index",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_start_error_collection",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_stop_error_collection",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_collected_errors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_start_code_coverage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_stop_code_coverage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_code_coverage",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_function_count",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_dump_superglobals",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xdebug_get_headers",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_TRACE_APPEND",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_TRACE_COMPUTERIZED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_TRACE_HTML",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_CC_UNUSED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XDEBUG_CC_DEAD_CODE",
+        "value": 2
+    }
+]

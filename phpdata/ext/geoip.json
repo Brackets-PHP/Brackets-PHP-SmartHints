@@ -1,0 +1,264 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "geoip_database_info",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": "GEOIP_COUNTRY_EDITION"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_country_code_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_country_code3_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_country_name_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_continent_code_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_org_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_record_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_id_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_region_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_isp_by_name",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_db_avail",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_db_get_all_info",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_db_filename",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_region_name_by_code",
+        "params": [
+            {
+                "name": "country_code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "region_code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "geoip_time_zone_by_country_and_region",
+        "params": [
+            {
+                "name": "country_code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "region_code",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_COUNTRY_EDITION",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_REGION_EDITION_REV0",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_CITY_EDITION_REV0",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_ORG_EDITION",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_ISP_EDITION",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_CITY_EDITION_REV1",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_REGION_EDITION_REV1",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_PROXY_EDITION",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_ASNUM_EDITION",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_NETSPEED_EDITION",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_DOMAIN_EDITION",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_UNKNOWN_SPEED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_DIALUP_SPEED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_CABLEDSL_SPEED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GEOIP_CORPORATE_SPEED",
+        "value": 3
+    }
+]

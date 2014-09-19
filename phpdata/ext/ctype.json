@@ -1,0 +1,134 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ctype_alnum",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_alpha",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_cntrl",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_digit",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_lower",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_graph",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_print",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_punct",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_space",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_upper",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ctype_xdigit",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

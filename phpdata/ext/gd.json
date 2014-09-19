@@ -1,0 +1,3102 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "gd_info",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagearc",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cx",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "end",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageellipse",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cx",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagechar",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "c",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecharup",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "c",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorat",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorallocate",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagepalettecopy",
+        "params": [
+            {
+                "name": "destination",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromstring",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorclosest",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorclosesthwb",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolordeallocate",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorresolve",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorexact",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorset",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alpha",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolortransparent",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorstotal",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorsforindex",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecopy",
+        "params": [
+            {
+                "name": "dst_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecopymerge",
+        "params": [
+            {
+                "name": "dst_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pct",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecopymergegray",
+        "params": [
+            {
+                "name": "dst_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_im",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pct",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecopyresized",
+        "params": [
+            {
+                "name": "dst_image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreate",
+        "params": [
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatetruecolor",
+        "params": [
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageistruecolor",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagetruecolortopalette",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dither",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ncolors",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagepalettetotruecolor",
+        "params": [
+            {
+                "name": "src",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesetthickness",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "thickness",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilledarc",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cx",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "end",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "style",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilledellipse",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cx",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagealphablending",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blendmode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesavealpha",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "saveflag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorallocatealpha",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alpha",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorresolvealpha",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alpha",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorclosestalpha",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alpha",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolorexactalpha",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "red",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "green",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blue",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alpha",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecopyresampled",
+        "params": [
+            {
+                "name": "dst_image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dst_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_w",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "src_h",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagerotate",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "angle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bgd_color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ignore_transparent",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageflip",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecrop",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rect",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecropauto",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "threshold",
+                "type": null,
+                "byRef": false,
+                "default": 0.5
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagescale",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_height",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": "IMG_BILINEAR_FIXED"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageaffine",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "affine",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "clip",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageaffinematrixconcat",
+        "params": [
+            {
+                "name": "m1",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "m2",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageaffinematrixget",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesetinterpolation",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": "IMG_BILINEAR_FIXED"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesettile",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesetbrush",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "brush",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesetstyle",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "style",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefrompng",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromwebp",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromgif",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromjpeg",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromwbmp",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromxbm",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromxpm",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromgd",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromgd2",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecreatefromgd2part",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "srcX",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "srcY",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagepng",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "quality",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "filters",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagewebp",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagegif",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagejpeg",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "quality",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagewbmp",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "foreground",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagegd",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagegd2",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "chunk_size",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": "IMG_GD2_RAW"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagedestroy",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagegammacorrect",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "inputgamma",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outputgamma",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefill",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilledpolygon",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "points",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "num_points",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilledrectangle",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilltoborder",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "border",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefontwidth",
+        "params": [
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefontheight",
+        "params": [
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageinterlace",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "interlace",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageline",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageloadfont",
+        "params": [
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagepolygon",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "points",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "num_points",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagerectangle",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesetpixel",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagestring",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagestringup",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "font",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesx",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagesy",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagedashedline",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagettfbbox",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "angle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fontfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagettftext",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "angle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fontfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageftbbox",
+        "params": [
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "angle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fontfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "extrainfo",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefttext",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "angle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "x",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "y",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "color",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fontfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "extrainfo",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagetypes",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "jpeg2wbmp",
+        "params": [
+            {
+                "name": "jpegname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "wbmpname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "threshold",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "png2wbmp",
+        "params": [
+            {
+                "name": "pngname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "wbmpname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_height",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "threshold",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "image2wbmp",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "threshold",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagelayereffect",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "effect",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagexbm",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "foreground",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagecolormatch",
+        "params": [
+            {
+                "name": "image1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "image2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imagefilter",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filtertype",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "arg1",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "arg2",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "arg3",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "arg4",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imageconvolution",
+        "params": [
+            {
+                "name": "image",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "matrix",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "div",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_GIF",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_JPG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_JPEG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_PNG",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_WBMP",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_XPM",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_COLOR_TILED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_COLOR_STYLED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_COLOR_BRUSHED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_COLOR_STYLEDBRUSHED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_COLOR_TRANSPARENT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_ARC_ROUNDED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_ARC_PIE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_ARC_CHORD",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_ARC_NOFILL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_ARC_EDGED",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_GD2_RAW",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_GD2_COMPRESSED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FLIP_HORIZONTAL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FLIP_VERTICAL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FLIP_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_EFFECT_REPLACE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_EFFECT_ALPHABLEND",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_EFFECT_NORMAL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_EFFECT_OVERLAY",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_DEFAULT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_TRANSPARENT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_BLACK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_WHITE",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_SIDES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CROP_THRESHOLD",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BELL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BESSEL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BILINEAR_FIXED",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BICUBIC",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BICUBIC_FIXED",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BLACKMAN",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BOX",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_BSPLINE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_CATMULLROM",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_GAUSSIAN",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_GENERALIZED_CUBIC",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_HERMITE",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_HAMMING",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_HANNING",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_MITCHELL",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_POWER",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_QUADRATIC",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_SINC",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_NEAREST_NEIGHBOUR",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_WEIGHTED4",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_TRIANGLE",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_AFFINE_TRANSLATE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_AFFINE_SCALE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_AFFINE_ROTATE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_AFFINE_SHEAR_HORIZONTAL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_AFFINE_SHEAR_VERTICAL",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_BUNDLED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_NEGATE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_GRAYSCALE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_BRIGHTNESS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_CONTRAST",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_COLORIZE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_EDGEDETECT",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_GAUSSIAN_BLUR",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_SELECTIVE_BLUR",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_EMBOSS",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_MEAN_REMOVAL",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_SMOOTH",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMG_FILTER_PIXELATE",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_VERSION",
+        "value": "2.1.1-dev"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_MAJOR_VERSION",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_MINOR_VERSION",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_RELEASE_VERSION",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GD_EXTRA_VERSION",
+        "value": "dev"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_NO_FILTER",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_FILTER_NONE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_FILTER_SUB",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_FILTER_UP",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_FILTER_AVG",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_FILTER_PAETH",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PNG_ALL_FILTERS",
+        "value": 248
+    }
+]

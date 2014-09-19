@@ -1,0 +1,1420 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "stdClass",
+        "fqn": "\\stdClass",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Exception",
+        "fqn": "\\Exception",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "previous",
+                        "type": "Exception",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Instantiate new exception.\r\n *\r\n * @link http:\/\/php.net\/exception.construct.php\r\n * @param string $message [optional]\r\n *   The exception's message.\r\n * @param integer $code [optional]\r\n *   The exception's code.\r\n * @param \\Exception $previous [optional]\r\n *   The previous exception used for exception chaining.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the string representation of the exception.\r\n *\r\n * @link http:\/\/php.net\/exception.tostring.php\r\n * @return string The string representation of the exception.\r\n *\/"
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the exception code.\r\n *\r\n * @link http:\/\/php.net\/exception.getcode.php\r\n * @return integer The exception code.\r\n *\/"
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the filename in which the exception occurred.\r\n *\r\n * @link http:\/\/php.net\/exception.getfile.php\r\n * @return string The filename in which the exception occurred.\r\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the exception message.\r\n *\r\n * @link http:\/\/php.net\/exception.getmessage.php\r\n * @return string The Exception message.\r\n *\/"
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the line number in which the exception occurred.\r\n *\r\n * @link http:\/\/php.net\/exception.getline.php\r\n * @return integer The line number in which the exception occurred.\r\n *\/"
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Returns previous exception.\r\n *\r\n * @link http:\/\/php.net\/exception.getprevious.php\r\n * @return \\Exception The previous exception if available, or <code>NULL<\/code> otherwise.\r\n * @since 5.3.0\r\n *\/"
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the stack trace.\r\n *\r\n * @link http:\/\/php.net\/exception.gettrace.php\r\n * @return array The stack trace.\r\n *\/"
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * Get the stack trace as string.\r\n *\r\n * @link http:\/\/php.net\/exception.gettraceasstring.php\r\n * @return string The stack trace as string.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ErrorException",
+        "fqn": "\\ErrorException",
+        "type": 0,
+        "extends": "Exception",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "severity",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "lineno",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Constructs the exception\r\n * @link http:\/\/php.net\/manual\/en\/errorexception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $severity [optional]\r\n * @param $filename [optional]\r\n * @param $lineno [optional]\r\n * @param $previous [optional]\r\n *\/"
+            },
+            {
+                "name": "getSeverity",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the exception severity\r\n * @link http:\/\/php.net\/manual\/en\/errorexception.getseverity.php\r\n * @return int the severity level of the exception.\r\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Closure",
+        "fqn": "\\Closure",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "bind",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "closure",
+                        "type": "Closure",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newthis",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newscope",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Duplicates a closure with a specific bound object and class scope\r\n * @link http:\/\/php.net\/manual\/en\/closure.bind.php\r\n * @param Closure $closure <p>\r\n * The anonymous functions to bind.\r\n * <\/p>\r\n * @param object $newthis <p>\r\n * The object to which the given anonymous function should be bound, or\r\n * <b>NULL<\/b> for the closure to be unbound.\r\n * <\/p>\r\n * @param mixed $newscope [optional] <p>\r\n * The class scope to which associate the closure is to be associated, or\r\n * 'static' to keep the current one. If an object is given, the type of the\r\n * object will be used instead. This determines the visibility of protected\r\n * and private methods of the bound object.\r\n * <\/p>\r\n * @return Closure a new <b>Closure<\/b> object or <b>FALSE<\/b> on failure\r\n *\/"
+            },
+            {
+                "name": "bindTo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "newthis",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newscope",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Duplicates the closure with a new bound object and class scope\r\n * @link http:\/\/php.net\/manual\/en\/closure.bindto.php\r\n * @param object $newthis <p>\r\n * The object to which the given anonymous function should be bound, or\r\n * <b>NULL<\/b> for the closure to be unbound.\r\n * <\/p>\r\n * @param mixed $newscope [optional] <p>\r\n * The class scope to which associate the closure is to be associated, or\r\n * 'static' to keep the current one. If an object is given, the type of the\r\n * object will be used instead. This determines the visibility of protected\r\n * and private methods of the bound object.\r\n * <\/p>\r\n * @return Closure the newly created <b>Closure<\/b> object\r\n * or <b>FALSE<\/b> on failure\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zend_version",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fastcgi_finish_request",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_num_args",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_get_arg",
+        "params": [
+            {
+                "name": "arg_num",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "func_get_args",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strlen",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strcmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strncmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strcasecmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "strncasecmp",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "each",
+        "params": [
+            {
+                "name": "array",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "error_reporting",
+        "params": [
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "define",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "case_insensitive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "defined",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_called_class",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_parent_class",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "method_exists",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "property_exists",
+        "params": [
+            {
+                "name": "class",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "property",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "class_exists",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "interface_exists",
+        "params": [
+            {
+                "name": "interface_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "trait_exists",
+        "params": [
+            {
+                "name": "traitname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "function_exists",
+        "params": [
+            {
+                "name": "function_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "class_alias",
+        "params": [
+            {
+                "name": "original",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "alias",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "autoload",
+                "type": null,
+                "byRef": false,
+                "default": "&true;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_included_files",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_required_files",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "is_subclass_of",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "allow_string",
+                "type": null,
+                "byRef": false,
+                "default": "&true;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "is_a",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "allow_string",
+                "type": null,
+                "byRef": false,
+                "default": "&false;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class_vars",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_object_vars",
+        "params": [
+            {
+                "name": "object",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_class_methods",
+        "params": [
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "trigger_error",
+        "params": [
+            {
+                "name": "error_msg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_type",
+                "type": null,
+                "byRef": false,
+                "default": "E_USER_NOTICE"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "user_error",
+        "params": [
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "set_error_handler",
+        "params": [
+            {
+                "name": "error_handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "error_types",
+                "type": null,
+                "byRef": false,
+                "default": "E_ALL | E_STRICT"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "restore_error_handler",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "set_exception_handler",
+        "params": [
+            {
+                "name": "exception_handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "restore_exception_handler",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_classes",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_traits",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_declared_interfaces",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_functions",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_vars",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "create_function",
+        "params": [
+            {
+                "name": "args",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_resource_type",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_loaded_extensions",
+        "params": [
+            {
+                "name": "zend_extensions",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "extension_loaded",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_extension_funcs",
+        "params": [
+            {
+                "name": "module_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "get_defined_constants",
+        "params": [
+            {
+                "name": "categorize",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debug_backtrace",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": "DEBUG_BACKTRACE_PROVIDE_OBJECT"
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "debug_print_backtrace",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_collect_cycles",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_enabled",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_enable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gc_disable",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_RECOVERABLE_ERROR",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_WARNING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_PARSE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_NOTICE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_STRICT",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_DEPRECATED",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_CORE_ERROR",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_CORE_WARNING",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_COMPILE_ERROR",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_COMPILE_WARNING",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_ERROR",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_WARNING",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_NOTICE",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_USER_DEPRECATED",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "E_ALL",
+        "value": 32767
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEBUG_BACKTRACE_PROVIDE_OBJECT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEBUG_BACKTRACE_IGNORE_ARGS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TRUE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FALSE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "NULL",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZEND_THREAD_SAFE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZEND_DEBUG_BUILD",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_VERSION",
+        "value": "5.4.9-4ubuntu2.2"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MAJOR_VERSION",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MINOR_VERSION",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_RELEASE_VERSION",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EXTRA_VERSION",
+        "value": "-4ubuntu2.2"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_VERSION_ID",
+        "value": 50409
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_ZTS",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_DEBUG",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OS",
+        "value": "Linux"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SAPI",
+        "value": "cli"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "DEFAULT_INCLUDE_PATH",
+        "value": ".:\/usr\/share\/php:\/usr\/share\/pear"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PEAR_INSTALL_DIR",
+        "value": "\/usr\/share\/php"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PEAR_EXTENSION_DIR",
+        "value": "\/usr\/lib\/php5\/20100525"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EXTENSION_DIR",
+        "value": "\/usr\/lib\/php5\/20100525"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_PREFIX",
+        "value": "\/usr"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_BINDIR",
+        "value": "\/usr\/bin"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MANDIR",
+        "value": "\/usr\/share\/man"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_LIBDIR",
+        "value": "\/usr\/lib\/php5"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_DATADIR",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SYSCONFDIR",
+        "value": "\/etc"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_LOCALSTATEDIR",
+        "value": "\/var"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_CONFIG_FILE_PATH",
+        "value": "\/etc\/php5\/cli"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_CONFIG_FILE_SCAN_DIR",
+        "value": "\/etc\/php5\/cli\/conf.d"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SHLIB_SUFFIX",
+        "value": "so"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_EOL",
+        "value": "\n"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_MAXPATHLEN",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_INT_MAX",
+        "value": 9.2233720368548e+18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_INT_SIZE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_BINARY",
+        "value": "\/usr\/bin\/php5"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_START",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_WRITE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FLUSH",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CLEAN",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FINAL",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CONT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_END",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_CLEANABLE",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_FLUSHABLE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_REMOVABLE",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_STDFLAGS",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_STARTED",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_OUTPUT_HANDLER_DISABLED",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_OK",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_INI_SIZE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_FORM_SIZE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_PARTIAL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_NO_FILE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_NO_TMP_DIR",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_CANT_WRITE",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "UPLOAD_ERR_EXTENSION",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDIN",
+        "value": "Resource id #1"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDOUT",
+        "value": "Resource id #2"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "STDERR",
+        "value": "Resource id #3"
+    }
+]

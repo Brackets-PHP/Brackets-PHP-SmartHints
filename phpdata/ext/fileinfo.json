@@ -1,0 +1,268 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "finfo",
+        "fqn": "\\finfo",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "finfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "arg",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $options [optional]\r\n * @param $arg [optional]\r\n *\/"
+            },
+            {
+                "name": "set_flags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Set libmagic configuration options\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-set-flags.php\r\n * @param int $options <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "file",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "file_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": "FILEINFO_NONE"
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Return information about a file\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-file.php\r\n * @param string $file_name [optional] <p>\r\n * Name of a file to be checked.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @param resource $context [optional] <p>\r\n * For a description of contexts, refer to .\r\n * <\/p>\r\n * @return string a textual description of the contents of the\r\n * <i>filename<\/i> argument, or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "buffer",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "string",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": "FILEINFO_NONE"
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Return information about a string buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-buffer.php\r\n * @param string $string [optional] <p>\r\n * Content of a file to be checked.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @param resource $context [optional]\r\n * @return string a textual description of the <i>string<\/i>\r\n * argument, or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_open",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_close",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_set_flags",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_file",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "finfo_buffer",
+        "params": [
+            {
+                "name": "finfo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mime_content_type",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_SYMLINK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME",
+        "value": 1040
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME_TYPE",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_MIME_ENCODING",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_DEVICES",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_CONTINUE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_PRESERVE_ATIME",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILEINFO_RAW",
+        "value": 256
+    }
+]

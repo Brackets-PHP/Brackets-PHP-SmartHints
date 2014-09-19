@@ -1,0 +1,1564 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "socket_select",
+        "params": [
+            {
+                "name": "read",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "write",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "except",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "tv_sec",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "tv_usec",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_create",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_create_listen",
+        "params": [
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "backlog",
+                "type": null,
+                "byRef": false,
+                "default": 128
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_create_pair",
+        "params": [
+            {
+                "name": "domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fd",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_accept",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_set_nonblock",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_set_block",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_listen",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "backlog",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_close",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_write",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buffer",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_read",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": "PHP_BINARY_READ"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_getsockname",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "addr",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_getpeername",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "address",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_connect",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "address",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_strerror",
+        "params": [
+            {
+                "name": "errno",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_bind",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "address",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_recv",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buf",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_send",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_recvfrom",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buf",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_sendto",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "addr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_get_option",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_set_option",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optval",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_shutdown",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "how",
+                "type": null,
+                "byRef": false,
+                "default": 2
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_last_error",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_clear_error",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_import_stream",
+        "params": [
+            {
+                "name": "stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_sendmsg",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_recvmsg",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_cmsg_space",
+        "params": [
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_getopt",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "socket_setopt",
+        "params": [
+            {
+                "name": "socket",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "optval",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "AF_UNIX",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "AF_INET",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "AF_INET6",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCK_STREAM",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCK_DGRAM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCK_RAW",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCK_SEQPACKET",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCK_RDM",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_OOB",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_WAITALL",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_CTRUNC",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_TRUNC",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_PEEK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_DONTROUTE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_EOR",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_EOF",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_CONFIRM",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_ERRQUEUE",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_NOSIGNAL",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_DONTWAIT",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_MORE",
+        "value": 32768
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_WAITFORONE",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MSG_CMSG_CLOEXEC",
+        "value": 1073741824
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_DEBUG",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_REUSEADDR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_REUSEPORT",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_KEEPALIVE",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_DONTROUTE",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_LINGER",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_BROADCAST",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_OOBINLINE",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_SNDBUF",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_RCVBUF",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_SNDLOWAT",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_RCVLOWAT",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_SNDTIMEO",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_RCVTIMEO",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_TYPE",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_ERROR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_BINDTODEVICE",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOL_SOCKET",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOMAXCONN",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TCP_NODELAY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_NORMAL_READ",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_BINARY_READ",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_JOIN_GROUP",
+        "value": 42
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_LEAVE_GROUP",
+        "value": 45
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_BLOCK_SOURCE",
+        "value": 43
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_UNBLOCK_SOURCE",
+        "value": 44
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_JOIN_SOURCE_GROUP",
+        "value": 46
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MCAST_LEAVE_SOURCE_GROUP",
+        "value": 47
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IP_MULTICAST_IF",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IP_MULTICAST_TTL",
+        "value": 33
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IP_MULTICAST_LOOP",
+        "value": 34
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_MULTICAST_IF",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_MULTICAST_HOPS",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_MULTICAST_LOOP",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPERM",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EINTR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EIO",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENXIO",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_E2BIG",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADF",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EAGAIN",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOMEM",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EACCES",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EFAULT",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTBLK",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBUSY",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EEXIST",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EXDEV",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENODEV",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTDIR",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EISDIR",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EINVAL",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENFILE",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EMFILE",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTTY",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOSPC",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ESPIPE",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EROFS",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EMLINK",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPIPE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENAMETOOLONG",
+        "value": 36
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOLCK",
+        "value": 37
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOSYS",
+        "value": 38
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTEMPTY",
+        "value": 39
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ELOOP",
+        "value": 40
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EWOULDBLOCK",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOMSG",
+        "value": 42
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EIDRM",
+        "value": 43
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ECHRNG",
+        "value": 44
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EL2NSYNC",
+        "value": 45
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EL3HLT",
+        "value": 46
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EL3RST",
+        "value": 47
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ELNRNG",
+        "value": 48
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EUNATCH",
+        "value": 49
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOCSI",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EL2HLT",
+        "value": 51
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADE",
+        "value": 52
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADR",
+        "value": 53
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EXFULL",
+        "value": 54
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOANO",
+        "value": 55
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADRQC",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADSLT",
+        "value": 57
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOSTR",
+        "value": 60
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENODATA",
+        "value": 61
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ETIME",
+        "value": 62
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOSR",
+        "value": 63
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENONET",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EREMOTE",
+        "value": 66
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOLINK",
+        "value": 67
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EADV",
+        "value": 68
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ESRMNT",
+        "value": 69
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ECOMM",
+        "value": 70
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPROTO",
+        "value": 71
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EMULTIHOP",
+        "value": 72
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADMSG",
+        "value": 74
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTUNIQ",
+        "value": 76
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EBADFD",
+        "value": 77
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EREMCHG",
+        "value": 78
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ERESTART",
+        "value": 85
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ESTRPIPE",
+        "value": 86
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EUSERS",
+        "value": 87
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTSOCK",
+        "value": 88
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EDESTADDRREQ",
+        "value": 89
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EMSGSIZE",
+        "value": 90
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPROTOTYPE",
+        "value": 91
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOPROTOOPT",
+        "value": 92
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPROTONOSUPPORT",
+        "value": 93
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ESOCKTNOSUPPORT",
+        "value": 94
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EOPNOTSUPP",
+        "value": 95
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EPFNOSUPPORT",
+        "value": 96
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EAFNOSUPPORT",
+        "value": 97
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EADDRINUSE",
+        "value": 98
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EADDRNOTAVAIL",
+        "value": 99
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENETDOWN",
+        "value": 100
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENETUNREACH",
+        "value": 101
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENETRESET",
+        "value": 102
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ECONNABORTED",
+        "value": 103
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ECONNRESET",
+        "value": 104
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOBUFS",
+        "value": 105
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EISCONN",
+        "value": 106
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOTCONN",
+        "value": 107
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ESHUTDOWN",
+        "value": 108
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ETOOMANYREFS",
+        "value": 109
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ETIMEDOUT",
+        "value": 110
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ECONNREFUSED",
+        "value": 111
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EHOSTDOWN",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EHOSTUNREACH",
+        "value": 113
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EALREADY",
+        "value": 114
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EINPROGRESS",
+        "value": 115
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EISNAM",
+        "value": 120
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EREMOTEIO",
+        "value": 121
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EDQUOT",
+        "value": 122
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_ENOMEDIUM",
+        "value": 123
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOCKET_EMEDIUMTYPE",
+        "value": 124
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPPROTO_IP",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPPROTO_IPV6",
+        "value": 41
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOL_TCP",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SOL_UDP",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_UNICAST_HOPS",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_RECVPKTINFO",
+        "value": 49
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_PKTINFO",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_RECVHOPLIMIT",
+        "value": 51
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_HOPLIMIT",
+        "value": 52
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_RECVTCLASS",
+        "value": 66
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IPV6_TCLASS",
+        "value": 67
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SCM_RIGHTS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SCM_CREDENTIALS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_PASSCRED",
+        "value": 16
+    }
+]

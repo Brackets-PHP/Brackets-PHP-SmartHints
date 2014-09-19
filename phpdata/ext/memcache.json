@@ -1,0 +1,720 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "MemcachePool",
+        "fqn": "\\MemcachePool",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "connect",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "addserver",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "setserverparams",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "setfailurecallback",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getserverstatus",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "findserver",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getversion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "add",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "replace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "cas",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "append",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "prepend",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "delete",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getstats",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getextendedstats",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "setcompressthreshold",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "increment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "decrement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "flush",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Memcache",
+        "fqn": "\\Memcache",
+        "type": 0,
+        "extends": "MemcachePool",
+        "methods": [
+            {
+                "name": "connect",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "timeout",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcache &gt;= 0.2.0)<br\/>\r\n * Open memcached server connection\r\n * @link http:\/\/php.net\/manual\/en\/memcache.connect.php\r\n * @param string $host <p>\r\n * Point to the host where memcached is listening for connections. This parameter\r\n * may also specify other transports like unix:\/\/\/path\/to\/memcached.sock\r\n * to use UNIX domain sockets, in this case <i>port<\/i> must also\r\n * be set to 0.\r\n * <\/p>\r\n * @param int $port [optional] <p>\r\n * Point to the port where memcached is listening for connections. Set this\r\n * parameter to 0 when using UNIX domain sockets.\r\n * <\/p>\r\n * <p>\r\n * Please note: <i>port<\/i> defaults to\r\n * memcache.default_port\r\n * if not specified. For this reason it is wise to specify the port\r\n * explicitly in this method call.\r\n * <\/p>\r\n * @param int $timeout [optional] <p>\r\n * Value in seconds which will be used for connecting to the daemon. Think\r\n * twice before changing the default value of 1 second - you can lose all\r\n * the advantages of caching if your connection is too slow.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "pconnect",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "timeout",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcache &gt;= 0.4.0)<br\/>\r\n * Open memcached server persistent connection\r\n * @link http:\/\/php.net\/manual\/en\/memcache.pconnect.php\r\n * @param string $host <p>\r\n * Point to the host where memcached is listening for connections. This parameter\r\n * may also specify other transports like unix:\/\/\/path\/to\/memcached.sock\r\n * to use UNIX domain sockets, in this case <i>port<\/i> must also\r\n * be set to 0.\r\n * <\/p>\r\n * @param int $port [optional] <p>\r\n * Point to the port where memcached is listening for connections. Set this\r\n * parameter to 0 when using UNIX domain sockets.\r\n * <\/p>\r\n * @param int $timeout [optional] <p>\r\n * Value in seconds which will be used for connecting to the daemon. Think\r\n * twice before changing the default value of 1 second - you can lose all\r\n * the advantages of caching if your connection is too slow.\r\n * <\/p>\r\n * @return mixed a Memcache object or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "addserver",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": 11211
+                    },
+                    {
+                        "name": "persistent",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "weight",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "timeout",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "retry_interval",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "status",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "failure_callback",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "timeoutms",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcache &gt;= 2.0.0)<br\/>\r\n * Add a memcached server to connection pool\r\n * @link http:\/\/php.net\/manual\/en\/memcache.addserver.php\r\n * @param string $host <p>\r\n * Point to the host where memcached is listening for connections. This parameter\r\n * may also specify other transports like unix:\/\/\/path\/to\/memcached.sock\r\n * to use UNIX domain sockets, in this case <i>port<\/i> must also\r\n * be set to 0.\r\n * <\/p>\r\n * @param int $port [optional] <p>\r\n * Point to the port where memcached is listening for connections.\r\n * Set this\r\n * parameter to 0 when using UNIX domain sockets.\r\n * <\/p>\r\n * <p>\r\n * Please note: <i>port<\/i> defaults to\r\n * memcache.default_port\r\n * if not specified. For this reason it is wise to specify the port\r\n * explicitly in this method call.\r\n * <\/p>\r\n * @param bool $persistent [optional] <p>\r\n * Controls the use of a persistent connection. Default to <b>TRUE<\/b>.\r\n * <\/p>\r\n * @param int $weight [optional] <p>\r\n * Number of buckets to create for this server which in turn control its\r\n * probability of it being selected. The probability is relative to the\r\n * total weight of all servers.\r\n * <\/p>\r\n * @param int $timeout [optional] <p>\r\n * Value in seconds which will be used for connecting to the daemon. Think\r\n * twice before changing the default value of 1 second - you can lose all\r\n * the advantages of caching if your connection is too slow.\r\n * <\/p>\r\n * @param int $retry_interval [optional] <p>\r\n * Controls how often a failed server will be retried, the default value\r\n * is 15 seconds. Setting this parameter to -1 disables automatic retry.\r\n * Neither this nor the <i>persistent<\/i> parameter has any\r\n * effect when the extension is loaded dynamically via <b>dl<\/b>.\r\n * <\/p>\r\n * <p>\r\n * Each failed connection struct has its own timeout and before it has expired\r\n * the struct will be skipped when selecting backends to serve a request. Once\r\n * expired the connection will be successfully reconnected or marked as failed\r\n * for another <i>retry_interval<\/i> seconds. The typical\r\n * effect is that each web server child will retry the connection about every\r\n * <i>retry_interval<\/i> seconds when serving a page.\r\n * <\/p>\r\n * @param bool $status [optional] <p>\r\n * Controls if the server should be flagged as online. Setting this parameter\r\n * to <b>FALSE<\/b> and <i>retry_interval<\/i> to -1 allows a failed\r\n * server to be kept in the pool so as not to affect the key distribution\r\n * algorithm. Requests for this server will then failover or fail immediately\r\n * depending on the <i>memcache.allow_failover<\/i> setting.\r\n * Default to <b>TRUE<\/b>, meaning the server should be considered online.\r\n * <\/p>\r\n * @param callable $failure_callback [optional] <p>\r\n * Allows the user to specify a callback function to run upon encountering an\r\n * error. The callback is run before failover is attempted. The function takes\r\n * two parameters, the hostname and port of the failed server.\r\n * <\/p>\r\n * @param int $timeoutms [optional] <p>\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setserverparams",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "setfailurecallback",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getserverstatus",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "findserver",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getversion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "add",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "replace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "cas",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "append",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "prepend",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "delete",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getstats",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getextendedstats",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "setcompressthreshold",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "increment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "decrement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "flush",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_connect",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_pconnect",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_add_server",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_set_server_params",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_set_failure_callback",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_get_server_status",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_get_version",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_add",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_set",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_replace",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_cas",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_append",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_prepend",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_get",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_delete",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_debug",
+        "params": [
+            {
+                "name": "on_off",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_get_stats",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_get_extended_stats",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_set_compress_threshold",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_increment",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_decrement",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_close",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "memcache_flush",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_COMPRESSED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_USER1",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_USER2",
+        "value": 131072
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_USER3",
+        "value": 262144
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_USER4",
+        "value": 524288
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MEMCACHE_HAVE_SESSION",
+        "value": 1
+    }
+]

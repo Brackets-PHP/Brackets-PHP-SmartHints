@@ -1,0 +1,121 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "exif_read_data",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sections",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "arrays",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "thumbnail",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "read_exif_data",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sections_needed",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sub_arrays",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "read_thumbnail",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "exif_tagname",
+        "params": [
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "exif_thumbnail",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "height",
+                "type": null,
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "imagetype",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "exif_imagetype",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "EXIF_USE_MBSTRING",
+        "value": 1
+    }
+]

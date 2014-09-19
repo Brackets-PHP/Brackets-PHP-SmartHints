@@ -1,0 +1,331 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "preg_match",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "matches",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_match_all",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "matches",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": "PREG_PATTERN_ORDER"
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "count",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_replace_callback",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "callback",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "count",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_filter",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "count",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_split",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_quote",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "delimiter",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_grep",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "input",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "preg_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_PATTERN_ORDER",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_SET_ORDER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_OFFSET_CAPTURE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_SPLIT_NO_EMPTY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_SPLIT_DELIM_CAPTURE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_SPLIT_OFFSET_CAPTURE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_GREP_INVERT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_NO_ERROR",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_INTERNAL_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_BACKTRACK_LIMIT_ERROR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_RECURSION_LIMIT_ERROR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_BAD_UTF8_ERROR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PREG_BAD_UTF8_OFFSET_ERROR",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCRE_VERSION",
+        "value": "8.31 2012-07-06"
+    }
+]

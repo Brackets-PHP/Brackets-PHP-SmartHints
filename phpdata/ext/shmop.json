@@ -1,0 +1,116 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "shmop_open",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shmop_read",
+        "params": [
+            {
+                "name": "shmid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "count",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shmop_close",
+        "params": [
+            {
+                "name": "shmid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shmop_size",
+        "params": [
+            {
+                "name": "shmid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shmop_write",
+        "params": [
+            {
+                "name": "shmid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shmop_delete",
+        "params": [
+            {
+                "name": "shmid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

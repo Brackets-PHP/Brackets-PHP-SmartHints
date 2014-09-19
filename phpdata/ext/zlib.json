@@ -1,0 +1,484 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "readgzfile",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "use_include_path",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzrewind",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzclose",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzeof",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzgetc",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzgets",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzgetss",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "allowable_tags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzread",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzopen",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "use_include_path",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzpassthru",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzseek",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "whence",
+                "type": null,
+                "byRef": false,
+                "default": "SEEK_SET"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gztell",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzwrite",
+        "params": [
+            {
+                "name": "zp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzputs",
+        "params": [
+            {
+                "name": "fp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzfile",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "use_include_path",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzcompress",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "ZLIB_ENCODING_DEFLATE"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzuncompress",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzdeflate",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "ZLIB_ENCODING_RAW"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzinflate",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzencode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding_mode",
+                "type": null,
+                "byRef": false,
+                "default": "FORCE_GZIP"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gzdecode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zlib_encode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "level",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zlib_decode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "max_decoded_len",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "zlib_get_coding_type",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ob_gzhandler",
+        "params": [
+            {
+                "name": "buffer",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FORCE_GZIP",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FORCE_DEFLATE",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZLIB_ENCODING_RAW",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZLIB_ENCODING_GZIP",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ZLIB_ENCODING_DEFLATE",
+        "value": 15
+    }
+]

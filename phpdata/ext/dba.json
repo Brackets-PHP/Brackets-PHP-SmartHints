@@ -1,0 +1,255 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "dba_open",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_popen",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_close",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_delete",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_exists",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_fetch",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_insert",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_replace",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_firstkey",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_nextkey",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_optimize",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_sync",
+        "params": [
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_handlers",
+        "params": [
+            {
+                "name": "full_info",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_list",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "dba_key_split",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

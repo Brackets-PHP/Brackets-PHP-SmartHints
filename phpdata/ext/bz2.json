@@ -1,0 +1,164 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "bzopen",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzread",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": 1024
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzwrite",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzflush",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzclose",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzerrno",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzerrstr",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzerror",
+        "params": [
+            {
+                "name": "bz",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzcompress",
+        "params": [
+            {
+                "name": "source",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blocksize",
+                "type": null,
+                "byRef": false,
+                "default": 4
+            },
+            {
+                "name": "workfactor",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "bzdecompress",
+        "params": [
+            {
+                "name": "source",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "small",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    }
+]

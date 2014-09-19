@@ -1,0 +1,411 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "filter_input",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filter",
+                "type": null,
+                "byRef": false,
+                "default": "FILTER_DEFAULT"
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_var",
+        "params": [
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filter",
+                "type": null,
+                "byRef": false,
+                "default": "FILTER_DEFAULT"
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_input_array",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "definition",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "add_empty",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_var_array",
+        "params": [
+            {
+                "name": "data",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "definition",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "add_empty",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_list",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_has_var",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "filter_id",
+        "params": [
+            {
+                "name": "filtername",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_POST",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_GET",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_COOKIE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_ENV",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_SERVER",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_SESSION",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INPUT_REQUEST",
+        "value": 99
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_REQUIRE_SCALAR",
+        "value": 33554432
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_REQUIRE_ARRAY",
+        "value": 16777216
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FORCE_ARRAY",
+        "value": 67108864
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_NULL_ON_FAILURE",
+        "value": 134217728
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_INT",
+        "value": 257
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_BOOLEAN",
+        "value": 258
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_FLOAT",
+        "value": 259
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_REGEXP",
+        "value": 272
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_URL",
+        "value": 273
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_EMAIL",
+        "value": 274
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_IP",
+        "value": 275
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_VALIDATE_MAC",
+        "value": 276
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_DEFAULT",
+        "value": 516
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_UNSAFE_RAW",
+        "value": 516
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_STRING",
+        "value": 513
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_STRIPPED",
+        "value": 513
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_ENCODED",
+        "value": 514
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_SPECIAL_CHARS",
+        "value": 515
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_FULL_SPECIAL_CHARS",
+        "value": 522
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_EMAIL",
+        "value": 517
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_URL",
+        "value": 518
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_NUMBER_INT",
+        "value": 519
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_NUMBER_FLOAT",
+        "value": 520
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_SANITIZE_MAGIC_QUOTES",
+        "value": 521
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_CALLBACK",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ALLOW_OCTAL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ALLOW_HEX",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_STRIP_LOW",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_STRIP_HIGH",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_STRIP_BACKTICK",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ENCODE_LOW",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ENCODE_HIGH",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ENCODE_AMP",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_NO_ENCODE_QUOTES",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_EMPTY_STRING_NULL",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ALLOW_FRACTION",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ALLOW_THOUSAND",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_ALLOW_SCIENTIFIC",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_SCHEME_REQUIRED",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_HOST_REQUIRED",
+        "value": 131072
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_PATH_REQUIRED",
+        "value": 262144
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_QUERY_REQUIRED",
+        "value": 524288
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_IPV4",
+        "value": 1048576
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_IPV6",
+        "value": 2097152
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_NO_RES_RANGE",
+        "value": 4194304
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FILTER_FLAG_NO_PRIV_RANGE",
+        "value": 8388608
+    }
+]

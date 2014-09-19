@@ -1,0 +1,545 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "xml_parser_create",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parser_create_ns",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "separator",
+                "type": null,
+                "byRef": false,
+                "default": ":"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_object",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_element_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start_element_handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "end_element_handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_character_data_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_processing_instruction_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_default_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_unparsed_entity_decl_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_notation_decl_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_external_entity_ref_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_start_namespace_decl_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_set_end_namespace_decl_handler",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parse",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_final",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parse_into_struct",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "values",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_get_error_code",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_error_string",
+        "params": [
+            {
+                "name": "code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_get_current_line_number",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_get_current_column_number",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_get_current_byte_index",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parser_free",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parser_set_option",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xml_parser_get_option",
+        "params": [
+            {
+                "name": "parser",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "utf8_encode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "utf8_decode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_NO_MEMORY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_SYNTAX",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_NO_ELEMENTS",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_INVALID_TOKEN",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_UNCLOSED_TOKEN",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_PARTIAL_CHAR",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_TAG_MISMATCH",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_DUPLICATE_ATTRIBUTE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_JUNK_AFTER_DOC_ELEMENT",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_PARAM_ENTITY_REF",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_UNDEFINED_ENTITY",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_RECURSIVE_ENTITY_REF",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_ASYNC_ENTITY",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_BAD_CHAR_REF",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_BINARY_ENTITY_REF",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_ATTRIBUTE_EXTERNAL_ENTITY_REF",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_MISPLACED_XML_PI",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_UNKNOWN_ENCODING",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_INCORRECT_ENCODING",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_UNCLOSED_CDATA_SECTION",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_ERROR_EXTERNAL_ENTITY_HANDLING",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_OPTION_CASE_FOLDING",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_OPTION_TARGET_ENCODING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_OPTION_SKIP_TAGSTART",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_OPTION_SKIP_WHITE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XML_SAX_IMPL",
+        "value": "libxml"
+    }
+]

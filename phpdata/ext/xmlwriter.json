@@ -1,0 +1,1370 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "XMLWriter",
+        "fqn": "\\XMLWriter",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "openUri",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create new xmlwriter using source uri for output\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-uri.php\r\n * @param string $uri <p>\r\n * The URI of the resource for the output.\r\n * <\/p>\r\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * <\/p>\r\n * <p>\r\n * Procedural style: Returns a new xmlwriter resource for later use with the\r\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "openMemory",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create new xmlwriter using memory for string output\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-memory.php\r\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * <\/p>\r\n * <p>\r\n * Procedural style: Returns a new xmlwriter resource for later use with the\r\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setIndent",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "indent",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Toggle indentation on\/off\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent.php\r\n * @param bool $indent <p>\r\n * Whether indentation is enabled.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setIndentString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "indentString",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Set string used for indenting\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent-string.php\r\n * @param string $indentString <p>\r\n * The indentation string.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Create start comment\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-comment.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Create end comment\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-comment.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute.php\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-attribute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute.php\r\n * @param string $name <p>\r\n * The name of the attribute.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The value of the attribute.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startAttributeNs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start namespaced attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeAttributeNs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full namespaced attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The attribute value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element.php\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "fullEndElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\r\n * End current element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-full-end-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startElementNs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start namespaced element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element.php\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $content [optional] <p>\r\n * The element contents.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeElementNs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full namespaced element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @param string $content [optional] <p>\r\n * The element contents.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startPi",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "target",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start PI tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-pi.php\r\n * @param string $target <p>\r\n * The target of the processing instruction.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endPi",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current PI\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-pi.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writePi",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "target",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Writes a PI\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-pi.php\r\n * @param string $target <p>\r\n * The target of the processing instruction.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the processing instruction.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startCdata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start CDATA tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-cdata.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endCdata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current CDATA\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-cdata.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeCdata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full CDATA tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-cdata.php\r\n * @param string $content <p>\r\n * The contents of the CDATA.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "text",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write text\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-text.php\r\n * @param string $content <p>\r\n * The contents of the text.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeRaw",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\r\n * Write a raw XML text\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-raw.php\r\n * @param string $content <p>\r\n * The text string to write.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startDocument",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "version",
+                        "type": null,
+                        "byRef": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "standalone",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create document tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-document.php\r\n * @param string $version [optional] <p>\r\n * The version number of the document as part of the XML declaration.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The encoding of the document as part of the XML declaration.\r\n * <\/p>\r\n * @param string $standalone [optional] <p>\r\n * yes or no.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endDocument",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current document\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-document.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full comment tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-comment.php\r\n * @param string $content <p>\r\n * The contents of the comment.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startDtd",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "qualifiedName",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "publicId",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "systemId",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd.php\r\n * @param string $qualifiedName <p>\r\n * The qualified name of the document type to create.\r\n * <\/p>\r\n * @param string $publicId [optional] <p>\r\n * The external subset public identifier.\r\n * <\/p>\r\n * @param string $systemId [optional] <p>\r\n * The external subset system identifier.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endDtd",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeDtd",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "publicId",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "systemId",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "subset",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd.php\r\n * @param string $name <p>\r\n * The DTD name.\r\n * <\/p>\r\n * @param string $publicId [optional] <p>\r\n * The external subset public identifier.\r\n * <\/p>\r\n * @param string $systemId [optional] <p>\r\n * The external subset system identifier.\r\n * <\/p>\r\n * @param string $subset [optional] <p>\r\n * The content of the DTD.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startDtdElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "qualifiedName",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-element.php\r\n * @param string $qualifiedName <p>\r\n * The qualified name of the document type to create.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endDtdElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeDtdElement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-element.php\r\n * @param string $name <p>\r\n * The name of the DTD element.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the element.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startDtdAttlist",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD AttList\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-attlist.php\r\n * @param string $name <p>\r\n * The attribute list name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endDtdAttlist",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD AttList\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-attlist.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeDtdAttlist",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD AttList tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-attlist.php\r\n * @param string $name <p>\r\n * The name of the DTD attribute list.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the DTD attribute list.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startDtdEntity",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "isparam",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD Entity\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-entity.php\r\n * @param string $name <p>\r\n * The name of the entity.\r\n * <\/p>\r\n * @param bool $isparam\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "endDtdEntity",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD Entity\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-entity.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "writeDtdEntity",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "content",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pe",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pubid",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "sysid",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ndataid",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD Entity tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-entity.php\r\n * @param string $name <p>\r\n * The name of the entity.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the entity.\r\n * <\/p>\r\n * @param bool $pe\r\n * @param string $pubid\r\n * @param string $sysid\r\n * @param string $ndataid\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "outputMemory",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flush",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Returns current buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-output-memory.php\r\n * @param bool $flush [optional] <p>\r\n * Whether to flush the output buffer or not. Default is <b>TRUE<\/b>.\r\n * <\/p>\r\n * @return string the current buffer as a string.\r\n *\/"
+            },
+            {
+                "name": "flush",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "empty",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Flush current buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-flush.php\r\n * @param bool $empty [optional] <p>\r\n * Whether to empty the buffer or not. Default is <b>TRUE<\/b>.\r\n * <\/p>\r\n * @return mixed If you opened the writer in memory, this function returns the generated XML buffer,\r\n * Else, if using URI, this function will write the buffer and return the number of\r\n * written bytes.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_open_uri",
+        "params": [
+            {
+                "name": "uri",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_open_memory",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_set_indent",
+        "params": [
+            {
+                "name": "indent",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_set_indent_string",
+        "params": [
+            {
+                "name": "indentString",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_comment",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_comment",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_attribute",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_attribute",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_attribute",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_attribute_ns",
+        "params": [
+            {
+                "name": "prefix",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "uri",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_attribute_ns",
+        "params": [
+            {
+                "name": "prefix",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "uri",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_element",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_element",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_full_end_element",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_element_ns",
+        "params": [
+            {
+                "name": "prefix",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "uri",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_element",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_element_ns",
+        "params": [
+            {
+                "name": "prefix",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "uri",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_pi",
+        "params": [
+            {
+                "name": "target",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_pi",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_pi",
+        "params": [
+            {
+                "name": "target",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_cdata",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_cdata",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_cdata",
+        "params": [
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_text",
+        "params": [
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_raw",
+        "params": [
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_document",
+        "params": [
+            {
+                "name": "version",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "standalone",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_document",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_comment",
+        "params": [
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_dtd",
+        "params": [
+            {
+                "name": "qualifiedName",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "publicId",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "systemId",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_dtd",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_dtd",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "publicId",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "systemId",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "subset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_dtd_element",
+        "params": [
+            {
+                "name": "qualifiedName",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_dtd_element",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_dtd_element",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_dtd_attlist",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_dtd_attlist",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_dtd_attlist",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_start_dtd_entity",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "isparam",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_end_dtd_entity",
+        "params": [
+            {
+                "name": "xmlwriter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_write_dtd_entity",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pe",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pubid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sysid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ndataid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_output_memory",
+        "params": [
+            {
+                "name": "flush",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlwriter_flush",
+        "params": [
+            {
+                "name": "empty",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    }
+]

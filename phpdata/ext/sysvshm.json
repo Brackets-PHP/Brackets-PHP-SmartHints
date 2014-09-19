@@ -1,0 +1,128 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "shm_attach",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "memsize",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "perm",
+                "type": null,
+                "byRef": false,
+                "default": 438
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_remove",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_detach",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_put_var",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_has_var",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_get_var",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "shm_remove_var",
+        "params": [
+            {
+                "name": "shm_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "variable_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

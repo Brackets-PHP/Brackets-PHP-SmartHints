@@ -1,0 +1,1941 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "imap_open",
+        "params": [
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "n_retries",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "params",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_reopen",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "n_retries",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_close",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_num_msg",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_num_recent",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_headers",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_headerinfo",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fromlength",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "subjectlength",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "defaulthost",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_rfc822_parse_headers",
+        "params": [
+            {
+                "name": "headers",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "defaulthost",
+                "type": null,
+                "byRef": false,
+                "default": "UNKNOWN"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_rfc822_write_address",
+        "params": [
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "personal",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_rfc822_parse_adrlist",
+        "params": [
+            {
+                "name": "address",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "default_host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_body",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_bodystruct",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "section",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetchbody",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "section",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetchmime",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "section",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_savebody",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "part_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetchheader",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetchstructure",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_gc",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "caches",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_expunge",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_delete",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_undelete",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_check",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_listscan",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mail_copy",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msglist",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mail_move",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msglist",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mail_compose",
+        "params": [
+            {
+                "name": "envelope",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "body",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_createmailbox",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_renamemailbox",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old_mbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_mbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_deletemailbox",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_subscribe",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_unsubscribe",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_append",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "internal_date",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_ping",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_base64",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_qprint",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_8bit",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_binary",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_utf8",
+        "params": [
+            {
+                "name": "mime_encoded_text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_status",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mailboxmsginfo",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_setflag_full",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sequence",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": "NIL"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_clearflag_full",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sequence",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_sort",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "criteria",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "reverse",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "search_criteria",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "NIL"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_uid",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_msgno",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "uid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_list",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_lsub",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetch_overview",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sequence",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_alerts",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_errors",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_search",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "criteria",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": "SE_FREE"
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "NIL"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_utf7_decode",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_utf7_encode",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mime_header_decode",
+        "params": [
+            {
+                "name": "text",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_thread",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": "SE_FREE"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_timeout",
+        "params": [
+            {
+                "name": "timeout_type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_get_quota",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "quota_root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_get_quotaroot",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "quota_root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_set_quota",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "quota_root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "quota_limit",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_setacl",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rights",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_getacl",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_mail",
+        "params": [
+            {
+                "name": "to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "additional_headers",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "cc",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "bcc",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "rpath",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_header",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_no",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "from_length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject_length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "default_host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_listmailbox",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_getmailboxes",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_scanmailbox",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_listsubscribed",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_getsubscribed",
+        "params": [
+            {
+                "name": "imap_stream",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_fetchtext",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "msg_no",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_scan",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ref",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_create",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mailbox",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "imap_rename",
+        "params": [
+            {
+                "name": "stream_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "NIL",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_OPENTIMEOUT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_READTIMEOUT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_WRITETIMEOUT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_CLOSETIMEOUT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_DEBUG",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_READONLY",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_ANONYMOUS",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_SHORTCACHE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_SILENT",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_PROTOTYPE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_HALFOPEN",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_EXPUNGE",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OP_SECURE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CL_EXPUNGE",
+        "value": 32768
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FT_UID",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FT_PEEK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FT_NOT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FT_INTERNAL",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FT_PREFETCHTEXT",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ST_UID",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ST_SILENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ST_SET",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CP_UID",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CP_MOVE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SE_UID",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SE_FREE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SE_NOPREFETCH",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_FREE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SO_NOSERVER",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_MESSAGES",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_RECENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_UNSEEN",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_UIDNEXT",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_UIDVALIDITY",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SA_ALL",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_NOINFERIORS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_NOSELECT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_MARKED",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_UNMARKED",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_REFERRAL",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_HASCHILDREN",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LATT_HASNOCHILDREN",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTDATE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTARRIVAL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTFROM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTSUBJECT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTTO",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTCC",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SORTSIZE",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPETEXT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEMULTIPART",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEMESSAGE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEAPPLICATION",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEAUDIO",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEIMAGE",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEVIDEO",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEMODEL",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TYPEOTHER",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENC7BIT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENC8BIT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCBINARY",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCBASE64",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCQUOTEDPRINTABLE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ENCOTHER",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_GC_ELT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_GC_ENV",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IMAP_GC_TEXTS",
+        "value": 4
+    }
+]

@@ -1,0 +1,275 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "XSLTProcessor",
+        "fqn": "\\XSLTProcessor",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "importStylesheet",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "stylesheet",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Import stylesheet\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.importstylesheet.php\r\n * @param object $stylesheet <p>\r\n * The imported style sheet as a <b>DOMDocument<\/b> or\r\n * <b>SimpleXMLElement<\/b> object.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "transformToDoc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "doc",
+                        "type": "DOMNode",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transform to a DOMDocument\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.transformtodoc.php\r\n * @param DOMNode $doc <p>\r\n * The node to be transformed.\r\n * <\/p>\r\n * @return DOMDocument The resulting <b>DOMDocument<\/b> or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "transformToUri",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "doc",
+                        "type": "DOMDocument",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "uri",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transform to URI\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.transformtouri.php\r\n * @param DOMDocument $doc <p>\r\n * The document to transform.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The target URI for the transformation.\r\n * <\/p>\r\n * @return int the number of bytes written or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "transformToXml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "doc",
+                        "type": "DOMDocument",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transform to XML\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.transformtoxml.php\r\n * @param DOMDocument $doc <p>\r\n * The transformed document.\r\n * <\/p>\r\n * @return string The result of the transformation as a string or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setParameter",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "namespace",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set value for a parameter\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.setparameter.php\r\n * @param string $namespace <p>\r\n * The namespace URI of the XSLT parameter.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The local name of the XSLT parameter.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The new value of the XSLT parameter.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getParameter",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "namespaceURI",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "localName",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get value of a parameter\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.getparameter.php\r\n * @param string $namespaceURI <p>\r\n * The namespace URI of the XSLT parameter.\r\n * <\/p>\r\n * @param string $localName <p>\r\n * The local name of the XSLT parameter.\r\n * <\/p>\r\n * @return string The value of the parameter (as a string), or <b>FALSE<\/b> if it's not set.\r\n *\/"
+            },
+            {
+                "name": "removeParameter",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "namespaceURI",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "localName",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Remove parameter\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.removeparameter.php\r\n * @param string $namespaceURI <p>\r\n * The namespace URI of the XSLT parameter.\r\n * <\/p>\r\n * @param string $localName <p>\r\n * The local name of the XSLT parameter.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "hasExsltSupport",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.4)<br\/>\r\n * Determine if PHP has EXSLT support\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.hasexsltsupport.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "registerPHPFunctions",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "restrict",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.4)<br\/>\r\n * Enables the ability to use PHP functions as XSLT functions\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.registerphpfunctions.php\r\n * @param mixed $restrict [optional] <p>\r\n * Use this parameter to only allow certain functions to be called from\r\n * XSLT.\r\n * <\/p>\r\n * <p>\r\n * This parameter can be either a string (a function name) or an array of\r\n * functions.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setProfiling",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0)<br\/>\r\n * Sets profiling output file\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.setprofiling.php\r\n * @param string $filename <p>\r\n * Path to the file to dump profiling information.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setSecurityPrefs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "securityPrefs",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Set security preferences\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.setsecurityprefs.php\r\n * @param int $securityPrefs\r\n * @return int\r\n *\/"
+            },
+            {
+                "name": "getSecurityPrefs",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Get security preferences\r\n * @link http:\/\/php.net\/manual\/en\/xsltprocessor.getsecurityprefs.php\r\n * @return int\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_CLONE_AUTO",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_CLONE_NEVER",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_CLONE_ALWAYS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_READ_FILE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_WRITE_FILE",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_CREATE_DIRECTORY",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_READ_NETWORK",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_WRITE_NETWORK",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "XSL_SECPREF_DEFAULT",
+        "value": 44
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXSLT_VERSION",
+        "value": 10128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBXSLT_DOTTED_VERSION",
+        "value": "1.1.28"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBEXSLT_VERSION",
+        "value": 817
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LIBEXSLT_DOTTED_VERSION",
+        "value": "1.1.28"
+    }
+]

@@ -1,0 +1,353 @@
+[
+    {
+        "stmtType": "Namespace",
+        "name": "Drupal7"
+    },
+    {
+        "stmtType": "Class",
+        "name": "Node",
+        "fqn": "Drupal7\\Node",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+            {
+                "name": "nid",
+                "doc": "\/**\r\n * The node's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "vid",
+                "doc": "\/**\r\n * The node's unique revision identifier of the current version.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "type",
+                "doc": "\/**\r\n * The node's machine readable content type name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "language",
+                "doc": "\/**\r\n * The node's default language.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "title",
+                "doc": "\/**\r\n * The node's title.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "uid",
+                "doc": "\/**\r\n * The node's unique user identifier who created it.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "status",
+                "doc": "\/**\r\n * The node's status, one of <code>NODE_NO_PUBLISHED<\/code>, <code>NODE_PUBLISHED<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "created",
+                "doc": "\/**\r\n * The node's creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "changed",
+                "doc": "\/**\r\n * The node's changed timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "comment",
+                "doc": "\/**\r\n * Whether comments are allowed on this node, one of <code>COMMENT_NODE_HIDDEN<\/code>,\r\n * <code>COMMENT_NODE_CLOSED<\/code>, <code>COMMENT_NODE_OPEN<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "promote",
+                "doc": "\/**\r\n * Whether this node is promoted to the frontpage or not, one of <code>NODE_NOT_PROMOTED<\/code>, <code>NODE_PROMOTED<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "sticky",
+                "doc": "\/**\r\n * Whether this node is sticky or not, one of <code>NODE_NOT_STICKY<\/code>, <code>NODE_STICKY<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "tnid",
+                "doc": "\/**\r\n * The node's unique identifier of the translation source (or parent, if node is a translation).\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "translate",
+                "doc": "\/**\r\n * Whether the translation needs updating or not (<code>0<\/code> no update, <code>1<\/code> needs update).\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "revision_uid",
+                "doc": "\/**\r\n * The node's unique user identifier who created the current revision.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "body",
+                "doc": "\/**\r\n * The node's body content; long text field with summary.\r\n *\r\n * <b>NOTE<\/b><br>\r\n * Don't assume that this field will exist, as it is possible to remove it via Manage Fields on each content type.\r\n * Similarly, modules that define a custom node content type may not even attach a body in the first place.\r\n *\r\n * @var array\r\n *\/"
+            },
+            {
+                "name": "log",
+                "doc": "\/**\r\n * Message left by the creator of this revision, explaining the changes.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "revision_timestamp",
+                "doc": "\/**\r\n * The node's revision creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "name",
+                "doc": "\/**\r\n * The node's creator user name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "picture",
+                "doc": "\/**\r\n * The node's creator user avatar.\r\n *\r\n * @var ?\r\n *\/"
+            },
+            {
+                "name": "cid",
+                "doc": "\/**\r\n * The node's unique identifier of the last comment.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "last_comment_timestamp",
+                "doc": "\/**\r\n * The node's timestamp of the last comment.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "last_comment_name",
+                "doc": "\/**\r\n * The name of the user who last left a comment.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "last_comment_uid",
+                "doc": "\/**\r\n * The unique identifier of the user who last left a comment.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "comment_count",
+                "doc": "\/**\r\n * The node's total comment count.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "data",
+                "doc": "\/**\r\n * Serialized string of data associated with the node.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "rdf_mapping",
+                "doc": "\/**\r\n * W3C standard to describe structured data.\r\n *\r\n * @link http:\/\/api.drupal.org\/api\/drupal\/modules!rdf!rdf.module\/group\/rdf\/7\r\n * @var string\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "File",
+        "fqn": "Drupal7\\File",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+            {
+                "name": "fid",
+                "doc": "\/**\r\n * The file's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "uid",
+                "doc": "\/**\r\n * The file's unique user identifier who uploaded the file.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "filename",
+                "doc": "\/**\r\n * The file's name (including the extension).\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "uri",
+                "doc": "\/**\r\n * The file's canonical absolute URI.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "filemime",
+                "doc": "\/**\r\n * The file's MIME type.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "filesize",
+                "doc": "\/**\r\n * The file's size in Bytes.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "status",
+                "doc": "\/**\r\n * The file's status.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "timestamp",
+                "doc": "\/**\r\n * The file's timestamp.\r\n *\r\n * @todo Is this the timestamp of creation or change?\r\n * @var integer\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Term",
+        "fqn": "Drupal7\\Term",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+            {
+                "name": "tid",
+                "doc": "\/**\r\n * The term's unique identifier.\r\n *\r\n * @var integer|string\r\n *\/"
+            },
+            {
+                "name": "vid",
+                "doc": "\/**\r\n * The term's unique vocabulary identifier.\r\n *\r\n * @var integer|string\r\n *\/"
+            },
+            {
+                "name": "name",
+                "doc": "\/**\r\n * The term's human readable name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "description",
+                "doc": "\/**\r\n * The term's description.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "format",
+                "doc": "\/**\r\n * The term's description text format.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "weight",
+                "doc": "\/**\r\n * The term's weight.\r\n *\r\n * @var integer|string\r\n *\/"
+            },
+            {
+                "name": "depth",
+                "doc": "\/**\r\n * The term's depth.\r\n *\r\n * @var integer|null\r\n *\/"
+            },
+            {
+                "name": "parents",
+                "doc": "\/**\r\n * The term's parents.\r\n *\r\n * @var array|null\r\n *\/"
+            },
+            {
+                "name": "vocabulary_machine_name",
+                "doc": "\/**\r\n * The term's vocabulary machine name.\r\n *\r\n * @var string\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "User",
+        "fqn": "Drupal7\\User",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+            {
+                "name": "uid",
+                "doc": "\/**\r\n * The user's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "name",
+                "doc": "\/**\r\n * The user's unique name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "pass",
+                "doc": "\/**\r\n * The user's hashed password.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "mail",
+                "doc": "\/**\r\n * The user's unique email address.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "theme",
+                "doc": "\/**\r\n * The user's theme.\r\n *\r\n * @var null|string\r\n *\/"
+            },
+            {
+                "name": "signature",
+                "doc": "\/**\r\n * The user's signature.\r\n *\r\n * @var null|string\r\n *\/"
+            },
+            {
+                "name": "signature_format",
+                "doc": "\/**\r\n * The user's signature format.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "created",
+                "doc": "\/**\r\n * The user's creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "access",
+                "doc": "\/**\r\n * The user's last access timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "login",
+                "doc": "\/**\r\n * The user's last login timestamp.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "status",
+                "doc": "\/**\r\n * The user's status.\r\n *\r\n * <ul>\r\n *   <li><code>0<\/code> inactive<\/li>\r\n *   <li><code>1<\/code> active<\/li>\r\n * <\/ul>\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "timezone",
+                "doc": "\/**\r\n * The user's time zone identifier.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "language",
+                "doc": "\/**\r\n * The user's language;\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "picture",
+                "doc": "\/**\r\n * The user's picture.\r\n *\r\n * @var \\Drupal7\\File\r\n *\/"
+            },
+            {
+                "name": "init",
+                "doc": "\/**\r\n * The user's registration email address.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "data",
+                "doc": "\/**\r\n * The user's additional data.\r\n *\r\n * @var mixed\r\n *\/"
+            },
+            {
+                "name": "roles",
+                "doc": "\/**\r\n * The user's roles.\r\n *\r\n * @var array\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Vocabulary",
+        "fqn": "Drupal7\\Vocabulary",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+            {
+                "name": "vid",
+                "doc": "\/**\r\n * The vocabulary's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "name",
+                "doc": "\/**\r\n * The vocabulary's human readable name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "machine_name",
+                "doc": "\/**\r\n * The vocabulary's machine readable name.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "description",
+                "doc": "\/**\r\n * The vocabulary's description.\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "hierarchy",
+                "doc": "\/**\r\n * The vocabulary's hierarchy level.\r\n *\r\n * @var integer\r\n *\/"
+            },
+            {
+                "name": "module",
+                "doc": "\/**\r\n * The vocabulary's module (if any).\r\n *\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "weight",
+                "doc": "\/**\r\n * The vocabulary's weight.\r\n *\r\n * @var integer\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    }
+]

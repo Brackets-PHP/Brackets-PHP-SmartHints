@@ -1,0 +1,1145 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "odbc_autocommit",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "OnOff",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_binmode",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_close",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_close_all",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_columns",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "schema",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "table_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "column_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_commit",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_connect",
+        "params": [
+            {
+                "name": "dsn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cursor_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_cursor",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_data_source",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_execute",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "parameters_array",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_error",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_errormsg",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_exec",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_fetch_array",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rownumber",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rownumber",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_fetch_row",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row_number",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_fetch_into",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_array",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "rownumber",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_len",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_scale",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_name",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_type",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_num",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_free_result",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_gettypeinfo",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_longreadlen",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_next_result",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_num_fields",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_num_rows",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_pconnect",
+        "params": [
+            {
+                "name": "dsn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cursor_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_prepare",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_result",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_result_all",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "format",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_rollback",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_setoption",
+        "params": [
+            {
+                "name": "id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "function",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "param",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_specialcolumns",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scope",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "nullable",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_statistics",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "unique",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "accuracy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_tables",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "types",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_primarykeys",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_columnprivileges",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "column_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_tableprivileges",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_foreignkeys",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pk_qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pk_owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pk_table",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fk_qualifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fk_owner",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fk_table",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_procedures",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_procedurecolumns",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_do",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "odbc_field_precision",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ODBC_TYPE",
+        "value": "unixODBC"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ODBC_BINMODE_PASSTHRU",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ODBC_BINMODE_RETURN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ODBC_BINMODE_CONVERT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_ODBC_CURSORS",
+        "value": 110
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CUR_USE_DRIVER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CUR_USE_IF_NEEDED",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CUR_USE_ODBC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CONCURRENCY",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CONCUR_READ_ONLY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CONCUR_LOCK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CONCUR_ROWVER",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CONCUR_VALUES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CURSOR_TYPE",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CURSOR_FORWARD_ONLY",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CURSOR_KEYSET_DRIVEN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CURSOR_DYNAMIC",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CURSOR_STATIC",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_KEYSET_SIZE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_FETCH_FIRST",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_FETCH_NEXT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_CHAR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_VARCHAR",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_LONGVARCHAR",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_DECIMAL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_NUMERIC",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_BIT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_TINYINT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_SMALLINT",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_INTEGER",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_BIGINT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_REAL",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_FLOAT",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_DOUBLE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_BINARY",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_VARBINARY",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_LONGVARBINARY",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_DATE",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_TIME",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQL_TIMESTAMP",
+        "value": 11
+    }
+]

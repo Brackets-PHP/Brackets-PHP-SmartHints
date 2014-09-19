@@ -1,0 +1,138 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "readline",
+        "params": [
+            {
+                "name": "prompt",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_info",
+        "params": [
+            {
+                "name": "varname",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "newvalue",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_add_history",
+        "params": [
+            {
+                "name": "line",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_clear_history",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_read_history",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_write_history",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_completion_function",
+        "params": [
+            {
+                "name": "function",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_callback_handler_install",
+        "params": [
+            {
+                "name": "prompt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "callback",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_callback_read_char",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_callback_handler_remove",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_redisplay",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "readline_on_new_line",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "READLINE_LIB",
+        "value": "libedit"
+    }
+]

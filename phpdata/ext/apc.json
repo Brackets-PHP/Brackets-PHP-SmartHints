@@ -1,0 +1,302 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "apc_cache_info",
+        "params": [
+            {
+                "name": "cache_type",
+                "type": null,
+                "byRef": false,
+                "default": "&quot;&quot;"
+            },
+            {
+                "name": "limited",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_clear_cache",
+        "params": [
+            {
+                "name": "cache_type",
+                "type": null,
+                "byRef": false,
+                "default": "&quot;&quot;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_sma_info",
+        "params": [
+            {
+                "name": "limited",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_store",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ttl",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_fetch",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_delete",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_add",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "ttl",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_inc",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "step",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_dec",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "step",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            },
+            {
+                "name": "success",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_cas",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "old",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_exists",
+        "params": [
+            {
+                "name": "keys",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_bin_dump",
+        "params": [
+            {
+                "name": "files",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "user_vars",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_bin_dumpfile",
+        "params": [
+            {
+                "name": "files",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_vars",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_bin_load",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "apc_bin_loadfile",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    }
+]

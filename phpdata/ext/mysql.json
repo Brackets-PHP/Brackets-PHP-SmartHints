@@ -1,0 +1,1052 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "mysql_connect",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_host\")"
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_user\")"
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_password\")"
+            },
+            {
+                "name": "new_link",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "client_flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_pconnect",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_host\")"
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_user\")"
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"mysql.default_password\")"
+            },
+            {
+                "name": "client_flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_close",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_select_db",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_unbuffered_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_db_query",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_list_dbs",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_list_tables",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_list_fields",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_list_processes",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_error",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_errno",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_affected_rows",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_insert_id",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_num_rows",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_num_fields",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_row",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_array",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_type",
+                "type": null,
+                "byRef": false,
+                "default": "MYSQL_BOTH"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_assoc",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "params",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_data_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_lengths",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fetch_field",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_seek",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_free_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_name",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_table",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_len",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_type",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_field_flags",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_escape_string",
+        "params": [
+            {
+                "name": "unescaped_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_real_escape_string",
+        "params": [
+            {
+                "name": "unescaped_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_stat",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_thread_id",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_client_encoding",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_ping",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_get_client_info",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_get_host_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_get_proto_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_get_server_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_set_charset",
+        "params": [
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fieldname",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fieldtable",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fieldlen",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fieldtype",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_fieldflags",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_selectdb",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_freeresult",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_numfields",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_numrows",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_listdbs",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_listtables",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_listfields",
+        "params": [
+            {
+                "name": "database_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "table_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_db_name",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_dbname",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_tablename",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "i",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mysql_table_name",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "row",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_ASSOC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_CLIENT_COMPRESS",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_CLIENT_SSL",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_CLIENT_INTERACTIVE",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MYSQL_CLIENT_IGNORE_SPACE",
+        "value": 256
+    }
+]

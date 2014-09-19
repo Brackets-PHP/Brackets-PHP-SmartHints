@@ -1,0 +1,724 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "gmp_init",
+        "params": [
+            {
+                "name": "number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_intval",
+        "params": [
+            {
+                "name": "gmpnumber",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_strval",
+        "params": [
+            {
+                "name": "gmpnumber",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base",
+                "type": null,
+                "byRef": false,
+                "default": 10
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_add",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_sub",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_mul",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_div_qr",
+        "params": [
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "d",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "round",
+                "type": null,
+                "byRef": false,
+                "default": "GMP_ROUND_ZERO"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_div_q",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "round",
+                "type": null,
+                "byRef": false,
+                "default": "GMP_ROUND_ZERO"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_div_r",
+        "params": [
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "d",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "round",
+                "type": null,
+                "byRef": false,
+                "default": "GMP_ROUND_ZERO"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_div",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "round",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_mod",
+        "params": [
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "d",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_divexact",
+        "params": [
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "d",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_neg",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_abs",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_fact",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_sqrt",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_sqrtrem",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_pow",
+        "params": [
+            {
+                "name": "base",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "exp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_powm",
+        "params": [
+            {
+                "name": "base",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "exp",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mod",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_perfect_square",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_prob_prime",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "reps",
+                "type": null,
+                "byRef": false,
+                "default": 10
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_gcd",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_gcdext",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_invert",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_jacobi",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "p",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_legendre",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "p",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_cmp",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_sign",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_random",
+        "params": [
+            {
+                "name": "limiter",
+                "type": null,
+                "byRef": false,
+                "default": 20
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_and",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_or",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_com",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_xor",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_setbit",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bit_on",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_clrbit",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_scan0",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_scan1",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_testbit",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_popcount",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_hamdist",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "b",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "gmp_nextprime",
+        "params": [
+            {
+                "name": "a",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GMP_ROUND_ZERO",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GMP_ROUND_PLUSINF",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GMP_ROUND_MINUSINF",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GMP_VERSION",
+        "value": "5.1.2"
+    }
+]

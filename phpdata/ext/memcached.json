@@ -1,0 +1,1637 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "Memcached",
+        "fqn": "\\Memcached",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "persistent_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "on_new_object_cb",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Instantiate new Memcached connection.\r\n *\r\n * @link http:\/\/php.net\/memcached.construct.php\r\n * @param string $persistent_id [optional]\r\n *   By default the Memcached instances are destroyed at the end of the request. To create an instance that persists\r\n *   between requests, use <var>$persistent_id<\/var> to specify a unique ID for the instance. All instances created\r\n *   with the same <var>$persistent_id<\/var> will share the same connection.\r\n * @param mixed $callback [optional]\r\n *   This parameter is currently undocumented.\r\n * @since 0.1.0\r\n *\/"
+            },
+            {
+                "name": "addServer",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "port",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "weight",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * Add new server to the pool\r\n *\r\n * Add the specified server to the pool. No connection is established to the server at this time, but if you are using\r\n * consistent key distribution option (via {@see \\Memcached::DISTRIBUTION_CONSISTENT} or\r\n * {@see \\Memcached::OPT_LIBKETAMA_COMPATIBLE}), some of the internal data structures will have to be udpated. Thus,\r\n * if you need to add multiple servers, it is better to use {@see \\Memcached::addServers()} as the update then happens\r\n * only once.\r\n *\r\n * The same server may appear multiple times in the server pool, because no duplication checks are made. This is not\r\n * advisable; instead, use the <var>$weight<\/var> option to increase the selection weighting of this server.\r\n *\r\n * @link http:\/\/php.net\/memcached.addserver.php\r\n * @param string $host\r\n *   The hostname of the memcache server. If the hostname is invalid, data-related operations will set\r\n *   {@see \\Memcached::RES_HOST_LOOKUP_FAILURE} result code. You can specify the absolute path to a Unix socket here\r\n *   as well, the <var>$port<\/var> is then ignored (set it to <code>0<\/code>).\r\n * @param integer $port\r\n *   The port on which memcache is running. Usually, this is <code>11211<\/code>.\r\n * @param integer $weight [optional]\r\n *   The weight of the server relative to the total weight of all the servers in the pool. This controls the\r\n *   probability of the server being selected for operations. This is used only with consistent distribution option\r\n *   and usually corresponds to the amount of memory available to memcache on that server.\r\n * @return boolean\r\n *   Returns <code>TRUE<\/code> on success or <code>FALSE<\/code> on failure.\r\n * @since 0.1.0\r\n *\/"
+            },
+            {
+                "name": "addServers",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "servers",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * Add multipled servers to the pool\r\n *\r\n * @link http:\/\/php.net\/memcached.addservers.php\r\n * @param array $servers\r\n *   Numeric array where each offsets value is another numeric array consisting of host, port and weight. Example:\r\n *   <code>array(0 => array(\"host\", 1234, 1234))<\/code>.\r\n * @return boolean\r\n *   <code>TRUE<\/code> on success or <code>FALSE<\/code> on failure.\r\n * @since 0.1.0\r\n *\/"
+            },
+            {
+                "name": "increment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "incrementBy",
+                        "type": null,
+                        "byRef": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "initialValue",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "expires",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * Increment numeric item's value.\r\n *\r\n * @link http:\/\/php.net\/memcached.increment.php\r\n * @param mixed $key\r\n *   They key of the item to increment.\r\n * @param integer $incrementBy [optional]\r\n *   The amount by which to increment the item's value.\r\n * @param integer $initialValue [optional]\r\n *   The value to set the item to if it doesn't currently exist. Please note that you have to use the binary protocol\r\n *   to use this parameter (<code>Memcached::setOption(Memcached::OPT_BINARY_PROTOCOL, true)<\/code>).\r\n * @param integer $expires [optional]\r\n *   The expiry time to set on the item. Please note htat you have to use the binary protocol to use this parameter\r\n *   (<code>Memcached::setOption(Memcached::OPT_BINARY_PROTOCOL, true)<\/code>).\r\n * @return integer\r\n *   The new item's value on success or <code>FALSE<\/code> on failure.\r\n * @since 0.1.0\r\n *\/"
+            },
+            {
+                "name": "getResultCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Return the result code of the last operation\r\n * @link http:\/\/php.net\/memcached.getresultcode.php\r\n * @return int Result code of the last Memcached operation.\r\n *\/"
+            },
+            {
+                "name": "getResultMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 1.0.0)<br\/>\r\n * Return the message describing the result of the last operation\r\n * @link http:\/\/php.net\/memcached.getresultmessage.php\r\n * @return string Message describing the result of the last Memcached operation.\r\n *\/"
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cache_cb",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "cas_token",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Retrieve an item\r\n * @link http:\/\/php.net\/memcached.get.php\r\n * @param string $key <p>\r\n * The key of the item to retrieve.\r\n * <\/p>\r\n * @param callable $cache_cb [optional] <p>\r\n * Read-through caching callback or <b>NULL<\/b>.\r\n * <\/p>\r\n * @param float $cas_token [optional] <p>\r\n * The variable to store the CAS token in.\r\n * <\/p>\r\n * @return mixed the value stored in the cache or <b>FALSE<\/b> otherwise.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "getByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cache_cb",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "cas_token",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Retrieve an item from a specific server\r\n * @link http:\/\/php.net\/memcached.getbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key of the item to fetch.\r\n * <\/p>\r\n * @param callable $cache_cb [optional] <p>\r\n * Read-through caching callback or <b>NULL<\/b>\r\n * <\/p>\r\n * @param float $cas_token [optional] <p>\r\n * The variable to store the CAS token in.\r\n * <\/p>\r\n * @return mixed the value stored in the cache or <b>FALSE<\/b> otherwise.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "getMulti",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cas_tokens",
+                        "type": "array",
+                        "byRef": true,
+                        "default": null
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Retrieve multiple items\r\n * @link http:\/\/php.net\/memcached.getmulti.php\r\n * @param array $keys <p>\r\n * Array of keys to retrieve.\r\n * <\/p>\r\n * @param array $cas_tokens [optional] <p>\r\n * The variable to store the CAS tokens for the found items.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags for the get operation.\r\n * <\/p>\r\n * @return mixed the array of found items or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "getMultiByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "cas_tokens",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Retrieve multiple items from a specific server\r\n * @link http:\/\/php.net\/memcached.getmultibykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param array $keys <p>\r\n * Array of keys to retrieve.\r\n * <\/p>\r\n * @param string $cas_tokens [optional] <p>\r\n * The variable to store the CAS tokens for the found items.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * The flags for the get operation.\r\n * <\/p>\r\n * @return array the array of found items or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "getDelayed",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "with_cas",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "value_cb",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Request multiple items\r\n * @link http:\/\/php.net\/memcached.getdelayed.php\r\n * @param array $keys <p>\r\n * Array of keys to request.\r\n * <\/p>\r\n * @param bool $with_cas [optional] <p>\r\n * Whether to request CAS token values also.\r\n * <\/p>\r\n * @param callable $value_cb [optional] <p>\r\n * The result callback or <b>NULL<\/b>.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "getDelayedByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "with_cas",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "value_cb",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Request multiple items from a specific server\r\n * @link http:\/\/php.net\/memcached.getdelayedbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param array $keys <p>\r\n * Array of keys to request.\r\n * <\/p>\r\n * @param bool $with_cas [optional] <p>\r\n * Whether to request CAS token values also.\r\n * <\/p>\r\n * @param callable $value_cb [optional] <p>\r\n * The result callback or <b>NULL<\/b>.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "fetch",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Fetch the next result\r\n * @link http:\/\/php.net\/memcached.fetch.php\r\n * @return array the next result or <b>FALSE<\/b> otherwise.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_END<\/b> if result set is exhausted.\r\n *\/"
+            },
+            {
+                "name": "fetchAll",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Fetch all the remaining results\r\n * @link http:\/\/php.net\/memcached.fetchall.php\r\n * @return array the results or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Store an item\r\n * @link http:\/\/php.net\/memcached.set.php\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "setByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Store an item on a specific server\r\n * @link http:\/\/php.net\/memcached.setbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "touch",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Set a new expiration on an item\r\n * @link http:\/\/php.net\/memcached.touch.php\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param int $expiration <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "touchByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Set a new expiration on an item on a specific server\r\n * @link http:\/\/php.net\/memcached.touchbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param int $expiration <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "setMulti",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "items",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Store multiple items\r\n * @link http:\/\/php.net\/memcached.setmulti.php\r\n * @param array $items <p>\r\n * An array of key\/value pairs to store on the server.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "setMultiByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "items",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Store multiple items on a specific server\r\n * @link http:\/\/php.net\/memcached.setmultibykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param array $items <p>\r\n * An array of key\/value pairs to store on the server.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "cas",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "cas_token",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Compare and swap an item\r\n * @link http:\/\/php.net\/memcached.cas.php\r\n * @param float $cas_token <p>\r\n * Unique value associated with the existing item. Generated by memcache.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_DATA_EXISTS<\/b> if the item you are trying\r\n * to store has been modified since you last fetched it.\r\n *\/"
+            },
+            {
+                "name": "casByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "cas_token",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Compare and swap an item on a specific server\r\n * @link http:\/\/php.net\/memcached.casbykey.php\r\n * @param float $cas_token <p>\r\n * Unique value associated with the existing item. Generated by memcache.\r\n * <\/p>\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_DATA_EXISTS<\/b> if the item you are trying\r\n * to store has been modified since you last fetched it.\r\n *\/"
+            },
+            {
+                "name": "add",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Add an item under a new key\r\n * @link http:\/\/php.net\/memcached.add.php\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key already exists.\r\n *\/"
+            },
+            {
+                "name": "addByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Add an item under a new key on a specific server\r\n * @link http:\/\/php.net\/memcached.addbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key already exists.\r\n *\/"
+            },
+            {
+                "name": "append",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Append data to an existing item\r\n * @link http:\/\/php.net\/memcached.append.php\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The string to append.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "appendByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Append data to an existing item on a specific server\r\n * @link http:\/\/php.net\/memcached.appendbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The string to append.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "prepend",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Prepend data to an existing item\r\n * @link http:\/\/php.net\/memcached.prepend.php\r\n * @param string $key <p>\r\n * The key of the item to prepend the data to.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The string to prepend.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "prependByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Prepend data to an existing item on a specific server\r\n * @link http:\/\/php.net\/memcached.prependbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key of the item to prepend the data to.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The string to prepend.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "replace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Replace the item under an existing key\r\n * @link http:\/\/php.net\/memcached.replace.php\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "replaceByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "expiration",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Replace the item under an existing key on a specific server\r\n * @link http:\/\/php.net\/memcached.replacebykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key under which to store the value.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to store.\r\n * <\/p>\r\n * @param int $expiration [optional] <p>\r\n * The expiration time, defaults to 0. See Expiration Times for more info.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTSTORED<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "delete",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Delete an item\r\n * @link http:\/\/php.net\/memcached.delete.php\r\n * @param string $key <p>\r\n * The key to be deleted.\r\n * <\/p>\r\n * @param int $time [optional] <p>\r\n * The amount of time the server will wait to delete the item.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "deleteMulti",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Delete multiple items\r\n * @link http:\/\/php.net\/memcached.deletemulti.php\r\n * @param array $keys <p>\r\n * The keys to be deleted.\r\n * <\/p>\r\n * @param int $time [optional] <p>\r\n * The amount of time the server will wait to delete the items.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "deleteByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Delete an item from a specific server\r\n * @link http:\/\/php.net\/memcached.deletebykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key to be deleted.\r\n * <\/p>\r\n * @param int $time [optional] <p>\r\n * The amount of time the server will wait to delete the item.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "deleteMultiByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "keys",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "time",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Delete multiple items from a specific server\r\n * @link http:\/\/php.net\/memcached.deletemultibykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param array $keys <p>\r\n * The keys to be deleted.\r\n * <\/p>\r\n * @param int $time [optional] <p>\r\n * The amount of time the server will wait to delete the items.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * The <b>Memcached::getResultCode<\/b> will return\r\n * <b>Memcached::RES_NOTFOUND<\/b> if the key does not exist.\r\n *\/"
+            },
+            {
+                "name": "decrement",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "initial_value",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "expiry",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Decrement numeric item's value\r\n * @link http:\/\/php.net\/memcached.decrement.php\r\n * @param string $key <p>\r\n * The key of the item to decrement.\r\n * <\/p>\r\n * @param int $offset [optional] <p>\r\n * The amount by which to decrement the item's value.\r\n * <\/p>\r\n * @param int $initial_value [optional] <p>\r\n * The value to set the item to if it doesn't currently exist.\r\n * <\/p>\r\n * @param int $expiry [optional] <p>\r\n * The expiry time to set on the item.\r\n * <\/p>\r\n * @return int item's new value on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "incrementByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "initial_value",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "expiry",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Increment numeric item's value, stored on a specific server\r\n * @link http:\/\/php.net\/memcached.incrementbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key of the item to increment.\r\n * <\/p>\r\n * @param int $offset [optional] <p>\r\n * The amount by which to increment the item's value.\r\n * <\/p>\r\n * @param int $initial_value [optional] <p>\r\n * The value to set the item to if it doesn't currently exist.\r\n * <\/p>\r\n * @param int $expiry [optional] <p>\r\n * The expiry time to set on the item.\r\n * <\/p>\r\n * @return int new item's value on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "decrementByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "initial_value",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "expiry",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Decrement numeric item's value, stored on a specific server\r\n * @link http:\/\/php.net\/memcached.decrementbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @param string $key <p>\r\n * The key of the item to decrement.\r\n * <\/p>\r\n * @param int $offset [optional] <p>\r\n * The amount by which to decrement the item's value.\r\n * <\/p>\r\n * @param int $initial_value [optional] <p>\r\n * The value to set the item to if it doesn't currently exist.\r\n * <\/p>\r\n * @param int $expiry [optional] <p>\r\n * The expiry time to set on the item.\r\n * <\/p>\r\n * @return int item's new value on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getServerList",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Get the list of the servers in the pool\r\n * @link http:\/\/php.net\/memcached.getserverlist.php\r\n * @return array The list of all servers in the server pool.\r\n *\/"
+            },
+            {
+                "name": "getServerByKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "server_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Map a key to a server\r\n * @link http:\/\/php.net\/memcached.getserverbykey.php\r\n * @param string $server_key <p>\r\n * The key identifying the server to store the value on or retrieve it from. Instead of hashing on the actual key for the item, we hash on the server key when deciding which memcached server to talk to. This allows related items to be grouped together on a single server for efficiency with multi operations.\r\n * <\/p>\r\n * @return array an array containing three keys of host,\r\n * port, and weight on success or <b>FALSE<\/b>\r\n * on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "resetServerList",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Clears all servers from the server list\r\n * @link http:\/\/php.net\/memcached.resetserverlist.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "quit",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Close any open connections\r\n * @link http:\/\/php.net\/memcached.quit.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getStats",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Get server pool statistics\r\n * @link http:\/\/php.net\/memcached.getstats.php\r\n * @return array Array of server statistics, one entry per server.\r\n *\/"
+            },
+            {
+                "name": "getVersion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.5)<br\/>\r\n * Get server pool version info\r\n * @link http:\/\/php.net\/memcached.getversion.php\r\n * @return array Array of server versions, one entry per server.\r\n *\/"
+            },
+            {
+                "name": "getAllKeys",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Gets the keys stored on all the servers\r\n * @link http:\/\/php.net\/memcached.getallkeys.php\r\n * @return array the keys stored on all the servers on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "flush",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "delay",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Invalidate all items in the cache\r\n * @link http:\/\/php.net\/memcached.flush.php\r\n * @param int $delay [optional] <p>\r\n * Numer of seconds to wait before invalidating the items.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Use <b>Memcached::getResultCode<\/b> if necessary.\r\n *\/"
+            },
+            {
+                "name": "getOption",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "option",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Retrieve a Memcached option value\r\n * @link http:\/\/php.net\/memcached.getoption.php\r\n * @param int $option <p>\r\n * One of the Memcached::OPT_* constants.\r\n * <\/p>\r\n * @return mixed the value of the requested option, or <b>FALSE<\/b> on\r\n * error.\r\n *\/"
+            },
+            {
+                "name": "setOption",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "option",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 0.1.0)<br\/>\r\n * Set a Memcached option\r\n * @link http:\/\/php.net\/memcached.setoption.php\r\n * @param int $option\r\n * @param mixed $value\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setOptions",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Set Memcached options\r\n * @link http:\/\/php.net\/memcached.setoptions.php\r\n * @param array $options <p>\r\n * An associative array of options where the key is the option to set and\r\n * the value is the new value for the option.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "isPersistent",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Check if a persitent connection to memcache is being used\r\n * @link http:\/\/php.net\/memcached.ispersistent.php\r\n * @return bool true if Memcache instance uses a persistent connection, false otherwise.\r\n *\/"
+            },
+            {
+                "name": "isPristine",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PECL memcached &gt;= 2.0.0)<br\/>\r\n * Check if the instance was recently created\r\n * @link http:\/\/php.net\/memcached.ispristine.php\r\n * @return bool the true if instance is recently created, false otherwise.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "COMPRESSION_FASTLZ",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "COMPRESSION_ZLIB",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "DISTRIBUTION_CONSISTENT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "DISTRIBUTION_MODULA",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "DISTRIBUTION_VIRTUAL_BUCKET",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "GET_ERROR_RETURN_VALUE",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "GET_PRESERVE_ORDER",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_CRC",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_DEFAULT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_FNV1A_32",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_FNV1A_64",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_FNV1_32",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_FNV1_64",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_HSIEH",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_MD5",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HASH_MURMUR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HAVE_IGBINARY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HAVE_JSON",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HAVE_SASL",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "HAVE_SESSION",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_AUTO_EJECT_HOSTS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_BINARY_PROTOCOL",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_BUFFER_WRITES",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_CACHE_LOOKUPS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_COMPRESSION",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_COMPRESSION_TYPE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_CONNECT_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_DISTRIBUTION",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_HASH",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_HASH_WITH_PREFIX_KEY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_LIBKETAMA_COMPATIBLE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_LIBKETAMA_HASH",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_NOREPLY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_NO_BLOCK",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_NUMBER_OF_REPLICAS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_POLL_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_PREFIX_KEY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_RANDOMIZE_REPLICA_READ",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_RECV_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_REMOVE_FAILED_SERVERS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_RETRY_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SEND_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SERIALIZER",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SERVER_FAILURE_LIMIT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SOCKET_RECV_SIZE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SOCKET_SEND_SIZE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_SORT_HOSTS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_TCP_KEEPALIVE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_TCP_NODELAY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_USE_UDP",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "OPT_VERIFY_KEY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_BAD_KEY_PROVIDED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_BUFFERED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_CLIENT_ERROR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_CONNECTION_SOCKET_CREATE_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_DATA_EXISTS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_DELETED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_END",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_ERRNO",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_FETCH_NOTFINISHED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_HOST_LOOKUP_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_INVALID_HOST_PROTOCOL",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_ITEM",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_MEMORY_ALLOCATION_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_NOTFOUND",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_NOTSTORED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_NOT_SUPPORTED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_NO_SERVERS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_PARTIAL_READ",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_PAYLOAD_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_PROTOCOL_ERROR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_SERVER_ERROR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_SERVER_MARKED_DEAD",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_SOME_ERRORS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_STAT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_STORED",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_SUCCESS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_TIMEOUT",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_UNKNOWN_READ_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_UNKNOWN_STAT_KEY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "RES_WRITE_FAILURE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SERIALIZER_IGBINARY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SERIALIZER_JSON",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SERIALIZER_JSON_ARRAY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SERIALIZER_PHP",
+                "value": 0,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "MemcachedException",
+        "fqn": "\\MemcachedException",
+        "type": 0,
+        "extends": "RuntimeException",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Construct the exception\r\n * @link http:\/\/php.net\/exception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $previous [optional]\r\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    }
+]

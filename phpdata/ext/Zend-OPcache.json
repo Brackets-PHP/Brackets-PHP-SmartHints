@@ -1,0 +1,46 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "opcache_reset",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "opcache_invalidate",
+        "params": [
+            {
+                "name": "script",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "force",
+                "type": "boolean",
+                "byRef": false,
+                "default": "&false;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "opcache_get_configuration",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "opcache_get_status",
+        "params": [
+            {
+                "name": "get_scripts",
+                "type": "boolean",
+                "byRef": false,
+                "default": "&true;"
+            }
+        ]
+    }
+]

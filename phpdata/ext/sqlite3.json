@@ -1,0 +1,611 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "SQLite3",
+        "fqn": "\\SQLite3",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "open",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": "SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE"
+                    },
+                    {
+                        "name": "encryption_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Opens an SQLite database\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.open.php\r\n * @param string $filename <p>\r\n * Path to the SQLite database, or :memory: to use in-memory database.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * Optional flags used to determine how to open the SQLite database. By\r\n * default, open uses SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE.\r\n * <p>\r\n * SQLITE3_OPEN_READONLY: Open the database for\r\n * reading only.\r\n * <\/p>\r\n * @param string $encryption_key [optional] <p>\r\n * An optional encryption key used when encrypting and decrypting an\r\n * SQLite database.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Closes the database connection\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.close.php\r\n * @return bool <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "exec",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Executes a result-less query against a given database\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.exec.php\r\n * @param string $query <p>\r\n * The SQL query to execute (typically an INSERT, UPDATE, or DELETE\r\n * query).\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the query succeeded, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "version",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the SQLite3 library version as a string constant and as a number\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.version.php\r\n * @return array an associative array with the keys \"versionString\" and\r\n * \"versionNumber\".\r\n *\/"
+            },
+            {
+                "name": "lastInsertRowID",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the row ID of the most recent INSERT into the database\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.lastinsertrowid.php\r\n * @return int the row ID of the most recent INSERT into the database\r\n *\/"
+            },
+            {
+                "name": "lastErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the numeric result code of the most recent failed SQLite request\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.lasterrorcode.php\r\n * @return int an integer value representing the numeric result code of the most\r\n * recent failed SQLite request.\r\n *\/"
+            },
+            {
+                "name": "lastErrorMsg",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns English text describing the most recent failed SQLite request\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.lasterrormsg.php\r\n * @return string an English string describing the most recent failed SQLite request.\r\n *\/"
+            },
+            {
+                "name": "busyTimeout",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "msecs",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.3)<br\/>\r\n * Sets the busy connection handler\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.busytimeout.php\r\n * @param int $msecs <p>\r\n * The milliseconds to sleep. Setting this value to a value less than\r\n * or equal to zero, will turn off an already set timeout handler.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "loadExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "shared_library",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Attempts to load an SQLite extension library\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.loadextension.php\r\n * @param string $shared_library <p>\r\n * The name of the library to load. The library must be located in the\r\n * directory specified in the configure option sqlite3.extension_dir.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the extension is successfully loaded, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "changes",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n* (PHP 5 &gt;= 5.3.0)<br\/>\r\n* Returns the number of database rows that were changed (or inserted or\r\ndeleted) by the most recent SQL statement\r\n* @link http:\/\/php.net\/manual\/en\/sqlite3.changes.php\r\n* @return int an integer value corresponding to the number of\r\n* database rows changed (or inserted or deleted) by the most recent SQL\r\n* statement.\r\n*\/"
+            },
+            {
+                "name": "escapeString",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns a string that has been properly escaped\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.escapestring.php\r\n * @param string $value <p>\r\n * The string to be escaped.\r\n * <\/p>\r\n * @return string a properly escaped string that may be used safely in an SQL\r\n * statement.\r\n *\/"
+            },
+            {
+                "name": "prepare",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Prepares an SQL statement for execution\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.prepare.php\r\n * @param string $query <p>\r\n * The SQL query to prepare.\r\n * <\/p>\r\n * @return SQLite3Stmt an <b>SQLite3Stmt<\/b> object on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "query",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Executes an SQL query\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.query.php\r\n * @param string $query <p>\r\n * The SQL query to execute.\r\n * <\/p>\r\n * @return SQLite3Result an <b>SQLite3Result<\/b> object if the query returns results. Otherwise,\r\n * returns <b>TRUE<\/b> if the query succeeded, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "querySingle",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "query",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "entire_row",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Executes a query and returns a single result\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.querysingle.php\r\n * @param string $query <p>\r\n * The SQL query to execute.\r\n * <\/p>\r\n * @param bool $entire_row [optional] <p>\r\n * By default, <b>querySingle<\/b> returns the value of the\r\n * first column returned by the query. If\r\n * <i>entire_row<\/i> is <b>TRUE<\/b>, then it returns an array\r\n * of the entire first row.\r\n * <\/p>\r\n * @return mixed the value of the first column of results or an array of the entire\r\n * first row (if <i>entire_row<\/i> is <b>TRUE<\/b>).\r\n * <\/p>\r\n * <p>\r\n * If the query is valid but no results are returned, then <b>NULL<\/b> will be\r\n * returned if <i>entire_row<\/i> is <b>FALSE<\/b>, otherwise an\r\n * empty array is returned.\r\n * <\/p>\r\n * <p>\r\n * Invalid or failing queries will return <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "createFunction",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "callback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "argument_count",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Registers a PHP function for use as an SQL scalar function\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.createfunction.php\r\n * @param string $name <p>\r\n * Name of the SQL function to be created or redefined.\r\n * <\/p>\r\n * @param mixed $callback <p>\r\n * The name of a PHP function or user-defined function to apply as a\r\n * callback, defining the behavior of the SQL function.\r\n * <\/p>\r\n * @param int $argument_count [optional] <p>\r\n * The number of arguments that the SQL function takes. If\r\n * this parameter is negative, then the SQL function may take\r\n * any number of arguments.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> upon successful creation of the function, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "createAggregate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "step_callback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "final_callback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "argument_count",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Registers a PHP function for use as an SQL aggregate function\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.createaggregate.php\r\n * @param string $name <p>\r\n * Name of the SQL aggregate to be created or redefined.\r\n * <\/p>\r\n * @param mixed $step_callback <p>\r\n * The name of a PHP function or user-defined function to apply as a\r\n * callback for every item in the aggregate.\r\n * <\/p>\r\n * @param mixed $final_callback <p>\r\n * The name of a PHP function or user-defined function to apply as a\r\n * callback at the end of the aggregate data.\r\n * <\/p>\r\n * @param int $argument_count [optional] <p>\r\n * The number of arguments that the SQL aggregate takes. If\r\n * this parameter is negative, then the SQL aggregate may take\r\n * any number of arguments.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> upon successful creation of the aggregate, <b>FALSE<\/b> on\r\n * failure.\r\n *\/"
+            },
+            {
+                "name": "createCollation",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "callback",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.11)<br\/>\r\n * Registers a PHP function for use as an SQL collating function\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.createcollation.php\r\n * @param string $name <p>\r\n * Name of the SQL collating function to be created or redefined\r\n * <\/p>\r\n * @param callable $callback <p>\r\n * The name of a PHP function or user-defined function to apply as a\r\n * callback, defining the behavior of the collation. It should accept two\r\n * strings and return as <b>strcmp<\/b> does, i.e. it should\r\n * return -1, 1, or 0 if the first string sorts before, sorts after, or is\r\n * equal to the second.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "openBlob",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "table",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "column",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "rowid",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "dbname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $table\r\n * @param $column\r\n * @param $rowid\r\n * @param $dbname [optional]\r\n *\/"
+            },
+            {
+                "name": "enableExceptions",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "enableExceptions",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $enableExceptions\r\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encryption_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Instantiates an SQLite3 object and opens an SQLite 3 database\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3.construct.php\r\n * @param string $filename <p>\r\n * Path to the SQLite database, or :memory: to use in-memory database.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * Optional flags used to determine how to open the SQLite database. By\r\n * default, open uses SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE.\r\n * <p>\r\n * SQLITE3_OPEN_READONLY: Open the database for\r\n * reading only.\r\n * <\/p>\r\n * @param string $encryption_key [optional] <p>\r\n * An optional encryption key used when encrypting and decrypting an\r\n * SQLite database.\r\n * <\/p>\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SQLite3Stmt",
+        "fqn": "\\SQLite3Stmt",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "paramCount",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the number of parameters within the prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.paramcount.php\r\n * @return int the number of parameters within the prepared statement.\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Closes the prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.close.php\r\n * @return bool <b>TRUE<\/b>\r\n *\/"
+            },
+            {
+                "name": "reset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Resets the prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.reset.php\r\n * @return bool <b>TRUE<\/b> if the statement is successfully reset, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "clear",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Clears all current bound parameters\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.clear.php\r\n * @return bool <b>TRUE<\/b> on successful clearing of bound parameters, <b>FALSE<\/b> on\r\n * failure.\r\n *\/"
+            },
+            {
+                "name": "execute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Executes a prepared statement and returns a result set object\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.execute.php\r\n * @return SQLite3Result an <b>SQLite3Result<\/b> object on successful execution of the prepared\r\n * statement, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "bindParam",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "sql_param",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "param",
+                        "type": null,
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Binds a parameter to a statement variable\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.bindparam.php\r\n * @param string $sql_param <p>\r\n * An string identifying the statement variable to which the\r\n * parameter should be bound.\r\n * <\/p>\r\n * @param mixed $param <p>\r\n * The parameter to bind to a statement variable.\r\n * <\/p>\r\n * @param int $type [optional] <p>\r\n * The data type of the parameter to bind.\r\n * <p>\r\n * SQLITE3_INTEGER: The value is a signed integer,\r\n * stored in 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of\r\n * the value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the parameter is bound to the statement variable, <b>FALSE<\/b>\r\n * on failure.\r\n *\/"
+            },
+            {
+                "name": "bindValue",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "sql_param",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Binds the value of a parameter to a statement variable\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3stmt.bindvalue.php\r\n * @param string $sql_param <p>\r\n * An string identifying the statement variable to which the\r\n * value should be bound.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value to bind to a statement variable.\r\n * <\/p>\r\n * @param int $type [optional] <p>\r\n * The data type of the value to bind.\r\n * <p>\r\n * SQLITE3_INTEGER: The value is a signed integer,\r\n * stored in 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of\r\n * the value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the value is bound to the statement variable, <b>FALSE<\/b>\r\n * on failure.\r\n *\/"
+            },
+            {
+                "name": "readOnly",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SQLite3Result",
+        "fqn": "\\SQLite3Result",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "numColumns",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the number of columns in the result set\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.numcolumns.php\r\n * @return int the number of columns in the result set.\r\n *\/"
+            },
+            {
+                "name": "columnName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "column_number",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the name of the nth column\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.columnname.php\r\n * @param int $column_number <p>\r\n * The numeric zero-based index of the column.\r\n * <\/p>\r\n * @return string the string name of the column identified by\r\n * <i>column_number<\/i>.\r\n *\/"
+            },
+            {
+                "name": "columnType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "column_number",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns the type of the nth column\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.columntype.php\r\n * @param int $column_number <p>\r\n * The numeric zero-based index of the column.\r\n * <\/p>\r\n * @return int the data type index of the column identified by\r\n * <i>column_number<\/i> (one of\r\n * <b>SQLITE3_INTEGER<\/b>, <b>SQLITE3_FLOAT<\/b>,\r\n * <b>SQLITE3_TEXT<\/b>, <b>SQLITE3_BLOB<\/b>, or\r\n * <b>SQLITE3_NULL<\/b>).\r\n *\/"
+            },
+            {
+                "name": "fetchArray",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": "SQLITE3_BOTH"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Fetches a result row as an associative or numerically indexed array or both\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.fetcharray.php\r\n * @param int $mode [optional] <p>\r\n * Controls how the next row will be returned to the caller. This value\r\n * must be one of either SQLITE3_ASSOC,\r\n * SQLITE3_NUM, or SQLITE3_BOTH.\r\n * <p>\r\n * SQLITE3_ASSOC: returns an array indexed by column\r\n * name as returned in the corresponding result set\r\n * <\/p>\r\n * @return array a result row as an associatively or numerically indexed array or\r\n * both. Alternately will return <b>FALSE<\/b> if there are no more rows.\r\n *\/"
+            },
+            {
+                "name": "reset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Resets the result set back to the first row\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.reset.php\r\n * @return bool <b>TRUE<\/b> if the result set is successfully reset\r\n * back to the first row, <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "finalize",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Closes the result set\r\n * @link http:\/\/php.net\/manual\/en\/sqlite3result.finalize.php\r\n * @return bool <b>TRUE<\/b>.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_ASSOC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_NUM",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_BOTH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_INTEGER",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_FLOAT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_TEXT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_BLOB",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_NULL",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_OPEN_READONLY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_OPEN_READWRITE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SQLITE3_OPEN_CREATE",
+        "value": 4
+    }
+]

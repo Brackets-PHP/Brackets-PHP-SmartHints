@@ -1,0 +1,1336 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "SNMP",
+        "fqn": "\\SNMP",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "version",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "host",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "community",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timeout",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "retries",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Creates SNMP instance representing session to remote SNMP agent\r\n * @link http:\/\/php.net\/manual\/en\/snmp.construct.php\r\n * @param $version\r\n * @param $host\r\n * @param $community\r\n * @param $timeout [optional]\r\n * @param $retries [optional]\r\n *\/"
+            },
+            {
+                "name": "close",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Close SNMP session\r\n * @link http:\/\/php.net\/manual\/en\/snmp.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setSecurity",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "sec_level",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "auth_protocol",
+                        "type": null,
+                        "byRef": false,
+                        "default": "\r\n   stringauth_passphrase"
+                    },
+                    {
+                        "name": "priv_protocol",
+                        "type": null,
+                        "byRef": false,
+                        "default": "\r\n   stringpriv_passphrase"
+                    },
+                    {
+                        "name": "contextName",
+                        "type": null,
+                        "byRef": false,
+                        "default": "\r\n   stringcontextEngineID"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Configures security-related SNMPv3 session parameters\r\n * @link http:\/\/php.net\/manual\/en\/snmp.setsecurity.php\r\n * @param string $sec_level <p>\r\n * the security level (noAuthNoPriv|authNoPriv|authPriv)\r\n * <\/p>\r\n * @param string $auth_protocol [optional] <p>\r\n * the authentication protocol (MD5 or SHA)\r\n * <\/p>\r\n * @param string $priv_protocol [optional] <p>\r\n * the privacy protocol (DES or AES)\r\n * <\/p>\r\n * @param string $contextName [optional] <p>\r\n * the context name\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "preserve_keys",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Fetch an SNMP object\r\n * @link http:\/\/php.net\/manual\/en\/snmp.get.php\r\n * @param mixed $object_id <p>\r\n * The SNMP object (OID) or objects\r\n * <\/p>\r\n * @param bool $preserve_keys [optional] <p>\r\n * When <i>object_id<\/i> is a array and\r\n * <i>preserve_keys<\/i> set to <b>TRUE<\/b> keys in results\r\n * will be taken exactly as in <i>object_id<\/i>,\r\n * otherwise SNMP::oid_output_format property is used to determinate\r\n * the form of keys.\r\n * <\/p>\r\n * @return mixed SNMP objects requested as string or array\r\n * depending on <i>object_id<\/i> type or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "getnext",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n* (PHP 5 &gt;= 5.4.0)<br\/>\r\n* Fetch an SNMP object which\r\nfollows the given object id\r\n* @link http:\/\/php.net\/manual\/en\/snmp.getnext.php\r\n* @param mixed $object_id <p>\r\n* The SNMP object (OID) or objects\r\n* <\/p>\r\n* @return mixed SNMP objects requested as string or array\r\n* depending on <i>object_id<\/i> type or <b>FALSE<\/b> on error.\r\n*\/"
+            },
+            {
+                "name": "walk",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "suffix_as_key",
+                        "type": null,
+                        "byRef": false,
+                        "default": "&false;"
+                    },
+                    {
+                        "name": "max_repetitions",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "non_repeaters",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Fetch SNMP object subtree\r\n * @link http:\/\/php.net\/manual\/en\/snmp.walk.php\r\n * @param string $object_id <p>\r\n * Root of subtree to be fetched\r\n * <\/p>\r\n * @param bool $suffix_as_key [optional] <p>\r\n * By default full OID notation is used for keys in output array.\r\n * If set to <b>TRUE<\/b> subtree prefix will be removed from keys leaving only suffix of object_id.\r\n * <\/p>\r\n * @param int $max_repetitions [optional] <p>\r\n * This specifies the maximum number of iterations over the repeating variables.\r\n * The default is to use this value from SNMP object.\r\n * <\/p>\r\n * @param int $non_repeaters [optional] <p>\r\n * This specifies the number of supplied variables that should not be iterated over.\r\n * The default is to use this value from SNMP object.\r\n * <\/p>\r\n * @return array an associative array of the SNMP object ids and their values on success or <b>FALSE<\/b> on error.\r\n * When a SNMP error occures <b>SNMP::getErrno<\/b> and\r\n * <b>SNMP::getError<\/b> can be used for retrieving error\r\n * number (specific to SNMP extension, see class constants) and error message\r\n * respectively.\r\n *\/"
+            },
+            {
+                "name": "set",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "object_id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Set the value of an SNMP object\r\n * @link http:\/\/php.net\/manual\/en\/snmp.set.php\r\n * @param mixed $object_id <p>\r\n * The SNMP object id\r\n * <\/p>\r\n * <p>\r\n * When count of OIDs in object_id array is greater than\r\n * max_oids object property set method will have to use multiple queries\r\n * to perform requested value updates. In this case type and value checks\r\n * are made per-chunk so second or subsequent requests may fail due to\r\n * wrong type or value for OID requested. To mark this a warning is\r\n * raised when count of OIDs in object_id array is greater than max_oids.\r\n * <\/p>\r\n * @param mixed $type The MIB defines the type of each object id. It has to be specified as a single character from the below list.\r\n * <\/p>\r\n * types\r\n * <tr valign=\"top\"><td>=<\/td><td>The type is taken from the MIB<\/td><\/tr>\r\n * <tr valign=\"top\"><td>i<\/td><td>INTEGER<\/td> <\/tr>\r\n * <tr valign=\"top\"><td>u<\/td><td>INTEGER<\/td><\/tr>\r\n * <tr valign=\"top\"><td>s<\/td><td>STRING<\/td><\/tr>\r\n * <tr valign=\"top\"><td>x<\/td><td>HEX STRING<\/td><\/tr>\r\n * <tr valign=\"top\"><td>d<\/td><td>DECIMAL STRING<\/td><\/tr>\r\n * <tr valign=\"top\"><td>n<\/td><td>NULLOBJ<\/td><\/tr>\r\n * <tr valign=\"top\"><td>o<\/td><td>OBJID<\/td><\/tr>\r\n * <tr valign=\"top\"><td>t<\/td><td>TIMETICKS<\/td><\/tr>\r\n * <tr valign=\"top\"><td>a<\/td><td>IPADDRESS<\/td><\/tr>\r\n * <tr valign=\"top\"><td>b<\/td><td>BITS<\/td><\/tr>\r\n * <\/table>\r\n * If <b>OPAQUE_SPECIAL_TYPES<\/b> was defined while compiling the SNMP library, the following are also valid:\r\n * <\/p>\r\n * types\r\n * <tr valign=\"top\"><td>U<\/td><td>unsigned int64<\/td><\/tr>\r\n * <tr valign=\"top\"><td>I<\/td><td>signed int64<\/td><\/tr>\r\n * <tr valign=\"top\"><td>F<\/td><td>float<\/td><\/tr>\r\n * <tr valign=\"top\"><td>D<\/td><td>double<\/td><\/tr>\r\n * <\/table>\r\n * Most of these will use the obvious corresponding ASN.1 type. &#x00027;s&#x00027;, &#x00027;x&#x00027;, &#x00027;d&#x00027; and &#x00027;b&#x00027; are all different ways of specifying an OCTET STRING value, and\r\n * the &#x00027;u&#x00027; unsigned type is also used for handling Gauge32 values.\r\n * <\/p>\r\n * If the MIB-Files are loaded by into the MIB Tree with \"snmp_read_mib\" or by specifying it in the libsnmp config, &#x00027;=&#x00027; may be used as\r\n * the <i>type<\/i> parameter for all object ids as the type can then be automatically read from the MIB.\r\n * <\/p>\r\n * Note that there are two ways to set a variable of the type BITS like e.g.\r\n * \"SYNTAX BITS {telnet(0), ftp(1), http(2), icmp(3), snmp(4), ssh(5), https(6)}\":\r\n * <\/p>\r\n * Using type \"b\" and a list of bit numbers. This method is not recommended since GET query for the same OID would return e.g. 0xF8.\r\n * Using type \"x\" and a hex number but without(!) the usual \"0x\" prefix.\r\n * See examples section for more details.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The new value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getErrno",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Get last error code\r\n * @link http:\/\/php.net\/manual\/en\/snmp.geterrno.php\r\n * @return int one of SNMP error code values described in constants chapter.\r\n *\/"
+            },
+            {
+                "name": "getError",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Get last error message\r\n * @link http:\/\/php.net\/manual\/en\/snmp.geterror.php\r\n * @return string String describing error from last SNMP request.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "VERSION_1",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "VERSION_2c",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "VERSION_2C",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "VERSION_3",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_NOERROR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_ANY",
+                "value": 126,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_GENERIC",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_TIMEOUT",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_ERROR_IN_REPLY",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_OID_NOT_INCREASING",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_OID_PARSING_ERROR",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "ERRNO_MULTIPLE_SET_QUERIES",
+                "value": 64,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SNMPException",
+        "fqn": "\\SNMPException",
+        "type": 0,
+        "extends": "RuntimeException",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Construct the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $previous [optional]\r\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmpget",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmpgetnext",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmpwalk",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmprealwalk",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmpwalkoid",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmpset",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_get_quick_print",
+        "params": [
+            {
+                "name": "d",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_set_quick_print",
+        "params": [
+            {
+                "name": "quick_print",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_set_enum_print",
+        "params": [
+            {
+                "name": "enum_print",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_set_oid_output_format",
+        "params": [
+            {
+                "name": "oid_format",
+                "type": null,
+                "byRef": false,
+                "default": "SNMP_OID_OUTPUT_MODULE"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_set_oid_numeric_print",
+        "params": [
+            {
+                "name": "oid_format",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp2_get",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp2_getnext",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp2_walk",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp2_real_walk",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp2_set",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "community",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp3_get",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp3_getnext",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp3_walk",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp3_real_walk",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp3_set",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sec_level",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "auth_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_protocol",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "object_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timeout",
+                "type": null,
+                "byRef": false,
+                "default": 1000000
+            },
+            {
+                "name": "retries",
+                "type": null,
+                "byRef": false,
+                "default": 5
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_set_valueretrieval",
+        "params": [
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_get_valueretrieval",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "snmp_read_mib",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_SUFFIX",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_MODULE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_FULL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_NUMERIC",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_UCD",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OID_OUTPUT_NONE",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_VALUE_LIBRARY",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_VALUE_PLAIN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_VALUE_OBJECT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_BIT_STR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OCTET_STR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OPAQUE",
+        "value": 68
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_NULL",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_OBJECT_ID",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_IPADDRESS",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_COUNTER",
+        "value": 66
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_UNSIGNED",
+        "value": 66
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_TIMETICKS",
+        "value": 67
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_UINTEGER",
+        "value": 71
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_INTEGER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SNMP_COUNTER64",
+        "value": 70
+    }
+]

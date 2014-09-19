@@ -1,0 +1,2292 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ibase_connect",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "buffers",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "dialect",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "role",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sync",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_pconnect",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "buffers",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "dialect",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "role",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sync",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_close",
+        "params": [
+            {
+                "name": "connection_id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_drop_db",
+        "params": [
+            {
+                "name": "connection",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_query",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_args",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_fetch_row",
+        "params": [
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flag",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_fetch_assoc",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flag",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_fetch_object",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flag",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_free_result",
+        "params": [
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_name_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_prepare",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_execute",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_arg",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_free_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_gen_id",
+        "params": [
+            {
+                "name": "generator",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "increment",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_num_fields",
+        "params": [
+            {
+                "name": "result_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_num_params",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_affected_rows",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_field_info",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_param_info",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "param_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_trans",
+        "params": [
+            {
+                "name": "trans_args",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_commit",
+        "params": [
+            {
+                "name": "link_or_trans_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_rollback",
+        "params": [
+            {
+                "name": "link_or_trans_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_commit_ret",
+        "params": [
+            {
+                "name": "link_or_trans_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_rollback_ret",
+        "params": [
+            {
+                "name": "link_or_trans_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_create",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_add",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_cancel",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_close",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_open",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_get",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_echo",
+        "params": [
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_blob_import",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "file_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_errmsg",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_errcode",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_add_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "first_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "middle_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "last_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_modify_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "first_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "middle_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "last_name",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_delete_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_service_attach",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dba_username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dba_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_service_detach",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_backup",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source_db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "verbose",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_restore",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "verbose",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_maintain_db",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "argument",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_db_info",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "argument",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_server_info",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_wait_event",
+        "params": [
+            {
+                "name": "event_name1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event_name2",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_set_event_handler",
+        "params": [
+            {
+                "name": "event_handler",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event_name1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event_name2",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ibase_free_event_handler",
+        "params": [
+            {
+                "name": "event",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_connect",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buffers",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dialect",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "role",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_pconnect",
+        "params": [
+            {
+                "name": "database",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "buffers",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dialect",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "role",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_close",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_drop_db",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_query",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_fetch_row",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_fetch_assoc",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_fetch_object",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fetch_flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_free_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_name_result",
+        "params": [
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_prepare",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_execute",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_arg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_free_query",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_gen_id",
+        "params": [
+            {
+                "name": "generator",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "increment",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_num_fields",
+        "params": [
+            {
+                "name": "query_result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_num_params",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_affected_rows",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_field_info",
+        "params": [
+            {
+                "name": "query_result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_param_info",
+        "params": [
+            {
+                "name": "query",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_number",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_trans",
+        "params": [
+            {
+                "name": "trans_args",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "trans_args",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_commit",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_rollback",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_commit_ret",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_rollback_ret",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_info",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_create",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_add",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_cancel",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_close",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_open",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_get",
+        "params": [
+            {
+                "name": "blob_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "len",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_echo",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "blob_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_blob_import",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_errmsg",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_errcode",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_add_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "first_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "middle_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "last_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_modify_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "first_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "middle_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "last_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_delete_user",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "first_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "middle_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "last_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_service_attach",
+        "params": [
+            {
+                "name": "host",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dba_username",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dba_password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_service_detach",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_backup",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source_db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "verbose",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_restore",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source_file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dest_db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "verbose",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_maintain_db",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "argument",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_db_info",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "db",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "argument",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_server_info",
+        "params": [
+            {
+                "name": "service_handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "action",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_wait_event",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_set_event_handler",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "event2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "fbird_free_event_handler",
+        "params": [
+            {
+                "name": "event",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_DEFAULT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_CREATE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_TEXT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_FETCH_BLOBS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_FETCH_ARRAYS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_UNIXTIME",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_WRITE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_READ",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_COMMITTED",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_CONSISTENCY",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_CONCURRENCY",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_REC_VERSION",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_REC_NO_VERSION",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_NOWAIT",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_WAIT",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_IGNORE_CHECKSUMS",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_IGNORE_LIMBO",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_METADATA_ONLY",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_NO_GARBAGE_COLLECT",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_OLD_DESCRIPTIONS",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_NON_TRANSPORTABLE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_BKP_CONVERT",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_DEACTIVATE_IDX",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_NO_SHADOW",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_NO_VALIDITY",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_ONE_AT_A_TIME",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_REPLACE",
+        "value": 4096
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_CREATE",
+        "value": 8192
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RES_USE_ALL_SPACE",
+        "value": 16384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_PAGE_BUFFERS",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_SWEEP_INTERVAL",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_SHUTDOWN_DB",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_DENY_NEW_TRANSACTIONS",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_DENY_NEW_ATTACHMENTS",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_RESERVE_SPACE",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_RES_USE_FULL",
+        "value": 35
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_RES",
+        "value": 36
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_WRITE_MODE",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_WM_ASYNC",
+        "value": 37
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_WM_SYNC",
+        "value": 38
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_ACCESS_MODE",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_AM_READONLY",
+        "value": 39
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_AM_READWRITE",
+        "value": 40
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_SET_SQL_DIALECT",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_ACTIVATE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_PRP_DB_ONLINE",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_CHECK_DB",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_IGNORE_CHECKSUM",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_KILL_SHADOWS",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_MEND_DB",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_VALIDATE_DB",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_FULL",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_RPR_SWEEP_DB",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_STS_DATA_PAGES",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_STS_DB_LOG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_STS_HDR_PAGES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_STS_IDX_PAGES",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_STS_SYS_RELATIONS",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_SERVER_VERSION",
+        "value": 55
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_IMPLEMENTATION",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_GET_ENV",
+        "value": 59
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_GET_ENV_LOCK",
+        "value": 60
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_GET_ENV_MSG",
+        "value": 61
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_USER_DBPATH",
+        "value": 58
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_SVR_DB_INFO",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IBASE_SVC_GET_USERS",
+        "value": 68
+    }
+]

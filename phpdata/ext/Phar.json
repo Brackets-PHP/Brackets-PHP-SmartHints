@@ -1,0 +1,3323 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "PharException",
+        "fqn": "\\PharException",
+        "type": 0,
+        "extends": "Exception",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "message",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "code",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "previous",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Construct the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $previous [optional]\r\n *\/"
+            },
+            {
+                "name": "getMessage",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+            },
+            {
+                "name": "getCode",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+            },
+            {
+                "name": "getFile",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getLine",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+            },
+            {
+                "name": "getTrace",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+            },
+            {
+                "name": "getPrevious",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getTraceAsString",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Phar",
+        "fqn": "\\Phar",
+        "type": 0,
+        "extends": "RecursiveDirectoryIterator",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "fname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Construct a Phar archive object\r\n * @link http:\/\/php.net\/manual\/en\/phar.construct.php\r\n * @param string $fname <p>\r\n * Path to an existing Phar archive or to-be-created archive. The file name's\r\n * extension must contain .phar.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * Flags to pass to parent class <b>RecursiveDirectoryIterator<\/b>.\r\n * <\/p>\r\n * @param string $alias [optional] <p>\r\n * Alias with which this Phar archive should be referred to in calls to stream\r\n * functionality.\r\n * <\/p>\r\n *\/"
+            },
+            {
+                "name": "__destruct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "addEmptyDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "dirname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Add an empty directory to the phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.addemptydir.php\r\n * @param string $dirname <p>\r\n * The name of the empty directory to create in the phar archive\r\n * <\/p>\r\n * @return void no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "addFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "file",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Add a file from the filesystem to the phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.addfile.php\r\n * @param string $file <p>\r\n * Full or relative path to a file on disk to be added\r\n * to the phar archive.\r\n * <\/p>\r\n * @param string $localname [optional] <p>\r\n * Path that the file will be stored in the archive.\r\n * <\/p>\r\n * @return void no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "addFromString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "contents",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Add a file from the filesystem to the phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.addfromstring.php\r\n * @param string $localname <p>\r\n * Path that the file will be stored in the archive.\r\n * <\/p>\r\n * @param string $contents <p>\r\n * The file contents to store\r\n * <\/p>\r\n * @return void no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "buildFromDirectory",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "base_dir",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "regex",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Construct a phar archive from the files within a directory.\r\n * @link http:\/\/php.net\/manual\/en\/phar.buildfromdirectory.php\r\n * @param string $base_dir <p>\r\n * The full or relative path to the directory that contains all files\r\n * to add to the archive.\r\n * <\/p>\r\n * @param string $regex [optional] <p>\r\n * An optional pcre regular expression that is used to filter the\r\n * list of files. Only file paths matching the regular expression\r\n * will be included in the archive.\r\n * <\/p>\r\n * @return array <b>Phar::buildFromDirectory<\/b> returns an associative array\r\n * mapping internal path of file to the full path of the file on the\r\n * filesystem.\r\n *\/"
+            },
+            {
+                "name": "buildFromIterator",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "iter",
+                        "type": "Iterator",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "base_directory",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Construct a phar archive from an iterator.\r\n * @link http:\/\/php.net\/manual\/en\/phar.buildfromiterator.php\r\n * @param Iterator $iter <p>\r\n * Any iterator that either associatively maps phar file to location or\r\n * returns SplFileInfo objects\r\n * <\/p>\r\n * @param string $base_directory [optional] <p>\r\n * For iterators that return SplFileInfo objects, the portion of each\r\n * file's full path to remove when adding to the phar archive\r\n * <\/p>\r\n * @return array <b>Phar::buildFromIterator<\/b> returns an associative array\r\n * mapping internal path of file to the full path of the file on the\r\n * filesystem.\r\n *\/"
+            },
+            {
+                "name": "compressFiles",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Compresses all files in the current Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.compressfiles.php\r\n * @param int $compression <p>\r\n * Compression must be one of Phar::GZ,\r\n * Phar::BZ2 to add compression, or Phar::NONE\r\n * to remove compression.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "decompressFiles",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Decompresses all files in the current Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.decompressfiles.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "compress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Compresses the entire Phar archive using Gzip or Bzip2 compression\r\n * @link http:\/\/php.net\/manual\/en\/phar.compress.php\r\n * @param int $compression <p>\r\n * Compression must be one of Phar::GZ,\r\n * Phar::BZ2 to add compression, or Phar::NONE\r\n * to remove compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * By default, the extension is .phar.gz\r\n * or .phar.bz2 for compressing phar archives, and\r\n * .phar.tar.gz or .phar.tar.bz2 for\r\n * compressing tar archives. For decompressing, the default file extensions\r\n * are .phar and .phar.tar.\r\n * <\/p>\r\n * @return object a <b>Phar<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "decompress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Decompresses the entire Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.decompress.php\r\n * @param string $extension [optional] <p>\r\n * For decompressing, the default file extensions\r\n * are .phar and .phar.tar.\r\n * Use this parameter to specify another file extension. Be aware\r\n * that all executable phar archives must contain .phar\r\n * in their filename.\r\n * <\/p>\r\n * @return object A <b>Phar<\/b> object is returned.\r\n *\/"
+            },
+            {
+                "name": "convertToExecutable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": 9021976
+                    },
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": 9021976
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Convert a phar archive to another executable phar archive file format\r\n * @link http:\/\/php.net\/manual\/en\/phar.converttoexecutable.php\r\n * @param int $format [optional] <p>\r\n * This should be one of Phar::PHAR, Phar::TAR,\r\n * or Phar::ZIP. If set to <b>NULL<\/b>, the existing file format\r\n * will be preserved.\r\n * <\/p>\r\n * @param int $compression [optional] <p>\r\n * This should be one of Phar::NONE for no whole-archive\r\n * compression, Phar::GZ for zlib-based compression, and\r\n * Phar::BZ2 for bzip-based compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * This parameter is used to override the default file extension for a\r\n * converted archive. Note that all zip- and tar-based phar archives must contain\r\n * .phar in their file extension in order to be processed as a\r\n * phar archive.\r\n * <\/p>\r\n * <p>\r\n * If converting to a phar-based archive, the default extensions are\r\n * .phar, .phar.gz, or .phar.bz2\r\n * depending on the specified compression. For tar-based phar archives, the\r\n * default extensions are .phar.tar, .phar.tar.gz,\r\n * and .phar.tar.bz2. For zip-based phar archives, the\r\n * default extension is .phar.zip.\r\n * <\/p>\r\n * @return Phar The method returns a <b>Phar<\/b> object on success and throws an\r\n * exception on failure.\r\n *\/"
+            },
+            {
+                "name": "convertToData",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": 9021976
+                    },
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": 9021976
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Convert a phar archive to a non-executable tar or zip file\r\n * @link http:\/\/php.net\/manual\/en\/phar.converttodata.php\r\n * @param int $format [optional] <p>\r\n * This should be one of Phar::TAR\r\n * or Phar::ZIP. If set to <b>NULL<\/b>, the existing file format\r\n * will be preserved.\r\n * <\/p>\r\n * @param int $compression [optional] <p>\r\n * This should be one of Phar::NONE for no whole-archive\r\n * compression, Phar::GZ for zlib-based compression, and\r\n * Phar::BZ2 for bzip-based compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * This parameter is used to override the default file extension for a\r\n * converted archive. Note that .phar cannot be used\r\n * anywhere in the filename for a non-executable tar or zip archive.\r\n * <\/p>\r\n * <p>\r\n * If converting to a tar-based phar archive, the\r\n * default extensions are .tar, .tar.gz,\r\n * and .tar.bz2 depending on specified compression.\r\n * For zip-based archives, the\r\n * default extension is .zip.\r\n * <\/p>\r\n * @return PharData The method returns a <b>PharData<\/b> object on success and throws an\r\n * exception on failure.\r\n *\/"
+            },
+            {
+                "name": "copy",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "oldfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Copy a file internal to the phar archive to another new file within the phar\r\n * @link http:\/\/php.net\/manual\/en\/phar.copy.php\r\n * @param string $oldfile\r\n * @param string $newfile\r\n * @return bool returns <b>TRUE<\/b> on success, but it is safer to encase method call in a\r\n * try\/catch block and assume success if no exception is thrown.\r\n *\/"
+            },
+            {
+                "name": "count",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns the number of entries (files) in the Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.count.php\r\n * @return int The number of files contained within this phar, or 0 (the number zero)\r\n * if none.\r\n *\/"
+            },
+            {
+                "name": "delete",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "entry",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Delete a file within a phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.delete.php\r\n * @param string $entry <p>\r\n * Path within an archive to the file to delete.\r\n * <\/p>\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "delMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Deletes the global metadata of the phar\r\n * @link http:\/\/php.net\/manual\/en\/phar.delmetadata.php\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "extractTo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pathto",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "files",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Extract the contents of a phar archive to a directory\r\n * @link http:\/\/php.net\/manual\/en\/phar.extractto.php\r\n * @param string $pathto <p>\r\n * Path within an archive to the file to delete.\r\n * <\/p>\r\n * @param string|array $files [optional] <p>\r\n * The name of a file or directory to extract, or an array of files\/directories to extract\r\n * <\/p>\r\n * @param bool $overwrite [optional] <p>\r\n * Set to <b>TRUE<\/b> to enable overwriting existing files\r\n * <\/p>\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "getAlias",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns phar archive meta-data\r\n * @link http:\/\/php.net\/manual\/en\/phar.getmetadata.php\r\n * @return mixed any PHP variable that can be serialized and is stored as meta-data for the Phar archive,\r\n * or <b>NULL<\/b> if no meta-data is stored.\r\n *\/"
+            },
+            {
+                "name": "getModified",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Return whether phar was modified\r\n * @link http:\/\/php.net\/manual\/en\/phar.getmodified.php\r\n * @return bool <b>TRUE<\/b> if the phar has been modified since opened, <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "getSignature",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Return MD5\/SHA1\/SHA256\/SHA512\/OpenSSL signature of a Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.getsignature.php\r\n * @return array Array with the opened archive's signature in hash key and MD5,\r\n * SHA-1,\r\n * SHA-256, SHA-512, or OpenSSL\r\n * in hash_type. This signature is a hash calculated on the\r\n * entire phar's contents, and may be used to verify the integrity of the archive.\r\n * A valid signature is absolutely required of all executable phar archives if the\r\n * phar.require_hash INI variable\r\n * is set to true.\r\n *\/"
+            },
+            {
+                "name": "getStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Return the PHP loader or bootstrap stub of a Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.getstub.php\r\n * @return string a string containing the contents of the bootstrap loader (stub) of\r\n * the current Phar archive.\r\n *\/"
+            },
+            {
+                "name": "getVersion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Return version info of Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.getversion.php\r\n * @return string The opened archive's API version. This is not to be confused with\r\n * the API version that the loaded phar extension will use to create\r\n * new phars. Each Phar archive has the API version hard-coded into\r\n * its manifest. See Phar file format\r\n * documentation for more information.\r\n *\/"
+            },
+            {
+                "name": "hasMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Returns whether phar has global meta-data\r\n * @link http:\/\/php.net\/manual\/en\/phar.hasmetadata.php\r\n * @return bool <b>TRUE<\/b> if meta-data has been set, and <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "isBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Used to determine whether Phar write operations are being buffered, or are flushing directly to disk\r\n * @link http:\/\/php.net\/manual\/en\/phar.isbuffering.php\r\n * @return bool <b>TRUE<\/b> if the write operations are being buffer, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isCompressed",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Returns Phar::GZ or PHAR::BZ2 if the entire phar archive is compressed (.tar.gz\/tar.bz and so on)\r\n * @link http:\/\/php.net\/manual\/en\/phar.iscompressed.php\r\n * @return mixed Phar::GZ, Phar::BZ2 or <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "isFileFormat",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Returns true if the phar archive is based on the tar\/phar\/zip file format depending on the parameter\r\n * @link http:\/\/php.net\/manual\/en\/phar.isfileformat.php\r\n * @param int $format <p>\r\n * Either Phar::PHAR, Phar::TAR, or\r\n * Phar::ZIP to test for the format of the archive.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the phar archive matches the file format requested by the parameter\r\n *\/"
+            },
+            {
+                "name": "isWritable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Returns true if the phar archive can be modified\r\n * @link http:\/\/php.net\/manual\/en\/phar.iswritable.php\r\n * @return bool <b>TRUE<\/b> if the phar archive can be modified\r\n *\/"
+            },
+            {
+                "name": "offsetExists",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * determines whether a file exists in the phar\r\n * @link http:\/\/php.net\/manual\/en\/phar.offsetexists.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to look for in a Phar.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the file exists within the phar, or <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "offsetGet",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Gets a <b>PharFileInfo<\/b> object for a specific file\r\n * @link http:\/\/php.net\/manual\/en\/phar.offsetget.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to look for in a Phar.\r\n * <\/p>\r\n * @return int A <b>PharFileInfo<\/b> object is returned that can be used to\r\n * iterate over a file's contents or to retrieve information about the current file.\r\n *\/"
+            },
+            {
+                "name": "offsetSet",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * set the contents of an internal file to those of an external file\r\n * @link http:\/\/php.net\/manual\/en\/phar.offsetset.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to modify in a Phar.\r\n * <\/p>\r\n * @param string $value <p>\r\n * Content of the file.\r\n * <\/p>\r\n * @return void No return values.\r\n *\/"
+            },
+            {
+                "name": "offsetUnset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * remove a file from a phar\r\n * @link http:\/\/php.net\/manual\/en\/phar.offsetunset.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to modify in a Phar.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setAlias",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.1)<br\/>\r\n * Set the alias for the Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.setalias.php\r\n * @param string $alias <p>\r\n * A shorthand string that this archive can be referred to in phar\r\n * stream wrapper access.\r\n * <\/p>\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "setDefaultStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "webindex",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Used to set the PHP loader or bootstrap stub of a Phar archive to the default loader\r\n * @link http:\/\/php.net\/manual\/en\/phar.setdefaultstub.php\r\n * @param string $index [optional] <p>\r\n * Relative path within the phar archive to run if accessed on the command-line\r\n * <\/p>\r\n * @param string $webindex [optional] <p>\r\n * Relative path within the phar archive to run if accessed through a web browser\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "metadata",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Sets phar archive meta-data\r\n * @link http:\/\/php.net\/manual\/en\/phar.setmetadata.php\r\n * @param mixed $metadata <p>\r\n * Any PHP variable containing information to store that describes the phar archive\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setSignatureAlgorithm",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "sigtype",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "privatekey",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.1.0)<br\/>\r\n * set the signature algorithm for a phar and apply it.\r\n * @link http:\/\/php.net\/manual\/en\/phar.setsignaturealgorithm.php\r\n * @param int $sigtype <p>\r\n * One of Phar::MD5,\r\n * Phar::SHA1, Phar::SHA256,\r\n * Phar::SHA512, or Phar::OPENSSL\r\n * <\/p>\r\n * @param string $privatekey [optional] <p>\r\n * The contents of an OpenSSL private key, as extracted from a certificate or\r\n * OpenSSL key file:\r\n * <code>\r\n * $private = openssl_get_privatekey(file_get_contents('private.pem'));\r\n * $pkey = '';\r\n * openssl_pkey_export($private, $pkey);\r\n * $p->setSignatureAlgorithm(Phar::OPENSSL, $pkey);\r\n * <\/code>\r\n * See phar introduction for instructions on\r\n * naming and placement of the public key file.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "stub",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "len",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Used to set the PHP loader or bootstrap stub of a Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.setstub.php\r\n * @param string $stub <p>\r\n * A string or an open stream handle to use as the executable stub for this\r\n * phar archive.\r\n * <\/p>\r\n * @param int $len [optional] <p>\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Start buffering Phar write operations, do not modify the Phar object on disk\r\n * @link http:\/\/php.net\/manual\/en\/phar.startbuffering.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "stopBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Stop buffering write requests to the Phar archive, and save changes to disk\r\n * @link http:\/\/php.net\/manual\/en\/phar.stopbuffering.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "apiVersion",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns the api version\r\n * @link http:\/\/php.net\/manual\/en\/phar.apiversion.php\r\n * @return string The API version string as in &#x00022;1.0.0&#x00022;.\r\n *\/"
+            },
+            {
+                "name": "canCompress",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns whether phar extension supports compression using either zlib or bzip2\r\n * @link http:\/\/php.net\/manual\/en\/phar.cancompress.php\r\n * @param int $type [optional] <p>\r\n * Either Phar::GZ or Phar::BZ2 can be\r\n * used to test whether compression is possible with a specific compression\r\n * algorithm (zlib or bzip2).\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if compression\/decompression is available, <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "canWrite",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns whether phar extension supports writing and creating phars\r\n * @link http:\/\/php.net\/manual\/en\/phar.canwrite.php\r\n * @return bool <b>TRUE<\/b> if write access is enabled, <b>FALSE<\/b> if it is disabled.\r\n *\/"
+            },
+            {
+                "name": "createDefaultStub",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "indexfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "webindexfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Create a phar-file format specific stub\r\n * @link http:\/\/php.net\/manual\/en\/phar.createdefaultstub.php\r\n * @param string $indexfile [optional]\r\n * @param string $webindexfile [optional]\r\n * @return string a string containing the contents of a customized bootstrap loader (stub)\r\n * that allows the created Phar archive to work with or without the Phar extension\r\n * enabled.\r\n *\/"
+            },
+            {
+                "name": "getSupportedCompression",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Return array of supported compression algorithms\r\n * @link http:\/\/php.net\/manual\/en\/phar.getsupportedcompression.php\r\n * @return array an array containing any of Phar::GZ or\r\n * Phar::BZ2, depending on the availability of\r\n * the zlib extension or the\r\n * bz2 extension.\r\n *\/"
+            },
+            {
+                "name": "getSupportedSignatures",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.1.0)<br\/>\r\n * Return array of supported signature types\r\n * @link http:\/\/php.net\/manual\/en\/phar.getsupportedsignatures.php\r\n * @return array an array containing any of MD5, SHA-1,\r\n * SHA-256, SHA-512, or OpenSSL.\r\n *\/"
+            },
+            {
+                "name": "interceptFileFuncs",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * instructs phar to intercept fopen, file_get_contents, opendir, and all of the stat-related functions\r\n * @link http:\/\/php.net\/manual\/en\/phar.interceptfilefuncs.php\r\n * @return void\r\n *\/"
+            },
+            {
+                "name": "isValidPharFilename",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "executable",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Returns whether the given filename is a valid phar filename\r\n * @link http:\/\/php.net\/manual\/en\/phar.isvalidpharfilename.php\r\n * @param string $filename <p>\r\n * The name or full path to a phar archive not yet created\r\n * <\/p>\r\n * @param bool $executable [optional] <p>\r\n * This parameter determines whether the filename should be treated as\r\n * a phar executable archive, or a data non-executable archive\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the filename is valid, <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "loadPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Loads any phar archive with an alias\r\n * @link http:\/\/php.net\/manual\/en\/phar.loadphar.php\r\n * @param string $filename <p>\r\n * the full or relative path to the phar archive to open\r\n * <\/p>\r\n * @param string $alias [optional] <p>\r\n * The alias that may be used to refer to the phar archive. Note\r\n * that many phar archives specify an explicit alias inside the\r\n * phar archive, and a <b>PharException<\/b> will be thrown if\r\n * a new alias is specified in this case.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "mapPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "dataoffset",
+                        "type": null,
+                        "byRef": false,
+                        "default": 0
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Reads the currently executed file (a phar) and registers its manifest\r\n * @link http:\/\/php.net\/manual\/en\/phar.mapphar.php\r\n * @param string $alias [optional] <p>\r\n * The alias that can be used in phar:\/\/ URLs to\r\n * refer to this archive, rather than its full path.\r\n * <\/p>\r\n * @param int $dataoffset [optional] <p>\r\n * Unused variable, here for compatibility with PEAR's PHP_Archive.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "running",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "retphar",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Returns the full path on disk or full phar URL to the currently executing Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.running.php\r\n * @param bool $retphar [optional] <p>\r\n * If <b>FALSE<\/b>, the full path on disk to the phar\r\n * archive is returned. If <b>TRUE<\/b>, a full phar URL is returned.\r\n * <\/p>\r\n * @return string the filename if valid, empty string otherwise.\r\n *\/"
+            },
+            {
+                "name": "mount",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pharpath",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "externalpath",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Mount an external path or file to a virtual location within the phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phar.mount.php\r\n * @param string $pharpath <p>\r\n * The internal path within the phar archive to use as the mounted path location.\r\n * This must be a relative path within the phar archive, and must not already exist.\r\n * <\/p>\r\n * @param string $externalpath <p>\r\n * A path or URL to an external file or directory to mount within the phar archive\r\n * <\/p>\r\n * @return void No return. <b>PharException<\/b> is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "mungServer",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "munglist",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (Unknown)<br\/>\r\n * Defines a list of up to 4 $_SERVER variables that should be modified for execution\r\n * @link http:\/\/php.net\/manual\/en\/phar.mungserver.php\r\n * @param array $munglist <p>\r\n * an array containing as string indices any of\r\n * REQUEST_URI, PHP_SELF,\r\n * SCRIPT_NAME and SCRIPT_FILENAME.\r\n * Other values trigger an exception, and <b>Phar::mungServer<\/b>\r\n * is case-sensitive.\r\n * <\/p>\r\n * @return void No return.\r\n *\/"
+            },
+            {
+                "name": "unlinkArchive",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "archive",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Completely remove a phar archive from disk and from memory\r\n * @link http:\/\/php.net\/manual\/en\/phar.unlinkarchive.php\r\n * @param string $archive <p>\r\n * The path on disk to the phar archive.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "webPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": "index.php"
+                    },
+                    {
+                        "name": "f404",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "mimetypes",
+                        "type": "array",
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "rewrites",
+                        "type": "callable",
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * mapPhar for web-based phars. front controller for web applications\r\n * @link http:\/\/php.net\/manual\/en\/phar.webphar.php\r\n * @param string $alias [optional] <p>\r\n * The alias that can be used in phar:\/\/ URLs to\r\n * refer to this archive, rather than its full path.\r\n * <\/p>\r\n * @param string $index [optional] <p>\r\n * The location within the phar of the directory index.\r\n * <\/p>\r\n * @param string $f404 [optional] <p>\r\n * The location of the script to run when a file is not found. This\r\n * script should output the proper HTTP 404 headers.\r\n * <\/p>\r\n * @param array $mimetypes [optional] <p>\r\n * An array mapping additional file extensions to MIME type.\r\n * If the default mapping is sufficient, pass an empty array.\r\n * By default, these extensions are mapped to these MIME types:\r\n * <code>\r\n * $mimes = array(\r\n * 'phps' => Phar::PHPS, \/\/ pass to highlight_file()\r\n * 'c' => 'text\/plain',\r\n * 'cc' => 'text\/plain',\r\n * 'cpp' => 'text\/plain',\r\n * 'c++' => 'text\/plain',\r\n * 'dtd' => 'text\/plain',\r\n * 'h' => 'text\/plain',\r\n * 'log' => 'text\/plain',\r\n * 'rng' => 'text\/plain',\r\n * 'txt' => 'text\/plain',\r\n * 'xsd' => 'text\/plain',\r\n * 'php' => Phar::PHP, \/\/ parse as PHP\r\n * 'inc' => Phar::PHP, \/\/ parse as PHP\r\n * 'avi' => 'video\/avi',\r\n * 'bmp' => 'image\/bmp',\r\n * 'css' => 'text\/css',\r\n * 'gif' => 'image\/gif',\r\n * 'htm' => 'text\/html',\r\n * 'html' => 'text\/html',\r\n * 'htmls' => 'text\/html',\r\n * 'ico' => 'image\/x-ico',\r\n * 'jpe' => 'image\/jpeg',\r\n * 'jpg' => 'image\/jpeg',\r\n * 'jpeg' => 'image\/jpeg',\r\n * 'js' => 'application\/x-javascript',\r\n * 'midi' => 'audio\/midi',\r\n * 'mid' => 'audio\/midi',\r\n * 'mod' => 'audio\/mod',\r\n * 'mov' => 'movie\/quicktime',\r\n * 'mp3' => 'audio\/mp3',\r\n * 'mpg' => 'video\/mpeg',\r\n * 'mpeg' => 'video\/mpeg',\r\n * 'pdf' => 'application\/pdf',\r\n * 'png' => 'image\/png',\r\n * 'swf' => 'application\/shockwave-flash',\r\n * 'tif' => 'image\/tiff',\r\n * 'tiff' => 'image\/tiff',\r\n * 'wav' => 'audio\/wav',\r\n * 'xbm' => 'image\/xbm',\r\n * 'xml' => 'text\/xml',\r\n * );\r\n * <\/code>\r\n * <\/p>\r\n * @param callable $rewrites [optional] <p>\r\n * The rewrites function is passed a string as its only parameter and must return a string or <b>FALSE<\/b>.\r\n * <\/p>\r\n * <p>\r\n * If you are using fast-cgi or cgi then the parameter passed to the function is the value of the\r\n * $_SERVER['PATH_INFO'] variable. Otherwise, the parameter passed to the function is the value\r\n * of the $_SERVER['REQUEST_URI'] variable.\r\n * <\/p>\r\n * <p>\r\n * If a string is returned it is used as the internal file path. If <b>FALSE<\/b> is returned then webPhar() will\r\n * send a HTTP 403 Denied Code.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "hasChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "allow_links",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns whether current entry is a directory and not '.' or '..'\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.haschildren.php\r\n * @param bool $allow_links [optional] <p>\r\n * <\/p>\r\n * @return bool whether the current entry is a directory, but not '.' or '..'\r\n *\/"
+            },
+            {
+                "name": "getChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns an iterator for the current entry if it is a directory\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getchildren.php\r\n * @return mixed The filename, file information, or $this depending on the set flags.\r\n * See the FilesystemIterator\r\n * constants.\r\n *\/"
+            },
+            {
+                "name": "getSubPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get sub path\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getsubpath.php\r\n * @return string The sub path (sub directory).\r\n *\/"
+            },
+            {
+                "name": "getSubPathname",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get sub path and name\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getsubpathname.php\r\n * @return string The sub path (sub directory) and filename.\r\n *\/"
+            },
+            {
+                "name": "rewind",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Rewinds back to the beginning\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.rewind.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "next",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Move to the next file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.next.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "key",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Retrieve the key for the current file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.key.php\r\n * @return string the pathname or filename depending on the set flags.\r\n * See the FilesystemIterator constants.\r\n *\/"
+            },
+            {
+                "name": "current",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * The current file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.current.php\r\n * @return mixed The filename, file information, or $this depending on the set flags.\r\n * See the FilesystemIterator constants.\r\n *\/"
+            },
+            {
+                "name": "getFlags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Get the handling flags\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.getflags.php\r\n * @return int The integer value of the set flags.\r\n *\/"
+            },
+            {
+                "name": "setFlags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Sets handling flags\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.setflags.php\r\n * @param int $flags [optional] <p>\r\n * The handling flags to set.\r\n * See the FilesystemIterator constants.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "getFilename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Return file name of current DirectoryIterator item.\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getfilename.php\r\n * @return string the file name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.6)<br\/>\r\n * Gets the file extension\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getextension.php\r\n * @return string a string containing the file extension, or an\r\n * empty string if the file has no extension.\r\n *\/"
+            },
+            {
+                "name": "getBasename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "suffix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Get base name of current DirectoryIterator item.\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getbasename.php\r\n * @param string $suffix [optional] <p>\r\n * If the base name ends in <i>suffix<\/i>,\r\n * this will be cut.\r\n * <\/p>\r\n * @return string The base name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "isDot",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Determine if current DirectoryIterator item is '.' or '..'\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.isdot.php\r\n * @return bool <b>TRUE<\/b> if the entry is . or ..,\r\n * otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "valid",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Check whether current DirectoryIterator position is a valid file\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.valid.php\r\n * @return bool <b>TRUE<\/b> if the position is valid, otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Seek to a DirectoryIterator item\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.seek.php\r\n * @param int $position <p>\r\n * The zero-based numeric position to seek to.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get file name as a string\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.tostring.php\r\n * @return string the file name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "getPathname",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the path to the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathname.php\r\n * @return string The path to the file.\r\n *\/"
+            },
+            {
+                "name": "getPerms",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file permissions\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getperms.php\r\n * @return int the file permissions.\r\n *\/"
+            },
+            {
+                "name": "getInode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getinode.php\r\n * @return int the inode number for the filesystem object.\r\n *\/"
+            },
+            {
+                "name": "getSize",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file size\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getsize.php\r\n * @return int The filesize in bytes.\r\n *\/"
+            },
+            {
+                "name": "getOwner",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the owner of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getowner.php\r\n * @return int The owner id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getGroup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the file group\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getgroup.php\r\n * @return int The group id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getATime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets last access time of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getatime.php\r\n * @return int the time the file was last accessed.\r\n *\/"
+            },
+            {
+                "name": "getMTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the last modified time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getmtime.php\r\n * @return int the last modified time for the file, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getCTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode change time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getctime.php\r\n * @return int The last change time, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file type\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.gettype.php\r\n * @return string A string representing the type of the entry.\r\n * May be one of file, link,\r\n * or dir\r\n *\/"
+            },
+            {
+                "name": "isReadable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if file is readable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isreadable.php\r\n * @return bool <b>TRUE<\/b> if readable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isExecutable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is executable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isexecutable.php\r\n * @return bool <b>TRUE<\/b> if executable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the object references a regular file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isfile.php\r\n * @return bool <b>TRUE<\/b> if the file exists and is a regular file (not a link), <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a directory\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isdir.php\r\n * @return bool <b>TRUE<\/b> if a directory, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isLink",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.islink.php\r\n * @return bool <b>TRUE<\/b> if the file is a link, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getLinkTarget",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets the target of a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getlinktarget.php\r\n * @return string the target of the filesystem link.\r\n *\/"
+            },
+            {
+                "name": "getRealPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets absolute path to file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getrealpath.php\r\n * @return string the path to the file.\r\n *\/"
+            },
+            {
+                "name": "getFileInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getfileinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo An <b>SplFileInfo<\/b> object created for the file.\r\n *\/"
+            },
+            {
+                "name": "getPathInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the path\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo an <b>SplFileInfo<\/b> object for the parent path of the file.\r\n *\/"
+            },
+            {
+                "name": "openFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "open_mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": "r"
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileObject object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.openfile.php\r\n * @param string $open_mode [optional] <p>\r\n * The mode for opening the file. See the <b>fopen<\/b>\r\n * documentation for descriptions of possible modes. The default\r\n * is read only.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * When set to <b>TRUE<\/b>, the filename is also\r\n * searched for within the include_path\r\n * <\/p>\r\n * @param resource $context [optional] <p>\r\n * Refer to the context\r\n * section of the manual for a description of contexts.\r\n * <\/p>\r\n * @return SplFileObject The opened file as an <b>SplFileObject<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "setFileClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class name used with <b>SplFileInfo::openFile<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setfileclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use when openFile() is called.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setInfoClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class used with getFileInfo and getPathInfo\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setinfoclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "_bad_state_ex",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "CURRENT_MODE_MASK",
+                "value": 240,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_PATHNAME",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_FILEINFO",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_SELF",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "KEY_MODE_MASK",
+                "value": 3840,
+                "doc": null
+            },
+            {
+                "name": "KEY_AS_PATHNAME",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "FOLLOW_SYMLINKS",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "KEY_AS_FILENAME",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "NEW_CURRENT_AND_KEY",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "OTHER_MODE_MASK",
+                "value": 12288,
+                "doc": null
+            },
+            {
+                "name": "SKIP_DOTS",
+                "value": 4096,
+                "doc": null
+            },
+            {
+                "name": "UNIX_PATHS",
+                "value": 8192,
+                "doc": null
+            },
+            {
+                "name": "BZ2",
+                "value": 8192,
+                "doc": null
+            },
+            {
+                "name": "GZ",
+                "value": 4096,
+                "doc": null
+            },
+            {
+                "name": "NONE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "PHAR",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "TAR",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "ZIP",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "COMPRESSED",
+                "value": 61440,
+                "doc": null
+            },
+            {
+                "name": "PHP",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "PHPS",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "MD5",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "OPENSSL",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "SHA1",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "SHA256",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "SHA512",
+                "value": 4,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "PharData",
+        "fqn": "\\PharData",
+        "type": 0,
+        "extends": "RecursiveDirectoryIterator",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "fname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": "Phar::TAR"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Construct a non-executable tar or zip archive object\r\n * @link http:\/\/php.net\/manual\/en\/phardata.construct.php\r\n * @param string $fname <p>\r\n * Path to an existing tar\/zip archive or to-be-created archive\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * Flags to pass to <b>Phar<\/b> parent class\r\n * <b>RecursiveDirectoryIterator<\/b>.\r\n * <\/p>\r\n * @param string $alias [optional] <p>\r\n * Alias with which this Phar archive should be referred to in calls to stream\r\n * functionality.\r\n * <\/p>\r\n * @param int $format [optional] <p>\r\n * One of the\r\n * file format constants\r\n * available within the <b>Phar<\/b> class.\r\n * <\/p>\r\n *\/"
+            },
+            {
+                "name": "__destruct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "addEmptyDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "dirname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Add an empty directory to the tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.addemptydir.php\r\n * @param string $dirname <p>\r\n * The name of the empty directory to create in the phar archive\r\n * <\/p>\r\n * @return bool no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "addFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "file",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Add a file from the filesystem to the tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.addfile.php\r\n * @param string $file <p>\r\n * Full or relative path to a file on disk to be added\r\n * to the phar archive.\r\n * <\/p>\r\n * @param string $localname [optional] <p>\r\n * Path that the file will be stored in the archive.\r\n * <\/p>\r\n * @return void no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "addFromString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "localname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "contents",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Add a file from the filesystem to the tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.addfromstring.php\r\n * @param string $localname <p>\r\n * Path that the file will be stored in the archive.\r\n * <\/p>\r\n * @param string $contents <p>\r\n * The file contents to store\r\n * <\/p>\r\n * @return bool no return value, exception is thrown on failure.\r\n *\/"
+            },
+            {
+                "name": "buildFromDirectory",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "base_dir",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "regex",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Construct a tar\/zip archive from the files within a directory.\r\n * @link http:\/\/php.net\/manual\/en\/phardata.buildfromdirectory.php\r\n * @param string $base_dir <p>\r\n * The full or relative path to the directory that contains all files\r\n * to add to the archive.\r\n * <\/p>\r\n * @param string $regex [optional] <p>\r\n * An optional pcre regular expression that is used to filter the\r\n * list of files. Only file paths matching the regular expression\r\n * will be included in the archive.\r\n * <\/p>\r\n * @return array <b>Phar::buildFromDirectory<\/b> returns an associative array\r\n * mapping internal path of file to the full path of the file on the\r\n * filesystem.\r\n *\/"
+            },
+            {
+                "name": "buildFromIterator",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "iter",
+                        "type": "Iterator",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "base_directory",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Construct a tar or zip archive from an iterator.\r\n * @link http:\/\/php.net\/manual\/en\/phardata.buildfromiterator.php\r\n * @param Iterator $iter <p>\r\n * Any iterator that either associatively maps tar\/zip file to location or\r\n * returns SplFileInfo objects\r\n * <\/p>\r\n * @param string $base_directory [optional] <p>\r\n * For iterators that return SplFileInfo objects, the portion of each\r\n * file's full path to remove when adding to the tar\/zip archive\r\n * <\/p>\r\n * @return array <b>PharData::buildFromIterator<\/b> returns an associative array\r\n * mapping internal path of file to the full path of the file on the\r\n * filesystem.\r\n *\/"
+            },
+            {
+                "name": "compressFiles",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Compresses all files in the current tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.compressfiles.php\r\n * @param int $compression <p>\r\n * Compression must be one of Phar::GZ,\r\n * Phar::BZ2 to add compression, or Phar::NONE\r\n * to remove compression.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "decompressFiles",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Decompresses all files in the current zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.decompressfiles.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "compress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Compresses the entire tar\/zip archive using Gzip or Bzip2 compression\r\n * @link http:\/\/php.net\/manual\/en\/phardata.compress.php\r\n * @param int $compression <p>\r\n * Compression must be one of Phar::GZ,\r\n * Phar::BZ2 to add compression, or Phar::NONE\r\n * to remove compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * By default, the extension is .tar.gz or .tar.bz2\r\n * for compressing a tar, and .tar for decompressing.\r\n * <\/p>\r\n * @return object A <b>PharData<\/b> object is returned.\r\n *\/"
+            },
+            {
+                "name": "decompress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Decompresses the entire Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.decompress.php\r\n * @param string $extension [optional] <p>\r\n * For decompressing, the default file extension\r\n * is .phar.tar.\r\n * Use this parameter to specify another file extension. Be aware\r\n * that no non-executable archives cannot contain .phar\r\n * in their filename.\r\n * <\/p>\r\n * @return object A <b>PharData<\/b> object is returned.\r\n *\/"
+            },
+            {
+                "name": "convertToExecutable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Convert a non-executable tar\/zip archive to an executable phar archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.converttoexecutable.php\r\n * @param int $format [optional] <p>\r\n * This should be one of Phar::PHAR, Phar::TAR,\r\n * or Phar::ZIP. If set to <b>NULL<\/b>, the existing file format\r\n * will be preserved.\r\n * <\/p>\r\n * @param int $compression [optional] <p>\r\n * This should be one of Phar::NONE for no whole-archive\r\n * compression, Phar::GZ for zlib-based compression, and\r\n * Phar::BZ2 for bzip-based compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * This parameter is used to override the default file extension for a\r\n * converted archive. Note that all zip- and tar-based phar archives must contain\r\n * .phar in their file extension in order to be processed as a\r\n * phar archive.\r\n * <\/p>\r\n * <p>\r\n * If converting to a phar-based archive, the default extensions are\r\n * .phar, .phar.gz, or .phar.bz2\r\n * depending on the specified compression. For tar-based phar archives, the\r\n * default extensions are .phar.tar, .phar.tar.gz,\r\n * and .phar.tar.bz2. For zip-based phar archives, the\r\n * default extension is .phar.zip.\r\n * <\/p>\r\n * @return Phar The method returns a <b>Phar<\/b> object on success and throws an\r\n * exception on failure.\r\n *\/"
+            },
+            {
+                "name": "convertToData",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "format",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "extension",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Convert a phar archive to a non-executable tar or zip file\r\n * @link http:\/\/php.net\/manual\/en\/phardata.converttodata.php\r\n * @param int $format [optional] <p>\r\n * This should be one of Phar::TAR\r\n * or Phar::ZIP. If set to <b>NULL<\/b>, the existing file format\r\n * will be preserved.\r\n * <\/p>\r\n * @param int $compression [optional] <p>\r\n * This should be one of Phar::NONE for no whole-archive\r\n * compression, Phar::GZ for zlib-based compression, and\r\n * Phar::BZ2 for bzip-based compression.\r\n * <\/p>\r\n * @param string $extension [optional] <p>\r\n * This parameter is used to override the default file extension for a\r\n * converted archive. Note that .phar cannot be used\r\n * anywhere in the filename for a non-executable tar or zip archive.\r\n * <\/p>\r\n * <p>\r\n * If converting to a tar-based phar archive, the\r\n * default extensions are .tar, .tar.gz,\r\n * and .tar.bz2 depending on specified compression.\r\n * For zip-based archives, the\r\n * default extension is .zip.\r\n * <\/p>\r\n * @return PharData The method returns a <b>PharData<\/b> object on success and throws an\r\n * exception on failure.\r\n *\/"
+            },
+            {
+                "name": "copy",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "oldfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "newfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Copy a file internal to the phar archive to another new file within the phar\r\n * @link http:\/\/php.net\/manual\/en\/phardata.copy.php\r\n * @param string $oldfile\r\n * @param string $newfile\r\n * @return bool returns <b>TRUE<\/b> on success, but it is safer to encase method call in a\r\n * try\/catch block and assume success if no exception is thrown.\r\n *\/"
+            },
+            {
+                "name": "count",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "delete",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "entry",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Delete a file within a tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.delete.php\r\n * @param string $entry <p>\r\n * Path within an archive to the file to delete.\r\n * <\/p>\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "delMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Deletes the global metadata of a zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.delmetadata.php\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "extractTo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pathto",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "files",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Extract the contents of a tar\/zip archive to a directory\r\n * @link http:\/\/php.net\/manual\/en\/phardata.extractto.php\r\n * @param string $pathto <p>\r\n * Path to extract the given files to\r\n * <\/p>\r\n * @param string|array $files [optional] <p>\r\n * The name of a file or directory to extract, or an array of files\/directories to extract\r\n * <\/p>\r\n * @param bool $overwrite [optional] <p>\r\n * Set to <b>TRUE<\/b> to enable overwriting existing files\r\n * <\/p>\r\n * @return bool returns <b>TRUE<\/b> on success, but it is better to check for thrown exception,\r\n * and assume success if none is thrown.\r\n *\/"
+            },
+            {
+                "name": "getAlias",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getModified",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getSignature",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getVersion",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "hasMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "isBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "isCompressed",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "isFileFormat",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "fileformat",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $fileformat\r\n *\/"
+            },
+            {
+                "name": "isWritable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Returns true if the tar\/zip archive can be modified\r\n * @link http:\/\/php.net\/manual\/en\/phardata.iswritable.php\r\n * @return bool <b>TRUE<\/b> if the tar\/zip archive can be modified\r\n *\/"
+            },
+            {
+                "name": "offsetExists",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "entry",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $entry\r\n *\/"
+            },
+            {
+                "name": "offsetGet",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "entry",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $entry\r\n *\/"
+            },
+            {
+                "name": "offsetSet",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * set the contents of a file within the tar\/zip to those of an external file or string\r\n * @link http:\/\/php.net\/manual\/en\/phardata.offsetset.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to modify in a tar or zip archive.\r\n * <\/p>\r\n * @param string $value <p>\r\n * Content of the file.\r\n * <\/p>\r\n * @return void No return values.\r\n *\/"
+            },
+            {
+                "name": "offsetUnset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * remove a file from a tar\/zip archive\r\n * @link http:\/\/php.net\/manual\/en\/phardata.offsetunset.php\r\n * @param string $offset <p>\r\n * The filename (relative path) to modify in the tar\/zip archive.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setAlias",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * dummy function (Phar::setAlias is not valid for PharData)\r\n * @link http:\/\/php.net\/manual\/en\/phardata.setalias.php\r\n * @param string $alias <p>\r\n * A shorthand string that this archive can be referred to in phar\r\n * stream wrapper access. This parameter is ignored.\r\n * <\/p>\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "setDefaultStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "webindex",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * dummy function (Phar::setDefaultStub is not valid for PharData)\r\n * @link http:\/\/php.net\/manual\/en\/phardata.setdefaultstub.php\r\n * @param string $index [optional] <p>\r\n * Relative path within the phar archive to run if accessed on the command-line\r\n * <\/p>\r\n * @param string $webindex [optional] <p>\r\n * Relative path within the phar archive to run if accessed through a web browser\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "metadata",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $metadata\r\n *\/"
+            },
+            {
+                "name": "setSignatureAlgorithm",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "algorithm",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "privatekey",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $algorithm\r\n * @param $privatekey [optional]\r\n *\/"
+            },
+            {
+                "name": "setStub",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "stub",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "len",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * dummy function (Phar::setStub is not valid for PharData)\r\n * @link http:\/\/php.net\/manual\/en\/phardata.setstub.php\r\n * @param string $stub <p>\r\n * A string or an open stream handle to use as the executable stub for this\r\n * phar archive. This parameter is ignored.\r\n * <\/p>\r\n * @param int $len [optional] <p>\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "startBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "stopBuffering",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "apiVersion",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "canCompress",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "method",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $method [optional]\r\n *\/"
+            },
+            {
+                "name": "canWrite",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "createDefaultStub",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "webindex",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $index [optional]\r\n * @param $webindex [optional]\r\n *\/"
+            },
+            {
+                "name": "getSupportedCompression",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getSupportedSignatures",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "interceptFileFuncs",
+                "type": 41,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "isValidPharFilename",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "executable",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $filename\r\n * @param $executable [optional]\r\n *\/"
+            },
+            {
+                "name": "loadPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $filename\r\n * @param $alias [optional]\r\n *\/"
+            },
+            {
+                "name": "mapPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "offset",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $alias [optional]\r\n * @param $offset [optional]\r\n *\/"
+            },
+            {
+                "name": "running",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "retphar",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $retphar\r\n *\/"
+            },
+            {
+                "name": "mount",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "inphar",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "externalfile",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $inphar\r\n * @param $externalfile\r\n *\/"
+            },
+            {
+                "name": "mungServer",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "munglist",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $munglist\r\n *\/"
+            },
+            {
+                "name": "unlinkArchive",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "archive",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $archive\r\n *\/"
+            },
+            {
+                "name": "webPhar",
+                "type": 41,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "alias",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "f404",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "mimetypes",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "rewrites",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $alias [optional]\r\n * @param $index [optional]\r\n * @param $f404 [optional]\r\n * @param $mimetypes [optional]\r\n * @param $rewrites [optional]\r\n *\/"
+            },
+            {
+                "name": "hasChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "allow_links",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns whether current entry is a directory and not '.' or '..'\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.haschildren.php\r\n * @param bool $allow_links [optional] <p>\r\n * <\/p>\r\n * @return bool whether the current entry is a directory, but not '.' or '..'\r\n *\/"
+            },
+            {
+                "name": "getChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns an iterator for the current entry if it is a directory\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getchildren.php\r\n * @return mixed The filename, file information, or $this depending on the set flags.\r\n * See the FilesystemIterator\r\n * constants.\r\n *\/"
+            },
+            {
+                "name": "getSubPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get sub path\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getsubpath.php\r\n * @return string The sub path (sub directory).\r\n *\/"
+            },
+            {
+                "name": "getSubPathname",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get sub path and name\r\n * @link http:\/\/php.net\/manual\/en\/recursivedirectoryiterator.getsubpathname.php\r\n * @return string The sub path (sub directory) and filename.\r\n *\/"
+            },
+            {
+                "name": "rewind",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Rewinds back to the beginning\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.rewind.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "next",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Move to the next file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.next.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "key",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Retrieve the key for the current file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.key.php\r\n * @return string the pathname or filename depending on the set flags.\r\n * See the FilesystemIterator constants.\r\n *\/"
+            },
+            {
+                "name": "current",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * The current file\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.current.php\r\n * @return mixed The filename, file information, or $this depending on the set flags.\r\n * See the FilesystemIterator constants.\r\n *\/"
+            },
+            {
+                "name": "getFlags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Get the handling flags\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.getflags.php\r\n * @return int The integer value of the set flags.\r\n *\/"
+            },
+            {
+                "name": "setFlags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "flags",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Sets handling flags\r\n * @link http:\/\/php.net\/manual\/en\/filesystemiterator.setflags.php\r\n * @param int $flags [optional] <p>\r\n * The handling flags to set.\r\n * See the FilesystemIterator constants.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "getFilename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Return file name of current DirectoryIterator item.\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getfilename.php\r\n * @return string the file name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.6)<br\/>\r\n * Gets the file extension\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getextension.php\r\n * @return string a string containing the file extension, or an\r\n * empty string if the file has no extension.\r\n *\/"
+            },
+            {
+                "name": "getBasename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "suffix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Get base name of current DirectoryIterator item.\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.getbasename.php\r\n * @param string $suffix [optional] <p>\r\n * If the base name ends in <i>suffix<\/i>,\r\n * this will be cut.\r\n * <\/p>\r\n * @return string The base name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "isDot",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Determine if current DirectoryIterator item is '.' or '..'\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.isdot.php\r\n * @return bool <b>TRUE<\/b> if the entry is . or ..,\r\n * otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "valid",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Check whether current DirectoryIterator position is a valid file\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.valid.php\r\n * @return bool <b>TRUE<\/b> if the position is valid, otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "seek",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Seek to a DirectoryIterator item\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.seek.php\r\n * @param int $position <p>\r\n * The zero-based numeric position to seek to.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get file name as a string\r\n * @link http:\/\/php.net\/manual\/en\/directoryiterator.tostring.php\r\n * @return string the file name of the current <b>DirectoryIterator<\/b> item.\r\n *\/"
+            },
+            {
+                "name": "getPathname",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the path to the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathname.php\r\n * @return string The path to the file.\r\n *\/"
+            },
+            {
+                "name": "getPerms",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file permissions\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getperms.php\r\n * @return int the file permissions.\r\n *\/"
+            },
+            {
+                "name": "getInode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getinode.php\r\n * @return int the inode number for the filesystem object.\r\n *\/"
+            },
+            {
+                "name": "getSize",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file size\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getsize.php\r\n * @return int The filesize in bytes.\r\n *\/"
+            },
+            {
+                "name": "getOwner",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the owner of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getowner.php\r\n * @return int The owner id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getGroup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the file group\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getgroup.php\r\n * @return int The group id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getATime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets last access time of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getatime.php\r\n * @return int the time the file was last accessed.\r\n *\/"
+            },
+            {
+                "name": "getMTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the last modified time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getmtime.php\r\n * @return int the last modified time for the file, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getCTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode change time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getctime.php\r\n * @return int The last change time, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file type\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.gettype.php\r\n * @return string A string representing the type of the entry.\r\n * May be one of file, link,\r\n * or dir\r\n *\/"
+            },
+            {
+                "name": "isReadable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if file is readable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isreadable.php\r\n * @return bool <b>TRUE<\/b> if readable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isExecutable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is executable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isexecutable.php\r\n * @return bool <b>TRUE<\/b> if executable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the object references a regular file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isfile.php\r\n * @return bool <b>TRUE<\/b> if the file exists and is a regular file (not a link), <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a directory\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isdir.php\r\n * @return bool <b>TRUE<\/b> if a directory, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isLink",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.islink.php\r\n * @return bool <b>TRUE<\/b> if the file is a link, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getLinkTarget",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets the target of a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getlinktarget.php\r\n * @return string the target of the filesystem link.\r\n *\/"
+            },
+            {
+                "name": "getRealPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets absolute path to file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getrealpath.php\r\n * @return string the path to the file.\r\n *\/"
+            },
+            {
+                "name": "getFileInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getfileinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo An <b>SplFileInfo<\/b> object created for the file.\r\n *\/"
+            },
+            {
+                "name": "getPathInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the path\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo an <b>SplFileInfo<\/b> object for the parent path of the file.\r\n *\/"
+            },
+            {
+                "name": "openFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "open_mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": "r"
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileObject object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.openfile.php\r\n * @param string $open_mode [optional] <p>\r\n * The mode for opening the file. See the <b>fopen<\/b>\r\n * documentation for descriptions of possible modes. The default\r\n * is read only.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * When set to <b>TRUE<\/b>, the filename is also\r\n * searched for within the include_path\r\n * <\/p>\r\n * @param resource $context [optional] <p>\r\n * Refer to the context\r\n * section of the manual for a description of contexts.\r\n * <\/p>\r\n * @return SplFileObject The opened file as an <b>SplFileObject<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "setFileClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class name used with <b>SplFileInfo::openFile<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setfileclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use when openFile() is called.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setInfoClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class used with getFileInfo and getPathInfo\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setinfoclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "_bad_state_ex",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "CURRENT_MODE_MASK",
+                "value": 240,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_PATHNAME",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_FILEINFO",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "CURRENT_AS_SELF",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "KEY_MODE_MASK",
+                "value": 3840,
+                "doc": null
+            },
+            {
+                "name": "KEY_AS_PATHNAME",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "FOLLOW_SYMLINKS",
+                "value": 512,
+                "doc": null
+            },
+            {
+                "name": "KEY_AS_FILENAME",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "NEW_CURRENT_AND_KEY",
+                "value": 256,
+                "doc": null
+            },
+            {
+                "name": "OTHER_MODE_MASK",
+                "value": 12288,
+                "doc": null
+            },
+            {
+                "name": "SKIP_DOTS",
+                "value": 4096,
+                "doc": null
+            },
+            {
+                "name": "UNIX_PATHS",
+                "value": 8192,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "PharFileInfo",
+        "fqn": "\\PharFileInfo",
+        "type": 0,
+        "extends": "SplFileInfo",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "entry",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Construct a Phar entry object\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.construct.php\r\n * @param string $entry <p>\r\n * The full url to retrieve a file. If you wish to retrieve the information\r\n * for the file my\/file.php from the phar boo.phar,\r\n * the entry should be phar:\/\/boo.phar\/my\/file.php.\r\n * <\/p>\r\n *\/"
+            },
+            {
+                "name": "__destruct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "chmod",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "permissions",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Sets file-specific permission bits\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.chmod.php\r\n * @param int $permissions <p>\r\n * permissions (see <b>chmod<\/b>)\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "compress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Compresses the current Phar entry with either zlib or bzip2 compression\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.compress.php\r\n * @param int $compression\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "decompress",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 2.0.0)<br\/>\r\n * Decompresses the current Phar entry within the phar\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.decompress.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "delMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Deletes the metadata of the entry\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.delmetadata.php\r\n * @return bool <b>TRUE<\/b> if successful, <b>FALSE<\/b> if the entry had no metadata.\r\n * As with all functionality that modifies the contents of\r\n * a phar, the phar.readonly INI variable\r\n * must be off in order to succeed if the file is within a <b>Phar<\/b>\r\n * archive. Files within <b>PharData<\/b> archives do not have\r\n * this restriction.\r\n *\/"
+            },
+            {
+                "name": "getCompressedSize",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns the actual size of the file (with compression) inside the Phar archive\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.getcompressedsize.php\r\n * @return int The size in bytes of the file within the Phar archive on disk.\r\n *\/"
+            },
+            {
+                "name": "getCRC32",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns CRC32 code or throws an exception if CRC has not been verified\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.getcrc32.php\r\n * @return int The <b>crc32<\/b> checksum of the file within the Phar archive.\r\n *\/"
+            },
+            {
+                "name": "getContent",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "getMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns file-specific meta-data saved with a file\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.getmetadata.php\r\n * @return mixed any PHP variable that can be serialized and is stored as meta-data for the file,\r\n * or <b>NULL<\/b> if no meta-data is stored.\r\n *\/"
+            },
+            {
+                "name": "getPharFlags",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns the Phar file entry flags\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.getpharflags.php\r\n * @return int The Phar flags (always 0 in the current implementation)\r\n *\/"
+            },
+            {
+                "name": "hasMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.2.0)<br\/>\r\n * Returns the metadata of the entry\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.hasmetadata.php\r\n * @return bool <b>FALSE<\/b> if no metadata is set or is <b>NULL<\/b>, <b>TRUE<\/b> if metadata is not <b>NULL<\/b>\r\n *\/"
+            },
+            {
+                "name": "isCompressed",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "compression_type",
+                        "type": null,
+                        "byRef": false,
+                        "default": 9021976
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns whether the entry is compressed\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.iscompressed.php\r\n * @param int $compression_type [optional] <p>\r\n * One of <b>Phar::GZ<\/b> or <b>Phar::BZ2<\/b>,\r\n * defaults to any compression.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the file is compressed within the Phar archive, <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "isCRCChecked",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Returns whether file entry has had its CRC verified\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.iscrcchecked.php\r\n * @return bool <b>TRUE<\/b> if the file has had its CRC verified, <b>FALSE<\/b> if not.\r\n *\/"
+            },
+            {
+                "name": "setMetadata",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "metadata",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL phar &gt;= 1.0.0)<br\/>\r\n * Sets file-specific meta-data saved with a file\r\n * @link http:\/\/php.net\/manual\/en\/pharfileinfo.setmetadata.php\r\n * @param mixed $metadata <p>\r\n * Any PHP variable containing information to store alongside a file\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "getPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the path without filename\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpath.php\r\n * @return string the path to the file.\r\n *\/"
+            },
+            {
+                "name": "getFilename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the filename\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getfilename.php\r\n * @return string The filename.\r\n *\/"
+            },
+            {
+                "name": "getExtension",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.6)<br\/>\r\n * Gets the file extension\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getextension.php\r\n * @return string a string containing the file extension, or an\r\n * empty string if the file has no extension.\r\n *\/"
+            },
+            {
+                "name": "getBasename",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "suffix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets the base name of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getbasename.php\r\n * @param string $suffix [optional] <p>\r\n * Optional suffix to omit from the base name returned.\r\n * <\/p>\r\n * @return string the base name without path information.\r\n *\/"
+            },
+            {
+                "name": "getPathname",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the path to the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathname.php\r\n * @return string The path to the file.\r\n *\/"
+            },
+            {
+                "name": "getPerms",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file permissions\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getperms.php\r\n * @return int the file permissions.\r\n *\/"
+            },
+            {
+                "name": "getInode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getinode.php\r\n * @return int the inode number for the filesystem object.\r\n *\/"
+            },
+            {
+                "name": "getSize",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file size\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getsize.php\r\n * @return int The filesize in bytes.\r\n *\/"
+            },
+            {
+                "name": "getOwner",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the owner of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getowner.php\r\n * @return int The owner id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getGroup",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the file group\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getgroup.php\r\n * @return int The group id in numerical format.\r\n *\/"
+            },
+            {
+                "name": "getATime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets last access time of the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getatime.php\r\n * @return int the time the file was last accessed.\r\n *\/"
+            },
+            {
+                "name": "getMTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the last modified time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getmtime.php\r\n * @return int the last modified time for the file, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getCTime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets the inode change time\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getctime.php\r\n * @return int The last change time, in a Unix timestamp.\r\n *\/"
+            },
+            {
+                "name": "getType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets file type\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.gettype.php\r\n * @return string A string representing the type of the entry.\r\n * May be one of file, link,\r\n * or dir\r\n *\/"
+            },
+            {
+                "name": "isWritable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the entry is writable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.iswritable.php\r\n * @return bool <b>TRUE<\/b> if writable, <b>FALSE<\/b> otherwise;\r\n *\/"
+            },
+            {
+                "name": "isReadable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if file is readable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isreadable.php\r\n * @return bool <b>TRUE<\/b> if readable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isExecutable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is executable\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isexecutable.php\r\n * @return bool <b>TRUE<\/b> if executable, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the object references a regular file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isfile.php\r\n * @return bool <b>TRUE<\/b> if the file exists and is a regular file (not a link), <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isDir",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a directory\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.isdir.php\r\n * @return bool <b>TRUE<\/b> if a directory, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isLink",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Tells if the file is a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.islink.php\r\n * @return bool <b>TRUE<\/b> if the file is a link, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getLinkTarget",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets the target of a link\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getlinktarget.php\r\n * @return string the target of the filesystem link.\r\n *\/"
+            },
+            {
+                "name": "getRealPath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Gets absolute path to file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getrealpath.php\r\n * @return string the path to the file.\r\n *\/"
+            },
+            {
+                "name": "getFileInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getfileinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo An <b>SplFileInfo<\/b> object created for the file.\r\n *\/"
+            },
+            {
+                "name": "getPathInfo",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileInfo object for the path\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.getpathinfo.php\r\n * @param string $class_name [optional] <p>\r\n * Name of an <b>SplFileInfo<\/b> derived class to use.\r\n * <\/p>\r\n * @return SplFileInfo an <b>SplFileInfo<\/b> object for the parent path of the file.\r\n *\/"
+            },
+            {
+                "name": "openFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "open_mode",
+                        "type": null,
+                        "byRef": false,
+                        "default": "r"
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "context",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Gets an SplFileObject object for the file\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.openfile.php\r\n * @param string $open_mode [optional] <p>\r\n * The mode for opening the file. See the <b>fopen<\/b>\r\n * documentation for descriptions of possible modes. The default\r\n * is read only.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * When set to <b>TRUE<\/b>, the filename is also\r\n * searched for within the include_path\r\n * <\/p>\r\n * @param resource $context [optional] <p>\r\n * Refer to the context\r\n * section of the manual for a description of contexts.\r\n * <\/p>\r\n * @return SplFileObject The opened file as an <b>SplFileObject<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "setFileClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class name used with <b>SplFileInfo::openFile<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setfileclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use when openFile() is called.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "setInfoClass",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "class_name",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets the class used with getFileInfo and getPathInfo\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.setinfoclass.php\r\n * @param string $class_name [optional] <p>\r\n * The class name to use.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "_bad_state_ex",
+                "type": 33,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Returns the path to the file as a string\r\n * @link http:\/\/php.net\/manual\/en\/splfileinfo.tostring.php\r\n * @return void the path to the file.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    }
+]

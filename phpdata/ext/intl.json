@@ -1,0 +1,4881 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "Collator",
+        "fqn": "\\Collator",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "arg1",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Create a collator\r\n * @link http:\/\/php.net\/collator.construct.php\r\n * @param $arg1\r\n *\/"
+            },
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Create a collator\r\n * @link http:\/\/php.net\/collator.create.php\r\n * @param string $locale <p>\r\n * The locale containing the required collation rules. Special values for\r\n * locales can be passed in - if null is passed for the locale, the\r\n * default locale collation rules will be used. If empty string (\"\") or\r\n * \"root\" are passed, UCA rules will be used.\r\n * <\/p>\r\n * @return Collator Return new instance of <b>Collator<\/b> object, or <b>NULL<\/b>\r\n * on error.\r\n *\/"
+            },
+            {
+                "name": "compare",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "str1",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "str2",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Compare two Unicode strings\r\n * @link http:\/\/php.net\/collator.compare.php\r\n * @param string $str1 <p>\r\n * The first string to compare.\r\n * <\/p>\r\n * @param string $str2 <p>\r\n * The second string to compare.\r\n * <\/p>\r\n * @return int Return comparison result:<\/p>\r\n * <p>\r\n * <p>\r\n * 1 if <i>str1<\/i> is greater than\r\n * <i>str2<\/i> ;\r\n * <\/p>\r\n * <p>\r\n * 0 if <i>str1<\/i> is equal to\r\n * <i>str2<\/i>;\r\n * <\/p>\r\n * <p>\r\n * -1 if <i>str1<\/i> is less than\r\n * <i>str2<\/i> .\r\n * <\/p>\r\n * On error\r\n * boolean\r\n * <b>FALSE<\/b>\r\n * is returned.\r\n *\/"
+            },
+            {
+                "name": "sort",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "arr",
+                        "type": "array",
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "sort_flag",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Sort array using specified collator\r\n * @link http:\/\/php.net\/collator.sort.php\r\n * @param array $arr <p>\r\n * Array of strings to sort.\r\n * <\/p>\r\n * @param int $sort_flag [optional] <p>\r\n * Optional sorting type, one of the following:\r\n * <\/p>\r\n * <p>\r\n * <p>\r\n * <b>Collator::SORT_REGULAR<\/b>\r\n * - compare items normally (don't change types)\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "sortWithSortKeys",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "arr",
+                        "type": "array",
+                        "byRef": true,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Sort array using specified collator and sort keys\r\n * @link http:\/\/php.net\/collator.sortwithsortkeys.php\r\n * @param array $arr <p>Array of strings to sort<\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "asort",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "arr",
+                        "type": "array",
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "sort_flag",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Sort array maintaining index association\r\n * @link http:\/\/php.net\/collator.asort.php\r\n * @param array $arr <p>Array of strings to sort.<\/p>\r\n * @param int $sort_flag [optional] <p>\r\n * Optional sorting type, one of the following:\r\n * <p>\r\n * <b>Collator::SORT_REGULAR<\/b>\r\n * - compare items normally (don't change types)\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get collation attribute value\r\n * @link http:\/\/php.net\/collator.getattribute.php\r\n * @param int $attr <p>\r\n * Attribute to get value for.\r\n * <\/p>\r\n * @return int Attribute value, or boolean <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "val",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set collation attribute\r\n * @link http:\/\/php.net\/collator.setattribute.php\r\n * @param int $attr <p>Attribute.<\/p>\r\n * @param int $val <p>\r\n * Attribute value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getStrength",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get current collation strength\r\n * @link http:\/\/php.net\/collator.getstrength.php\r\n * @return int current collation strength, or boolean <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setStrength",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "strength",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set collation strength\r\n * @link http:\/\/php.net\/collator.setstrength.php\r\n * @param int $strength <p>Strength to set.<\/p>\r\n * <p>\r\n * Possible values are:\r\n * <p>\r\n * <b>Collator::PRIMARY<\/b>\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getLocale",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the locale name of the collator\r\n * @link http:\/\/php.net\/collator.getlocale.php\r\n * @param int $type [optional] <p>\r\n * You can choose between valid and actual locale (\r\n * <b>Locale::VALID_LOCALE<\/b> and\r\n * <b>Locale::ACTUAL_LOCALE<\/b>,\r\n * respectively). The default is the actual locale.\r\n * <\/p>\r\n * @return string Real locale name from which the collation data comes. If the collator was\r\n * instantiated from rules or an error occurred, returns\r\n * boolean <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get collator's last error code\r\n * @link http:\/\/php.net\/collator.geterrorcode.php\r\n * @return int Error code returned by the last Collator API function call.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get text for collator's last error code\r\n * @link http:\/\/php.net\/collator.geterrormessage.php\r\n * @return string Description of an error occurred in the last Collator API function call.\r\n *\/"
+            },
+            {
+                "name": "getSortKey",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "str",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.11, PECL intl &gt;= 1.0.3)<br\/>\r\n * Get sorting key for a string\r\n * @link http:\/\/php.net\/collator.getsortkey.php\r\n * @param string $str <p>\r\n * The string to produce the key from.\r\n * <\/p>\r\n * @return string the collation key for the string. Collation keys can be compared directly instead of strings.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "DEFAULT_VALUE",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "PRIMARY",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SECONDARY",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "TERTIARY",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "DEFAULT_STRENGTH",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "QUATERNARY",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "IDENTICAL",
+                "value": 15,
+                "doc": null
+            },
+            {
+                "name": "OFF",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "ON",
+                "value": 17,
+                "doc": null
+            },
+            {
+                "name": "SHIFTED",
+                "value": 20,
+                "doc": null
+            },
+            {
+                "name": "NON_IGNORABLE",
+                "value": 21,
+                "doc": null
+            },
+            {
+                "name": "LOWER_FIRST",
+                "value": 24,
+                "doc": null
+            },
+            {
+                "name": "UPPER_FIRST",
+                "value": 25,
+                "doc": null
+            },
+            {
+                "name": "FRENCH_COLLATION",
+                "value": 0,
+                "doc": "\/**\r\n * <p>\r\n * Sort strings with different accents from the back of the string. This\r\n * attribute is automatically set to\r\n * On\r\n * for the French locales and a few others. Users normally would not need\r\n * to explicitly set this attribute. There is a string comparison\r\n * performance cost when it is set On,\r\n * but sort key length is unaffected. Possible values are:\r\n * <b>Collator::ON<\/b>\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * <p>\r\n * FRENCH_COLLATION rules\r\n * <p>\r\n * F=OFF cote &lt; cot\u00e9 &lt; c\u00f4te &lt; c\u00f4t\u00e9\r\n * F=ON cote &lt; c\u00f4te &lt; cot\u00e9 &lt; c\u00f4t\u00e9\r\n * <\/p>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "ALTERNATE_HANDLING",
+                "value": 1,
+                "doc": "\/**\r\n * <p>\r\n * The Alternate attribute is used to control the handling of the so called\r\n * variable characters in the UCA: whitespace, punctuation and symbols. If\r\n * Alternate is set to NonIgnorable\r\n * (N), then differences among these characters are of the same importance\r\n * as differences among letters. If Alternate is set to\r\n * Shifted\r\n * (S), then these characters are of only minor importance. The\r\n * Shifted value is often used in combination with\r\n * Strength\r\n * set to Quaternary. In such a case, whitespace, punctuation, and symbols\r\n * are considered when comparing strings, but only if all other aspects of\r\n * the strings (base letters, accents, and case) are identical. If\r\n * Alternate is not set to Shifted, then there is no difference between a\r\n * Strength of 3 and a Strength of 4. For more information and examples,\r\n * see Variable_Weighting in the\r\n * UCA.\r\n * The reason the Alternate values are not simply\r\n * On and Off\r\n * is that additional Alternate values may be added in the future. The UCA\r\n * option Blanked is expressed with Strength set to 3, and Alternate set to\r\n * Shifted. The default for most locales is NonIgnorable. If Shifted is\r\n * selected, it may be slower if there are many strings that are the same\r\n * except for punctuation; sort key length will not be affected unless the\r\n * strength level is also increased.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::NON_IGNORABLE<\/b)<default)\r\n * <b>Collator::SHIFTED<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * <p>\r\n * ALTERNATE_HANDLING rules\r\n * <p>\r\n * S=3, A=N di Silva &lt; Di Silva &lt; diSilva &lt; U.S.A. &lt; USA\r\n * S=3, A=S di Silva = diSilva &lt; Di Silva &lt; U.S.A. = USA\r\n * S=4, A=S di Silva &lt; diSilva &lt; Di Silva &lt; U.S.A. &lt; USA\r\n * <\/p>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "CASE_FIRST",
+                "value": 2,
+                "doc": "\/**\r\n * <p>\r\n * The Case_First attribute is used to control whether uppercase letters\r\n * come before lowercase letters or vice versa, in the absence of other\r\n * differences in the strings. The possible values are\r\n * Uppercase_First\r\n * (U) and Lowercase_First\r\n * (L), plus the standard Default\r\n * and Off.\r\n * There is almost no difference between the Off and Lowercase_First\r\n * options in terms of results, so typically users will not use\r\n * Lowercase_First: only Off or Uppercase_First. (People interested in the\r\n * detailed differences between X and L should consult the Collation\r\n * Customization). Specifying either L or U won't affect string comparison\r\n * performance, but will affect the sort key length.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::LOWER_FIRST<\/b>\r\n * <b>Collator::UPPER_FIRST<\/b>\r\n * <b>Collator:DEFAULT<\/b>\r\n * <\/p>\r\n * <p>\r\n * CASE_FIRST rules\r\n * <p>\r\n * C=X or C=L \"china\" &lt; \"China\" &lt; \"denmark\" &lt; \"Denmark\"\r\n * C=U \"China\" &lt; \"china\" &lt; \"Denmark\" &lt; \"denmark\"\r\n * <\/p>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "CASE_LEVEL",
+                "value": 3,
+                "doc": "\/**\r\n * <p>\r\n * The Case_Level attribute is used when ignoring accents but not case. In\r\n * such a situation, set Strength to be Primary,\r\n * and Case_Level to be On.\r\n * In most locales, this setting is Off by default. There is a small\r\n * string comparison performance and sort key impact if this attribute is\r\n * set to be On.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::ON<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * <p>\r\n * CASE_LEVEL rules\r\n * <p>\r\n * S=1, E=X role = Role = r\u00f4le\r\n * S=1, E=O role = r\u00f4le &lt; Role\r\n * <\/p>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "NORMALIZATION_MODE",
+                "value": 4,
+                "doc": "\/**\r\n * <p>\r\n * The Normalization setting determines whether text is thoroughly\r\n * normalized or not in comparison. Even if the setting is off (which is\r\n * the default for many locales), text as represented in common usage will\r\n * compare correctly (for details, see UTN #5). Only if the accent marks\r\n * are in noncanonical order will there be a problem. If the setting is\r\n * On,\r\n * then the best results are guaranteed for all possible text input.\r\n * There is a medium string comparison performance cost if this attribute\r\n * is On,\r\n * depending on the frequency of sequences that require normalization.\r\n * There is no significant effect on sort key length. If the input text is\r\n * known to be in NFD or NFKD normalization forms, there is no need to\r\n * enable this Normalization option.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::ON<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "STRENGTH",
+                "value": 5,
+                "doc": "\/**\r\n * <p>\r\n * The ICU Collation Service supports many levels of comparison (named\r\n * \"Levels\", but also known as \"Strengths\"). Having these categories\r\n * enables ICU to sort strings precisely according to local conventions.\r\n * However, by allowing the levels to be selectively employed, searching\r\n * for a string in text can be performed with various matching conditions.\r\n * For more detailed information, see\r\n * <b>collator_set_strength<\/b> chapter.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::PRIMARY<\/b>\r\n * <b>Collator::SECONDARY<\/b>\r\n * <b>Collator::TERTIARY<\/b)<default)\r\n * <b>Collator::QUATERNARY<\/b>\r\n * <b>Collator::IDENTICAL<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "HIRAGANA_QUATERNARY_MODE",
+                "value": 6,
+                "doc": "\/**\r\n * <p>\r\n * Compatibility with JIS x 4061 requires the introduction of an additional\r\n * level to distinguish Hiragana and Katakana characters. If compatibility\r\n * with that standard is required, then this attribute should be set\r\n * On,\r\n * and the strength set to Quaternary. This will affect sort key length\r\n * and string comparison string comparison performance.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::ON<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "NUMERIC_COLLATION",
+                "value": 7,
+                "doc": "\/**\r\n * <p>\r\n * When turned on, this attribute generates a collation key for the numeric\r\n * value of substrings of digits. This is a way to get '100' to sort AFTER\r\n * '2'.\r\n * <\/p>\r\n * <p>\r\n * Possible values are:\r\n * <b>Collator::OFF<\/b)<default)\r\n * <b>Collator::ON<\/b>\r\n * <b>Collator::DEFAULT_VALUE<\/b>\r\n * <\/p>\r\n * @link http:\/\/php.net\/intl.collator-constants.php\r\n *\/"
+            },
+            {
+                "name": "SORT_REGULAR",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "SORT_STRING",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "SORT_NUMERIC",
+                "value": 2,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "NumberFormatter",
+        "fqn": "\\NumberFormatter",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "style",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * Create a number formatter.\r\n *\r\n * @param string $locale\r\n *   Locale in which the number would be formatted (locale name, e.g. <code>\"en_CA\"<\/code>).\r\n * @param integer $style\r\n *   Style of the formatting, one of the format style constants. If {@see \\NumberFormatter::PATTERN_DECIMAL} or\r\n *   {@see \\NumberFormatter::PATTERN_RULEBASED} is passed then the number format is opened using the given\r\n *   <var>$pattern<\/var>, which must conform to the syntax described in {@link http:\/\/www.icu-project.org\/apiref\/icu4c\/classDecimalFormat.html#details\r\n *   ICU DecimalFormat documentation} or {@link http:\/\/www.icu-project.org\/apiref\/icu4c\/classRuleBasedNumberFormat.html#details\r\n *   ICU RuleBasedNumberFormat documentation}, respectively.\r\n * @param string $pattern [optional]\r\n *   Pattern string if the chosen <var>$style<\/var> requires a pattern.\r\n * @since 5.3.0\r\n *\/"
+            },
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "style",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Create a number formatter\r\n * @link http:\/\/php.net\/numberformatter.create.php\r\n * @param string $locale <p>\r\n * Locale in which the number would be formatted (locale name, e.g. en_CA).\r\n * <\/p>\r\n * @param int $style <p>\r\n * Style of the formatting, one of the\r\n * format style constants. If\r\n * <b>NumberFormatter::PATTERN_DECIMAL<\/b>\r\n * or <b>NumberFormatter::PATTERN_RULEBASED<\/b>\r\n * is passed then the number format is opened using the given pattern,\r\n * which must conform to the syntax described in\r\n * ICU DecimalFormat\r\n * documentation or\r\n * ICU RuleBasedNumberFormat\r\n * documentation, respectively.\r\n * <\/p>\r\n * @param string $pattern [optional] <p>\r\n * Pattern string if the chosen style requires a pattern.\r\n * <\/p>\r\n * @return NumberFormatter <b>NumberFormatter<\/b> object or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Format a number\r\n * @link http:\/\/php.net\/numberformatter.format.php\r\n * @param number $value <p>\r\n * The value to format. Can be integer or float,\r\n * other values will be converted to a numeric value.\r\n * <\/p>\r\n * @param int $type [optional] <p>\r\n * The\r\n * formatting type to use.\r\n * <\/p>\r\n * @return string the string containing formatted value, or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "parse",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Parse a number\r\n * @link http:\/\/php.net\/numberformatter.parse.php\r\n * @param string $value\r\n * @param int $type [optional] <p>\r\n * The\r\n * formatting type to use. By default,\r\n * <b>NumberFormatter::TYPE_DOUBLE<\/b> is used.\r\n * <\/p>\r\n * @param int $position [optional] <p>\r\n * Offset in the string at which to begin parsing. On return, this value\r\n * will hold the offset at which parsing ended.\r\n * <\/p>\r\n * @return mixed The value of the parsed number or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "formatCurrency",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "currency",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Format a currency value\r\n * @link http:\/\/php.net\/numberformatter.formatcurrency.php\r\n * @param float $value <p>\r\n * The numeric currency value.\r\n * <\/p>\r\n * @param string $currency <p>\r\n * The 3-letter ISO 4217 currency code indicating the currency to use.\r\n * <\/p>\r\n * @return string String representing the formatted currency value.\r\n *\/"
+            },
+            {
+                "name": "parseCurrency",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "currency",
+                        "type": null,
+                        "byRef": true,
+                        "default": ""
+                    },
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Parse a currency number\r\n * @link http:\/\/php.net\/numberformatter.parsecurrency.php\r\n * @param string $value\r\n * @param string $currency <p>\r\n * Parameter to receive the currency name (3-letter ISO 4217 currency\r\n * code).\r\n * <\/p>\r\n * @param int $position [optional] <p>\r\n * Offset in the string at which to begin parsing. On return, this value\r\n * will hold the offset at which parsing ended.\r\n * <\/p>\r\n * @return float The parsed numeric value or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set an attribute\r\n * @link http:\/\/php.net\/numberformatter.setattribute.php\r\n * @param int $attr <p>\r\n * Attribute specifier - one of the\r\n * numeric attribute constants.\r\n * <\/p>\r\n * @param int $value <p>\r\n * The attribute value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get an attribute\r\n * @link http:\/\/php.net\/numberformatter.getattribute.php\r\n * @param int $attr <p>\r\n * Attribute specifier - one of the\r\n * numeric attribute constants.\r\n * <\/p>\r\n * @return int Return attribute value on success, or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setTextAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set a text attribute\r\n * @link http:\/\/php.net\/numberformatter.settextattribute.php\r\n * @param int $attr <p>\r\n * Attribute specifier - one of the\r\n * text attribute\r\n * constants.\r\n * <\/p>\r\n * @param string $value <p>\r\n * Text for the attribute value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getTextAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get a text attribute\r\n * @link http:\/\/php.net\/numberformatter.gettextattribute.php\r\n * @param int $attr <p>\r\n * Attribute specifier - one of the\r\n * text attribute constants.\r\n * <\/p>\r\n * @return string Return attribute value on success, or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setSymbol",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set a symbol value\r\n * @link http:\/\/php.net\/numberformatter.setsymbol.php\r\n * @param int $attr <p>\r\n * Symbol specifier, one of the\r\n * format symbol constants.\r\n * <\/p>\r\n * @param string $value <p>\r\n * Text for the symbol.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getSymbol",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "attr",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get a symbol value\r\n * @link http:\/\/php.net\/numberformatter.getsymbol.php\r\n * @param int $attr <p>\r\n * Symbol specifier, one of the\r\n * format symbol constants.\r\n * <\/p>\r\n * @return string The symbol string or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "setPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set formatter pattern\r\n * @link http:\/\/php.net\/numberformatter.setpattern.php\r\n * @param string $pattern <p>\r\n * Pattern in syntax described in\r\n * ICU DecimalFormat\r\n * documentation.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get formatter pattern\r\n * @link http:\/\/php.net\/numberformatter.getpattern.php\r\n * @return string Pattern string that is used by the formatter, or <b>FALSE<\/b> if an error happens.\r\n *\/"
+            },
+            {
+                "name": "getLocale",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "type",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get formatter locale\r\n * @link http:\/\/php.net\/numberformatter.getlocale.php\r\n * @param int $type [optional] <p>\r\n * You can choose between valid and actual locale (\r\n * <b>Locale::VALID_LOCALE<\/b>,\r\n * <b>Locale::ACTUAL_LOCALE<\/b>,\r\n * respectively). The default is the actual locale.\r\n * <\/p>\r\n * @return string The locale name used to create the formatter.\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get formatter's last error code.\r\n * @link http:\/\/php.net\/numberformatter.geterrorcode.php\r\n * @return int error code from last formatter call.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get formatter's last error message.\r\n * @link http:\/\/php.net\/numberformatter.geterrormessage.php\r\n * @return string error message from last formatter call.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "PATTERN_DECIMAL",
+                "value": 0,
+                "doc": "\/**\r\n * Decimal format defined by pattern\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DECIMAL",
+                "value": 1,
+                "doc": "\/**\r\n * Decimal format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "CURRENCY",
+                "value": 2,
+                "doc": "\/**\r\n * Currency format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PERCENT",
+                "value": 3,
+                "doc": "\/**\r\n * Percent format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SCIENTIFIC",
+                "value": 4,
+                "doc": "\/**\r\n * Scientific format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SPELLOUT",
+                "value": 5,
+                "doc": "\/**\r\n * Spellout rule-based format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ORDINAL",
+                "value": 6,
+                "doc": "\/**\r\n * Ordinal rule-based format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DURATION",
+                "value": 7,
+                "doc": "\/**\r\n * Duration rule-based format\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PATTERN_RULEBASED",
+                "value": 9,
+                "doc": "\/**\r\n * Rule-based format defined by pattern\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "IGNORE",
+                "value": 0,
+                "doc": "\/**\r\n * Alias for PATTERN_DECIMAL\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DEFAULT_STYLE",
+                "value": 1,
+                "doc": "\/**\r\n * Default format for the locale\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_CEILING",
+                "value": 0,
+                "doc": "\/**\r\n * Rounding mode to round towards positive infinity.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_FLOOR",
+                "value": 1,
+                "doc": "\/**\r\n * Rounding mode to round towards negative infinity.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_DOWN",
+                "value": 2,
+                "doc": "\/**\r\n * Rounding mode to round towards zero.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_UP",
+                "value": 3,
+                "doc": "\/**\r\n * Rounding mode to round away from zero.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_HALFEVEN",
+                "value": 4,
+                "doc": "\/**\r\n * Rounding mode to round towards the \"nearest neighbor\" unless both\r\n * neighbors are equidistant, in which case, round towards the even\r\n * neighbor.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_HALFDOWN",
+                "value": 5,
+                "doc": "\/**\r\n * Rounding mode to round towards \"nearest neighbor\" unless both neighbors\r\n * are equidistant, in which case round down.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUND_HALFUP",
+                "value": 6,
+                "doc": "\/**\r\n * Rounding mode to round towards \"nearest neighbor\" unless both neighbors\r\n * are equidistant, in which case round up.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PAD_BEFORE_PREFIX",
+                "value": 0,
+                "doc": "\/**\r\n * Pad characters inserted before the prefix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PAD_AFTER_PREFIX",
+                "value": 1,
+                "doc": "\/**\r\n * Pad characters inserted after the prefix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PAD_BEFORE_SUFFIX",
+                "value": 2,
+                "doc": "\/**\r\n * Pad characters inserted before the suffix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PAD_AFTER_SUFFIX",
+                "value": 3,
+                "doc": "\/**\r\n * Pad characters inserted after the suffix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PARSE_INT_ONLY",
+                "value": 0,
+                "doc": "\/**\r\n * Parse integers only.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "GROUPING_USED",
+                "value": 1,
+                "doc": "\/**\r\n * Use grouping separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DECIMAL_ALWAYS_SHOWN",
+                "value": 2,
+                "doc": "\/**\r\n * Always show decimal point.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MAX_INTEGER_DIGITS",
+                "value": 3,
+                "doc": "\/**\r\n * Maximum integer digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MIN_INTEGER_DIGITS",
+                "value": 4,
+                "doc": "\/**\r\n * Minimum integer digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "INTEGER_DIGITS",
+                "value": 5,
+                "doc": "\/**\r\n * Integer digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MAX_FRACTION_DIGITS",
+                "value": 6,
+                "doc": "\/**\r\n * Maximum fraction digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MIN_FRACTION_DIGITS",
+                "value": 7,
+                "doc": "\/**\r\n * Minimum fraction digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "FRACTION_DIGITS",
+                "value": 8,
+                "doc": "\/**\r\n * Fraction digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MULTIPLIER",
+                "value": 9,
+                "doc": "\/**\r\n * Multiplier.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "GROUPING_SIZE",
+                "value": 10,
+                "doc": "\/**\r\n * Grouping size.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUNDING_MODE",
+                "value": 11,
+                "doc": "\/**\r\n * Rounding Mode.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ROUNDING_INCREMENT",
+                "value": 12,
+                "doc": "\/**\r\n * Rounding increment.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "FORMAT_WIDTH",
+                "value": 13,
+                "doc": "\/**\r\n * The width to which the output of format() is padded.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PADDING_POSITION",
+                "value": 14,
+                "doc": "\/**\r\n * The position at which padding will take place. See pad position\r\n * constants for possible argument values.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SECONDARY_GROUPING_SIZE",
+                "value": 15,
+                "doc": "\/**\r\n * Secondary grouping size.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SIGNIFICANT_DIGITS_USED",
+                "value": 16,
+                "doc": "\/**\r\n * Use significant digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MIN_SIGNIFICANT_DIGITS",
+                "value": 17,
+                "doc": "\/**\r\n * Minimum significant digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MAX_SIGNIFICANT_DIGITS",
+                "value": 18,
+                "doc": "\/**\r\n * Maximum significant digits.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "LENIENT_PARSE",
+                "value": 19,
+                "doc": "\/**\r\n * Lenient parse mode used by rule-based formats.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "POSITIVE_PREFIX",
+                "value": 0,
+                "doc": "\/**\r\n * Positive prefix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "POSITIVE_SUFFIX",
+                "value": 1,
+                "doc": "\/**\r\n * Positive suffix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "NEGATIVE_PREFIX",
+                "value": 2,
+                "doc": "\/**\r\n * Negative prefix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "NEGATIVE_SUFFIX",
+                "value": 3,
+                "doc": "\/**\r\n * Negative suffix.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PADDING_CHARACTER",
+                "value": 4,
+                "doc": "\/**\r\n * The character used to pad to the format width.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "CURRENCY_CODE",
+                "value": 5,
+                "doc": "\/**\r\n * The ISO currency code.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DEFAULT_RULESET",
+                "value": 6,
+                "doc": "\/**\r\n * The default rule set. This is only available with rule-based\r\n * formatters.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PUBLIC_RULESETS",
+                "value": 7,
+                "doc": "\/**\r\n * The public rule sets. This is only available with rule-based\r\n * formatters. This is a read-only attribute. The public rulesets are\r\n * returned as a single string, with each ruleset name delimited by ';'\r\n * (semicolon).\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DECIMAL_SEPARATOR_SYMBOL",
+                "value": 0,
+                "doc": "\/**\r\n * The decimal separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "GROUPING_SEPARATOR_SYMBOL",
+                "value": 1,
+                "doc": "\/**\r\n * The grouping separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PATTERN_SEPARATOR_SYMBOL",
+                "value": 2,
+                "doc": "\/**\r\n * The pattern separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PERCENT_SYMBOL",
+                "value": 3,
+                "doc": "\/**\r\n * The percent sign.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "ZERO_DIGIT_SYMBOL",
+                "value": 4,
+                "doc": "\/**\r\n * Zero.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "DIGIT_SYMBOL",
+                "value": 5,
+                "doc": "\/**\r\n * Character representing a digit in the pattern.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MINUS_SIGN_SYMBOL",
+                "value": 6,
+                "doc": "\/**\r\n * The minus sign.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PLUS_SIGN_SYMBOL",
+                "value": 7,
+                "doc": "\/**\r\n * The plus sign.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "CURRENCY_SYMBOL",
+                "value": 8,
+                "doc": "\/**\r\n * The currency symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "INTL_CURRENCY_SYMBOL",
+                "value": 9,
+                "doc": "\/**\r\n * The international currency symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MONETARY_SEPARATOR_SYMBOL",
+                "value": 10,
+                "doc": "\/**\r\n * The monetary separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "EXPONENTIAL_SYMBOL",
+                "value": 11,
+                "doc": "\/**\r\n * The exponential symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PERMILL_SYMBOL",
+                "value": 12,
+                "doc": "\/**\r\n * Per mill symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "PAD_ESCAPE_SYMBOL",
+                "value": 13,
+                "doc": "\/**\r\n * Escape padding character.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "INFINITY_SYMBOL",
+                "value": 14,
+                "doc": "\/**\r\n * Infinity symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "NAN_SYMBOL",
+                "value": 15,
+                "doc": "\/**\r\n * Not-a-number symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SIGNIFICANT_DIGIT_SYMBOL",
+                "value": 16,
+                "doc": "\/**\r\n * Significant digit symbol.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MONETARY_GROUPING_SEPARATOR_SYMBOL",
+                "value": 17,
+                "doc": "\/**\r\n * The monetary grouping separator.\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TYPE_DEFAULT",
+                "value": 0,
+                "doc": "\/**\r\n * Derive the type from variable type\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TYPE_INT32",
+                "value": 1,
+                "doc": "\/**\r\n * Format\/parse as 32-bit integer\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TYPE_INT64",
+                "value": 2,
+                "doc": "\/**\r\n * Format\/parse as 64-bit integer\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TYPE_DOUBLE",
+                "value": 3,
+                "doc": "\/**\r\n * Format\/parse as floating point value\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TYPE_CURRENCY",
+                "value": 4,
+                "doc": "\/**\r\n * Format\/parse as currency value\r\n * @link http:\/\/php.net\/intl.numberformatter-constants.php\r\n *\/"
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Normalizer",
+        "fqn": "\\Normalizer",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "normalize",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "input",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "form",
+                        "type": null,
+                        "byRef": false,
+                        "default": "Normalizer::FORM_C"
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Normalizes the input provided and returns the normalized string\r\n * @link http:\/\/php.net\/normalizer.normalize.php\r\n * @param string $input <p>The input string to normalize<\/p>\r\n * @param string $form [optional] <p>One of the normalization forms.<\/p>\r\n * @return string The normalized string or <b>NULL<\/b> if an error occurred.\r\n *\/"
+            },
+            {
+                "name": "isNormalized",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "input",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "form",
+                        "type": null,
+                        "byRef": false,
+                        "default": "Normalizer::FORM_C"
+                    }
+                ],
+                "doc": "\/**\r\n* (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n* Checks if the provided string is already in the specified normalization\r\nform.\r\n* @link http:\/\/php.net\/normalizer.isnormalized.php\r\n* @param string $input <p>The input string to normalize<\/p>\r\n* @param string $form [optional] <p>\r\n* One of the normalization forms.\r\n* <\/p>\r\n* @return bool <b>TRUE<\/b> if normalized, <b>FALSE<\/b> otherwise or if there an error\r\n*\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NONE",
+                "value": 1,
+                "doc": "\/**\r\n * No decomposition\/composition\r\n * @link http:\/\/php.net\/intl.normalizer-constants.php\r\n *\/"
+            },
+            {
+                "name": "FORM_D",
+                "value": 2,
+                "doc": "\/**\r\n * Normalization Form D (NFD) - Canonical Decomposition\r\n * @link http:\/\/php.net\/intl.normalizer-constants.php\r\n *\/"
+            },
+            {
+                "name": "NFD",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "FORM_KD",
+                "value": 3,
+                "doc": "\/**\r\n * Normalization Form KD (NFKD) - Compatibility Decomposition\r\n * @link http:\/\/php.net\/intl.normalizer-constants.php\r\n *\/"
+            },
+            {
+                "name": "NFKD",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "FORM_C",
+                "value": 4,
+                "doc": "\/**\r\n * Normalization Form C (NFC) - Canonical Decomposition followed by\r\n * Canonical Composition\r\n * @link http:\/\/php.net\/intl.normalizer-constants.php\r\n *\/"
+            },
+            {
+                "name": "NFC",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "FORM_KC",
+                "value": 5,
+                "doc": "\/**\r\n * Normalization Form KC (NFKC) - Compatibility Decomposition, followed by\r\n * Canonical Composition\r\n * @link http:\/\/php.net\/intl.normalizer-constants.php\r\n *\/"
+            },
+            {
+                "name": "NFKC",
+                "value": 5,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Locale",
+        "fqn": "\\Locale",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "getDefault",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the default locale value from the INTL global 'default_locale'\r\n * @link http:\/\/php.net\/locale.getdefault.php\r\n * @return string The current runtime locale\r\n *\/"
+            },
+            {
+                "name": "setDefault",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * sets the default runtime locale\r\n * @link http:\/\/php.net\/locale.setdefault.php\r\n * @param string $locale <p>\r\n * Is a BCP 47 compliant language tag containing the\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getPrimaryLanguage",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the primary language for the input locale\r\n * @link http:\/\/php.net\/locale.getprimarylanguage.php\r\n * @param string $locale <p>\r\n * The locale to extract the primary language code from\r\n * <\/p>\r\n * @return string The language code associated with the language or <b>NULL<\/b> in case of error.\r\n *\/"
+            },
+            {
+                "name": "getScript",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the script for the input locale\r\n * @link http:\/\/php.net\/locale.getscript.php\r\n * @param string $locale <p>\r\n * The locale to extract the script code from\r\n * <\/p>\r\n * @return string The script subtag for the locale or <b>NULL<\/b> if not present\r\n *\/"
+            },
+            {
+                "name": "getRegion",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the region for the input locale\r\n * @link http:\/\/php.net\/locale.getregion.php\r\n * @param string $locale <p>\r\n * The locale to extract the region code from\r\n * <\/p>\r\n * @return string The region subtag for the locale or <b>NULL<\/b> if not present\r\n *\/"
+            },
+            {
+                "name": "getKeywords",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the keywords for the input locale\r\n * @link http:\/\/php.net\/locale.getkeywords.php\r\n * @param string $locale <p>\r\n * The locale to extract the keywords from\r\n * <\/p>\r\n * @return array Associative array containing the keyword-value pairs for this locale\r\n *\/"
+            },
+            {
+                "name": "getDisplayScript",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "in_locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns an appropriately localized display name for script of the input locale\r\n * @link http:\/\/php.net\/locale.getdisplayscript.php\r\n * @param string $locale <p>\r\n * The locale to return a display script for\r\n * <\/p>\r\n * @param string $in_locale [optional] <p>\r\n * Optional format locale to use to display the script name\r\n * <\/p>\r\n * @return string Display name of the script for the $locale in the format appropriate for\r\n * $in_locale.\r\n *\/"
+            },
+            {
+                "name": "getDisplayRegion",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "in_locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns an appropriately localized display name for region of the input locale\r\n * @link http:\/\/php.net\/locale.getdisplayregion.php\r\n * @param string $locale <p>\r\n * The locale to return a display region for.\r\n * <\/p>\r\n * @param string $in_locale [optional] <p>\r\n * Optional format locale to use to display the region name\r\n * <\/p>\r\n * @return string display name of the region for the $locale in the format appropriate for\r\n * $in_locale.\r\n *\/"
+            },
+            {
+                "name": "getDisplayName",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "in_locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns an appropriately localized display name for the input locale\r\n * @link http:\/\/php.net\/locale.getdisplayname.php\r\n * @param string $locale <p>\r\n * The locale to return a display name for.\r\n * <\/p>\r\n * @param string $in_locale [optional] <p>optional format locale<\/p>\r\n * @return string Display name of the locale in the format appropriate for $in_locale.\r\n *\/"
+            },
+            {
+                "name": "getDisplayLanguage",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "in_locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns an appropriately localized display name for language of the inputlocale\r\n * @link http:\/\/php.net\/locale.getdisplaylanguage.php\r\n * @param string $locale <p>\r\n * The locale to return a display language for\r\n * <\/p>\r\n * @param string $in_locale [optional] <p>\r\n * Optional format locale to use to display the language name\r\n * <\/p>\r\n * @return string display name of the language for the $locale in the format appropriate for\r\n * $in_locale.\r\n *\/"
+            },
+            {
+                "name": "getDisplayVariant",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "in_locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns an appropriately localized display name for variants of the input locale\r\n * @link http:\/\/php.net\/locale.getdisplayvariant.php\r\n * @param string $locale <p>\r\n * The locale to return a display variant for\r\n * <\/p>\r\n * @param string $in_locale [optional] <p>\r\n * Optional format locale to use to display the variant name\r\n * <\/p>\r\n * @return string Display name of the variant for the $locale in the format appropriate for\r\n * $in_locale.\r\n *\/"
+            },
+            {
+                "name": "composeLocale",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "subtags",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns a correctly ordered and delimited locale ID\r\n * @link http:\/\/php.net\/locale.composelocale.php\r\n * @param array $subtags <p>\r\n * an array containing a list of key-value pairs, where the keys identify\r\n * the particular locale ID subtags, and the values are the associated\r\n * subtag values.\r\n * <p>\r\n * The 'variant' and 'private' subtags can take maximum 15 values\r\n * whereas 'extlang' can take maximum 3 values.e.g. Variants are allowed\r\n * with the suffix ranging from 0-14. Hence the keys for the input array\r\n * can be variant0, variant1, ...,variant14. In the returned locale id,\r\n * the subtag is ordered by suffix resulting in variant0 followed by\r\n * variant1 followed by variant2 and so on.\r\n * <\/p>\r\n * <p>\r\n * The 'variant', 'private' and 'extlang' multiple values can be specified both\r\n * as array under specific key (e.g. 'variant') and as multiple numbered keys\r\n * (e.g. 'variant0', 'variant1', etc.).\r\n * <\/p>\r\n * <\/p>\r\n * @return string The corresponding locale identifier.\r\n *\/"
+            },
+            {
+                "name": "parseLocale",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Returns a key-value array of locale ID subtag elements.\r\n * @link http:\/\/php.net\/locale.parselocale.php\r\n * @param string $locale <p>\r\n * The locale to extract the subtag array from. Note: The 'variant' and\r\n * 'private' subtags can take maximum 15 values whereas 'extlang' can take\r\n * maximum 3 values.\r\n * <\/p>\r\n * @return array an array containing a list of key-value pairs, where the keys\r\n * identify the particular locale ID subtags, and the values are the\r\n * associated subtag values. The array will be ordered as the locale id\r\n * subtags e.g. in the locale id if variants are '-varX-varY-varZ' then the\r\n * returned array will have variant0=&gt;varX , variant1=&gt;varY ,\r\n * variant2=&gt;varZ\r\n *\/"
+            },
+            {
+                "name": "getAllVariants",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Gets the variants for the input locale\r\n * @link http:\/\/php.net\/locale.getallvariants.php\r\n * @param string $locale <p>\r\n * The locale to extract the variants from\r\n * <\/p>\r\n * @return array The array containing the list of all variants subtag for the locale\r\n * or <b>NULL<\/b> if not present\r\n *\/"
+            },
+            {
+                "name": "filterMatches",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "langtag",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "canonicalize",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Checks if a language tag filter matches with locale\r\n * @link http:\/\/php.net\/locale.filtermatches.php\r\n * @param string $langtag <p>\r\n * The language tag to check\r\n * <\/p>\r\n * @param string $locale <p>\r\n * The language range to check against\r\n * <\/p>\r\n * @param bool $canonicalize [optional] <p>\r\n * If true, the arguments will be converted to canonical form before\r\n * matching.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if $locale matches $langtag <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "lookup",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "langtag",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "canonicalize",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "default",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Searches the language tag list for the best match to the language\r\n * @link http:\/\/php.net\/locale.lookup.php\r\n * @param array $langtag <p>\r\n * An array containing a list of language tags to compare to\r\n * <i>locale<\/i>. Maximum 100 items allowed.\r\n * <\/p>\r\n * @param string $locale <p>\r\n * The locale to use as the language range when matching.\r\n * <\/p>\r\n * @param bool $canonicalize [optional] <p>\r\n * If true, the arguments will be converted to canonical form before\r\n * matching.\r\n * <\/p>\r\n * @param string $default [optional] <p>\r\n * The locale to use if no match is found.\r\n * <\/p>\r\n * @return string The closest matching language tag or default value.\r\n *\/"
+            },
+            {
+                "name": "canonicalize",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Canonicalize the locale string\r\n * @link http:\/\/php.net\/locale.canonicalize.php\r\n * @param string $locale <p>\r\n * <\/p>\r\n * @return string\r\n *\/"
+            },
+            {
+                "name": "acceptFromHttp",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "header",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Tries to find out best available locale based on HTTP \"Accept-Language\" header\r\n * @link http:\/\/php.net\/locale.acceptfromhttp.php\r\n * @param string $header <p>\r\n * The string containing the \"Accept-Language\" header according to format in RFC 2616.\r\n * <\/p>\r\n * @return string The corresponding locale identifier.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "ACTUAL_LOCALE",
+                "value": 0,
+                "doc": "\/**\r\n * This is locale the data actually comes from.\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "VALID_LOCALE",
+                "value": 1,
+                "doc": "\/**\r\n * This is the most specific locale supported by ICU.\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "DEFAULT_LOCALE",
+                "value": null,
+                "doc": "\/**\r\n * Used as locale parameter with the methods of the various locale affected classes,\r\n * such as NumberFormatter. This constant would make the methods to use default\r\n * locale.\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "LANG_TAG",
+                "value": "language",
+                "doc": "\/**\r\n * Language subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "EXTLANG_TAG",
+                "value": "extlang",
+                "doc": "\/**\r\n * Extended language subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "SCRIPT_TAG",
+                "value": "script",
+                "doc": "\/**\r\n * Script subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "REGION_TAG",
+                "value": "region",
+                "doc": "\/**\r\n * Region subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "VARIANT_TAG",
+                "value": "variant",
+                "doc": "\/**\r\n * Variant subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "GRANDFATHERED_LANG_TAG",
+                "value": "grandfathered",
+                "doc": "\/**\r\n * Grandfathered Language subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            },
+            {
+                "name": "PRIVATE_TAG",
+                "value": "private",
+                "doc": "\/**\r\n * Private subtag\r\n * @link http:\/\/php.net\/intl.locale-constants.php\r\n *\/"
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "MessageFormatter",
+        "fqn": "\\MessageFormatter",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Constructs a new Message Formatter\r\n * @link http:\/\/php.net\/messageformatter.create.php\r\n * @param string $locale <p>\r\n * The locale to use when formatting arguments\r\n * <\/p>\r\n * @param string $pattern <p>\r\n * The pattern string to stick arguments into.\r\n * The pattern uses an 'apostrophe-friendly' syntax; it is run through\r\n * umsg_autoQuoteApostrophe\r\n * before being interpreted.\r\n * <\/p>\r\n *\/"
+            },
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Constructs a new Message Formatter\r\n * @link http:\/\/php.net\/messageformatter.create.php\r\n * @param string $locale <p>\r\n * The locale to use when formatting arguments\r\n * <\/p>\r\n * @param string $pattern <p>\r\n * The pattern string to stick arguments into.\r\n * The pattern uses an 'apostrophe-friendly' syntax; it is run through\r\n * umsg_autoQuoteApostrophe\r\n * before being interpreted.\r\n * <\/p>\r\n * @return MessageFormatter The formatter object\r\n *\/"
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Format the message\r\n * @link http:\/\/php.net\/messageformatter.format.php\r\n * @param array $args <p>\r\n * Arguments to insert into the format string\r\n * <\/p>\r\n * @return string The formatted string, or <b>FALSE<\/b> if an error occurred\r\n *\/"
+            },
+            {
+                "name": "formatMessage",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "args",
+                        "type": "array",
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Quick format message\r\n * @link http:\/\/php.net\/messageformatter.formatmessage.php\r\n * @param string $locale <p>\r\n * The locale to use for formatting locale-dependent parts\r\n * <\/p>\r\n * @param string $pattern <p>\r\n * The pattern string to insert things into.\r\n * The pattern uses an 'apostrophe-friendly' syntax; it is run through\r\n * umsg_autoQuoteApostrophe\r\n * before being interpreted.\r\n * <\/p>\r\n * @param array $args <p>\r\n * The array of values to insert into the format string\r\n * <\/p>\r\n * @return string The formatted pattern string or <b>FALSE<\/b> if an error occurred\r\n *\/"
+            },
+            {
+                "name": "parse",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Parse input string according to pattern\r\n * @link http:\/\/php.net\/messageformatter.parse.php\r\n * @param string $value <p>\r\n * The string to parse\r\n * <\/p>\r\n * @return array An array containing the items extracted, or <b>FALSE<\/b> on error\r\n *\/"
+            },
+            {
+                "name": "parseMessage",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "source",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Quick parse input string\r\n * @link http:\/\/php.net\/messageformatter.parsemessage.php\r\n * @param string $locale <p>\r\n * The locale to use for parsing locale-dependent parts\r\n * <\/p>\r\n * @param string $pattern <p>\r\n * The pattern with which to parse the <i>value<\/i>.\r\n * <\/p>\r\n * @param string $source <p>\r\n * The string to parse, conforming to the <i>pattern<\/i>.\r\n * <\/p>\r\n * @return array An array containing items extracted, or <b>FALSE<\/b> on error\r\n *\/"
+            },
+            {
+                "name": "setPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set the pattern used by the formatter\r\n * @link http:\/\/php.net\/messageformatter.setpattern.php\r\n * @param string $pattern <p>\r\n * The pattern string to use in this message formatter.\r\n * The pattern uses an 'apostrophe-friendly' syntax; it is run through\r\n * umsg_autoQuoteApostrophe\r\n * before being interpreted.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the pattern used by the formatter\r\n * @link http:\/\/php.net\/messageformatter.getpattern.php\r\n * @return string The pattern string for this message formatter\r\n *\/"
+            },
+            {
+                "name": "getLocale",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the locale for which the formatter was created.\r\n * @link http:\/\/php.net\/messageformatter.getlocale.php\r\n * @return string The locale name\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the error code from last operation\r\n * @link http:\/\/php.net\/messageformatter.geterrorcode.php\r\n * @return int The error code, one of UErrorCode values. Initial value is U_ZERO_ERROR.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the error text from the last operation\r\n * @link http:\/\/php.net\/messageformatter.geterrormessage.php\r\n * @return string Description of the last error.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "IntlDateFormatter",
+        "fqn": "\\IntlDateFormatter",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "datetype",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timetype",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timezone",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "calendar",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * Instantiate new Intl ICU date formatter.\r\n *\r\n * @link http:\/\/php.net\/intldateformatter.create.php\r\n * @param string $locale\r\n *   Locale to use when formatting or parsing or <code>NULL<\/code> to use the value specified in the ini setting\r\n *   <code>\"intl.default_locale\"<\/code>.\r\n * @param integer $datetype\r\n *   Date type to use. This is one of the class constants. It can also be <code>NULL<\/code>, in which case ICU?s\r\n *   default date type will be used.\r\n * @param integer $timetype\r\n *   Time type to use. This is one of the class constants. It can also be <code>NULL<\/code>, in which case ICU?s\r\n *   default time type will be used.\r\n * @param mixed $timezone [optional]\r\n *   Time zone identifier. The default (and the one used if <code>NULL<\/code> is given) is the one returned by\r\n *   {@see date_default_timezone_get()} or, if applicable, that of the {@see \\IntlCalendar} object passed for the\r\n *   <var>$calendar<\/var> parameter. This identifier must be a valid identifier on ICU?s database or an identifier\r\n *   representing an explicit offset, such as <code>\"GMT-05:30\"<\/code>. This can also be an {@see \\IntlTimeZone} or a\r\n *   {@see \\DateTimeZone} object.\r\n * @param mixed $calendar [optional]\r\n *   Calendar to use for formatting or parsing. The default value is <code>NULL<\/code>, which corresponds to\r\n *   {@see self::GREGORIAN}. This can either be one of the class calendar constants or an\r\n *   {@see \\IntlCalendar}. Any {@see \\IntlCalendar} object passed will be cloned; it will not be changed by this\r\n *   instance. This will determine the calendar type used (gregorian, islamic, persian, etc.) and, if\r\n *   <code>NULL<\/code> is given for the <var>$timezone<\/var> parameter, also the timezone used.\r\n * @param string $pattern [optional]\r\n *   Optional pattern to use when formatting or parsing. Possible patterns are documented at\r\n *   {@link http:\/\/userguide.icu-project.org\/formatparse\/datetime}.\r\n * @since 5.3.0\r\n *\/"
+            },
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "datetype",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timetype",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "timezone",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "calendar",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Create a date formatter\r\n * @link http:\/\/php.net\/intldateformatter.create.php\r\n * @param string $locale <p>\r\n * Locale to use when formatting or parsing or <b>NULL<\/b> to use the value\r\n * specified in the ini setting intl.default_locale.\r\n * <\/p>\r\n * @param int $datetype <p>\r\n * Date type to use (<b>none<\/b>, <b>short<\/b>,\r\n * <b>medium<\/b>, <b>long<\/b>,\r\n * <b>full<\/b>). This is one of the IntlDateFormatter\r\n * constants. It can also be <b>NULL<\/b>, in which case ICU\u02bcs default\r\n * date type will be used.\r\n * <\/p>\r\n * @param int $timetype <p>\r\n * Time type to use (<b>none<\/b>, <b>short<\/b>,\r\n * <b>medium<\/b>, <b>long<\/b>,\r\n * <b>full<\/b>). This is one of the IntlDateFormatter\r\n * constants. It can also be <b>NULL<\/b>, in which case ICU\u02bcs default\r\n * time type will be used.\r\n * <\/p>\r\n * @param mixed $timezone [optional] <p>\r\n * Time zone ID. The default (and the one used if <b>NULL<\/b> is given) is the\r\n * one returned by <b>date_default_timezone_get<\/b> or, if\r\n * applicable, that of the <b>IntlCalendar<\/b> object passed\r\n * for the <i>calendar<\/i> parameter. This ID must be a\r\n * valid identifier on ICU\u02bcs database or an ID representing an\r\n * explicit offset, such as GMT-05:30.\r\n * <\/p>\r\n * <p>\r\n * This can also be an <b>IntlTimeZone<\/b> or a\r\n * <b>DateTimeZone<\/b> object.\r\n * <\/p>\r\n * @param mixed $calendar [optional] <p>\r\n * Calendar to use for formatting or parsing. The default value is <b>NULL<\/b>,\r\n * which corresponds to <b>IntlDateFormatter::GREGORIAN<\/b>.\r\n * This can either be one of the\r\n * IntlDateFormatter\r\n * calendar constants or an <b>IntlCalendar<\/b>. Any\r\n * <b>IntlCalendar<\/b> object passed will be clone; it will\r\n * not be changed by the <b>IntlDateFormatter<\/b>. This will\r\n * determine the calendar type used (gregorian, islamic, persian, etc.) and,\r\n * if <b>NULL<\/b> is given for the <i>timezone<\/i> parameter,\r\n * also the timezone used.\r\n * <\/p>\r\n * @param string $pattern [optional] <p>\r\n * Optional pattern to use when formatting or parsing.\r\n * Possible patterns are documented at http:\/\/userguide.icu-project.org\/formatparse\/datetime.\r\n * <\/p>\r\n * @return IntlDateFormatter The created <b>IntlDateFormatter<\/b> or <b>FALSE<\/b> in case of\r\n * failure.\r\n *\/"
+            },
+            {
+                "name": "getDateType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the datetype used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.getdatetype.php\r\n * @return int The current date type value of the formatter.\r\n *\/"
+            },
+            {
+                "name": "getTimeType",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the timetype used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.gettimetype.php\r\n * @return int The current date type value of the formatter.\r\n *\/"
+            },
+            {
+                "name": "getCalendar",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the calendar type used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.getcalendar.php\r\n * @return int The calendar\r\n * type being used by the formatter. Either\r\n * <b>IntlDateFormatter::TRADITIONAL<\/b> or\r\n * <b>IntlDateFormatter::GREGORIAN<\/b>.\r\n *\/"
+            },
+            {
+                "name": "setCalendar",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "which",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Sets the calendar type used by the formatter\r\n * @link http:\/\/php.net\/intldateformatter.setcalendar.php\r\n * @param mixed $which <p>\r\n * This can either be: the calendar\r\n * type to use (default is\r\n * <b>IntlDateFormatter::GREGORIAN<\/b>, which is also used if\r\n * <b>NULL<\/b> is specified) or an\r\n * <b>IntlCalendar<\/b> object.\r\n * <\/p>\r\n * <p>\r\n * Any <b>IntlCalendar<\/b> object passed in will be cloned;\r\n * no modifications will be made to the argument object.\r\n * <\/p>\r\n * <p>\r\n * The timezone of the formatter will only be kept if an\r\n * <b>IntlCalendar<\/b> object is not passed, otherwise the\r\n * new timezone will be that of the passed object.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getTimeZoneId",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the timezone-id used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.gettimezoneid.php\r\n * @return string ID string for the time zone used by this formatter.\r\n *\/"
+            },
+            {
+                "name": "setTimeZoneId",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "zone",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Sets the time zone to use\r\n * @link http:\/\/php.net\/intldateformatter.settimezoneid.php\r\n * @param string $zone <p>\r\n * The time zone ID string of the time zone to use.\r\n * If <b>NULL<\/b> or the empty string, the default time zone for the runtime is used.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "setPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "pattern",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set the pattern used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.setpattern.php\r\n * @param string $pattern <p>\r\n * New pattern string to use.\r\n * Possible patterns are documented at http:\/\/userguide.icu-project.org\/formatparse\/datetime.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * Bad formatstrings are usually the cause of the failure.\r\n *\/"
+            },
+            {
+                "name": "getPattern",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the pattern used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.getpattern.php\r\n * @return string The pattern string being used to format\/parse.\r\n *\/"
+            },
+            {
+                "name": "getLocale",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "which",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the locale used by formatter\r\n * @link http:\/\/php.net\/intldateformatter.getlocale.php\r\n * @param int $which [optional]\r\n * @return string the locale of this formatter or 'false' if error\r\n *\/"
+            },
+            {
+                "name": "setLenient",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "lenient",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Set the leniency of the parser\r\n * @link http:\/\/php.net\/intldateformatter.setlenient.php\r\n * @param bool $lenient <p>\r\n * Sets whether the parser is lenient or not, default is <b>TRUE<\/b> (lenient).\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "isLenient",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the lenient used for the IntlDateFormatter\r\n * @link http:\/\/php.net\/intldateformatter.islenient.php\r\n * @return bool <b>TRUE<\/b> if parser is lenient, <b>FALSE<\/b> if parser is strict. By default the parser is lenient.\r\n *\/"
+            },
+            {
+                "name": "format",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Format the date\/time value as a string\r\n * @link http:\/\/php.net\/intldateformatter.format.php\r\n * @param mixed $value <p>\r\n * Value to format. This may be a <b>DateTime<\/b> object, an\r\n * <b>IntlCalendar<\/b> object, a numeric type\r\n * representing a (possibly fractional) number of seconds since epoch or an\r\n * array in the format output by\r\n * <b>localtime<\/b>.\r\n * <\/p>\r\n * <p>\r\n * If a <b>DateTime<\/b> or an\r\n * <b>IntlCalendar<\/b> object is passed, its timezone is not\r\n * considered. The object will be formatted using the formater\u02bcs configured\r\n * timezone. If one wants to use the timezone of the object to be formatted,\r\n * <b>IntlDateFormatter::setTimeZone<\/b> must be called before\r\n * with the object\u02bcs timezone. Alternatively, the static function\r\n * <b>IntlDateFormatter::formatObject<\/b> may be used instead.\r\n * <\/p>\r\n * @return string The formatted string or, if an error occurred, <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "parse",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Parse string to a timestamp value\r\n * @link http:\/\/php.net\/intldateformatter.parse.php\r\n * @param string $value <p>\r\n * string to convert to a time\r\n * <\/p>\r\n * @param int $position [optional] <p>\r\n * Position at which to start the parsing in $value (zero-based).\r\n * If no error occurs before $value is consumed, $parse_pos will contain -1\r\n * otherwise it will contain the position at which parsing ended (and the error occurred).\r\n * This variable will contain the end position if the parse fails.\r\n * If $parse_pos > strlen($value), the parse fails immediately.\r\n * <\/p>\r\n * @return int timestamp parsed value, or <b>FALSE<\/b> if value can't be parsed.\r\n *\/"
+            },
+            {
+                "name": "localtime",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "position",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Parse string to a field-based time value\r\n * @link http:\/\/php.net\/intldateformatter.localtime.php\r\n * @param string $value <p>\r\n * string to convert to a time\r\n * <\/p>\r\n * @param int $position [optional] <p>\r\n * Position at which to start the parsing in $value (zero-based).\r\n * If no error occurs before $value is consumed, $parse_pos will contain -1\r\n * otherwise it will contain the position at which parsing ended .\r\n * If $parse_pos > strlen($value), the parse fails immediately.\r\n * <\/p>\r\n * @return array Localtime compatible array of integers : contains 24 hour clock value in tm_hour field\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the error code from last operation\r\n * @link http:\/\/php.net\/intldateformatter.geterrorcode.php\r\n * @return int The error code, one of UErrorCode values. Initial value is U_ZERO_ERROR.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL intl &gt;= 1.0.0)<br\/>\r\n * Get the error text from the last operation.\r\n * @link http:\/\/php.net\/intldateformatter.geterrormessage.php\r\n * @return string Description of the last error.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "FULL",
+                "value": 0,
+                "doc": "\/**\r\n * Completely specified style (Tuesday, April 12, 1952 AD or 3:30:42pm PST)\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "LONG",
+                "value": 1,
+                "doc": "\/**\r\n * Long style (January 12, 1952 or 3:30:32pm)\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "MEDIUM",
+                "value": 2,
+                "doc": "\/**\r\n * Medium style (Jan 12, 1952)\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "SHORT",
+                "value": 3,
+                "doc": "\/**\r\n * Most abbreviated style, only essential data (12\/13\/52 or 3:30pm)\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "NONE",
+                "value": null,
+                "doc": "\/**\r\n * Do not include this element\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "GREGORIAN",
+                "value": 1,
+                "doc": "\/**\r\n * Gregorian Calendar\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            },
+            {
+                "name": "TRADITIONAL",
+                "value": 0,
+                "doc": "\/**\r\n * Non-Gregorian Calendar\r\n * @link http:\/\/php.net\/intl.intldateformatter-constants.php\r\n *\/"
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "IntlException",
+        "fqn": "\\IntlException",
+        "type": 0,
+        "extends": "Exception",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "ResourceBundle",
+        "fqn": "\\ResourceBundle",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "bundlename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "fallback",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $locale\r\n * @param $bundlename\r\n * @param $fallback [optional]\r\n *\/"
+            },
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "bundlename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "fallback",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Create a resource bundle\r\n * @link http:\/\/php.net\/resourcebundle.create.php\r\n * @param string $locale <p>\r\n * Locale for which the resources should be loaded (locale name, e.g. en_CA).\r\n * <\/p>\r\n * @param string $bundlename <p>\r\n * The directory where the data is stored or the name of the .dat file.\r\n * <\/p>\r\n * @param bool $fallback [optional] <p>\r\n * Whether locale should match exactly or fallback to parent locale is allowed.\r\n * <\/p>\r\n * @return ResourceBundle <b>ResourceBundle<\/b> object or <b>FALSE<\/b> on error.\r\n *\/"
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "index",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get data from the bundle\r\n * @link http:\/\/php.net\/resourcebundle.get.php\r\n * @param string|int $index <p>\r\n * Data index, must be string or integer.\r\n * <\/p>\r\n * @return mixed the data located at the index or <b>NULL<\/b> on error. Strings, integers and binary data strings\r\n * are returned as corresponding PHP types, integer array is returned as PHP array. Complex types are\r\n * returned as <b>ResourceBundle<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "count",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get number of elements in the bundle\r\n * @link http:\/\/php.net\/resourcebundle.count.php\r\n * @return int number of elements in the bundle.\r\n *\/"
+            },
+            {
+                "name": "getLocales",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "bundlename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get supported locales\r\n * @link http:\/\/php.net\/resourcebundle.locales.php\r\n * @param string $bundlename <p>\r\n * Path of ResourceBundle for which to get available locales, or\r\n * empty string for default locales list.\r\n * <\/p>\r\n * @return array the list of locales supported by the bundle.\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get bundle's last error code.\r\n * @link http:\/\/php.net\/resourcebundle.geterrorcode.php\r\n * @return int error code from last bundle object call.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.3.2, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get bundle's last error message.\r\n * @link http:\/\/php.net\/resourcebundle.geterrormessage.php\r\n * @return string error message from last bundle object's call.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Transliterator",
+        "fqn": "\\Transliterator",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "create",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "id",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "direction",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Create a transliterator\r\n * @link http:\/\/php.net\/transliterator.create.php\r\n * @param string $id <p>\r\n * The id.\r\n * <\/p>\r\n * @param int $direction [optional] <p>\r\n * The direction, defaults to\r\n * >Transliterator::FORWARD.\r\n * May also be set to\r\n * Transliterator::REVERSE.\r\n * <\/p>\r\n * @return Transliterator a <b>Transliterator<\/b> object on success,\r\n * or <b>NULL<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "createFromRules",
+                "type": 9,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "rules",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "direction",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Create transliterator from rules\r\n * @link http:\/\/php.net\/transliterator.createfromrules.php\r\n * @param string $rules <p>\r\n * The rules.\r\n * <\/p>\r\n * @param string $direction [optional] <p>\r\n * The direction, defaults to\r\n * >Transliterator::FORWARD.\r\n * May also be set to\r\n * Transliterator::REVERSE.\r\n * <\/p>\r\n * @return Transliterator a <b>Transliterator<\/b> object on success,\r\n * or <b>NULL<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "createInverse",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Create an inverse transliterator\r\n * @link http:\/\/php.net\/transliterator.createinverse.php\r\n * @return Transliterator a <b>Transliterator<\/b> object on success,\r\n * or <b>NULL<\/b> on failure\r\n *\/"
+            },
+            {
+                "name": "listIDs",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get transliterator IDs\r\n * @link http:\/\/php.net\/transliterator.listids.php\r\n * @return array An array of registered transliterator IDs on success,\r\n * or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "transliterate",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "subject",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "start",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "end",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Transliterate a string\r\n * @link http:\/\/php.net\/transliterator.transliterate.php\r\n * @param string $subject <p>\r\n * The string to be transformed.\r\n * <\/p>\r\n * @param int $start [optional] <p>\r\n * The start index (in UTF-16 code units) from which the string will start\r\n * to be transformed, inclusive. Indexing starts at 0. The text before will\r\n * be left as is.\r\n * <\/p>\r\n * @param int $end [optional] <p>\r\n * The end index (in UTF-16 code units) until which the string will be\r\n * transformed, exclusive. Indexing starts at 0. The text after will be\r\n * left as is.\r\n * <\/p>\r\n * @return string The transfomed string on success, or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getErrorCode",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get last error code\r\n * @link http:\/\/php.net\/transliterator.geterrorcode.php\r\n * @return int The error code on success,\r\n * or <b>FALSE<\/b> if none exists, or on failure.\r\n *\/"
+            },
+            {
+                "name": "getErrorMessage",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Get last error message\r\n * @link http:\/\/php.net\/transliterator.geterrormessage.php\r\n * @return string The error code on success,\r\n * or <b>FALSE<\/b> if none exists, or on failure.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "id",
+                "doc": null
+            }
+        ],
+        "constants": [
+            {
+                "name": "FORWARD",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "REVERSE",
+                "value": 1,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "Spoofchecker",
+        "fqn": "\\Spoofchecker",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Constructor\r\n * @link http:\/\/php.net\/spoofchecker.construct.php\r\n *\/"
+            },
+            {
+                "name": "isSuspicious",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "text",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "error",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Checks if a given text contains any suspicious characters\r\n * @link http:\/\/php.net\/spoofchecker.issuspicious.php\r\n * @param string $text <p>\r\n * <\/p>\r\n * @param string $error [optional] <p>\r\n * <\/p>\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "areConfusable",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "s1",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "s2",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "error",
+                        "type": null,
+                        "byRef": true,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Checks if a given text contains any confusable characters\r\n * @link http:\/\/php.net\/spoofchecker.areconfusable.php\r\n * @param string $s1 <p>\r\n * <\/p>\r\n * @param string $s2 <p>\r\n * <\/p>\r\n * @param string $error [optional] <p>\r\n * <\/p>\r\n * @return bool\r\n *\/"
+            },
+            {
+                "name": "setAllowedLocales",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "locale_list",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Locales to use when running checks\r\n * @link http:\/\/php.net\/spoofchecker.setallowedlocales.php\r\n * @param string $locale_list <p>\r\n * <\/p>\r\n * @return void\r\n *\/"
+            },
+            {
+                "name": "setChecks",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "checks",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP &gt;= 5.4.0, PECL intl &gt;= 2.0.0)<br\/>\r\n * Set the checks to run\r\n * @link http:\/\/php.net\/spoofchecker.setchecks.php\r\n * @param string $checks <p>\r\n * <\/p>\r\n * @return void\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "SINGLE_SCRIPT_CONFUSABLE",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "MIXED_SCRIPT_CONFUSABLE",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "WHOLE_SCRIPT_CONFUSABLE",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "ANY_CASE",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "SINGLE_SCRIPT",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "INVISIBLE",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "CHAR_LIMIT",
+                "value": 64,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_create",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_compare",
+        "params": [
+            {
+                "name": "str1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_set_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "val",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_strength",
+        "params": [
+            {
+                "name": "object",
+                "type": "Collator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_set_strength",
+        "params": [
+            {
+                "name": "strength",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_sort",
+        "params": [
+            {
+                "name": "arr",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "sort_flag",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_sort_with_sort_keys",
+        "params": [
+            {
+                "name": "arr",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_asort",
+        "params": [
+            {
+                "name": "arr",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "sort_flag",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_locale",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_error_code",
+        "params": [
+            {
+                "name": "object",
+                "type": "Collator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_error_message",
+        "params": [
+            {
+                "name": "object",
+                "type": "Collator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "collator_get_sort_key",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_create",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "style",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_format",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_parse",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "position",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_format_currency",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "currency",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_parse_currency",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "currency",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "position",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_set_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_set_text_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_text_attribute",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_set_symbol",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_symbol",
+        "params": [
+            {
+                "name": "attr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_set_pattern",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_pattern",
+        "params": [
+            {
+                "name": "nf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_locale",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_error_code",
+        "params": [
+            {
+                "name": "nf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "numfmt_get_error_message",
+        "params": [
+            {
+                "name": "nf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "normalizer_normalize",
+        "params": [
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "form",
+                "type": null,
+                "byRef": false,
+                "default": "Normalizer::FORM_C"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "normalizer_is_normalized",
+        "params": [
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "form",
+                "type": null,
+                "byRef": false,
+                "default": "Normalizer::FORM_C"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_default",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_set_default",
+        "params": [
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_primary_language",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_script",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_region",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_keywords",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_display_script",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "in_locale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_display_region",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "in_locale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_display_name",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "in_locale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_display_language",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "in_locale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_display_variant",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "in_locale",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_compose",
+        "params": [
+            {
+                "name": "subtags",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_parse",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_get_all_variants",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_filter_matches",
+        "params": [
+            {
+                "name": "langtag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "canonicalize",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_canonicalize",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_lookup",
+        "params": [
+            {
+                "name": "langtag",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "canonicalize",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "default",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "locale_accept_from_http",
+        "params": [
+            {
+                "name": "header",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_create",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_format",
+        "params": [
+            {
+                "name": "args",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_format_message",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "args",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_parse",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_parse_message",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "source",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_set_pattern",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_get_pattern",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_get_locale",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_get_error_code",
+        "params": [
+            {
+                "name": "nf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "msgfmt_get_error_message",
+        "params": [
+            {
+                "name": "coll",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_create",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "datetype",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timetype",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "timezone",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "calendar",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_datetype",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_timetype",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_calendar",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_set_calendar",
+        "params": [
+            {
+                "name": "which",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_locale",
+        "params": [
+            {
+                "name": "which",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_timezone_id",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_set_timezone_id",
+        "params": [
+            {
+                "name": "zone",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_pattern",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_set_pattern",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_is_lenient",
+        "params": [
+            {
+                "name": "mf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_set_lenient",
+        "params": [
+            {
+                "name": "lenient",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_format",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_parse",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "position",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_localtime",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "position",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_error_code",
+        "params": [
+            {
+                "name": "nf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "datefmt_get_error_message",
+        "params": [
+            {
+                "name": "coll",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_strlen",
+        "params": [
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_strpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_stripos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_strrpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_strripos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_substr",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_strstr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "before_needle",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_stristr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "before_needle",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "grapheme_extract",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "size",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "extract_type",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "next",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "idn_to_ascii",
+        "params": [
+            {
+                "name": "utf8_domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "errorcode",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "idn_to_utf8",
+        "params": [
+            {
+                "name": "ascii_domain",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "errorcode",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_create",
+        "params": [
+            {
+                "name": "locale",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bundlename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "fallback",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_get",
+        "params": [
+            {
+                "name": "index",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_count",
+        "params": [
+            {
+                "name": "bundle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_locales",
+        "params": [
+            {
+                "name": "bundlename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_get_error_code",
+        "params": [
+            {
+                "name": "bundle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "resourcebundle_get_error_message",
+        "params": [
+            {
+                "name": "bundle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_create",
+        "params": [
+            {
+                "name": "id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "direction",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_create_from_rules",
+        "params": [
+            {
+                "name": "rules",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "direction",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_list_ids",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_create_inverse",
+        "params": [
+            {
+                "name": "orig_trans",
+                "type": "Transliterator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_transliterate",
+        "params": [
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "end",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_get_error_code",
+        "params": [
+            {
+                "name": "trans",
+                "type": "Transliterator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "transliterator_get_error_message",
+        "params": [
+            {
+                "name": "trans",
+                "type": "Transliterator",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "intl_get_error_code",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "intl_get_error_message",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "intl_is_failure",
+        "params": [
+            {
+                "name": "error_code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "intl_error_name",
+        "params": [
+            {
+                "name": "error_code",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INTL_MAX_LOCALE_LEN",
+        "value": 80
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INTL_ICU_VERSION",
+        "value": "4.8.1.1"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INTL_ICU_DATA_VERSION",
+        "value": "4.8.1"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ULOC_ACTUAL_LOCALE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ULOC_VALID_LOCALE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GRAPHEME_EXTR_COUNT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GRAPHEME_EXTR_MAXBYTES",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "GRAPHEME_EXTR_MAXCHARS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_USING_FALLBACK_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ERROR_WARNING_START",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_USING_DEFAULT_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_SAFECLONE_ALLOCATED_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STATE_OLD_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STRING_NOT_TERMINATED_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_SORT_KEY_TOO_SHORT_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_AMBIGUOUS_ALIAS_WARNING",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_DIFFERENT_UCA_VERSION",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ERROR_WARNING_LIMIT",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ZERO_ERROR",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_ARGUMENT_ERROR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISSING_RESOURCE_ERROR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_FORMAT_ERROR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_FILE_ACCESS_ERROR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INTERNAL_PROGRAM_ERROR",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MESSAGE_PARSE_ERROR",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MEMORY_ALLOCATION_ERROR",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INDEX_OUTOFBOUNDS_ERROR",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_PARSE_ERROR",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_CHAR_FOUND",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_TRUNCATED_CHAR_FOUND",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_CHAR_FOUND",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_TABLE_FORMAT",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_TABLE_FILE",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BUFFER_OVERFLOW_ERROR",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNSUPPORTED_ERROR",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_RESOURCE_TYPE_MISMATCH",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_ESCAPE_SEQUENCE",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNSUPPORTED_ESCAPE_SEQUENCE",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_NO_SPACE_AVAILABLE",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_CE_NOT_FOUND_ERROR",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_PRIMARY_TOO_LONG_ERROR",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STATE_TOO_OLD_ERROR",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_TOO_MANY_ALIASES_ERROR",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ENUM_OUT_OF_SYNC_ERROR",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVARIANT_CONVERSION_ERROR",
+        "value": 26
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_STATE_ERROR",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_COLLATOR_VERSION_MISMATCH",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_USELESS_COLLATOR_ERROR",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_NO_WRITE_PERMISSION",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STANDARD_ERROR_LIMIT",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BAD_VARIABLE_DEFINITION",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_PARSE_ERROR_START",
+        "value": 65536
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_RULE",
+        "value": 65537
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_SET",
+        "value": 65538
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_SYMBOL_REFERENCE",
+        "value": 65539
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_UNICODE_ESCAPE",
+        "value": 65540
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_VARIABLE_DEFINITION",
+        "value": 65541
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_VARIABLE_REFERENCE",
+        "value": 65542
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISMATCHED_SEGMENT_DELIMITERS",
+        "value": 65543
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISPLACED_ANCHOR_START",
+        "value": 65544
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISPLACED_CURSOR_OFFSET",
+        "value": 65545
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISPLACED_QUANTIFIER",
+        "value": 65546
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISSING_OPERATOR",
+        "value": 65547
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISSING_SEGMENT_CLOSE",
+        "value": 65548
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_ANTE_CONTEXTS",
+        "value": 65549
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_CURSORS",
+        "value": 65550
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_POST_CONTEXTS",
+        "value": 65551
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_TRAILING_BACKSLASH",
+        "value": 65552
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNDEFINED_SEGMENT_REFERENCE",
+        "value": 65553
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNDEFINED_VARIABLE",
+        "value": 65554
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNQUOTED_SPECIAL",
+        "value": 65555
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNTERMINATED_QUOTE",
+        "value": 65556
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_RULE_MASK_ERROR",
+        "value": 65557
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MISPLACED_COMPOUND_FILTER",
+        "value": 65558
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_COMPOUND_FILTERS",
+        "value": 65559
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_RBT_SYNTAX",
+        "value": 65560
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_PROPERTY_PATTERN",
+        "value": 65561
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_PRAGMA",
+        "value": 65562
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNCLOSED_SEGMENT",
+        "value": 65563
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_CHAR_IN_SEGMENT",
+        "value": 65564
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_VARIABLE_RANGE_EXHAUSTED",
+        "value": 65565
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_VARIABLE_RANGE_OVERLAP",
+        "value": 65566
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_CHARACTER",
+        "value": 65567
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INTERNAL_TRANSLITERATOR_ERROR",
+        "value": 65568
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_ID",
+        "value": 65569
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_INVALID_FUNCTION",
+        "value": 65570
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_PARSE_ERROR_LIMIT",
+        "value": 65571
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNEXPECTED_TOKEN",
+        "value": 65792
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_FMT_PARSE_ERROR_START",
+        "value": 65792
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_DECIMAL_SEPARATORS",
+        "value": 65793
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_DECIMAL_SEPERATORS",
+        "value": 65793
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_EXPONENTIAL_SYMBOLS",
+        "value": 65794
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MALFORMED_EXPONENTIAL_PATTERN",
+        "value": 65795
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_PERCENT_SYMBOLS",
+        "value": 65796
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_PERMILL_SYMBOLS",
+        "value": 65797
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_MULTIPLE_PAD_SPECIFIERS",
+        "value": 65798
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_PATTERN_SYNTAX_ERROR",
+        "value": 65799
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ILLEGAL_PAD_POSITION",
+        "value": 65800
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNMATCHED_BRACES",
+        "value": 65801
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNSUPPORTED_PROPERTY",
+        "value": 65802
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_UNSUPPORTED_ATTRIBUTE",
+        "value": 65803
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_FMT_PARSE_ERROR_LIMIT",
+        "value": 65810
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_INTERNAL_ERROR",
+        "value": 66048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_ERROR_START",
+        "value": 66048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_HEX_DIGITS_EXPECTED",
+        "value": 66049
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_SEMICOLON_EXPECTED",
+        "value": 66050
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_RULE_SYNTAX",
+        "value": 66051
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_UNCLOSED_SET",
+        "value": 66052
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_ASSIGN_ERROR",
+        "value": 66053
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_VARIABLE_REDFINITION",
+        "value": 66054
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_MISMATCHED_PAREN",
+        "value": 66055
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_NEW_LINE_IN_QUOTED_STRING",
+        "value": 66056
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_UNDEFINED_VARIABLE",
+        "value": 66057
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_INIT_ERROR",
+        "value": 66058
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_RULE_EMPTY_SET",
+        "value": 66059
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_UNRECOGNIZED_OPTION",
+        "value": 66060
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_MALFORMED_RULE_TAG",
+        "value": 66061
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_BRK_ERROR_LIMIT",
+        "value": 66062
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_INTERNAL_ERROR",
+        "value": 66304
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_ERROR_START",
+        "value": 66304
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_RULE_SYNTAX",
+        "value": 66305
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_INVALID_STATE",
+        "value": 66306
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_BAD_ESCAPE_SEQUENCE",
+        "value": 66307
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_PROPERTY_SYNTAX",
+        "value": 66308
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_UNIMPLEMENTED",
+        "value": 66309
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_MISMATCHED_PAREN",
+        "value": 66310
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_NUMBER_TOO_BIG",
+        "value": 66311
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_BAD_INTERVAL",
+        "value": 66312
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_MAX_LT_MIN",
+        "value": 66313
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_INVALID_BACK_REF",
+        "value": 66314
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_INVALID_FLAG",
+        "value": 66315
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_LOOK_BEHIND_LIMIT",
+        "value": 66316
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_SET_CONTAINS_STRING",
+        "value": 66317
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_REGEX_ERROR_LIMIT",
+        "value": 66324
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_PROHIBITED_ERROR",
+        "value": 66560
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_ERROR_START",
+        "value": 66560
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_UNASSIGNED_ERROR",
+        "value": 66561
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_CHECK_BIDI_ERROR",
+        "value": 66562
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_STD3_ASCII_RULES_ERROR",
+        "value": 66563
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_ACE_PREFIX_ERROR",
+        "value": 66564
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_VERIFICATION_ERROR",
+        "value": 66565
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_LABEL_TOO_LONG_ERROR",
+        "value": 66566
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_ZERO_LENGTH_LABEL_ERROR",
+        "value": 66567
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR",
+        "value": 66568
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_IDNA_ERROR_LIMIT",
+        "value": 66569
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STRINGPREP_PROHIBITED_ERROR",
+        "value": 66560
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STRINGPREP_UNASSIGNED_ERROR",
+        "value": 66561
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_STRINGPREP_CHECK_BIDI_ERROR",
+        "value": 66562
+    },
+    {
+        "stmtType": "Constant",
+        "name": "U_ERROR_LIMIT",
+        "value": 66818
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_DEFAULT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ALLOW_UNASSIGNED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_USE_STD3_RULES",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_CHECK_BIDI",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_CHECK_CONTEXTJ",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_NONTRANSITIONAL_TO_ASCII",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_NONTRANSITIONAL_TO_UNICODE",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INTL_IDNA_VARIANT_2003",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "INTL_IDNA_VARIANT_UTS46",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_EMPTY_LABEL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_LABEL_TOO_LONG",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_DOMAIN_NAME_TOO_LONG",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_LEADING_HYPHEN",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_TRAILING_HYPHEN",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_HYPHEN_3_4",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_LEADING_COMBINING_MARK",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_DISALLOWED",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_PUNYCODE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_LABEL_HAS_DOT",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_INVALID_ACE_LABEL",
+        "value": 1024
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_BIDI",
+        "value": 2048
+    },
+    {
+        "stmtType": "Constant",
+        "name": "IDNA_ERROR_CONTEXTJ",
+        "value": 4096
+    }
+]

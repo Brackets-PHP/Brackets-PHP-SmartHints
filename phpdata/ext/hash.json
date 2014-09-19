@@ -1,0 +1,524 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "hash",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_file",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_hmac",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_hmac_file",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_init",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_update",
+        "params": [
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_update_stream",
+        "params": [
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_update_file",
+        "params": [
+            {
+                "name": "hcontext",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "scontext",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_final",
+        "params": [
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_copy",
+        "params": [
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_algos",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "hash_pbkdf2",
+        "params": [
+            {
+                "name": "algo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "salt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "iterations",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mhash_keygen_s2k",
+        "params": [
+            {
+                "name": "hash",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "salt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bytes",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mhash_get_block_size",
+        "params": [
+            {
+                "name": "hash",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mhash_get_hash_name",
+        "params": [
+            {
+                "name": "hash",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mhash_count",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mhash",
+        "params": [
+            {
+                "name": "hash",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "HASH_HMAC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_CRC32",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_MD5",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SHA1",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_HAVAL256",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_RIPEMD160",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_TIGER",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_GOST",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_CRC32B",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_HAVAL224",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_HAVAL192",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_HAVAL160",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_HAVAL128",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_TIGER128",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_TIGER160",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_MD4",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SHA256",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_ADLER32",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SHA224",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SHA512",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SHA384",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_WHIRLPOOL",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_RIPEMD128",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_RIPEMD256",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_RIPEMD320",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_SNEFRU256",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_MD2",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_FNV132",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_FNV1A32",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_FNV164",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_FNV1A64",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MHASH_JOAAT",
+        "value": 33
+    }
+]

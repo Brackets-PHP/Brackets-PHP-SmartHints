@@ -1,0 +1,880 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "pcntl_fork",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_waitpid",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "status",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wait",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_signal",
+        "params": [
+            {
+                "name": "signo",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "handler",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "restart_syscalls",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_signal_dispatch",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wifexited",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wifstopped",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wifsignaled",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wexitstatus",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wtermsig",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_wstopsig",
+        "params": [
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_exec",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "args",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "envs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_alarm",
+        "params": [
+            {
+                "name": "seconds",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_get_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_errno",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_strerror",
+        "params": [
+            {
+                "name": "errno",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_getpriority",
+        "params": [
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": "getmypid()"
+            },
+            {
+                "name": "process_identifier",
+                "type": null,
+                "byRef": false,
+                "default": "PRIO_PROCESS"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_setpriority",
+        "params": [
+            {
+                "name": "priority",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pid",
+                "type": null,
+                "byRef": false,
+                "default": "getmypid()"
+            },
+            {
+                "name": "process_identifier",
+                "type": null,
+                "byRef": false,
+                "default": "PRIO_PROCESS"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_sigprocmask",
+        "params": [
+            {
+                "name": "how",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "set",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "oldset",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_sigwaitinfo",
+        "params": [
+            {
+                "name": "set",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "siginfo",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pcntl_sigtimedwait",
+        "params": [
+            {
+                "name": "set",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "siginfo",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "seconds",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "nanoseconds",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WNOHANG",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "WUNTRACED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_IGN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_DFL",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_ERR",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGHUP",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGINT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGQUIT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGILL",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGTRAP",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGABRT",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGIOT",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGBUS",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGFPE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGKILL",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGUSR1",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGSEGV",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGUSR2",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGPIPE",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGALRM",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGTERM",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGSTKFLT",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGCLD",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGCHLD",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGCONT",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGSTOP",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGTSTP",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGTTIN",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGTTOU",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGURG",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGXCPU",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGXFSZ",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGVTALRM",
+        "value": 26
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGPROF",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGWINCH",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGPOLL",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGIO",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGPWR",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGSYS",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIGBABY",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PRIO_PGRP",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PRIO_USER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PRIO_PROCESS",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_BLOCK",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_UNBLOCK",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SIG_SETMASK",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_USER",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_KERNEL",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_QUEUE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_TIMER",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_MESGQ",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_ASYNCIO",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_SIGIO",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SI_TKILL",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_EXITED",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_KILLED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_DUMPED",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_TRAPPED",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_STOPPED",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "CLD_CONTINUED",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TRAP_BRKPT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TRAP_TRACE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_IN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_OUT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_MSG",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_ERR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_PRI",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "POLL_HUP",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_ILLOPC",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_ILLOPN",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_ILLADR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_ILLTRP",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_PRVOPC",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_PRVREG",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_COPROC",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ILL_BADSTK",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_INTDIV",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_INTOVF",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTDIV",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTOVF",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTUND",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTRES",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTINV",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "FPE_FLTSUB",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SEGV_MAPERR",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SEGV_ACCERR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "BUS_ADRALN",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "BUS_ADRERR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "BUS_OBJERR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EINTR",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ECHILD",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EINVAL",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EAGAIN",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ESRCH",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EACCES",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EPERM",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENOMEM",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_E2BIG",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EFAULT",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EIO",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EISDIR",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ELIBBAD",
+        "value": 80
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ELOOP",
+        "value": 40
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_EMFILE",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENAMETOOLONG",
+        "value": 36
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENFILE",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENOENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENOEXEC",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ENOTDIR",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PCNTL_ETXTBSY",
+        "value": 26
+    }
+]

@@ -1,0 +1,1415 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_free",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_new",
+        "params": [
+            {
+                "name": "configargs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_export",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "out",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "configargs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_export_to_file",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "configargs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_get_private",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_get_public",
+        "params": [
+            {
+                "name": "certificate",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkey_get_details",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_free_key",
+        "params": [
+            {
+                "name": "key_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_get_privatekey",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "passphrase",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_get_publickey",
+        "params": [
+            {
+                "name": "cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_read",
+        "params": [
+            {
+                "name": "x509certdata",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_free",
+        "params": [
+            {
+                "name": "x509cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_parse",
+        "params": [
+            {
+                "name": "x509cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "shortnames",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_checkpurpose",
+        "params": [
+            {
+                "name": "x509cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "purpose",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cainfo",
+                "type": "array",
+                "byRef": false,
+                "default": "array()"
+            },
+            {
+                "name": "untrustedfile",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_check_private_key",
+        "params": [
+            {
+                "name": "cert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_export",
+        "params": [
+            {
+                "name": "x509",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "notext",
+                "type": null,
+                "byRef": false,
+                "default": "&true;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_x509_export_to_file",
+        "params": [
+            {
+                "name": "x509",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "notext",
+                "type": null,
+                "byRef": false,
+                "default": "&true;"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs12_export",
+        "params": [
+            {
+                "name": "x509",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "out",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "priv_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pass",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "args",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs12_export_to_file",
+        "params": [
+            {
+                "name": "x509",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pass",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "args",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs12_read",
+        "params": [
+            {
+                "name": "pkcs12",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "certs",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "pass",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_new",
+        "params": [
+            {
+                "name": "dn",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "privkey",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "configargs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "extraattribs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_export",
+        "params": [
+            {
+                "name": "csr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "out",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "notext",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_export_to_file",
+        "params": [
+            {
+                "name": "csr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "notext",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_sign",
+        "params": [
+            {
+                "name": "csr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cacert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "days",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "configargs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "serial",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_get_subject",
+        "params": [
+            {
+                "name": "csr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "use_shortnames",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_csr_get_public_key",
+        "params": [
+            {
+                "name": "csr",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "use_shortnames",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_digest",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "raw_output",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_encrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "iv",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_decrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "iv",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_cipher_iv_length",
+        "params": [
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_sign",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "signature",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "priv_key_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "signature_alg",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_ALGO_SHA1"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_verify",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "signature",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pub_key_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "signature_alg",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_ALGO_SHA1"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_seal",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sealed_data",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "env_keys",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "pub_key_ids",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_open",
+        "params": [
+            {
+                "name": "sealed_data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "open_data",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "env_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "priv_key_id",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pbkdf2",
+        "params": [
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "salt",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "key_length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "iterations",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "digest_algorithm",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs7_verify",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "cainfo",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "extracerts",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "content",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs7_decrypt",
+        "params": [
+            {
+                "name": "infilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recipcert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recipkey",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs7_sign",
+        "params": [
+            {
+                "name": "infilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfilename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "signcert",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "privkey",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "headers",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": "PKCS7_DETACHED"
+            },
+            {
+                "name": "extracerts",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_pkcs7_encrypt",
+        "params": [
+            {
+                "name": "infile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "outfile",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recipcerts",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "headers",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "cipherid",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_CIPHER_RC2_40"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_private_encrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "crypted",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "padding",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_PKCS1_PADDING"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_private_decrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "decrypted",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "padding",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_PKCS1_PADDING"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_public_encrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "crypted",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "padding",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_PKCS1_PADDING"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_public_decrypt",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "decrypted",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "padding",
+                "type": null,
+                "byRef": false,
+                "default": "OPENSSL_PKCS1_PADDING"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_get_md_methods",
+        "params": [
+            {
+                "name": "aliases",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_get_cipher_methods",
+        "params": [
+            {
+                "name": "aliases",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_dh_compute_key",
+        "params": [
+            {
+                "name": "pub_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dh_key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_random_pseudo_bytes",
+        "params": [
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "crypto_strong",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "openssl_error_string",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_VERSION_TEXT",
+        "value": "OpenSSL 1.0.1e 11 Feb 2013"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_VERSION_NUMBER",
+        "value": 268439647
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_SSL_CLIENT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_SSL_SERVER",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_NS_SSL_SERVER",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_SMIME_SIGN",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_SMIME_ENCRYPT",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_CRL_SIGN",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "X509_PURPOSE_ANY",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_SHA1",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_MD5",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_MD4",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_DSS1",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_SHA224",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_SHA256",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_SHA384",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_SHA512",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ALGO_RMD160",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_DETACHED",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_TEXT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOINTERN",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOVERIFY",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOCHAIN",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOCERTS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOATTR",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_BINARY",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PKCS7_NOSIGS",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_PKCS1_PADDING",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_SSLV23_PADDING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_NO_PADDING",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_PKCS1_OAEP_PADDING",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_RC2_40",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_RC2_128",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_RC2_64",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_DES",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_3DES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_AES_128_CBC",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_AES_192_CBC",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_CIPHER_AES_256_CBC",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_KEYTYPE_RSA",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_KEYTYPE_DSA",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_KEYTYPE_DH",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_KEYTYPE_EC",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_RAW_DATA",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_ZERO_PADDING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "OPENSSL_TLSEXT_SERVER_NAME",
+        "value": 1
+    }
+]

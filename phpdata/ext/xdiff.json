@@ -1,0 +1,32 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "xdiff_string_diff",
+        "params": [
+            {
+                "name": "old_data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "new_data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "context",
+                "type": null,
+                "byRef": false,
+                "default": 3
+            },
+            {
+                "name": "minimal",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    }
+]

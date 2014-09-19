@@ -1,0 +1,1132 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "ldap_connect",
+        "params": [
+            {
+                "name": "hostname",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "port",
+                "type": null,
+                "byRef": false,
+                "default": 389
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_close",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_bind",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "bind_rdn",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "bind_password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_sasl_bind",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "binddn",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "password",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sasl_mech",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sasl_realm",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sasl_authc_id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sasl_authz_id",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "props",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_unbind",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_read",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base_dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attributes",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "attrsonly",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sizelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "timelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "deref",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_list",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base_dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attributes",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "attrsonly",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sizelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "timelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "deref",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_search",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "base_dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "filter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attributes",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "attrsonly",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "sizelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "timelimit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "deref",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_free_result",
+        "params": [
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_count_entries",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_first_entry",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_next_entry",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_entries",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_first_attribute",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_next_attribute",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_attributes",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_values",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attribute",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_values_len",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attribute",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_dn",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result_entry_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_explode_dn",
+        "params": [
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "with_attrib",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_dn2ufn",
+        "params": [
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_add",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_delete",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_modify",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_mod_add",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_mod_replace",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_mod_del",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_errno",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_err2str",
+        "params": [
+            {
+                "name": "errno",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_error",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_compare",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "attribute",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_sort",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "sortfilter",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_rename",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "dn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "newrdn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "newparent",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "deleteoldrdn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_get_option",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "retval",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_set_option",
+        "params": [
+            {
+                "name": "link_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "newval",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_first_reference",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_next_reference",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_parse_reference",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "entry",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "referrals",
+                "type": "array",
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_parse_result",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "errcode",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "matcheddn",
+                "type": null,
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "errmsg",
+                "type": null,
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "referrals",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_start_tls",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_set_rebind_proc",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "callback",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_control_paged_result",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pagesize",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "iscritical",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "cookie",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "ldap_control_paged_result_response",
+        "params": [
+            {
+                "name": "link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cookie",
+                "type": null,
+                "byRef": true,
+                "default": null
+            },
+            {
+                "name": "estimated",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_DEREF_NEVER",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_DEREF_SEARCHING",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_DEREF_FINDING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_DEREF_ALWAYS",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_DEREF",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_SIZELIMIT",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_TIMELIMIT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_NETWORK_TIMEOUT",
+        "value": 20485
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_PROTOCOL_VERSION",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_ERROR_NUMBER",
+        "value": 49
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_REFERRALS",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_RESTART",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_HOST_NAME",
+        "value": 48
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_ERROR_STRING",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_MATCHED_DN",
+        "value": 51
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_SERVER_CONTROLS",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_CLIENT_CONTROLS",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_DEBUG_LEVEL",
+        "value": 20481
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_X_SASL_MECH",
+        "value": 24832
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_X_SASL_REALM",
+        "value": 24833
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_X_SASL_AUTHCID",
+        "value": 24834
+    },
+    {
+        "stmtType": "Constant",
+        "name": "LDAP_OPT_X_SASL_AUTHZID",
+        "value": 24835
+    }
+]

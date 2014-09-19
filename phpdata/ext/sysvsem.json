@@ -1,0 +1,68 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "sem_get",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "max_acquire",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            },
+            {
+                "name": "perm",
+                "type": null,
+                "byRef": false,
+                "default": 438
+            },
+            {
+                "name": "auto_release",
+                "type": null,
+                "byRef": false,
+                "default": 1
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sem_acquire",
+        "params": [
+            {
+                "name": "sem_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sem_release",
+        "params": [
+            {
+                "name": "sem_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "sem_remove",
+        "params": [
+            {
+                "name": "sem_identifier",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

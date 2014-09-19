@@ -1,0 +1,691 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "SimpleXMLElement",
+        "fqn": "\\SimpleXMLElement",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 33,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "data_is_url",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Creates a new SimpleXMLElement object\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.construct.php\r\n * @param $data\r\n * @param $options [optional]\r\n * @param $data_is_url [optional]\r\n * @param $ns [optional]\r\n * @param $is_prefix [optional]\r\n *\/"
+            },
+            {
+                "name": "asXML",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Return a well-formed XML string based on SimpleXML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.asxml.php\r\n * @param string $filename [optional] <p>\r\n * If specified, the function writes the data to the file rather than\r\n * returning it.\r\n * <\/p>\r\n * @return mixed If the <i>filename<\/i> isn't specified, this function\r\n * returns a string on success and <b>FALSE<\/b> on error. If the\r\n * parameter is specified, it returns <b>TRUE<\/b> if the file was written\r\n * successfully and <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "saveXML",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Alias of <b>SimpleXMLElement::asXML<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.savexml.php\r\n * @param $filename [optional]\r\n *\/"
+            },
+            {
+                "name": "xpath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "path",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Runs XPath query on XML data\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.xpath.php\r\n * @param string $path <p>\r\n * An XPath path\r\n * <\/p>\r\n * @return array an array of SimpleXMLElement objects or <b>FALSE<\/b> in\r\n * case of an error.\r\n *\/"
+            },
+            {
+                "name": "registerXPathNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Creates a prefix\/ns context for the next XPath query\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.registerxpathnamespace.php\r\n * @param string $prefix <p>\r\n * The namespace prefix to use in the XPath query for the namespace given in\r\n * <i>ns<\/i>.\r\n * <\/p>\r\n * @param string $ns <p>\r\n * The namespace to use for the XPath query. This must match a namespace in\r\n * use by the XML document or the XPath query using\r\n * <i>prefix<\/i> will not return any results.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "attributes",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Identifies an element's attributes\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.attributes.php\r\n * @param string $ns [optional] <p>\r\n * An optional namespace for the retrieved attributes\r\n * <\/p>\r\n * @param bool $is_prefix [optional] <p>\r\n * Default to <b>FALSE<\/b>\r\n * <\/p>\r\n * @return SimpleXMLElement a <b>SimpleXMLElement<\/b> object that can be\r\n * iterated over to loop through the attributes on the tag.\r\n * <\/p>\r\n * <p>\r\n * Returns <b>NULL<\/b> if called on a <b>SimpleXMLElement<\/b>\r\n * object that already represents an attribute and not a tag.\r\n *\/"
+            },
+            {
+                "name": "children",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Finds children of given node\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.children.php\r\n * @param string $ns [optional] <p>\r\n * An XML namespace.\r\n * <\/p>\r\n * @param bool $is_prefix [optional] <p>\r\n * If <i>is_prefix<\/i> is <b>TRUE<\/b>,\r\n * <i>ns<\/i> will be regarded as a prefix. If <b>FALSE<\/b>,\r\n * <i>ns<\/i> will be regarded as a namespace\r\n * URL.\r\n * <\/p>\r\n * @return SimpleXMLElement a <b>SimpleXMLElement<\/b> element, whether the node\r\n * has children or not.\r\n *\/"
+            },
+            {
+                "name": "getNamespaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "recursive",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Returns namespaces used in document\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getnamespaces.php\r\n * @param bool $recursive [optional] <p>\r\n * If specified, returns all namespaces used in parent and child nodes.\r\n * Otherwise, returns only namespaces used in root node.\r\n * <\/p>\r\n * @return array The getNamespaces method returns an array of\r\n * namespace names with their associated URIs.\r\n *\/"
+            },
+            {
+                "name": "getDocNamespaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "recursive",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "from_root",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Returns namespaces declared in document\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getdocnamespaces.php\r\n * @param bool $recursive [optional] <p>\r\n * If specified, returns all namespaces declared in parent and child nodes.\r\n * Otherwise, returns only namespaces declared in root node.\r\n * <\/p>\r\n * @param bool $from_root [optional] <p>\r\n * Allows you to recursively check namespaces under a child node instead of\r\n * from the root of the XML doc.\r\n * <\/p>\r\n * @return array The getDocNamespaces method returns an array\r\n * of namespace names with their associated URIs.\r\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Gets the name of the XML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getname.php\r\n * @return string The getName method returns as a string the\r\n * name of the XML tag referenced by the SimpleXMLElement object.\r\n *\/"
+            },
+            {
+                "name": "addChild",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "namespace",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Adds a child element to the XML node\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.addchild.php\r\n * @param string $name <p>\r\n * The name of the child element to add.\r\n * <\/p>\r\n * @param string $value [optional] <p>\r\n * If specified, the value of the child element.\r\n * <\/p>\r\n * @param string $namespace [optional] <p>\r\n * If specified, the namespace to which the child element belongs.\r\n * <\/p>\r\n * @return SimpleXMLElement The addChild method returns a SimpleXMLElement\r\n * object representing the child added to the XML node.\r\n *\/"
+            },
+            {
+                "name": "addAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "namespace",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Adds an attribute to the SimpleXML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.addattribute.php\r\n * @param string $name <p>\r\n * The name of the attribute to add.\r\n * <\/p>\r\n * @param string $value [optional] <p>\r\n * The value of the attribute.\r\n * <\/p>\r\n * @param string $namespace [optional] <p>\r\n * If specified, the namespace to which the attribute belongs.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (No version information available, might only be in SVN)<br\/>\r\n * Returns the string content\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.tostring.php\r\n * @return string the string content on success or an empty string on failure.\r\n *\/"
+            },
+            {
+                "name": "count",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Counts the children of an element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.count.php\r\n * @return int the number of elements of an element.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SimpleXMLIterator",
+        "fqn": "\\SimpleXMLIterator",
+        "type": 0,
+        "extends": "SimpleXMLElement",
+        "methods": [
+            {
+                "name": "rewind",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Rewind to the first element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.rewind.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "valid",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Check whether the current element is valid\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.valid.php\r\n * @return bool <b>TRUE<\/b> if the current element is valid, otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "current",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns the current element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.current.php\r\n * @return mixed the current element as a <b>SimpleXMLIterator<\/b> object or <b>NULL<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "key",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Return current key\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.key.php\r\n * @return mixed the XML tag name of the element referenced by the current <b>SimpleXMLIterator<\/b> object or <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "next",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move to next element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.next.php\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "hasChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks whether the current element has sub elements.\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.haschildren.php\r\n * @return bool <b>TRUE<\/b> if the current element has sub-elements, otherwise <b>FALSE<\/b>\r\n *\/"
+            },
+            {
+                "name": "getChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns the sub-elements of the current element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmliterator.getchildren.php\r\n * @return SimpleXMLIterator a <b>SimpleXMLIterator<\/b> object containing\r\n * the sub-elements of the current element.\r\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 33,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "data_is_url",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Creates a new SimpleXMLElement object\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.construct.php\r\n * @param $data\r\n * @param $options [optional]\r\n * @param $data_is_url [optional]\r\n * @param $ns [optional]\r\n * @param $is_prefix [optional]\r\n *\/"
+            },
+            {
+                "name": "asXML",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Return a well-formed XML string based on SimpleXML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.asxml.php\r\n * @param string $filename [optional] <p>\r\n * If specified, the function writes the data to the file rather than\r\n * returning it.\r\n * <\/p>\r\n * @return mixed If the <i>filename<\/i> isn't specified, this function\r\n * returns a string on success and <b>FALSE<\/b> on error. If the\r\n * parameter is specified, it returns <b>TRUE<\/b> if the file was written\r\n * successfully and <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "saveXML",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Alias of <b>SimpleXMLElement::asXML<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.savexml.php\r\n * @param $filename [optional]\r\n *\/"
+            },
+            {
+                "name": "xpath",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "path",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Runs XPath query on XML data\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.xpath.php\r\n * @param string $path <p>\r\n * An XPath path\r\n * <\/p>\r\n * @return array an array of SimpleXMLElement objects or <b>FALSE<\/b> in\r\n * case of an error.\r\n *\/"
+            },
+            {
+                "name": "registerXPathNamespace",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Creates a prefix\/ns context for the next XPath query\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.registerxpathnamespace.php\r\n * @param string $prefix <p>\r\n * The namespace prefix to use in the XPath query for the namespace given in\r\n * <i>ns<\/i>.\r\n * <\/p>\r\n * @param string $ns <p>\r\n * The namespace to use for the XPath query. This must match a namespace in\r\n * use by the XML document or the XPath query using\r\n * <i>prefix<\/i> will not return any results.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "attributes",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Identifies an element's attributes\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.attributes.php\r\n * @param string $ns [optional] <p>\r\n * An optional namespace for the retrieved attributes\r\n * <\/p>\r\n * @param bool $is_prefix [optional] <p>\r\n * Default to <b>FALSE<\/b>\r\n * <\/p>\r\n * @return SimpleXMLElement a <b>SimpleXMLElement<\/b> object that can be\r\n * iterated over to loop through the attributes on the tag.\r\n * <\/p>\r\n * <p>\r\n * Returns <b>NULL<\/b> if called on a <b>SimpleXMLElement<\/b>\r\n * object that already represents an attribute and not a tag.\r\n *\/"
+            },
+            {
+                "name": "children",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "ns",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "is_prefix",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Finds children of given node\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.children.php\r\n * @param string $ns [optional] <p>\r\n * An XML namespace.\r\n * <\/p>\r\n * @param bool $is_prefix [optional] <p>\r\n * If <i>is_prefix<\/i> is <b>TRUE<\/b>,\r\n * <i>ns<\/i> will be regarded as a prefix. If <b>FALSE<\/b>,\r\n * <i>ns<\/i> will be regarded as a namespace\r\n * URL.\r\n * <\/p>\r\n * @return SimpleXMLElement a <b>SimpleXMLElement<\/b> element, whether the node\r\n * has children or not.\r\n *\/"
+            },
+            {
+                "name": "getNamespaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "recursive",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Returns namespaces used in document\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getnamespaces.php\r\n * @param bool $recursive [optional] <p>\r\n * If specified, returns all namespaces used in parent and child nodes.\r\n * Otherwise, returns only namespaces used in root node.\r\n * <\/p>\r\n * @return array The getNamespaces method returns an array of\r\n * namespace names with their associated URIs.\r\n *\/"
+            },
+            {
+                "name": "getDocNamespaces",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "recursive",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "from_root",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Returns namespaces declared in document\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getdocnamespaces.php\r\n * @param bool $recursive [optional] <p>\r\n * If specified, returns all namespaces declared in parent and child nodes.\r\n * Otherwise, returns only namespaces declared in root node.\r\n * <\/p>\r\n * @param bool $from_root [optional] <p>\r\n * Allows you to recursively check namespaces under a child node instead of\r\n * from the root of the XML doc.\r\n * <\/p>\r\n * @return array The getDocNamespaces method returns an array\r\n * of namespace names with their associated URIs.\r\n *\/"
+            },
+            {
+                "name": "getName",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Gets the name of the XML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.getname.php\r\n * @return string The getName method returns as a string the\r\n * name of the XML tag referenced by the SimpleXMLElement object.\r\n *\/"
+            },
+            {
+                "name": "addChild",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "namespace",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Adds a child element to the XML node\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.addchild.php\r\n * @param string $name <p>\r\n * The name of the child element to add.\r\n * <\/p>\r\n * @param string $value [optional] <p>\r\n * If specified, the value of the child element.\r\n * <\/p>\r\n * @param string $namespace [optional] <p>\r\n * If specified, the namespace to which the child element belongs.\r\n * <\/p>\r\n * @return SimpleXMLElement The addChild method returns a SimpleXMLElement\r\n * object representing the child added to the XML node.\r\n *\/"
+            },
+            {
+                "name": "addAttribute",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "name",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "namespace",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Adds an attribute to the SimpleXML element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.addattribute.php\r\n * @param string $name <p>\r\n * The name of the attribute to add.\r\n * <\/p>\r\n * @param string $value [optional] <p>\r\n * The value of the attribute.\r\n * <\/p>\r\n * @param string $namespace [optional] <p>\r\n * If specified, the namespace to which the attribute belongs.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+            },
+            {
+                "name": "__toString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (No version information available, might only be in SVN)<br\/>\r\n * Returns the string content\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.tostring.php\r\n * @return string the string content on success or an empty string on failure.\r\n *\/"
+            },
+            {
+                "name": "count",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Counts the children of an element\r\n * @link http:\/\/php.net\/manual\/en\/simplexmlelement.count.php\r\n * @return int the number of elements of an element.\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "simplexml_load_file",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": "SimpleXMLElement"
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "ns",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_prefix",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "simplexml_load_string",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": "SimpleXMLElement"
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "ns",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "is_prefix",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "simplexml_import_dom",
+        "params": [
+            {
+                "name": "node",
+                "type": "DOMNode",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "class_name",
+                "type": null,
+                "byRef": false,
+                "default": "SimpleXMLElement"
+            }
+        ]
+    }
+]

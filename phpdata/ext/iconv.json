@@ -1,0 +1,250 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "iconv",
+        "params": [
+            {
+                "name": "in_charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "out_charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_get_encoding",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": "all"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_set_encoding",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_strlen",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_substr",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": "iconv_strlen($str, $charset)"
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_strpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_strrpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_mime_encode",
+        "params": [
+            {
+                "name": "field_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "field_value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "preferences",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_mime_decode",
+        "params": [
+            {
+                "name": "encoded_header",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "iconv_mime_decode_headers",
+        "params": [
+            {
+                "name": "encoded_headers",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "ini_get(\"iconv.internal_encoding\")"
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ICONV_IMPL",
+        "value": "glibc"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ICONV_VERSION",
+        "value": 2.17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ICONV_MIME_DECODE_STRICT",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "ICONV_MIME_DECODE_CONTINUE_ON_ERROR",
+        "value": 2
+    }
+]

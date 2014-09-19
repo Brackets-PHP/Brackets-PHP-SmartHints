@@ -1,0 +1,1585 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "Svn",
+        "fqn": "\\Svn",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "cat",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "checkout",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "log",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "status",
+                "type": 9,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NON_RECURSIVE",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "DISCOVER_CHANGED_PATHS",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "OMIT_MESSAGES",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "STOP_ON_COPY",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "ALL",
+                "value": 16,
+                "doc": null
+            },
+            {
+                "name": "SHOW_UPDATES",
+                "value": 32,
+                "doc": null
+            },
+            {
+                "name": "NO_IGNORE",
+                "value": 64,
+                "doc": null
+            },
+            {
+                "name": "IGNORE_EXTERNALS",
+                "value": 128,
+                "doc": null
+            },
+            {
+                "name": "INITIAL",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "HEAD",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "BASE",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "COMMITTED",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "PREV",
+                "value": null,
+                "doc": null
+            },
+            {
+                "name": "UNSPECIFIED",
+                "value": null,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SvnWc",
+        "fqn": "\\SvnWc",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NONE",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "UNVERSIONED",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "NORMAL",
+                "value": 3,
+                "doc": null
+            },
+            {
+                "name": "ADDED",
+                "value": 4,
+                "doc": null
+            },
+            {
+                "name": "MISSING",
+                "value": 5,
+                "doc": null
+            },
+            {
+                "name": "DELETED",
+                "value": 6,
+                "doc": null
+            },
+            {
+                "name": "REPLACED",
+                "value": 7,
+                "doc": null
+            },
+            {
+                "name": "MODIFIED",
+                "value": 8,
+                "doc": null
+            },
+            {
+                "name": "MERGED",
+                "value": 9,
+                "doc": null
+            },
+            {
+                "name": "CONFLICTED",
+                "value": 10,
+                "doc": null
+            },
+            {
+                "name": "IGNORED",
+                "value": 11,
+                "doc": null
+            },
+            {
+                "name": "OBSTRUCTED",
+                "value": 12,
+                "doc": null
+            },
+            {
+                "name": "EXTERNAL",
+                "value": 13,
+                "doc": null
+            },
+            {
+                "name": "INCOMPLETE",
+                "value": 14,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SvnWcSchedule",
+        "fqn": "\\SvnWcSchedule",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NORMAL",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "ADD",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "DELETE",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "REPLACE",
+                "value": 3,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "SvnNode",
+        "fqn": "\\SvnNode",
+        "type": 0,
+        "extends": "",
+        "methods": [
+
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "NONE",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "FILE",
+                "value": 1,
+                "doc": null
+            },
+            {
+                "name": "DIR",
+                "value": 2,
+                "doc": null
+            },
+            {
+                "name": "UNKNOWN",
+                "value": 3,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_checkout",
+        "params": [
+            {
+                "name": "repos",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "targetpath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revision",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_cat",
+        "params": [
+            {
+                "name": "repos_url",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revision_no",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_ls",
+        "params": [
+            {
+                "name": "repos_url",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revision_no",
+                "type": null,
+                "byRef": false,
+                "default": "SVN_REVISION_HEAD"
+            },
+            {
+                "name": "recurse",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "peg",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_log",
+        "params": [
+            {
+                "name": "repos_url",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start_revision",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "end_revision",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": "SVN_DISCOVER_CHANGED_PATHS | SVN_STOP_ON_COPY"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_auth_set_parameter",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_auth_get_parameter",
+        "params": [
+            {
+                "name": "key",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_client_version",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_config_ensure",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_diff",
+        "params": [
+            {
+                "name": "path1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rev1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rev2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_cleanup",
+        "params": [
+            {
+                "name": "workingdir",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_revert",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recursive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_resolved",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_commit",
+        "params": [
+            {
+                "name": "log",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "targets",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recursive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_lock",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_unlock",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_add",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "recursive",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "force",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_status",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flags",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_update",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revno",
+                "type": null,
+                "byRef": false,
+                "default": "SVN_REVISION_HEAD"
+            },
+            {
+                "name": "recurse",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_import",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "url",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "nonrecursive",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_info",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_export",
+        "params": [
+            {
+                "name": "frompath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "topath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "working_copy",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "revision_no",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_copy",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_switch",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_blame",
+        "params": [
+            {
+                "name": "repository_url",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revision_no",
+                "type": null,
+                "byRef": false,
+                "default": "SVN_REVISION_HEAD"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_delete",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "force",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_mkdir",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "log_message",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_move",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_proplist",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_propget",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_create",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "config",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "fsconfig",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_recover",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_hotcopy",
+        "params": [
+            {
+                "name": "repospath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "destpath",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "cleanlogs",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_open",
+        "params": [
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_fs",
+        "params": [
+            {
+                "name": "repos",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_fs_begin_txn_for_commit",
+        "params": [
+            {
+                "name": "repos",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rev",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "author",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "log_msg",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_repos_fs_commit_txn",
+        "params": [
+            {
+                "name": "txn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_revision_root",
+        "params": [
+            {
+                "name": "fs",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revnum",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_check_path",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_revision_prop",
+        "params": [
+            {
+                "name": "fs",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "revnum",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "propname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_dir_entries",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_node_created_rev",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_youngest_rev",
+        "params": [
+            {
+                "name": "fs",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_file_contents",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_file_length",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_txn_root",
+        "params": [
+            {
+                "name": "txn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_make_file",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_make_dir",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_apply_text",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_copy",
+        "params": [
+            {
+                "name": "from_root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "from_path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "to_root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "to_path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_delete",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_begin_txn2",
+        "params": [
+            {
+                "name": "repos",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "rev",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_is_dir",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_is_file",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_node_prop",
+        "params": [
+            {
+                "name": "fsroot",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "propname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_change_node_prop",
+        "params": [
+            {
+                "name": "root",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_contents_changed",
+        "params": [
+            {
+                "name": "root1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "root2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_props_changed",
+        "params": [
+            {
+                "name": "root1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path1",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "root2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "path2",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "svn_fs_abort_txn",
+        "params": [
+            {
+                "name": "txn",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_DEFAULT_USERNAME",
+        "value": "svn:auth:username"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_DEFAULT_PASSWORD",
+        "value": "svn:auth:password"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_NON_INTERACTIVE",
+        "value": "svn:auth:non-interactive"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_DONT_STORE_PASSWORDS",
+        "value": "svn:auth:dont-store-passwords"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_NO_AUTH_CACHE",
+        "value": "svn:auth:no-auth-cache"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_SSL_SERVER_FAILURES",
+        "value": "svn:auth:ssl:failures"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_SSL_SERVER_CERT_INFO",
+        "value": "svn:auth:ssl:cert-info"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_CONFIG",
+        "value": "svn:auth:config-category-servers"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_SERVER_GROUP",
+        "value": "svn:auth:server-group"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_AUTH_PARAM_CONFIG_DIR",
+        "value": "svn:auth:config-dir"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PHP_SVN_AUTH_PARAM_IGNORE_SSL_VERIFY_ERRORS",
+        "value": "php:svn:auth:ignore-ssl-verify-errors"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_FS_CONFIG_FS_TYPE",
+        "value": "fs-type"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_FS_TYPE_BDB",
+        "value": "bdb"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_FS_TYPE_FSFS",
+        "value": "fsfs"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_PROP_REVISION_DATE",
+        "value": "svn:date"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_PROP_REVISION_ORIG_DATE",
+        "value": "svn:original-date"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_PROP_REVISION_AUTHOR",
+        "value": "svn:author"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_PROP_REVISION_LOG",
+        "value": "svn:log"
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_INITIAL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_HEAD",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_BASE",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_COMMITTED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_PREV",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_REVISION_UNSPECIFIED",
+        "value": null
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NON_RECURSIVE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_DISCOVER_CHANGED_PATHS",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_OMIT_MESSAGES",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_STOP_ON_COPY",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_ALL",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_SHOW_UPDATES",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NO_IGNORE",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_NONE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_UNVERSIONED",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_NORMAL",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_ADDED",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_MISSING",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_DELETED",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_REPLACED",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_MODIFIED",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_MERGED",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_CONFLICTED",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_IGNORED",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_OBSTRUCTED",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_EXTERNAL",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_STATUS_INCOMPLETE",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NODE_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NODE_FILE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NODE_DIR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_NODE_UNKNOWN",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_SCHEDULE_NORMAL",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_SCHEDULE_ADD",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_SCHEDULE_DELETE",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "SVN_WC_SCHEDULE_REPLACE",
+        "value": 3
+    }
+]

@@ -1,0 +1,284 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "JsonIncrementalParser",
+        "fqn": "\\JsonIncrementalParser",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "depth",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $depth [optional]\r\n * @param $options [optional]\r\n *\/"
+            },
+            {
+                "name": "getError",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "reset",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": null
+            },
+            {
+                "name": "parse",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "json",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $json\r\n *\/"
+            },
+            {
+                "name": "parseFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $filename\r\n *\/"
+            },
+            {
+                "name": "get",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "options",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * @param $options [optional]\r\n *\/"
+            }
+        ],
+        "properties": [
+
+        ],
+        "constants": [
+            {
+                "name": "JSON_PARSER_SUCCESS",
+                "value": 0,
+                "doc": null
+            },
+            {
+                "name": "JSON_PARSER_CONTINUE",
+                "value": 1,
+                "doc": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "json_encode",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "depth",
+                "type": null,
+                "byRef": false,
+                "default": 512
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "json_decode",
+        "params": [
+            {
+                "name": "json",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "assoc",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "depth",
+                "type": null,
+                "byRef": false,
+                "default": 512
+            },
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "json_last_error",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "json_last_error_msg",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_HEX_TAG",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_HEX_AMP",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_HEX_APOS",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_HEX_QUOT",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_FORCE_OBJECT",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_NUMERIC_CHECK",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_UNESCAPED_SLASHES",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_PRETTY_PRINT",
+        "value": 128
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_UNESCAPED_UNICODE",
+        "value": 256
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_PARTIAL_OUTPUT_ON_ERROR",
+        "value": 512
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_STATE_MISMATCH",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_CTRL_CHAR",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_UTF8",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_RECURSION",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_INF_OR_NAN",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_UNSUPPORTED_TYPE",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_NONE",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_DEPTH",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_ERROR_SYNTAX",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_OBJECT_AS_ARRAY",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_PARSER_NOTSTRICT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "JSON_BIGINT_AS_STRING",
+        "value": 2
+    }
+]

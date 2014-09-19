@@ -1,0 +1,676 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "token_get_all",
+        "params": [
+            {
+                "name": "source",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "token_name",
+        "params": [
+            {
+                "name": "token",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_REQUIRE_ONCE",
+        "value": 258
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_REQUIRE",
+        "value": 259
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_EVAL",
+        "value": 260
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INCLUDE_ONCE",
+        "value": 261
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INCLUDE",
+        "value": 262
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LOGICAL_OR",
+        "value": 263
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LOGICAL_XOR",
+        "value": 264
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LOGICAL_AND",
+        "value": 265
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PRINT",
+        "value": 266
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_SR_EQUAL",
+        "value": 268
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_SL_EQUAL",
+        "value": 269
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_XOR_EQUAL",
+        "value": 270
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_OR_EQUAL",
+        "value": 271
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_AND_EQUAL",
+        "value": 272
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_MOD_EQUAL",
+        "value": 273
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CONCAT_EQUAL",
+        "value": 274
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DIV_EQUAL",
+        "value": 275
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_MUL_EQUAL",
+        "value": 276
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_MINUS_EQUAL",
+        "value": 277
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PLUS_EQUAL",
+        "value": 278
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_BOOLEAN_OR",
+        "value": 279
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_BOOLEAN_AND",
+        "value": 280
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_NOT_IDENTICAL",
+        "value": 281
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_IDENTICAL",
+        "value": 282
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_NOT_EQUAL",
+        "value": 283
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_EQUAL",
+        "value": 284
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_GREATER_OR_EQUAL",
+        "value": 285
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IS_SMALLER_OR_EQUAL",
+        "value": 286
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_SR",
+        "value": 287
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_SL",
+        "value": 288
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INSTANCEOF",
+        "value": 289
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_UNSET_CAST",
+        "value": 290
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_BOOL_CAST",
+        "value": 291
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_OBJECT_CAST",
+        "value": 292
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ARRAY_CAST",
+        "value": 293
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_STRING_CAST",
+        "value": 294
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DOUBLE_CAST",
+        "value": 295
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INT_CAST",
+        "value": 296
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DEC",
+        "value": 297
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INC",
+        "value": 298
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CLONE",
+        "value": 299
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_NEW",
+        "value": 300
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_EXIT",
+        "value": 301
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IF",
+        "value": 302
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ELSEIF",
+        "value": 303
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ELSE",
+        "value": 304
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDIF",
+        "value": 305
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LNUMBER",
+        "value": 306
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DNUMBER",
+        "value": 307
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_STRING",
+        "value": 308
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_STRING_VARNAME",
+        "value": 309
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_VARIABLE",
+        "value": 310
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_NUM_STRING",
+        "value": 311
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INLINE_HTML",
+        "value": 312
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CHARACTER",
+        "value": 313
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_BAD_CHARACTER",
+        "value": 314
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENCAPSED_AND_WHITESPACE",
+        "value": 315
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CONSTANT_ENCAPSED_STRING",
+        "value": 316
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ECHO",
+        "value": 317
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DO",
+        "value": 318
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_WHILE",
+        "value": 319
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDWHILE",
+        "value": 320
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FOR",
+        "value": 321
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDFOR",
+        "value": 322
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FOREACH",
+        "value": 323
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDFOREACH",
+        "value": 324
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DECLARE",
+        "value": 325
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDDECLARE",
+        "value": 326
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_AS",
+        "value": 327
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_SWITCH",
+        "value": 328
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ENDSWITCH",
+        "value": 329
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CASE",
+        "value": 330
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DEFAULT",
+        "value": 331
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_BREAK",
+        "value": 332
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CONTINUE",
+        "value": 333
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_GOTO",
+        "value": 334
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FUNCTION",
+        "value": 335
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CONST",
+        "value": 336
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_RETURN",
+        "value": 337
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_YIELD",
+        "value": 267
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_TRY",
+        "value": 338
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CATCH",
+        "value": 339
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FINALLY",
+        "value": 340
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_THROW",
+        "value": 341
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_USE",
+        "value": 342
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INSTEADOF",
+        "value": 343
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_GLOBAL",
+        "value": 344
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PUBLIC",
+        "value": 345
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PROTECTED",
+        "value": 346
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PRIVATE",
+        "value": 347
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FINAL",
+        "value": 348
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ABSTRACT",
+        "value": 349
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_STATIC",
+        "value": 350
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_VAR",
+        "value": 351
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_UNSET",
+        "value": 352
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ISSET",
+        "value": 353
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_EMPTY",
+        "value": 354
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_HALT_COMPILER",
+        "value": 355
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CLASS",
+        "value": 356
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_TRAIT",
+        "value": 357
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_INTERFACE",
+        "value": 358
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_EXTENDS",
+        "value": 359
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_IMPLEMENTS",
+        "value": 360
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_OBJECT_OPERATOR",
+        "value": 361
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DOUBLE_ARROW",
+        "value": 362
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LIST",
+        "value": 363
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_ARRAY",
+        "value": 364
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CALLABLE",
+        "value": 365
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CLASS_C",
+        "value": 366
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_TRAIT_C",
+        "value": 367
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_METHOD_C",
+        "value": 368
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FUNC_C",
+        "value": 369
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_LINE",
+        "value": 370
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_FILE",
+        "value": 371
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_COMMENT",
+        "value": 372
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DOC_COMMENT",
+        "value": 373
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_OPEN_TAG",
+        "value": 374
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_OPEN_TAG_WITH_ECHO",
+        "value": 375
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CLOSE_TAG",
+        "value": 376
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_WHITESPACE",
+        "value": 377
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_START_HEREDOC",
+        "value": 378
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_END_HEREDOC",
+        "value": 379
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DOLLAR_OPEN_CURLY_BRACES",
+        "value": 380
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_CURLY_OPEN",
+        "value": 381
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_PAAMAYIM_NEKUDOTAYIM",
+        "value": 382
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_NAMESPACE",
+        "value": 383
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_NS_C",
+        "value": 384
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DIR",
+        "value": 385
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_NS_SEPARATOR",
+        "value": 386
+    },
+    {
+        "stmtType": "Constant",
+        "name": "T_DOUBLE_COLON",
+        "value": 382
+    }
+]

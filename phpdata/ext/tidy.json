@@ -1,0 +1,1388 @@
+[
+    {
+        "stmtType": "Class",
+        "name": "tidy",
+        "fqn": "\\tidy",
+        "type": 0,
+        "extends": "",
+        "methods": [
+            {
+                "name": "getOpt",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "option",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Returns the value of the specified configuration option for the tidy document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getopt.php\r\n * @param string $option <p>\r\n * You will find a list with each configuration option and their types\r\n * at: http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @return mixed the value of the specified <i>option<\/i>.\r\n * The return type depends on the type of the specified one.\r\n *\/"
+            },
+            {
+                "name": "cleanRepair",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Execute configured cleanup and repair operations on parsed markup\r\n * @link http:\/\/php.net\/manual\/en\/tidy.cleanrepair.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "parseFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "config",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Parse markup in file or URI\r\n * @link http:\/\/php.net\/manual\/en\/tidy.parsefile.php\r\n * @param string $filename <p>\r\n * If the <i>filename<\/i> parameter is given, this function\r\n * will also read that file and initialize the object with the file,\r\n * acting like <b>tidy_parse_file<\/b>.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, see\r\n * http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "parseString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "input",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "config",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Parse a document stored in a string\r\n * @link http:\/\/php.net\/manual\/en\/tidy.parsestring.php\r\n * @param string $input <p>\r\n * The data to be parsed.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @return bool a new <b>tidy<\/b> instance.\r\n *\/"
+            },
+            {
+                "name": "repairString",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "data",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "config",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Repair a string using an optionally provided configuration file\r\n * @link http:\/\/php.net\/manual\/en\/tidy.repairstring.php\r\n * @param string $data <p>\r\n * The data to be repaired.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for\r\n * an explanation about each option.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @return string the repaired string.\r\n *\/"
+            },
+            {
+                "name": "repairFile",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    },
+                    {
+                        "name": "config",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Repair a file and return it as a string\r\n * @link http:\/\/php.net\/manual\/en\/tidy.repairfile.php\r\n * @param string $filename <p>\r\n * The file to be repaired.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for an\r\n * explanation about each option.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n * @return string the repaired contents as a string.\r\n *\/"
+            },
+            {
+                "name": "diagnose",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Run configured diagnostics on parsed and repaired markup\r\n * @link http:\/\/php.net\/manual\/en\/tidy.diagnose.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+            },
+            {
+                "name": "getRelease",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get release date (version) for Tidy library\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getrelease.php\r\n * @return string a string with the release date of the Tidy library.\r\n *\/"
+            },
+            {
+                "name": "getConfig",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Get current Tidy configuration\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getconfig.php\r\n * @return array an array of configuration options.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n *\/"
+            },
+            {
+                "name": "getStatus",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get status of specified document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getstatus.php\r\n * @return int 0 if no error\/warning was raised, 1 for warnings or accessibility\r\n * errors, or 2 for errors.\r\n *\/"
+            },
+            {
+                "name": "getHtmlVer",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get the Detected HTML version for the specified document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.gethtmlver.php\r\n * @return int the detected HTML version.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return 0.\r\n *\/"
+            },
+            {
+                "name": "getOptDoc",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "optname",
+                        "type": null,
+                        "byRef": false,
+                        "default": ""
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns the documentation for the given option name\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getoptdoc.php\r\n * @param string $optname <p>\r\n * The option name\r\n * <\/p>\r\n * @return string a string if the option exists and has documentation available, or\r\n * <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isXhtml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Indicates if the document is a XHTML document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.isxhtml.php\r\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\r\n * <i>object<\/i> is a XHTML document, or <b>FALSE<\/b> otherwise.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "isXml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Indicates if the document is a generic (non HTML\/XHTML) XML document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.isxml.php\r\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\r\n * <i>object<\/i> is a generic XML document (non HTML\/XHTML),\r\n * or <b>FALSE<\/b> otherwise.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return <b>FALSE<\/b>.\r\n *\/"
+            },
+            {
+                "name": "root",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object representing the root of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.root.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "head",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;head&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.head.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "html",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;html&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.html.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+            },
+            {
+                "name": "body",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;body&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.body.php\r\n * @return tidyNode a <b>tidyNode<\/b> object starting from the\r\n * &lt;body&gt; tag of the tidy parse tree.\r\n *\/"
+            },
+            {
+                "name": "__construct",
+                "type": 1,
+                "byRef": false,
+                "params": [
+                    {
+                        "name": "filename",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "config",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "encoding",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    },
+                    {
+                        "name": "use_include_path",
+                        "type": null,
+                        "byRef": false,
+                        "default": null
+                    }
+                ],
+                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Constructs a new <b>tidy<\/b> object\r\n * @link http:\/\/php.net\/manual\/en\/tidy.construct.php\r\n * @param string $filename [optional] <p>\r\n * If the <i>filename<\/i> parameter is given, this function\r\n * will also read that file and initialize the object with the file,\r\n * acting like <b>tidy_parse_file<\/b>.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "errorBuffer",
+                "doc": "\/**\r\n * @var string\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Class",
+        "name": "tidyNode",
+        "fqn": "\\tidyNode",
+        "type": 32,
+        "extends": "",
+        "methods": [
+            {
+                "name": "hasChildren",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node has children\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.haschildren.php\r\n * @return bool <b>TRUE<\/b> if the node has children, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "hasSiblings",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node has siblings\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.hassiblings.php\r\n * @return bool <b>TRUE<\/b> if the node has siblings, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isComment",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node represents a comment\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.iscomment.php\r\n * @return bool <b>TRUE<\/b> if the node is a comment, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isHtml",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node is part of a HTML document\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.ishtml.php\r\n * @return bool <b>TRUE<\/b> if the node is part of a HTML document, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isText",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node represents text (no markup)\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.istext.php\r\n * @return bool <b>TRUE<\/b> if the node represent a text, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isJste",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if this node is JSTE\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isjste.php\r\n * @return bool <b>TRUE<\/b> if the node is JSTE, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isAsp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if this node is ASP\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isasp.php\r\n * @return bool <b>TRUE<\/b> if the node is ASP, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "isPhp",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node is PHP\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isphp.php\r\n * @return bool <b>TRUE<\/b> if the current node is PHP code, <b>FALSE<\/b> otherwise.\r\n *\/"
+            },
+            {
+                "name": "getParent",
+                "type": 1,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Returns the parent node of the current node\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.getparent.php\r\n * @return tidyNode a tidyNode if the node has a parent, or <b>NULL<\/b>\r\n * otherwise.\r\n *\/"
+            }
+        ],
+        "properties": [
+            {
+                "name": "value",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The HTML representation of the node, including the surrounding tags.<\/p>\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "name",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The name of the HTML node<\/p>\r\n * @var string\r\n *\/"
+            },
+            {
+                "name": "type",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The type of the tag (one of the constants above, e.g. <b><code>TIDY_NODETYPE_PHP<\/code><\/b>)<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "line",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The line number at which the tags is located in the file<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "column",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The column number at which the tags is located in the file<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "proprietary",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">Indicates if the node is a proprietary tag<\/p>\r\n * @var bool\r\n *\/"
+            },
+            {
+                "name": "id",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The ID of the tag (one of the constants above, e.g. <b><code>TIDY_TAG_FRAME<\/code><\/b>)<\/p>\r\n * @var int\r\n *\/"
+            },
+            {
+                "name": "attribute",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * An array of string, representing\r\n * the attributes names (as keys) of the current node.\r\n * <\/p>\r\n * @var array\r\n *\/"
+            },
+            {
+                "name": "child",
+                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * An array of <b>tidyNode<\/b>, representing\r\n * the children of the current node.\r\n * <\/p>\r\n * @var array\r\n *\/"
+            }
+        ],
+        "constants": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_getopt",
+        "params": [
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_parse_string",
+        "params": [
+            {
+                "name": "input",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "config",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_parse_file",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "config",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "use_include_path",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_output",
+        "params": [
+            {
+                "name": "object",
+                "type": "tidy",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_error_buffer",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_clean_repair",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_repair_string",
+        "params": [
+            {
+                "name": "data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "config",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_repair_file",
+        "params": [
+            {
+                "name": "filename",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "config",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "use_include_path",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_diagnose",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_release",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_config",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_status",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_html_ver",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_is_xhtml",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_is_xml",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_error_count",
+        "params": [
+            {
+                "name": "object",
+                "type": "tidy",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_warning_count",
+        "params": [
+            {
+                "name": "object",
+                "type": "tidy",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_access_count",
+        "params": [
+            {
+                "name": "object",
+                "type": "tidy",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_config_count",
+        "params": [
+            {
+                "name": "object",
+                "type": "tidy",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_opt_doc",
+        "params": [
+            {
+                "name": "optname",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_root",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_head",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_html",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "tidy_get_body",
+        "params": [
+            {
+                "name": "tidy",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_UNKNOWN",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_A",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ABBR",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ACRONYM",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ADDRESS",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ALIGN",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_APPLET",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_AREA",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_B",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BASE",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BASEFONT",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BDO",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BGSOUND",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BIG",
+        "value": 13
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BLINK",
+        "value": 14
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BLOCKQUOTE",
+        "value": 15
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BODY",
+        "value": 16
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BR",
+        "value": 17
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_BUTTON",
+        "value": 18
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_CAPTION",
+        "value": 19
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_CENTER",
+        "value": 20
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_CITE",
+        "value": 21
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_CODE",
+        "value": 22
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_COL",
+        "value": 23
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_COLGROUP",
+        "value": 24
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_COMMENT",
+        "value": 25
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DD",
+        "value": 26
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DEL",
+        "value": 27
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DFN",
+        "value": 28
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DIR",
+        "value": 29
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DIV",
+        "value": 30
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DL",
+        "value": 31
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_DT",
+        "value": 32
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_EM",
+        "value": 33
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_EMBED",
+        "value": 34
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_FIELDSET",
+        "value": 35
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_FONT",
+        "value": 36
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_FORM",
+        "value": 37
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_FRAME",
+        "value": 38
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_FRAMESET",
+        "value": 39
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H1",
+        "value": 40
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H2",
+        "value": 41
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H3",
+        "value": 42
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H4",
+        "value": 43
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H5",
+        "value": 44
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_H6",
+        "value": 45
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_HEAD",
+        "value": 46
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_HR",
+        "value": 47
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_HTML",
+        "value": 48
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_I",
+        "value": 49
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_IFRAME",
+        "value": 50
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ILAYER",
+        "value": 51
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_IMG",
+        "value": 52
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_INPUT",
+        "value": 53
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_INS",
+        "value": 54
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_ISINDEX",
+        "value": 55
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_KBD",
+        "value": 56
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_KEYGEN",
+        "value": 57
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LABEL",
+        "value": 58
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LAYER",
+        "value": 59
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LEGEND",
+        "value": 60
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LI",
+        "value": 61
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LINK",
+        "value": 62
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_LISTING",
+        "value": 63
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_MAP",
+        "value": 64
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_MARQUEE",
+        "value": 65
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_MENU",
+        "value": 66
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_META",
+        "value": 67
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_MULTICOL",
+        "value": 68
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOBR",
+        "value": 69
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOEMBED",
+        "value": 70
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOFRAMES",
+        "value": 71
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOLAYER",
+        "value": 72
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOSAVE",
+        "value": 73
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_NOSCRIPT",
+        "value": 74
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_OBJECT",
+        "value": 75
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_OL",
+        "value": 76
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_OPTGROUP",
+        "value": 77
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_OPTION",
+        "value": 78
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_P",
+        "value": 79
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_PARAM",
+        "value": 80
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_PLAINTEXT",
+        "value": 81
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_PRE",
+        "value": 82
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_Q",
+        "value": 83
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RB",
+        "value": 84
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RBC",
+        "value": 85
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RP",
+        "value": 86
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RT",
+        "value": 87
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RTC",
+        "value": 88
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_RUBY",
+        "value": 89
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_S",
+        "value": 90
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SAMP",
+        "value": 91
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SCRIPT",
+        "value": 92
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SELECT",
+        "value": 93
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SERVER",
+        "value": 94
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SERVLET",
+        "value": 95
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SMALL",
+        "value": 96
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SPACER",
+        "value": 97
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SPAN",
+        "value": 98
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_STRIKE",
+        "value": 99
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_STRONG",
+        "value": 100
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_STYLE",
+        "value": 101
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SUB",
+        "value": 102
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_SUP",
+        "value": 103
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TABLE",
+        "value": 104
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TBODY",
+        "value": 105
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TD",
+        "value": 106
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TEXTAREA",
+        "value": 107
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TFOOT",
+        "value": 108
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TH",
+        "value": 109
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_THEAD",
+        "value": 110
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TITLE",
+        "value": 111
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TR",
+        "value": 112
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_TT",
+        "value": 113
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_U",
+        "value": 114
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_UL",
+        "value": 115
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_VAR",
+        "value": 116
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_WBR",
+        "value": 117
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_TAG_XMP",
+        "value": 118
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_ROOT",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_DOCTYPE",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_COMMENT",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_PROCINS",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_TEXT",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_START",
+        "value": 5
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_END",
+        "value": 6
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_STARTEND",
+        "value": 7
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_CDATA",
+        "value": 8
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_SECTION",
+        "value": 9
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_ASP",
+        "value": 10
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_JSTE",
+        "value": 11
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_PHP",
+        "value": 12
+    },
+    {
+        "stmtType": "Constant",
+        "name": "TIDY_NODETYPE_XMLDECL",
+        "value": 13
+    }
+]

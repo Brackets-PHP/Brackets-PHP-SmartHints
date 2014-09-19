@@ -1,0 +1,243 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_encode",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_decode",
+        "params": [
+            {
+                "name": "xml",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "iso-8859-1"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_decode_request",
+        "params": [
+            {
+                "name": "xml",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_encode_request",
+        "params": [
+            {
+                "name": "method",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "params",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output_options",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_get_type",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_set_type",
+        "params": [
+            {
+                "name": "value",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_is_fault",
+        "params": [
+            {
+                "name": "arg",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_create",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_destroy",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_register_method",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "method_name",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "function",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_call_method",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "xml",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "user_data",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "output_options",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_parse_method_descriptions",
+        "params": [
+            {
+                "name": "xml",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_add_introspection_data",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "desc",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "xmlrpc_server_register_introspection_callback",
+        "params": [
+            {
+                "name": "server",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "function",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    }
+]

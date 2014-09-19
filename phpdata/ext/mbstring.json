@@ -1,0 +1,1477 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "mb_convert_case",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strtoupper",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strtolower",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_language",
+        "params": [
+            {
+                "name": "language",
+                "type": null,
+                "byRef": false,
+                "default": "mb_language()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_internal_encoding",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_http_input",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_http_output",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_http_output()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_detect_order",
+        "params": [
+            {
+                "name": "encoding_list",
+                "type": null,
+                "byRef": false,
+                "default": "mb_detect_order()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_substitute_character",
+        "params": [
+            {
+                "name": "substrchar",
+                "type": null,
+                "byRef": false,
+                "default": "mb_substitute_character()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_parse_str",
+        "params": [
+            {
+                "name": "encoded_string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "result",
+                "type": "array",
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_output_handler",
+        "params": [
+            {
+                "name": "contents",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "status",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_preferred_mime_name",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strlen",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strrpos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_stripos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strripos",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "offset",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strstr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "before_needle",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strrchr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "part",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_stristr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "before_needle",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strrichr",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "part",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_substr_count",
+        "params": [
+            {
+                "name": "haystack",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "needle",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_substr",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strcut",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "length",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strwidth",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_strimwidth",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "start",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "width",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "trimmarker",
+                "type": null,
+                "byRef": false,
+                "default": "&quot;&quot;"
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_convert_encoding",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "to_encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "from_encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_detect_encoding",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding_list",
+                "type": null,
+                "byRef": false,
+                "default": "mb_detect_order()"
+            },
+            {
+                "name": "strict",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_list_encodings",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_encoding_aliases",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_convert_kana",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "KV"
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_encode_mimeheader",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "charset",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            },
+            {
+                "name": "transfer_encoding",
+                "type": null,
+                "byRef": false,
+                "default": "&quot;B&quot;"
+            },
+            {
+                "name": "linefeed",
+                "type": null,
+                "byRef": false,
+                "default": "&quot;\\r\\n&quot;"
+            },
+            {
+                "name": "indent",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_decode_mimeheader",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_convert_variables",
+        "params": [
+            {
+                "name": "to_encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "from_encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "vars",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            },
+            {
+                "name": "_",
+                "type": null,
+                "byRef": true,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_encode_numericentity",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "convmap",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            },
+            {
+                "name": "is_hex",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_decode_numericentity",
+        "params": [
+            {
+                "name": "str",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "convmap",
+                "type": "array",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_send_mail",
+        "params": [
+            {
+                "name": "to",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "subject",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "message",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "additional_headers",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "additional_parameter",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_get_info",
+        "params": [
+            {
+                "name": "type",
+                "type": null,
+                "byRef": false,
+                "default": "all"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_check_encoding",
+        "params": [
+            {
+                "name": "var",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_internal_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_regex_encoding",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": "mb_regex_encoding()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_regex_set_options",
+        "params": [
+            {
+                "name": "options",
+                "type": null,
+                "byRef": false,
+                "default": "mb_regex_set_options()"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "regs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_eregi",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "regs",
+                "type": "array",
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "msr"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_eregi_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replace",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "msri"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_replace_callback",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "callback",
+                "type": "callable",
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "msr"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_split",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_match",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "msr"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "ms"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_pos",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "ms"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_regs",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "ms"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_init",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": "msr"
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_getregs",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_getpos",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mb_ereg_search_setpos",
+        "params": [
+            {
+                "name": "position",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbregex_encoding",
+        "params": [
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "registers",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mberegi",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "registers",
+                "type": null,
+                "byRef": true,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mberegi_replace",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "replacement",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbsplit",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "limit",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_match",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_pos",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_regs",
+        "params": [
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_init",
+        "params": [
+            {
+                "name": "string",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "pattern",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "option",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_getregs",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_getpos",
+        "params": [
+
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "mbereg_search_setpos",
+        "params": [
+            {
+                "name": "position",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_OVERLOAD_MAIL",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_OVERLOAD_STRING",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_OVERLOAD_REGEX",
+        "value": 4
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_CASE_UPPER",
+        "value": 0
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_CASE_LOWER",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "MB_CASE_TITLE",
+        "value": 2
+    }
+]

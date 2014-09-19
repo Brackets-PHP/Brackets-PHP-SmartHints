@@ -1,0 +1,406 @@
+[
+    {
+        "stmtType": "Function",
+        "name": "pspell_new",
+        "params": [
+            {
+                "name": "language",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "spelling",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "jargon",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_new_personal",
+        "params": [
+            {
+                "name": "personal",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "language",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "spelling",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "jargon",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": 0
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_new_config",
+        "params": [
+            {
+                "name": "config",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_check",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_suggest",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_store_replacement",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "misspelled",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "correct",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_add_to_personal",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_add_to_session",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "word",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_clear_session",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_save_wordlist",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_create",
+        "params": [
+            {
+                "name": "language",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "spelling",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "jargon",
+                "type": null,
+                "byRef": false,
+                "default": null
+            },
+            {
+                "name": "encoding",
+                "type": null,
+                "byRef": false,
+                "default": null
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_runtogether",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_mode",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "mode",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_ignore",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "n",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_personal",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_dict_dir",
+        "params": [
+            {
+                "name": "conf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_data_dir",
+        "params": [
+            {
+                "name": "conf",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "directory",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_repl",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "file",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Function",
+        "name": "pspell_config_save_repl",
+        "params": [
+            {
+                "name": "dictionary_link",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            },
+            {
+                "name": "flag",
+                "type": null,
+                "byRef": false,
+                "default": ""
+            }
+        ]
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PSPELL_FAST",
+        "value": 1
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PSPELL_NORMAL",
+        "value": 2
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PSPELL_BAD_SPELLERS",
+        "value": 3
+    },
+    {
+        "stmtType": "Constant",
+        "name": "PSPELL_RUN_TOGETHER",
+        "value": 8
+    }
+]
