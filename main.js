@@ -37,7 +37,10 @@ define(function (require, exports, module) {
 
     var Strings                 = require('strings');
 
-    var keywords                = [];
+    var keywords                = [],
+        extDir                  = ExtensionUtils.getModulePath(module, "phpdata/ext/"),
+        predefinesFile          = ExtensionUtils.getModulePath(module, "phpdata/php-predefined.json"),
+        keywordsFile            = ExtensionUtils.getModulePath(module, "phpdata/keywords.json");
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -244,14 +247,18 @@ define(function (require, exports, module) {
         return false;
     };
 
-    function loadGenericPredefines() {
+    function loadPredefines() {
         
     }
     
+    function loadExt() {
+        var directory;
+        directory = FileSystem.getDirectoryForPath(extDir);
+    }
+
     function loadKeywords() {
-        var fileDeferred = new $.Deferred();
-        var path = ExtensionUtils.getModulePath(module, "phpdata/keywords.json"),
-            file = FileSystem.getFileForPath(path);
+        var fileDeferred    = new $.Deferred(),
+            file            = FileSystem.getFileForPath(keywordsFile);
         
         FileUtils.readAsText(file)
             .done(function (text) {
