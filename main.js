@@ -30,14 +30,14 @@ define(function (require, exports, module) {
         CodeHintManager         = brackets.getModule("editor/CodeHintManager"),
         ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
         TokenUtils              = brackets.getModule("utils/TokenUtils"),
+        FileSystem              = brackets.getModule("filesystem/FileSystem"),
+        FileUtils               = brackets.getModule("file/FileUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
-    var Strings = require('strings');
+    var Strings                 = require('strings');
 
-    var phpBuiltins             = require("phpdata/php-predefined"),
-        functionGroups          = require("text!phpdata/php-function-groups.json"),
-        predefinedFunctions     = [];
+    var keywords                = [];
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -244,100 +244,52 @@ define(function (require, exports, module) {
         return false;
     };
 
-    var phpHints = new PHPHints();
-
-    function buildFunctionsList(selectedFunctions) {
-        var i = 0,
-            filter,
-            fnArray             = [],
-            fg                  = JSON.parse(functionGroups),
-            fgKey,
-            theFunctionList     = [];
-
-        filters.length = 0;
-
-        Object.keys(fg).forEach(function (key) {
-            fgKey = fg[key];
-
-            if (selectedFunctions.length > 0) {
-                if (selectedFunctions.indexOf(key) > -1) {
-                    fnArray = fgKey.fnNames.join('\n').split('|');
-                    for (i = 0; i < fnArray.length; i++) {
-                        theFunctionList.push(fnArray[i]);
-                    }
-                    filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
-                } else {
-                    filter = { "filter": key, "filterName": fgKey.name, "checked": "" };
-                }
-            } else {
-                fnArray = fgKey.fnNames.join('\n').split('|');
-                for (i = 0; i < fnArray.length; i++) {
-                    theFunctionList.push(fnArray[i]);
-                }
-                filter = { "filter": key, "filterName": fgKey.name, "checked": "checked" };
-            }
-            filters.push(filter);
-        });
-        return theFunctionList.concat(predefinedFunctions);
-    }
-
-    function createHintArray(rawList) {
-        var sortedRawList   = rawList.sort(),
-            i               = 0,
-            currentWord     = "",
-            finalList       = [];
-
-        for (i = 0; i < sortedRawList.length; i++) {
-            currentWord = sortedRawList[i];
-            if (finalList.indexOf(currentWord) === -1) {
-                finalList.push(currentWord);
-            }
-        }
-        return finalList;
-    }
-
-    function handleFunctionPrefs(selectedFunctions) {
-        var fnList = [];
-        fnList = buildFunctionsList(selectedFunctions);
-        phpHints.cachedPhpFunctions.length = 0;
-        phpHints.cachedPhpFunctions = createHintArray(fnList);
-    }
-
-    function handlePhpProjectPrefs(isPhpProject) {
-        if (isPhpProject) {
-            toolbarIcon.addClass('active');
-        } else {
-            toolbarIcon.removeClass('active');
-        }
-    }
-
     function loadGenericPredefines() {
         
     }
     
-    function loadVersionKeywords() {
+    function loadKeywords() {
+        var fileDeferred = new $.Deferred();
+        var path = ExtensionUtils.getModulePath(module, "phpdata/keywords.json"),
+            file = FileSystem.getFileForPath(path);
         
+        FileUtils.readAsText(file)
+            .done(function (text) {
+                var keywords;
+                try {
+                    keywords = JSON.parse(text);
+                } catch (ex) {
+                    console.error("Could not parse keywords file", ex);
+                    fileDeferred.reject();
+                }
+                fileDeferred.resolve(keywords);
+            })
+            .fail(function (err) {
+                console.error("Error loading keywords.json file", err);
+            });
+        return fileDeferred.promise();
     }
 
-    predefinedFunctions = phpBuiltins.predefinedFunctions;
-    // PHP SmartHints prefs
-    prefs.definePreference("filteredFunctionList", "array", [])
-        .on("change", function () {
-            handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
+    loadKeywords()
+        .done(function (keywords) {
+            var kw,
+                kwObj = {},
+                kwList = [];
+            for (kw in keywords) {
+                if (keywords.hasOwnProperty(kw)) {
+                    kwObj.kwname = kw;
+                    kwObj.suffix = keywords[kw];
+                    kwList.push(kwObj);
+                }
+            }
+            console.log(kwList);
+        })
+        .fail(function (err) {
+            console.error("error on keywords processing", err);
         });
-    prefs.definePreference("isPhpProject", "boolean", false)
-        .on("change", function () {
-            handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
-        });
-    handleFunctionPrefs(prefs.get("filteredFunctionList", {location: { scope: "project"}}));
-    handlePhpProjectPrefs(prefs.get("isPhpProject", {location: { scope: "project"}}));
+    var phpHints = new PHPHints();
 
-    // register the provider.  Priority = 10 to be the provider of choice for php
     CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
-
-    phpHints.cachedPhpKeywords = createHintArray(phpBuiltins.keywords);
-    phpHints.cachedPhpConstants = createHintArray(phpBuiltins.predefinedConstants);
-    phpHints.cachedPhpVariables = createHintArray(phpBuiltins.predefinedVariables);
 
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
     toolbarIcon.appendTo('#main-toolbar .buttons')
