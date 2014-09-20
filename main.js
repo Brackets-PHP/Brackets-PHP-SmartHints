@@ -272,16 +272,14 @@ define(function (require, exports, module) {
 
     loadKeywords()
         .done(function (keywords) {
-            var kw,
-                kwObj = {},
+            var kwKey,
                 kwList = [];
-            for (kw in keywords) {
-                if (keywords.hasOwnProperty(kw)) {
-                    kwObj.kwname = kw;
-                    kwObj.suffix = keywords[kw];
-                    kwList.push(kwObj);
-                }
-            }
+            Object.keys(keywords).forEach(function (key) {
+                var kwObj = {};
+                kwObj.kwname = key;
+                kwObj.suffix = keywords[key];
+                kwList.push(kwObj);
+            });
             console.log(kwList);
         })
         .fail(function (err) {
