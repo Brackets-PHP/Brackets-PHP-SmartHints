@@ -42,6 +42,11 @@ define(function (require, exports, module) {
         predefinesFile          = ExtensionUtils.getModulePath(module, "phpdata/php-predefined.json"),
         keywordsFile            = ExtensionUtils.getModulePath(module, "phpdata/keywords.json");
 
+    var mmList                  = [],
+        constList               = [],
+        varList                 = [],
+        kwList                  = [];
+
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
         projectUI               = require("project-ui");
@@ -248,7 +253,24 @@ define(function (require, exports, module) {
     };
 
     function loadPredefines() {
+        var fileDeferred    = new $.Deferred(),
+            file            = FileSystem.getFileForPath(predefinesFile);
         
+        FileUtils.readAsText(file)
+            .done(function (text) {
+                var predefines;
+                try {
+                    predefines = JSON.parse(text);
+                } catch (ex) {
+                    console.error("Could not parse predefines file", ex);
+                    fileDeferred.reject();
+                }
+                fileDeferred.resolve(predefines);
+            })
+            .fail(function (err) {
+                console.error("Error loading php-predefined.json file", err);
+            });
+        return fileDeferred.promise();
     }
     
     function loadExt() {
@@ -277,10 +299,26 @@ define(function (require, exports, module) {
         return fileDeferred.promise();
     }
 
-    loadKeywords()
+    $.when(loadKeywords(), loadPredefines())
+        .done(function (keywords, predefines) {
+            Object.keys(keywords).forEach(function (key) {
+                var kwObj = {};
+                kwObj.kwname = key;
+                kwObj.suffix = keywords[key];
+                kwList.push(kwObj);
+            });
+
+            mmList = predefines.magic_methods;
+            constList = predefines.constants;
+            varList = predefines.variables;
+            console.log(Date.now(), kwList, mmList, constList, varList);
+        })
+        .fail(function (err) {
+            console.error("error processing language files", err);
+        });
+
+/*    loadKeywords()
         .done(function (keywords) {
-            var kwKey,
-                kwList = [];
             Object.keys(keywords).forEach(function (key) {
                 var kwObj = {};
                 kwObj.kwname = key;
@@ -292,6 +330,19 @@ define(function (require, exports, module) {
         .fail(function (err) {
             console.error("error on keywords processing", err);
         });
+
+    loadPredefines()
+        .done(function (predefines) {
+            mmList = predefines.magic_methods;
+            constList = predefines.constants;
+            varList = predefines.variables;
+            console.log(mmList, constList, varList);
+        })
+        .fail(function (err) {
+            console.error("error on predefines processing", err);
+        });
+    */
+    console.log(Date.now());
     var phpHints = new PHPHints();
 
     CodeHintManager.registerHintProvider(phpHints, ["php"], 10);

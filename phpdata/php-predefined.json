@@ -22,19 +22,19 @@
         "$php_response_header"
     ],
     "magic_methods": [
-        "__autoload",
-        "__call",
-        "__callstatic",
-        "__clone",
-        "__get",
-        "__invoke",
-        "__isset",
-        "__set",
-        "__set_state",
-        "__sleep",
-        "__toString",
-        "__unset",
-        "__wakeup"
+        "__autoload()",
+        "__call()",
+        "__callstatic()",
+        "__clone()",
+        "__get()",
+        "__invoke()",
+        "__isset()",
+        "__set()",
+        "__set_state()",
+        "__sleep()",
+        "__toString()",
+        "__unset()",
+        "__wakeup()"
     ],
     "constants": [
         "true",
