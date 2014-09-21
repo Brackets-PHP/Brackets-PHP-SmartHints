@@ -45,7 +45,9 @@ define(function (require, exports, module) {
     var mmList                  = [],
         constList               = [],
         varList                 = [],
-        kwList                  = [];
+        kwList                  = [],
+        extClassList            = [],
+        extFunctionList         = [];
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -274,8 +276,26 @@ define(function (require, exports, module) {
     }
     
     function loadExt() {
-        var directory;
-        directory = FileSystem.getDirectoryForPath(extDir);
+        var dirDeferred = new $.Deferred(),
+            directory,
+            dirContents = [];
+        try {
+            directory = FileSystem.getDirectoryForPath(extDir);
+            directory.getContents(function (err, contents) {
+                if (!err) {
+                    var i;
+                    for (i = 0; i < contents.length; i++) {
+                        console.log("dd");
+                    }
+                }
+            });
+        } catch (ex) {
+            console.error("error getting directory", ex);
+            dirDeferred.reject();
+        }
+        dirDeferred.resolve(dirContents);
+
+        return dirDeferred.promise();
     }
 
     function loadKeywords() {
@@ -299,8 +319,8 @@ define(function (require, exports, module) {
         return fileDeferred.promise();
     }
 
-    $.when(loadKeywords(), loadPredefines())
-        .done(function (keywords, predefines) {
+    $.when(loadKeywords(), loadPredefines(), loadExt())
+        .done(function (keywords, predefines, contents) {
             Object.keys(keywords).forEach(function (key) {
                 var kwObj = {};
                 kwObj.kwname = key;
@@ -311,37 +331,12 @@ define(function (require, exports, module) {
             mmList = predefines.magic_methods;
             constList = predefines.constants;
             varList = predefines.variables;
-            console.log(Date.now(), kwList, mmList, constList, varList);
+            console.log(Date.now(), kwList, mmList, constList, varList, contents);
         })
         .fail(function (err) {
             console.error("error processing language files", err);
         });
 
-/*    loadKeywords()
-        .done(function (keywords) {
-            Object.keys(keywords).forEach(function (key) {
-                var kwObj = {};
-                kwObj.kwname = key;
-                kwObj.suffix = keywords[key];
-                kwList.push(kwObj);
-            });
-            console.log(kwList);
-        })
-        .fail(function (err) {
-            console.error("error on keywords processing", err);
-        });
-
-    loadPredefines()
-        .done(function (predefines) {
-            mmList = predefines.magic_methods;
-            constList = predefines.constants;
-            varList = predefines.variables;
-            console.log(mmList, constList, varList);
-        })
-        .fail(function (err) {
-            console.error("error on predefines processing", err);
-        });
-    */
     console.log(Date.now());
     var phpHints = new PHPHints();
 
