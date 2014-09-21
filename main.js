@@ -285,7 +285,21 @@ define(function (require, exports, module) {
                 if (!err) {
                     var i;
                     for (i = 0; i < contents.length; i++) {
-                        console.log("dd");
+                        FileUtils.readAsText(contents[i])
+                            .done(function (text) {
+                                var stmts;
+                                try {
+                                    stmts = JSON.parse(text);
+                                    dirContents.push(stmts);
+                                } catch (ex) {
+                                    console.error("error parsing extensions file", ex);
+                                    dirDeferred.reject();
+                                }
+                            })
+                            .fail(function (err) {
+                                console.error("could not process extension files", err);
+                                dirDeferred.reject();
+                            });
                     }
                 }
             });
@@ -331,7 +345,7 @@ define(function (require, exports, module) {
             mmList = predefines.magic_methods;
             constList = predefines.constants;
             varList = predefines.variables;
-            console.log(Date.now(), kwList, mmList, constList, varList, contents);
+            console.log(Date.now(), contents);
         })
         .fail(function (err) {
             console.error("error processing language files", err);
