@@ -255,28 +255,26 @@ define(function (require, exports, module) {
         return false;
     };
 
-    function loadPredefines() {
-        var fileDeferred    = new $.Deferred(),
-            file            = FileSystem.getFileForPath(predefinesFile);
+    function parseLangFile(fileName) {
+        var parseDeferred   = new $.Deferred(),
+            file            = FileSystem.getFileForPath(fileName),
+            parsed;
         
         FileUtils.readAsText(file)
             .done(function (text) {
-                var predefines;
                 try {
-                    predefines = JSON.parse(text);
-                    mmList = predefines.magic_methods;
-                    constList = predefines.constants;
-                    varList = predefines.variables;
+                    parsed = JSON.parse(text);
+                    console.log("parsed: ", fileName);
                 } catch (ex) {
-                    console.error("Could not parse predefines file", ex);
-                    fileDeferred.reject();
+                    console.error("Error parsing:", fileName, ex);
+                    parseDeferred.reject();
                 }
-                fileDeferred.resolve();
+                parseDeferred.resolve(parsed);
             })
             .fail(function (err) {
-                console.error("Error loading php-predefined.json file", err);
+                console.error("Error handling file for parsing", err);
             });
-        return fileDeferred.promise();
+        return parseDeferred.promise();
     }
     
     function loadExt() {
@@ -324,31 +322,55 @@ define(function (require, exports, module) {
         return dirDeferred.promise();
     }
 
-    function loadKeywords() {
-        var fileDeferred    = new $.Deferred(),
-            file            = FileSystem.getFileForPath(keywordsFile);
-        
-        FileUtils.readAsText(file)
-            .done(function (text) {
-                var keywords;
-                try {
-                    keywords = JSON.parse(text);
-                    Object.keys(keywords).forEach(function (key) {
-                        var kwObj = {};
-                        kwObj.kwname = key;
-                        kwObj.suffix = keywords[key];
-                        kwList.push(kwObj);
-                    });
-                } catch (ex) {
-                    console.error("Could not parse keywords file", ex);
-                    fileDeferred.reject();
-                }
-                fileDeferred.resolve();
+    function loadPredefines() {
+        var loadDeferred    = new $.Deferred();
+
+        parseLangFile(predefinesFile)
+            .done(function (parsed) {
+                mmList = parsed.magic_methods;
+                constList = parsed.constants;
+                varList = parsed.variables;
+                console.log(Date.now(), "loaded predefined array");
+                loadDeferred.resolve();
             })
             .fail(function (err) {
-                console.error("Error loading keywords.json file", err);
+                console.error("error loading predefines array", err);
+                loadDeferred.reject();
             });
-        return fileDeferred.promise();
+
+        return loadDeferred.promise();
+    }
+
+    function loadKeywords() {
+        var loadDeferred    = new $.Deferred();
+        
+        parseLangFile(keywordsFile)
+            .done(function (parsed) {
+                Object.keys(parsed).forEach(function (key) {
+                    var kwObj = {};
+                    kwObj.kwname = key;
+                    kwObj.suffix = keywords[key];
+                    kwList.push(kwObj);
+                });
+                console.log(Date.now(), "loaded keywords array");
+                loadDeferred.resolve();
+            })
+            .fail(function (err) {
+                console.error("error loading keywords array", err);
+                loadDeferred.reject();
+            });
+
+        return loadDeferred.promise();
+    }
+
+    function makeUsWait() {
+        var deferred = $.Deferred();
+
+        setTimeout(function() {
+            deferred.resolve();
+        }, 10000);
+
+        return deferred.promise();
     }
 
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
@@ -357,15 +379,15 @@ define(function (require, exports, module) {
             projectUI.showProjectDialog(filters);
         });
 
-    $.when(loadKeywords(), loadPredefines(), loadExt())
+    $.when(makeUsWait(), loadKeywords(), loadPredefines(), loadExt())
         .done(function () {
-            console.log("end",Date.now());
+            console.log("end", Date.now(), constList, varList, mmList, kwList);
         })
         .fail(function (err) {
             console.error("error processing language files", err);
         });
 
-    console.log("start",Date.now());
+    console.log("start", Date.now());
     var phpHints = new PHPHints();
 
     CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
