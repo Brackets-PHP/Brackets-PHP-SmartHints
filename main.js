@@ -47,7 +47,8 @@ define(function (require, exports, module) {
         varList                 = [],
         kwList                  = [],
         extClassList            = [],
-        extFunctionList         = [];
+        extFunctionList         = [],
+        extConstantList         = [];
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -263,11 +264,14 @@ define(function (require, exports, module) {
                 var predefines;
                 try {
                     predefines = JSON.parse(text);
+                    mmList = predefines.magic_methods;
+                    constList = predefines.constants;
+                    varList = predefines.variables;
                 } catch (ex) {
                     console.error("Could not parse predefines file", ex);
                     fileDeferred.reject();
                 }
-                fileDeferred.resolve(predefines);
+                fileDeferred.resolve();
             })
             .fail(function (err) {
                 console.error("Error loading php-predefined.json file", err);
@@ -277,8 +281,8 @@ define(function (require, exports, module) {
     
     function loadExt() {
         var dirDeferred = new $.Deferred(),
-            directory,
-            dirContents = [];
+            directory;
+
         try {
             directory = FileSystem.getDirectoryForPath(extDir);
             directory.getContents(function (err, contents) {
@@ -287,10 +291,18 @@ define(function (require, exports, module) {
                     for (i = 0; i < contents.length; i++) {
                         FileUtils.readAsText(contents[i])
                             .done(function (text) {
-                                var stmts;
+                                var stmts = [];
                                 try {
                                     stmts = JSON.parse(text);
-                                    dirContents.push(stmts);
+                                    stmts.forEach(function (element, index, array) {
+                                        if (element.stmtType === "Class") {
+                                            extClassList.push(element);
+                                        } else if (element.stmtType === "Function") {
+                                            extFunctionList.push(element);
+                                        } else if (element.stmtType === "Constant") {
+                                            extConstantList.push(element);
+                                        }
+                                    });
                                 } catch (ex) {
                                     console.error("error parsing extensions file", ex);
                                     dirDeferred.reject();
@@ -303,11 +315,11 @@ define(function (require, exports, module) {
                     }
                 }
             });
+            dirDeferred.resolve();
         } catch (ex) {
             console.error("error getting directory", ex);
             dirDeferred.reject();
         }
-        dirDeferred.resolve(dirContents);
 
         return dirDeferred.promise();
     }
@@ -321,11 +333,17 @@ define(function (require, exports, module) {
                 var keywords;
                 try {
                     keywords = JSON.parse(text);
+                    Object.keys(keywords).forEach(function (key) {
+                        var kwObj = {};
+                        kwObj.kwname = key;
+                        kwObj.suffix = keywords[key];
+                        kwList.push(kwObj);
+                    });
                 } catch (ex) {
                     console.error("Could not parse keywords file", ex);
                     fileDeferred.reject();
                 }
-                fileDeferred.resolve(keywords);
+                fileDeferred.resolve();
             })
             .fail(function (err) {
                 console.error("Error loading keywords.json file", err);
@@ -333,32 +351,22 @@ define(function (require, exports, module) {
         return fileDeferred.promise();
     }
 
-    $.when(loadKeywords(), loadPredefines(), loadExt())
-        .done(function (keywords, predefines, contents) {
-            Object.keys(keywords).forEach(function (key) {
-                var kwObj = {};
-                kwObj.kwname = key;
-                kwObj.suffix = keywords[key];
-                kwList.push(kwObj);
-            });
-
-            mmList = predefines.magic_methods;
-            constList = predefines.constants;
-            varList = predefines.variables;
-            console.log(Date.now(), contents);
-        })
-        .fail(function (err) {
-            console.error("error processing language files", err);
-        });
-
-    console.log(Date.now());
-    var phpHints = new PHPHints();
-
-    CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
-
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
     toolbarIcon.appendTo('#main-toolbar .buttons')
         .on("click", function () {
             projectUI.showProjectDialog(filters);
         });
+
+    $.when(loadKeywords(), loadPredefines(), loadExt())
+        .done(function () {
+            console.log("end",Date.now());
+        })
+        .fail(function (err) {
+            console.error("error processing language files", err);
+        });
+
+    console.log("start",Date.now());
+    var phpHints = new PHPHints();
+
+    CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
 });
