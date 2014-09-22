@@ -277,49 +277,28 @@ define(function (require, exports, module) {
         return parseDeferred.promise();
     }
     
-    function loadExt() {
+    function loadExtDir() {
         var dirDeferred = new $.Deferred(),
-            directory;
+            directory,
+            fileName    = "";
 
-        try {
-            directory = FileSystem.getDirectoryForPath(extDir);
-            directory.getContents(function (err, contents) {
-                if (!err) {
-                    var i;
-                    for (i = 0; i < contents.length; i++) {
-                        FileUtils.readAsText(contents[i])
-                            .done(function (text) {
-                                var stmts = [];
-                                try {
-                                    stmts = JSON.parse(text);
-                                    stmts.forEach(function (element, index, array) {
-                                        if (element.stmtType === "Class") {
-                                            extClassList.push(element);
-                                        } else if (element.stmtType === "Function") {
-                                            extFunctionList.push(element);
-                                        } else if (element.stmtType === "Constant") {
-                                            extConstantList.push(element);
-                                        }
-                                    });
-                                } catch (ex) {
-                                    console.error("error parsing extensions file", ex);
-                                    dirDeferred.reject();
-                                }
-                            })
-                            .fail(function (err) {
-                                console.error("could not process extension files", err);
-                                dirDeferred.reject();
-                            });
-                    }
-                }
+        directory = FileSystem.getDirectoryForPath(extDir);
+        directory.getContents(function (err, contents) {
+            contents.forEach(function (element, index) {
+                fileName = extDir + element.name;
+                parseLangFile(fileName)
+                    .done(function (parsed) {
+                        extClassList.push(parsed);
+                    })
+                    .fail(function (err) {
+                        console.error("error handling language directory files", err);
+                        dirDeferred.reject();
+                    });
             });
             dirDeferred.resolve();
-        } catch (ex) {
-            console.error("error getting directory", ex);
-            dirDeferred.reject();
-        }
-
-        return dirDeferred.promise();
+            console.log("processed ext dir");
+            return dirDeferred.promise();
+        });
     }
 
     function loadPredefines() {
@@ -363,15 +342,15 @@ define(function (require, exports, module) {
         return loadDeferred.promise();
     }
 
-    function makeUsWait() {
+/*    function makeUsWait() {
         var deferred = $.Deferred();
 
-        setTimeout(function() {
+        setTimeout(function () {
             deferred.resolve();
         }, 10000);
 
         return deferred.promise();
-    }
+    }*/
 
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
     toolbarIcon.appendTo('#main-toolbar .buttons')
@@ -379,9 +358,9 @@ define(function (require, exports, module) {
             projectUI.showProjectDialog(filters);
         });
 
-    $.when(makeUsWait(), loadKeywords(), loadPredefines(), loadExt())
-        .done(function () {
-            console.log("end", Date.now(), constList, varList, mmList, kwList);
+    $.when(loadKeywords(), loadPredefines(), loadExt())
+        .done(function (parsed) {
+            console.log("end", Date.now(), constList, varList, mmList, kwList, extClassList);
         })
         .fail(function (err) {
             console.error("error processing language files", err);
