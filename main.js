@@ -48,7 +48,8 @@ define(function (require, exports, module) {
         kwList                  = [],
         extClassList            = [],
         extFunctionList         = [],
-        extConstantList         = [];
+        extConstantList         = [],
+        start                   = 0;
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -264,7 +265,6 @@ define(function (require, exports, module) {
             .done(function (text) {
                 try {
                     parsed = JSON.parse(text);
-                    console.log("parsed: ", fileName);
                 } catch (ex) {
                     console.error("Error parsing:", fileName, ex);
                     parseDeferred.reject();
@@ -278,27 +278,43 @@ define(function (require, exports, module) {
     }
     
     function loadExtDir() {
-        var dirDeferred = new $.Deferred(),
+        var promises = [],
             directory,
-            fileName    = "";
+            fileName    = "",
+            extArray = ["basic", "standard", "session", "gd", "PDO", "mysqli", "apc"];
 
-        directory = FileSystem.getDirectoryForPath(extDir);
-        directory.getContents(function (err, contents) {
-            contents.forEach(function (element, index) {
-                fileName = extDir + element.name;
-                parseLangFile(fileName)
-                    .done(function (parsed) {
-                        extClassList.push(parsed);
-                    })
-                    .fail(function (err) {
-                        console.error("error handling language directory files", err);
-                        dirDeferred.reject();
+
+        extArray.forEach(function (element, index) {
+            var dirDeferred = new $.Deferred();
+            fileName = extDir + element + ".json";
+            parseLangFile(fileName)
+                .done(function (parsed) {
+                    parsed.forEach(function (element, index) {
+                        switch (element.stmtType) {
+                        case "Class":
+                            extClassList.push(element);
+                            break;
+
+                        case "Function":
+                            extFunctionList.push(element);
+                            break;
+
+                        case "Constant":
+                            extConstantList.push(element);
+                            break;
+                        }
                     });
-            });
-            dirDeferred.resolve();
-            console.log("processed ext dir");
-            return dirDeferred.promise();
+                    dirDeferred.resolve();
+                })
+                .fail(function (err) {
+                    console.error("error handling language directory files", err);
+                    dirDeferred.reject();
+                });
+            promises.push(dirDeferred);
+
         });
+
+        return $.when.apply(undefined, promises).promise();
     }
 
     function loadPredefines() {
@@ -309,7 +325,6 @@ define(function (require, exports, module) {
                 mmList = parsed.magic_methods;
                 constList = parsed.constants;
                 varList = parsed.variables;
-                console.log(Date.now(), "loaded predefined array");
                 loadDeferred.resolve();
             })
             .fail(function (err) {
@@ -331,7 +346,6 @@ define(function (require, exports, module) {
                     kwObj.suffix = keywords[key];
                     kwList.push(kwObj);
                 });
-                console.log(Date.now(), "loaded keywords array");
                 loadDeferred.resolve();
             })
             .fail(function (err) {
@@ -342,31 +356,22 @@ define(function (require, exports, module) {
         return loadDeferred.promise();
     }
 
-/*    function makeUsWait() {
-        var deferred = $.Deferred();
-
-        setTimeout(function () {
-            deferred.resolve();
-        }, 10000);
-
-        return deferred.promise();
-    }*/
-
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
     toolbarIcon.appendTo('#main-toolbar .buttons')
         .on("click", function () {
             projectUI.showProjectDialog(filters);
         });
 
-    $.when(loadKeywords(), loadPredefines(), loadExt())
-        .done(function (parsed) {
-            console.log("end", Date.now(), constList, varList, mmList, kwList, extClassList);
+    start = Date.now();
+    $.when(loadKeywords(), loadPredefines(), loadExtDir())
+        .done(function () {
+            var elapsed = Date.now() - start;
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms", extClassList, extConstantList, extFunctionList);
         })
         .fail(function (err) {
             console.error("error processing language files", err);
         });
 
-    console.log("start", Date.now());
     var phpHints = new PHPHints();
 
     CodeHintManager.registerHintProvider(phpHints, ["php"], 10);
