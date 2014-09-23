@@ -132,18 +132,18 @@ define(function (require, exports, module) {
     };
 
     PHPHints.prototype.getHints = function (implicitChar) {
-        var i =                 0,
-            hintList =          [],
-            localVarList =      [],
-            phpVarList =        [],
-            phpFuncList =       [],
-            phpConstList =      [],
-            phpKeywordList =    [],
-            classList =         [],
+        var i                       = 0,
+            hintList                = [],
+            localVarList            = [],
+            phpVarList              = [],
+            phpKeywordList          = [],
+            phpConstList            = [],
+            phpFuncList             = [],
             $fHint,
-            cursor = this.editor.getCursorPos(),
-            textFromLineStart = "",
-            tokenToCursor = "";
+            cursor                  = this.editor.getCursorPos(),
+            textFromLineStart       = "",
+            tokenToCursor           = "",
+            classMatch;
 
         this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
         tokenToCursor = getTokenToCursor(this.activeToken);
@@ -152,6 +152,10 @@ define(function (require, exports, module) {
             line: cursor.line,
             ch: 0
         }, cursor);
+
+        classMatch = newClassRegex.exec(textFromLineStart);
+        console.log(cursor, textFromLineStart, classMatch);
+
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
             if ((this.lastToken === "") ||
@@ -196,11 +200,12 @@ define(function (require, exports, module) {
             }
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
-        } else if (newClassRegex.test(textFromLineStart)) {
-            classList.push('class1');
-            classList.push('class2');
-            classList.push('class3');
-            hintList = classList;
+        } else if (classMatch !== null) {
+            for (i = 0; i < extClassList.length; i++) {
+                if (classMatch[2].indexOf(tokenToCursor)) {
+                    hintList.push(extClassList[i].name);
+                }
+            }
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
