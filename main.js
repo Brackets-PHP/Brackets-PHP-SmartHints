@@ -152,7 +152,7 @@ define(function (require, exports, module) {
             line: cursor.line,
             ch: 0
         }, cursor);
-
+        newClassRegex.lastIndex = 0;
         classMatch = newClassRegex.exec(textFromLineStart);
         console.log(cursor, textFromLineStart, classMatch);
 
@@ -201,9 +201,13 @@ define(function (require, exports, module) {
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
         } else if (classMatch !== null) {
-            for (i = 0; i < extClassList.length; i++) {
-                if (classMatch[2].indexOf(tokenToCursor)) {
-                    hintList.push(extClassList[i].name);
+            if (classMatch[2]) {
+                hintList = hintList.concat(extClassList);
+            } else {
+                for (i = 0; i < extClassList.length; i++) {
+                    if (classMatch[2].indexOf(tokenToCursor)) {
+                        hintList.push(extClassList[i].name);
+                    }
                 }
             }
         } else {
