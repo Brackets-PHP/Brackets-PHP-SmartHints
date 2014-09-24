@@ -1,44 +1,43 @@
 /* hint styling */
 .PHPSmartHints-completion {
-  padding-left: 22px;
+  padding-left: 34px;
   position: relative;
 }
 .PHPSmartHints-completion:before {
   position: absolute;
   left: 2px;
   bottom: 2px;
-  border-radius: 50%;
   font-size: 12px;
-  font-weight: bold;
-  height: 15px;
-  width: 15px;
-  line-height: 16px;
+  font-weight: normal;
+  height: 17px;
+  width: 28px;
+  line-height: 18px;
   text-align: center;
   color: white;
   box-sizing: border-box;
 }
 .PHPSmartHints-completion-localvar:before {
-  content: "V";
+  content: "LVar";
   background: #218434;
 }
 .PHPSmartHints-completion-phpvar:before {
-  content: "V";
+  content: "Var";
   background: #217184;
 }
 .PHPSmartHints-completion-phpkeyword:before {
-  content: "K";
+  content: "Kwd";
   background: #302184;
 }
 .PHPSmartHints-completion-phpconstant:before {
-  content: "C";
+  content: "Cnst";
   background: #692184;
 }
 .PHPSmartHints-completion-phpfunction:before {
-  content: "F";
+  content: "Func";
   background: #842156;
 }
 .PHPSmartHints-completion-phpclass:before {
-  content: "CL";
+  content: "Cls";
   background: #cb1c3e;
 }
 

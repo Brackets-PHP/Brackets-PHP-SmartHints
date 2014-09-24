@@ -327,7 +327,7 @@ define(function (require, exports, module) {
         var promises = [],
             directory,
             fileName    = "",
-            extArray = ["basic", "standard", "session", "gd", "PDO", "mysqli", "apc", "json"];
+            extArray = ["basic", "standard", "session", "gd", "PDO", "mysqli", "apc", "json", "curl", "fileinfo", "hash", "sockets"];
 
 
         extArray.forEach(function (element, index) {
