@@ -74,10 +74,10 @@ define(function (require, exports, module) {
         this.tempValue              = "";
         this.activeToken            = "";
         this.lastToken              = "";
-        this.cachedPhpVariables     = [];
-        this.cachedPhpConstants     = [];
-        this.cachedPhpKeywords      = [];
-        this.cachedPhpFunctions     = [];
+//        this.cachedPhpVariables     = [];
+//        this.cachedPhpConstants     = [];
+//        this.cachedPhpKeywords      = [];
+//        this.cachedPhpFunctions     = [];
         this.cachedLocalVariables   = [];
     }
 
@@ -109,20 +109,28 @@ define(function (require, exports, module) {
         // if we have entered 2 or more chars, do a simple keyword match and return true
         if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
-            for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < kwList.length; i++) {
+                if (kwList[i].kwname.indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
             // do constants 2nd as they are also small
-            for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < constList.length; i++) {
+                if (constList[i].indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
+
+            // and then magic methods
+            for (i = 0; i < mmList.length; i++) {
+                if (mmList[i].indexOf(tokenToCursor) === 0) {
+                    return true;
+                }
+            }
+
             // do functions last as the array is quite large
-            for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < extFunctionList.length; i++) {
+                if (extFunctionList[i].name.indexOf(tokenToCursor) === 0) {
                     return true;
                 }
             }
@@ -138,8 +146,11 @@ define(function (require, exports, module) {
             phpVarList              = [],
             phpKeywordList          = [],
             phpConstList            = [],
+            phpMmList               = [],
             phpFuncList             = [],
+            classList               = [],
             $fHint,
+            ttcRegex,
             cursor                  = this.editor.getCursorPos(),
             textFromLineStart       = "",
             tokenToCursor           = "",
@@ -154,7 +165,7 @@ define(function (require, exports, module) {
         }, cursor);
         newClassRegex.lastIndex = 0;
         classMatch = newClassRegex.exec(textFromLineStart);
-        console.log(cursor, textFromLineStart, classMatch);
+        console.log(cursor, textFromLineStart, tokenToCursor, classMatch);
 
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
@@ -162,10 +173,10 @@ define(function (require, exports, module) {
                     (this.activeToken.token.start !== this.lastToken.token.start) ||
                     (this.activeToken.pos.line !== this.lastToken.pos.line)) {
                 this.cachedLocalVariables.length = 0;
-                var varList = this.editor.document.getText().match(tokenVariable);
-                if (varList) {
-                    for (i = 0; i < varList.length; i++) {
-                        var word = varList[i];
+                var lVarList = this.editor.document.getText().match(tokenVariable);
+                if (lVarList) {
+                    for (i = 0; i < lVarList.length; i++) {
+                        var word = lVarList[i];
                         if (this.cachedLocalVariables.indexOf(word) === -1) {
                             this.cachedLocalVariables.push(word);
                         }
@@ -189,56 +200,79 @@ define(function (require, exports, module) {
                 }
             }
             // load the predefined $variables next
-            for (i = 0; i < this.cachedPhpVariables.length; i++) {
-                if (this.cachedPhpVariables[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < varList.length; i++) {
+                if (varList[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpvar")
-                        .text(this.cachedPhpVariables[i]);
+                        .text(varList[i]);
                     phpVarList.push($fHint);
                 }
             }
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
         } else if (classMatch !== null) {
-            if (classMatch[2]) {
-                hintList = hintList.concat(extClassList);
+            ttcRegex = new RegExp("^" + classMatch[2]);
+            if (!classMatch[2]) {
+                for (i = 0; i < extClassList.length; i++) {
+                    $fHint = $("<span>")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpclass")
+                        .text(extClassList[i].name);
+                    classList.push($fHint);
+                }
             } else {
                 for (i = 0; i < extClassList.length; i++) {
-                    if (classMatch[2].indexOf(tokenToCursor)) {
-                        hintList.push(extClassList[i].name);
+                    if (ttcRegex.test(extClassList[i].name)) {
+                        $fHint = $("<span>")
+                            .addClass("PHPSmartHints-completion")
+                            .addClass("PHPSmartHints-completion-phpclass")
+                            .text(extClassList[i].name);
+                        classList.push($fHint);
                     }
                 }
             }
+            hintList = classList;
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
-            for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < kwList.length; i++) {
+                if (kwList[i].kwname.indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpkeyword")
-                        .text(this.cachedPhpKeywords[i]);
+                        .text(kwList[i].kwname);
                     phpKeywordList.push($fHint);
                 }
             }
             // load constants that match
-            for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
+            for (i = 0; i < constList.length; i++) {
+                if (constList[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpconstant")
-                        .text(this.cachedPhpConstants[i]);
+                        .text(constList[i]);
                     phpConstList.push($fHint);
                 }
             }
-            // load functions that match
-            for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor) === 0) {
+
+             // load magic methods that match
+            for (i = 0; i < mmList.length; i++) {
+                if (mmList[i].indexOf(tokenToCursor) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpfunction")
-                        .text(this.cachedPhpFunctions[i]);
+                        .text(mmList[i]);
+                    phpMmList.push($fHint);
+                }
+            }
+            // load functions that match
+            for (i = 0; i < extFunctionList.length; i++) {
+                if (extFunctionList[i].name.indexOf(tokenToCursor) === 0) {
+                    $fHint = $("<span>")
+                        .addClass("PHPSmartHints-completion")
+                        .addClass("PHPSmartHints-completion-phpfunction")
+                        .text(extFunctionList[i].name);
                     phpFuncList.push($fHint);
                 }
             }
@@ -290,7 +324,7 @@ define(function (require, exports, module) {
         var promises = [],
             directory,
             fileName    = "",
-            extArray = ["basic", "standard", "session", "gd", "PDO", "mysqli", "apc"];
+            extArray = ["basic", "standard", "session", "gd", "PDO", "mysqli", "apc", "json"];
 
 
         extArray.forEach(function (element, index) {
@@ -375,7 +409,7 @@ define(function (require, exports, module) {
     $.when(loadKeywords(), loadPredefines(), loadExtDir())
         .done(function () {
             var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms", extClassList, extConstantList, extFunctionList);
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms", kwList, varList, mmList, constList, extClassList, extConstantList, extFunctionList);
         })
         .fail(function (err) {
             console.error("error processing language files", err);

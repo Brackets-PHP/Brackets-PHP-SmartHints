@@ -37,6 +37,10 @@
   content: "F";
   background: #842156;
 }
+.PHPSmartHints-completion-phpclass:before {
+  content: "CL";
+  background: #cb1c3e;
+}
 
 /*toolbar icon styles*/
 #PHPSmartHints-icon {
