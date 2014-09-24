@@ -294,7 +294,10 @@ define(function (require, exports, module) {
             replaceStart        = {line: cursor.line, ch: currentToken.start},
             replaceEnd          = {line: cursor.line, ch: cursor.ch};
 
-
+        console.log(currentToken, cursor);
+        if (currentToken.string === " ") {
+            replaceStart = replaceEnd;
+        }
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
         return false;
     };
