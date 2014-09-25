@@ -56,7 +56,7 @@ define(function (require, exports, module) {
         filters                 = [],
         projectUI               = require("project-ui");
 
-    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([a-zA-Z0-9_]*)/g,
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)/,
         classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
@@ -76,7 +76,7 @@ define(function (require, exports, module) {
         this.activeToken            = "";
         this.lastToken              = "";
         this.cachedLocalVariables   = [];
-        this.currentClassVar;
+        this.currentClassVar        = {};
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -209,7 +209,6 @@ define(function (require, exports, module) {
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
         } else if (classMatch !== null) {
-            ttcRegex = new RegExp("^" + classMatch[2]);
             if (!classMatch[2]) {
                 for (i = 0; i < extClassList.length; i++) {
                     $fHint = $("<span>")
@@ -220,17 +219,19 @@ define(function (require, exports, module) {
                     classList.push($fHint);
                 }
             } else {
+                //ttcRegex = new RegExp("^\\" + classMatch[2]);
                 for (i = 0; i < extClassList.length; i++) {
-                    if (ttcRegex.test(extClassList[i].name)) {
+                    //if (ttcRegex.test(extClassList[i].name)) {
                         $fHint = $("<span>")
                             .addClass("PHPSmartHints-completion")
                             .addClass("PHPSmartHints-completion-phpclass")
                             .data("phpClass", extClassList[i])
                             .text(extClassList[i].name);
                         classList.push($fHint);
-                    }
+                   // }
                 }
             }
+            this.currentClassVar.varName = classMatch[1];
             hintList = classList;
         } else {
             // not a $variable, could be a reserved word of some type
@@ -296,12 +297,13 @@ define(function (require, exports, module) {
         if (currentToken.string === " ") {
             replaceStart = replaceEnd;
         }
-        if (this.currentClassVar) {
+        if (this.currentClassVar.varName !== "") {
+            this.currentClassVar.phpClass = $hint.data("phpClass");
             classVars.push(this.currentClassVar);
         }
-        this.currentClassVar = "";
+        this.currentClassVar = {};
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
-        console.log($hint.data("phpClass"));
+        console.log(classVars);
         return false;
     };
 
@@ -415,7 +417,8 @@ define(function (require, exports, module) {
     $.when(loadKeywords(), loadPredefines(), loadExtDir())
         .done(function () {
             var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms", kwList, varList, mmList, constList, extClassList, extConstantList, extFunctionList);
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms");
+            toolbarIcon.addClass("active");
         })
         .fail(function (err) {
             console.error("error processing language files", err);
