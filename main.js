@@ -49,6 +49,7 @@ define(function (require, exports, module) {
         extClassList            = [],
         extFunctionList         = [],
         extConstantList         = [],
+        classVars               = [],
         start                   = 0;
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
@@ -74,11 +75,8 @@ define(function (require, exports, module) {
         this.tempValue              = "";
         this.activeToken            = "";
         this.lastToken              = "";
-//        this.cachedPhpVariables     = [];
-//        this.cachedPhpConstants     = [];
-//        this.cachedPhpKeywords      = [];
-//        this.cachedPhpFunctions     = [];
         this.cachedLocalVariables   = [];
+        this.currentClassVar;
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -165,7 +163,6 @@ define(function (require, exports, module) {
         }, cursor);
         newClassRegex.lastIndex = 0;
         classMatch = newClassRegex.exec(textFromLineStart);
-        console.log(cursor, textFromLineStart, tokenToCursor, classMatch);
 
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
@@ -218,6 +215,7 @@ define(function (require, exports, module) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpclass")
+                        .data("phpClass", extClassList[i])
                         .text(extClassList[i].name);
                     classList.push($fHint);
                 }
@@ -227,6 +225,7 @@ define(function (require, exports, module) {
                         $fHint = $("<span>")
                             .addClass("PHPSmartHints-completion")
                             .addClass("PHPSmartHints-completion-phpclass")
+                            .data("phpClass", extClassList[i])
                             .text(extClassList[i].name);
                         classList.push($fHint);
                     }
@@ -294,11 +293,15 @@ define(function (require, exports, module) {
             replaceStart        = {line: cursor.line, ch: currentToken.start},
             replaceEnd          = {line: cursor.line, ch: cursor.ch};
 
-        console.log(currentToken, cursor);
         if (currentToken.string === " ") {
             replaceStart = replaceEnd;
         }
+        if (this.currentClassVar) {
+            classVars.push(this.currentClassVar);
+        }
+        this.currentClassVar = "";
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
+        console.log($hint.data("phpClass"));
         return false;
     };
 
