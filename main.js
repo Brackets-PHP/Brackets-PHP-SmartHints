@@ -56,7 +56,7 @@ define(function (require, exports, module) {
         filters                 = [],
         projectUI               = require("project-ui");
 
-    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)/,
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/,
         classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
@@ -83,6 +83,7 @@ define(function (require, exports, module) {
         var i                   = 0,
             cursor              = editor.getCursorPos(),
             textFromLineStart   = "",
+            textFromVar         = "",
             tokenToCursor       = "";
 
         this.activeToken = TokenUtils.getInitialContext(editor._codeMirror, cursor);
@@ -98,8 +99,10 @@ define(function (require, exports, module) {
             ch: 0
         }, cursor);
 
+        textFromVar = textFromLineStart.substr(textFromLineStart.lastIndexOf("$"));
+
         // e.g. $var = new - we always have a class so return true right away
-        if (newClassRegex.test(textFromLineStart)) {
+        if (newClassRegex.test(textFromVar)) {
             return true;
         }
         
@@ -225,7 +228,7 @@ define(function (require, exports, module) {
                     classList.push($fHint);
                 }
             } else {
-                console.log(className);
+                //console.log(className);
                 ttcRegex = new RegExp("^" + className);
                 for (i = 0; i < extClassList.length; i++) {
                     if (ttcRegex.test(extClassList[i].name)) {
