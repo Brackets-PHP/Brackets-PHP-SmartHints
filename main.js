@@ -57,7 +57,7 @@ define(function (require, exports, module) {
         projectUI               = require("project-ui");
 
     var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/,
-        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)->/,
+        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)\s?->\s?[a-zA-Z0-9_]*$/,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
 
@@ -106,6 +106,11 @@ define(function (require, exports, module) {
             return true;
         }
         
+        if (classPropMethod.test(textFromVar)) {
+            console.log("yup");
+            return true;
+        }
+
         // if we have entered 2 or more chars, do a simple keyword match and return true
         if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
@@ -155,7 +160,8 @@ define(function (require, exports, module) {
             textFromLineStart       = "",
             tokenToCursor           = "",
             className               = "",
-            classMatch;
+            classMatch,
+            classPropMethodMatch;
 
         this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
         tokenToCursor = getTokenToCursor(this.activeToken);
@@ -166,6 +172,8 @@ define(function (require, exports, module) {
         }, cursor);
         newClassRegex.lastIndex = 0;
         classMatch = newClassRegex.exec(textFromLineStart);
+        classPropMethod.lastIndex = 0;
+        classPropMethodMatch = classPropMethod.exec(textFromLineStart);
 
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
@@ -242,6 +250,10 @@ define(function (require, exports, module) {
                 }
             }
             hintList = classList;
+        } else if (classPropMethodMatch !== null) {
+            // is it a $var-> match where class properties and methods should be hinted?
+            console.log(classPropMethodMatch);
+            //classVars.push(this)
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
