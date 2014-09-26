@@ -76,7 +76,6 @@ define(function (require, exports, module) {
         this.activeToken            = "";
         this.lastToken              = "";
         this.cachedLocalVariables   = [];
-        this.currentClassVar        = {};
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -152,6 +151,7 @@ define(function (require, exports, module) {
             cursor                  = this.editor.getCursorPos(),
             textFromLineStart       = "",
             tokenToCursor           = "",
+            className               = "",
             classMatch;
 
         this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
@@ -209,6 +209,12 @@ define(function (require, exports, module) {
             // list is presented with local first then predefined
             hintList = localVarList.concat(phpVarList);
         } else if (classMatch !== null) {
+            if (classMatch[2].indexOf("\\") !== -1) {
+                className = classMatch[2].split("\\").pop();
+            } else {
+                className = classMatch[2];
+            }
+
             if (!classMatch[2]) {
                 for (i = 0; i < extClassList.length; i++) {
                     $fHint = $("<span>")
@@ -219,19 +225,19 @@ define(function (require, exports, module) {
                     classList.push($fHint);
                 }
             } else {
-                //ttcRegex = new RegExp("^\\" + classMatch[2]);
+                console.log(className);
+                ttcRegex = new RegExp("^" + className);
                 for (i = 0; i < extClassList.length; i++) {
-                    //if (ttcRegex.test(extClassList[i].name)) {
+                    if (ttcRegex.test(extClassList[i].name)) {
                         $fHint = $("<span>")
                             .addClass("PHPSmartHints-completion")
                             .addClass("PHPSmartHints-completion-phpclass")
                             .data("phpClass", extClassList[i])
                             .text(extClassList[i].name);
                         classList.push($fHint);
-                   // }
+                    }
                 }
             }
-            this.currentClassVar.varName = classMatch[1];
             hintList = classList;
         } else {
             // not a $variable, could be a reserved word of some type
@@ -294,16 +300,14 @@ define(function (require, exports, module) {
             replaceStart        = {line: cursor.line, ch: currentToken.start},
             replaceEnd          = {line: cursor.line, ch: cursor.ch};
 
-        if (currentToken.string === " ") {
+        if (currentToken.string === " " || currentToken.string.lastIndexOf("\\") === currentToken.string.length - 1) {
             replaceStart = replaceEnd;
+        } else if (this.editor.document.getRange(replaceStart, replaceEnd).indexOf("\\") === 0) {
+            replaceStart.ch += 1;
         }
-        if (this.currentClassVar.varName !== "") {
-            this.currentClassVar.phpClass = $hint.data("phpClass");
-            classVars.push(this.currentClassVar);
-        }
-        this.currentClassVar = {};
+
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
-        console.log(classVars);
+
         return false;
     };
 
