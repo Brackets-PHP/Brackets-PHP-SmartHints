@@ -56,8 +56,8 @@ define(function (require, exports, module) {
         filters                 = [],
         projectUI               = require("project-ui");
 
-    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/,
-        classPropMethod         = /(\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)\s?->\s?[a-zA-Z0-9_]*$/,
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/gm,
+        classPropMethod         = /(\$[a-zA-Z_][a-zA-Z0-9_]*)\s*->\s*([a-zA-Z0-9_]*)$/g,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
 
@@ -161,7 +161,8 @@ define(function (require, exports, module) {
             tokenToCursor           = "",
             className               = "",
             classMatch,
-            classPropMethodMatch;
+            classPropMethodMatch,
+            allClassMatch;
 
         this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
         tokenToCursor = getTokenToCursor(this.activeToken);
@@ -252,8 +253,11 @@ define(function (require, exports, module) {
             hintList = classList;
         } else if (classPropMethodMatch !== null) {
             // is it a $var-> match where class properties and methods should be hinted?
-            console.log(classPropMethodMatch);
-            //classVars.push(this)
+            newClassRegex.lastIndex = 0;
+            while ((allClassMatch = newClassRegex.exec(this.editor.document.getText())) !== null) {
+                classVars.push(allClassMatch);
+            }
+            console.log(classVars);
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
