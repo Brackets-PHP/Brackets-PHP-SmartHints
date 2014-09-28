@@ -56,7 +56,8 @@ define(function (require, exports, module) {
         filters                 = [],
         projectUI               = require("project-ui");
 
-    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/gm,
+    var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/,
+        classVarsRegex          = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)/gm,
         classPropMethod         = /(\$[a-zA-Z_][a-zA-Z0-9_]*)\s*->\s*([a-zA-Z0-9_]*)$/g,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
@@ -162,7 +163,8 @@ define(function (require, exports, module) {
             className               = "",
             classMatch,
             classPropMethodMatch,
-            allClassMatch;
+            allClassMatch,
+            docText;
 
         this.activeToken = TokenUtils.getInitialContext(this.editor._codeMirror, cursor);
         tokenToCursor = getTokenToCursor(this.activeToken);
@@ -253,11 +255,19 @@ define(function (require, exports, module) {
             hintList = classList;
         } else if (classPropMethodMatch !== null) {
             // is it a $var-> match where class properties and methods should be hinted?
-            newClassRegex.lastIndex = 0;
-            while ((allClassMatch = newClassRegex.exec(this.editor.document.getText())) !== null) {
+            classVars = [];
+            classVarsRegex.lastIndex = 0;
+            docText = this.editor.document.getText();
+            while ((allClassMatch = classVarsRegex.exec(docText)) !== null) {
                 classVars.push(allClassMatch);
             }
-            console.log(classVars);
+            for (i = 0; i < classVars.length; i++) {
+
+            $fHint = $("<span>")
+                .addClass("PHPSmartHints-completion")
+                .addClass("PHPSmartHints-completion-phpkeyword")
+                .text(kwList[i].kwname);
+
         } else {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
