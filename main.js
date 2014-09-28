@@ -147,6 +147,7 @@ define(function (require, exports, module) {
 
     PHPHints.prototype.getHints = function (implicitChar) {
         var i                       = 0,
+            j                       = 0,
             hintList                = [],
             localVarList            = [],
             phpVarList              = [],
@@ -262,11 +263,21 @@ define(function (require, exports, module) {
                 classVars.push(allClassMatch);
             }
             for (i = 0; i < classVars.length; i++) {
+                if (classVars[i][1] === classPropMethodMatch[1]) {
+                    for (j = 0; j < extClassList.length; j++) {
+                        if (classVars[i][2] === extClassList[j].name) {
+                            extClassList[j].methods.forEach(function (method, index) {
+                                $fHint = $("<span>")
+                                    .addClass("PHPSmartHints-completion")
+                                    .addClass("PHPSmartHints-completion-phpclass")
+                                    .text(method.name);
+                                hintList.push($fHint);
+                            });
+                        }
+                    }
+                }
+            }
 
-            $fHint = $("<span>")
-                .addClass("PHPSmartHints-completion")
-                .addClass("PHPSmartHints-completion-phpkeyword")
-                .text(kwList[i].kwname);
 
         } else {
             // not a $variable, could be a reserved word of some type
