@@ -269,8 +269,15 @@ define(function (require, exports, module) {
                             extClassList[j].methods.forEach(function (method, index) {
                                 $fHint = $("<span>")
                                     .addClass("PHPSmartHints-completion")
-                                    .addClass("PHPSmartHints-completion-phpclass")
+                                    .addClass("PHPSmartHints-completion-phpclassmethod")
                                     .text(method.name);
+                                hintList.push($fHint);
+                            });
+                            extClassList[j].properties.forEach(function (prop, index) {
+                                $fHint = $("<span>")
+                                    .addClass("PHPSmartHints-completion")
+                                    .addClass("PHPSmartHints-completion-phpclassproperty")
+                                    .text(prop.name);
                                 hintList.push($fHint);
                             });
                         }

@@ -36,6 +36,14 @@
   content: "Func";
   background: #842156;
 }
+.PHPSmartHints-completion-phpclassmethod:before {
+  content: "ClsM";
+  background: #cb1c3e;
+}
+.PHPSmartHints-completion-phpclassproperty:before {
+  content: "ClsP";
+  background: #cb1c3e;
+}
 .PHPSmartHints-completion-phpclass:before {
   content: "Cls";
   background: #cb1c3e;
