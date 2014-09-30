@@ -351,8 +351,10 @@ define(function (require, exports, module) {
             replaceStart = replaceEnd;
         } else if (this.editor.document.getRange(replaceStart, replaceEnd).indexOf("\\") === 0) {
             replaceStart.ch += 1;
+        } else if (currentToken.string === "->") {
+            replaceStart.ch = currentToken.end + 1;
         }
-
+        console.log($hint.text(), cursor, currentToken, replaceStart, replaceEnd);
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
 
         return false;
