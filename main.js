@@ -33,6 +33,7 @@ define(function (require, exports, module) {
         FileSystem              = brackets.getModule("filesystem/FileSystem"),
         FileUtils               = brackets.getModule("file/FileUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        loadLangFiles           = require("loadLangFiles"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
     var Strings                 = require('strings');
@@ -457,10 +458,10 @@ define(function (require, exports, module) {
         });
 
     start = Date.now();
-    $.when(loadKeywords(), loadPredefines(), loadExtDir())
+    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadLangFiles.loadIncPathPhp("c:/code/"))
         .done(function () {
             var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms");
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms", loadLangFiles.getUserPhpLists());
             toolbarIcon.addClass("active");
         })
         .fail(function (err) {
