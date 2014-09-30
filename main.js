@@ -58,7 +58,7 @@ define(function (require, exports, module) {
 
     var newClassRegex           = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)$/,
         classVarsRegex          = /([\$][a-zA-Z_][a-zA-Z0-9_]*)[\s]?[\=][\s]?new\s+([\\a-zA-Z0-9_]*)/gm,
-        classPropMethod         = /(\$[a-zA-Z_][a-zA-Z0-9_]*)\s*->\s*([a-zA-Z0-9_]*)$/g,
+        classPropMethod         = /(\$[a-zA-Z_][a-zA-Z0-9_]*)\s*->\s*([a-zA-Z0-9_]*)$/,
         tokenVariable           = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
 
 
@@ -108,7 +108,6 @@ define(function (require, exports, module) {
         }
         
         if (classPropMethod.test(textFromVar)) {
-            console.log("yup");
             return true;
         }
 
@@ -229,9 +228,9 @@ define(function (require, exports, module) {
             } else {
                 className = classMatch[2];
             }
-
-            if (!classMatch[2]) {
-                for (i = 0; i < extClassList.length; i++) {
+            ttcRegex = new RegExp("^" + className);
+            for (i = 0; i < extClassList.length; i++) {
+                if (!classMatch[2] || ttcRegex.test(extClassList[i].name)) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpclass")
@@ -239,24 +238,12 @@ define(function (require, exports, module) {
                         .text(extClassList[i].name);
                     classList.push($fHint);
                 }
-            } else {
-                //console.log(className);
-                ttcRegex = new RegExp("^" + className);
-                for (i = 0; i < extClassList.length; i++) {
-                    if (ttcRegex.test(extClassList[i].name)) {
-                        $fHint = $("<span>")
-                            .addClass("PHPSmartHints-completion")
-                            .addClass("PHPSmartHints-completion-phpclass")
-                            .data("phpClass", extClassList[i])
-                            .text(extClassList[i].name);
-                        classList.push($fHint);
-                    }
-                }
             }
             hintList = classList;
         } else if (classPropMethodMatch !== null) {
             // is it a $var-> match where class properties and methods should be hinted?
             classVars = [];
+            ttcRegex = new RegExp("^" + classPropMethodMatch[2]);
             classVarsRegex.lastIndex = 0;
             docText = this.editor.document.getText();
             while ((allClassMatch = classVarsRegex.exec(docText)) !== null) {
@@ -267,18 +254,22 @@ define(function (require, exports, module) {
                     for (j = 0; j < extClassList.length; j++) {
                         if (classVars[i][2] === extClassList[j].name) {
                             extClassList[j].methods.forEach(function (method, index) {
-                                $fHint = $("<span>")
-                                    .addClass("PHPSmartHints-completion")
-                                    .addClass("PHPSmartHints-completion-phpclassmethod")
-                                    .text(method.name);
-                                hintList.push($fHint);
+                                if (!classPropMethodMatch[2] || ttcRegex.test(method.name)) {
+                                    $fHint = $("<span>")
+                                        .addClass("PHPSmartHints-completion")
+                                        .addClass("PHPSmartHints-completion-phpclassmethod")
+                                        .text(method.name);
+                                    hintList.push($fHint);
+                                }
                             });
                             extClassList[j].properties.forEach(function (prop, index) {
-                                $fHint = $("<span>")
-                                    .addClass("PHPSmartHints-completion")
-                                    .addClass("PHPSmartHints-completion-phpclassproperty")
-                                    .text(prop.name);
-                                hintList.push($fHint);
+                                if (!classPropMethodMatch[2] || ttcRegex.test(prop.name)) {
+                                    $fHint = $("<span>")
+                                        .addClass("PHPSmartHints-completion")
+                                        .addClass("PHPSmartHints-completion-phpclassproperty")
+                                        .text(prop.name);
+                                    hintList.push($fHint);
+                                }
                             });
                         }
                     }
@@ -354,7 +345,6 @@ define(function (require, exports, module) {
         } else if (currentToken.string === "->") {
             replaceStart.ch = currentToken.end + 1;
         }
-        console.log($hint.text(), cursor, currentToken, replaceStart, replaceEnd);
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
 
         return false;
