@@ -50,8 +50,13 @@ define(function (require, exports, module) {
         extClassList            = [],
         extFunctionList         = [],
         extConstantList         = [],
+        userClassList           = [],
+        userFunctionList        = [],
+        userConstantList        = [],
         classVars               = [],
-        start                   = 0;
+        start                   = 0,
+        directory,
+        results                 = [];
 
     var toolbarIcon             = $('<a title="' + Strings.EXTENSION_NAME + '" id="PHPSmartHints-icon"></a>'),
         filters                 = [],
@@ -351,6 +356,63 @@ define(function (require, exports, module) {
         return false;
     };
 
+    function parseLangFileFromFile(file) {
+        var parseDeferred   = new $.Deferred(),
+            parsed;
+
+        FileUtils.readAsText(file)
+            .done(function (text) {
+                try {
+                    parsed = JSON.parse(text);
+                } catch (ex) {
+                    console.error("Error parsing:", file, ex);
+                    parseDeferred.reject();
+                }
+                parseDeferred.resolve(parsed);
+            })
+            .fail(function (err) {
+                console.error("Error handling file for parsing", err);
+            });
+        return parseDeferred.promise();
+    }
+
+    function loadIncPathPhp(results) {
+        var promises    = [];
+        results.forEach(function (entry) {
+            var def = new $.Deferred();
+            // console.log(entry);
+            if (entry.isFile) {
+                parseLangFileFromFile(entry)
+                    .done(function (parsed) {
+                        parsed.forEach(function (element, index) {
+
+                            switch (element.stmtType) {
+                            case "Class":
+                                userClassList.push(element);
+                                break;
+
+                            case "Function":
+                                userFunctionList.push(element);
+                                break;
+
+                            case "Constant":
+                                userConstantList.push(element);
+                                break;
+                            }
+                        });
+                        def.resolve();
+                    })
+                    .fail(function (err) {
+                        console.error("error handling user PHP files", err);
+                        def.reject();
+                    });
+            }
+            promises.push(def);
+            return true;
+        });
+        return $.when.apply(undefined, promises).promise();
+    }
+
     function parseLangFile(fileName) {
         var parseDeferred   = new $.Deferred(),
             file            = FileSystem.getFileForPath(fileName),
@@ -456,12 +518,17 @@ define(function (require, exports, module) {
         .on("click", function () {
             projectUI.showProjectDialog(filters);
         });
+    directory = FileSystem.getDirectoryForPath("/tmp/userphp");
+    directory.visit(function (entry) {
+        results.push(entry);
+        return true;
+    });
 
     start = Date.now();
-    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadLangFiles.loadIncPathPhp("c:/code/"))
+    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp(results))
         .done(function () {
             var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms", loadLangFiles.getUserPhpLists());
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms", extClassList, userClassList);
             toolbarIcon.addClass("active");
         })
         .fail(function (err) {
