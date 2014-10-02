@@ -33,7 +33,6 @@ define(function (require, exports, module) {
         FileSystem              = brackets.getModule("filesystem/FileSystem"),
         FileUtils               = brackets.getModule("file/FileUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
-        loadLangFiles           = require("loadLangFiles"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
     var Strings                 = require('strings');
@@ -376,12 +375,13 @@ define(function (require, exports, module) {
         return parseDeferred.promise();
     }
 
-    function loadIncPathPhp(results) {
+    function loadIncPathPhp() {
         var promises    = [];
         results.forEach(function (entry) {
-            var def = new $.Deferred();
+
             // console.log(entry);
             if (entry.isFile) {
+                var def = new $.Deferred();
                 parseLangFileFromFile(entry)
                     .done(function (parsed) {
                         parsed.forEach(function (element, index) {
@@ -406,9 +406,8 @@ define(function (require, exports, module) {
                         console.error("error handling user PHP files", err);
                         def.reject();
                     });
+                promises.push(def);
             }
-            promises.push(def);
-            return true;
         });
         return $.when.apply(undefined, promises).promise();
     }
@@ -525,10 +524,10 @@ define(function (require, exports, module) {
     });
 
     start = Date.now();
-    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp(results))
+    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp())
         .done(function () {
             var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms", extClassList, userClassList);
+            console.log("PHP Language files successfully loaded in " + elapsed + "ms", userClassList);
             toolbarIcon.addClass("active");
         })
         .fail(function (err) {
