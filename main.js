@@ -160,6 +160,7 @@ define(function (require, exports, module) {
             phpMmList               = [],
             phpFuncList             = [],
             classList               = [],
+            allClassesList          = [],
             $fHint,
             ttcRegex,
             cursor                  = this.editor.getCursorPos(),
@@ -182,6 +183,7 @@ define(function (require, exports, module) {
         classMatch = newClassRegex.exec(textFromLineStart);
         classPropMethod.lastIndex = 0;
         classPropMethodMatch = classPropMethod.exec(textFromLineStart);
+        allClassesList = extClassList.concat(userClassList);
 
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
@@ -234,13 +236,13 @@ define(function (require, exports, module) {
                 className = classMatch[2];
             }
             ttcRegex = new RegExp("^" + className);
-            for (i = 0; i < extClassList.length; i++) {
-                if (!classMatch[2] || ttcRegex.test(extClassList[i].name)) {
+            for (i = 0; i < allClassesList.length; i++) {
+                if (!classMatch[2] || ttcRegex.test(allClassesList[i].name)) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpclass")
-                        .data("phpClass", extClassList[i])
-                        .text(extClassList[i].name);
+                        .data("phpClass", allClassesList[i])
+                        .text(allClassesList[i].name);
                     classList.push($fHint);
                 }
             }
@@ -256,9 +258,9 @@ define(function (require, exports, module) {
             }
             for (i = 0; i < classVars.length; i++) {
                 if (classVars[i][1] === classPropMethodMatch[1]) {
-                    for (j = 0; j < extClassList.length; j++) {
-                        if (classVars[i][2] === extClassList[j].name) {
-                            extClassList[j].methods.forEach(function (method, index) {
+                    for (j = 0; j < allClassesList.length; j++) {
+                        if (classVars[i][2] === allClassesList[j].name) {
+                            allClassesList[j].methods.forEach(function (method, index) {
                                 if (!classPropMethodMatch[2] || ttcRegex.test(method.name)) {
                                     $fHint = $("<span>")
                                         .addClass("PHPSmartHints-completion")
@@ -267,7 +269,7 @@ define(function (require, exports, module) {
                                     hintList.push($fHint);
                                 }
                             });
-                            extClassList[j].properties.forEach(function (prop, index) {
+                            allClassesList[j].properties.forEach(function (prop, index) {
                                 if (!classPropMethodMatch[2] || ttcRegex.test(prop.name)) {
                                     $fHint = $("<span>")
                                         .addClass("PHPSmartHints-completion")
