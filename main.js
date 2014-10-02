@@ -378,14 +378,11 @@ define(function (require, exports, module) {
     function loadIncPathPhp() {
         var promises    = [];
         results.forEach(function (entry) {
-
-            // console.log(entry);
             if (entry.isFile) {
                 var def = new $.Deferred();
                 parseLangFileFromFile(entry)
                     .done(function (parsed) {
                         parsed.forEach(function (element, index) {
-
                             switch (element.stmtType) {
                             case "Class":
                                 userClassList.push(element);
@@ -517,22 +514,29 @@ define(function (require, exports, module) {
         .on("click", function () {
             projectUI.showProjectDialog(filters);
         });
-    directory = FileSystem.getDirectoryForPath("/tmp/userphp");
+
+    start = Date.now();
+
+    directory = FileSystem.getDirectoryForPath("c:/code/");
     directory.visit(function (entry) {
         results.push(entry);
         return true;
+    }, function (err) {
+        if (!err) {
+            $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp())
+                .done(function () {
+                    var elapsed = Date.now() - start;
+                    console.log("PHP Language files successfully loaded in " + elapsed + "ms");
+                    toolbarIcon.addClass("active");
+                })
+                .fail(function (err) {
+                    console.error("error processing language files", err);
+                });
+        }
     });
 
-    start = Date.now();
-    $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp())
-        .done(function () {
-            var elapsed = Date.now() - start;
-            console.log("PHP Language files successfully loaded in " + elapsed + "ms", userClassList);
-            toolbarIcon.addClass("active");
-        })
-        .fail(function (err) {
-            console.error("error processing language files", err);
-        });
+
+
 
     var phpHints = new PHPHints();
 
