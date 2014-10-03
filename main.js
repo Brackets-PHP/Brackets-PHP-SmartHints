@@ -513,7 +513,10 @@ define(function (require, exports, module) {
     }
 
     function handleClassExtends(classArray) {
-        var parentObject    = {},
+        var parentObject    = {
+            methods: [],
+            properties: []
+        },
             methods         = [],
             properties      = [],
             i = 0;
@@ -522,11 +525,11 @@ define(function (require, exports, module) {
             for (i = 0; i < allClasses.length; i++) {
                 if (classArray.extends === allClasses[i].fqn) {
                     parentObject = handleClassExtends(allClasses[i]);
+                    classArray.methods.push.apply(classArray.methods, parentObject.methods);
+                    classArray.properties.push.apply(classArray.properties, parentObject.properties);
+                    break;
                 }
-                break;
             }
-            classArray.methods.push.apply(classArray.methods, parentObject.methods);
-            classArray.properties.push.apply(classArray.properties, parentObject.properties);
         }
         classArray.methods.forEach(function (method, index) {
             if ((method.type & 1) || (method.type & 2)) {
@@ -548,9 +551,11 @@ define(function (require, exports, module) {
             top = {};
 
         for (i = 0; i < allClasses.length; i++) {
-            top = handleClassExtends(allClasses[i]);
-            allClasses[i].methods.push.apply(allClasses[i].methods, top.methods);
-            allClasses[i].properties.push.apply(allClasses[i].properties, top.properties);
+            if (allClasses[i].extends) {
+                top = handleClassExtends(allClasses[i]);
+                allClasses[i].methods.push.apply(allClasses[i].methods, top.methods);
+                allClasses[i].properties.push.apply(allClasses[i].properties, top.properties);
+            }
         }
         console.log(allClasses);
     }
@@ -563,7 +568,7 @@ define(function (require, exports, module) {
 
     start = Date.now();
 
-    directory = FileSystem.getDirectoryForPath("c:/code/");
+    directory = FileSystem.getDirectoryForPath("/tmp/code/");
     directory.visit(function (entry) {
         results.push(entry);
         return true;
