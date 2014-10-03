@@ -53,6 +53,7 @@ define(function (require, exports, module) {
         userFunctionList        = [],
         userConstantList        = [],
         classVars               = [],
+        allClasses              = [],
         start                   = 0,
         directory,
         results                 = [];
@@ -511,6 +512,49 @@ define(function (require, exports, module) {
         return loadDeferred.promise();
     }
 
+    function handleClassExtends(classArray) {
+        var parentObject    = {},
+            methods         = [],
+            properties      = [],
+            i = 0;
+
+        if (classArray.extends) {
+            for (i = 0; i < allClasses.length; i++) {
+                if (classArray.extends === allClasses[i].fqn) {
+                    parentObject = handleClassExtends(allClasses[i]);
+                }
+                break;
+            }
+            classArray.methods.push.apply(classArray.methods, parentObject.methods);
+            classArray.properties.push.apply(classArray.properties, parentObject.properties);
+        }
+        classArray.methods.forEach(function (method, index) {
+            if ((method.type & 1) || (method.type & 2)) {
+                parentObject.methods.push(method);
+            }
+        });
+
+        classArray.properties.forEach(function (property, index) {
+            if ((property.type & 1) || (property.type & 2)) {
+                parentObject.properties.push(property);
+            }
+        });
+
+        return parentObject;
+    }
+
+    function processClassesForExtends() {
+        var i,
+            top = {};
+
+        for (i = 0; i < allClasses.length; i++) {
+            top = handleClassExtends(allClasses[i]);
+            allClasses[i].methods.push.apply(allClasses[i].methods, top.methods);
+            allClasses[i].properties.push.apply(allClasses[i].properties, top.properties);
+        }
+        console.log(allClasses);
+    }
+
     ExtensionUtils.loadStyleSheet(module, "css/main.css");
     toolbarIcon.appendTo('#main-toolbar .buttons')
         .on("click", function () {
@@ -527,7 +571,11 @@ define(function (require, exports, module) {
         if (!err) {
             $.when(loadKeywords(), loadPredefines(), loadExtDir(), loadIncPathPhp())
                 .done(function () {
-                    var elapsed = Date.now() - start;
+                    var elapsed;
+
+                    allClasses  = extClassList.concat(userClassList).sort();
+                    processClassesForExtends();
+                    elapsed = Date.now() - start;
                     console.log("PHP Language files successfully loaded in " + elapsed + "ms");
                     toolbarIcon.addClass("active");
                 })
@@ -536,9 +584,6 @@ define(function (require, exports, module) {
                 });
         }
     });
-
-
-
 
     var phpHints = new PHPHints();
 
