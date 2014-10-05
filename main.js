@@ -533,13 +533,13 @@ define(function (require, exports, module) {
             }
         }
         classArray.methods.forEach(function (method, index) {
-            if ((method.type & 1) || (method.type & 2)) {
+            if ((method.type === 1) || (method.type === 2)) {
                 parentObject.methods.push(method);
             }
         });
 
         classArray.properties.forEach(function (property, index) {
-            if ((property.type & 1) || (property.type & 2)) {
+            if ((property.type === 1) || (property.type === 2)) {
                 parentObject.properties.push(property);
             }
         });
