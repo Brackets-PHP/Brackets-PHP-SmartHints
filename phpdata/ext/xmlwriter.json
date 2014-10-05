@@ -4,7 +4,7 @@
         "name": "XMLWriter",
         "fqn": "\\XMLWriter",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "openUri",
@@ -18,7 +18,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create new xmlwriter using source uri for output\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-uri.php\r\n * @param string $uri <p>\r\n * The URI of the resource for the output.\r\n * <\/p>\r\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * <\/p>\r\n * <p>\r\n * Procedural style: Returns a new xmlwriter resource for later use with the\r\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create new xmlwriter using source uri for output\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-uri.php\n * @param string $uri <p>\n * The URI of the resource for the output.\n * <\/p>\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n * <\/p>\n * <p>\n * Procedural style: Returns a new xmlwriter resource for later use with the\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\n *\/"
             },
             {
                 "name": "openMemory",
@@ -27,7 +27,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create new xmlwriter using memory for string output\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-memory.php\r\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * <\/p>\r\n * <p>\r\n * Procedural style: Returns a new xmlwriter resource for later use with the\r\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create new xmlwriter using memory for string output\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-open-memory.php\n * @return bool Object oriented style: Returns <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n * <\/p>\n * <p>\n * Procedural style: Returns a new xmlwriter resource for later use with the\n * xmlwriter functions on success, <b>FALSE<\/b> on error.\n *\/"
             },
             {
                 "name": "setIndent",
@@ -41,7 +41,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Toggle indentation on\/off\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent.php\r\n * @param bool $indent <p>\r\n * Whether indentation is enabled.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Toggle indentation on\/off\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent.php\n * @param bool $indent <p>\n * Whether indentation is enabled.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "setIndentString",
@@ -55,7 +55,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Set string used for indenting\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent-string.php\r\n * @param string $indentString <p>\r\n * The indentation string.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Set string used for indenting\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-set-indent-string.php\n * @param string $indentString <p>\n * The indentation string.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startComment",
@@ -64,7 +64,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Create start comment\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-comment.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\n * Create start comment\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-comment.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endComment",
@@ -73,7 +73,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Create end comment\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-comment.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\n * Create end comment\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-comment.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startAttribute",
@@ -87,7 +87,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute.php\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start attribute\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute.php\n * @param string $name <p>\n * The attribute name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endAttribute",
@@ -96,7 +96,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-attribute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End attribute\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-attribute.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeAttribute",
@@ -116,7 +116,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute.php\r\n * @param string $name <p>\r\n * The name of the attribute.\r\n * <\/p>\r\n * @param string $value <p>\r\n * The value of the attribute.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full attribute\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute.php\n * @param string $name <p>\n * The name of the attribute.\n * <\/p>\n * @param string $value <p>\n * The value of the attribute.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startAttributeNs",
@@ -142,7 +142,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start namespaced attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start namespaced attribute\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-attribute-ns.php\n * @param string $prefix <p>\n * The namespace prefix.\n * <\/p>\n * @param string $name <p>\n * The attribute name.\n * <\/p>\n * @param string $uri <p>\n * The namespace URI.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeAttributeNs",
@@ -174,7 +174,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full namespaced attribute\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The attribute name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The attribute value.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full namespaced attribute\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-attribute-ns.php\n * @param string $prefix <p>\n * The namespace prefix.\n * <\/p>\n * @param string $name <p>\n * The attribute name.\n * <\/p>\n * @param string $uri <p>\n * The namespace URI.\n * <\/p>\n * @param string $content <p>\n * The attribute value.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startElement",
@@ -188,7 +188,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element.php\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start element tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element.php\n * @param string $name <p>\n * The element name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endElement",
@@ -197,7 +197,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current element\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-element.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "fullEndElement",
@@ -206,7 +206,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\r\n * End current element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-full-end-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\n * End current element\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-full-end-element.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startElementNs",
@@ -232,7 +232,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start namespaced element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start namespaced element tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-element-ns.php\n * @param string $prefix <p>\n * The namespace prefix.\n * <\/p>\n * @param string $name <p>\n * The element name.\n * <\/p>\n * @param string $uri <p>\n * The namespace URI.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeElement",
@@ -252,7 +252,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element.php\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $content [optional] <p>\r\n * The element contents.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full element tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element.php\n * @param string $name <p>\n * The element name.\n * <\/p>\n * @param string $content [optional] <p>\n * The element contents.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeElementNs",
@@ -284,7 +284,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full namespaced element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element-ns.php\r\n * @param string $prefix <p>\r\n * The namespace prefix.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The element name.\r\n * <\/p>\r\n * @param string $uri <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @param string $content [optional] <p>\r\n * The element contents.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full namespaced element tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-element-ns.php\n * @param string $prefix <p>\n * The namespace prefix.\n * <\/p>\n * @param string $name <p>\n * The element name.\n * <\/p>\n * @param string $uri <p>\n * The namespace URI.\n * <\/p>\n * @param string $content [optional] <p>\n * The element contents.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startPi",
@@ -298,7 +298,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start PI tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-pi.php\r\n * @param string $target <p>\r\n * The target of the processing instruction.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start PI tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-pi.php\n * @param string $target <p>\n * The target of the processing instruction.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endPi",
@@ -307,7 +307,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current PI\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-pi.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current PI\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-pi.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writePi",
@@ -327,7 +327,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Writes a PI\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-pi.php\r\n * @param string $target <p>\r\n * The target of the processing instruction.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the processing instruction.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Writes a PI\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-pi.php\n * @param string $target <p>\n * The target of the processing instruction.\n * <\/p>\n * @param string $content <p>\n * The content of the processing instruction.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startCdata",
@@ -336,7 +336,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start CDATA tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-cdata.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start CDATA tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-cdata.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endCdata",
@@ -345,7 +345,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current CDATA\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-cdata.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current CDATA\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-cdata.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeCdata",
@@ -359,7 +359,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full CDATA tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-cdata.php\r\n * @param string $content <p>\r\n * The contents of the CDATA.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full CDATA tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-cdata.php\n * @param string $content <p>\n * The contents of the CDATA.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "text",
@@ -373,7 +373,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write text\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-text.php\r\n * @param string $content <p>\r\n * The contents of the text.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write text\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-text.php\n * @param string $content <p>\n * The contents of the text.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeRaw",
@@ -387,7 +387,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\r\n * Write a raw XML text\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-raw.php\r\n * @param string $content <p>\r\n * The text string to write.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0, PECL xmlwriter &gt;= 2.0.4)<br\/>\n * Write a raw XML text\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-raw.php\n * @param string $content <p>\n * The text string to write.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startDocument",
@@ -413,7 +413,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create document tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-document.php\r\n * @param string $version [optional] <p>\r\n * The version number of the document as part of the XML declaration.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The encoding of the document as part of the XML declaration.\r\n * <\/p>\r\n * @param string $standalone [optional] <p>\r\n * yes or no.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create document tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-document.php\n * @param string $version [optional] <p>\n * The version number of the document as part of the XML declaration.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The encoding of the document as part of the XML declaration.\n * <\/p>\n * @param string $standalone [optional] <p>\n * yes or no.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endDocument",
@@ -422,7 +422,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current document\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-document.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current document\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-document.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeComment",
@@ -436,7 +436,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full comment tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-comment.php\r\n * @param string $content <p>\r\n * The contents of the comment.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full comment tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-comment.php\n * @param string $content <p>\n * The contents of the comment.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startDtd",
@@ -462,7 +462,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd.php\r\n * @param string $qualifiedName <p>\r\n * The qualified name of the document type to create.\r\n * <\/p>\r\n * @param string $publicId [optional] <p>\r\n * The external subset public identifier.\r\n * <\/p>\r\n * @param string $systemId [optional] <p>\r\n * The external subset system identifier.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start DTD tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd.php\n * @param string $qualifiedName <p>\n * The qualified name of the document type to create.\n * <\/p>\n * @param string $publicId [optional] <p>\n * The external subset public identifier.\n * <\/p>\n * @param string $systemId [optional] <p>\n * The external subset system identifier.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endDtd",
@@ -471,7 +471,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current DTD\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeDtd",
@@ -503,7 +503,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd.php\r\n * @param string $name <p>\r\n * The DTD name.\r\n * <\/p>\r\n * @param string $publicId [optional] <p>\r\n * The external subset public identifier.\r\n * <\/p>\r\n * @param string $systemId [optional] <p>\r\n * The external subset system identifier.\r\n * <\/p>\r\n * @param string $subset [optional] <p>\r\n * The content of the DTD.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full DTD tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd.php\n * @param string $name <p>\n * The DTD name.\n * <\/p>\n * @param string $publicId [optional] <p>\n * The external subset public identifier.\n * <\/p>\n * @param string $systemId [optional] <p>\n * The external subset system identifier.\n * <\/p>\n * @param string $subset [optional] <p>\n * The content of the DTD.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startDtdElement",
@@ -517,7 +517,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-element.php\r\n * @param string $qualifiedName <p>\r\n * The qualified name of the document type to create.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start DTD element\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-element.php\n * @param string $qualifiedName <p>\n * The qualified name of the document type to create.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endDtdElement",
@@ -526,7 +526,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD element\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-element.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current DTD element\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-element.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeDtdElement",
@@ -546,7 +546,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD element tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-element.php\r\n * @param string $name <p>\r\n * The name of the DTD element.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the element.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full DTD element tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-element.php\n * @param string $name <p>\n * The name of the DTD element.\n * <\/p>\n * @param string $content <p>\n * The content of the element.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startDtdAttlist",
@@ -560,7 +560,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD AttList\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-attlist.php\r\n * @param string $name <p>\r\n * The attribute list name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start DTD AttList\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-attlist.php\n * @param string $name <p>\n * The attribute list name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endDtdAttlist",
@@ -569,7 +569,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD AttList\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-attlist.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current DTD AttList\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-attlist.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeDtdAttlist",
@@ -589,7 +589,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD AttList tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-attlist.php\r\n * @param string $name <p>\r\n * The name of the DTD attribute list.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the DTD attribute list.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full DTD AttList tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-attlist.php\n * @param string $name <p>\n * The name of the DTD attribute list.\n * <\/p>\n * @param string $content <p>\n * The content of the DTD attribute list.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "startDtdEntity",
@@ -609,7 +609,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Create start DTD Entity\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-entity.php\r\n * @param string $name <p>\r\n * The name of the entity.\r\n * <\/p>\r\n * @param bool $isparam\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Create start DTD Entity\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-start-dtd-entity.php\n * @param string $name <p>\n * The name of the entity.\n * <\/p>\n * @param bool $isparam\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "endDtdEntity",
@@ -618,7 +618,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * End current DTD Entity\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-entity.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * End current DTD Entity\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-end-dtd-entity.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writeDtdEntity",
@@ -662,7 +662,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Write full DTD Entity tag\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-entity.php\r\n * @param string $name <p>\r\n * The name of the entity.\r\n * <\/p>\r\n * @param string $content <p>\r\n * The content of the entity.\r\n * <\/p>\r\n * @param bool $pe\r\n * @param string $pubid\r\n * @param string $sysid\r\n * @param string $ndataid\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Write full DTD Entity tag\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-write-dtd-entity.php\n * @param string $name <p>\n * The name of the entity.\n * <\/p>\n * @param string $content <p>\n * The content of the entity.\n * <\/p>\n * @param bool $pe\n * @param string $pubid\n * @param string $sysid\n * @param string $ndataid\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "outputMemory",
@@ -676,7 +676,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\r\n * Returns current buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-output-memory.php\r\n * @param bool $flush [optional] <p>\r\n * Whether to flush the output buffer or not. Default is <b>TRUE<\/b>.\r\n * <\/p>\r\n * @return string the current buffer as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 0.1.0)<br\/>\n * Returns current buffer\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-output-memory.php\n * @param bool $flush [optional] <p>\n * Whether to flush the output buffer or not. Default is <b>TRUE<\/b>.\n * <\/p>\n * @return string the current buffer as a string.\n *\/"
             },
             {
                 "name": "flush",
@@ -690,7 +690,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\r\n * Flush current buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-flush.php\r\n * @param bool $empty [optional] <p>\r\n * Whether to empty the buffer or not. Default is <b>TRUE<\/b>.\r\n * <\/p>\r\n * @return mixed If you opened the writer in memory, this function returns the generated XML buffer,\r\n * Else, if using URI, this function will write the buffer and return the number of\r\n * written bytes.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2, PECL xmlwriter &gt;= 1.0.0)<br\/>\n * Flush current buffer\n * @link http:\/\/php.net\/manual\/en\/function.xmlwriter-flush.php\n * @param bool $empty [optional] <p>\n * Whether to empty the buffer or not. Default is <b>TRUE<\/b>.\n * <\/p>\n * @return mixed If you opened the writer in memory, this function returns the generated XML buffer,\n * Else, if using URI, this function will write the buffer and return the number of\n * written bytes.\n *\/"
             }
         ],
         "properties": [

@@ -4,7 +4,7 @@
         "name": "finfo",
         "fqn": "\\finfo",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "finfo",
@@ -24,7 +24,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $options [optional]\r\n * @param $arg [optional]\r\n *\/"
+                "doc": "\/**\n * @param $options [optional]\n * @param $arg [optional]\n *\/"
             },
             {
                 "name": "set_flags",
@@ -38,7 +38,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Set libmagic configuration options\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-set-flags.php\r\n * @param int $options <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\n * Set libmagic configuration options\n * @link http:\/\/php.net\/manual\/en\/function.finfo-set-flags.php\n * @param int $options <p>\n * One or disjunction of more Fileinfo\n * constants.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "file",
@@ -64,7 +64,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Return information about a file\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-file.php\r\n * @param string $file_name [optional] <p>\r\n * Name of a file to be checked.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @param resource $context [optional] <p>\r\n * For a description of contexts, refer to .\r\n * <\/p>\r\n * @return string a textual description of the contents of the\r\n * <i>filename<\/i> argument, or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\n * Return information about a file\n * @link http:\/\/php.net\/manual\/en\/function.finfo-file.php\n * @param string $file_name [optional] <p>\n * Name of a file to be checked.\n * <\/p>\n * @param int $options [optional] <p>\n * One or disjunction of more Fileinfo\n * constants.\n * <\/p>\n * @param resource $context [optional] <p>\n * For a description of contexts, refer to .\n * <\/p>\n * @return string a textual description of the contents of the\n * <i>filename<\/i> argument, or <b>FALSE<\/b> if an error occurred.\n *\/"
             },
             {
                 "name": "buffer",
@@ -90,7 +90,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\r\n * Return information about a string buffer\r\n * @link http:\/\/php.net\/manual\/en\/function.finfo-buffer.php\r\n * @param string $string [optional] <p>\r\n * Content of a file to be checked.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * One or disjunction of more Fileinfo\r\n * constants.\r\n * <\/p>\r\n * @param resource $context [optional]\r\n * @return string a textual description of the <i>string<\/i>\r\n * argument, or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0, PECL fileinfo &gt;= 0.1.0)<br\/>\n * Return information about a string buffer\n * @link http:\/\/php.net\/manual\/en\/function.finfo-buffer.php\n * @param string $string [optional] <p>\n * Content of a file to be checked.\n * <\/p>\n * @param int $options [optional] <p>\n * One or disjunction of more Fileinfo\n * constants.\n * <\/p>\n * @param resource $context [optional]\n * @return string a textual description of the <i>string<\/i>\n * argument, or <b>FALSE<\/b> if an error occurred.\n *\/"
             }
         ],
         "properties": [

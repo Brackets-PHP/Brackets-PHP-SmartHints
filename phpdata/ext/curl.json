@@ -4,7 +4,7 @@
         "name": "CURLFile",
         "fqn": "\\CURLFile",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -30,7 +30,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Create a CURLFile object\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.construct.php\r\n * @param string $filename <p>\r\n * Path to the file which will be uploaded.\r\n * <\/p>\r\n * @param string $mimetype [optional] <p>\r\n * Mimetype of the file.\r\n * <\/p>\r\n * @param string $postname [optional] <p>\r\n * Name of the file.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Create a CURLFile object\n * @link http:\/\/php.net\/manual\/en\/curlfile.construct.php\n * @param string $filename <p>\n * Path to the file which will be uploaded.\n * <\/p>\n * @param string $mimetype [optional] <p>\n * Mimetype of the file.\n * <\/p>\n * @param string $postname [optional] <p>\n * Name of the file.\n * <\/p>\n *\/"
             },
             {
                 "name": "getFilename",
@@ -39,7 +39,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Get file name\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.getfilename.php\r\n * @return string file name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Get file name\n * @link http:\/\/php.net\/manual\/en\/curlfile.getfilename.php\n * @return string file name.\n *\/"
             },
             {
                 "name": "getMimeType",
@@ -48,7 +48,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Get MIME type\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.getmimetype.php\r\n * @return string MIME type.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Get MIME type\n * @link http:\/\/php.net\/manual\/en\/curlfile.getmimetype.php\n * @return string MIME type.\n *\/"
             },
             {
                 "name": "setMimeType",
@@ -62,7 +62,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Set MIME type\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.setmimetype.php\r\n * @param string $mime <p>\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Set MIME type\n * @link http:\/\/php.net\/manual\/en\/curlfile.setmimetype.php\n * @param string $mime <p>\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "getPostFilename",
@@ -71,7 +71,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Get file name for POST\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.getpostfilename.php\r\n * @return string file name for POST.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Get file name for POST\n * @link http:\/\/php.net\/manual\/en\/curlfile.getpostfilename.php\n * @return string file name for POST.\n *\/"
             },
             {
                 "name": "setPostFilename",
@@ -85,7 +85,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Set file name for POST\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.setpostfilename.php\r\n * @param string $postname <p>\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Set file name for POST\n * @link http:\/\/php.net\/manual\/en\/curlfile.setpostfilename.php\n * @param string $postname <p>\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "__wakeup",
@@ -94,20 +94,23 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Unserialization handler\r\n * @link http:\/\/php.net\/manual\/en\/curlfile.wakeup.php\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Unserialization handler\n * @link http:\/\/php.net\/manual\/en\/curlfile.wakeup.php\n * @return void No value is returned.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "mime",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "postname",
+                "type": 1,
                 "doc": null
             }
         ],

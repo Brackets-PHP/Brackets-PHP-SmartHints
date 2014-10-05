@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
-/*global define, brackets, $ */
+/*global define, brackets, $, _ */
 
 define(function (require, exports, module) {
     "use strict";
@@ -33,6 +33,7 @@ define(function (require, exports, module) {
         FileSystem              = brackets.getModule("filesystem/FileSystem"),
         FileUtils               = brackets.getModule("file/FileUtils"),
         PreferencesManager      = brackets.getModule("preferences/PreferencesManager"),
+        _                       = brackets.getModule("thirdparty/lodash"),
         prefs                   = PreferencesManager.getExtensionPrefs("php-sig.php-smarthints");
 
     var Strings                 = require('strings');
@@ -521,9 +522,9 @@ define(function (require, exports, module) {
             properties      = [],
             i = 0;
 
-        if (classArray.extends) {
+        if (classArray.extendsClass) {
             for (i = 0; i < allClasses.length; i++) {
-                if (classArray.extends === allClasses[i].fqn) {
+                if (classArray.extendsClass === allClasses[i].fqn) {
                     parentObject = handleClassExtends(allClasses[i]);
                     classArray.methods.push.apply(classArray.methods, parentObject.methods);
                     classArray.properties.push.apply(classArray.properties, parentObject.properties);
@@ -551,11 +552,13 @@ define(function (require, exports, module) {
             top = {};
 
         for (i = 0; i < allClasses.length; i++) {
-            if (allClasses[i].extends) {
+            if (allClasses[i].extendsClass) {
                 top = handleClassExtends(allClasses[i]);
                 allClasses[i].methods.push.apply(allClasses[i].methods, top.methods);
                 allClasses[i].properties.push.apply(allClasses[i].properties, top.properties);
             }
+            allClasses[i].methods = _.uniq(allClasses[i].methods.sort());
+            allClasses[i].properties = _.uniq(allClasses[i].properties.sort());
         }
         console.log(allClasses);
     }

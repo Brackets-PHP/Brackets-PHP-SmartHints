@@ -4,7 +4,7 @@
         "name": "Svn",
         "fqn": "\\Svn",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "cat",
@@ -124,7 +124,7 @@
         "name": "SvnWc",
         "fqn": "\\SvnWc",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
@@ -209,7 +209,7 @@
         "name": "SvnWcSchedule",
         "fqn": "\\SvnWcSchedule",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
@@ -244,7 +244,7 @@
         "name": "SvnNode",
         "fqn": "\\SvnNode",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],

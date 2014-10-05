@@ -4,7 +4,7 @@
         "name": "DateTime",
         "fqn": "\\DateTime",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -24,7 +24,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Instantiate new DateTime object.\r\n *\r\n * @link http:\/\/php.net\/datetime.construct.php\r\n * @param string $time [optional]\r\n *   A date\/time string. Valid formats are explained in {@link http:\/\/www.php.net\/manual\/en\/datetime.formats.php Date\r\n *   and Time Formats}. Enter <code>NULL<\/code> here to obtain the current time when using the <var>$timezone<\/var>\r\n *   parameter.\r\n * @param \\DateTimeZone $timezone [optional]\r\n *   A {@see \\DateTimeZone} object representing the timezone of <var>$time<\/var>. If <var>$timezone<\/var> is omitted,\r\n *   the current timezone will be used.<br>\r\n *   <b>NOTE:<\/b> The <var>$timezone<\/var> parameter and the current timezone are ignored when the <var>$time<\/var>\r\n *   parameter either is a UNIX timestamp (e.g. <code>\"@946684800\"<\/code>) or specifies a timezone (e.g.\r\n *   <code>\"2010-01-28T15:00:00+02:00\"<\/code>).\r\n * @throws \\Exception\r\n * @since 5.2.0\r\n *\/"
+                "doc": "\/**\n * Instantiate new DateTime object.\n *\n * @link http:\/\/php.net\/datetime.construct.php\n * @param string $time [optional]\n *   A date\/time string. Valid formats are explained in {@link http:\/\/www.php.net\/manual\/en\/datetime.formats.php Date\n *   and Time Formats}. Enter <code>NULL<\/code> here to obtain the current time when using the <var>$timezone<\/var>\n *   parameter.\n * @param \\DateTimeZone $timezone [optional]\n *   A {@see \\DateTimeZone} object representing the timezone of <var>$time<\/var>. If <var>$timezone<\/var> is omitted,\n *   the current timezone will be used.<br>\n *   <b>NOTE:<\/b> The <var>$timezone<\/var> parameter and the current timezone are ignored when the <var>$time<\/var>\n *   parameter either is a UNIX timestamp (e.g. <code>\"@946684800\"<\/code>) or specifies a timezone (e.g.\n *   <code>\"2010-01-28T15:00:00+02:00\"<\/code>).\n * @throws \\Exception\n * @since 5.2.0\n *\/"
             },
             {
                 "name": "__set_state",
@@ -33,7 +33,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * The <code>__set_state<\/code> handler.\r\n *\r\n * @link http:\/\/php.net\/datetime.set-state.php\r\n * @link http:\/\/php.net\/language.oop5.magic.php#object.set-state\r\n *\/"
+                "doc": "\/**\n * The <code>__set_state<\/code> handler.\n *\n * @link http:\/\/php.net\/datetime.set-state.php\n * @link http:\/\/php.net\/language.oop5.magic.php#object.set-state\n *\/"
             },
             {
                 "name": "__wakeup",
@@ -42,7 +42,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * The <code>__wakeup<\/code> handler.\r\n *\r\n * @link http:\/\/php.net\/datetime.wakeup.php\r\n *\/"
+                "doc": "\/**\n * The <code>__wakeup<\/code> handler.\n *\n * @link http:\/\/php.net\/datetime.wakeup.php\n *\/"
             },
             {
                 "name": "createFromFormat",
@@ -68,7 +68,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Create new {@see \\DateTime} instance from the specified format.\r\n *\r\n * @param string $format\r\n *   The format of <var>$time<\/var>.\r\n * @param string $time\r\n *   String representing the time.\r\n * @param \\DateTimeZone $timezone [optional]\r\n *   A {@see \\DateTimeZone} representing the desired time zone, defaults to <code>NULL<\/code>. If omitted (default)\r\n *   and <var>$time<\/var> contains no timezone, the current timezone will be used.\r\n * @return \\DateTime\r\n *   Returns a new {@see \\DateTime} instance or <code>FALSE<\/code> on failure.\r\n *\/"
+                "doc": "\/**\n * Create new {@see \\DateTime} instance from the specified format.\n *\n * @param string $format\n *   The format of <var>$time<\/var>.\n * @param string $time\n *   String representing the time.\n * @param \\DateTimeZone $timezone [optional]\n *   A {@see \\DateTimeZone} representing the desired time zone, defaults to <code>NULL<\/code>. If omitted (default)\n *   and <var>$time<\/var> contains no timezone, the current timezone will be used.\n * @return \\DateTime\n *   Returns a new {@see \\DateTime} instance or <code>FALSE<\/code> on failure.\n *\/"
             },
             {
                 "name": "getLastErrors",
@@ -91,7 +91,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * Add given interval.\r\n *\r\n * @link http:\/\/php.net\/datetime.add.php\r\n * @see date_add()\r\n * @param \\DateInterval $interval\r\n *   The interval to add.\r\n * @return this|boolean\r\n *   <var>$this<\/var> for chaining or <code>FALSE<\/code> on failure.\r\n * @since 5.3.0\r\n *\/"
+                "doc": "\/**\n * Add given interval.\n *\n * @link http:\/\/php.net\/datetime.add.php\n * @see date_add()\n * @param \\DateInterval $interval\n *   The interval to add.\n * @return this|boolean\n *   <var>$this<\/var> for chaining or <code>FALSE<\/code> on failure.\n * @since 5.3.0\n *\/"
             },
             {
                 "name": "diff",
@@ -111,7 +111,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Get the difference between two {@see \\DateTime} objects.\r\n *\r\n * @param \\DateTime $dateTime\r\n *   The date to compare to.\r\n * @param boolean $absolute [optional]\r\n *   Should the interval be forced to be positive?\r\n * @return \\DateInterval\r\n *   The {@see \\DateInterval} object representing the difference between the two dates or <code>FALSE<\/code> on\r\n *   failure.\r\n *\/"
+                "doc": "\/**\n * Get the difference between two {@see \\DateTime} objects.\n *\n * @param \\DateTime $dateTime\n *   The date to compare to.\n * @param boolean $absolute [optional]\n *   Should the interval be forced to be positive?\n * @return \\DateInterval\n *   The {@see \\DateInterval} object representing the difference between the two dates or <code>FALSE<\/code> on\n *   failure.\n *\/"
             },
             {
                 "name": "sub",
@@ -125,7 +125,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * Substract given interval.\r\n *\r\n * @link http:\/\/php.net\/datetime.sub.php\r\n * @see date_sub()\r\n * @param \\DateInterval $interval\r\n *   The interval to substract.\r\n * @return this|boolean\r\n *   <var>$this<\/var> for chaining or <code>FALSE<\/code> on failure.\r\n * @since 5.3.0\r\n *\/"
+                "doc": "\/**\n * Substract given interval.\n *\n * @link http:\/\/php.net\/datetime.sub.php\n * @see date_sub()\n * @param \\DateInterval $interval\n *   The interval to substract.\n * @return this|boolean\n *   <var>$this<\/var> for chaining or <code>FALSE<\/code> on failure.\n * @since 5.3.0\n *\/"
             },
             {
                 "name": "format",
@@ -139,7 +139,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $format\r\n *\/"
+                "doc": "\/**\n * @param $format\n *\/"
             },
             {
                 "name": "modify",
@@ -153,7 +153,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $modify\r\n *\/"
+                "doc": "\/**\n * @param $modify\n *\/"
             },
             {
                 "name": "getTimezone",
@@ -176,7 +176,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $timezone\r\n *\/"
+                "doc": "\/**\n * @param $timezone\n *\/"
             },
             {
                 "name": "getOffset",
@@ -211,7 +211,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $hour\r\n * @param $minute\r\n * @param $second [optional]\r\n *\/"
+                "doc": "\/**\n * @param $hour\n * @param $minute\n * @param $second [optional]\n *\/"
             },
             {
                 "name": "setDate",
@@ -237,7 +237,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $year\r\n * @param $month\r\n * @param $day\r\n *\/"
+                "doc": "\/**\n * @param $year\n * @param $month\n * @param $day\n *\/"
             },
             {
                 "name": "setISODate",
@@ -263,7 +263,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $year\r\n * @param $week\r\n * @param $day [optional]\r\n *\/"
+                "doc": "\/**\n * @param $year\n * @param $week\n * @param $day [optional]\n *\/"
             },
             {
                 "name": "setTimestamp",
@@ -277,7 +277,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $unixtimestamp\r\n *\/"
+                "doc": "\/**\n * @param $unixtimestamp\n *\/"
             },
             {
                 "name": "getTimestamp",
@@ -355,7 +355,7 @@
         "name": "DateTimeZone",
         "fqn": "\\DateTimeZone",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -369,7 +369,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $timezone\r\n *\/"
+                "doc": "\/**\n * @param $timezone\n *\/"
             },
             {
                 "name": "getName",
@@ -392,7 +392,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $datetime\r\n *\/"
+                "doc": "\/**\n * @param $datetime\n *\/"
             },
             {
                 "name": "getTransitions",
@@ -412,7 +412,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $timestamp_begin\r\n * @param $timestamp_end\r\n *\/"
+                "doc": "\/**\n * @param $timestamp_begin\n * @param $timestamp_end\n *\/"
             },
             {
                 "name": "getLocation",
@@ -430,7 +430,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get all time zones with extended information about each one as associative array.\r\n *\r\n * @link http:\/\/php.net\/datetimezone.listabbreviations.php\r\n * @return array|boolean\r\n *   Array on success or <code>FALSE<\/code> on failure.\r\n * @since 5.2.0\r\n *\/"
+                "doc": "\/**\n * Get all time zones with extended information about each one as associative array.\n *\n * @link http:\/\/php.net\/datetimezone.listabbreviations.php\n * @return array|boolean\n *   Array on success or <code>FALSE<\/code> on failure.\n * @since 5.2.0\n *\/"
             },
             {
                 "name": "listIdentifiers",
@@ -450,7 +450,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Get all time zone identifiers.\r\n *\r\n * @link http:\/\/php.net\/function.timezone-identifiers-list.php\r\n * @param int $what [optional]\r\n *   One of {@see \\DateTimeZone} class constants.\r\n * @param string $country [optional]\r\n *   A two-letter ISO 3166-1 compatible country code. Note that this parameter is only used if <var>$what<\/var> is set\r\n *   to {@see \\DateTimeZone::PER_COUNTRY}.\r\n * @return array|boolean\r\n *   Numeric array containing all time zone identifiers, or <code>FALSE<\/code> on failure.\r\n * @since 5.2.0\r\n *\/"
+                "doc": "\/**\n * Get all time zone identifiers.\n *\n * @link http:\/\/php.net\/function.timezone-identifiers-list.php\n * @param int $what [optional]\n *   One of {@see \\DateTimeZone} class constants.\n * @param string $country [optional]\n *   A two-letter ISO 3166-1 compatible country code. Note that this parameter is only used if <var>$what<\/var> is set\n *   to {@see \\DateTimeZone::PER_COUNTRY}.\n * @return array|boolean\n *   Numeric array containing all time zone identifiers, or <code>FALSE<\/code> on failure.\n * @since 5.2.0\n *\/"
             }
         ],
         "properties": [
@@ -534,7 +534,7 @@
         "name": "DateInterval",
         "fqn": "\\DateInterval",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -548,7 +548,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * Instantiate new date interval.\r\n *\r\n * The interval specification starts with the letter <code>P<\/code> (for <i>period<\/i>). Each duration perios is\r\n * represented by an integer value followed by a period designator. If the duration contains time elements, that\r\n * portion of the specification is preceded by the letter <code>T<\/code>.\r\n *\r\n * <table border=\"1\" cellspacing=\"0\">\r\n *   <tr><th>Period Designator<\/th><th>Description<\/th><\/tr>\r\n *   <tr><td><code>\"Y\"<\/code><\/td><td>years<\/td><\/tr>\r\n *   <tr><td><code>\"M\"<\/code><\/td><td>months<\/td><\/tr>\r\n *   <tr><td><code>\"D\"<\/code><\/td><td>days<\/td><\/tr>\r\n *   <tr><td><code>\"W\"<\/code><\/td><td>weeks (these get converted into days and therefor cannot be combined with\r\n *   <code>\"D\"<\/code><\/td><\/tr>\r\n *   <tr><td><code>\"H\"<\/code><\/td><td>hours<\/td><\/tr>\r\n *   <tr><td><code>\"M\"<\/code><\/td><td>minutes<\/td><\/tr>\r\n *   <tr><td><code>\"S\"<\/code><\/td><td>seconds<\/td><\/tr>\r\n * <\/table>\r\n *\r\n * The specification can also be represented as a date time. A sample of one year and four days would be\r\n * <code>\"P0001-00-04T00:00:00\"<\/code>. But the values in this format can not exceed a given period's roll-over-point\r\n * (e.g. 25 hours is invalid).\r\n *\r\n * These formats are based on the {@link http:\/\/en.wikipedia.org\/wiki\/Iso8601#Durations ISO 8601 duration specification}.\r\n *\r\n * <b>Examples<\/b>\r\n *\r\n * <ul>\r\n *   <li><code>\"P2D\"<\/code> is two days<\/li>\r\n *   <li><code>\"PT2S\"<\/code> is two seconds<\/li>\r\n *   <li><code>\"P6YT5M\"<\/code> is six years and five minutes<\/li>\r\n * <\/ul>\r\n *\r\n * <b>Note<\/b>\r\n *\r\n * The unit types must be entered from the largest scale unit on the left to the smallest scale unit on the right. So\r\n * years before months, months before days, days before minutes, etc. Thus one year and four days must be represented\r\n * as <code>\"P1Y4D\"<\/code>, not <code>\"P4D1Y\"<\/code>.\r\n *\r\n * @link http:\/\/php.net\/dateinterval.construct.php\r\n * @link http:\/\/en.wikipedia.org\/wiki\/Iso8601#Durations\r\n * @param string $interval_spec [optional]\r\n *   The interval specification.\r\n * @since 5.3.0\r\n *\/"
+                "doc": "\/**\n * Instantiate new date interval.\n *\n * The interval specification starts with the letter <code>P<\/code> (for <i>period<\/i>). Each duration perios is\n * represented by an integer value followed by a period designator. If the duration contains time elements, that\n * portion of the specification is preceded by the letter <code>T<\/code>.\n *\n * <table border=\"1\" cellspacing=\"0\">\n *   <tr><th>Period Designator<\/th><th>Description<\/th><\/tr>\n *   <tr><td><code>\"Y\"<\/code><\/td><td>years<\/td><\/tr>\n *   <tr><td><code>\"M\"<\/code><\/td><td>months<\/td><\/tr>\n *   <tr><td><code>\"D\"<\/code><\/td><td>days<\/td><\/tr>\n *   <tr><td><code>\"W\"<\/code><\/td><td>weeks (these get converted into days and therefor cannot be combined with\n *   <code>\"D\"<\/code><\/td><\/tr>\n *   <tr><td><code>\"H\"<\/code><\/td><td>hours<\/td><\/tr>\n *   <tr><td><code>\"M\"<\/code><\/td><td>minutes<\/td><\/tr>\n *   <tr><td><code>\"S\"<\/code><\/td><td>seconds<\/td><\/tr>\n * <\/table>\n *\n * The specification can also be represented as a date time. A sample of one year and four days would be\n * <code>\"P0001-00-04T00:00:00\"<\/code>. But the values in this format can not exceed a given period's roll-over-point\n * (e.g. 25 hours is invalid).\n *\n * These formats are based on the {@link http:\/\/en.wikipedia.org\/wiki\/Iso8601#Durations ISO 8601 duration specification}.\n *\n * <b>Examples<\/b>\n *\n * <ul>\n *   <li><code>\"P2D\"<\/code> is two days<\/li>\n *   <li><code>\"PT2S\"<\/code> is two seconds<\/li>\n *   <li><code>\"P6YT5M\"<\/code> is six years and five minutes<\/li>\n * <\/ul>\n *\n * <b>Note<\/b>\n *\n * The unit types must be entered from the largest scale unit on the left to the smallest scale unit on the right. So\n * years before months, months before days, days before minutes, etc. Thus one year and four days must be represented\n * as <code>\"P1Y4D\"<\/code>, not <code>\"P4D1Y\"<\/code>.\n *\n * @link http:\/\/php.net\/dateinterval.construct.php\n * @link http:\/\/en.wikipedia.org\/wiki\/Iso8601#Durations\n * @param string $interval_spec [optional]\n *   The interval specification.\n * @since 5.3.0\n *\/"
             },
             {
                 "name": "__wakeup",
@@ -580,7 +580,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $format\r\n *\/"
+                "doc": "\/**\n * @param $format\n *\/"
             },
             {
                 "name": "createFromDateString",
@@ -594,41 +594,49 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $time\r\n *\/"
+                "doc": "\/**\n * @param $time\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "y",
-                "doc": "\/**\r\n * Number of years.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of years.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "m",
-                "doc": "\/**\r\n * Number of months.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of months.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "d",
-                "doc": "\/**\r\n * Number of days.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of days.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "h",
-                "doc": "\/**\r\n * Number of hours.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of hours.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "i",
-                "doc": "\/**\r\n * Number of minutes.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of minutes.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "s",
-                "doc": "\/**\r\n * Number of seconds.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Number of seconds.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "invert",
-                "doc": "\/**\r\n * Is <code>1<\/code> if the interval represents a negative time period and <code>0<\/code> otherwise.\r\n *\r\n * @see \\DateInterval::format\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Is <code>1<\/code> if the interval represents a negative time period and <code>0<\/code> otherwise.\n *\n * @see \\DateInterval::format\n * @var integer\n *\/"
             },
             {
                 "name": "days",
-                "doc": "\/**\r\n * If the DateInterval object was created by {@see \\DateTime::diff}, then this is the total number of days between the\r\n * start and end dates. Otherwise, days will be <code>FALSE<\/code>.\r\n *\r\n * @var boolean|integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * If the DateInterval object was created by {@see \\DateTime::diff}, then this is the total number of days between the\n * start and end dates. Otherwise, days will be <code>FALSE<\/code>.\n *\n * @var boolean|integer\n *\/"
             }
         ],
         "constants": [
@@ -640,7 +648,7 @@
         "name": "DatePeriod",
         "fqn": "\\DatePeriod",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -666,7 +674,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $start\r\n * @param $interval\r\n * @param $end\r\n *\/"
+                "doc": "\/**\n * @param $start\n * @param $interval\n * @param $end\n *\/"
             }
         ],
         "properties": [

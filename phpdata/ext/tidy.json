@@ -4,7 +4,7 @@
         "name": "tidy",
         "fqn": "\\tidy",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "getOpt",
@@ -18,7 +18,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Returns the value of the specified configuration option for the tidy document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getopt.php\r\n * @param string $option <p>\r\n * You will find a list with each configuration option and their types\r\n * at: http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @return mixed the value of the specified <i>option<\/i>.\r\n * The return type depends on the type of the specified one.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Returns the value of the specified configuration option for the tidy document\n * @link http:\/\/php.net\/manual\/en\/tidy.getopt.php\n * @param string $option <p>\n * You will find a list with each configuration option and their types\n * at: http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\n * <\/p>\n * @return mixed the value of the specified <i>option<\/i>.\n * The return type depends on the type of the specified one.\n *\/"
             },
             {
                 "name": "cleanRepair",
@@ -27,7 +27,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Execute configured cleanup and repair operations on parsed markup\r\n * @link http:\/\/php.net\/manual\/en\/tidy.cleanrepair.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Execute configured cleanup and repair operations on parsed markup\n * @link http:\/\/php.net\/manual\/en\/tidy.cleanrepair.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "parseFile",
@@ -59,7 +59,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Parse markup in file or URI\r\n * @link http:\/\/php.net\/manual\/en\/tidy.parsefile.php\r\n * @param string $filename <p>\r\n * If the <i>filename<\/i> parameter is given, this function\r\n * will also read that file and initialize the object with the file,\r\n * acting like <b>tidy_parse_file<\/b>.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, see\r\n * http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Parse markup in file or URI\n * @link http:\/\/php.net\/manual\/en\/tidy.parsefile.php\n * @param string $filename <p>\n * If the <i>filename<\/i> parameter is given, this function\n * will also read that file and initialize the object with the file,\n * acting like <b>tidy_parse_file<\/b>.\n * <\/p>\n * @param mixed $config [optional] <p>\n * The config <i>config<\/i> can be passed either as an\n * array or as a string. If a string is passed, it is interpreted as the\n * name of the configuration file, otherwise, it is interpreted as the\n * options themselves.\n * <\/p>\n * <p>\n * For an explanation about each option, see\n * http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The <i>encoding<\/i> parameter sets the encoding for\n * input\/output documents. The possible values for encoding are:\n * ascii, latin0, latin1,\n * raw, utf8, iso2022,\n * mac, win1252, ibm858,\n * utf16, utf16le, utf16be,\n * big5, and shiftjis.\n * <\/p>\n * @param bool $use_include_path [optional] <p>\n * Search for the file in the include_path.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "parseString",
@@ -85,7 +85,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Parse a document stored in a string\r\n * @link http:\/\/php.net\/manual\/en\/tidy.parsestring.php\r\n * @param string $input <p>\r\n * The data to be parsed.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @return bool a new <b>tidy<\/b> instance.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Parse a document stored in a string\n * @link http:\/\/php.net\/manual\/en\/tidy.parsestring.php\n * @param string $input <p>\n * The data to be parsed.\n * <\/p>\n * @param mixed $config [optional] <p>\n * The config <i>config<\/i> can be passed either as an\n * array or as a string. If a string is passed, it is interpreted as the\n * name of the configuration file, otherwise, it is interpreted as the\n * options themselves.\n * <\/p>\n * <p>\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The <i>encoding<\/i> parameter sets the encoding for\n * input\/output documents. The possible values for encoding are:\n * ascii, latin0, latin1,\n * raw, utf8, iso2022,\n * mac, win1252, ibm858,\n * utf16, utf16le, utf16be,\n * big5, and shiftjis.\n * <\/p>\n * @return bool a new <b>tidy<\/b> instance.\n *\/"
             },
             {
                 "name": "repairString",
@@ -111,7 +111,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Repair a string using an optionally provided configuration file\r\n * @link http:\/\/php.net\/manual\/en\/tidy.repairstring.php\r\n * @param string $data <p>\r\n * The data to be repaired.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for\r\n * an explanation about each option.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @return string the repaired string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\n * Repair a string using an optionally provided configuration file\n * @link http:\/\/php.net\/manual\/en\/tidy.repairstring.php\n * @param string $data <p>\n * The data to be repaired.\n * <\/p>\n * @param mixed $config [optional] <p>\n * The config <i>config<\/i> can be passed either as an\n * array or as a string. If a string is passed, it is interpreted as the\n * name of the configuration file, otherwise, it is interpreted as the\n * options themselves.\n * <\/p>\n * <p>\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for\n * an explanation about each option.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The <i>encoding<\/i> parameter sets the encoding for\n * input\/output documents. The possible values for encoding are:\n * ascii, latin0, latin1,\n * raw, utf8, iso2022,\n * mac, win1252, ibm858,\n * utf16, utf16le, utf16be,\n * big5, and shiftjis.\n * <\/p>\n * @return string the repaired string.\n *\/"
             },
             {
                 "name": "repairFile",
@@ -143,7 +143,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Repair a file and return it as a string\r\n * @link http:\/\/php.net\/manual\/en\/tidy.repairfile.php\r\n * @param string $filename <p>\r\n * The file to be repaired.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for an\r\n * explanation about each option.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n * @return string the repaired contents as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\n * Repair a file and return it as a string\n * @link http:\/\/php.net\/manual\/en\/tidy.repairfile.php\n * @param string $filename <p>\n * The file to be repaired.\n * <\/p>\n * @param mixed $config [optional] <p>\n * The config <i>config<\/i> can be passed either as an\n * array or as a string. If a string is passed, it is interpreted as the\n * name of the configuration file, otherwise, it is interpreted as the\n * options themselves.\n * <\/p>\n * <p>\n * Check http:\/\/tidy.sourceforge.net\/docs\/quickref.html for an\n * explanation about each option.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The <i>encoding<\/i> parameter sets the encoding for\n * input\/output documents. The possible values for encoding are:\n * ascii, latin0, latin1,\n * raw, utf8, iso2022,\n * mac, win1252, ibm858,\n * utf16, utf16le, utf16be,\n * big5, and shiftjis.\n * <\/p>\n * @param bool $use_include_path [optional] <p>\n * Search for the file in the include_path.\n * <\/p>\n * @return string the repaired contents as a string.\n *\/"
             },
             {
                 "name": "diagnose",
@@ -152,7 +152,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Run configured diagnostics on parsed and repaired markup\r\n * @link http:\/\/php.net\/manual\/en\/tidy.diagnose.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Run configured diagnostics on parsed and repaired markup\n * @link http:\/\/php.net\/manual\/en\/tidy.diagnose.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getRelease",
@@ -161,7 +161,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get release date (version) for Tidy library\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getrelease.php\r\n * @return string a string with the release date of the Tidy library.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Get release date (version) for Tidy library\n * @link http:\/\/php.net\/manual\/en\/tidy.getrelease.php\n * @return string a string with the release date of the Tidy library.\n *\/"
             },
             {
                 "name": "getConfig",
@@ -170,7 +170,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\r\n * Get current Tidy configuration\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getconfig.php\r\n * @return array an array of configuration options.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.7.0)<br\/>\n * Get current Tidy configuration\n * @link http:\/\/php.net\/manual\/en\/tidy.getconfig.php\n * @return array an array of configuration options.\n * <\/p>\n * <p>\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\n *\/"
             },
             {
                 "name": "getStatus",
@@ -179,7 +179,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get status of specified document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getstatus.php\r\n * @return int 0 if no error\/warning was raised, 1 for warnings or accessibility\r\n * errors, or 2 for errors.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Get status of specified document\n * @link http:\/\/php.net\/manual\/en\/tidy.getstatus.php\n * @return int 0 if no error\/warning was raised, 1 for warnings or accessibility\n * errors, or 2 for errors.\n *\/"
             },
             {
                 "name": "getHtmlVer",
@@ -188,7 +188,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Get the Detected HTML version for the specified document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.gethtmlver.php\r\n * @return int the detected HTML version.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return 0.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Get the Detected HTML version for the specified document\n * @link http:\/\/php.net\/manual\/en\/tidy.gethtmlver.php\n * @return int the detected HTML version.\n * <\/p>\n * <p>\n * This function is not yet implemented in the Tidylib itself, so it always\n * return 0.\n *\/"
             },
             {
                 "name": "getOptDoc",
@@ -202,7 +202,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns the documentation for the given option name\r\n * @link http:\/\/php.net\/manual\/en\/tidy.getoptdoc.php\r\n * @param string $optname <p>\r\n * The option name\r\n * <\/p>\r\n * @return string a string if the option exists and has documentation available, or\r\n * <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Returns the documentation for the given option name\n * @link http:\/\/php.net\/manual\/en\/tidy.getoptdoc.php\n * @param string $optname <p>\n * The option name\n * <\/p>\n * @return string a string if the option exists and has documentation available, or\n * <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isXhtml",
@@ -211,7 +211,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Indicates if the document is a XHTML document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.isxhtml.php\r\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\r\n * <i>object<\/i> is a XHTML document, or <b>FALSE<\/b> otherwise.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Indicates if the document is a XHTML document\n * @link http:\/\/php.net\/manual\/en\/tidy.isxhtml.php\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\n * <i>object<\/i> is a XHTML document, or <b>FALSE<\/b> otherwise.\n * <\/p>\n * <p>\n * This function is not yet implemented in the Tidylib itself, so it always\n * return <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "isXml",
@@ -220,7 +220,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Indicates if the document is a generic (non HTML\/XHTML) XML document\r\n * @link http:\/\/php.net\/manual\/en\/tidy.isxml.php\r\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\r\n * <i>object<\/i> is a generic XML document (non HTML\/XHTML),\r\n * or <b>FALSE<\/b> otherwise.\r\n * <\/p>\r\n * <p>\r\n * This function is not yet implemented in the Tidylib itself, so it always\r\n * return <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Indicates if the document is a generic (non HTML\/XHTML) XML document\n * @link http:\/\/php.net\/manual\/en\/tidy.isxml.php\n * @return bool This function returns <b>TRUE<\/b> if the specified tidy\n * <i>object<\/i> is a generic XML document (non HTML\/XHTML),\n * or <b>FALSE<\/b> otherwise.\n * <\/p>\n * <p>\n * This function is not yet implemented in the Tidylib itself, so it always\n * return <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "root",
@@ -229,7 +229,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object representing the root of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.root.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\n * Returns a <b>tidyNode<\/b> object representing the root of the tidy parse tree\n * @link http:\/\/php.net\/manual\/en\/tidy.root.php\n * @return tidyNode the <b>tidyNode<\/b> object.\n *\/"
             },
             {
                 "name": "head",
@@ -238,7 +238,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;head&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.head.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\n * Returns a <b>tidyNode<\/b> object starting from the &lt;head&gt; tag of the tidy parse tree\n * @link http:\/\/php.net\/manual\/en\/tidy.head.php\n * @return tidyNode the <b>tidyNode<\/b> object.\n *\/"
             },
             {
                 "name": "html",
@@ -247,7 +247,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;html&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.html.php\r\n * @return tidyNode the <b>tidyNode<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy 0.5.2-1.0.0)<br\/>\n * Returns a <b>tidyNode<\/b> object starting from the &lt;html&gt; tag of the tidy parse tree\n * @link http:\/\/php.net\/manual\/en\/tidy.html.php\n * @return tidyNode the <b>tidyNode<\/b> object.\n *\/"
             },
             {
                 "name": "body",
@@ -256,7 +256,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy 0.5.2-1.0)<br\/>\r\n * Returns a <b>tidyNode<\/b> object starting from the &lt;body&gt; tag of the tidy parse tree\r\n * @link http:\/\/php.net\/manual\/en\/tidy.body.php\r\n * @return tidyNode a <b>tidyNode<\/b> object starting from the\r\n * &lt;body&gt; tag of the tidy parse tree.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy 0.5.2-1.0)<br\/>\n * Returns a <b>tidyNode<\/b> object starting from the &lt;body&gt; tag of the tidy parse tree\n * @link http:\/\/php.net\/manual\/en\/tidy.body.php\n * @return tidyNode a <b>tidyNode<\/b> object starting from the\n * &lt;body&gt; tag of the tidy parse tree.\n *\/"
             },
             {
                 "name": "__construct",
@@ -288,13 +288,14 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\r\n * Constructs a new <b>tidy<\/b> object\r\n * @link http:\/\/php.net\/manual\/en\/tidy.construct.php\r\n * @param string $filename [optional] <p>\r\n * If the <i>filename<\/i> parameter is given, this function\r\n * will also read that file and initialize the object with the file,\r\n * acting like <b>tidy_parse_file<\/b>.\r\n * <\/p>\r\n * @param mixed $config [optional] <p>\r\n * The config <i>config<\/i> can be passed either as an\r\n * array or as a string. If a string is passed, it is interpreted as the\r\n * name of the configuration file, otherwise, it is interpreted as the\r\n * options themselves.\r\n * <\/p>\r\n * <p>\r\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The <i>encoding<\/i> parameter sets the encoding for\r\n * input\/output documents. The possible values for encoding are:\r\n * ascii, latin0, latin1,\r\n * raw, utf8, iso2022,\r\n * mac, win1252, ibm858,\r\n * utf16, utf16le, utf16be,\r\n * big5, and shiftjis.\r\n * <\/p>\r\n * @param bool $use_include_path [optional] <p>\r\n * Search for the file in the include_path.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL tidy &gt;= 0.5.2)<br\/>\n * Constructs a new <b>tidy<\/b> object\n * @link http:\/\/php.net\/manual\/en\/tidy.construct.php\n * @param string $filename [optional] <p>\n * If the <i>filename<\/i> parameter is given, this function\n * will also read that file and initialize the object with the file,\n * acting like <b>tidy_parse_file<\/b>.\n * <\/p>\n * @param mixed $config [optional] <p>\n * The config <i>config<\/i> can be passed either as an\n * array or as a string. If a string is passed, it is interpreted as the\n * name of the configuration file, otherwise, it is interpreted as the\n * options themselves.\n * <\/p>\n * <p>\n * For an explanation about each option, visit http:\/\/tidy.sourceforge.net\/docs\/quickref.html.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The <i>encoding<\/i> parameter sets the encoding for\n * input\/output documents. The possible values for encoding are:\n * ascii, latin0, latin1,\n * raw, utf8, iso2022,\n * mac, win1252, ibm858,\n * utf16, utf16le, utf16be,\n * big5, and shiftjis.\n * <\/p>\n * @param bool $use_include_path [optional] <p>\n * Search for the file in the include_path.\n * <\/p>\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "errorBuffer",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             }
         ],
         "constants": [
@@ -306,7 +307,7 @@
         "name": "tidyNode",
         "fqn": "\\tidyNode",
         "type": 32,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "hasChildren",
@@ -315,7 +316,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node has children\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.haschildren.php\r\n * @return bool <b>TRUE<\/b> if the node has children, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node has children\n * @link http:\/\/php.net\/manual\/en\/tidynode.haschildren.php\n * @return bool <b>TRUE<\/b> if the node has children, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "hasSiblings",
@@ -324,7 +325,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node has siblings\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.hassiblings.php\r\n * @return bool <b>TRUE<\/b> if the node has siblings, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node has siblings\n * @link http:\/\/php.net\/manual\/en\/tidynode.hassiblings.php\n * @return bool <b>TRUE<\/b> if the node has siblings, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isComment",
@@ -333,7 +334,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node represents a comment\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.iscomment.php\r\n * @return bool <b>TRUE<\/b> if the node is a comment, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node represents a comment\n * @link http:\/\/php.net\/manual\/en\/tidynode.iscomment.php\n * @return bool <b>TRUE<\/b> if the node is a comment, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isHtml",
@@ -342,7 +343,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node is part of a HTML document\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.ishtml.php\r\n * @return bool <b>TRUE<\/b> if the node is part of a HTML document, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node is part of a HTML document\n * @link http:\/\/php.net\/manual\/en\/tidynode.ishtml.php\n * @return bool <b>TRUE<\/b> if the node is part of a HTML document, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isText",
@@ -351,7 +352,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node represents text (no markup)\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.istext.php\r\n * @return bool <b>TRUE<\/b> if the node represent a text, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node represents text (no markup)\n * @link http:\/\/php.net\/manual\/en\/tidynode.istext.php\n * @return bool <b>TRUE<\/b> if the node represent a text, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isJste",
@@ -360,7 +361,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if this node is JSTE\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isjste.php\r\n * @return bool <b>TRUE<\/b> if the node is JSTE, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if this node is JSTE\n * @link http:\/\/php.net\/manual\/en\/tidynode.isjste.php\n * @return bool <b>TRUE<\/b> if the node is JSTE, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isAsp",
@@ -369,7 +370,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if this node is ASP\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isasp.php\r\n * @return bool <b>TRUE<\/b> if the node is ASP, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if this node is ASP\n * @link http:\/\/php.net\/manual\/en\/tidynode.isasp.php\n * @return bool <b>TRUE<\/b> if the node is ASP, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isPhp",
@@ -378,7 +379,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Checks if a node is PHP\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.isphp.php\r\n * @return bool <b>TRUE<\/b> if the current node is PHP code, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Checks if a node is PHP\n * @link http:\/\/php.net\/manual\/en\/tidynode.isphp.php\n * @return bool <b>TRUE<\/b> if the current node is PHP code, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getParent",
@@ -387,45 +388,54 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.2)<br\/>\r\n * Returns the parent node of the current node\r\n * @link http:\/\/php.net\/manual\/en\/tidynode.getparent.php\r\n * @return tidyNode a tidyNode if the node has a parent, or <b>NULL<\/b>\r\n * otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.2)<br\/>\n * Returns the parent node of the current node\n * @link http:\/\/php.net\/manual\/en\/tidynode.getparent.php\n * @return tidyNode a tidyNode if the node has a parent, or <b>NULL<\/b>\n * otherwise.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "value",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The HTML representation of the node, including the surrounding tags.<\/p>\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The HTML representation of the node, including the surrounding tags.<\/p>\n * @var string\n *\/"
             },
             {
                 "name": "name",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The name of the HTML node<\/p>\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The name of the HTML node<\/p>\n * @var string\n *\/"
             },
             {
                 "name": "type",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The type of the tag (one of the constants above, e.g. <b><code>TIDY_NODETYPE_PHP<\/code><\/b>)<\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The type of the tag (one of the constants above, e.g. <b><code>TIDY_NODETYPE_PHP<\/code><\/b>)<\/p>\n * @var int\n *\/"
             },
             {
                 "name": "line",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The line number at which the tags is located in the file<\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The line number at which the tags is located in the file<\/p>\n * @var int\n *\/"
             },
             {
                 "name": "column",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The column number at which the tags is located in the file<\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The column number at which the tags is located in the file<\/p>\n * @var int\n *\/"
             },
             {
                 "name": "proprietary",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">Indicates if the node is a proprietary tag<\/p>\r\n * @var bool\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">Indicates if the node is a proprietary tag<\/p>\n * @var bool\n *\/"
             },
             {
                 "name": "id",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The ID of the tag (one of the constants above, e.g. <b><code>TIDY_TAG_FRAME<\/code><\/b>)<\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The ID of the tag (one of the constants above, e.g. <b><code>TIDY_TAG_FRAME<\/code><\/b>)<\/p>\n * @var int\n *\/"
             },
             {
                 "name": "attribute",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * An array of string, representing\r\n * the attributes names (as keys) of the current node.\r\n * <\/p>\r\n * @var array\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * An array of string, representing\n * the attributes names (as keys) of the current node.\n * <\/p>\n * @var array\n *\/"
             },
             {
                 "name": "child",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * An array of <b>tidyNode<\/b>, representing\r\n * the children of the current node.\r\n * <\/p>\r\n * @var array\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * An array of <b>tidyNode<\/b>, representing\n * the children of the current node.\n * <\/p>\n * @var array\n *\/"
             }
         ],
         "constants": [

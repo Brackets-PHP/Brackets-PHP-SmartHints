@@ -4,7 +4,7 @@
         "name": "OCI_Lob",
         "fqn": "\\OCI_Lob",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "load",
@@ -13,7 +13,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns large object's contents\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.load.php\r\n * @return string the contents of the object, or <b>FALSE<\/b> on errors.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns large object's contents\n * @link http:\/\/php.net\/manual\/en\/oci-lob.load.php\n * @return string the contents of the object, or <b>FALSE<\/b> on errors.\n *\/"
             },
             {
                 "name": "tell",
@@ -22,7 +22,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns the current position of internal pointer of large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.tell.php\r\n * @return int current position of a LOB's internal pointer or <b>FALSE<\/b> if an\r\n * error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns the current position of internal pointer of large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.tell.php\n * @return int current position of a LOB's internal pointer or <b>FALSE<\/b> if an\n * error occurred.\n *\/"
             },
             {
                 "name": "truncate",
@@ -36,7 +36,7 @@
                         "default": 0
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Truncates large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.truncate.php\r\n * @param int $length [optional] <p>\r\n * If provided, this method will truncate the LOB to\r\n * <i>length<\/i> bytes. Otherwise, it will completely\r\n * purge the LOB.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Truncates large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.truncate.php\n * @param int $length [optional] <p>\n * If provided, this method will truncate the LOB to\n * <i>length<\/i> bytes. Otherwise, it will completely\n * purge the LOB.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "erase",
@@ -56,7 +56,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Erases a specified portion of the internal LOB data\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.erase.php\r\n * @param int $offset [optional]\r\n * @param int $length [optional]\r\n * @return int the actual number of characters\/bytes erased or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Erases a specified portion of the internal LOB data\n * @link http:\/\/php.net\/manual\/en\/oci-lob.erase.php\n * @param int $offset [optional]\n * @param int $length [optional]\n * @return int the actual number of characters\/bytes erased or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "flush",
@@ -70,7 +70,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Flushes\/writes buffer of the LOB to the server\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.flush.php\r\n * @param int $flag [optional] <p>\r\n * By default, resources are not freed, but using flag\r\n * <b>OCI_LOB_BUFFER_FREE<\/b> you can do it explicitly.\r\n * Be sure you know what you're doing - next read\/write operation to the\r\n * same part of LOB will involve a round-trip to the server and initialize\r\n * new buffer resources. It is recommended to use\r\n * <b>OCI_LOB_BUFFER_FREE<\/b> flag only when you are not\r\n * going to work with the LOB anymore.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n * <\/p>\r\n * <p>\r\n * Returns <b>FALSE<\/b> if buffering was not enabled or an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Flushes\/writes buffer of the LOB to the server\n * @link http:\/\/php.net\/manual\/en\/oci-lob.flush.php\n * @param int $flag [optional] <p>\n * By default, resources are not freed, but using flag\n * <b>OCI_LOB_BUFFER_FREE<\/b> you can do it explicitly.\n * Be sure you know what you're doing - next read\/write operation to the\n * same part of LOB will involve a round-trip to the server and initialize\n * new buffer resources. It is recommended to use\n * <b>OCI_LOB_BUFFER_FREE<\/b> flag only when you are not\n * going to work with the LOB anymore.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n * <\/p>\n * <p>\n * Returns <b>FALSE<\/b> if buffering was not enabled or an error occurred.\n *\/"
             },
             {
                 "name": "setbuffering",
@@ -84,7 +84,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Changes current state of buffering for the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.setbuffering.php\r\n * @param bool $on_off <p>\r\n * <b>TRUE<\/b> for on and <b>FALSE<\/b> for off.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. Repeated calls to this method with the same flag will\r\n * return <b>TRUE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Changes current state of buffering for the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.setbuffering.php\n * @param bool $on_off <p>\n * <b>TRUE<\/b> for on and <b>FALSE<\/b> for off.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. Repeated calls to this method with the same flag will\n * return <b>TRUE<\/b>.\n *\/"
             },
             {
                 "name": "getbuffering",
@@ -93,7 +93,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns current state of buffering for the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.getbuffering.php\r\n * @return bool <b>FALSE<\/b> if buffering for the large object is off and <b>TRUE<\/b> if\r\n * buffering is used.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns current state of buffering for the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.getbuffering.php\n * @return bool <b>FALSE<\/b> if buffering for the large object is off and <b>TRUE<\/b> if\n * buffering is used.\n *\/"
             },
             {
                 "name": "rewind",
@@ -102,7 +102,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Moves the internal pointer to the beginning of the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.rewind.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Moves the internal pointer to the beginning of the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.rewind.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "read",
@@ -116,7 +116,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Reads part of the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.read.php\r\n * @param int $length <p>\r\n * The length of data to read, in bytes. Large values will be rounded down to 1 MB.\r\n * <\/p>\r\n * @return string the contents as a string, or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Reads part of the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.read.php\n * @param int $length <p>\n * The length of data to read, in bytes. Large values will be rounded down to 1 MB.\n * <\/p>\n * @return string the contents as a string, or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "eof",
@@ -125,7 +125,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Tests for end-of-file on a large object's descriptor\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.eof.php\r\n * @return bool <b>TRUE<\/b> if internal pointer of large object is at the end of LOB.\r\n * Otherwise returns <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Tests for end-of-file on a large object's descriptor\n * @link http:\/\/php.net\/manual\/en\/oci-lob.eof.php\n * @return bool <b>TRUE<\/b> if internal pointer of large object is at the end of LOB.\n * Otherwise returns <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "seek",
@@ -145,7 +145,7 @@
                         "default": "OCI_SEEK_SET"
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Sets the internal pointer of the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.seek.php\r\n * @param int $offset <p>\r\n * Indicates the amount of bytes, on which internal pointer should be\r\n * moved from the position, pointed by <i>whence<\/i>.\r\n * <\/p>\r\n * @param int $whence [optional] <p>\r\n * May be one of:\r\n * <b>OCI_SEEK_SET<\/b> - sets the position equal to\r\n * <i>offset<\/i>\r\n * <b>OCI_SEEK_CUR<\/b> - adds <i>offset<\/i>\r\n * bytes to the current position\r\n * <b>OCI_SEEK_END<\/b> - adds <i>offset<\/i>\r\n * bytes to the end of large object (use negative value to move to a position\r\n * before the end of large object)\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Sets the internal pointer of the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.seek.php\n * @param int $offset <p>\n * Indicates the amount of bytes, on which internal pointer should be\n * moved from the position, pointed by <i>whence<\/i>.\n * <\/p>\n * @param int $whence [optional] <p>\n * May be one of:\n * <b>OCI_SEEK_SET<\/b> - sets the position equal to\n * <i>offset<\/i>\n * <b>OCI_SEEK_CUR<\/b> - adds <i>offset<\/i>\n * bytes to the current position\n * <b>OCI_SEEK_END<\/b> - adds <i>offset<\/i>\n * bytes to the end of large object (use negative value to move to a position\n * before the end of large object)\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "write",
@@ -165,7 +165,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Writes data to the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.write.php\r\n * @param string $data <p>\r\n * The data to write in the LOB.\r\n * <\/p>\r\n * @param int $length [optional] <p>\r\n * If this parameter is given, writing will stop after\r\n * <i>length<\/i> bytes have been written or the end of\r\n * <i>data<\/i> is reached, whichever comes first.\r\n * <\/p>\r\n * @return int the number of bytes written or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Writes data to the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.write.php\n * @param string $data <p>\n * The data to write in the LOB.\n * <\/p>\n * @param int $length [optional] <p>\n * If this parameter is given, writing will stop after\n * <i>length<\/i> bytes have been written or the end of\n * <i>data<\/i> is reached, whichever comes first.\n * <\/p>\n * @return int the number of bytes written or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "append",
@@ -179,7 +179,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Appends data from the large object to another large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.append.php\r\n * @param OCI_Lob $lob_from <p>\r\n * The copied LOB.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Appends data from the large object to another large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.append.php\n * @param OCI_Lob $lob_from <p>\n * The copied LOB.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "size",
@@ -188,7 +188,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns size of large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.size.php\r\n * @return int length of large object value or <b>FALSE<\/b> on failure.\r\n * Empty objects have zero length.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns size of large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.size.php\n * @return int length of large object value or <b>FALSE<\/b> on failure.\n * Empty objects have zero length.\n *\/"
             },
             {
                 "name": "writetofile",
@@ -214,7 +214,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Alias of <b>OCI-Lob::export<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.writetofile.php\r\n * @param $filename\r\n * @param $start [optional]\r\n * @param $length [optional]\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Alias of <b>OCI-Lob::export<\/b>\n * @link http:\/\/php.net\/manual\/en\/oci-lob.writetofile.php\n * @param $filename\n * @param $start [optional]\n * @param $length [optional]\n *\/"
             },
             {
                 "name": "export",
@@ -240,7 +240,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Exports LOB's contents to a file\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.export.php\r\n * @param string $filename <p>\r\n * Path to the file.\r\n * <\/p>\r\n * @param int $start [optional] <p>\r\n * Indicates from where to start exporting.\r\n * <\/p>\r\n * @param int $length [optional] <p>\r\n * Indicates the length of data to be exported.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Exports LOB's contents to a file\n * @link http:\/\/php.net\/manual\/en\/oci-lob.export.php\n * @param string $filename <p>\n * Path to the file.\n * <\/p>\n * @param int $start [optional] <p>\n * Indicates from where to start exporting.\n * <\/p>\n * @param int $length [optional] <p>\n * Indicates the length of data to be exported.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "import",
@@ -254,7 +254,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Imports file data to the LOB\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.import.php\r\n * @param string $filename <p>\r\n * Path to the file.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Imports file data to the LOB\n * @link http:\/\/php.net\/manual\/en\/oci-lob.import.php\n * @param string $filename <p>\n * Path to the file.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "writetemporary",
@@ -274,7 +274,7 @@
                         "default": "OCI_TEMP_CLOB"
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Writes a temporary large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.writetemporary.php\r\n * @param string $data <p>\r\n * The data to write.\r\n * <\/p>\r\n * @param int $lob_type [optional] <p>\r\n * Can be one of the following:\r\n * <b>OCI_TEMP_BLOB<\/b> is used to create temporary BLOBs\r\n * <b>OCI_TEMP_CLOB<\/b> is used to create\r\n * temporary CLOBs\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Writes a temporary large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.writetemporary.php\n * @param string $data <p>\n * The data to write.\n * <\/p>\n * @param int $lob_type [optional] <p>\n * Can be one of the following:\n * <b>OCI_TEMP_BLOB<\/b> is used to create temporary BLOBs\n * <b>OCI_TEMP_CLOB<\/b> is used to create\n * temporary CLOBs\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "close",
@@ -283,7 +283,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Closes LOB descriptor\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Closes LOB descriptor\n * @link http:\/\/php.net\/manual\/en\/oci-lob.close.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "save",
@@ -303,7 +303,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Saves data to the large object\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.save.php\r\n * @param string $data <p>\r\n * The data to be saved.\r\n * <\/p>\r\n * @param int $offset [optional] <p>\r\n * Can be used to indicate offset from the beginning of the large object.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Saves data to the large object\n * @link http:\/\/php.net\/manual\/en\/oci-lob.save.php\n * @param string $data <p>\n * The data to be saved.\n * <\/p>\n * @param int $offset [optional] <p>\n * Can be used to indicate offset from the beginning of the large object.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "savefile",
@@ -317,7 +317,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Alias of <b>OCI-Lob::import<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.savefile.php\r\n * @param $filename\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Alias of <b>OCI-Lob::import<\/b>\n * @link http:\/\/php.net\/manual\/en\/oci-lob.savefile.php\n * @param $filename\n *\/"
             },
             {
                 "name": "free",
@@ -326,7 +326,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Frees resources associated with the LOB descriptor\r\n * @link http:\/\/php.net\/manual\/en\/oci-lob.free.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Frees resources associated with the LOB descriptor\n * @link http:\/\/php.net\/manual\/en\/oci-lob.free.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             }
         ],
         "properties": [
@@ -341,7 +341,7 @@
         "name": "OCI_Collection",
         "fqn": "\\OCI_Collection",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "append",
@@ -355,7 +355,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Appends element to the collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.append.php\r\n * @param mixed $value <p>\r\n * The value to be added to the collection. Can be a string or a number.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Appends element to the collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.append.php\n * @param mixed $value <p>\n * The value to be added to the collection. Can be a string or a number.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getelem",
@@ -369,7 +369,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns value of the element\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.getelem.php\r\n * @param int $index <p>\r\n * The element index. First index is 0.\r\n * <\/p>\r\n * @return mixed <b>FALSE<\/b> if such element doesn't exist; <b>NULL<\/b> if element is <b>NULL<\/b>;\r\n * string if element is column of a string datatype or number if element is\r\n * numeric field.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns value of the element\n * @link http:\/\/php.net\/manual\/en\/oci-collection.getelem.php\n * @param int $index <p>\n * The element index. First index is 0.\n * <\/p>\n * @return mixed <b>FALSE<\/b> if such element doesn't exist; <b>NULL<\/b> if element is <b>NULL<\/b>;\n * string if element is column of a string datatype or number if element is\n * numeric field.\n *\/"
             },
             {
                 "name": "assignelem",
@@ -389,7 +389,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Assigns a value to the element of the collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.assignelem.php\r\n * @param int $index <p>\r\n * The element index. First index is 0.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * Can be a string or a number.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Assigns a value to the element of the collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.assignelem.php\n * @param int $index <p>\n * The element index. First index is 0.\n * <\/p>\n * @param mixed $value <p>\n * Can be a string or a number.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "assign",
@@ -403,7 +403,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Assigns a value to the collection from another existing collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.assign.php\r\n * @param OCI_Collection $from <p>\r\n * An instance of OCI-Collection.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Assigns a value to the collection from another existing collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.assign.php\n * @param OCI_Collection $from <p>\n * An instance of OCI-Collection.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "size",
@@ -412,7 +412,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns size of the collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.size.php\r\n * @return int the number of elements in the collection or <b>FALSE<\/b> on error.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns size of the collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.size.php\n * @return int the number of elements in the collection or <b>FALSE<\/b> on error.\n *\/"
             },
             {
                 "name": "max",
@@ -421,7 +421,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Returns the maximum number of elements in the collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.max.php\r\n * @return int the maximum number as an integer, or <b>FALSE<\/b> on errors.\r\n * <\/p>\r\n * <p>\r\n * If the returned value is 0, then the number of elements is not limited.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Returns the maximum number of elements in the collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.max.php\n * @return int the maximum number as an integer, or <b>FALSE<\/b> on errors.\n * <\/p>\n * <p>\n * If the returned value is 0, then the number of elements is not limited.\n *\/"
             },
             {
                 "name": "trim",
@@ -435,7 +435,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Trims elements from the end of the collection\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.trim.php\r\n * @param int $num <p>\r\n * The number of elements to be trimmed.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Trims elements from the end of the collection\n * @link http:\/\/php.net\/manual\/en\/oci-collection.trim.php\n * @param int $num <p>\n * The number of elements to be trimmed.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "free",
@@ -444,7 +444,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\r\n * Frees the resources associated with the collection object\r\n * @link http:\/\/php.net\/manual\/en\/oci-collection.free.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5, PECL OCI8 &gt;= 1.1.0)<br\/>\n * Frees the resources associated with the collection object\n * @link http:\/\/php.net\/manual\/en\/oci-collection.free.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             }
         ],
         "properties": [

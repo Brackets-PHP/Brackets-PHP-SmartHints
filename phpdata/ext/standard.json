@@ -4,7 +4,7 @@
         "name": "__PHP_Incomplete_Class",
         "fqn": "\\__PHP_Incomplete_Class",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
@@ -20,7 +20,7 @@
         "name": "php_user_filter",
         "fqn": "\\php_user_filter",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "filter",
@@ -52,7 +52,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $in\r\n * @param $out\r\n * @param $consumed\r\n * @param $closing\r\n *\/"
+                "doc": "\/**\n * @param $in\n * @param $out\n * @param $consumed\n * @param $closing\n *\/"
             },
             {
                 "name": "onCreate",
@@ -76,10 +76,12 @@
         "properties": [
             {
                 "name": "filtername",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "params",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -92,7 +94,7 @@
         "name": "Directory",
         "fqn": "\\Directory",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "close",
@@ -106,7 +108,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $dir_handle [optional]\r\n *\/"
+                "doc": "\/**\n * @param $dir_handle [optional]\n *\/"
             },
             {
                 "name": "rewind",
@@ -120,7 +122,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $dir_handle [optional]\r\n *\/"
+                "doc": "\/**\n * @param $dir_handle [optional]\n *\/"
             },
             {
                 "name": "read",
@@ -134,17 +136,19 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $dir_handle [optional]\r\n *\/"
+                "doc": "\/**\n * @param $dir_handle [optional]\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "path",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * The directory that was opened.\r\n * <\/p>\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * The directory that was opened.\n * <\/p>\n * @var string\n *\/"
             },
             {
                 "name": "handle",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * Can be used with other directory functions such as\r\n * <b>readdir()<\/b>,  <b>rewinddir()<\/b> and\r\n * <b>closedir()<\/b>.\r\n * <\/p>\r\n * @var resource\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * Can be used with other directory functions such as\n * <b>readdir()<\/b>,  <b>rewinddir()<\/b> and\n * <b>closedir()<\/b>.\n * <\/p>\n * @var resource\n *\/"
             }
         ],
         "constants": [

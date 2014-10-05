@@ -8,118 +8,145 @@
         "name": "Node",
         "fqn": "Drupal7\\Node",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "nid",
-                "doc": "\/**\r\n * The node's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique identifier.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "vid",
-                "doc": "\/**\r\n * The node's unique revision identifier of the current version.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique revision identifier of the current version.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "type",
-                "doc": "\/**\r\n * The node's machine readable content type name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's machine readable content type name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "language",
-                "doc": "\/**\r\n * The node's default language.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's default language.\n *\n * @var string\n *\/"
             },
             {
                 "name": "title",
-                "doc": "\/**\r\n * The node's title.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's title.\n *\n * @var string\n *\/"
             },
             {
                 "name": "uid",
-                "doc": "\/**\r\n * The node's unique user identifier who created it.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique user identifier who created it.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "status",
-                "doc": "\/**\r\n * The node's status, one of <code>NODE_NO_PUBLISHED<\/code>, <code>NODE_PUBLISHED<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's status, one of <code>NODE_NO_PUBLISHED<\/code>, <code>NODE_PUBLISHED<\/code>.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "created",
-                "doc": "\/**\r\n * The node's creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's creation timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "changed",
-                "doc": "\/**\r\n * The node's changed timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's changed timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "comment",
-                "doc": "\/**\r\n * Whether comments are allowed on this node, one of <code>COMMENT_NODE_HIDDEN<\/code>,\r\n * <code>COMMENT_NODE_CLOSED<\/code>, <code>COMMENT_NODE_OPEN<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Whether comments are allowed on this node, one of <code>COMMENT_NODE_HIDDEN<\/code>,\n * <code>COMMENT_NODE_CLOSED<\/code>, <code>COMMENT_NODE_OPEN<\/code>.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "promote",
-                "doc": "\/**\r\n * Whether this node is promoted to the frontpage or not, one of <code>NODE_NOT_PROMOTED<\/code>, <code>NODE_PROMOTED<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Whether this node is promoted to the frontpage or not, one of <code>NODE_NOT_PROMOTED<\/code>, <code>NODE_PROMOTED<\/code>.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "sticky",
-                "doc": "\/**\r\n * Whether this node is sticky or not, one of <code>NODE_NOT_STICKY<\/code>, <code>NODE_STICKY<\/code>.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Whether this node is sticky or not, one of <code>NODE_NOT_STICKY<\/code>, <code>NODE_STICKY<\/code>.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "tnid",
-                "doc": "\/**\r\n * The node's unique identifier of the translation source (or parent, if node is a translation).\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique identifier of the translation source (or parent, if node is a translation).\n *\n * @var integer\n *\/"
             },
             {
                 "name": "translate",
-                "doc": "\/**\r\n * Whether the translation needs updating or not (<code>0<\/code> no update, <code>1<\/code> needs update).\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Whether the translation needs updating or not (<code>0<\/code> no update, <code>1<\/code> needs update).\n *\n * @var integer\n *\/"
             },
             {
                 "name": "revision_uid",
-                "doc": "\/**\r\n * The node's unique user identifier who created the current revision.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique user identifier who created the current revision.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "body",
-                "doc": "\/**\r\n * The node's body content; long text field with summary.\r\n *\r\n * <b>NOTE<\/b><br>\r\n * Don't assume that this field will exist, as it is possible to remove it via Manage Fields on each content type.\r\n * Similarly, modules that define a custom node content type may not even attach a body in the first place.\r\n *\r\n * @var array\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's body content; long text field with summary.\n *\n * <b>NOTE<\/b><br>\n * Don't assume that this field will exist, as it is possible to remove it via Manage Fields on each content type.\n * Similarly, modules that define a custom node content type may not even attach a body in the first place.\n *\n * @var array\n *\/"
             },
             {
                 "name": "log",
-                "doc": "\/**\r\n * Message left by the creator of this revision, explaining the changes.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Message left by the creator of this revision, explaining the changes.\n *\n * @var string\n *\/"
             },
             {
                 "name": "revision_timestamp",
-                "doc": "\/**\r\n * The node's revision creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's revision creation timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "name",
-                "doc": "\/**\r\n * The node's creator user name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's creator user name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "picture",
-                "doc": "\/**\r\n * The node's creator user avatar.\r\n *\r\n * @var ?\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's creator user avatar.\n *\n * @var ?\n *\/"
             },
             {
                 "name": "cid",
-                "doc": "\/**\r\n * The node's unique identifier of the last comment.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's unique identifier of the last comment.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "last_comment_timestamp",
-                "doc": "\/**\r\n * The node's timestamp of the last comment.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's timestamp of the last comment.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "last_comment_name",
-                "doc": "\/**\r\n * The name of the user who last left a comment.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The name of the user who last left a comment.\n *\n * @var string\n *\/"
             },
             {
                 "name": "last_comment_uid",
-                "doc": "\/**\r\n * The unique identifier of the user who last left a comment.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The unique identifier of the user who last left a comment.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "comment_count",
-                "doc": "\/**\r\n * The node's total comment count.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The node's total comment count.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "data",
-                "doc": "\/**\r\n * Serialized string of data associated with the node.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Serialized string of data associated with the node.\n *\n * @var string\n *\/"
             },
             {
                 "name": "rdf_mapping",
-                "doc": "\/**\r\n * W3C standard to describe structured data.\r\n *\r\n * @link http:\/\/api.drupal.org\/api\/drupal\/modules!rdf!rdf.module\/group\/rdf\/7\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * W3C standard to describe structured data.\n *\n * @link http:\/\/api.drupal.org\/api\/drupal\/modules!rdf!rdf.module\/group\/rdf\/7\n * @var string\n *\/"
             }
         ],
         "constants": [
@@ -131,42 +158,50 @@
         "name": "File",
         "fqn": "Drupal7\\File",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "fid",
-                "doc": "\/**\r\n * The file's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's unique identifier.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "uid",
-                "doc": "\/**\r\n * The file's unique user identifier who uploaded the file.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's unique user identifier who uploaded the file.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "filename",
-                "doc": "\/**\r\n * The file's name (including the extension).\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's name (including the extension).\n *\n * @var string\n *\/"
             },
             {
                 "name": "uri",
-                "doc": "\/**\r\n * The file's canonical absolute URI.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's canonical absolute URI.\n *\n * @var string\n *\/"
             },
             {
                 "name": "filemime",
-                "doc": "\/**\r\n * The file's MIME type.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's MIME type.\n *\n * @var string\n *\/"
             },
             {
                 "name": "filesize",
-                "doc": "\/**\r\n * The file's size in Bytes.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's size in Bytes.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "status",
-                "doc": "\/**\r\n * The file's status.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's status.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "timestamp",
-                "doc": "\/**\r\n * The file's timestamp.\r\n *\r\n * @todo Is this the timestamp of creation or change?\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The file's timestamp.\n *\n * @todo Is this the timestamp of creation or change?\n * @var integer\n *\/"
             }
         ],
         "constants": [
@@ -178,46 +213,55 @@
         "name": "Term",
         "fqn": "Drupal7\\Term",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "tid",
-                "doc": "\/**\r\n * The term's unique identifier.\r\n *\r\n * @var integer|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's unique identifier.\n *\n * @var integer|string\n *\/"
             },
             {
                 "name": "vid",
-                "doc": "\/**\r\n * The term's unique vocabulary identifier.\r\n *\r\n * @var integer|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's unique vocabulary identifier.\n *\n * @var integer|string\n *\/"
             },
             {
                 "name": "name",
-                "doc": "\/**\r\n * The term's human readable name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's human readable name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "description",
-                "doc": "\/**\r\n * The term's description.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's description.\n *\n * @var string\n *\/"
             },
             {
                 "name": "format",
-                "doc": "\/**\r\n * The term's description text format.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's description text format.\n *\n * @var string\n *\/"
             },
             {
                 "name": "weight",
-                "doc": "\/**\r\n * The term's weight.\r\n *\r\n * @var integer|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's weight.\n *\n * @var integer|string\n *\/"
             },
             {
                 "name": "depth",
-                "doc": "\/**\r\n * The term's depth.\r\n *\r\n * @var integer|null\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's depth.\n *\n * @var integer|null\n *\/"
             },
             {
                 "name": "parents",
-                "doc": "\/**\r\n * The term's parents.\r\n *\r\n * @var array|null\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's parents.\n *\n * @var array|null\n *\/"
             },
             {
                 "name": "vocabulary_machine_name",
-                "doc": "\/**\r\n * The term's vocabulary machine name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The term's vocabulary machine name.\n *\n * @var string\n *\/"
             }
         ],
         "constants": [
@@ -229,78 +273,95 @@
         "name": "User",
         "fqn": "Drupal7\\User",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "uid",
-                "doc": "\/**\r\n * The user's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's unique identifier.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "name",
-                "doc": "\/**\r\n * The user's unique name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's unique name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "pass",
-                "doc": "\/**\r\n * The user's hashed password.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's hashed password.\n *\n * @var string\n *\/"
             },
             {
                 "name": "mail",
-                "doc": "\/**\r\n * The user's unique email address.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's unique email address.\n *\n * @var string\n *\/"
             },
             {
                 "name": "theme",
-                "doc": "\/**\r\n * The user's theme.\r\n *\r\n * @var null|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's theme.\n *\n * @var null|string\n *\/"
             },
             {
                 "name": "signature",
-                "doc": "\/**\r\n * The user's signature.\r\n *\r\n * @var null|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's signature.\n *\n * @var null|string\n *\/"
             },
             {
                 "name": "signature_format",
-                "doc": "\/**\r\n * The user's signature format.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's signature format.\n *\n * @var string\n *\/"
             },
             {
                 "name": "created",
-                "doc": "\/**\r\n * The user's creation timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's creation timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "access",
-                "doc": "\/**\r\n * The user's last access timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's last access timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "login",
-                "doc": "\/**\r\n * The user's last login timestamp.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's last login timestamp.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "status",
-                "doc": "\/**\r\n * The user's status.\r\n *\r\n * <ul>\r\n *   <li><code>0<\/code> inactive<\/li>\r\n *   <li><code>1<\/code> active<\/li>\r\n * <\/ul>\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's status.\n *\n * <ul>\n *   <li><code>0<\/code> inactive<\/li>\n *   <li><code>1<\/code> active<\/li>\n * <\/ul>\n *\n * @var integer\n *\/"
             },
             {
                 "name": "timezone",
-                "doc": "\/**\r\n * The user's time zone identifier.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's time zone identifier.\n *\n * @var string\n *\/"
             },
             {
                 "name": "language",
-                "doc": "\/**\r\n * The user's language;\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's language;\n *\n * @var string\n *\/"
             },
             {
                 "name": "picture",
-                "doc": "\/**\r\n * The user's picture.\r\n *\r\n * @var \\Drupal7\\File\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's picture.\n *\n * @var \\Drupal7\\File\n *\/"
             },
             {
                 "name": "init",
-                "doc": "\/**\r\n * The user's registration email address.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's registration email address.\n *\n * @var string\n *\/"
             },
             {
                 "name": "data",
-                "doc": "\/**\r\n * The user's additional data.\r\n *\r\n * @var mixed\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's additional data.\n *\n * @var mixed\n *\/"
             },
             {
                 "name": "roles",
-                "doc": "\/**\r\n * The user's roles.\r\n *\r\n * @var array\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The user's roles.\n *\n * @var array\n *\/"
             }
         ],
         "constants": [
@@ -312,38 +373,45 @@
         "name": "Vocabulary",
         "fqn": "Drupal7\\Vocabulary",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "vid",
-                "doc": "\/**\r\n * The vocabulary's unique identifier.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's unique identifier.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "name",
-                "doc": "\/**\r\n * The vocabulary's human readable name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's human readable name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "machine_name",
-                "doc": "\/**\r\n * The vocabulary's machine readable name.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's machine readable name.\n *\n * @var string\n *\/"
             },
             {
                 "name": "description",
-                "doc": "\/**\r\n * The vocabulary's description.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's description.\n *\n * @var string\n *\/"
             },
             {
                 "name": "hierarchy",
-                "doc": "\/**\r\n * The vocabulary's hierarchy level.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's hierarchy level.\n *\n * @var integer\n *\/"
             },
             {
                 "name": "module",
-                "doc": "\/**\r\n * The vocabulary's module (if any).\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's module (if any).\n *\n * @var string\n *\/"
             },
             {
                 "name": "weight",
-                "doc": "\/**\r\n * The vocabulary's weight.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The vocabulary's weight.\n *\n * @var integer\n *\/"
             }
         ],
         "constants": [

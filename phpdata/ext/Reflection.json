@@ -4,7 +4,7 @@
         "name": "ReflectionException",
         "fqn": "\\ReflectionException",
         "type": 0,
-        "extends": "Exception",
+        "extendsClass": "Exception",
         "methods": [
             {
                 "name": "__construct",
@@ -30,7 +30,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Construct the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $previous [optional]\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Construct the exception\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\n * @param $message [optional]\n * @param $code [optional]\n * @param $previous [optional]\n *\/"
             },
             {
                 "name": "getMessage",
@@ -39,7 +39,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception message\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\n * @return string the Exception message as a string.\n *\/"
             },
             {
                 "name": "getCode",
@@ -48,7 +48,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception code\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\n * @return mixed the exception code as integer in\n * <b>Exception<\/b> but possibly as other type in\n * <b>Exception<\/b> descendants (for example as\n * string in <b>PDOException<\/b>).\n *\/"
             },
             {
                 "name": "getFile",
@@ -57,7 +57,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the file in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\n * @return string the filename in which the exception was created.\n *\/"
             },
             {
                 "name": "getLine",
@@ -66,7 +66,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the line in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\n * @return int the line number where the exception was created.\n *\/"
             },
             {
                 "name": "getTrace",
@@ -75,7 +75,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\n * @return array the Exception stack trace as an array.\n *\/"
             },
             {
                 "name": "getPrevious",
@@ -84,7 +84,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Returns previous Exception\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\n * @return Exception the previous <b>Exception<\/b> if available\n * or <b>NULL<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getTraceAsString",
@@ -93,7 +93,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace as a string\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\n * @return string the Exception stack trace as a string.\n *\/"
             },
             {
                 "name": "__toString",
@@ -102,11 +102,30 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * String representation of the exception\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\n * @return string the string representation of the exception.\n *\/"
             }
         ],
         "properties": [
-
+            {
+                "name": "message",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "code",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "file",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "line",
+                "type": 2,
+                "doc": null
+            }
         ],
         "constants": [
 
@@ -117,7 +136,7 @@
         "name": "Reflection",
         "fqn": "\\Reflection",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "getModifierNames",
@@ -131,7 +150,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets modifier names\r\n * @link http:\/\/php.net\/manual\/en\/reflection.getmodifiernames.php\r\n * @param int $modifiers <p>\r\n * The modifiers to get, which is from a numeric value.\r\n * <\/p>\r\n * @return array An array of modifier names.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets modifier names\n * @link http:\/\/php.net\/manual\/en\/reflection.getmodifiernames.php\n * @param int $modifiers <p>\n * The modifiers to get, which is from a numeric value.\n * <\/p>\n * @return array An array of modifier names.\n *\/"
             },
             {
                 "name": "export",
@@ -151,7 +170,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Exports\r\n * @link http:\/\/php.net\/manual\/en\/reflection.export.php\r\n * @param Reflector $reflector <p>\r\n * The reflection to export.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Exports\n * @link http:\/\/php.net\/manual\/en\/reflection.export.php\n * @param Reflector $reflector <p>\n * The reflection to export.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             }
         ],
         "properties": [
@@ -166,7 +185,7 @@
         "name": "ReflectionFunctionAbstract",
         "fqn": "\\ReflectionFunctionAbstract",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__toString",
@@ -175,7 +194,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * To string\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.tostring.php\r\n * @return void The string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * To string\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.tostring.php\n * @return void The string.\n *\/"
             },
             {
                 "name": "inNamespace",
@@ -184,7 +203,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if function in namespace\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\r\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if function in namespace\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isClosure",
@@ -193,7 +212,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\r\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isDeprecated",
@@ -202,7 +221,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if deprecated\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\r\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if deprecated\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isInternal",
@@ -211,7 +230,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if is internal\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\r\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if is internal\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isUserDefined",
@@ -220,7 +239,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if user defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\r\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if user defined\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\n *\/"
             },
             {
                 "name": "isGenerator",
@@ -229,7 +248,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Returns whether this function is a generator\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\r\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\r\n * on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Returns whether this function is a generator\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\n * on failure.\n *\/"
             },
             {
                 "name": "getClosureThis",
@@ -238,7 +257,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns this pointer bound to closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\r\n * @return object $this pointer.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns this pointer bound to closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getClosureScopeClass",
@@ -247,7 +266,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns the scope associated to the closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\r\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns the scope associated to the closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -256,7 +275,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comment\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\r\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comment\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getEndLine",
@@ -265,7 +284,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets end line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\r\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets end line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\n *\/"
             },
             {
                 "name": "getExtension",
@@ -274,7 +293,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension info\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\r\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension info\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\n *\/"
             },
             {
                 "name": "getExtensionName",
@@ -283,7 +302,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\r\n * @return string The extensions name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
             },
             {
                 "name": "getFileName",
@@ -292,7 +311,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets file name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\r\n * @return string The file name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets file name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
             },
             {
                 "name": "getName",
@@ -301,7 +320,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets function name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\r\n * @return string The name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets function name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
             },
             {
                 "name": "getNamespaceName",
@@ -310,7 +329,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets namespace name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\r\n * @return string The namespace name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets namespace name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
             },
             {
                 "name": "getNumberOfParameters",
@@ -319,7 +338,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\r\n * @return int The number of parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
             },
             {
                 "name": "getNumberOfRequiredParameters",
@@ -328,7 +347,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of required parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\r\n * @return int The number of required parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of required parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
             },
             {
                 "name": "getParameters",
@@ -337,7 +356,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\r\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\n *\/"
             },
             {
                 "name": "getShortName",
@@ -346,7 +365,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets function short name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\r\n * @return string The short name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets function short name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
             },
             {
                 "name": "getStartLine",
@@ -355,7 +374,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets starting line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\r\n * @return int The starting line number.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets starting line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
             },
             {
                 "name": "getStaticVariables",
@@ -364,7 +383,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets static variables\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\r\n * @return array An array of static variables.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets static variables\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
             },
             {
                 "name": "returnsReference",
@@ -373,12 +392,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if returns reference\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\r\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if returns reference\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -391,7 +411,7 @@
         "name": "ReflectionFunction",
         "fqn": "\\ReflectionFunction",
         "type": 0,
-        "extends": "ReflectionFunctionAbstract",
+        "extendsClass": "ReflectionFunctionAbstract",
         "methods": [
             {
                 "name": "__construct",
@@ -405,7 +425,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Constructs a ReflectionFunction object\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.construct.php\r\n * @param mixed $name <p>\r\n * The name of the function to reflect or a closure.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Constructs a ReflectionFunction object\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.construct.php\n * @param mixed $name <p>\n * The name of the function to reflect or a closure.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -414,7 +434,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * To string\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.tostring.php\r\n * @return string <b>ReflectionFunction::export<\/b>-like output for\r\n * the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * To string\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.tostring.php\n * @return string <b>ReflectionFunction::export<\/b>-like output for\n * the function.\n *\/"
             },
             {
                 "name": "export",
@@ -434,7 +454,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Exports function\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.export.php\r\n * @param string $name <p>\r\n * The reflection to export.\r\n * <\/p>\r\n * @param string $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Exports function\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.export.php\n * @param string $name <p>\n * The reflection to export.\n * <\/p>\n * @param string $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             },
             {
                 "name": "isDisabled",
@@ -443,7 +463,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if function is disabled\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.isdisabled.php\r\n * @return bool <b>TRUE<\/b> if it's disable, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if function is disabled\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.isdisabled.php\n * @return bool <b>TRUE<\/b> if it's disable, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "invoke",
@@ -463,7 +483,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Invokes function\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.invoke.php\r\n * @param mixed $parameter [optional]\r\n * @param mixed $_ [optional]\r\n * @return mixed the result of the invoked function call.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Invokes function\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.invoke.php\n * @param mixed $parameter [optional]\n * @param mixed $_ [optional]\n * @return mixed the result of the invoked function call.\n *\/"
             },
             {
                 "name": "invokeArgs",
@@ -477,7 +497,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Invokes function args\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.invokeargs.php\r\n * @param array $args <p>\r\n * The passed arguments to the function as an array, much like\r\n * <b>call_user_func_array<\/b> works.\r\n * <\/p>\r\n * @return mixed the result of the invoked function\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Invokes function args\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.invokeargs.php\n * @param array $args <p>\n * The passed arguments to the function as an array, much like\n * <b>call_user_func_array<\/b> works.\n * <\/p>\n * @return mixed the result of the invoked function\n *\/"
             },
             {
                 "name": "getClosure",
@@ -486,7 +506,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns a dynamically created closure for the function\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.getclosure.php\r\n * @return Closure <b>Closure<\/b>.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns a dynamically created closure for the function\n * @link http:\/\/php.net\/manual\/en\/reflectionfunction.getclosure.php\n * @return Closure <b>Closure<\/b>.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "inNamespace",
@@ -495,7 +515,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if function in namespace\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\r\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if function in namespace\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isClosure",
@@ -504,7 +524,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\r\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isDeprecated",
@@ -513,7 +533,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if deprecated\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\r\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if deprecated\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isInternal",
@@ -522,7 +542,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if is internal\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\r\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if is internal\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isUserDefined",
@@ -531,7 +551,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if user defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\r\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if user defined\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\n *\/"
             },
             {
                 "name": "isGenerator",
@@ -540,7 +560,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Returns whether this function is a generator\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\r\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\r\n * on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Returns whether this function is a generator\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\n * on failure.\n *\/"
             },
             {
                 "name": "getClosureThis",
@@ -549,7 +569,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns this pointer bound to closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\r\n * @return object $this pointer.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns this pointer bound to closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getClosureScopeClass",
@@ -558,7 +578,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns the scope associated to the closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\r\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns the scope associated to the closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -567,7 +587,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comment\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\r\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comment\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getEndLine",
@@ -576,7 +596,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets end line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\r\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets end line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\n *\/"
             },
             {
                 "name": "getExtension",
@@ -585,7 +605,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension info\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\r\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension info\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\n *\/"
             },
             {
                 "name": "getExtensionName",
@@ -594,7 +614,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\r\n * @return string The extensions name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
             },
             {
                 "name": "getFileName",
@@ -603,7 +623,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets file name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\r\n * @return string The file name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets file name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
             },
             {
                 "name": "getName",
@@ -612,7 +632,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets function name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\r\n * @return string The name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets function name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
             },
             {
                 "name": "getNamespaceName",
@@ -621,7 +641,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets namespace name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\r\n * @return string The namespace name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets namespace name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
             },
             {
                 "name": "getNumberOfParameters",
@@ -630,7 +650,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\r\n * @return int The number of parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
             },
             {
                 "name": "getNumberOfRequiredParameters",
@@ -639,7 +659,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of required parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\r\n * @return int The number of required parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of required parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
             },
             {
                 "name": "getParameters",
@@ -648,7 +668,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\r\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\n *\/"
             },
             {
                 "name": "getShortName",
@@ -657,7 +677,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets function short name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\r\n * @return string The short name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets function short name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
             },
             {
                 "name": "getStartLine",
@@ -666,7 +686,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets starting line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\r\n * @return int The starting line number.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets starting line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
             },
             {
                 "name": "getStaticVariables",
@@ -675,7 +695,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets static variables\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\r\n * @return array An array of static variables.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets static variables\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
             },
             {
                 "name": "returnsReference",
@@ -684,12 +704,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if returns reference\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\r\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if returns reference\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -706,7 +727,7 @@
         "name": "ReflectionParameter",
         "fqn": "\\ReflectionParameter",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "export",
@@ -732,7 +753,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Exports\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.export.php\r\n * @param string $function <p>\r\n * The function name.\r\n * <\/p>\r\n * @param string $parameter <p>\r\n * The parameter name.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string The exported reflection.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Exports\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.export.php\n * @param string $function <p>\n * The function name.\n * <\/p>\n * @param string $parameter <p>\n * The parameter name.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string The exported reflection.\n *\/"
             },
             {
                 "name": "__construct",
@@ -752,7 +773,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Construct\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.construct.php\r\n * @param string $function <p>\r\n * The function to reflect parameters from.\r\n * <\/p>\r\n * @param string $parameter <p>\r\n * The parameter.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Construct\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.construct.php\n * @param string $function <p>\n * The function to reflect parameters from.\n * <\/p>\n * @param string $parameter <p>\n * The parameter.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -761,7 +782,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * To string\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.tostring.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * To string\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.tostring.php\n * @return string\n *\/"
             },
             {
                 "name": "getName",
@@ -770,7 +791,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parameter name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getname.php\r\n * @return string The name of the reflected parameter.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parameter name\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getname.php\n * @return string The name of the reflected parameter.\n *\/"
             },
             {
                 "name": "isPassedByReference",
@@ -779,7 +800,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if passed by reference\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.ispassedbyreference.php\r\n * @return bool <b>TRUE<\/b> if the parameter is passed in by reference, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if passed by reference\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.ispassedbyreference.php\n * @return bool <b>TRUE<\/b> if the parameter is passed in by reference, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "canBePassedByValue",
@@ -788,7 +809,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this parameter can be passed by value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.canbepassedbyvalue.php\r\n * @return bool <b>TRUE<\/b> if the parameter can be passed by value, <b>FALSE<\/b> otherwise.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this parameter can be passed by value\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.canbepassedbyvalue.php\n * @return bool <b>TRUE<\/b> if the parameter can be passed by value, <b>FALSE<\/b> otherwise.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getDeclaringFunction",
@@ -797,7 +818,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.3)<br\/>\r\n * Gets declaring function\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdeclaringfunction.php\r\n * @return ReflectionFunctionAbstract A <b>ReflectionFunction<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.3)<br\/>\n * Gets declaring function\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdeclaringfunction.php\n * @return ReflectionFunctionAbstract A <b>ReflectionFunction<\/b> object.\n *\/"
             },
             {
                 "name": "getDeclaringClass",
@@ -806,7 +827,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets declaring class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdeclaringclass.php\r\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets declaring class\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdeclaringclass.php\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\n *\/"
             },
             {
                 "name": "getClass",
@@ -815,7 +836,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get the type hinted class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getclass.php\r\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Get the type hinted class\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getclass.php\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\n *\/"
             },
             {
                 "name": "isArray",
@@ -824,7 +845,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if parameter expects an array\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isarray.php\r\n * @return bool <b>TRUE<\/b> if an array is expected, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if parameter expects an array\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isarray.php\n * @return bool <b>TRUE<\/b> if an array is expected, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isCallable",
@@ -833,7 +854,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Returns whether parameter MUST be callable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.iscallable.php\r\n * @return bool <b>TRUE<\/b> if the parameter is callable, <b>FALSE<\/b> if it is\r\n * not or <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Returns whether parameter MUST be callable\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.iscallable.php\n * @return bool <b>TRUE<\/b> if the parameter is callable, <b>FALSE<\/b> if it is\n * not or <b>NULL<\/b> on failure.\n *\/"
             },
             {
                 "name": "allowsNull",
@@ -842,7 +863,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if null is allowed\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.allowsnull.php\r\n * @return bool <b>TRUE<\/b> if <b>NULL<\/b> is allowed, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if null is allowed\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.allowsnull.php\n * @return bool <b>TRUE<\/b> if <b>NULL<\/b> is allowed, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getPosition",
@@ -851,7 +872,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.3)<br\/>\r\n * Gets parameter position\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getposition.php\r\n * @return int The position of the parameter, left to right, starting at position #0.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.3)<br\/>\n * Gets parameter position\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getposition.php\n * @return int The position of the parameter, left to right, starting at position #0.\n *\/"
             },
             {
                 "name": "isOptional",
@@ -860,7 +881,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Checks if optional\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isoptional.php\r\n * @return bool <b>TRUE<\/b> if the parameter is optional, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Checks if optional\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isoptional.php\n * @return bool <b>TRUE<\/b> if the parameter is optional, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isDefaultValueAvailable",
@@ -869,7 +890,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Checks if a default value is available\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isdefaultvalueavailable.php\r\n * @return bool <b>TRUE<\/b> if a default value is available, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Checks if a default value is available\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isdefaultvalueavailable.php\n * @return bool <b>TRUE<\/b> if a default value is available, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getDefaultValue",
@@ -878,7 +899,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets default parameter value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdefaultvalue.php\r\n * @return mixed The parameters default value.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets default parameter value\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdefaultvalue.php\n * @return mixed The parameters default value.\n *\/"
             },
             {
                 "name": "isDefaultValueConstant",
@@ -887,7 +908,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.6)<br\/>\r\n * Returns whether the default value of this parameter is constant\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isdefaultvalueconstant.php\r\n * @return bool <b>TRUE<\/b> if the default value is constant, <b>FALSE<\/b> if it is not or\r\n * <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.6)<br\/>\n * Returns whether the default value of this parameter is constant\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.isdefaultvalueconstant.php\n * @return bool <b>TRUE<\/b> if the default value is constant, <b>FALSE<\/b> if it is not or\n * <b>NULL<\/b> on failure.\n *\/"
             },
             {
                 "name": "getDefaultValueConstantName",
@@ -896,12 +917,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.6)<br\/>\r\n * Returns the default value's constant name if default value is constant or null\r\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdefaultvalueconstantname.php\r\n * @return string string on success or <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.6)<br\/>\n * Returns the default value's constant name if default value is constant or null\n * @link http:\/\/php.net\/manual\/en\/reflectionparameter.getdefaultvalueconstantname.php\n * @return string string on success or <b>NULL<\/b> on failure.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -914,7 +936,7 @@
         "name": "ReflectionMethod",
         "fqn": "\\ReflectionMethod",
         "type": 0,
-        "extends": "ReflectionFunctionAbstract",
+        "extendsClass": "ReflectionFunctionAbstract",
         "methods": [
             {
                 "name": "export",
@@ -940,7 +962,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Export a reflection method.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.export.php\r\n * @param string $class <p>\r\n * The class name.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The name of the method.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Export a reflection method.\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.export.php\n * @param string $class <p>\n * The class name.\n * <\/p>\n * @param string $name <p>\n * The name of the method.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             },
             {
                 "name": "__construct",
@@ -960,7 +982,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Constructs a ReflectionMethod\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.construct.php\r\n * @param mixed $class <p>\r\n * Classname or object (instance of the class) that contains the method.\r\n * <\/p>\r\n * @param string $name <p>\r\n * Name of the method.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Constructs a ReflectionMethod\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.construct.php\n * @param mixed $class <p>\n * Classname or object (instance of the class) that contains the method.\n * <\/p>\n * @param string $name <p>\n * Name of the method.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -969,7 +991,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the string representation of the Reflection method object.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.tostring.php\r\n * @return string A string representation of this <b>ReflectionMethod<\/b> instance.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the string representation of the Reflection method object.\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.tostring.php\n * @return string A string representation of this <b>ReflectionMethod<\/b> instance.\n *\/"
             },
             {
                 "name": "isPublic",
@@ -978,7 +1000,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is public\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.ispublic.php\r\n * @return bool <b>TRUE<\/b> if the method is public, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is public\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.ispublic.php\n * @return bool <b>TRUE<\/b> if the method is public, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isPrivate",
@@ -987,7 +1009,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is private\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isprivate.php\r\n * @return bool <b>TRUE<\/b> if the method is private, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is private\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isprivate.php\n * @return bool <b>TRUE<\/b> if the method is private, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isProtected",
@@ -996,7 +1018,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is protected\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isprotected.php\r\n * @return bool <b>TRUE<\/b> if the method is protected, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is protected\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isprotected.php\n * @return bool <b>TRUE<\/b> if the method is protected, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isAbstract",
@@ -1005,7 +1027,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is abstract\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isabstract.php\r\n * @return bool <b>TRUE<\/b> if the method is abstract, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is abstract\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isabstract.php\n * @return bool <b>TRUE<\/b> if the method is abstract, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isFinal",
@@ -1014,7 +1036,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is final\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isfinal.php\r\n * @return bool <b>TRUE<\/b> if the method is final, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is final\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isfinal.php\n * @return bool <b>TRUE<\/b> if the method is final, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isStatic",
@@ -1023,7 +1045,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is static\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isstatic.php\r\n * @return bool <b>TRUE<\/b> if the method is static, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is static\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isstatic.php\n * @return bool <b>TRUE<\/b> if the method is static, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isConstructor",
@@ -1032,7 +1054,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is a constructor\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isconstructor.php\r\n * @return bool <b>TRUE<\/b> if the method is a constructor, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is a constructor\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isconstructor.php\n * @return bool <b>TRUE<\/b> if the method is a constructor, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isDestructor",
@@ -1041,7 +1063,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if method is a destructor\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isdestructor.php\r\n * @return bool <b>TRUE<\/b> if the method is a destructor, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if method is a destructor\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.isdestructor.php\n * @return bool <b>TRUE<\/b> if the method is a destructor, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getClosure",
@@ -1055,7 +1077,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns a dynamically created closure for the method\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getclosure.php\r\n * @param object $object <p>\r\n * Forbidden for static methods, required for other methods.\r\n * <\/p>\r\n * @return Closure <b>Closure<\/b>.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns a dynamically created closure for the method\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getclosure.php\n * @param object $object <p>\n * Forbidden for static methods, required for other methods.\n * <\/p>\n * @return Closure <b>Closure<\/b>.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getModifiers",
@@ -1064,7 +1086,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the method modifiers\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getmodifiers.php\r\n * @return int A numeric representation of the modifiers. The modifiers are listed below.\r\n * The actual meanings of these modifiers are described in the\r\n * predefined constants.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the method modifiers\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getmodifiers.php\n * @return int A numeric representation of the modifiers. The modifiers are listed below.\n * The actual meanings of these modifiers are described in the\n * predefined constants.\n *\/"
             },
             {
                 "name": "invoke",
@@ -1090,7 +1112,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Invoke\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.invoke.php\r\n * @param object $object <p>\r\n * The object to invoke the method on. For static methods, pass\r\n * null to this parameter.\r\n * <\/p>\r\n * @param mixed $parameter [optional] <p>\r\n * Zero or more parameters to be passed to the method.\r\n * It accepts a variable number of parameters which are passed to the method.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return mixed the method result.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Invoke\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.invoke.php\n * @param object $object <p>\n * The object to invoke the method on. For static methods, pass\n * null to this parameter.\n * <\/p>\n * @param mixed $parameter [optional] <p>\n * Zero or more parameters to be passed to the method.\n * It accepts a variable number of parameters which are passed to the method.\n * <\/p>\n * @param mixed $_ [optional]\n * @return mixed the method result.\n *\/"
             },
             {
                 "name": "invokeArgs",
@@ -1110,7 +1132,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Invoke args\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.invokeargs.php\r\n * @param object $object <p>\r\n * The object to invoke the method on. In case of static methods, you can pass\r\n * null to this parameter.\r\n * <\/p>\r\n * @param array $args <p>\r\n * The parameters to be passed to the function, as an array.\r\n * <\/p>\r\n * @return mixed the method result.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Invoke args\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.invokeargs.php\n * @param object $object <p>\n * The object to invoke the method on. In case of static methods, you can pass\n * null to this parameter.\n * <\/p>\n * @param array $args <p>\n * The parameters to be passed to the function, as an array.\n * <\/p>\n * @return mixed the method result.\n *\/"
             },
             {
                 "name": "getDeclaringClass",
@@ -1119,7 +1141,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets declaring class for the reflected method.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getdeclaringclass.php\r\n * @return ReflectionClass A <b>ReflectionClass<\/b> object of the class that the\r\n * reflected method is part of.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets declaring class for the reflected method.\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getdeclaringclass.php\n * @return ReflectionClass A <b>ReflectionClass<\/b> object of the class that the\n * reflected method is part of.\n *\/"
             },
             {
                 "name": "getPrototype",
@@ -1128,7 +1150,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the method prototype (if there is one).\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getprototype.php\r\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> instance of the method prototype.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the method prototype (if there is one).\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.getprototype.php\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> instance of the method prototype.\n *\/"
             },
             {
                 "name": "setAccessible",
@@ -1142,7 +1164,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.2)<br\/>\r\n * Set method accessibility\r\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.setaccessible.php\r\n * @param bool $accessible <p>\r\n * <b>TRUE<\/b> to allow accessibility, or <b>FALSE<\/b>.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.2)<br\/>\n * Set method accessibility\n * @link http:\/\/php.net\/manual\/en\/reflectionmethod.setaccessible.php\n * @param bool $accessible <p>\n * <b>TRUE<\/b> to allow accessibility, or <b>FALSE<\/b>.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "inNamespace",
@@ -1151,7 +1173,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if function in namespace\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\r\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if function in namespace\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.innamespace.php\n * @return bool <b>TRUE<\/b> if it's in a namespace, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isClosure",
@@ -1160,7 +1182,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\r\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isclosure.php\n * @return bool <b>TRUE<\/b> if it's a closure, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isDeprecated",
@@ -1169,7 +1191,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if deprecated\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\r\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if deprecated\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isdeprecated.php\n * @return bool <b>TRUE<\/b> if it's deprecated, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isInternal",
@@ -1178,7 +1200,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if is internal\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\r\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if is internal\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isinternal.php\n * @return bool <b>TRUE<\/b> if it's internal, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "isUserDefined",
@@ -1187,7 +1209,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if user defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\r\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if user defined\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isuserdefined.php\n * @return bool <b>TRUE<\/b> if it's user-defined, otherwise false;\n *\/"
             },
             {
                 "name": "isGenerator",
@@ -1196,7 +1218,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.5.0)<br\/>\r\n * Returns whether this function is a generator\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\r\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\r\n * on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.5.0)<br\/>\n * Returns whether this function is a generator\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.isgenerator.php\n * @return bool <b>TRUE<\/b> if the function is generator, <b>FALSE<\/b> if it is not or <b>NULL<\/b>\n * on failure.\n *\/"
             },
             {
                 "name": "getClosureThis",
@@ -1205,7 +1227,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns this pointer bound to closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\r\n * @return object $this pointer.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns this pointer bound to closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurethis.php\n * @return object $this pointer.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getClosureScopeClass",
@@ -1214,7 +1236,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns the scope associated to the closure\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\r\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns the scope associated to the closure\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getclosurescopeclass.php\n * @return ReflectionClass the class on success or <b>NULL<\/b> on failure.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -1223,7 +1245,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comment\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\r\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comment\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getdoccomment.php\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getEndLine",
@@ -1232,7 +1254,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets end line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\r\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets end line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getendline.php\n * @return int The ending line number of the user defined function, or <b>FALSE<\/b> if unknown.\n *\/"
             },
             {
                 "name": "getExtension",
@@ -1241,7 +1263,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension info\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\r\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension info\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextension.php\n * @return ReflectionExtension The extension information, as a <b>ReflectionExtension<\/b> object.\n *\/"
             },
             {
                 "name": "getExtensionName",
@@ -1250,7 +1272,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\r\n * @return string The extensions name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getextensionname.php\n * @return string The extensions name.\n *\/"
             },
             {
                 "name": "getFileName",
@@ -1259,7 +1281,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets file name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\r\n * @return string The file name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets file name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getfilename.php\n * @return string The file name.\n *\/"
             },
             {
                 "name": "getName",
@@ -1268,7 +1290,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets function name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\r\n * @return string The name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets function name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getname.php\n * @return string The name of the function.\n *\/"
             },
             {
                 "name": "getNamespaceName",
@@ -1277,7 +1299,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets namespace name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\r\n * @return string The namespace name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets namespace name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnamespacename.php\n * @return string The namespace name.\n *\/"
             },
             {
                 "name": "getNumberOfParameters",
@@ -1286,7 +1308,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\r\n * @return int The number of parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofparameters.php\n * @return int The number of parameters.\n *\/"
             },
             {
                 "name": "getNumberOfRequiredParameters",
@@ -1295,7 +1317,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.3)<br\/>\r\n * Gets number of required parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\r\n * @return int The number of required parameters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.3)<br\/>\n * Gets number of required parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getnumberofrequiredparameters.php\n * @return int The number of required parameters.\n *\/"
             },
             {
                 "name": "getParameters",
@@ -1304,7 +1326,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parameters\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\r\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parameters\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getparameters.php\n * @return array The parameters, as a <b>ReflectionParameter<\/b> object.\n *\/"
             },
             {
                 "name": "getShortName",
@@ -1313,7 +1335,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets function short name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\r\n * @return string The short name of the function.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets function short name\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getshortname.php\n * @return string The short name of the function.\n *\/"
             },
             {
                 "name": "getStartLine",
@@ -1322,7 +1344,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets starting line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\r\n * @return int The starting line number.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets starting line number\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstartline.php\n * @return int The starting line number.\n *\/"
             },
             {
                 "name": "getStaticVariables",
@@ -1331,7 +1353,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets static variables\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\r\n * @return array An array of static variables.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets static variables\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.getstaticvariables.php\n * @return array An array of static variables.\n *\/"
             },
             {
                 "name": "returnsReference",
@@ -1340,16 +1362,18 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if returns reference\r\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\r\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if returns reference\n * @link http:\/\/php.net\/manual\/en\/reflectionfunctionabstract.returnsreference.php\n * @return bool <b>TRUE<\/b> if it returns a reference, otherwise <b>FALSE<\/b>\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "class",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -1391,7 +1415,7 @@
         "name": "ReflectionClass",
         "fqn": "\\ReflectionClass",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "export",
@@ -1411,7 +1435,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Exports a class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.export.php\r\n * @param mixed $argument <p>\r\n * The reflection to export.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Exports a class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.export.php\n * @param mixed $argument <p>\n * The reflection to export.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             },
             {
                 "name": "__construct",
@@ -1425,7 +1449,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Constructs a ReflectionClass\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.construct.php\r\n * @param mixed $argument <p>\r\n * Either a string containing the name of the class to\r\n * reflect, or an object.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Constructs a ReflectionClass\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.construct.php\n * @param mixed $argument <p>\n * Either a string containing the name of the class to\n * reflect, or an object.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -1434,7 +1458,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the string representation of the ReflectionClass object.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.tostring.php\r\n * @return string A string representation of this <b>ReflectionClass<\/b> instance.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the string representation of the ReflectionClass object.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.tostring.php\n * @return string A string representation of this <b>ReflectionClass<\/b> instance.\n *\/"
             },
             {
                 "name": "getName",
@@ -1443,7 +1467,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets class name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getname.php\r\n * @return string The class name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets class name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getname.php\n * @return string The class name.\n *\/"
             },
             {
                 "name": "isInternal",
@@ -1452,7 +1476,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is defined internally by an extension, or the core\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinternal.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is defined internally by an extension, or the core\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinternal.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isUserDefined",
@@ -1461,7 +1485,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if user defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isuserdefined.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if user defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isuserdefined.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isInstantiable",
@@ -1470,7 +1494,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if the class is instantiable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstantiable.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if the class is instantiable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstantiable.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isCloneable",
@@ -1479,7 +1503,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this class is cloneable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.iscloneable.php\r\n * @return bool <b>TRUE<\/b> if the class is cloneable, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this class is cloneable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.iscloneable.php\n * @return bool <b>TRUE<\/b> if the class is cloneable, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getFileName",
@@ -1488,7 +1512,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the filename of the file in which the class has been defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getfilename.php\r\n * @return string the filename of the file in which the class has been defined.\r\n * If the class is defined in the PHP core or in a PHP extension, <b>FALSE<\/b>\r\n * is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the filename of the file in which the class has been defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getfilename.php\n * @return string the filename of the file in which the class has been defined.\n * If the class is defined in the PHP core or in a PHP extension, <b>FALSE<\/b>\n * is returned.\n *\/"
             },
             {
                 "name": "getStartLine",
@@ -1497,7 +1521,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets starting line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstartline.php\r\n * @return int The starting line number, as an integer.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets starting line number\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstartline.php\n * @return int The starting line number, as an integer.\n *\/"
             },
             {
                 "name": "getEndLine",
@@ -1506,7 +1530,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets end line\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getendline.php\r\n * @return int The ending line number of the user defined class, or <b>FALSE<\/b> if unknown.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets end line\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getendline.php\n * @return int The ending line number of the user defined class, or <b>FALSE<\/b> if unknown.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -1515,7 +1539,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comments\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdoccomment.php\r\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comments\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdoccomment.php\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getConstructor",
@@ -1524,7 +1548,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the constructor of the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstructor.php\r\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> object reflecting the class' constructor, or <b>NULL<\/b> if the class\r\n * has no constructor.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the constructor of the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstructor.php\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> object reflecting the class' constructor, or <b>NULL<\/b> if the class\n * has no constructor.\n *\/"
             },
             {
                 "name": "hasMethod",
@@ -1538,7 +1562,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if method is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasmethod.php\r\n * @param string $name <p>\r\n * Name of the method being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if it has the method, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if method is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasmethod.php\n * @param string $name <p>\n * Name of the method being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if it has the method, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getMethod",
@@ -1552,7 +1576,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionMethod<\/b> for a class method.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethod.php\r\n * @param string $name <p>\r\n * The method name to reflect.\r\n * <\/p>\r\n * @return ReflectionMethod A <b>ReflectionMethod<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionMethod<\/b> for a class method.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethod.php\n * @param string $name <p>\n * The method name to reflect.\n * <\/p>\n * @return ReflectionMethod A <b>ReflectionMethod<\/b>.\n *\/"
             },
             {
                 "name": "getMethods",
@@ -1566,7 +1590,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets an array of methods\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethods.php\r\n * @param int $filter [optional] <p>\r\n * Filter the results to include only methods with certain attributes. Defaults\r\n * to no filtering.\r\n * <\/p>\r\n * <p>\r\n * Any combination of <b>ReflectionMethod::IS_STATIC<\/b>,\r\n * <b>ReflectionMethod::IS_PUBLIC<\/b>,\r\n * <b>ReflectionMethod::IS_PROTECTED<\/b>,\r\n * <b>ReflectionMethod::IS_PRIVATE<\/b>,\r\n * <b>ReflectionMethod::IS_ABSTRACT<\/b>,\r\n * <b>ReflectionMethod::IS_FINAL<\/b>.\r\n * <\/p>\r\n * @return array An array of <b>ReflectionMethod<\/b> objects\r\n * reflecting each method.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets an array of methods\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethods.php\n * @param int $filter [optional] <p>\n * Filter the results to include only methods with certain attributes. Defaults\n * to no filtering.\n * <\/p>\n * <p>\n * Any combination of <b>ReflectionMethod::IS_STATIC<\/b>,\n * <b>ReflectionMethod::IS_PUBLIC<\/b>,\n * <b>ReflectionMethod::IS_PROTECTED<\/b>,\n * <b>ReflectionMethod::IS_PRIVATE<\/b>,\n * <b>ReflectionMethod::IS_ABSTRACT<\/b>,\n * <b>ReflectionMethod::IS_FINAL<\/b>.\n * <\/p>\n * @return array An array of <b>ReflectionMethod<\/b> objects\n * reflecting each method.\n *\/"
             },
             {
                 "name": "hasProperty",
@@ -1580,7 +1604,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if property is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasproperty.php\r\n * @param string $name <p>\r\n * Name of the property being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if it has the property, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if property is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasproperty.php\n * @param string $name <p>\n * Name of the property being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if it has the property, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getProperty",
@@ -1594,7 +1618,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionProperty<\/b> for a class's property\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperty.php\r\n * @param string $name <p>\r\n * The property name.\r\n * <\/p>\r\n * @return ReflectionProperty A <b>ReflectionProperty<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionProperty<\/b> for a class's property\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperty.php\n * @param string $name <p>\n * The property name.\n * <\/p>\n * @return ReflectionProperty A <b>ReflectionProperty<\/b>.\n *\/"
             },
             {
                 "name": "getProperties",
@@ -1608,7 +1632,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperties.php\r\n * @param int $filter [optional] <p>\r\n * The optional filter, for filtering desired property types. It's configured using\r\n * the ReflectionProperty constants,\r\n * and defaults to all property types.\r\n * <\/p>\r\n * @return array An array of <b>ReflectionProperty<\/b> objects.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperties.php\n * @param int $filter [optional] <p>\n * The optional filter, for filtering desired property types. It's configured using\n * the ReflectionProperty constants,\n * and defaults to all property types.\n * <\/p>\n * @return array An array of <b>ReflectionProperty<\/b> objects.\n *\/"
             },
             {
                 "name": "hasConstant",
@@ -1622,7 +1646,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if constant is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasconstant.php\r\n * @param string $name <p>\r\n * The name of the constant being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the constant is defined, otherwise <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if constant is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasconstant.php\n * @param string $name <p>\n * The name of the constant being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if the constant is defined, otherwise <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "getConstants",
@@ -1631,7 +1655,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets constants\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstants.php\r\n * @return array An array of constants.\r\n * Constant name in key, constant value in value.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets constants\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstants.php\n * @return array An array of constants.\n * Constant name in key, constant value in value.\n *\/"
             },
             {
                 "name": "getConstant",
@@ -1645,7 +1669,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets defined constant\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstant.php\r\n * @param string $name <p>\r\n * Name of the constant.\r\n * <\/p>\r\n * @return mixed Value of the constant.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets defined constant\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstant.php\n * @param string $name <p>\n * Name of the constant.\n * <\/p>\n * @return mixed Value of the constant.\n *\/"
             },
             {
                 "name": "getInterfaces",
@@ -1654,7 +1678,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the interfaces\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfaces.php\r\n * @return array An associative array of interfaces, with keys as interface\r\n * names and the array values as <b>ReflectionClass<\/b> objects.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the interfaces\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfaces.php\n * @return array An associative array of interfaces, with keys as interface\n * names and the array values as <b>ReflectionClass<\/b> objects.\n *\/"
             },
             {
                 "name": "getInterfaceNames",
@@ -1663,7 +1687,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Gets the interface names\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfacenames.php\r\n * @return array A numerical array with interface names as the values.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Gets the interface names\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfacenames.php\n * @return array A numerical array with interface names as the values.\n *\/"
             },
             {
                 "name": "isInterface",
@@ -1672,7 +1696,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if the class is an interface\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinterface.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if the class is an interface\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinterface.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getTraits",
@@ -1681,7 +1705,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of traits used by this class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraits.php\r\n * @return array an array with trait names in keys and instances of trait's\r\n * <b>ReflectionClass<\/b> in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of traits used by this class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraits.php\n * @return array an array with trait names in keys and instances of trait's\n * <b>ReflectionClass<\/b> in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getTraitNames",
@@ -1690,7 +1714,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of names of traits used by this class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitnames.php\r\n * @return array an array with trait names in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of names of traits used by this class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitnames.php\n * @return array an array with trait names in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getTraitAliases",
@@ -1699,7 +1723,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of trait aliases\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitaliases.php\r\n * @return array an array with new method names in keys and original names (in the\r\n * format \"TraitName::original\") in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of trait aliases\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitaliases.php\n * @return array an array with new method names in keys and original names (in the\n * format \"TraitName::original\") in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "isTrait",
@@ -1708,7 +1732,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this is a trait\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.istrait.php\r\n * @return bool <b>TRUE<\/b> if this is a trait, <b>FALSE<\/b> otherwise.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this is a trait\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.istrait.php\n * @return bool <b>TRUE<\/b> if this is a trait, <b>FALSE<\/b> otherwise.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "isAbstract",
@@ -1717,7 +1741,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is abstract\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isabstract.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is abstract\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isabstract.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isFinal",
@@ -1726,7 +1750,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is final\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isfinal.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is final\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isfinal.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getModifiers",
@@ -1735,7 +1759,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets modifiers\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmodifiers.php\r\n * @return int bitmask of\r\n * modifier constants.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets modifiers\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmodifiers.php\n * @return int bitmask of\n * modifier constants.\n *\/"
             },
             {
                 "name": "isInstance",
@@ -1749,7 +1773,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks class for instance\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstance.php\r\n * @param object $object <p>\r\n * The object being compared to.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks class for instance\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstance.php\n * @param object $object <p>\n * The object being compared to.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "newInstance",
@@ -1769,7 +1793,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Creates a new class instance from given arguments.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstance.php\r\n * @param mixed $args <p>\r\n * Accepts a variable number of arguments which are passed to the class\r\n * constructor, much like <b>call_user_func<\/b>.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return object\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Creates a new class instance from given arguments.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstance.php\n * @param mixed $args <p>\n * Accepts a variable number of arguments which are passed to the class\n * constructor, much like <b>call_user_func<\/b>.\n * <\/p>\n * @param mixed $_ [optional]\n * @return object\n *\/"
             },
             {
                 "name": "newInstanceWithoutConstructor",
@@ -1778,7 +1802,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Creates a new class instance without invoking the constructor.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\r\n * @return object\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Creates a new class instance without invoking the constructor.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\n * @return object\n *\/"
             },
             {
                 "name": "newInstanceArgs",
@@ -1792,7 +1816,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Creates a new class instance from given arguments.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstanceargs.php\r\n * @param array $args [optional] <p>\r\n * The parameters to be passed to the class constructor as an array.\r\n * <\/p>\r\n * @return object a new instance of the class.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.3)<br\/>\n * Creates a new class instance from given arguments.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstanceargs.php\n * @param array $args [optional] <p>\n * The parameters to be passed to the class constructor as an array.\n * <\/p>\n * @return object a new instance of the class.\n *\/"
             },
             {
                 "name": "getParentClass",
@@ -1801,7 +1825,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parent class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getparentclass.php\r\n * @return object A <b>ReflectionClass<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parent class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getparentclass.php\n * @return object A <b>ReflectionClass<\/b>.\n *\/"
             },
             {
                 "name": "isSubclassOf",
@@ -1815,7 +1839,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if a subclass\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.issubclassof.php\r\n * @param string $class <p>\r\n * The class name being checked against.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if a subclass\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.issubclassof.php\n * @param string $class <p>\n * The class name being checked against.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getStaticProperties",
@@ -1824,7 +1848,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets static properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticproperties.php\r\n * @return array The static properties, as an array.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets static properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticproperties.php\n * @return array The static properties, as an array.\n *\/"
             },
             {
                 "name": "getStaticPropertyValue",
@@ -1844,7 +1868,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets static property value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\r\n * @param string $name <p>\r\n * The name of the static property for which to return a value.\r\n * <\/p>\r\n * @param mixed $def_value [optional] <p>\r\n * <\/p>\r\n * @return mixed The value of the static property.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets static property value\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\n * @param string $name <p>\n * The name of the static property for which to return a value.\n * <\/p>\n * @param mixed $def_value [optional] <p>\n * <\/p>\n * @return mixed The value of the static property.\n *\/"
             },
             {
                 "name": "setStaticPropertyValue",
@@ -1864,7 +1888,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Sets static property value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\r\n * @param string $name <p>\r\n * Property name.\r\n * <\/p>\r\n * @param string $value <p>\r\n * New property value.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Sets static property value\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\n * @param string $name <p>\n * Property name.\n * <\/p>\n * @param string $value <p>\n * New property value.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "getDefaultProperties",
@@ -1873,7 +1897,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets default properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\r\n * @return array An array of default properties, with the key being the name of\r\n * the property and the value being the default value of the property or <b>NULL<\/b>\r\n * if the property doesn't have a default value. The function does not distinguish\r\n * between static and non static properties and does not take visibility modifiers\r\n * into account.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets default properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\n * @return array An array of default properties, with the key being the name of\n * the property and the value being the default value of the property or <b>NULL<\/b>\n * if the property doesn't have a default value. The function does not distinguish\n * between static and non static properties and does not take visibility modifiers\n * into account.\n *\/"
             },
             {
                 "name": "isIterateable",
@@ -1882,7 +1906,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if iterateable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isiterateable.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if iterateable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isiterateable.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "implementsInterface",
@@ -1896,7 +1920,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Implements interface\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.implementsinterface.php\r\n * @param string $interface <p>\r\n * The interface name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Implements interface\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.implementsinterface.php\n * @param string $interface <p>\n * The interface name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getExtension",
@@ -1905,7 +1929,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionExtension<\/b> object for the extension which defined the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextension.php\r\n * @return ReflectionExtension A <b>ReflectionExtension<\/b> object representing the extension which defined the class,\r\n * or <b>NULL<\/b> for user-defined classes.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionExtension<\/b> object for the extension which defined the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextension.php\n * @return ReflectionExtension A <b>ReflectionExtension<\/b> object representing the extension which defined the class,\n * or <b>NULL<\/b> for user-defined classes.\n *\/"
             },
             {
                 "name": "getExtensionName",
@@ -1914,7 +1938,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the name of the extension which defined the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextensionname.php\r\n * @return string The name of the extension which defined the class, or <b>FALSE<\/b> for user-defined classes.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the name of the extension which defined the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextensionname.php\n * @return string The name of the extension which defined the class, or <b>FALSE<\/b> for user-defined classes.\n *\/"
             },
             {
                 "name": "inNamespace",
@@ -1923,7 +1947,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if in namespace\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.innamespace.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if in namespace\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.innamespace.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getNamespaceName",
@@ -1932,7 +1956,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets namespace name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getnamespacename.php\r\n * @return string The namespace name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets namespace name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getnamespacename.php\n * @return string The namespace name.\n *\/"
             },
             {
                 "name": "getShortName",
@@ -1941,12 +1965,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets short name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getshortname.php\r\n * @return string The class short name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets short name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getshortname.php\n * @return string The class short name.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -1973,7 +1998,7 @@
         "name": "ReflectionObject",
         "fqn": "\\ReflectionObject",
         "type": 0,
-        "extends": "ReflectionClass",
+        "extendsClass": "ReflectionClass",
         "methods": [
             {
                 "name": "export",
@@ -1993,7 +2018,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Export\r\n * @link http:\/\/php.net\/manual\/en\/reflectionobject.export.php\r\n * @param string $argument <p>\r\n * The reflection to export.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Export\n * @link http:\/\/php.net\/manual\/en\/reflectionobject.export.php\n * @param string $argument <p>\n * The reflection to export.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             },
             {
                 "name": "__construct",
@@ -2007,7 +2032,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Constructs a ReflectionObject\r\n * @link http:\/\/php.net\/manual\/en\/reflectionobject.construct.php\r\n * @param object $argument <p>\r\n * An object instance.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Constructs a ReflectionObject\n * @link http:\/\/php.net\/manual\/en\/reflectionobject.construct.php\n * @param object $argument <p>\n * An object instance.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -2016,7 +2041,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the string representation of the ReflectionClass object.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.tostring.php\r\n * @return string A string representation of this <b>ReflectionClass<\/b> instance.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the string representation of the ReflectionClass object.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.tostring.php\n * @return string A string representation of this <b>ReflectionClass<\/b> instance.\n *\/"
             },
             {
                 "name": "getName",
@@ -2025,7 +2050,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets class name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getname.php\r\n * @return string The class name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets class name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getname.php\n * @return string The class name.\n *\/"
             },
             {
                 "name": "isInternal",
@@ -2034,7 +2059,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is defined internally by an extension, or the core\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinternal.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is defined internally by an extension, or the core\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinternal.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isUserDefined",
@@ -2043,7 +2068,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if user defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isuserdefined.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if user defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isuserdefined.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isInstantiable",
@@ -2052,7 +2077,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if the class is instantiable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstantiable.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if the class is instantiable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstantiable.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isCloneable",
@@ -2061,7 +2086,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this class is cloneable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.iscloneable.php\r\n * @return bool <b>TRUE<\/b> if the class is cloneable, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this class is cloneable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.iscloneable.php\n * @return bool <b>TRUE<\/b> if the class is cloneable, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getFileName",
@@ -2070,7 +2095,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the filename of the file in which the class has been defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getfilename.php\r\n * @return string the filename of the file in which the class has been defined.\r\n * If the class is defined in the PHP core or in a PHP extension, <b>FALSE<\/b>\r\n * is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the filename of the file in which the class has been defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getfilename.php\n * @return string the filename of the file in which the class has been defined.\n * If the class is defined in the PHP core or in a PHP extension, <b>FALSE<\/b>\n * is returned.\n *\/"
             },
             {
                 "name": "getStartLine",
@@ -2079,7 +2104,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets starting line number\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstartline.php\r\n * @return int The starting line number, as an integer.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets starting line number\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstartline.php\n * @return int The starting line number, as an integer.\n *\/"
             },
             {
                 "name": "getEndLine",
@@ -2088,7 +2113,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets end line\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getendline.php\r\n * @return int The ending line number of the user defined class, or <b>FALSE<\/b> if unknown.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets end line\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getendline.php\n * @return int The ending line number of the user defined class, or <b>FALSE<\/b> if unknown.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -2097,7 +2122,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comments\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdoccomment.php\r\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comments\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdoccomment.php\n * @return string The doc comment if it exists, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getConstructor",
@@ -2106,7 +2131,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the constructor of the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstructor.php\r\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> object reflecting the class' constructor, or <b>NULL<\/b> if the class\r\n * has no constructor.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the constructor of the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstructor.php\n * @return ReflectionMethod A <b>ReflectionMethod<\/b> object reflecting the class' constructor, or <b>NULL<\/b> if the class\n * has no constructor.\n *\/"
             },
             {
                 "name": "hasMethod",
@@ -2120,7 +2145,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if method is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasmethod.php\r\n * @param string $name <p>\r\n * Name of the method being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if it has the method, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if method is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasmethod.php\n * @param string $name <p>\n * Name of the method being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if it has the method, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getMethod",
@@ -2134,7 +2159,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionMethod<\/b> for a class method.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethod.php\r\n * @param string $name <p>\r\n * The method name to reflect.\r\n * <\/p>\r\n * @return ReflectionMethod A <b>ReflectionMethod<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionMethod<\/b> for a class method.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethod.php\n * @param string $name <p>\n * The method name to reflect.\n * <\/p>\n * @return ReflectionMethod A <b>ReflectionMethod<\/b>.\n *\/"
             },
             {
                 "name": "getMethods",
@@ -2148,7 +2173,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets an array of methods\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethods.php\r\n * @param int $filter [optional] <p>\r\n * Filter the results to include only methods with certain attributes. Defaults\r\n * to no filtering.\r\n * <\/p>\r\n * <p>\r\n * Any combination of <b>ReflectionMethod::IS_STATIC<\/b>,\r\n * <b>ReflectionMethod::IS_PUBLIC<\/b>,\r\n * <b>ReflectionMethod::IS_PROTECTED<\/b>,\r\n * <b>ReflectionMethod::IS_PRIVATE<\/b>,\r\n * <b>ReflectionMethod::IS_ABSTRACT<\/b>,\r\n * <b>ReflectionMethod::IS_FINAL<\/b>.\r\n * <\/p>\r\n * @return array An array of <b>ReflectionMethod<\/b> objects\r\n * reflecting each method.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets an array of methods\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmethods.php\n * @param int $filter [optional] <p>\n * Filter the results to include only methods with certain attributes. Defaults\n * to no filtering.\n * <\/p>\n * <p>\n * Any combination of <b>ReflectionMethod::IS_STATIC<\/b>,\n * <b>ReflectionMethod::IS_PUBLIC<\/b>,\n * <b>ReflectionMethod::IS_PROTECTED<\/b>,\n * <b>ReflectionMethod::IS_PRIVATE<\/b>,\n * <b>ReflectionMethod::IS_ABSTRACT<\/b>,\n * <b>ReflectionMethod::IS_FINAL<\/b>.\n * <\/p>\n * @return array An array of <b>ReflectionMethod<\/b> objects\n * reflecting each method.\n *\/"
             },
             {
                 "name": "hasProperty",
@@ -2162,7 +2187,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if property is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasproperty.php\r\n * @param string $name <p>\r\n * Name of the property being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if it has the property, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if property is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasproperty.php\n * @param string $name <p>\n * Name of the property being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if it has the property, otherwise <b>FALSE<\/b>\n *\/"
             },
             {
                 "name": "getProperty",
@@ -2176,7 +2201,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionProperty<\/b> for a class's property\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperty.php\r\n * @param string $name <p>\r\n * The property name.\r\n * <\/p>\r\n * @return ReflectionProperty A <b>ReflectionProperty<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionProperty<\/b> for a class's property\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperty.php\n * @param string $name <p>\n * The property name.\n * <\/p>\n * @return ReflectionProperty A <b>ReflectionProperty<\/b>.\n *\/"
             },
             {
                 "name": "getProperties",
@@ -2190,7 +2215,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperties.php\r\n * @param int $filter [optional] <p>\r\n * The optional filter, for filtering desired property types. It's configured using\r\n * the ReflectionProperty constants,\r\n * and defaults to all property types.\r\n * <\/p>\r\n * @return array An array of <b>ReflectionProperty<\/b> objects.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getproperties.php\n * @param int $filter [optional] <p>\n * The optional filter, for filtering desired property types. It's configured using\n * the ReflectionProperty constants,\n * and defaults to all property types.\n * <\/p>\n * @return array An array of <b>ReflectionProperty<\/b> objects.\n *\/"
             },
             {
                 "name": "hasConstant",
@@ -2204,7 +2229,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Checks if constant is defined\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasconstant.php\r\n * @param string $name <p>\r\n * The name of the constant being checked for.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the constant is defined, otherwise <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Checks if constant is defined\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.hasconstant.php\n * @param string $name <p>\n * The name of the constant being checked for.\n * <\/p>\n * @return bool <b>TRUE<\/b> if the constant is defined, otherwise <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "getConstants",
@@ -2213,7 +2238,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets constants\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstants.php\r\n * @return array An array of constants.\r\n * Constant name in key, constant value in value.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets constants\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstants.php\n * @return array An array of constants.\n * Constant name in key, constant value in value.\n *\/"
             },
             {
                 "name": "getConstant",
@@ -2227,7 +2252,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets defined constant\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstant.php\r\n * @param string $name <p>\r\n * Name of the constant.\r\n * <\/p>\r\n * @return mixed Value of the constant.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets defined constant\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getconstant.php\n * @param string $name <p>\n * Name of the constant.\n * <\/p>\n * @return mixed Value of the constant.\n *\/"
             },
             {
                 "name": "getInterfaces",
@@ -2236,7 +2261,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the interfaces\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfaces.php\r\n * @return array An associative array of interfaces, with keys as interface\r\n * names and the array values as <b>ReflectionClass<\/b> objects.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the interfaces\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfaces.php\n * @return array An associative array of interfaces, with keys as interface\n * names and the array values as <b>ReflectionClass<\/b> objects.\n *\/"
             },
             {
                 "name": "getInterfaceNames",
@@ -2245,7 +2270,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Gets the interface names\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfacenames.php\r\n * @return array A numerical array with interface names as the values.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Gets the interface names\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getinterfacenames.php\n * @return array A numerical array with interface names as the values.\n *\/"
             },
             {
                 "name": "isInterface",
@@ -2254,7 +2279,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if the class is an interface\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinterface.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if the class is an interface\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinterface.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getTraits",
@@ -2263,7 +2288,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of traits used by this class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraits.php\r\n * @return array an array with trait names in keys and instances of trait's\r\n * <b>ReflectionClass<\/b> in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of traits used by this class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraits.php\n * @return array an array with trait names in keys and instances of trait's\n * <b>ReflectionClass<\/b> in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getTraitNames",
@@ -2272,7 +2297,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of names of traits used by this class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitnames.php\r\n * @return array an array with trait names in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of names of traits used by this class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitnames.php\n * @return array an array with trait names in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "getTraitAliases",
@@ -2281,7 +2306,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns an array of trait aliases\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitaliases.php\r\n * @return array an array with new method names in keys and original names (in the\r\n * format \"TraitName::original\") in values.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns an array of trait aliases\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.gettraitaliases.php\n * @return array an array with new method names in keys and original names (in the\n * format \"TraitName::original\") in values.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "isTrait",
@@ -2290,7 +2315,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this is a trait\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.istrait.php\r\n * @return bool <b>TRUE<\/b> if this is a trait, <b>FALSE<\/b> otherwise.\r\n * Returns <b>NULL<\/b> in case of an error.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this is a trait\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.istrait.php\n * @return bool <b>TRUE<\/b> if this is a trait, <b>FALSE<\/b> otherwise.\n * Returns <b>NULL<\/b> in case of an error.\n *\/"
             },
             {
                 "name": "isAbstract",
@@ -2299,7 +2324,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is abstract\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isabstract.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is abstract\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isabstract.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isFinal",
@@ -2308,7 +2333,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if class is final\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isfinal.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if class is final\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isfinal.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getModifiers",
@@ -2317,7 +2342,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets modifiers\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmodifiers.php\r\n * @return int bitmask of\r\n * modifier constants.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets modifiers\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getmodifiers.php\n * @return int bitmask of\n * modifier constants.\n *\/"
             },
             {
                 "name": "isInstance",
@@ -2331,7 +2356,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks class for instance\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstance.php\r\n * @param object $object <p>\r\n * The object being compared to.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks class for instance\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isinstance.php\n * @param object $object <p>\n * The object being compared to.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "newInstance",
@@ -2351,7 +2376,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Creates a new class instance from given arguments.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstance.php\r\n * @param mixed $args <p>\r\n * Accepts a variable number of arguments which are passed to the class\r\n * constructor, much like <b>call_user_func<\/b>.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return object\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Creates a new class instance from given arguments.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstance.php\n * @param mixed $args <p>\n * Accepts a variable number of arguments which are passed to the class\n * constructor, much like <b>call_user_func<\/b>.\n * <\/p>\n * @param mixed $_ [optional]\n * @return object\n *\/"
             },
             {
                 "name": "newInstanceWithoutConstructor",
@@ -2360,7 +2385,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Creates a new class instance without invoking the constructor.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\r\n * @return object\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Creates a new class instance without invoking the constructor.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstancewithoutconstructor.php\n * @return object\n *\/"
             },
             {
                 "name": "newInstanceArgs",
@@ -2374,7 +2399,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.3)<br\/>\r\n * Creates a new class instance from given arguments.\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstanceargs.php\r\n * @param array $args [optional] <p>\r\n * The parameters to be passed to the class constructor as an array.\r\n * <\/p>\r\n * @return object a new instance of the class.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.3)<br\/>\n * Creates a new class instance from given arguments.\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.newinstanceargs.php\n * @param array $args [optional] <p>\n * The parameters to be passed to the class constructor as an array.\n * <\/p>\n * @return object a new instance of the class.\n *\/"
             },
             {
                 "name": "getParentClass",
@@ -2383,7 +2408,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets parent class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getparentclass.php\r\n * @return object A <b>ReflectionClass<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets parent class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getparentclass.php\n * @return object A <b>ReflectionClass<\/b>.\n *\/"
             },
             {
                 "name": "isSubclassOf",
@@ -2397,7 +2422,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if a subclass\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.issubclassof.php\r\n * @param string $class <p>\r\n * The class name being checked against.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if a subclass\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.issubclassof.php\n * @param string $class <p>\n * The class name being checked against.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getStaticProperties",
@@ -2406,7 +2431,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets static properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticproperties.php\r\n * @return array The static properties, as an array.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets static properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticproperties.php\n * @return array The static properties, as an array.\n *\/"
             },
             {
                 "name": "getStaticPropertyValue",
@@ -2426,7 +2451,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets static property value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\r\n * @param string $name <p>\r\n * The name of the static property for which to return a value.\r\n * <\/p>\r\n * @param mixed $def_value [optional] <p>\r\n * <\/p>\r\n * @return mixed The value of the static property.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets static property value\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getstaticpropertyvalue.php\n * @param string $name <p>\n * The name of the static property for which to return a value.\n * <\/p>\n * @param mixed $def_value [optional] <p>\n * <\/p>\n * @return mixed The value of the static property.\n *\/"
             },
             {
                 "name": "setStaticPropertyValue",
@@ -2446,7 +2471,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Sets static property value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\r\n * @param string $name <p>\r\n * Property name.\r\n * <\/p>\r\n * @param string $value <p>\r\n * New property value.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Sets static property value\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.setstaticpropertyvalue.php\n * @param string $name <p>\n * Property name.\n * <\/p>\n * @param string $value <p>\n * New property value.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "getDefaultProperties",
@@ -2455,7 +2480,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets default properties\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\r\n * @return array An array of default properties, with the key being the name of\r\n * the property and the value being the default value of the property or <b>NULL<\/b>\r\n * if the property doesn't have a default value. The function does not distinguish\r\n * between static and non static properties and does not take visibility modifiers\r\n * into account.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets default properties\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getdefaultproperties.php\n * @return array An array of default properties, with the key being the name of\n * the property and the value being the default value of the property or <b>NULL<\/b>\n * if the property doesn't have a default value. The function does not distinguish\n * between static and non static properties and does not take visibility modifiers\n * into account.\n *\/"
             },
             {
                 "name": "isIterateable",
@@ -2464,7 +2489,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if iterateable\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isiterateable.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if iterateable\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.isiterateable.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "implementsInterface",
@@ -2478,7 +2503,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Implements interface\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.implementsinterface.php\r\n * @param string $interface <p>\r\n * The interface name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Implements interface\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.implementsinterface.php\n * @param string $interface <p>\n * The interface name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getExtension",
@@ -2487,7 +2512,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets a <b>ReflectionExtension<\/b> object for the extension which defined the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextension.php\r\n * @return ReflectionExtension A <b>ReflectionExtension<\/b> object representing the extension which defined the class,\r\n * or <b>NULL<\/b> for user-defined classes.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets a <b>ReflectionExtension<\/b> object for the extension which defined the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextension.php\n * @return ReflectionExtension A <b>ReflectionExtension<\/b> object representing the extension which defined the class,\n * or <b>NULL<\/b> for user-defined classes.\n *\/"
             },
             {
                 "name": "getExtensionName",
@@ -2496,7 +2521,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the name of the extension which defined the class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextensionname.php\r\n * @return string The name of the extension which defined the class, or <b>FALSE<\/b> for user-defined classes.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the name of the extension which defined the class\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getextensionname.php\n * @return string The name of the extension which defined the class, or <b>FALSE<\/b> for user-defined classes.\n *\/"
             },
             {
                 "name": "inNamespace",
@@ -2505,7 +2530,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Checks if in namespace\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.innamespace.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Checks if in namespace\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.innamespace.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getNamespaceName",
@@ -2514,7 +2539,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets namespace name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getnamespacename.php\r\n * @return string The namespace name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets namespace name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getnamespacename.php\n * @return string The namespace name.\n *\/"
             },
             {
                 "name": "getShortName",
@@ -2523,12 +2548,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Gets short name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getshortname.php\r\n * @return string The class short name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Gets short name\n * @link http:\/\/php.net\/manual\/en\/reflectionclass.getshortname.php\n * @return string The class short name.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -2555,7 +2581,7 @@
         "name": "ReflectionProperty",
         "fqn": "\\ReflectionProperty",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "export",
@@ -2581,7 +2607,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Export\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.export.php\r\n * @param mixed $class\r\n * @param string $name <p>\r\n * The property name.\r\n * <\/p>\r\n * @param bool $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Export\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.export.php\n * @param mixed $class\n * @param string $name <p>\n * The property name.\n * <\/p>\n * @param bool $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string\n *\/"
             },
             {
                 "name": "__construct",
@@ -2601,7 +2627,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Construct a ReflectionProperty object\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.construct.php\r\n * @param mixed $class <p>\r\n * The class name, that contains the property.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The name of the property being reflected.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Construct a ReflectionProperty object\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.construct.php\n * @param mixed $class <p>\n * The class name, that contains the property.\n * <\/p>\n * @param string $name <p>\n * The name of the property being reflected.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -2610,7 +2636,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * To string\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.tostring.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * To string\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.tostring.php\n * @return string\n *\/"
             },
             {
                 "name": "getName",
@@ -2619,7 +2645,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets property name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getname.php\r\n * @return string The name of the reflected property.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets property name\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getname.php\n * @return string The name of the reflected property.\n *\/"
             },
             {
                 "name": "getValue",
@@ -2633,7 +2659,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getvalue.php\r\n * @param object $object [optional] <p>\r\n * If the property is non-static an object must be provided to fetch the\r\n * property from. If you want to fetch the default property without\r\n * providing an object use <b>ReflectionClass::getDefaultProperties<\/b>\r\n * instead.\r\n * <\/p>\r\n * @return mixed The current value of the property.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets value\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getvalue.php\n * @param object $object [optional] <p>\n * If the property is non-static an object must be provided to fetch the\n * property from. If you want to fetch the default property without\n * providing an object use <b>ReflectionClass::getDefaultProperties<\/b>\n * instead.\n * <\/p>\n * @return mixed The current value of the property.\n *\/"
             },
             {
                 "name": "setValue",
@@ -2653,7 +2679,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set property value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.setvalue.php\r\n * @param object $object <p>\r\n * If the property is non-static an object must be provided to change\r\n * the property on. If the property is static this parameter is left\r\n * out and only <i>value<\/i> needs to be provided.\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The new value.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Set property value\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.setvalue.php\n * @param object $object <p>\n * If the property is non-static an object must be provided to change\n * the property on. If the property is static this parameter is left\n * out and only <i>value<\/i> needs to be provided.\n * <\/p>\n * @param mixed $value <p>\n * The new value.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "isPublic",
@@ -2662,7 +2688,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if property is public\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.ispublic.php\r\n * @return bool <b>TRUE<\/b> if the property is public, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if property is public\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.ispublic.php\n * @return bool <b>TRUE<\/b> if the property is public, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isPrivate",
@@ -2671,7 +2697,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if property is private\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isprivate.php\r\n * @return bool <b>TRUE<\/b> if the property is private, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if property is private\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isprivate.php\n * @return bool <b>TRUE<\/b> if the property is private, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isProtected",
@@ -2680,7 +2706,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if property is protected\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isprotected.php\r\n * @return bool <b>TRUE<\/b> if the property is protected, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if property is protected\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isprotected.php\n * @return bool <b>TRUE<\/b> if the property is protected, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isStatic",
@@ -2689,7 +2715,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if property is static\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isstatic.php\r\n * @return bool <b>TRUE<\/b> if the property is static, <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if property is static\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isstatic.php\n * @return bool <b>TRUE<\/b> if the property is static, <b>FALSE<\/b> otherwise.\n *\/"
             },
             {
                 "name": "isDefault",
@@ -2698,7 +2724,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Checks if default value\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isdefault.php\r\n * @return bool <b>TRUE<\/b> if the property was declared at compile-time, or <b>FALSE<\/b> if\r\n * it was created at run-time.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Checks if default value\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.isdefault.php\n * @return bool <b>TRUE<\/b> if the property was declared at compile-time, or <b>FALSE<\/b> if\n * it was created at run-time.\n *\/"
             },
             {
                 "name": "getModifiers",
@@ -2707,7 +2733,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets modifiers\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getmodifiers.php\r\n * @return int A numeric representation of the modifiers.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets modifiers\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getmodifiers.php\n * @return int A numeric representation of the modifiers.\n *\/"
             },
             {
                 "name": "getDeclaringClass",
@@ -2716,7 +2742,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets declaring class\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getdeclaringclass.php\r\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets declaring class\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getdeclaringclass.php\n * @return ReflectionClass A <b>ReflectionClass<\/b> object.\n *\/"
             },
             {
                 "name": "getDocComment",
@@ -2725,7 +2751,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets doc comment\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getdoccomment.php\r\n * @return string The doc comment.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets doc comment\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.getdoccomment.php\n * @return string The doc comment.\n *\/"
             },
             {
                 "name": "setAccessible",
@@ -2739,16 +2765,18 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Set property accessibility\r\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.setaccessible.php\r\n * @param bool $accessible <p>\r\n * <b>TRUE<\/b> to allow accessibility, or <b>FALSE<\/b>.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Set property accessibility\n * @link http:\/\/php.net\/manual\/en\/reflectionproperty.setaccessible.php\n * @param bool $accessible <p>\n * <b>TRUE<\/b> to allow accessibility, or <b>FALSE<\/b>.\n * <\/p>\n * @return void No value is returned.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "class",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -2780,7 +2808,7 @@
         "name": "ReflectionExtension",
         "fqn": "\\ReflectionExtension",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "export",
@@ -2800,7 +2828,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Export\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.export.php\r\n * @param string $name <p>\r\n * The reflection to export.\r\n * <\/p>\r\n * @param string $return [optional] <p>\r\n * Setting to <b>TRUE<\/b> will return the export,\r\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\r\n * <\/p>\r\n * @return string If the <i>return<\/i> parameter\r\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\r\n * otherwise <b>NULL<\/b> is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Export\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.export.php\n * @param string $name <p>\n * The reflection to export.\n * <\/p>\n * @param string $return [optional] <p>\n * Setting to <b>TRUE<\/b> will return the export,\n * as opposed to emitting it. Setting to <b>FALSE<\/b> (the default) will do the opposite.\n * <\/p>\n * @return string If the <i>return<\/i> parameter\n * is set to <b>TRUE<\/b>, then the export is returned as a string,\n * otherwise <b>NULL<\/b> is returned.\n *\/"
             },
             {
                 "name": "__construct",
@@ -2814,7 +2842,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Constructs a ReflectionExtension\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.construct.php\r\n * @param string $name <p>\r\n * Name of the extension.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Constructs a ReflectionExtension\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.construct.php\n * @param string $name <p>\n * Name of the extension.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -2823,7 +2851,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * To string\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.tostring.php\r\n * @return string the exported extension as a string, in the same way as the\r\n * <b>ReflectionExtension::export<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * To string\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.tostring.php\n * @return string the exported extension as a string, in the same way as the\n * <b>ReflectionExtension::export<\/b>.\n *\/"
             },
             {
                 "name": "getName",
@@ -2832,7 +2860,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getname.php\r\n * @return string The extensions name.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension name\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getname.php\n * @return string The extensions name.\n *\/"
             },
             {
                 "name": "getVersion",
@@ -2841,7 +2869,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension version\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getversion.php\r\n * @return string The version of the extension.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension version\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getversion.php\n * @return string The version of the extension.\n *\/"
             },
             {
                 "name": "getFunctions",
@@ -2850,7 +2878,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension functions\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getfunctions.php\r\n * @return array An associative array of <b>ReflectionFunction<\/b> objects,\r\n * for each function defined in the extension with the keys being the function\r\n * names. If no function are defined, an empty array is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension functions\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getfunctions.php\n * @return array An associative array of <b>ReflectionFunction<\/b> objects,\n * for each function defined in the extension with the keys being the function\n * names. If no function are defined, an empty array is returned.\n *\/"
             },
             {
                 "name": "getConstants",
@@ -2859,7 +2887,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets constants\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getconstants.php\r\n * @return array An associative array with constant names as keys.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets constants\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getconstants.php\n * @return array An associative array with constant names as keys.\n *\/"
             },
             {
                 "name": "getINIEntries",
@@ -2868,7 +2896,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets extension ini entries\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getinientries.php\r\n * @return array An associative array with the ini entries as keys,\r\n * with their defined values as values.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets extension ini entries\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getinientries.php\n * @return array An associative array with the ini entries as keys,\n * with their defined values as values.\n *\/"
             },
             {
                 "name": "getClasses",
@@ -2877,7 +2905,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets classes\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getclasses.php\r\n * @return array An array of <b>ReflectionClass<\/b> objects, one\r\n * for each class within the extension. If no classes are defined,\r\n * an empty array is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets classes\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getclasses.php\n * @return array An array of <b>ReflectionClass<\/b> objects, one\n * for each class within the extension. If no classes are defined,\n * an empty array is returned.\n *\/"
             },
             {
                 "name": "getClassNames",
@@ -2886,7 +2914,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets class names\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getclassnames.php\r\n * @return array An array of class names, as defined in the extension.\r\n * If no classes are defined, an empty array is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets class names\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getclassnames.php\n * @return array An array of class names, as defined in the extension.\n * If no classes are defined, an empty array is returned.\n *\/"
             },
             {
                 "name": "getDependencies",
@@ -2895,7 +2923,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets dependencies\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getdependencies.php\r\n * @return array An associative array with dependencies as keys and\r\n * either Required, Optional\r\n * or Conflicts as the values.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets dependencies\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.getdependencies.php\n * @return array An associative array with dependencies as keys and\n * either Required, Optional\n * or Conflicts as the values.\n *\/"
             },
             {
                 "name": "info",
@@ -2904,7 +2932,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Print extension info\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.info.php\r\n * @return void Information about the extension.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Print extension info\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.info.php\n * @return void Information about the extension.\n *\/"
             },
             {
                 "name": "isPersistent",
@@ -2913,7 +2941,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this extension is persistent\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.ispersistent.php\r\n * @return void <b>TRUE<\/b> for extensions loaded by extension, <b>FALSE<\/b>\r\n * otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this extension is persistent\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.ispersistent.php\n * @return void <b>TRUE<\/b> for extensions loaded by extension, <b>FALSE<\/b>\n * otherwise.\n *\/"
             },
             {
                 "name": "isTemporary",
@@ -2922,12 +2950,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Returns whether this extension is temporary\r\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.istemporary.php\r\n * @return void <b>TRUE<\/b> for extensions loaded by <b>dl<\/b>,\r\n * <b>FALSE<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Returns whether this extension is temporary\n * @link http:\/\/php.net\/manual\/en\/reflectionextension.istemporary.php\n * @return void <b>TRUE<\/b> for extensions loaded by <b>dl<\/b>,\n * <b>FALSE<\/b> otherwise.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -2940,7 +2969,7 @@
         "name": "ReflectionZendExtension",
         "fqn": "\\ReflectionZendExtension",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "export",
@@ -2960,7 +2989,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Export\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.export.php\r\n * @param string $name <p>\r\n * <\/p>\r\n * @param string $return [optional] <p>\r\n * <\/p>\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Export\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.export.php\n * @param string $name <p>\n * <\/p>\n * @param string $return [optional] <p>\n * <\/p>\n * @return string\n *\/"
             },
             {
                 "name": "__construct",
@@ -2974,7 +3003,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Constructor\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.construct.php\r\n * @param string $name <p>\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Constructor\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.construct.php\n * @param string $name <p>\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -2983,7 +3012,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * To string handler\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.tostring.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * To string handler\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.tostring.php\n * @return string\n *\/"
             },
             {
                 "name": "getName",
@@ -2992,7 +3021,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Gets name\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getname.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Gets name\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getname.php\n * @return string\n *\/"
             },
             {
                 "name": "getVersion",
@@ -3001,7 +3030,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Gets version\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getversion.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Gets version\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getversion.php\n * @return string\n *\/"
             },
             {
                 "name": "getAuthor",
@@ -3010,7 +3039,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Gets author\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getauthor.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Gets author\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getauthor.php\n * @return string\n *\/"
             },
             {
                 "name": "getURL",
@@ -3019,7 +3048,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Gets URL\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.geturl.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Gets URL\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.geturl.php\n * @return string\n *\/"
             },
             {
                 "name": "getCopyright",
@@ -3028,12 +3057,13 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP &gt;= 5.4.0)<br\/>\r\n * Gets copyright\r\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getcopyright.php\r\n * @return string\r\n *\/"
+                "doc": "\/**\n * (PHP &gt;= 5.4.0)<br\/>\n * Gets copyright\n * @link http:\/\/php.net\/manual\/en\/reflectionzendextension.getcopyright.php\n * @return string\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "name",
+                "type": 1,
                 "doc": null
             }
         ],

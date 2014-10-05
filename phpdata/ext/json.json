@@ -4,7 +4,7 @@
         "name": "JsonIncrementalParser",
         "fqn": "\\JsonIncrementalParser",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -24,7 +24,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $depth [optional]\r\n * @param $options [optional]\r\n *\/"
+                "doc": "\/**\n * @param $depth [optional]\n * @param $options [optional]\n *\/"
             },
             {
                 "name": "getError",
@@ -56,7 +56,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $json\r\n *\/"
+                "doc": "\/**\n * @param $json\n *\/"
             },
             {
                 "name": "parseFile",
@@ -70,7 +70,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $filename\r\n *\/"
+                "doc": "\/**\n * @param $filename\n *\/"
             },
             {
                 "name": "get",
@@ -84,7 +84,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $options [optional]\r\n *\/"
+                "doc": "\/**\n * @param $options [optional]\n *\/"
             }
         ],
         "properties": [

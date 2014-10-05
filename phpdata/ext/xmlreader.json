@@ -4,7 +4,7 @@
         "name": "XMLReader",
         "fqn": "\\XMLReader",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "close",
@@ -13,7 +13,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Close the XMLReader input\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Close the XMLReader input\n * @link http:\/\/php.net\/manual\/en\/xmlreader.close.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "getAttribute",
@@ -27,7 +27,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get the value of a named attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattribute.php\r\n * @param string $name <p>\r\n * The name of the attribute.\r\n * <\/p>\r\n * @return string The value of the attribute, or <b>NULL<\/b> if no attribute with the given\r\n * <i>name<\/i> is found or not positioned on an element node.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Get the value of a named attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattribute.php\n * @param string $name <p>\n * The name of the attribute.\n * <\/p>\n * @return string The value of the attribute, or <b>NULL<\/b> if no attribute with the given\n * <i>name<\/i> is found or not positioned on an element node.\n *\/"
             },
             {
                 "name": "getAttributeNo",
@@ -41,7 +41,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get the value of an attribute by index\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattributeno.php\r\n * @param int $index <p>\r\n * The position of the attribute.\r\n * <\/p>\r\n * @return string The value of the attribute, or an empty string if no attribute exists\r\n * at <i>index<\/i> or not positioned of element.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Get the value of an attribute by index\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattributeno.php\n * @param int $index <p>\n * The position of the attribute.\n * <\/p>\n * @return string The value of the attribute, or an empty string if no attribute exists\n * at <i>index<\/i> or not positioned of element.\n *\/"
             },
             {
                 "name": "getAttributeNs",
@@ -61,7 +61,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get the value of an attribute by localname and URI\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattributens.php\r\n * @param string $localName <p>\r\n * The local name.\r\n * <\/p>\r\n * @param string $namespaceURI <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return string The value of the attribute, or an empty string if no attribute with the\r\n * given <i>localName<\/i> and\r\n * <i>namespaceURI<\/i> is found or not positioned of element.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Get the value of an attribute by localname and URI\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getattributens.php\n * @param string $localName <p>\n * The local name.\n * <\/p>\n * @param string $namespaceURI <p>\n * The namespace URI.\n * <\/p>\n * @return string The value of the attribute, or an empty string if no attribute with the\n * given <i>localName<\/i> and\n * <i>namespaceURI<\/i> is found or not positioned of element.\n *\/"
             },
             {
                 "name": "getParserProperty",
@@ -75,7 +75,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Indicates if specified property has been set\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getparserproperty.php\r\n * @param int $property <p>\r\n * One of the parser option\r\n * constants.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Indicates if specified property has been set\n * @link http:\/\/php.net\/manual\/en\/xmlreader.getparserproperty.php\n * @param int $property <p>\n * One of the parser option\n * constants.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "isValid",
@@ -84,7 +84,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Indicates if the parsed document is valid\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.isvalid.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Indicates if the parsed document is valid\n * @link http:\/\/php.net\/manual\/en\/xmlreader.isvalid.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "lookupNamespace",
@@ -98,7 +98,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Lookup namespace for a prefix\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.lookupnamespace.php\r\n * @param string $prefix <p>\r\n * String containing the prefix.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Lookup namespace for a prefix\n * @link http:\/\/php.net\/manual\/en\/xmlreader.lookupnamespace.php\n * @param string $prefix <p>\n * String containing the prefix.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "moveToAttributeNo",
@@ -112,7 +112,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move cursor to an attribute by index\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattributeno.php\r\n * @param int $index <p>\r\n * The position of the attribute.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Move cursor to an attribute by index\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattributeno.php\n * @param int $index <p>\n * The position of the attribute.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "moveToAttribute",
@@ -126,7 +126,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move cursor to a named attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattribute.php\r\n * @param string $name <p>\r\n * The name of the attribute.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Move cursor to a named attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattribute.php\n * @param string $name <p>\n * The name of the attribute.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "moveToAttributeNs",
@@ -146,7 +146,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move cursor to a named attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattributens.php\r\n * @param string $localName <p>\r\n * The local name.\r\n * <\/p>\r\n * @param string $namespaceURI <p>\r\n * The namespace URI.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Move cursor to a named attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoattributens.php\n * @param string $localName <p>\n * The local name.\n * <\/p>\n * @param string $namespaceURI <p>\n * The namespace URI.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "moveToElement",
@@ -155,7 +155,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Position cursor on the parent Element of current Attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoelement.php\r\n * @return bool <b>TRUE<\/b> if successful and <b>FALSE<\/b> if it fails or not positioned on\r\n * Attribute when this method is called.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Position cursor on the parent Element of current Attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetoelement.php\n * @return bool <b>TRUE<\/b> if successful and <b>FALSE<\/b> if it fails or not positioned on\n * Attribute when this method is called.\n *\/"
             },
             {
                 "name": "moveToFirstAttribute",
@@ -164,7 +164,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Position cursor on the first Attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetofirstattribute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Position cursor on the first Attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetofirstattribute.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "moveToNextAttribute",
@@ -173,7 +173,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Position cursor on the next Attribute\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetonextattribute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Position cursor on the next Attribute\n * @link http:\/\/php.net\/manual\/en\/xmlreader.movetonextattribute.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "open",
@@ -199,7 +199,7 @@
                         "default": 0
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Set the URI containing the XML to parse\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.open.php\r\n * @param string $URI <p>\r\n * URI pointing to the document.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The document encoding or <b>NULL<\/b>.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * A bitmask of the LIBXML_*\r\n * constants.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. If called statically, returns an\r\n * <b>XMLReader<\/b> or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Set the URI containing the XML to parse\n * @link http:\/\/php.net\/manual\/en\/xmlreader.open.php\n * @param string $URI <p>\n * URI pointing to the document.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The document encoding or <b>NULL<\/b>.\n * <\/p>\n * @param int $options [optional] <p>\n * A bitmask of the LIBXML_*\n * constants.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. If called statically, returns an\n * <b>XMLReader<\/b> or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "read",
@@ -208,7 +208,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move to next node in document\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.read.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Move to next node in document\n * @link http:\/\/php.net\/manual\/en\/xmlreader.read.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "next",
@@ -222,7 +222,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Move cursor to next node skipping all subtrees\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.next.php\r\n * @param string $localname [optional] <p>\r\n * The name of the next node to move to.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Move cursor to next node skipping all subtrees\n * @link http:\/\/php.net\/manual\/en\/xmlreader.next.php\n * @param string $localname [optional] <p>\n * The name of the next node to move to.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "readInnerXml",
@@ -231,7 +231,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Retrieve XML from current node\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readinnerxml.php\r\n * @return string the contents of the current node as a string. Empty string on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Retrieve XML from current node\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readinnerxml.php\n * @return string the contents of the current node as a string. Empty string on failure.\n *\/"
             },
             {
                 "name": "readOuterXml",
@@ -240,7 +240,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Retrieve XML from current node, including it self\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readouterxml.php\r\n * @return string the contents of current node, including itself, as a string. Empty string on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Retrieve XML from current node, including it self\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readouterxml.php\n * @return string the contents of current node, including itself, as a string. Empty string on failure.\n *\/"
             },
             {
                 "name": "readString",
@@ -249,7 +249,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Reads the contents of the current node as a string\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readstring.php\r\n * @return string the content of the current node as a string. Empty string on\r\n * failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Reads the contents of the current node as a string\n * @link http:\/\/php.net\/manual\/en\/xmlreader.readstring.php\n * @return string the content of the current node as a string. Empty string on\n * failure.\n *\/"
             },
             {
                 "name": "setSchema",
@@ -263,7 +263,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Validate document against XSD\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setschema.php\r\n * @param string $filename <p>\r\n * The filename of the XSD schema.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Validate document against XSD\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setschema.php\n * @param string $filename <p>\n * The filename of the XSD schema.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "setParserProperty",
@@ -283,7 +283,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Set parser options\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setparserproperty.php\r\n * @param int $property <p>\r\n * One of the parser option\r\n * constants.\r\n * <\/p>\r\n * @param bool $value <p>\r\n * If set to <b>TRUE<\/b> the option will be enabled otherwise will\r\n * be disabled.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Set parser options\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setparserproperty.php\n * @param int $property <p>\n * One of the parser option\n * constants.\n * <\/p>\n * @param bool $value <p>\n * If set to <b>TRUE<\/b> the option will be enabled otherwise will\n * be disabled.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "setRelaxNGSchema",
@@ -297,7 +297,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Set the filename or URI for a RelaxNG Schema\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setrelaxngschema.php\r\n * @param string $filename <p>\r\n * filename or URI pointing to a RelaxNG Schema.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Set the filename or URI for a RelaxNG Schema\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setrelaxngschema.php\n * @param string $filename <p>\n * filename or URI pointing to a RelaxNG Schema.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "setRelaxNGSchemaSource",
@@ -311,7 +311,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Set the data containing a RelaxNG Schema\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setrelaxngschemasource.php\r\n * @param string $source <p>\r\n * String containing the RelaxNG Schema.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Set the data containing a RelaxNG Schema\n * @link http:\/\/php.net\/manual\/en\/xmlreader.setrelaxngschemasource.php\n * @param string $source <p>\n * String containing the RelaxNG Schema.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "XML",
@@ -337,7 +337,7 @@
                         "default": 0
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Set the data containing the XML to parse\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.xml.php\r\n * @param string $source <p>\r\n * String containing the XML to be parsed.\r\n * <\/p>\r\n * @param string $encoding [optional] <p>\r\n * The document encoding or <b>NULL<\/b>.\r\n * <\/p>\r\n * @param int $options [optional] <p>\r\n * A bitmask of the LIBXML_*\r\n * constants.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. If called statically, returns an\r\n * <b>XMLReader<\/b> or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Set the data containing the XML to parse\n * @link http:\/\/php.net\/manual\/en\/xmlreader.xml.php\n * @param string $source <p>\n * String containing the XML to be parsed.\n * <\/p>\n * @param string $encoding [optional] <p>\n * The document encoding or <b>NULL<\/b>.\n * <\/p>\n * @param int $options [optional] <p>\n * A bitmask of the LIBXML_*\n * constants.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure. If called statically, returns an\n * <b>XMLReader<\/b> or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "expand",
@@ -351,7 +351,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns a copy of the current node as a DOM object\r\n * @link http:\/\/php.net\/manual\/en\/xmlreader.expand.php\r\n * @param DOMNode $basenode [optional]\r\n * @return DOMNode The resulting <b>DOMNode<\/b> or <b>FALSE<\/b> on error.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Returns a copy of the current node as a DOM object\n * @link http:\/\/php.net\/manual\/en\/xmlreader.expand.php\n * @param DOMNode $basenode [optional]\n * @return DOMNode The resulting <b>DOMNode<\/b> or <b>FALSE<\/b> on error.\n *\/"
             }
         ],
         "properties": [

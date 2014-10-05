@@ -4,7 +4,7 @@
         "name": "stdClass",
         "fqn": "\\stdClass",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
@@ -20,7 +20,7 @@
         "name": "Exception",
         "fqn": "\\Exception",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -46,7 +46,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Instantiate new exception.\r\n *\r\n * @link http:\/\/php.net\/exception.construct.php\r\n * @param string $message [optional]\r\n *   The exception's message.\r\n * @param integer $code [optional]\r\n *   The exception's code.\r\n * @param \\Exception $previous [optional]\r\n *   The previous exception used for exception chaining.\r\n *\/"
+                "doc": "\/**\n * Instantiate new exception.\n *\n * @link http:\/\/php.net\/exception.construct.php\n * @param string $message [optional]\n *   The exception's message.\n * @param integer $code [optional]\n *   The exception's code.\n * @param \\Exception $previous [optional]\n *   The previous exception used for exception chaining.\n *\/"
             },
             {
                 "name": "__toString",
@@ -55,7 +55,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the string representation of the exception.\r\n *\r\n * @link http:\/\/php.net\/exception.tostring.php\r\n * @return string The string representation of the exception.\r\n *\/"
+                "doc": "\/**\n * Get the string representation of the exception.\n *\n * @link http:\/\/php.net\/exception.tostring.php\n * @return string The string representation of the exception.\n *\/"
             },
             {
                 "name": "getCode",
@@ -64,7 +64,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the exception code.\r\n *\r\n * @link http:\/\/php.net\/exception.getcode.php\r\n * @return integer The exception code.\r\n *\/"
+                "doc": "\/**\n * Get the exception code.\n *\n * @link http:\/\/php.net\/exception.getcode.php\n * @return integer The exception code.\n *\/"
             },
             {
                 "name": "getFile",
@@ -73,7 +73,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the filename in which the exception occurred.\r\n *\r\n * @link http:\/\/php.net\/exception.getfile.php\r\n * @return string The filename in which the exception occurred.\r\n *\/"
+                "doc": "\/**\n * Get the filename in which the exception occurred.\n *\n * @link http:\/\/php.net\/exception.getfile.php\n * @return string The filename in which the exception occurred.\n *\/"
             },
             {
                 "name": "getMessage",
@@ -82,7 +82,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the exception message.\r\n *\r\n * @link http:\/\/php.net\/exception.getmessage.php\r\n * @return string The Exception message.\r\n *\/"
+                "doc": "\/**\n * Get the exception message.\n *\n * @link http:\/\/php.net\/exception.getmessage.php\n * @return string The Exception message.\n *\/"
             },
             {
                 "name": "getLine",
@@ -91,7 +91,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the line number in which the exception occurred.\r\n *\r\n * @link http:\/\/php.net\/exception.getline.php\r\n * @return integer The line number in which the exception occurred.\r\n *\/"
+                "doc": "\/**\n * Get the line number in which the exception occurred.\n *\n * @link http:\/\/php.net\/exception.getline.php\n * @return integer The line number in which the exception occurred.\n *\/"
             },
             {
                 "name": "getPrevious",
@@ -100,7 +100,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Returns previous exception.\r\n *\r\n * @link http:\/\/php.net\/exception.getprevious.php\r\n * @return \\Exception The previous exception if available, or <code>NULL<\/code> otherwise.\r\n * @since 5.3.0\r\n *\/"
+                "doc": "\/**\n * Returns previous exception.\n *\n * @link http:\/\/php.net\/exception.getprevious.php\n * @return \\Exception The previous exception if available, or <code>NULL<\/code> otherwise.\n * @since 5.3.0\n *\/"
             },
             {
                 "name": "getTrace",
@@ -109,7 +109,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the stack trace.\r\n *\r\n * @link http:\/\/php.net\/exception.gettrace.php\r\n * @return array The stack trace.\r\n *\/"
+                "doc": "\/**\n * Get the stack trace.\n *\n * @link http:\/\/php.net\/exception.gettrace.php\n * @return array The stack trace.\n *\/"
             },
             {
                 "name": "getTraceAsString",
@@ -118,11 +118,30 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Get the stack trace as string.\r\n *\r\n * @link http:\/\/php.net\/exception.gettraceasstring.php\r\n * @return string The stack trace as string.\r\n *\/"
+                "doc": "\/**\n * Get the stack trace as string.\n *\n * @link http:\/\/php.net\/exception.gettraceasstring.php\n * @return string The stack trace as string.\n *\/"
             }
         ],
         "properties": [
-
+            {
+                "name": "code",
+                "type": 2,
+                "doc": "\/**\n * The exception code.\n *\n * @var integer\n *\/"
+            },
+            {
+                "name": "file",
+                "type": 2,
+                "doc": "\/**\n * The filename where the exception was created.\n *\n * @var string\n *\/"
+            },
+            {
+                "name": "message",
+                "type": 2,
+                "doc": "\/**\n * The exception message.\n *\n * @var string\n *\/"
+            },
+            {
+                "name": "line",
+                "type": 2,
+                "doc": "\/**\n * The line where the exception was created.\n *\n * @var integer\n *\/"
+            }
         ],
         "constants": [
 
@@ -133,7 +152,7 @@
         "name": "ErrorException",
         "fqn": "\\ErrorException",
         "type": 0,
-        "extends": "Exception",
+        "extendsClass": "Exception",
         "methods": [
             {
                 "name": "__construct",
@@ -177,7 +196,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Constructs the exception\r\n * @link http:\/\/php.net\/manual\/en\/errorexception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $severity [optional]\r\n * @param $filename [optional]\r\n * @param $lineno [optional]\r\n * @param $previous [optional]\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Constructs the exception\n * @link http:\/\/php.net\/manual\/en\/errorexception.construct.php\n * @param $message [optional]\n * @param $code [optional]\n * @param $severity [optional]\n * @param $filename [optional]\n * @param $lineno [optional]\n * @param $previous [optional]\n *\/"
             },
             {
                 "name": "getSeverity",
@@ -186,7 +205,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the exception severity\r\n * @link http:\/\/php.net\/manual\/en\/errorexception.getseverity.php\r\n * @return int the severity level of the exception.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the exception severity\n * @link http:\/\/php.net\/manual\/en\/errorexception.getseverity.php\n * @return int the severity level of the exception.\n *\/"
             },
             {
                 "name": "getMessage",
@@ -195,7 +214,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception message\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\n * @return string the Exception message as a string.\n *\/"
             },
             {
                 "name": "getCode",
@@ -204,7 +223,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception code\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\n * @return mixed the exception code as integer in\n * <b>Exception<\/b> but possibly as other type in\n * <b>Exception<\/b> descendants (for example as\n * string in <b>PDOException<\/b>).\n *\/"
             },
             {
                 "name": "getFile",
@@ -213,7 +232,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the file in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\n * @return string the filename in which the exception was created.\n *\/"
             },
             {
                 "name": "getLine",
@@ -222,7 +241,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the line in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\n * @return int the line number where the exception was created.\n *\/"
             },
             {
                 "name": "getTrace",
@@ -231,7 +250,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\n * @return array the Exception stack trace as an array.\n *\/"
             },
             {
                 "name": "getPrevious",
@@ -240,7 +259,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Returns previous Exception\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\n * @return Exception the previous <b>Exception<\/b> if available\n * or <b>NULL<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getTraceAsString",
@@ -249,7 +268,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace as a string\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\n * @return string the Exception stack trace as a string.\n *\/"
             },
             {
                 "name": "__toString",
@@ -258,11 +277,35 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * String representation of the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\r\n * @return string the string representation of the exception.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * String representation of the exception\n * @link http:\/\/php.net\/manual\/en\/exception.tostring.php\n * @return string the string representation of the exception.\n *\/"
             }
         ],
         "properties": [
-
+            {
+                "name": "message",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "code",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "file",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "line",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "severity",
+                "type": 2,
+                "doc": null
+            }
         ],
         "constants": [
 
@@ -273,7 +316,7 @@
         "name": "Closure",
         "fqn": "\\Closure",
         "type": 32,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "bind",
@@ -299,7 +342,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Duplicates a closure with a specific bound object and class scope\r\n * @link http:\/\/php.net\/manual\/en\/closure.bind.php\r\n * @param Closure $closure <p>\r\n * The anonymous functions to bind.\r\n * <\/p>\r\n * @param object $newthis <p>\r\n * The object to which the given anonymous function should be bound, or\r\n * <b>NULL<\/b> for the closure to be unbound.\r\n * <\/p>\r\n * @param mixed $newscope [optional] <p>\r\n * The class scope to which associate the closure is to be associated, or\r\n * 'static' to keep the current one. If an object is given, the type of the\r\n * object will be used instead. This determines the visibility of protected\r\n * and private methods of the bound object.\r\n * <\/p>\r\n * @return Closure a new <b>Closure<\/b> object or <b>FALSE<\/b> on failure\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Duplicates a closure with a specific bound object and class scope\n * @link http:\/\/php.net\/manual\/en\/closure.bind.php\n * @param Closure $closure <p>\n * The anonymous functions to bind.\n * <\/p>\n * @param object $newthis <p>\n * The object to which the given anonymous function should be bound, or\n * <b>NULL<\/b> for the closure to be unbound.\n * <\/p>\n * @param mixed $newscope [optional] <p>\n * The class scope to which associate the closure is to be associated, or\n * 'static' to keep the current one. If an object is given, the type of the\n * object will be used instead. This determines the visibility of protected\n * and private methods of the bound object.\n * <\/p>\n * @return Closure a new <b>Closure<\/b> object or <b>FALSE<\/b> on failure\n *\/"
             },
             {
                 "name": "bindTo",
@@ -319,7 +362,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Duplicates the closure with a new bound object and class scope\r\n * @link http:\/\/php.net\/manual\/en\/closure.bindto.php\r\n * @param object $newthis <p>\r\n * The object to which the given anonymous function should be bound, or\r\n * <b>NULL<\/b> for the closure to be unbound.\r\n * <\/p>\r\n * @param mixed $newscope [optional] <p>\r\n * The class scope to which associate the closure is to be associated, or\r\n * 'static' to keep the current one. If an object is given, the type of the\r\n * object will be used instead. This determines the visibility of protected\r\n * and private methods of the bound object.\r\n * <\/p>\r\n * @return Closure the newly created <b>Closure<\/b> object\r\n * or <b>FALSE<\/b> on failure\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Duplicates the closure with a new bound object and class scope\n * @link http:\/\/php.net\/manual\/en\/closure.bindto.php\n * @param object $newthis <p>\n * The object to which the given anonymous function should be bound, or\n * <b>NULL<\/b> for the closure to be unbound.\n * <\/p>\n * @param mixed $newscope [optional] <p>\n * The class scope to which associate the closure is to be associated, or\n * 'static' to keep the current one. If an object is given, the type of the\n * object will be used instead. This determines the visibility of protected\n * and private methods of the bound object.\n * <\/p>\n * @return Closure the newly created <b>Closure<\/b> object\n * or <b>FALSE<\/b> on failure\n *\/"
             }
         ],
         "properties": [
@@ -1285,7 +1328,7 @@
     {
         "stmtType": "Constant",
         "name": "PHP_INT_MAX",
-        "value": 9.2233720368548e+18
+        "value": 9223372036854775807
     },
     {
         "stmtType": "Constant",

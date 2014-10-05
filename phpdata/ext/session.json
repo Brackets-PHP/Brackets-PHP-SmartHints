@@ -4,7 +4,7 @@
         "name": "SessionHandler",
         "fqn": "\\SessionHandler",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "open",
@@ -24,7 +24,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Initialize session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.open.php\r\n * @param string $save_path <p>\r\n * The path where to store\/retrieve the session.\r\n * <\/p>\r\n * @param string $session_id <p>\r\n * The session id.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Initialize session\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.open.php\n * @param string $save_path <p>\n * The path where to store\/retrieve the session.\n * <\/p>\n * @param string $session_id <p>\n * The session id.\n * <\/p>\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "close",
@@ -33,7 +33,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Close the session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.close.php\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Close the session\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.close.php\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "read",
@@ -47,7 +47,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Read session data\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.read.php\r\n * @param string $session_id <p>\r\n * The session id to read data for.\r\n * <\/p>\r\n * @return string an encoded string of the read data. If nothing was read, it must return an empty string. Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Read session data\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.read.php\n * @param string $session_id <p>\n * The session id to read data for.\n * <\/p>\n * @return string an encoded string of the read data. If nothing was read, it must return an empty string. Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "write",
@@ -67,7 +67,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Write session data\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.write.php\r\n * @param string $session_id <p>\r\n * The session id.\r\n * <\/p>\r\n * @param string $session_data <p>\r\n * The encoded session data. This data is the result of the PHP internally encoding the $_SESSION superglobal to a serialized\r\n * string and passing it as this parameter. Please note sessions use an alternative serialization method.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Write session data\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.write.php\n * @param string $session_id <p>\n * The session id.\n * <\/p>\n * @param string $session_data <p>\n * The encoded session data. This data is the result of the PHP internally encoding the $_SESSION superglobal to a serialized\n * string and passing it as this parameter. Please note sessions use an alternative serialization method.\n * <\/p>\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "destroy",
@@ -81,7 +81,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Destroy a session\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.destroy.php\r\n * @param string $session_id <p>\r\n * The session ID being destroyed.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Destroy a session\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.destroy.php\n * @param string $session_id <p>\n * The session ID being destroyed.\n * <\/p>\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "gc",
@@ -95,7 +95,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.4.0)<br\/>\r\n * Cleanup old sessions\r\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.gc.php\r\n * @param int $maxlifetime <p>\r\n * Sessions that have not updated for the last <i>maxlifetime<\/i> seconds will be removed.\r\n * <\/p>\r\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.4.0)<br\/>\n * Cleanup old sessions\n * @link http:\/\/php.net\/manual\/en\/sessionhandler.gc.php\n * @param int $maxlifetime <p>\n * Sessions that have not updated for the last <i>maxlifetime<\/i> seconds will be removed.\n * <\/p>\n * @return bool The return value (usually <b>TRUE<\/b> on success, <b>FALSE<\/b> on failure). Note this value is returned internally to PHP for processing.\n *\/"
             },
             {
                 "name": "create_sid",

@@ -19,12 +19,16 @@
         "name": "mysqli_sql_exception",
         "fqn": "\\mysqli_sql_exception",
         "type": 0,
-        "extends": "RuntimeException",
+        "extendsClass": "RuntimeException",
         "methods": [
 
         ],
         "properties": [
-
+            {
+                "name": "sqlstate",
+                "type": 2,
+                "doc": "\/**\n * The sql state with the error.\n *\n * @var string\n *\/"
+            }
         ],
         "constants": [
 
@@ -35,7 +39,7 @@
         "name": "mysqli_driver",
         "fqn": "\\mysqli_driver",
         "type": 32,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "embedded_server_start",
@@ -61,7 +65,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * <b>Warning<\/b>\r\n * This function is currently not documented; only its argument list is available.\r\n *\/"
+                "doc": "\/**\n * <b>Warning<\/b>\n * This function is currently not documented; only its argument list is available.\n *\/"
             },
             {
                 "name": "embedded_server_end",
@@ -70,33 +74,39 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * <b>Warning<\/b>\r\n * This function is currently not documented; only its argument list is available.\r\n *\/"
+                "doc": "\/**\n * <b>Warning<\/b>\n * This function is currently not documented; only its argument list is available.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "client_info",
-                "doc": "\/**\r\n * The Client API header version.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The Client API header version.\n *\n * @var string\n *\/"
             },
             {
                 "name": "client_version",
-                "doc": "\/**\r\n * The Client version.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The Client version.\n *\n * @var string\n *\/"
             },
             {
                 "name": "driver_version",
-                "doc": "\/**\r\n * The MySQLi Driver version.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The MySQLi Driver version.\n *\n * @var string\n *\/"
             },
             {
                 "name": "embedded",
-                "doc": "\/**\r\n * Whether MySQLi Embedded support is enabled.\r\n *\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Whether MySQLi Embedded support is enabled.\n *\n * @var string\n *\/"
             },
             {
                 "name": "reconnect",
-                "doc": "\/**\r\n * Allow or prevent reconnect (see the mysqli.reconnect INI directive).\r\n *\r\n * @var boolean\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Allow or prevent reconnect (see the mysqli.reconnect INI directive).\n *\n * @var boolean\n *\/"
             },
             {
                 "name": "report_mode",
-                "doc": "\/**\r\n * Set to <code>MYSQLI_REPORT_OFF<\/code>, <code>MYSQLI_REPORT_ALL<\/code> or any combination of\r\n * <code>MYSQLI_REPORT_STRICT<\/code> (throw Exceptions for errors), <code>MYSQLI_REPORT_ERROR<\/code> (report errors)\r\n * and <code>MYSQLI_REPORT_INDEX<\/code> (errors regarding indexes). See also {@see mysqli_report()}.\r\n *\r\n * @var integer\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Set to <code>MYSQLI_REPORT_OFF<\/code>, <code>MYSQLI_REPORT_ALL<\/code> or any combination of\n * <code>MYSQLI_REPORT_STRICT<\/code> (throw Exceptions for errors), <code>MYSQLI_REPORT_ERROR<\/code> (report errors)\n * and <code>MYSQLI_REPORT_INDEX<\/code> (errors regarding indexes). See also {@see mysqli_report()}.\n *\n * @var integer\n *\/"
             }
         ],
         "constants": [
@@ -108,7 +118,7 @@
         "name": "mysqli",
         "fqn": "\\mysqli",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "__construct",
@@ -152,7 +162,7 @@
                         "default": "ini_get('mysqli.default_socket')"
                     }
                 ],
-                "doc": "\/**\r\n * Instantiate new MySQLi object.\r\n *\r\n * @link http:\/\/php.net\/manual\/mysqli.construct.php\r\n * @param null|string $host [optional]\r\n *   A host name, IP address, or <code>NULL<\/code>. The latter and the string <code>\"localhost\"<\/code> have the same\r\n *   meaning and a connection to the current host is attempted. When possible, pipse will be used instead of TCP\/IP\r\n *   sockets.\r\n *\r\n *   You can also affect this parameter by setting the <code>mysqli.default_host<\/code> setting in your\r\n *   {@link http:\/\/php.net\/manual\/mysqli.configuration.php <code>php.ini<\/code>}.\r\n *\r\n *   Prepending by <code>\"p:\"<\/code> opens a persistent connection. {@see \\mysqli::change_user} is automatically\r\n *   called on connections opened from the connection pool.\r\n * @param null|string $username [optional]\r\n *   The database user's name. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will be\r\n *   used if set, otherwise the name of the process owner is used.\r\n * @param null|string $password [optional]\r\n *   The database user's password. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will\r\n *   be used is set, otherwise authentication is done without password.\r\n * @param null|string $databaseName [optional]\r\n *   The name of the database that should be used, defaults to <code>\"\"<\/code>.\r\n * @param null|integer $port [optional]\r\n *   The port the database server is listening if using TCP\/IP sockets.\r\n * @param null|string $socket [optional]\r\n *   The canonical absolute path to the UNIX domain socket or pipe that should be used for communication.\r\n *\r\n *   <b>NOTE<\/b><br>\r\n *   Specifying the <var>$socket<\/var> parameter will not explicitly determin the type of connection to be used when\r\n *   connecting to the MySQL server. How the connection is made to the MySQL database is determined by the\r\n *   <var>$host<\/var> parameter.\r\n * @since 5.0.0\r\n * @since 5.3.0 Ability to use persistent connections.\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon errors.\r\n *\/"
+                "doc": "\/**\n * Instantiate new MySQLi object.\n *\n * @link http:\/\/php.net\/manual\/mysqli.construct.php\n * @param null|string $host [optional]\n *   A host name, IP address, or <code>NULL<\/code>. The latter and the string <code>\"localhost\"<\/code> have the same\n *   meaning and a connection to the current host is attempted. When possible, pipse will be used instead of TCP\/IP\n *   sockets.\n *\n *   You can also affect this parameter by setting the <code>mysqli.default_host<\/code> setting in your\n *   {@link http:\/\/php.net\/manual\/mysqli.configuration.php <code>php.ini<\/code>}.\n *\n *   Prepending by <code>\"p:\"<\/code> opens a persistent connection. {@see \\mysqli::change_user} is automatically\n *   called on connections opened from the connection pool.\n * @param null|string $username [optional]\n *   The database user's name. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will be\n *   used if set, otherwise the name of the process owner is used.\n * @param null|string $password [optional]\n *   The database user's password. If you pass <code>NULL<\/code> the default value from your <code>php.ini<\/code> will\n *   be used is set, otherwise authentication is done without password.\n * @param null|string $databaseName [optional]\n *   The name of the database that should be used, defaults to <code>\"\"<\/code>.\n * @param null|integer $port [optional]\n *   The port the database server is listening if using TCP\/IP sockets.\n * @param null|string $socket [optional]\n *   The canonical absolute path to the UNIX domain socket or pipe that should be used for communication.\n *\n *   <b>NOTE<\/b><br>\n *   Specifying the <var>$socket<\/var> parameter will not explicitly determin the type of connection to be used when\n *   connecting to the MySQL server. How the connection is made to the MySQL database is determined by the\n *   <var>$host<\/var> parameter.\n * @since 5.0.0\n * @since 5.3.0 Ability to use persistent connections.\n * @throws \\mysqli_sql_exception\n *   If configured this method throws an exception upon errors.\n *\/"
             },
             {
                 "name": "begin_transaction",
@@ -172,7 +182,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Starts a transaction.\r\n *\r\n * <b>NOTE<\/b><br>\r\n * This method is only available with the mysqlnd extension.\r\n *\r\n * <b>IMPORTANT<\/b><br>\r\n * This method will emit a WARNING if the server version is less than MySQL 5.6.5.\r\n *\r\n * @link http:\/\/php.net\/mysqli.begin-transaction\r\n * @param integer $flags [optional]\r\n *   The transaction's properties.\r\n * @param string $name [optional]\r\n *   The transaction's name.\r\n * @return boolean\r\n *   <code>TRUE<\/code> if the transaction was successfully started, <code>FALSE<\/code> otherwise.\r\n * @since 5.5.0\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon failure.\r\n *\/"
+                "doc": "\/**\n * Starts a transaction.\n *\n * <b>NOTE<\/b><br>\n * This method is only available with the mysqlnd extension.\n *\n * <b>IMPORTANT<\/b><br>\n * This method will emit a WARNING if the server version is less than MySQL 5.6.5.\n *\n * @link http:\/\/php.net\/mysqli.begin-transaction\n * @param integer $flags [optional]\n *   The transaction's properties.\n * @param string $name [optional]\n *   The transaction's name.\n * @return boolean\n *   <code>TRUE<\/code> if the transaction was successfully started, <code>FALSE<\/code> otherwise.\n * @since 5.5.0\n * @throws \\mysqli_sql_exception\n *   If configured this method throws an exception upon failure.\n *\/"
             },
             {
                 "name": "query",
@@ -192,7 +202,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Perform a query against the database.\r\n *\r\n * For non-DML queries (not <code>INSERT<\/code>, <code>UPDATE<\/code>, or <code>DELETE<\/code>), this method is similar\r\n * to calling {@see \\mysqli::real_query()} followed by either {@see \\mysqli::use_result()} or\r\n * {@see \\mysqli::store_result()}.\r\n *\r\n * @link http:\/\/php.net\/manual\/mysqli.query.php\r\n * @param string $query\r\n *   The SQL query to execute, <b>always<\/b> make sure that everything is properly escaped\r\n *   ({@see \\mysqli::real_escape_string()}).\r\n * @param integer $resultMode [optional]\r\n *   Either of the constants <code>MYSQLI_STORE_RESULT<\/code> or <code>MYSQLI_USE_RESULT<\/code> depending on the\r\n *   desired behavior. By default <code>MYSQLI_STORE_RESULT<\/code> is used. If you use <code>MYSQLI_USE_RESULT<\/code>\r\n *   all subsequent calls will return <i>commands out of sync<\/i> unless you call {@see \\mysqli::free_result()}.\r\n *\r\n *   With <code>MYSQLI_ASYNC<\/code> (only available with {@link http:\/\/php.net\/manual\/book.mysqlnd.php MySQL Native\r\n *   Driver}), it is possible to perform query asynchronously. {@see \\mysqli::poll()} is then used to get results from\r\n *   such queries.\r\n * @return \\mysqli_result|boolean\r\n *   For successful <code>SELECT<\/code>, <code>SHOW<\/code>, <code>DESCRIBE<\/code>, or <code>EXPLAIN<\/code> queries a\r\n *   MySQLi result is returned, for other successful queries <code>TRUE<\/code> is returned, <code>FALSE<\/code> on\r\n *   failure.\r\n * @since 5.0.0\r\n * @since 5.3.0 Ability to perform asynchronous queries with MySQL Native Driver.\r\n * @throws \\mysqli_sql_exception\r\n *   If configured this method throws an exception upon errors, strict warnings, or even bad indexes.\r\n *\/"
+                "doc": "\/**\n * Perform a query against the database.\n *\n * For non-DML queries (not <code>INSERT<\/code>, <code>UPDATE<\/code>, or <code>DELETE<\/code>), this method is similar\n * to calling {@see \\mysqli::real_query()} followed by either {@see \\mysqli::use_result()} or\n * {@see \\mysqli::store_result()}.\n *\n * @link http:\/\/php.net\/manual\/mysqli.query.php\n * @param string $query\n *   The SQL query to execute, <b>always<\/b> make sure that everything is properly escaped\n *   ({@see \\mysqli::real_escape_string()}).\n * @param integer $resultMode [optional]\n *   Either of the constants <code>MYSQLI_STORE_RESULT<\/code> or <code>MYSQLI_USE_RESULT<\/code> depending on the\n *   desired behavior. By default <code>MYSQLI_STORE_RESULT<\/code> is used. If you use <code>MYSQLI_USE_RESULT<\/code>\n *   all subsequent calls will return <i>commands out of sync<\/i> unless you call {@see \\mysqli::free_result()}.\n *\n *   With <code>MYSQLI_ASYNC<\/code> (only available with {@link http:\/\/php.net\/manual\/book.mysqlnd.php MySQL Native\n *   Driver}), it is possible to perform query asynchronously. {@see \\mysqli::poll()} is then used to get results from\n *   such queries.\n * @return \\mysqli_result|boolean\n *   For successful <code>SELECT<\/code>, <code>SHOW<\/code>, <code>DESCRIBE<\/code>, or <code>EXPLAIN<\/code> queries a\n *   MySQLi result is returned, for other successful queries <code>TRUE<\/code> is returned, <code>FALSE<\/code> on\n *   failure.\n * @since 5.0.0\n * @since 5.3.0 Ability to perform asynchronous queries with MySQL Native Driver.\n * @throws \\mysqli_sql_exception\n *   If configured this method throws an exception upon errors, strict warnings, or even bad indexes.\n *\/"
             },
             {
                 "name": "autocommit",
@@ -206,7 +216,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Turns on or off auto-committing database modifications\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.autocommit.php\r\n * @param bool $mode <p>\r\n * Whether to turn on auto-commit or not.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Turns on or off auto-committing database modifications\n * @link http:\/\/php.net\/manual\/en\/mysqli.autocommit.php\n * @param bool $mode <p>\n * Whether to turn on auto-commit or not.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "change_user",
@@ -232,7 +242,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Changes the user of the specified database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.change-user.php\r\n * @param string $user <p>\r\n * The MySQL user name.\r\n * <\/p>\r\n * @param string $password <p>\r\n * The MySQL password.\r\n * <\/p>\r\n * @param string $database <p>\r\n * The database to change to.\r\n * <\/p>\r\n * <p>\r\n * If desired, the <b>NULL<\/b> value may be passed resulting in only changing\r\n * the user and not selecting a database. To select a database in this\r\n * case use the <b>mysqli_select_db<\/b> function.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Changes the user of the specified database connection\n * @link http:\/\/php.net\/manual\/en\/mysqli.change-user.php\n * @param string $user <p>\n * The MySQL user name.\n * <\/p>\n * @param string $password <p>\n * The MySQL password.\n * <\/p>\n * @param string $database <p>\n * The database to change to.\n * <\/p>\n * <p>\n * If desired, the <b>NULL<\/b> value may be passed resulting in only changing\n * the user and not selecting a database. To select a database in this\n * case use the <b>mysqli_select_db<\/b> function.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "character_set_name",
@@ -241,7 +251,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the default character set for the database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.character-set-name.php\r\n * @return string The default character set for the current connection\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the default character set for the database connection\n * @link http:\/\/php.net\/manual\/en\/mysqli.character-set-name.php\n * @return string The default character set for the current connection\n *\/"
             },
             {
                 "name": "close",
@@ -250,7 +260,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Closes a previously opened database connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Closes a previously opened database connection\n * @link http:\/\/php.net\/manual\/en\/mysqli.close.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "commit",
@@ -270,7 +280,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Commits the current transaction\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.commit.php\r\n * @param int $flags [optional] <p>\r\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\r\n * <\/p>\r\n * @param string $name [optional] <p>\r\n * If provided then COMMIT\/*name* \/ is executed.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Commits the current transaction\n * @link http:\/\/php.net\/manual\/en\/mysqli.commit.php\n * @param int $flags [optional] <p>\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\n * <\/p>\n * @param string $name [optional] <p>\n * If provided then COMMIT\/*name* \/ is executed.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "connect",
@@ -314,7 +324,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $host [optional]\r\n * @param $user [optional]\r\n * @param $password [optional]\r\n * @param $database [optional]\r\n * @param $port [optional]\r\n * @param $socket [optional]\r\n *\/"
+                "doc": "\/**\n * @param $host [optional]\n * @param $user [optional]\n * @param $password [optional]\n * @param $database [optional]\n * @param $port [optional]\n * @param $socket [optional]\n *\/"
             },
             {
                 "name": "dump_debug_info",
@@ -323,7 +333,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Dump debugging information into the log\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.dump-debug-info.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Dump debugging information into the log\n * @link http:\/\/php.net\/manual\/en\/mysqli.dump-debug-info.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "debug",
@@ -337,7 +347,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Performs debugging operations\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.debug.php\r\n * @param string $message <p>\r\n * A string representing the debugging operation to perform\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Performs debugging operations\n * @link http:\/\/php.net\/manual\/en\/mysqli.debug.php\n * @param string $message <p>\n * A string representing the debugging operation to perform\n * <\/p>\n * @return bool <b>TRUE<\/b>.\n *\/"
             },
             {
                 "name": "get_charset",
@@ -346,7 +356,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Returns a character set object\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-charset.php\r\n * @return object The function returns a character set object with the following properties:\r\n * <i>charset<\/i>\r\n * <p>Character set name<\/p>\r\n * <i>collation<\/i>\r\n * <p>Collation name<\/p>\r\n * <i>dir<\/i>\r\n * <p>Directory the charset description was fetched from (?) or \"\" for built-in character sets<\/p>\r\n * <i>min_length<\/i>\r\n * <p>Minimum character length in bytes<\/p>\r\n * <i>max_length<\/i>\r\n * <p>Maximum character length in bytes<\/p>\r\n * <i>number<\/i>\r\n * <p>Internal character set number<\/p>\r\n * <i>state<\/i>\r\n * <p>Character set status (?)<\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Returns a character set object\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-charset.php\n * @return object The function returns a character set object with the following properties:\n * <i>charset<\/i>\n * <p>Character set name<\/p>\n * <i>collation<\/i>\n * <p>Collation name<\/p>\n * <i>dir<\/i>\n * <p>Directory the charset description was fetched from (?) or \"\" for built-in character sets<\/p>\n * <i>min_length<\/i>\n * <p>Minimum character length in bytes<\/p>\n * <i>max_length<\/i>\n * <p>Maximum character length in bytes<\/p>\n * <i>number<\/i>\n * <p>Internal character set number<\/p>\n * <i>state<\/i>\n * <p>Character set status (?)<\/p>\n *\/"
             },
             {
                 "name": "get_client_info",
@@ -355,7 +365,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get MySQL client info\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-client-info.php\r\n * @return string A string that represents the MySQL client library version\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Get MySQL client info\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-client-info.php\n * @return string A string that represents the MySQL client library version\n *\/"
             },
             {
                 "name": "get_server_info",
@@ -373,7 +383,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get result of SHOW WARNINGS\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-warnings.php\r\n * @return mysqli_warning\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Get result of SHOW WARNINGS\n * @link http:\/\/php.net\/manual\/en\/mysqli.get-warnings.php\n * @return mysqli_warning\n *\/"
             },
             {
                 "name": "init",
@@ -382,7 +392,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initializes MySQLi and returns a resource for use with mysqli_real_connect()\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.init.php\r\n * @return mysqli an object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Initializes MySQLi and returns a resource for use with mysqli_real_connect()\n * @link http:\/\/php.net\/manual\/en\/mysqli.init.php\n * @return mysqli an object.\n *\/"
             },
             {
                 "name": "kill",
@@ -396,7 +406,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Asks the server to kill a MySQL thread\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.kill.php\r\n * @param int $processid\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Asks the server to kill a MySQL thread\n * @link http:\/\/php.net\/manual\/en\/mysqli.kill.php\n * @param int $processid\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "set_local_infile_default",
@@ -410,7 +420,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Unsets user defined handler for load local infile command\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-default.php\r\n * @param mysqli $link\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Unsets user defined handler for load local infile command\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-default.php\n * @param mysqli $link\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "set_local_infile_handler",
@@ -430,7 +440,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set callback function for LOAD DATA LOCAL INFILE command\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-handler.php\r\n * @param mysqli $link\r\n * @param callable $read_func <p>\r\n * A callback function or object method taking the following parameters:\r\n * <\/p>\r\n * <i>stream<\/i>\r\n * <p>A PHP stream associated with the SQL commands INFILE<\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Set callback function for LOAD DATA LOCAL INFILE command\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-local-infile-handler.php\n * @param mysqli $link\n * @param callable $read_func <p>\n * A callback function or object method taking the following parameters:\n * <\/p>\n * <i>stream<\/i>\n * <p>A PHP stream associated with the SQL commands INFILE<\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "multi_query",
@@ -444,7 +454,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Performs a query on the database\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.multi-query.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * Data inside the query should be properly escaped.\r\n * <\/p>\r\n * @return bool <b>FALSE<\/b> if the first statement failed.\r\n * To retrieve subsequent errors from other statements you have to call\r\n * <b>mysqli_next_result<\/b> first.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Performs a query on the database\n * @link http:\/\/php.net\/manual\/en\/mysqli.multi-query.php\n * @param string $query <p>\n * The query, as a string.\n * <\/p>\n * <p>\n * Data inside the query should be properly escaped.\n * <\/p>\n * @return bool <b>FALSE<\/b> if the first statement failed.\n * To retrieve subsequent errors from other statements you have to call\n * <b>mysqli_next_result<\/b> first.\n *\/"
             },
             {
                 "name": "mysqli",
@@ -488,7 +498,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $host [optional]\r\n * @param $user [optional]\r\n * @param $password [optional]\r\n * @param $database [optional]\r\n * @param $port [optional]\r\n * @param $socket [optional]\r\n *\/"
+                "doc": "\/**\n * @param $host [optional]\n * @param $user [optional]\n * @param $password [optional]\n * @param $database [optional]\n * @param $port [optional]\n * @param $socket [optional]\n *\/"
             },
             {
                 "name": "more_results",
@@ -497,7 +507,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Check if there are any more query results from a multi query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.more-results.php\r\n * @return bool <b>TRUE<\/b> if one or more result sets are available from a previous call to\r\n * <b>mysqli_multi_query<\/b>, otherwise <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Check if there are any more query results from a multi query\n * @link http:\/\/php.net\/manual\/en\/mysqli.more-results.php\n * @return bool <b>TRUE<\/b> if one or more result sets are available from a previous call to\n * <b>mysqli_multi_query<\/b>, otherwise <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "next_result",
@@ -506,7 +516,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare next result from multi_query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.next-result.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Prepare next result from multi_query\n * @link http:\/\/php.net\/manual\/en\/mysqli.next-result.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "options",
@@ -526,7 +536,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set options\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.options.php\r\n * @param int $option <p>\r\n * The option that you want to set. It can be one of the following values:\r\n * <table>\r\n * Valid options\r\n * <tr valign=\"top\">\r\n * <td>Name<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_OPT_CONNECT_TIMEOUT<\/b><\/td>\r\n * <td>connection timeout in seconds (supported on Windows with TCP\/IP since PHP 5.3.1)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_OPT_LOCAL_INFILE<\/b><\/td>\r\n * <td>enable\/disable use of LOAD LOCAL INFILE<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_INIT_COMMAND<\/b><\/td>\r\n * <td>command to execute after when connecting to MySQL server<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_READ_DEFAULT_FILE<\/b><\/td>\r\n * <td>\r\n * Read options from named option file instead of my.cnf\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_READ_DEFAULT_GROUP<\/b><\/td>\r\n * <td>\r\n * Read options from the named group from my.cnf\r\n * or the file specified with <b>MYSQL_READ_DEFAULT_FILE<\/b>.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_SERVER_PUBLIC_KEY<\/b><\/td>\r\n * <td>\r\n * RSA public key file used with the SHA-256 based authentication.\r\n * <\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * @param mixed $value <p>\r\n * The value for the option.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Set options\n * @link http:\/\/php.net\/manual\/en\/mysqli.options.php\n * @param int $option <p>\n * The option that you want to set. It can be one of the following values:\n * <table>\n * Valid options\n * <tr valign=\"top\">\n * <td>Name<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_OPT_CONNECT_TIMEOUT<\/b><\/td>\n * <td>connection timeout in seconds (supported on Windows with TCP\/IP since PHP 5.3.1)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_OPT_LOCAL_INFILE<\/b><\/td>\n * <td>enable\/disable use of LOAD LOCAL INFILE<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_INIT_COMMAND<\/b><\/td>\n * <td>command to execute after when connecting to MySQL server<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_READ_DEFAULT_FILE<\/b><\/td>\n * <td>\n * Read options from named option file instead of my.cnf\n * <\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_READ_DEFAULT_GROUP<\/b><\/td>\n * <td>\n * Read options from the named group from my.cnf\n * or the file specified with <b>MYSQL_READ_DEFAULT_FILE<\/b>.\n * <\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_SERVER_PUBLIC_KEY<\/b><\/td>\n * <td>\n * RSA public key file used with the SHA-256 based authentication.\n * <\/td>\n * <\/tr>\n * <\/table>\n * <\/p>\n * @param mixed $value <p>\n * The value for the option.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "ping",
@@ -535,7 +545,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Pings a server connection, or tries to reconnect if the connection has gone down\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.ping.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Pings a server connection, or tries to reconnect if the connection has gone down\n * @link http:\/\/php.net\/manual\/en\/mysqli.ping.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "prepare",
@@ -549,7 +559,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare an SQL statement for execution\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.prepare.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * You should not add a terminating semicolon or \\g\r\n * to the statement.\r\n * <\/p>\r\n * <p>\r\n * This parameter can include one or more parameter markers in the SQL\r\n * statement by embedding question mark (?) characters\r\n * at the appropriate positions.\r\n * <\/p>\r\n * <p>\r\n * The markers are legal only in certain places in SQL statements.\r\n * For example, they are allowed in the VALUES()\r\n * list of an INSERT statement (to specify column\r\n * values for a row), or in a comparison with a column in a\r\n * WHERE clause to specify a comparison value.\r\n * <\/p>\r\n * <p>\r\n * However, they are not allowed for identifiers (such as table or\r\n * column names), in the select list that names the columns to be\r\n * returned by a SELECT statement, or to specify both\r\n * operands of a binary operator such as the = equal\r\n * sign. The latter restriction is necessary because it would be\r\n * impossible to determine the parameter type. It's not allowed to\r\n * compare marker with NULL by\r\n * ? IS NULL too. In general, parameters are legal\r\n * only in Data Manipulation Language (DML) statements, and not in Data\r\n * Definition Language (DDL) statements.\r\n * <\/p>\r\n * @return mysqli_stmt <b>mysqli_prepare<\/b> returns a statement object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Prepare an SQL statement for execution\n * @link http:\/\/php.net\/manual\/en\/mysqli.prepare.php\n * @param string $query <p>\n * The query, as a string.\n * <\/p>\n * <p>\n * You should not add a terminating semicolon or \\g\n * to the statement.\n * <\/p>\n * <p>\n * This parameter can include one or more parameter markers in the SQL\n * statement by embedding question mark (?) characters\n * at the appropriate positions.\n * <\/p>\n * <p>\n * The markers are legal only in certain places in SQL statements.\n * For example, they are allowed in the VALUES()\n * list of an INSERT statement (to specify column\n * values for a row), or in a comparison with a column in a\n * WHERE clause to specify a comparison value.\n * <\/p>\n * <p>\n * However, they are not allowed for identifiers (such as table or\n * column names), in the select list that names the columns to be\n * returned by a SELECT statement, or to specify both\n * operands of a binary operator such as the = equal\n * sign. The latter restriction is necessary because it would be\n * impossible to determine the parameter type. It's not allowed to\n * compare marker with NULL by\n * ? IS NULL too. In general, parameters are legal\n * only in Data Manipulation Language (DML) statements, and not in Data\n * Definition Language (DDL) statements.\n * <\/p>\n * @return mysqli_stmt <b>mysqli_prepare<\/b> returns a statement object or <b>FALSE<\/b> if an error occurred.\n *\/"
             },
             {
                 "name": "real_connect",
@@ -599,7 +609,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Opens a connection to a mysql server\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-connect.php\r\n * @param string $host [optional] <p>\r\n * Can be either a host name or an IP address. Passing the <b>NULL<\/b> value\r\n * or the string \"localhost\" to this parameter, the local host is\r\n * assumed. When possible, pipes will be used instead of the TCP\/IP\r\n * protocol.\r\n * <\/p>\r\n * @param string $username [optional] <p>\r\n * The MySQL user name.\r\n * <\/p>\r\n * @param string $passwd [optional] <p>\r\n * If provided or <b>NULL<\/b>, the MySQL server will attempt to authenticate\r\n * the user against those user records which have no password only. This\r\n * allows one username to be used with different permissions (depending\r\n * on if a password as provided or not).\r\n * <\/p>\r\n * @param string $dbname [optional] <p>\r\n * If provided will specify the default database to be used when\r\n * performing queries.\r\n * <\/p>\r\n * @param int $port [optional] <p>\r\n * Specifies the port number to attempt to connect to the MySQL server.\r\n * <\/p>\r\n * @param string $socket [optional] <p>\r\n * Specifies the socket or named pipe that should be used.\r\n * <\/p>\r\n * <p>\r\n * Specifying the <i>socket<\/i> parameter will not\r\n * explicitly determine the type of connection to be used when\r\n * connecting to the MySQL server. How the connection is made to the\r\n * MySQL database is determined by the <i>host<\/i>\r\n * parameter.\r\n * <\/p>\r\n * @param int $flags [optional] <p>\r\n * With the parameter <i>flags<\/i> you can set different\r\n * connection options:\r\n * <\/p>\r\n * <table>\r\n * Supported flags\r\n * <tr valign=\"top\">\r\n * <td>Name<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_COMPRESS<\/b><\/td>\r\n * <td>Use compression protocol<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_FOUND_ROWS<\/b><\/td>\r\n * <td>return number of matched rows, not the number of affected rows<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_IGNORE_SPACE<\/b><\/td>\r\n * <td>Allow spaces after function names. Makes all function names reserved words.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_INTERACTIVE<\/b><\/td>\r\n * <td>\r\n * Allow interactive_timeout seconds (instead of\r\n * wait_timeout seconds) of inactivity before closing the connection\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td><b>MYSQLI_CLIENT_SSL<\/b><\/td>\r\n * <td>Use SSL (encryption)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <p>\r\n * For security reasons the <b>MULTI_STATEMENT<\/b> flag is\r\n * not supported in PHP. If you want to execute multiple queries use the\r\n * <b>mysqli_multi_query<\/b> function.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Opens a connection to a mysql server\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-connect.php\n * @param string $host [optional] <p>\n * Can be either a host name or an IP address. Passing the <b>NULL<\/b> value\n * or the string \"localhost\" to this parameter, the local host is\n * assumed. When possible, pipes will be used instead of the TCP\/IP\n * protocol.\n * <\/p>\n * @param string $username [optional] <p>\n * The MySQL user name.\n * <\/p>\n * @param string $passwd [optional] <p>\n * If provided or <b>NULL<\/b>, the MySQL server will attempt to authenticate\n * the user against those user records which have no password only. This\n * allows one username to be used with different permissions (depending\n * on if a password as provided or not).\n * <\/p>\n * @param string $dbname [optional] <p>\n * If provided will specify the default database to be used when\n * performing queries.\n * <\/p>\n * @param int $port [optional] <p>\n * Specifies the port number to attempt to connect to the MySQL server.\n * <\/p>\n * @param string $socket [optional] <p>\n * Specifies the socket or named pipe that should be used.\n * <\/p>\n * <p>\n * Specifying the <i>socket<\/i> parameter will not\n * explicitly determine the type of connection to be used when\n * connecting to the MySQL server. How the connection is made to the\n * MySQL database is determined by the <i>host<\/i>\n * parameter.\n * <\/p>\n * @param int $flags [optional] <p>\n * With the parameter <i>flags<\/i> you can set different\n * connection options:\n * <\/p>\n * <table>\n * Supported flags\n * <tr valign=\"top\">\n * <td>Name<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_CLIENT_COMPRESS<\/b><\/td>\n * <td>Use compression protocol<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_CLIENT_FOUND_ROWS<\/b><\/td>\n * <td>return number of matched rows, not the number of affected rows<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_CLIENT_IGNORE_SPACE<\/b><\/td>\n * <td>Allow spaces after function names. Makes all function names reserved words.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_CLIENT_INTERACTIVE<\/b><\/td>\n * <td>\n * Allow interactive_timeout seconds (instead of\n * wait_timeout seconds) of inactivity before closing the connection\n * <\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td><b>MYSQLI_CLIENT_SSL<\/b><\/td>\n * <td>Use SSL (encryption)<\/td>\n * <\/tr>\n * <\/table>\n * <p>\n * For security reasons the <b>MULTI_STATEMENT<\/b> flag is\n * not supported in PHP. If you want to execute multiple queries use the\n * <b>mysqli_multi_query<\/b> function.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "real_escape_string",
@@ -613,7 +623,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-escape-string.php\r\n * @param string $escapestr <p>\r\n * The string to be escaped.\r\n * <\/p>\r\n * <p>\r\n * Characters encoded are NUL (ASCII 0), \\n, \\r, \\, ', \", and\r\n * Control-Z.\r\n * <\/p>\r\n * @return string an escaped string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-escape-string.php\n * @param string $escapestr <p>\n * The string to be escaped.\n * <\/p>\n * <p>\n * Characters encoded are NUL (ASCII 0), \\n, \\r, \\, ', \", and\n * Control-Z.\n * <\/p>\n * @return string an escaped string.\n *\/"
             },
             {
                 "name": "escape_string",
@@ -627,7 +637,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * @param $string_to_escape\r\n *\/"
+                "doc": "\/**\n * @param $string_to_escape\n *\/"
             },
             {
                 "name": "real_query",
@@ -641,7 +651,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Execute an SQL query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-query.php\r\n * @param string $query <p>\r\n * The query, as a string.\r\n * <\/p>\r\n * <p>\r\n * Data inside the query should be properly escaped.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Execute an SQL query\n * @link http:\/\/php.net\/manual\/en\/mysqli.real-query.php\n * @param string $query <p>\n * The query, as a string.\n * <\/p>\n * <p>\n * Data inside the query should be properly escaped.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "rollback",
@@ -661,7 +671,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Rolls back current transaction\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.rollback.php\r\n * @param int $flags [optional] <p>\r\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\r\n * <\/p>\r\n * @param string $name [optional] <p>\r\n * If provided then ROLLBACK\/*name* \/ is executed.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Rolls back current transaction\n * @link http:\/\/php.net\/manual\/en\/mysqli.rollback.php\n * @param int $flags [optional] <p>\n * A bitmask of <b>MYSQLI_TRANS_COR_*<\/b> constants.\n * <\/p>\n * @param string $name [optional] <p>\n * If provided then ROLLBACK\/*name* \/ is executed.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "select_db",
@@ -675,7 +685,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Selects the default database for database queries\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.select-db.php\r\n * @param string $dbname <p>\r\n * The database name.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Selects the default database for database queries\n * @link http:\/\/php.net\/manual\/en\/mysqli.select-db.php\n * @param string $dbname <p>\n * The database name.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "set_charset",
@@ -689,7 +699,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.5)<br\/>\r\n * Sets the default client character set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-charset.php\r\n * @param string $charset <p>\r\n * The charset to be set as default.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.5)<br\/>\n * Sets the default client character set\n * @link http:\/\/php.net\/manual\/en\/mysqli.set-charset.php\n * @param string $charset <p>\n * The charset to be set as default.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "set_opt",
@@ -709,7 +719,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Alias of <b>mysqli_options<\/b>\r\n * @link http:\/\/php.net\/manual\/en\/function.mysqli-set-opt.php\r\n * @param $option\r\n * @param $value\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Alias of <b>mysqli_options<\/b>\n * @link http:\/\/php.net\/manual\/en\/function.mysqli-set-opt.php\n * @param $option\n * @param $value\n *\/"
             },
             {
                 "name": "ssl_set",
@@ -747,7 +757,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used for establishing secure connections using SSL\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.ssl-set.php\r\n * @param string $key <p>\r\n * The path name to the key file.\r\n * <\/p>\r\n * @param string $cert <p>\r\n * The path name to the certificate file.\r\n * <\/p>\r\n * @param string $ca <p>\r\n * The path name to the certificate authority file.\r\n * <\/p>\r\n * @param string $capath <p>\r\n * The pathname to a directory that contains trusted SSL CA certificates\r\n * in PEM format.\r\n * <\/p>\r\n * @param string $cipher <p>\r\n * A list of allowable ciphers to use for SSL encryption.\r\n * <\/p>\r\n * @return bool This function always returns <b>TRUE<\/b> value. If SSL setup is\r\n * incorrect <b>mysqli_real_connect<\/b> will return an error\r\n * when you attempt to connect.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Used for establishing secure connections using SSL\n * @link http:\/\/php.net\/manual\/en\/mysqli.ssl-set.php\n * @param string $key <p>\n * The path name to the key file.\n * <\/p>\n * @param string $cert <p>\n * The path name to the certificate file.\n * <\/p>\n * @param string $ca <p>\n * The path name to the certificate authority file.\n * <\/p>\n * @param string $capath <p>\n * The pathname to a directory that contains trusted SSL CA certificates\n * in PEM format.\n * <\/p>\n * @param string $cipher <p>\n * A list of allowable ciphers to use for SSL encryption.\n * <\/p>\n * @return bool This function always returns <b>TRUE<\/b> value. If SSL setup is\n * incorrect <b>mysqli_real_connect<\/b> will return an error\n * when you attempt to connect.\n *\/"
             },
             {
                 "name": "stat",
@@ -756,7 +766,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Gets the current system status\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.stat.php\r\n * @return string A string describing the server status. <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Gets the current system status\n * @link http:\/\/php.net\/manual\/en\/mysqli.stat.php\n * @return string A string describing the server status. <b>FALSE<\/b> if an error occurred.\n *\/"
             },
             {
                 "name": "stmt_init",
@@ -765,7 +775,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initializes a statement and returns an object for use with mysqli_stmt_prepare\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.stmt-init.php\r\n * @return mysqli_stmt an object.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Initializes a statement and returns an object for use with mysqli_stmt_prepare\n * @link http:\/\/php.net\/manual\/en\/mysqli.stmt-init.php\n * @return mysqli_stmt an object.\n *\/"
             },
             {
                 "name": "store_result",
@@ -774,7 +784,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transfers a result set from the last query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.store-result.php\r\n * @return mysqli_result a buffered result object or <b>FALSE<\/b> if an error occurred.\r\n * <\/p>\r\n * <p>\r\n * <b>mysqli_store_result<\/b> returns <b>FALSE<\/b> in case the query\r\n * didn't return a result set (if the query was, for example an INSERT\r\n * statement). This function also returns <b>FALSE<\/b> if the reading of the\r\n * result set failed. You can check if you have got an error by checking\r\n * if <b>mysqli_error<\/b> doesn't return an empty string, if\r\n * <b>mysqli_errno<\/b> returns a non zero value, or if\r\n * <b>mysqli_field_count<\/b> returns a non zero value.\r\n * Also possible reason for this function returning <b>FALSE<\/b> after\r\n * successful call to <b>mysqli_query<\/b> can be too large\r\n * result set (memory for it cannot be allocated). If\r\n * <b>mysqli_field_count<\/b> returns a non-zero value, the\r\n * statement should have produced a non-empty result set.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Transfers a result set from the last query\n * @link http:\/\/php.net\/manual\/en\/mysqli.store-result.php\n * @return mysqli_result a buffered result object or <b>FALSE<\/b> if an error occurred.\n * <\/p>\n * <p>\n * <b>mysqli_store_result<\/b> returns <b>FALSE<\/b> in case the query\n * didn't return a result set (if the query was, for example an INSERT\n * statement). This function also returns <b>FALSE<\/b> if the reading of the\n * result set failed. You can check if you have got an error by checking\n * if <b>mysqli_error<\/b> doesn't return an empty string, if\n * <b>mysqli_errno<\/b> returns a non zero value, or if\n * <b>mysqli_field_count<\/b> returns a non zero value.\n * Also possible reason for this function returning <b>FALSE<\/b> after\n * successful call to <b>mysqli_query<\/b> can be too large\n * result set (memory for it cannot be allocated). If\n * <b>mysqli_field_count<\/b> returns a non-zero value, the\n * statement should have produced a non-empty result set.\n *\/"
             },
             {
                 "name": "thread_safe",
@@ -783,7 +793,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns whether thread safety is given or not\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.thread-safe.php\r\n * @return bool <b>TRUE<\/b> if the client library is thread-safe, otherwise <b>FALSE<\/b>.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns whether thread safety is given or not\n * @link http:\/\/php.net\/manual\/en\/mysqli.thread-safe.php\n * @return bool <b>TRUE<\/b> if the client library is thread-safe, otherwise <b>FALSE<\/b>.\n *\/"
             },
             {
                 "name": "use_result",
@@ -792,7 +802,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Initiate a result set retrieval\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.use-result.php\r\n * @return mysqli_result an unbuffered result object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Initiate a result set retrieval\n * @link http:\/\/php.net\/manual\/en\/mysqli.use-result.php\n * @return mysqli_result an unbuffered result object or <b>FALSE<\/b> if an error occurred.\n *\/"
             },
             {
                 "name": "refresh",
@@ -806,85 +816,104 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &lt;= 5.3.0)<br\/>\r\n * Refreshes\r\n * @link http:\/\/php.net\/manual\/en\/mysqli.refresh.php\r\n * @param int $options <p>\r\n * The options to refresh, using the MYSQLI_REFRESH_* constants as documented\r\n * within the MySQLi constants documentation.\r\n * <\/p>\r\n * <p>\r\n * See also the official MySQL Refresh\r\n * documentation.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> if the refresh was a success, otherwise <b>FALSE<\/b>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &lt;= 5.3.0)<br\/>\n * Refreshes\n * @link http:\/\/php.net\/manual\/en\/mysqli.refresh.php\n * @param int $options <p>\n * The options to refresh, using the MYSQLI_REFRESH_* constants as documented\n * within the MySQLi constants documentation.\n * <\/p>\n * <p>\n * See also the official MySQL Refresh\n * documentation.\n * <\/p>\n * @return bool <b>TRUE<\/b> if the refresh was a success, otherwise <b>FALSE<\/b>\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "affected_rows",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "client_info",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "client_version",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "connect_errno",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "connect_error",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "errno",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "error_list",
-                "doc": "\/**\r\n * @var array\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var array\n *\/"
             },
             {
                 "name": "error",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "field_count",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "client_version",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "host_info",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "protocol_version",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "server_info",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "server_version",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "info",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "insert_id",
-                "doc": "\/**\r\n * @var mixed\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var mixed\n *\/"
             },
             {
                 "name": "sqlstate",
-                "doc": "\/**\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var string\n *\/"
             },
             {
                 "name": "thread_id",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             },
             {
                 "name": "warning_count",
-                "doc": "\/**\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * @var int\n *\/"
             }
         ],
         "constants": [
@@ -896,8 +925,17 @@
         "name": "mysqli_warning",
         "fqn": "\\mysqli_warning",
         "type": 32,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
+            {
+                "name": "__construct",
+                "type": 2,
+                "byRef": false,
+                "params": [
+
+                ],
+                "doc": "\/**\n * (PHP 5)<br\/>\n * The __construct purpose\n * @link http:\/\/php.net\/manual\/en\/mysqli-warning.construct.php\n *\/"
+            },
             {
                 "name": "next",
                 "type": 1,
@@ -905,20 +943,23 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * The next purpose\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-warning.next.php\r\n * @return void\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * The next purpose\n * @link http:\/\/php.net\/manual\/en\/mysqli-warning.next.php\n * @return void\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "message",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "sqlstate",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "errno",
+                "type": 1,
                 "doc": null
             }
         ],
@@ -931,7 +972,7 @@
         "name": "mysqli_result",
         "fqn": "\\mysqli_result",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "close",
@@ -940,7 +981,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Alias of {@see \\mysqli_result::free()}\r\n *\r\n * @deprecated\r\n * @since 5.0.0\r\n *\/"
+                "doc": "\/**\n * Alias of {@see \\mysqli_result::free()}\n *\n * @deprecated\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "data_seek",
@@ -954,7 +995,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * Seek to an arbitrary result pointer specified by the offset in the current result.\r\n *\r\n * <b>Note:<\/b>\r\n * This method can only be used with buffered results attained from the use of the {@see \\mysqli::store_result()} or\r\n * {@see \\mysqli::query()} methods.\r\n *\r\n * @param integer $offset\r\n *   The field offset. Must be between zero and the total number of rows minus one.\r\n * @return boolean <code>TRUE<\/code> on success or <code>FALSE<\/code> on failure.\r\n * @since 5.0.0\r\n *\/"
+                "doc": "\/**\n * Seek to an arbitrary result pointer specified by the offset in the current result.\n *\n * <b>Note:<\/b>\n * This method can only be used with buffered results attained from the use of the {@see \\mysqli::store_result()} or\n * {@see \\mysqli::query()} methods.\n *\n * @param integer $offset\n *   The field offset. Must be between zero and the total number of rows minus one.\n * @return boolean <code>TRUE<\/code> on success or <code>FALSE<\/code> on failure.\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "fetch_all",
@@ -968,7 +1009,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Fetch all result rows as array.\r\n *\r\n * <b>MySQL Native Driver Only<\/b>\r\n * Available only with {@link http:\/\/php.net\/mysqlnd.php mysqlnd}.\r\n *\r\n * <b>Note:<\/b>\r\n * As <code>\\mysqli::fetch_all()<\/code> returns all the rows as an array in a single step, it may consume more memory\r\n * than some similar functions such as <code>\\mysqli::fetch_array()<\/code>, which only returns one row at a time from\r\n * the result set. Further, if you need to iterate over the result set, you will need a looping construct that will\r\n * further impact performance. For these reasons <code>\\mysqli::fetch_all()<\/code> should only be used in those\r\n * situations where the fetched result set will be sent to another layer for processing.\r\n *\r\n * @param integer $resulttype [optional]\r\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\r\n *   <var>MYSQLI_BOTH<\/var>.\r\n * @return null|array Array in <var>$resulttype<\/var> form containing all rows of the result, or <code>NULL<\/code> if\r\n *   the result is empty.\r\n * @since 5.3.0\r\n *\/"
+                "doc": "\/**\n * Fetch all result rows as array.\n *\n * <b>MySQL Native Driver Only<\/b>\n * Available only with {@link http:\/\/php.net\/mysqlnd.php mysqlnd}.\n *\n * <b>Note:<\/b>\n * As <code>\\mysqli::fetch_all()<\/code> returns all the rows as an array in a single step, it may consume more memory\n * than some similar functions such as <code>\\mysqli::fetch_array()<\/code>, which only returns one row at a time from\n * the result set. Further, if you need to iterate over the result set, you will need a looping construct that will\n * further impact performance. For these reasons <code>\\mysqli::fetch_all()<\/code> should only be used in those\n * situations where the fetched result set will be sent to another layer for processing.\n *\n * @param integer $resulttype [optional]\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\n *   <var>MYSQLI_BOTH<\/var>.\n * @return null|array Array in <var>$resulttype<\/var> form containing all rows of the result, or <code>NULL<\/code> if\n *   the result is empty.\n * @since 5.3.0\n *\/"
             },
             {
                 "name": "fetch_array",
@@ -982,7 +1023,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * Fetch row as array.\r\n *\r\n * @see \\mysqli_result::fetch_assoc()\r\n * @see \\mysqli_result::fetch_row()\r\n * @param integer $resulttype [optional]\r\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\r\n *   <var>MYSQLI_BOTH<\/var>.\r\n * @return null|array Array in <var>$resulttype<\/var> form containing the current row of the result, or\r\n *   <code>NULL<\/code> if there are no more rows in the result set.\r\n * @version 5.0.0\r\n *\/"
+                "doc": "\/**\n * Fetch row as array.\n *\n * @see \\mysqli_result::fetch_assoc()\n * @see \\mysqli_result::fetch_row()\n * @param integer $resulttype [optional]\n *   Defines the array type, possible values are the constants <var>MYSQLI_ASSOC<\/var>, <var>MYSQLI_NUM<\/var>, or\n *   <var>MYSQLI_BOTH<\/var>.\n * @return null|array Array in <var>$resulttype<\/var> form containing the current row of the result, or\n *   <code>NULL<\/code> if there are no more rows in the result set.\n * @version 5.0.0\n *\/"
             },
             {
                 "name": "fetch_assoc",
@@ -991,7 +1032,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Fetch row as associative array.\r\n *\r\n * @see \\mysqli_result::fetch_array()\r\n * @see \\mysqli_result::fetch_row()\r\n * @return null|array Associative array containing the current row of the result, or <code>NULL<\/code> if there are\r\n *   no more rows in the result set.\r\n * @version 5.0.0\r\n *\/"
+                "doc": "\/**\n * Fetch row as associative array.\n *\n * @see \\mysqli_result::fetch_array()\n * @see \\mysqli_result::fetch_row()\n * @return null|array Associative array containing the current row of the result, or <code>NULL<\/code> if there are\n *   no more rows in the result set.\n * @version 5.0.0\n *\/"
             },
             {
                 "name": "free",
@@ -1000,7 +1041,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Frees the memory associated with the result.\r\n *\r\n * <b>Note:<\/b>\r\n * You should always free your result when your result object isn't needed anymore.\r\n *\r\n * @since 5.0.0\r\n *\/"
+                "doc": "\/**\n * Frees the memory associated with the result.\n *\n * <b>Note:<\/b>\n * You should always free your result when your result object isn't needed anymore.\n *\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "free_result",
@@ -1009,7 +1050,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * Alias of {@see \\mysqli_result::free()}\r\n *\r\n * @deprecated\r\n * @since 5.0.0\r\n *\/"
+                "doc": "\/**\n * Alias of {@see \\mysqli_result::free()}\n *\n * @deprecated\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "fetch_field",
@@ -1018,7 +1059,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the next field in the result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field.php\r\n * @return object an object which contains field definition information or <b>FALSE<\/b>\r\n * if no field information is available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object properties\r\n * <tr valign=\"top\">\r\n * <td>Property<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>def<\/td>\r\n * <td>Reserved for default value, currently always \"\"<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>db<\/td>\r\n * <td>Database (since PHP 5.3.6)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>catalog<\/td>\r\n * <td>The catalog name, always \"def\" (since PHP 5.3.6)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the next field in the result set\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field.php\n * @return object an object which contains field definition information or <b>FALSE<\/b>\n * if no field information is available.\n * <\/p>\n * <p>\n * <table>\n * Object properties\n * <tr valign=\"top\">\n * <td>Property<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>name<\/td>\n * <td>The name of the column<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgname<\/td>\n * <td>Original column name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>table<\/td>\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgtable<\/td>\n * <td>Original table name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>def<\/td>\n * <td>Reserved for default value, currently always \"\"<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>db<\/td>\n * <td>Database (since PHP 5.3.6)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>catalog<\/td>\n * <td>The catalog name, always \"def\" (since PHP 5.3.6)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>max_length<\/td>\n * <td>The maximum width of the field for the result set.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>length<\/td>\n * <td>The width of the field, as specified in the table definition.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>charsetnr<\/td>\n * <td>The character set number for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>flags<\/td>\n * <td>An integer representing the bit-flags for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>type<\/td>\n * <td>The data type used for this field<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>decimals<\/td>\n * <td>The number of decimals used (for integer fields)<\/td>\n * <\/tr>\n * <\/table>\n *\/"
             },
             {
                 "name": "fetch_fields",
@@ -1027,7 +1068,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns an array of objects representing the fields in a result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-fields.php\r\n * @return array an array of objects which contains field definition information or\r\n * <b>FALSE<\/b> if no field information is available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object properties\r\n * <tr valign=\"top\">\r\n * <td>Property<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns an array of objects representing the fields in a result set\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-fields.php\n * @return array an array of objects which contains field definition information or\n * <b>FALSE<\/b> if no field information is available.\n * <\/p>\n * <p>\n * <table>\n * Object properties\n * <tr valign=\"top\">\n * <td>Property<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>name<\/td>\n * <td>The name of the column<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgname<\/td>\n * <td>Original column name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>table<\/td>\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgtable<\/td>\n * <td>Original table name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>max_length<\/td>\n * <td>The maximum width of the field for the result set.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>length<\/td>\n * <td>The width of the field, as specified in the table definition.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>charsetnr<\/td>\n * <td>The character set number for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>flags<\/td>\n * <td>An integer representing the bit-flags for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>type<\/td>\n * <td>The data type used for this field<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>decimals<\/td>\n * <td>The number of decimals used (for integer fields)<\/td>\n * <\/tr>\n * <\/table>\n *\/"
             },
             {
                 "name": "fetch_field_direct",
@@ -1041,7 +1082,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Fetch meta-data for a single field\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field-direct.php\r\n * @param int $fieldnr <p>\r\n * The field number. This value must be in the range from\r\n * 0 to number of fields - 1.\r\n * <\/p>\r\n * @return object an object which contains field definition information or <b>FALSE<\/b>\r\n * if no field information for specified fieldnr is\r\n * available.\r\n * <\/p>\r\n * <p>\r\n * <table>\r\n * Object attributes\r\n * <tr valign=\"top\">\r\n * <td>Attribute<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>name<\/td>\r\n * <td>The name of the column<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgname<\/td>\r\n * <td>Original column name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>table<\/td>\r\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>orgtable<\/td>\r\n * <td>Original table name if an alias was specified<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>def<\/td>\r\n * <td>The default value for this field, represented as a string<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>max_length<\/td>\r\n * <td>The maximum width of the field for the result set.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>length<\/td>\r\n * <td>The width of the field, as specified in the table definition.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>charsetnr<\/td>\r\n * <td>The character set number for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>flags<\/td>\r\n * <td>An integer representing the bit-flags for the field.<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>type<\/td>\r\n * <td>The data type used for this field<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>decimals<\/td>\r\n * <td>The number of decimals used (for integer fields)<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Fetch meta-data for a single field\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-field-direct.php\n * @param int $fieldnr <p>\n * The field number. This value must be in the range from\n * 0 to number of fields - 1.\n * <\/p>\n * @return object an object which contains field definition information or <b>FALSE<\/b>\n * if no field information for specified fieldnr is\n * available.\n * <\/p>\n * <p>\n * <table>\n * Object attributes\n * <tr valign=\"top\">\n * <td>Attribute<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>name<\/td>\n * <td>The name of the column<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgname<\/td>\n * <td>Original column name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>table<\/td>\n * <td>The name of the table this field belongs to (if not calculated)<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>orgtable<\/td>\n * <td>Original table name if an alias was specified<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>def<\/td>\n * <td>The default value for this field, represented as a string<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>max_length<\/td>\n * <td>The maximum width of the field for the result set.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>length<\/td>\n * <td>The width of the field, as specified in the table definition.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>charsetnr<\/td>\n * <td>The character set number for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>flags<\/td>\n * <td>An integer representing the bit-flags for the field.<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>type<\/td>\n * <td>The data type used for this field<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>decimals<\/td>\n * <td>The number of decimals used (for integer fields)<\/td>\n * <\/tr>\n * <\/table>\n *\/"
             },
             {
                 "name": "fetch_object",
@@ -1061,7 +1102,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the current row of a result set as an object\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-object.php\r\n * @param string $class_name [optional] <p>\r\n * The name of the class to instantiate, set the properties of and return.\r\n * If not specified, a <b>stdClass<\/b> object is returned.\r\n * <\/p>\r\n * @param array $params [optional] <p>\r\n * An optional array of parameters to pass to the constructor\r\n * for <i>class_name<\/i> objects.\r\n * <\/p>\r\n * @return object an object with string properties that corresponds to the fetched\r\n * row or <b>NULL<\/b> if there are no more rows in resultset.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the current row of a result set as an object\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-object.php\n * @param string $class_name [optional] <p>\n * The name of the class to instantiate, set the properties of and return.\n * If not specified, a <b>stdClass<\/b> object is returned.\n * <\/p>\n * @param array $params [optional] <p>\n * An optional array of parameters to pass to the constructor\n * for <i>class_name<\/i> objects.\n * <\/p>\n * @return object an object with string properties that corresponds to the fetched\n * row or <b>NULL<\/b> if there are no more rows in resultset.\n *\/"
             },
             {
                 "name": "fetch_row",
@@ -1070,7 +1111,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Get a result row as an enumerated array\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-row.php\r\n * @return mixed <b>mysqli_fetch_row<\/b> returns an array of strings that corresponds to the fetched row\r\n * or <b>NULL<\/b> if there are no more rows in result set.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Get a result row as an enumerated array\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.fetch-row.php\n * @return mixed <b>mysqli_fetch_row<\/b> returns an array of strings that corresponds to the fetched row\n * or <b>NULL<\/b> if there are no more rows in result set.\n *\/"
             },
             {
                 "name": "field_seek",
@@ -1084,25 +1125,29 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Set result pointer to a specified field offset\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.field-seek.php\r\n * @param int $fieldnr <p>\r\n * The field number. This value must be in the range from\r\n * 0 to number of fields - 1.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Set result pointer to a specified field offset\n * @link http:\/\/php.net\/manual\/en\/mysqli-result.field-seek.php\n * @param int $fieldnr <p>\n * The field number. This value must be in the range from\n * 0 to number of fields - 1.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "current_field",
-                "doc": "\/**\r\n * Current field offset of this result.\r\n *\r\n * The position of the field cursor used for the last {@see \\mysqli::fetch_field()} call. This value can be used as an\r\n * argument to {@see \\mysqli::field_seek()}.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.current-field.php\r\n * @var integer\r\n * @since 5.0.0\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Current field offset of this result.\n *\n * The position of the field cursor used for the last {@see \\mysqli::fetch_field()} call. This value can be used as an\n * argument to {@see \\mysqli::field_seek()}.\n *\n * @link http:\/\/php.net\/mysqli-result.current-field.php\n * @var integer\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "field_count",
-                "doc": "\/**\r\n * The number of fields in this result.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.field-count.php\r\n * @var integer\r\n * @since 5.0.0\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The number of fields in this result.\n *\n * @link http:\/\/php.net\/mysqli-result.field-count.php\n * @var integer\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "lengths",
-                "doc": "\/**\r\n * Array of integers representing the size of each column (not including any terminating null characters) or\r\n * <code>FALSE<\/code> if an error occurred. Only contains a valid array if called after a call to\r\n * {@see \\mysqli::fetch_row()}, {@see \\mysqli::fetch_array()}, or similar methods.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.lengths.php\r\n * @var array\r\n * @since 5.0.0\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * Array of integers representing the size of each column (not including any terminating null characters) or\n * <code>FALSE<\/code> if an error occurred. Only contains a valid array if called after a call to\n * {@see \\mysqli::fetch_row()}, {@see \\mysqli::fetch_array()}, or similar methods.\n *\n * @link http:\/\/php.net\/mysqli-result.lengths.php\n * @var array\n * @since 5.0.0\n *\/"
             },
             {
                 "name": "num_rows",
-                "doc": "\/**\r\n * The number of rows in the result set.\r\n *\r\n * Depends on whether buffered or unbuffered result sets are being used. If unbuffered result sets are used this won't\r\n * contain the correct number of rows until all the rows in the result have been retrieved. If you encounter this\r\n * problem, call <code>\\mysqli::store_result()<\/code> after execution of the query.\r\n *\r\n * <b>Note:<\/b>\r\n * If the number of rows is greater than PHP_INT_MAX, the number will be returned as a string.\r\n *\r\n * @link http:\/\/php.net\/mysqli-result.num-rows.php\r\n * @var integer|string\r\n * @since 5.0.0\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * The number of rows in the result set.\n *\n * Depends on whether buffered or unbuffered result sets are being used. If unbuffered result sets are used this won't\n * contain the correct number of rows until all the rows in the result have been retrieved. If you encounter this\n * problem, call <code>\\mysqli::store_result()<\/code> after execution of the query.\n *\n * <b>Note:<\/b>\n * If the number of rows is greater than PHP_INT_MAX, the number will be returned as a string.\n *\n * @link http:\/\/php.net\/mysqli-result.num-rows.php\n * @var integer|string\n * @since 5.0.0\n *\/"
             }
         ],
         "constants": [
@@ -1114,7 +1159,7 @@
         "name": "mysqli_stmt",
         "fqn": "\\mysqli_stmt",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "attr_get",
@@ -1128,7 +1173,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used to get the current value of a statement attribute\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.attr-get.php\r\n * @param integer $attr The attribute that you want to get.\r\n * @return mixed <code>FALSE<\/code> if the attribute is not found, otherwise returns the value of the attribute.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Used to get the current value of a statement attribute\n *\n * @link http:\/\/php.net\/mysqli-stmt.attr-get.php\n * @param integer $attr The attribute that you want to get.\n * @return mixed <code>FALSE<\/code> if the attribute is not found, otherwise returns the value of the attribute.\n *\/"
             },
             {
                 "name": "attr_set",
@@ -1148,7 +1193,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Used to modify the behavior of a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.attr-set.php\r\n * @param int $attr <p>\r\n * The attribute that you want to set. It can have one of the following values:\r\n * <table>\r\n * Attribute values\r\n * <tr valign=\"top\">\r\n * <td>Character<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH<\/td>\r\n * <td>\r\n * If set to 1, causes <b>mysqli_stmt_store_result<\/b> to\r\n * update the metadata MYSQL_FIELD->max_length value.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_CURSOR_TYPE<\/td>\r\n * <td>\r\n * Type of cursor to open for statement when <b>mysqli_stmt_execute<\/b>\r\n * is invoked. <i>mode<\/i> can be MYSQLI_CURSOR_TYPE_NO_CURSOR\r\n * (the default) or MYSQLI_CURSOR_TYPE_READ_ONLY.\r\n * <\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>MYSQLI_STMT_ATTR_PREFETCH_ROWS<\/td>\r\n * <td>\r\n * Number of rows to fetch from server at a time when using a cursor.\r\n * <i>mode<\/i> can be in the range from 1 to the maximum\r\n * value of unsigned long. The default is 1.\r\n * <\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * <p>\r\n * If you use the MYSQLI_STMT_ATTR_CURSOR_TYPE option with\r\n * MYSQLI_CURSOR_TYPE_READ_ONLY, a cursor is opened for the\r\n * statement when you invoke <b>mysqli_stmt_execute<\/b>. If there\r\n * is already an open cursor from a previous <b>mysqli_stmt_execute<\/b> call,\r\n * it closes the cursor before opening a new one. <b>mysqli_stmt_reset<\/b>\r\n * also closes any open cursor before preparing the statement for re-execution.\r\n * <b>mysqli_stmt_free_result<\/b> closes any open cursor.\r\n * <\/p>\r\n * <p>\r\n * If you open a cursor for a prepared statement, <b>mysqli_stmt_store_result<\/b>\r\n * is unnecessary.\r\n * <\/p>\r\n * @param int $mode <p>The value to assign to the attribute.<\/p>\r\n * @return bool\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Used to modify the behavior of a prepared statement\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.attr-set.php\n * @param int $attr <p>\n * The attribute that you want to set. It can have one of the following values:\n * <table>\n * Attribute values\n * <tr valign=\"top\">\n * <td>Character<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH<\/td>\n * <td>\n * If set to 1, causes <b>mysqli_stmt_store_result<\/b> to\n * update the metadata MYSQL_FIELD->max_length value.\n * <\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>MYSQLI_STMT_ATTR_CURSOR_TYPE<\/td>\n * <td>\n * Type of cursor to open for statement when <b>mysqli_stmt_execute<\/b>\n * is invoked. <i>mode<\/i> can be MYSQLI_CURSOR_TYPE_NO_CURSOR\n * (the default) or MYSQLI_CURSOR_TYPE_READ_ONLY.\n * <\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>MYSQLI_STMT_ATTR_PREFETCH_ROWS<\/td>\n * <td>\n * Number of rows to fetch from server at a time when using a cursor.\n * <i>mode<\/i> can be in the range from 1 to the maximum\n * value of unsigned long. The default is 1.\n * <\/td>\n * <\/tr>\n * <\/table>\n * <\/p>\n * <p>\n * If you use the MYSQLI_STMT_ATTR_CURSOR_TYPE option with\n * MYSQLI_CURSOR_TYPE_READ_ONLY, a cursor is opened for the\n * statement when you invoke <b>mysqli_stmt_execute<\/b>. If there\n * is already an open cursor from a previous <b>mysqli_stmt_execute<\/b> call,\n * it closes the cursor before opening a new one. <b>mysqli_stmt_reset<\/b>\n * also closes any open cursor before preparing the statement for re-execution.\n * <b>mysqli_stmt_free_result<\/b> closes any open cursor.\n * <\/p>\n * <p>\n * If you open a cursor for a prepared statement, <b>mysqli_stmt_store_result<\/b>\n * is unnecessary.\n * <\/p>\n * @param int $mode <p>The value to assign to the attribute.<\/p>\n * @return bool\n *\/"
             },
             {
                 "name": "bind_param",
@@ -1174,7 +1219,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Binds variables to a prepared statement as parameters\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-param.php\r\n * @param string $types <p>\r\n * A string that contains one or more characters which specify the types\r\n * for the corresponding bind variables:\r\n * <table>\r\n * Type specification chars\r\n * <tr valign=\"top\">\r\n * <td>Character<\/td>\r\n * <td>Description<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>i<\/td>\r\n * <td>corresponding variable has type integer<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>d<\/td>\r\n * <td>corresponding variable has type double<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>s<\/td>\r\n * <td>corresponding variable has type string<\/td>\r\n * <\/tr>\r\n * <tr valign=\"top\">\r\n * <td>b<\/td>\r\n * <td>corresponding variable is a blob and will be sent in packets<\/td>\r\n * <\/tr>\r\n * <\/table>\r\n * <\/p>\r\n * @param mixed $var1 <p>\r\n * The number of variables and length of string\r\n * <i>types<\/i> must match the parameters in the statement.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Binds variables to a prepared statement as parameters\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-param.php\n * @param string $types <p>\n * A string that contains one or more characters which specify the types\n * for the corresponding bind variables:\n * <table>\n * Type specification chars\n * <tr valign=\"top\">\n * <td>Character<\/td>\n * <td>Description<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>i<\/td>\n * <td>corresponding variable has type integer<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>d<\/td>\n * <td>corresponding variable has type double<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>s<\/td>\n * <td>corresponding variable has type string<\/td>\n * <\/tr>\n * <tr valign=\"top\">\n * <td>b<\/td>\n * <td>corresponding variable is a blob and will be sent in packets<\/td>\n * <\/tr>\n * <\/table>\n * <\/p>\n * @param mixed $var1 <p>\n * The number of variables and length of string\n * <i>types<\/i> must match the parameters in the statement.\n * <\/p>\n * @param mixed $_ [optional]\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "bind_result",
@@ -1194,7 +1239,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Binds variables to a prepared statement for result storage\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-result.php\r\n * @param mixed $var1 <p>\r\n * The variable to be bound.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Binds variables to a prepared statement for result storage\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.bind-result.php\n * @param mixed $var1 <p>\n * The variable to be bound.\n * <\/p>\n * @param mixed $_ [optional]\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "close",
@@ -1203,7 +1248,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Closes a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.close.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Closes a prepared statement\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.close.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "data_seek",
@@ -1217,7 +1262,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Seeks to an arbitrary row in statement result set\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.data-seek.php\r\n * @param int $offset <p>\r\n * Must be between zero and the total number of rows minus one (0..\r\n * <b>mysqli_stmt_num_rows<\/b> - 1).\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Seeks to an arbitrary row in statement result set\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.data-seek.php\n * @param int $offset <p>\n * Must be between zero and the total number of rows minus one (0..\n * <b>mysqli_stmt_num_rows<\/b> - 1).\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "execute",
@@ -1226,7 +1271,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Executes a prepared Query\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.execute.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Executes a prepared Query\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.execute.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "fetch",
@@ -1235,7 +1280,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Fetch results from a prepared statement into the bound variables\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.fetch.php\r\n * @return bool\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Fetch results from a prepared statement into the bound variables\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.fetch.php\n * @return bool\n *\/"
             },
             {
                 "name": "get_result",
@@ -1244,7 +1289,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 >= 5.3.0)<br\/>\r\n * Gets a result set from a prepared statement\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.get-result.php\r\n * @return \\mysqli_result|boolean Returns a resultset or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 >= 5.3.0)<br\/>\n * Gets a result set from a prepared statement\n *\n * @link http:\/\/php.net\/mysqli-stmt.get-result.php\n * @return \\mysqli_result|boolean Returns a resultset or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "get_warnings",
@@ -1258,7 +1303,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Get result of SHOW WARNINGS\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.get-warnings.php\r\n * @param mysqli_stmt $stmt\r\n * @return object\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Get result of SHOW WARNINGS\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.get-warnings.php\n * @param mysqli_stmt $stmt\n * @return object\n *\/"
             },
             {
                 "name": "result_metadata",
@@ -1267,7 +1312,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns result set metadata from a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.result-metadata.php\r\n * @return mysqli_result a result object or <b>FALSE<\/b> if an error occurred.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns result set metadata from a prepared statement\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.result-metadata.php\n * @return mysqli_result a result object or <b>FALSE<\/b> if an error occurred.\n *\/"
             },
             {
                 "name": "num_rows",
@@ -1296,7 +1341,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Send data in blocks\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.send-long-data.php\r\n * @param int $param_nr <p>\r\n * Indicates which parameter to associate the data with. Parameters are\r\n * numbered beginning with 0.\r\n * <\/p>\r\n * @param string $data <p>\r\n * A string containing data to be sent.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Send data in blocks\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.send-long-data.php\n * @param int $param_nr <p>\n * Indicates which parameter to associate the data with. Parameters are\n * numbered beginning with 0.\n * <\/p>\n * @param string $data <p>\n * A string containing data to be sent.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "free_result",
@@ -1305,7 +1350,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Frees stored result memory for the given statement handle\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.free-result.php\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Frees stored result memory for the given statement handle\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.free-result.php\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "reset",
@@ -1314,7 +1359,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Resets a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.reset.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Resets a prepared statement\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.reset.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "prepare",
@@ -1328,7 +1373,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Prepare an SQL statement for execution\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.prepare.php\r\n * @param string $query <p>\r\n * The query, as a string. It must consist of a single SQL statement.\r\n * <\/p>\r\n * <p>\r\n * You can include one or more parameter markers in the SQL statement by\r\n * embedding question mark (?) characters at the\r\n * appropriate positions.\r\n * <\/p>\r\n * <p>\r\n * You should not add a terminating semicolon or \\g\r\n * to the statement.\r\n * <\/p>\r\n * <p>\r\n * The markers are legal only in certain places in SQL statements.\r\n * For example, they are allowed in the VALUES() list of an INSERT statement\r\n * (to specify column values for a row), or in a comparison with a column in\r\n * a WHERE clause to specify a comparison value.\r\n * <\/p>\r\n * <p>\r\n * However, they are not allowed for identifiers (such as table or column names),\r\n * in the select list that names the columns to be returned by a SELECT statement),\r\n * or to specify both operands of a binary operator such as the =\r\n * equal sign. The latter restriction is necessary because it would be impossible\r\n * to determine the parameter type. In general, parameters are legal only in Data\r\n * Manipulation Language (DML) statements, and not in Data Definition Language\r\n * (DDL) statements.\r\n * <\/p>\r\n * @return mixed <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Prepare an SQL statement for execution\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.prepare.php\n * @param string $query <p>\n * The query, as a string. It must consist of a single SQL statement.\n * <\/p>\n * <p>\n * You can include one or more parameter markers in the SQL statement by\n * embedding question mark (?) characters at the\n * appropriate positions.\n * <\/p>\n * <p>\n * You should not add a terminating semicolon or \\g\n * to the statement.\n * <\/p>\n * <p>\n * The markers are legal only in certain places in SQL statements.\n * For example, they are allowed in the VALUES() list of an INSERT statement\n * (to specify column values for a row), or in a comparison with a column in\n * a WHERE clause to specify a comparison value.\n * <\/p>\n * <p>\n * However, they are not allowed for identifiers (such as table or column names),\n * in the select list that names the columns to be returned by a SELECT statement),\n * or to specify both operands of a binary operator such as the =\n * equal sign. The latter restriction is necessary because it would be impossible\n * to determine the parameter type. In general, parameters are legal only in Data\n * Manipulation Language (DML) statements, and not in Data Definition Language\n * (DDL) statements.\n * <\/p>\n * @return mixed <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             },
             {
                 "name": "store_result",
@@ -1337,48 +1382,58 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Transfers a result set from a prepared statement\r\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.store-result.php\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Transfers a result set from a prepared statement\n * @link http:\/\/php.net\/manual\/en\/mysqli-stmt.store-result.php\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             }
         ],
         "properties": [
             {
                 "name": "affected_rows",
-                "doc": "\/**\r\n * (PHP 5)<br\/>\r\n * Returns the total number of rows changed, deleted, or inserted by the last executed statement.\r\n *\r\n * Returns the number of rows affected by <i>INSERT<\/i>, <i>UPDATE<\/i>, or <i>DELETE<\/i> query. This function only\r\n * works with queries which update a table. In order to get the number of rows from a <i>SELECT<\/i> query, use\r\n * {@see mysqli_stmt::num_rows()} instead.\r\n *\r\n * An integer greater than zero indicates the number of rows affected or retrieved. Zero indicates that no records\r\n * where updated for an <i>UPDATE<\/i>\/<i>DELETE<\/i> statement, no rows matched the <i>WHERE<\/i> clause in the query or\r\n * that no query has yet been executed. <code>-1<\/code> indicates that the query has returned an error.\r\n * <code>NULL<\/code> indicates an invalid argument was supplied to the function.\r\n *\r\n * <b>Note:<\/b>\r\n * If the number of affected rows is greater than maximal PHP int value, the number of affected rows will be returned\r\n * as a string value.\r\n *\r\n * @link http:\/\/php.net\/mysqli-stmt.affected-rows.php\r\n * @var integer|string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * (PHP 5)<br\/>\n * Returns the total number of rows changed, deleted, or inserted by the last executed statement.\n *\n * Returns the number of rows affected by <i>INSERT<\/i>, <i>UPDATE<\/i>, or <i>DELETE<\/i> query. This function only\n * works with queries which update a table. In order to get the number of rows from a <i>SELECT<\/i> query, use\n * {@see mysqli_stmt::num_rows()} instead.\n *\n * An integer greater than zero indicates the number of rows affected or retrieved. Zero indicates that no records\n * where updated for an <i>UPDATE<\/i>\/<i>DELETE<\/i> statement, no rows matched the <i>WHERE<\/i> clause in the query or\n * that no query has yet been executed. <code>-1<\/code> indicates that the query has returned an error.\n * <code>NULL<\/code> indicates an invalid argument was supplied to the function.\n *\n * <b>Note:<\/b>\n * If the number of affected rows is greater than maximal PHP int value, the number of affected rows will be returned\n * as a string value.\n *\n * @link http:\/\/php.net\/mysqli-stmt.affected-rows.php\n * @var integer|string\n *\/"
             },
             {
                 "name": "insert_id",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "num_rows",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "param_count",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "field_count",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "errno",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "error",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "error_list",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "sqlstate",
+                "type": 1,
                 "doc": null
             },
             {
                 "name": "id",
+                "type": 1,
                 "doc": null
             }
         ],

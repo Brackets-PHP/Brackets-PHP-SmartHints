@@ -4,34 +4,40 @@
         "name": "LibXMLError",
         "fqn": "\\LibXMLError",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
 
         ],
         "properties": [
             {
                 "name": "level",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * the severity of the error (one of the following constants:\r\n * <b><code>LIBXML_ERR_WARNING<\/code><\/b>,\r\n * <b><code>LIBXML_ERR_ERROR<\/code><\/b> or\r\n * <b><code>LIBXML_ERR_FATAL<\/code><\/b>)\r\n * <\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * the severity of the error (one of the following constants:\n * <b><code>LIBXML_ERR_WARNING<\/code><\/b>,\n * <b><code>LIBXML_ERR_ERROR<\/code><\/b> or\n * <b><code>LIBXML_ERR_FATAL<\/code><\/b>)\n * <\/p>\n * @var int\n *\/"
             },
             {
                 "name": "code",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * The error's code.\r\n * <\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * The error's code.\n * <\/p>\n * @var int\n *\/"
             },
             {
                 "name": "column",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * The column where the error occurred.\r\n * <\/p>\r\n * <p><b>Note<\/b>:\r\n * <\/p><p>\r\n * This property isn't entirely implemented in libxml and therefore\r\n * 0 is often returned.\r\n * <\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * The column where the error occurred.\n * <\/p>\n * <p><b>Note<\/b>:\n * <\/p><p>\n * This property isn't entirely implemented in libxml and therefore\n * 0 is often returned.\n * <\/p>\n * @var int\n *\/"
             },
             {
                 "name": "message",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * The error message, if any.\r\n * <\/p>\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * The error message, if any.\n * <\/p>\n * @var string\n *\/"
             },
             {
                 "name": "file",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">The filename, or empty if the XML was loaded from a string.<\/p>\r\n * @var string\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">The filename, or empty if the XML was loaded from a string.<\/p>\n * @var string\n *\/"
             },
             {
                 "name": "line",
-                "doc": "\/**\r\n * <p style=\"margin-top:0;\">\r\n * The line where the error occurred.\r\n * <\/p>\r\n * @var int\r\n *\/"
+                "type": 1,
+                "doc": "\/**\n * <p style=\"margin-top:0;\">\n * The line where the error occurred.\n * <\/p>\n * @var int\n *\/"
             }
         ],
         "constants": [

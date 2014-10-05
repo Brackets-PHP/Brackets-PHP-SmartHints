@@ -4,7 +4,7 @@
         "name": "SoapClient",
         "fqn": "\\SoapClient",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "SoapClient",
@@ -24,7 +24,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapClient constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.soapclient.php\r\n * @param mixed $wsdl <p>\r\n * URI of the WSDL file or <b>NULL<\/b> if working in\r\n * non-WSDL mode.\r\n * <\/p>\r\n * <p>\r\n * During development, WSDL caching may be disabled by the\r\n * use of the soap.wsdl_cache_ttl <i>php.ini<\/i> setting\r\n * otherwise changes made to the WSDL file will have no effect until\r\n * soap.wsdl_cache_ttl is expired.\r\n * <\/p>\r\n * @param array $options [optional] <p>\r\n * An array of options. If working in WSDL mode, this parameter is optional.\r\n * If working in non-WSDL mode, the location and\r\n * uri options must be set, where location\r\n * is the URL of the SOAP server to send the request to, and uri\r\n * is the target namespace of the SOAP service.\r\n * <\/p>\r\n * <p>\r\n * The style and use options only work in\r\n * non-WSDL mode. In WSDL mode, they come from the WSDL file.\r\n * <\/p>\r\n * <p>\r\n * The soap_version option should be one of either\r\n * <b>SOAP_1_1<\/b> or <b>SOAP_1_2<\/b> to\r\n * select SOAP 1.1 or 1.2, respectively. If omitted, 1.1 is used.\r\n * <\/p>\r\n * <p>\r\n * For HTTP authentication, the login and\r\n * password options can be used to supply credentials.\r\n * For making an HTTP connection through\r\n * a proxy server, the options proxy_host,\r\n * proxy_port, proxy_login\r\n * and proxy_password are also available.\r\n * For HTTPS client certificate authentication use\r\n * local_cert and passphrase options. An\r\n * authentication may be supplied in the authentication\r\n * option. The authentication method may be either\r\n * <b>SOAP_AUTHENTICATION_BASIC<\/b> (default) or\r\n * <b>SOAP_AUTHENTICATION_DIGEST<\/b>.\r\n * <\/p>\r\n * <p>\r\n * The compression option allows to use compression\r\n * of HTTP SOAP requests and responses.\r\n * <\/p>\r\n * <p>\r\n * The encoding option defines internal character\r\n * encoding. This option does not change the encoding of SOAP requests (it is\r\n * always utf-8), but converts strings into it.\r\n * <\/p>\r\n * <p>\r\n * The trace option enables tracing of request so faults\r\n * can be backtraced. This defaults to <b>FALSE<\/b>\r\n * <\/p>\r\n * <p>\r\n * The classmap option can be used to map some WSDL\r\n * types to PHP classes. This option must be an array with WSDL types\r\n * as keys and names of PHP classes as values.\r\n * <\/p>\r\n * <p>\r\n * Setting the boolean trace option enables use of the\r\n * methods\r\n * SoapClient->__getLastRequest,\r\n * SoapClient->__getLastRequestHeaders,\r\n * SoapClient->__getLastResponse and\r\n * SoapClient->__getLastResponseHeaders.\r\n * <\/p>\r\n * <p>\r\n * The exceptions option is a boolean value defining whether\r\n * soap errors throw exceptions of type\r\n * SoapFault.\r\n * <\/p>\r\n * <p>\r\n * The connection_timeout option defines a timeout in seconds\r\n * for the connection to the SOAP service. This option does not define a timeout\r\n * for services with slow responses. To limit the time to wait for calls to finish the\r\n * default_socket_timeout setting\r\n * is available.\r\n * <\/p>\r\n * <p>\r\n * The typemap option is an array of type mappings.\r\n * Type mapping is an array with keys type_name,\r\n * type_ns (namespace URI), from_xml\r\n * (callback accepting one string parameter) and to_xml\r\n * (callback accepting one object parameter).\r\n * <\/p>\r\n * <p>\r\n * The cache_wsdl option is one of\r\n * <b>WSDL_CACHE_NONE<\/b>,\r\n * <b>WSDL_CACHE_DISK<\/b>,\r\n * <b>WSDL_CACHE_MEMORY<\/b> or\r\n * <b>WSDL_CACHE_BOTH<\/b>.\r\n * <\/p>\r\n * <p>\r\n * The user_agent option specifies string to use in\r\n * User-Agent header.\r\n * <\/p>\r\n * <p>\r\n * The stream_context option is a resource\r\n * for context.\r\n * <\/p>\r\n * <p>\r\n * The features option is a bitmask of\r\n * <b>SOAP_SINGLE_ELEMENT_ARRAYS<\/b>,\r\n * <b>SOAP_USE_XSI_ARRAY_TYPE<\/b>,\r\n * <b>SOAP_WAIT_ONE_WAY_CALLS<\/b>.\r\n * <\/p>\r\n * <p>\r\n * The keep_alive option is a boolean value defining whether\r\n * to send the Connection: Keep-Alive header or\r\n * Connection: close.\r\n * <\/p>\r\n * <p>\r\n * The ssl_method option is one of\r\n * <b>SOAP_SSL_METHOD_TLS<\/b>,\r\n * <b>SOAP_SSL_METHOD_SSLv2<\/b>,\r\n * <b>SOAP_SSL_METHOD_SSLv3<\/b> or\r\n * <b>SOAP_SSL_METHOD_SSLv23<\/b>.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapClient constructor\n * @link http:\/\/php.net\/manual\/en\/soapclient.soapclient.php\n * @param mixed $wsdl <p>\n * URI of the WSDL file or <b>NULL<\/b> if working in\n * non-WSDL mode.\n * <\/p>\n * <p>\n * During development, WSDL caching may be disabled by the\n * use of the soap.wsdl_cache_ttl <i>php.ini<\/i> setting\n * otherwise changes made to the WSDL file will have no effect until\n * soap.wsdl_cache_ttl is expired.\n * <\/p>\n * @param array $options [optional] <p>\n * An array of options. If working in WSDL mode, this parameter is optional.\n * If working in non-WSDL mode, the location and\n * uri options must be set, where location\n * is the URL of the SOAP server to send the request to, and uri\n * is the target namespace of the SOAP service.\n * <\/p>\n * <p>\n * The style and use options only work in\n * non-WSDL mode. In WSDL mode, they come from the WSDL file.\n * <\/p>\n * <p>\n * The soap_version option should be one of either\n * <b>SOAP_1_1<\/b> or <b>SOAP_1_2<\/b> to\n * select SOAP 1.1 or 1.2, respectively. If omitted, 1.1 is used.\n * <\/p>\n * <p>\n * For HTTP authentication, the login and\n * password options can be used to supply credentials.\n * For making an HTTP connection through\n * a proxy server, the options proxy_host,\n * proxy_port, proxy_login\n * and proxy_password are also available.\n * For HTTPS client certificate authentication use\n * local_cert and passphrase options. An\n * authentication may be supplied in the authentication\n * option. The authentication method may be either\n * <b>SOAP_AUTHENTICATION_BASIC<\/b> (default) or\n * <b>SOAP_AUTHENTICATION_DIGEST<\/b>.\n * <\/p>\n * <p>\n * The compression option allows to use compression\n * of HTTP SOAP requests and responses.\n * <\/p>\n * <p>\n * The encoding option defines internal character\n * encoding. This option does not change the encoding of SOAP requests (it is\n * always utf-8), but converts strings into it.\n * <\/p>\n * <p>\n * The trace option enables tracing of request so faults\n * can be backtraced. This defaults to <b>FALSE<\/b>\n * <\/p>\n * <p>\n * The classmap option can be used to map some WSDL\n * types to PHP classes. This option must be an array with WSDL types\n * as keys and names of PHP classes as values.\n * <\/p>\n * <p>\n * Setting the boolean trace option enables use of the\n * methods\n * SoapClient->__getLastRequest,\n * SoapClient->__getLastRequestHeaders,\n * SoapClient->__getLastResponse and\n * SoapClient->__getLastResponseHeaders.\n * <\/p>\n * <p>\n * The exceptions option is a boolean value defining whether\n * soap errors throw exceptions of type\n * SoapFault.\n * <\/p>\n * <p>\n * The connection_timeout option defines a timeout in seconds\n * for the connection to the SOAP service. This option does not define a timeout\n * for services with slow responses. To limit the time to wait for calls to finish the\n * default_socket_timeout setting\n * is available.\n * <\/p>\n * <p>\n * The typemap option is an array of type mappings.\n * Type mapping is an array with keys type_name,\n * type_ns (namespace URI), from_xml\n * (callback accepting one string parameter) and to_xml\n * (callback accepting one object parameter).\n * <\/p>\n * <p>\n * The cache_wsdl option is one of\n * <b>WSDL_CACHE_NONE<\/b>,\n * <b>WSDL_CACHE_DISK<\/b>,\n * <b>WSDL_CACHE_MEMORY<\/b> or\n * <b>WSDL_CACHE_BOTH<\/b>.\n * <\/p>\n * <p>\n * The user_agent option specifies string to use in\n * User-Agent header.\n * <\/p>\n * <p>\n * The stream_context option is a resource\n * for context.\n * <\/p>\n * <p>\n * The features option is a bitmask of\n * <b>SOAP_SINGLE_ELEMENT_ARRAYS<\/b>,\n * <b>SOAP_USE_XSI_ARRAY_TYPE<\/b>,\n * <b>SOAP_WAIT_ONE_WAY_CALLS<\/b>.\n * <\/p>\n * <p>\n * The keep_alive option is a boolean value defining whether\n * to send the Connection: Keep-Alive header or\n * Connection: close.\n * <\/p>\n * <p>\n * The ssl_method option is one of\n * <b>SOAP_SSL_METHOD_TLS<\/b>,\n * <b>SOAP_SSL_METHOD_SSLv2<\/b>,\n * <b>SOAP_SSL_METHOD_SSLv3<\/b> or\n * <b>SOAP_SSL_METHOD_SSLv23<\/b>.\n * <\/p>\n *\/"
             },
             {
                 "name": "__call",
@@ -44,7 +44,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Calls a SOAP function (deprecated)\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.call.php\r\n * @param string $function_name\r\n * @param string $arguments\r\n * @return mixed\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Calls a SOAP function (deprecated)\n * @link http:\/\/php.net\/manual\/en\/soapclient.call.php\n * @param string $function_name\n * @param string $arguments\n * @return mixed\n *\/"
             },
             {
                 "name": "__soapCall",
@@ -82,7 +82,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Calls a SOAP function\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.soapcall.php\r\n * @param string $function_name <p>\r\n * The name of the SOAP function to call.\r\n * <\/p>\r\n * @param array $arguments <p>\r\n * An array of the arguments to pass to the function. This can be either\r\n * an ordered or an associative array. Note that most SOAP servers require\r\n * parameter names to be provided, in which case this must be an\r\n * associative array.\r\n * <\/p>\r\n * @param array $options [optional] <p>\r\n * An associative array of options to pass to the client.\r\n * <\/p>\r\n * <p>\r\n * The location option is the URL of the remote Web service.\r\n * <\/p>\r\n * <p>\r\n * The uri option is the target namespace of the SOAP service.\r\n * <\/p>\r\n * <p>\r\n * The soapaction option is the action to call.\r\n * <\/p>\r\n * @param mixed $input_headers [optional] <p>\r\n * An array of headers to be sent along with the SOAP request.\r\n * <\/p>\r\n * @param array $output_headers [optional] <p>\r\n * If supplied, this array will be filled with the headers from the SOAP response.\r\n * <\/p>\r\n * @return mixed SOAP functions may return one, or multiple values. If only one value is returned\r\n * by the SOAP function, the return value of __soapCall will be\r\n * a simple value (e.g. an integer, a string, etc). If multiple values are\r\n * returned, __soapCall will return\r\n * an associative array of named output parameters.\r\n * <\/p>\r\n * <p>\r\n * On error, if the SoapClient object was constructed with the exceptions\r\n * option set to <b>FALSE<\/b>, a SoapFault object will be returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Calls a SOAP function\n * @link http:\/\/php.net\/manual\/en\/soapclient.soapcall.php\n * @param string $function_name <p>\n * The name of the SOAP function to call.\n * <\/p>\n * @param array $arguments <p>\n * An array of the arguments to pass to the function. This can be either\n * an ordered or an associative array. Note that most SOAP servers require\n * parameter names to be provided, in which case this must be an\n * associative array.\n * <\/p>\n * @param array $options [optional] <p>\n * An associative array of options to pass to the client.\n * <\/p>\n * <p>\n * The location option is the URL of the remote Web service.\n * <\/p>\n * <p>\n * The uri option is the target namespace of the SOAP service.\n * <\/p>\n * <p>\n * The soapaction option is the action to call.\n * <\/p>\n * @param mixed $input_headers [optional] <p>\n * An array of headers to be sent along with the SOAP request.\n * <\/p>\n * @param array $output_headers [optional] <p>\n * If supplied, this array will be filled with the headers from the SOAP response.\n * <\/p>\n * @return mixed SOAP functions may return one, or multiple values. If only one value is returned\n * by the SOAP function, the return value of __soapCall will be\n * a simple value (e.g. an integer, a string, etc). If multiple values are\n * returned, __soapCall will return\n * an associative array of named output parameters.\n * <\/p>\n * <p>\n * On error, if the SoapClient object was constructed with the exceptions\n * option set to <b>FALSE<\/b>, a SoapFault object will be returned.\n *\/"
             },
             {
                 "name": "__getLastRequest",
@@ -91,7 +91,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns last SOAP request\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastrequest.php\r\n * @return string The last SOAP request, as an XML string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns last SOAP request\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastrequest.php\n * @return string The last SOAP request, as an XML string.\n *\/"
             },
             {
                 "name": "__getLastResponse",
@@ -100,7 +100,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns last SOAP response\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastresponse.php\r\n * @return string The last SOAP response, as an XML string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns last SOAP response\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastresponse.php\n * @return string The last SOAP response, as an XML string.\n *\/"
             },
             {
                 "name": "__getLastRequestHeaders",
@@ -109,7 +109,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns the SOAP headers from the last request\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastrequestheaders.php\r\n * @return string The last SOAP request headers.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns the SOAP headers from the last request\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastrequestheaders.php\n * @return string The last SOAP request headers.\n *\/"
             },
             {
                 "name": "__getLastResponseHeaders",
@@ -118,7 +118,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns the SOAP headers from the last response\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastresponseheaders.php\r\n * @return string The last SOAP response headers.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns the SOAP headers from the last response\n * @link http:\/\/php.net\/manual\/en\/soapclient.getlastresponseheaders.php\n * @return string The last SOAP response headers.\n *\/"
             },
             {
                 "name": "__getFunctions",
@@ -127,7 +127,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns list of available SOAP functions\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.getfunctions.php\r\n * @return array The array of SOAP function prototypes, detailing the return type,\r\n * the function name and type-hinted paramaters.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns list of available SOAP functions\n * @link http:\/\/php.net\/manual\/en\/soapclient.getfunctions.php\n * @return array The array of SOAP function prototypes, detailing the return type,\n * the function name and type-hinted paramaters.\n *\/"
             },
             {
                 "name": "__getTypes",
@@ -136,7 +136,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns a list of SOAP types\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.gettypes.php\r\n * @return array The array of SOAP types, detailing all structures and types.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns a list of SOAP types\n * @link http:\/\/php.net\/manual\/en\/soapclient.gettypes.php\n * @return array The array of SOAP types, detailing all structures and types.\n *\/"
             },
             {
                 "name": "__doRequest",
@@ -174,7 +174,7 @@
                         "default": 0
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Performs a SOAP request\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.dorequest.php\r\n * @param string $request <p>\r\n * The XML SOAP request.\r\n * <\/p>\r\n * @param string $location <p>\r\n * The URL to request.\r\n * <\/p>\r\n * @param string $action <p>\r\n * The SOAP action.\r\n * <\/p>\r\n * @param int $version <p>\r\n * The SOAP version.\r\n * <\/p>\r\n * @param int $one_way [optional] <p>\r\n * If one_way is set to 1, this method returns nothing.\r\n * Use this where a response is not expected.\r\n * <\/p>\r\n * @return string The XML SOAP response.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Performs a SOAP request\n * @link http:\/\/php.net\/manual\/en\/soapclient.dorequest.php\n * @param string $request <p>\n * The XML SOAP request.\n * <\/p>\n * @param string $location <p>\n * The URL to request.\n * <\/p>\n * @param string $action <p>\n * The SOAP action.\n * <\/p>\n * @param int $version <p>\n * The SOAP version.\n * <\/p>\n * @param int $one_way [optional] <p>\n * If one_way is set to 1, this method returns nothing.\n * Use this where a response is not expected.\n * <\/p>\n * @return string The XML SOAP response.\n *\/"
             },
             {
                 "name": "__setCookie",
@@ -194,7 +194,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.4)<br\/>\r\n * The __setCookie purpose\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.setcookie.php\r\n * @param string $name <p>\r\n * The name of the cookie.\r\n * <\/p>\r\n * @param string $value [optional] <p>\r\n * The value of the cookie. If not specified, the cookie will be deleted.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.4)<br\/>\n * The __setCookie purpose\n * @link http:\/\/php.net\/manual\/en\/soapclient.setcookie.php\n * @param string $name <p>\n * The name of the cookie.\n * <\/p>\n * @param string $value [optional] <p>\n * The value of the cookie. If not specified, the cookie will be deleted.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "__setLocation",
@@ -208,7 +208,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Sets the location of the Web service to use\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.setlocation.php\r\n * @param string $new_location [optional] <p>\r\n * The new endpoint URL.\r\n * <\/p>\r\n * @return string The old endpoint URL.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Sets the location of the Web service to use\n * @link http:\/\/php.net\/manual\/en\/soapclient.setlocation.php\n * @param string $new_location [optional] <p>\n * The new endpoint URL.\n * <\/p>\n * @return string The old endpoint URL.\n *\/"
             },
             {
                 "name": "__setSoapHeaders",
@@ -222,7 +222,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.5)<br\/>\r\n * Sets SOAP headers for subsequent calls\r\n * @link http:\/\/php.net\/manual\/en\/soapclient.setsoapheaders.php\r\n * @param mixed $soapheaders [optional] <p>\r\n * The headers to be set. It could be <b>SoapHeader<\/b>\r\n * object or array of <b>SoapHeader<\/b> objects.\r\n * If not specified or set to <b>NULL<\/b>, the headers will be deleted.\r\n * <\/p>\r\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.5)<br\/>\n * Sets SOAP headers for subsequent calls\n * @link http:\/\/php.net\/manual\/en\/soapclient.setsoapheaders.php\n * @param mixed $soapheaders [optional] <p>\n * The headers to be set. It could be <b>SoapHeader<\/b>\n * object or array of <b>SoapHeader<\/b> objects.\n * If not specified or set to <b>NULL<\/b>, the headers will be deleted.\n * <\/p>\n * @return bool <b>TRUE<\/b> on success or <b>FALSE<\/b> on failure.\n *\/"
             }
         ],
         "properties": [
@@ -237,7 +237,7 @@
         "name": "SoapVar",
         "fqn": "\\SoapVar",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "SoapVar",
@@ -281,7 +281,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapVar constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapvar.soapvar.php\r\n * @param mixed $data <p>\r\n * The data to pass or return.\r\n * <\/p>\r\n * @param string $encoding <p>\r\n * The encoding ID, one of the XSD_... constants.\r\n * <\/p>\r\n * @param string $type_name [optional] <p>\r\n * The type name.\r\n * <\/p>\r\n * @param string $type_namespace [optional] <p>\r\n * The type namespace.\r\n * <\/p>\r\n * @param string $node_name [optional] <p>\r\n * The XML node name.\r\n * <\/p>\r\n * @param string $node_namespace [optional] <p>\r\n * The XML node namespace.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapVar constructor\n * @link http:\/\/php.net\/manual\/en\/soapvar.soapvar.php\n * @param mixed $data <p>\n * The data to pass or return.\n * <\/p>\n * @param string $encoding <p>\n * The encoding ID, one of the XSD_... constants.\n * <\/p>\n * @param string $type_name [optional] <p>\n * The type name.\n * <\/p>\n * @param string $type_namespace [optional] <p>\n * The type namespace.\n * <\/p>\n * @param string $node_name [optional] <p>\n * The XML node name.\n * <\/p>\n * @param string $node_namespace [optional] <p>\n * The XML node namespace.\n * <\/p>\n *\/"
             }
         ],
         "properties": [
@@ -296,7 +296,7 @@
         "name": "SoapServer",
         "fqn": "\\SoapServer",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "SoapServer",
@@ -316,7 +316,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapServer constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.soapserver.php\r\n * @param mixed $wsdl <p>\r\n * To use the SoapServer in WSDL mode, pass the URI of a WSDL file.\r\n * Otherwise, pass <b>NULL<\/b> and set the uri option to the\r\n * target namespace for the server.\r\n * <\/p>\r\n * @param array $options [optional] <p>\r\n * Allow setting a default SOAP version (soap_version),\r\n * internal character encoding (encoding),\r\n * and actor URI (actor).\r\n * <\/p>\r\n * <p>\r\n * The classmap option can be used to map some WSDL\r\n * types to PHP classes. This option must be an array with WSDL types\r\n * as keys and names of PHP classes as values.\r\n * <\/p>\r\n * <p>\r\n * The typemap option is an array of type mappings.\r\n * Type mapping is an array with keys type_name,\r\n * type_ns (namespace URI), from_xml\r\n * (callback accepting one string parameter) and to_xml\r\n * (callback accepting one object parameter).\r\n * <\/p>\r\n * <p>\r\n * The cache_wsdl option is one of\r\n * <b>WSDL_CACHE_NONE<\/b>,\r\n * <b>WSDL_CACHE_DISK<\/b>,\r\n * <b>WSDL_CACHE_MEMORY<\/b> or\r\n * <b>WSDL_CACHE_BOTH<\/b>.\r\n * <\/p>\r\n * <p>\r\n * There is also a features option which can be set to\r\n * <b>SOAP_WAIT_ONE_WAY_CALLS<\/b>,\r\n * <b>SOAP_SINGLE_ELEMENT_ARRAYS<\/b>,\r\n * <b>SOAP_USE_XSI_ARRAY_TYPE<\/b>.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapServer constructor\n * @link http:\/\/php.net\/manual\/en\/soapserver.soapserver.php\n * @param mixed $wsdl <p>\n * To use the SoapServer in WSDL mode, pass the URI of a WSDL file.\n * Otherwise, pass <b>NULL<\/b> and set the uri option to the\n * target namespace for the server.\n * <\/p>\n * @param array $options [optional] <p>\n * Allow setting a default SOAP version (soap_version),\n * internal character encoding (encoding),\n * and actor URI (actor).\n * <\/p>\n * <p>\n * The classmap option can be used to map some WSDL\n * types to PHP classes. This option must be an array with WSDL types\n * as keys and names of PHP classes as values.\n * <\/p>\n * <p>\n * The typemap option is an array of type mappings.\n * Type mapping is an array with keys type_name,\n * type_ns (namespace URI), from_xml\n * (callback accepting one string parameter) and to_xml\n * (callback accepting one object parameter).\n * <\/p>\n * <p>\n * The cache_wsdl option is one of\n * <b>WSDL_CACHE_NONE<\/b>,\n * <b>WSDL_CACHE_DISK<\/b>,\n * <b>WSDL_CACHE_MEMORY<\/b> or\n * <b>WSDL_CACHE_BOTH<\/b>.\n * <\/p>\n * <p>\n * There is also a features option which can be set to\n * <b>SOAP_WAIT_ONE_WAY_CALLS<\/b>,\n * <b>SOAP_SINGLE_ELEMENT_ARRAYS<\/b>,\n * <b>SOAP_USE_XSI_ARRAY_TYPE<\/b>.\n * <\/p>\n *\/"
             },
             {
                 "name": "setPersistence",
@@ -330,7 +330,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.2)<br\/>\r\n * Sets SoapServer persistence mode\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.setpersistence.php\r\n * @param int $mode <p>\r\n * One of the SOAP_PERSISTENCE_XXX constants.\r\n * <\/p>\r\n * <p>\r\n * <b>SOAP_PERSISTENCE_REQUEST<\/b> - SoapServer data does not persist between\r\n * requests. This is the default behavior of any SoapServer\r\n * object after setClass is called.\r\n * <\/p>\r\n * <p>\r\n * <b>SOAP_PERSISTENCE_SESSION<\/b> - SoapServer data persists between requests.\r\n * This is accomplished by serializing the SoapServer class data into\r\n * $_SESSION['_bogus_session_name'], because of this\r\n * <b>session_start<\/b> must be called before this persistence mode is set.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.2)<br\/>\n * Sets SoapServer persistence mode\n * @link http:\/\/php.net\/manual\/en\/soapserver.setpersistence.php\n * @param int $mode <p>\n * One of the SOAP_PERSISTENCE_XXX constants.\n * <\/p>\n * <p>\n * <b>SOAP_PERSISTENCE_REQUEST<\/b> - SoapServer data does not persist between\n * requests. This is the default behavior of any SoapServer\n * object after setClass is called.\n * <\/p>\n * <p>\n * <b>SOAP_PERSISTENCE_SESSION<\/b> - SoapServer data persists between requests.\n * This is accomplished by serializing the SoapServer class data into\n * $_SESSION['_bogus_session_name'], because of this\n * <b>session_start<\/b> must be called before this persistence mode is set.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "setClass",
@@ -356,7 +356,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Sets the class which handles SOAP requests\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.setclass.php\r\n * @param string $class_name <p>\r\n * The name of the exported class.\r\n * <\/p>\r\n * @param mixed $args [optional] <p>\r\n * These optional parameters will be passed to the default class constructor\r\n * during object creation.\r\n * <\/p>\r\n * @param mixed $_ [optional]\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Sets the class which handles SOAP requests\n * @link http:\/\/php.net\/manual\/en\/soapserver.setclass.php\n * @param string $class_name <p>\n * The name of the exported class.\n * <\/p>\n * @param mixed $args [optional] <p>\n * These optional parameters will be passed to the default class constructor\n * during object creation.\n * <\/p>\n * @param mixed $_ [optional]\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "setObject",
@@ -370,7 +370,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.2.0)<br\/>\r\n * Sets the object which will be used to handle SOAP requests\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.setobject.php\r\n * @param object $object <p>\r\n * The object to handle the requests.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.2.0)<br\/>\n * Sets the object which will be used to handle SOAP requests\n * @link http:\/\/php.net\/manual\/en\/soapserver.setobject.php\n * @param object $object <p>\n * The object to handle the requests.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "addFunction",
@@ -384,7 +384,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Adds one or more functions to handle SOAP requests\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.addfunction.php\r\n * @param mixed $functions <p>\r\n * To export one function, pass the function name into this parameter as\r\n * a string.\r\n * <\/p>\r\n * <p>\r\n * To export several functions, pass an array of function names.\r\n * <\/p>\r\n * <p>\r\n * To export all the functions, pass a special constant <b>SOAP_FUNCTIONS_ALL<\/b>.\r\n * <\/p>\r\n * <p>\r\n * <i>functions<\/i> must receive all input arguments in the same\r\n * order as defined in the WSDL file (They should not receive any output parameters\r\n * as arguments) and return one or more values. To return several values they must\r\n * return an array with named output parameters.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Adds one or more functions to handle SOAP requests\n * @link http:\/\/php.net\/manual\/en\/soapserver.addfunction.php\n * @param mixed $functions <p>\n * To export one function, pass the function name into this parameter as\n * a string.\n * <\/p>\n * <p>\n * To export several functions, pass an array of function names.\n * <\/p>\n * <p>\n * To export all the functions, pass a special constant <b>SOAP_FUNCTIONS_ALL<\/b>.\n * <\/p>\n * <p>\n * <i>functions<\/i> must receive all input arguments in the same\n * order as defined in the WSDL file (They should not receive any output parameters\n * as arguments) and return one or more values. To return several values they must\n * return an array with named output parameters.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "getFunctions",
@@ -393,7 +393,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Returns list of defined functions\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.getfunctions.php\r\n * @return array An array of the defined functions.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Returns list of defined functions\n * @link http:\/\/php.net\/manual\/en\/soapserver.getfunctions.php\n * @return array An array of the defined functions.\n *\/"
             },
             {
                 "name": "handle",
@@ -407,7 +407,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Handles a SOAP request\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.handle.php\r\n * @param string $soap_request [optional] <p>\r\n * The SOAP request. If this argument is omitted, the request is assumed to be\r\n * in the raw POST data of the HTTP request.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Handles a SOAP request\n * @link http:\/\/php.net\/manual\/en\/soapserver.handle.php\n * @param string $soap_request [optional] <p>\n * The SOAP request. If this argument is omitted, the request is assumed to be\n * in the raw POST data of the HTTP request.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "fault",
@@ -445,7 +445,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Issue SoapServer fault indicating an error\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.fault.php\r\n * @param string $code <p>\r\n * The error code to return\r\n * <\/p>\r\n * @param string $string <p>\r\n * A brief description of the error\r\n * <\/p>\r\n * @param string $actor [optional] <p>\r\n * A string identifying the actor that caused the fault.\r\n * <\/p>\r\n * @param string $details [optional] <p>\r\n * More details of the fault\r\n * <\/p>\r\n * @param string $name [optional] <p>\r\n * The name of the fault. This can be used to select a name from a WSDL file.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Issue SoapServer fault indicating an error\n * @link http:\/\/php.net\/manual\/en\/soapserver.fault.php\n * @param string $code <p>\n * The error code to return\n * <\/p>\n * @param string $string <p>\n * A brief description of the error\n * <\/p>\n * @param string $actor [optional] <p>\n * A string identifying the actor that caused the fault.\n * <\/p>\n * @param string $details [optional] <p>\n * More details of the fault\n * <\/p>\n * @param string $name [optional] <p>\n * The name of the fault. This can be used to select a name from a WSDL file.\n * <\/p>\n * @return void No value is returned.\n *\/"
             },
             {
                 "name": "addSoapHeader",
@@ -459,7 +459,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Add a SOAP header to the response\r\n * @link http:\/\/php.net\/manual\/en\/soapserver.addsoapheader.php\r\n * @param SoapHeader $object <p>\r\n * The header to be returned.\r\n * <\/p>\r\n * @return void No value is returned.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Add a SOAP header to the response\n * @link http:\/\/php.net\/manual\/en\/soapserver.addsoapheader.php\n * @param SoapHeader $object <p>\n * The header to be returned.\n * <\/p>\n * @return void No value is returned.\n *\/"
             }
         ],
         "properties": [
@@ -474,7 +474,7 @@
         "name": "SoapFault",
         "fqn": "\\SoapFault",
         "type": 0,
-        "extends": "Exception",
+        "extendsClass": "Exception",
         "methods": [
             {
                 "name": "SoapFault",
@@ -518,7 +518,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapFault constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapfault.soapfault.php\r\n * @param string $faultcode <p>\r\n * The error code of the <b>SoapFault<\/b>.\r\n * <\/p>\r\n * @param string $faultstring <p>\r\n * The error message of the <b>SoapFault<\/b>.\r\n * <\/p>\r\n * @param string $faultactor [optional] <p>\r\n * A string identifying the actor that caused the error.\r\n * <\/p>\r\n * @param string $detail [optional] <p>\r\n * More details about the cause of the error.\r\n * <\/p>\r\n * @param string $faultname [optional] <p>\r\n * Can be used to select the proper fault encoding from WSDL.\r\n * <\/p>\r\n * @param string $headerfault [optional] <p>\r\n * Can be used during SOAP header handling to report an error in the\r\n * response header.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapFault constructor\n * @link http:\/\/php.net\/manual\/en\/soapfault.soapfault.php\n * @param string $faultcode <p>\n * The error code of the <b>SoapFault<\/b>.\n * <\/p>\n * @param string $faultstring <p>\n * The error message of the <b>SoapFault<\/b>.\n * <\/p>\n * @param string $faultactor [optional] <p>\n * A string identifying the actor that caused the error.\n * <\/p>\n * @param string $detail [optional] <p>\n * More details about the cause of the error.\n * <\/p>\n * @param string $faultname [optional] <p>\n * Can be used to select the proper fault encoding from WSDL.\n * <\/p>\n * @param string $headerfault [optional] <p>\n * Can be used during SOAP header handling to report an error in the\n * response header.\n * <\/p>\n *\/"
             },
             {
                 "name": "__toString",
@@ -527,7 +527,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * Obtain a string representation of a SoapFault\r\n * @link http:\/\/php.net\/manual\/en\/soapfault.tostring.php\r\n * @return string A string describing the SoapFault.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * Obtain a string representation of a SoapFault\n * @link http:\/\/php.net\/manual\/en\/soapfault.tostring.php\n * @return string A string describing the SoapFault.\n *\/"
             },
             {
                 "name": "__construct",
@@ -553,7 +553,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Construct the exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\r\n * @param $message [optional]\r\n * @param $code [optional]\r\n * @param $previous [optional]\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Construct the exception\n * @link http:\/\/php.net\/manual\/en\/exception.construct.php\n * @param $message [optional]\n * @param $code [optional]\n * @param $previous [optional]\n *\/"
             },
             {
                 "name": "getMessage",
@@ -562,7 +562,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception message\r\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\r\n * @return string the Exception message as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception message\n * @link http:\/\/php.net\/manual\/en\/exception.getmessage.php\n * @return string the Exception message as a string.\n *\/"
             },
             {
                 "name": "getCode",
@@ -571,7 +571,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the Exception code\r\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\r\n * @return mixed the exception code as integer in\r\n * <b>Exception<\/b> but possibly as other type in\r\n * <b>Exception<\/b> descendants (for example as\r\n * string in <b>PDOException<\/b>).\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the Exception code\n * @link http:\/\/php.net\/manual\/en\/exception.getcode.php\n * @return mixed the exception code as integer in\n * <b>Exception<\/b> but possibly as other type in\n * <b>Exception<\/b> descendants (for example as\n * string in <b>PDOException<\/b>).\n *\/"
             },
             {
                 "name": "getFile",
@@ -580,7 +580,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the file in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\r\n * @return string the filename in which the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the file in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getfile.php\n * @return string the filename in which the exception was created.\n *\/"
             },
             {
                 "name": "getLine",
@@ -589,7 +589,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the line in which the exception occurred\r\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\r\n * @return int the line number where the exception was created.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the line in which the exception occurred\n * @link http:\/\/php.net\/manual\/en\/exception.getline.php\n * @return int the line number where the exception was created.\n *\/"
             },
             {
                 "name": "getTrace",
@@ -598,7 +598,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\r\n * @return array the Exception stack trace as an array.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace\n * @link http:\/\/php.net\/manual\/en\/exception.gettrace.php\n * @return array the Exception stack trace as an array.\n *\/"
             },
             {
                 "name": "getPrevious",
@@ -607,7 +607,7 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.3.0)<br\/>\r\n * Returns previous Exception\r\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\r\n * @return Exception the previous <b>Exception<\/b> if available\r\n * or <b>NULL<\/b> otherwise.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.3.0)<br\/>\n * Returns previous Exception\n * @link http:\/\/php.net\/manual\/en\/exception.getprevious.php\n * @return Exception the previous <b>Exception<\/b> if available\n * or <b>NULL<\/b> otherwise.\n *\/"
             },
             {
                 "name": "getTraceAsString",
@@ -616,11 +616,30 @@
                 "params": [
 
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.1.0)<br\/>\r\n * Gets the stack trace as a string\r\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\r\n * @return string the Exception stack trace as a string.\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.1.0)<br\/>\n * Gets the stack trace as a string\n * @link http:\/\/php.net\/manual\/en\/exception.gettraceasstring.php\n * @return string the Exception stack trace as a string.\n *\/"
             }
         ],
         "properties": [
-
+            {
+                "name": "message",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "code",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "file",
+                "type": 2,
+                "doc": null
+            },
+            {
+                "name": "line",
+                "type": 2,
+                "doc": null
+            }
         ],
         "constants": [
 
@@ -631,7 +650,7 @@
         "name": "SoapParam",
         "fqn": "\\SoapParam",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "SoapParam",
@@ -651,7 +670,7 @@
                         "default": ""
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapParam constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapparam.soapparam.php\r\n * @param mixed $data <p>\r\n * The data to pass or return. This parameter can be passed directly as PHP\r\n * value, but in this case it will be named as paramN and\r\n * the SOAP service may not understand it.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The parameter name.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapParam constructor\n * @link http:\/\/php.net\/manual\/en\/soapparam.soapparam.php\n * @param mixed $data <p>\n * The data to pass or return. This parameter can be passed directly as PHP\n * value, but in this case it will be named as paramN and\n * the SOAP service may not understand it.\n * <\/p>\n * @param string $name <p>\n * The parameter name.\n * <\/p>\n *\/"
             }
         ],
         "properties": [
@@ -666,7 +685,7 @@
         "name": "SoapHeader",
         "fqn": "\\SoapHeader",
         "type": 0,
-        "extends": "",
+        "extendsClass": "",
         "methods": [
             {
                 "name": "SoapHeader",
@@ -704,7 +723,7 @@
                         "default": null
                     }
                 ],
-                "doc": "\/**\r\n * (PHP 5 &gt;= 5.0.1)<br\/>\r\n * SoapHeader constructor\r\n * @link http:\/\/php.net\/manual\/en\/soapheader.soapheader.php\r\n * @param string $namespace <p>\r\n * The namespace of the SOAP header element.\r\n * <\/p>\r\n * @param string $name <p>\r\n * The name of the SoapHeader object.\r\n * <\/p>\r\n * @param mixed $data [optional] <p>\r\n * A SOAP header's content. It can be a PHP value or a\r\n * <b>SoapVar<\/b> object.\r\n * <\/p>\r\n * @param bool $mustunderstand [optional]\r\n * @param string $actor [optional] <p>\r\n * Value of the actor attribute of the SOAP header\r\n * element.\r\n * <\/p>\r\n *\/"
+                "doc": "\/**\n * (PHP 5 &gt;= 5.0.1)<br\/>\n * SoapHeader constructor\n * @link http:\/\/php.net\/manual\/en\/soapheader.soapheader.php\n * @param string $namespace <p>\n * The namespace of the SOAP header element.\n * <\/p>\n * @param string $name <p>\n * The name of the SoapHeader object.\n * <\/p>\n * @param mixed $data [optional] <p>\n * A SOAP header's content. It can be a PHP value or a\n * <b>SoapVar<\/b> object.\n * <\/p>\n * @param bool $mustunderstand [optional]\n * @param string $actor [optional] <p>\n * Value of the actor attribute of the SOAP header\n * element.\n * <\/p>\n *\/"
             }
         ],
         "properties": [
