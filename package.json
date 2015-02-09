@@ -1,10 +1,10 @@
 {
-    "name": "php-sig.php-smarthints",
-    "title": "[PHP-SIG] PHP SmartHints",
+    "name": "mackenza.php-smarthints",
+    "title": "PHP SmartHints",
     "description": "Provides code hints for PHP files including PHP keywords, built-in functions, constants and variables.  Also provides hinting for variables in the current open PHP document.",
-    "homepage": "https://github.com/Brackets-PHP-SIG/Brackets-PHP-SmartHints",
-    "version": "1.1.3",
-    "author": "Brackets PHP SIG <a.mackenzie@gmail.com> (https://github.com/Brackets-PHP-SIG)",
+    "homepage": "https://github.com/mackenza/Brackets-PHP-SmartHints",
+    "version": "1.1.4",
+    "author": "Andrew MacKenzie <a.mackenzie@gmail.com> (https://github.com/mackenza)",
     "license": "MIT",
     "engines": {
         "brackets": ">=0.37.0"

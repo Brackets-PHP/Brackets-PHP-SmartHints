@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.1.4 - 2015-02-09
+
+### Added
+- Made matching case insensitive as PHP is (mostly) that way.  Pre-defined constants are still matched respecting case due to them being case sensitive in PHP.  [fixes issue #25](https://github.com/mackenza/Brackets-PHP-SmartHints/issues/25)
+
+### Removed
+- Got rid of references to the, now defunct, PHP-SIG in readme and package.json
+
 ## 1.1.3 - 2014-09-12
 
 ### Added

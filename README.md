@@ -1,9 +1,12 @@
-[![Stories in Ready](https://badge.waffle.io/Brackets-PHP-SIG/Brackets-PHP-SmartHints.png?label=ready&title=Ready)](https://waffle.io/Brackets-PHP-SIG/Brackets-PHP-SmartHints)
 PHP-SmartHints
 ==============
 
-This extension is the first project output under the [Brackets PHP SIG](http://brackets-php-sig.github.io/)
-and is intended to be an intelligent coding hinting tool to make PHP developers' lives easier when 
+** Note on status for this extension ** - 
+At the end of 2014 I was making significant progress towards *phase 2* functionality outlined below.  I still intend to
+complete this work and publish the most kick-ass PHP code hinting extension for Brackets, but it's taking more time than I had hoped due to real life and work (the kind of work that pays the bills) getting in the way.  Stay tuned, this will be a very good release once I get the time to finish it ;)
+
+This extension is the first project I started to make PHP a first-class citizen in Brackets.  It is
+intended to be an intelligent code hinting tool to make PHP developers' lives easier when 
 coding PHP in the [Brackets code editor](http://brackets.io).  
 
 The extension makes use of the core `CodeHintManager` module in Brackets.
@@ -45,5 +48,4 @@ The filter can be set in one of two ways:
 
 [CHANGELOG](CHANGELOG.md)
 
-*note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.  Mikael is also a member
-of the *Brackets PHP SIG*.
+*note* - you should also check out the execellent [PHP Code Quality Tools](https://github.com/mikaeljorhult/brackets-php-code-quality-tools) extension from [Mikael Jorhult](https://github.com/mikaeljorhult) for PHP linting and code style checking.
