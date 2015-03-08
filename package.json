@@ -1,9 +1,9 @@
 {
     "name": "mackenza.php-smarthints",
     "title": "PHP SmartHints",
-    "description": "Provides code hints for PHP files including PHP keywords, built-in functions, constants and variables.  Also provides hinting for variables in the current open PHP document.",
+    "description": "Provides code hints for PHP files including PHP keywords, built-in functions, constants and variables.  Also provides hinting for variables in the current open PHP document. Note that this is a continuation of the former [PHP-SIG] Brackets-PHP-SmartHints and not a new extension or fork.  The Brackets Registry flags it as a new extension if you change the name (makes sense).",
     "homepage": "https://github.com/mackenza/Brackets-PHP-SmartHints",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "author": "Andrew MacKenzie <a.mackenzie@gmail.com> (https://github.com/mackenza)",
     "license": "MIT",
     "engines": {

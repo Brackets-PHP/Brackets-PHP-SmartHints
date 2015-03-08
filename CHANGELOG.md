@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.1.5 - 2015-03-08
+
+### Added
+- Fix for [issue #27](https://github.com/mackenza/Brackets-PHP-SmartHints/issues/27)
+- Note in README.md to indicate that this is the same extension as the former PHP-SIG Brackets PHP SmartHints and not a new extension or fork.
+
 ## 1.1.4 - 2015-02-09
 
 ### Added

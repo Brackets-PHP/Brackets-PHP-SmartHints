@@ -232,7 +232,7 @@ define(function (require, exports, module) {
 
             if (selectedFunctions.length > 0) {
                 if (selectedFunctions.indexOf(key) > -1) {
-                    fnArray = fgKey.fnNames.join('\n').split('|');
+                    fnArray = fgKey.fnNames;
                     for (i = 0; i < fnArray.length; i++) {
                         theFunctionList.push(fnArray[i]);
                     }
@@ -241,7 +241,7 @@ define(function (require, exports, module) {
                     filter = { "filter": key, "filterName": fgKey.name, "checked": "" };
                 }
             } else {
-                fnArray = fgKey.fnNames.join('\n').split('|');
+                fnArray = fgKey.fnNames;
                 for (i = 0; i < fnArray.length; i++) {
                     theFunctionList.push(fnArray[i]);
                 }
