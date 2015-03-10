@@ -83,19 +83,19 @@ define(function (require, exports, module) {
         if (this.activeToken.token.string.length > 1 || implicitChar === null) {
             // do keywords first as they are common and small
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedPhpKeywords[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     return true;
                 }
             }
             // do constants 2nd as they are also small
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
+                if (this.cachedPhpConstants[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     return true;
                 }
             }
             // do functions last as the array is quite large
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedPhpFunctions[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     return true;
                 }
             }
@@ -150,7 +150,7 @@ define(function (require, exports, module) {
             }
             // load the predefined $variables next
             for (i = 0; i < this.cachedPhpVariables.length; i++) {
-                if (this.cachedPhpVariables[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedPhpVariables[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpvar")
@@ -164,7 +164,7 @@ define(function (require, exports, module) {
             // not a $variable, could be a reserved word of some type
             // load keywords that match
             for (i = 0; i < this.cachedPhpKeywords.length; i++) {
-                if (this.cachedPhpKeywords[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedPhpKeywords[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpkeyword")
@@ -174,7 +174,7 @@ define(function (require, exports, module) {
             }
             // load constants that match
             for (i = 0; i < this.cachedPhpConstants.length; i++) {
-                if (this.cachedPhpConstants[i].indexOf(tokenToCursor) === 0) {
+                if (this.cachedPhpConstants[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpconstant")
@@ -184,7 +184,7 @@ define(function (require, exports, module) {
             }
             // load functions that match
             for (i = 0; i < this.cachedPhpFunctions.length; i++) {
-                if (this.cachedPhpFunctions[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedPhpFunctions[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpfunction")
