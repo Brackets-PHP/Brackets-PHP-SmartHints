@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.1.6 - 2015-03-11
+
+### Added
+- Fix for [issue #28](https://github.com/mackenza/Brackets-PHP-SmartHints/issues/28)
+
 ## 1.1.5 - 2015-03-08
 
 ### Added
