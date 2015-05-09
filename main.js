@@ -55,13 +55,13 @@ define(function (require, exports, module) {
      */
     function PHPHints() {
         this.activeToken            = "";
-        this.lastToken              = "";
         this.cachedPhpVariables     = [];
         this.cachedPhpConstants     = [];
         this.cachedPhpKeywords      = [];
         this.cachedPhpFunctions     = [];
         this.cachedLocalVariables   = [];
         this.tokenVariable          = /[$][\a-zA-Z_][a-zA-Z0-9_]*/g;
+        this.newUserVarSession      = false;
     }
 
     PHPHints.prototype.hasHints = function (editor, implicitChar) {
@@ -74,6 +74,7 @@ define(function (require, exports, module) {
 
         // if implicitChar or 1 letter token is $, we *always* have hints so return immediately
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
+            this.newUserVarSession = true;
             return true;
         }
 
@@ -120,7 +121,7 @@ define(function (require, exports, module) {
         tokenToCursor = getTokenToCursor(this.activeToken);
         // if it's a $variable, then build the local variable list
         if (implicitChar === "$"  || this.activeToken.token.string.charAt(0) === "$") {
-            if ((this.lastToken === "") || (this.activeToken.token.start !== this.lastToken.token.start) || (this.activeToken.pos.line !== this.lastToken.pos.line)) {
+            if (this.newUserVarSession) {
                 this.cachedLocalVariables.length = 0;
                 var varList = this.editor.document.getText().match(this.tokenVariable);
                 if (varList) {
@@ -132,7 +133,7 @@ define(function (require, exports, module) {
                     }
                 }
             }
-            this.lastToken = this.activeToken;
+            this.newUserVarSession = false;
 
             if (this.cachedLocalVariables === null) {
                 return null;
