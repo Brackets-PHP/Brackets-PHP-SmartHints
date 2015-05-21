@@ -141,7 +141,7 @@ define(function (require, exports, module) {
             this.cachedLocalVariables.sort();
             // add unique local $variables
             for (i = 0; i < this.cachedLocalVariables.length; i++) {
-                if (this.cachedLocalVariables[i].indexOf(tokenToCursor.toLowerCase()) === 0) {
+                if (this.cachedLocalVariables[i].toLowerCase().indexOf(tokenToCursor.toLowerCase()) === 0) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-localvar")
