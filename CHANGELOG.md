@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.1.8 - 2015-05-21
+
+### Added
+- Added case insensitive comparison for user variable. Completes fix for [issue #31](https://github.com/mackenza/Brackets-PHP-SmartHints/issues/31)
+
 ## 1.1.7 - 2015-05-09
 
 ### Added
