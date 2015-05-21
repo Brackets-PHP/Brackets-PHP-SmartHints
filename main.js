@@ -189,7 +189,7 @@ define(function (require, exports, module) {
                     $fHint = $("<span>")
                         .addClass("PHPSmartHints-completion")
                         .addClass("PHPSmartHints-completion-phpfunction")
-                        .text(this.cachedPhpFunctions[i]);
+                        .text(this.cachedPhpFunctions[i] + "()");
                     phpFuncList.push($fHint);
                 }
             }
@@ -211,8 +211,11 @@ define(function (require, exports, module) {
             replaceStart        = {line: cursor.line, ch: currentToken.start},
             replaceEnd          = {line: cursor.line, ch: cursor.ch};
 
-
         this.editor.document.replaceRange($hint.text(), replaceStart, replaceEnd);
+        if ($hint.text().slice(-1) === ")") {
+            cursor = this.editor.getCursorPos();
+            this.editor.setCursorPos({line: cursor.line, ch: cursor.ch - 1});
+        }
         return false;
     };
 

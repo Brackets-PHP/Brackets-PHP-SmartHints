@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.2.0 - 2015-05-21
+
+### Added
+- When inserting predefined functions, now add parens () and place cursor between them. Mostly addresses [feature request #32](https://github.com/mackenza/Brackets-PHP-SmartHints/issues/32)
+
+### Removed
+- changed minimum supported Brackets version to 1.0.0 because who would ever use sprint 37? Don't be that guy.
+
 ## 1.1.8 - 2015-05-21
 
 ### Added
