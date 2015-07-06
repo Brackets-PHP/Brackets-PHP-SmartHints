@@ -158,7 +158,7 @@ define(function (require, exports, module) {
     var keywords                = strKeywords.split("|"),
         predefinedConstants     = strPredefinedConstants.split("|"),
         predefinedVariables     = strPredefinedVariables.split("|"),
-        predefinedFunctions     = strPredefinedFunctions.join('\n').split('|');
+        predefinedFunctions     = strPredefinedFunctions.join('').split('|');
 
     exports.predefinedConstants = predefinedConstants;
     exports.predefinedVariables = predefinedVariables;
