@@ -1,10 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 1.2.1 - 2015-07-07
+## 1.2.2 - 2015-07-07
 
 ### Added
 - Merged [PR#35](https://github.com/mackenza/Brackets-PHP-SmartHints/pull/35) which fixes some hints that are in the pre-defined function list not being available at hinting time. Thanks [sebsebmc](https://github.com/sebsebmc)
+
+## 1.2.1 - unreleased
 
 ## 1.2.0 - 2015-05-21
 
