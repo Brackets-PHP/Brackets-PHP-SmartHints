@@ -10,6 +10,6 @@
         "brackets": ">=1.0.0"
     },
     "i18n": [
-         "en", "de", "it", "fr"
+         "en", "de", "it", "fr", "tr"
     ]
 }
