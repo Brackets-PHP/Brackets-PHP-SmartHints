@@ -26,13 +26,15 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
 /*global define */
 
-define(function (require, exports, module) {
-    "use strict";
-    module.exports = {
-        root: true,
-        de: true,
-        it: true,
-        fr: true,
-        tr: true
-    };
+define({
+    // EXTENSION.
+    EXTENSION_NAME: "PHP SmartHints",
+
+    // SETTINGS DIALOG
+    SETTINGS_DIALOG_FUNCTION_FILTER: "Fonksiyon Listesini Filtrele",
+    SETTINGS_DIALOG_PHP_SETTINGS: "PHP Ayarları",
+    SETTINGS_DIALOG_TOGGLE_ALL: "Hepsini Seç",
+    SETTINGS_DIALOG_UNUSED_TAB: "Bu sekme gelecek işlevsellik içindir ve bu versiyonda kullanılamaz.",
+    SETTINGS_DIALOG_CLOSE: "Kapat",
+    SETTINGS_DIALOG_APPLY: "Ayarları Proje için Uygula"
 });
