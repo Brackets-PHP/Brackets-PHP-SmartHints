@@ -26,13 +26,15 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50, regexp: true */
 /*global define */
 
-define(function (require, exports, module) {
-    "use strict";
-    module.exports = {
-        root: true,
-        de: true,
-        it: true,
-        fr: true,
-        pl: true
-    };
+define({
+    // EXTENSION.
+    EXTENSION_NAME: "PHP SmartHints",
+
+    // SETTINGS DIALOG
+    SETTINGS_DIALOG_FUNCTION_FILTER: "Lista funkcji",
+    SETTINGS_DIALOG_PHP_SETTINGS: "Ustawienia PHP",
+    SETTINGS_DIALOG_TOGGLE_ALL: "Włącz wszystkie",
+    SETTINGS_DIALOG_UNUSED_TAB: "Ta zakładka pojawi się w przyszłej wersji.",
+    SETTINGS_DIALOG_CLOSE: "Zamknij",
+    SETTINGS_DIALOG_APPLY: "Zatwierdź ustawienia do projektu"
 });
