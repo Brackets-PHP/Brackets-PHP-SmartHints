@@ -32,6 +32,7 @@ define(function (require, exports, module) {
         root: true,
         de: true,
         it: true,
-        fr: true
+        fr: true,
+        pl: true
     };
 });
