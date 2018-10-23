@@ -471,10 +471,11 @@
         "name": "MySQLi database library",
         "fnNames": [
             "mysqli","mysqli_bind_param",
-        "mysqli_bind_result","mysqli_client_encoding","mysqli_connect","mysqli_disable_reads_from_master","mysqli_disable_rpl_parse","mysqli_driver",
-        "mysqli_enable_reads_from_master","mysqli_enable_rpl_parse","mysqli_escape_string","mysqli_execute","mysqli_fetch","mysqli_get_metadata",
+        "mysqli_bind_result","mysqli_client_encoding","mysqli_close","mysqli_connect","mysqli_disable_reads_from_master","mysqli_disable_rpl_parse","mysqli_driver",
+        "mysqli_enable_reads_from_master","mysqli_enable_rpl_parse","mysqli_escape_string","mysqli_fetch_assoc","mysqli_fetch_array","mysqli_execute","mysqli_fetch","mysqli_get_metadata",
         "mysqli_master_query","mysqli_param_count","mysqli_report","mysqli_result","mysqli_rpl_parse_enabled","mysqli_rpl_probe","mysqli_rpl_query_type",
-        "mysqli_send_long_data","mysqli_send_query","mysqli_set_opt","mysqli_slave_query","mysqli_stmt","mysqli_warning"
+        "mysqli_send_long_data","mysqli_send_query","mysqli_set_opt","mysqli_slave_query","mysqli_stmt","mysqli_warning",
+        "mysqli_query","mysqli_set_charset"
         ]
     },
     "mysqlnd": {
